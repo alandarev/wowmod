@@ -1,0 +1,79 @@
+Made so I can remember names of sets easier for recipes.
+
+Rough Stone // DK 82 Green
+Damplight // Tank 82 Green
+Direforge // Dps 82 Green
+Darkbrand // Rogue 82 Green
+Wound-Binder // Holydin 82 Green
+Camp-Cleaner // Shaman 82 Green
+Skyshredder // DpS 83 Rare
+of Solemn Vows // Tank 83 Rare
+Omega // Holydin 83 Rare
+Redsteel // DK 83 Rare
+Defias Brotherhood // Rogue 83 Rare
+Dragonscale // Shaman 83 Rare
+Gateshattering // Tank 85 Green
+Canopic // DpS 85 Green
+Bullet-Pierced // Holydin 85 Green
+Lava-Melted // DK 85 Green
+Nimble-Knife // Rogue 85 Green
+Portal-Sealer's // Shaman 85 Green
+Fargodeep // DK 84 Green
+Remnants // DpS 84 Green
+of Cooled Magma // Tank 84 Green
+Rivetproof // Shaman 84 Green
+Nighthaven // Rogue 84 Green
+Harbinger // Tank 84 Rare
+Flynn's // DpS 84 Rare
+of the Gentle // Holydin 84 Rare
+Beauty's // DK 84 Rare
+Keegan's // Shaman 84 Rare
+Aboraz // Rogue 84 Rare
+Abalone // Holydin 85 Rare
+of Viridian Renewal // Tank 85 Rare
+Phantom // DpS 85 Rare
+of the Steadfast // DK 85 Rare
+of Sinking Envy // Rogue 85 Rare
+of Forgetfulness // Shaman 85 Rare
+Magma Plated // DK 85 Epic (RECIPE)
+Earthen Guard // Tank 85 Epic (RECIPE)
+Earthen Battleplate // DpS 85 Epic (RECIPE)
+Reinforced Sapphirium // Holydin 85 Epic (RECIPE)
+Wind Dancer's // Rogue 85 Epic (RECIPE)
+of the Raging Elements // Shaman 85 Epic (RECIPE)
+Organic Lifeform // Rogue 85 Epic
+Circuit Design // Shaman 85 Epic
+Hardened Elementium // Tank 85 Epic
+Massacre // DpS 85 Epic
+Life Force // Holydin 85 Epic
+of Savage Beatings // DK 85 Epic
+Scimitar of the Sirocco //1H DpS 85 epic (recipe+random drop!)
+
+
+
+
+
+Sparklight - 82 Green Mage
+Khintaset - 82 Green Warlock
+Spiritmend - 82 Green Priest
+Whispering Sands - 83 Rare Mage
+Broken Dreams - 83 Rare Warlock
+Rampant Growth - 83 Rare Priest
+Bluefen - 84 Green Mage
+Fleshburned - 84 Green Warlock
+Everstill - 84 Green Priest
+Temperence - 84 Rare Mage
+Deathsilk - 84 Rare Warlock
+Astral Rain - 84 Rare Priest
+Coldwraith - 85 Green Mage
+Darrowmere - 85 Green Warlock
+Brightwood - 85 Green Priest
+Emberfire - 85 Rare Mage
+Fireweave - 85 Rare Warlock
+Falling Rain - 85 Rare Priest
+Flame Ascended - 85 Epic Mage (Craft)
+Dreamless - 85 Epic Warlock (Craft)
+Mended Nightmares - 85 Epic Priest (Craft)
+Firelord - 85 Epic Mage (Boss)
+Shadowflame - 85 Epic Warlock (Boss)
+Mercurial - 85 Epic Priest (Boss)

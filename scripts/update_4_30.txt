@@ -1,0 +1,601 @@
+ALTER TABLE wc_Professions1 ADD COLUMN prof_201 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_202 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_203 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_204 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_205 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_206 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_207 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_208 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_209 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_210 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_211 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_212 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_213 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_214 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_215 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_216 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_217 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_218 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_219 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_220 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_221 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_222 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_223 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_224 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_225 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_226 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_227 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_228 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_229 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_230 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_231 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_232 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_233 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_234 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_235 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_236 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_237 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_238 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_239 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_240 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_241 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_242 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_243 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_244 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_245 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_246 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_247 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_248 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_249 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_250 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_251 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_252 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_253 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_254 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_255 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_256 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_257 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_258 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_259 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_260 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_261 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_262 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_263 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_264 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_265 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_266 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_267 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_268 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_269 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_270 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_271 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_272 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_273 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_274 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_275 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_276 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_277 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_278 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_279 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_280 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_281 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_282 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_283 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_284 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_285 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_286 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_287 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_288 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_289 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_290 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_291 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_292 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_293 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_294 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_295 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_296 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_297 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_298 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_299 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_300 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_301 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_302 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_303 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_304 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_305 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_306 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_307 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_308 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_309 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_310 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_311 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_312 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_313 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_314 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_315 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_316 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_317 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_318 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_319 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_320 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_321 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_322 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_323 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_324 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_325 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_326 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_327 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_328 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_329 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_330 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_331 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_332 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_333 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_334 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_335 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_336 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_337 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_338 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_339 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_340 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_341 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_342 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_343 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_344 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_345 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_346 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_347 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_348 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_349 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_350 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_351 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_352 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_353 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_354 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_355 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_356 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_357 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_358 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_359 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_360 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_361 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_362 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_363 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_364 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_365 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_366 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_367 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_368 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_369 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_370 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_371 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_372 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_373 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_374 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_375 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_376 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_377 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_378 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_379 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_380 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_381 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_382 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_383 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_384 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_385 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_386 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_387 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_388 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_389 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_390 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_391 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_392 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_393 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_394 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_395 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_396 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_397 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_398 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_399 int default 0;
+ALTER TABLE wc_Professions1 ADD COLUMN prof_400 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_201 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_202 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_203 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_204 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_205 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_206 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_207 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_208 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_209 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_210 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_211 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_212 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_213 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_214 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_215 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_216 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_217 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_218 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_219 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_220 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_221 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_222 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_223 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_224 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_225 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_226 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_227 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_228 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_229 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_230 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_231 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_232 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_233 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_234 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_235 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_236 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_237 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_238 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_239 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_240 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_241 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_242 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_243 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_244 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_245 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_246 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_247 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_248 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_249 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_250 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_251 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_252 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_253 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_254 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_255 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_256 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_257 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_258 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_259 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_260 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_261 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_262 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_263 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_264 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_265 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_266 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_267 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_268 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_269 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_270 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_271 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_272 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_273 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_274 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_275 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_276 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_277 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_278 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_279 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_280 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_281 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_282 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_283 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_284 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_285 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_286 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_287 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_288 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_289 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_290 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_291 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_292 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_293 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_294 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_295 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_296 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_297 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_298 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_299 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_300 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_301 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_302 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_303 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_304 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_305 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_306 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_307 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_308 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_309 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_310 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_311 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_312 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_313 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_314 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_315 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_316 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_317 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_318 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_319 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_320 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_321 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_322 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_323 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_324 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_325 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_326 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_327 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_328 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_329 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_330 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_331 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_332 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_333 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_334 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_335 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_336 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_337 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_338 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_339 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_340 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_341 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_342 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_343 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_344 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_345 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_346 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_347 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_348 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_349 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_350 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_351 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_352 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_353 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_354 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_355 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_356 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_357 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_358 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_359 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_360 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_361 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_362 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_363 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_364 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_365 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_366 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_367 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_368 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_369 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_370 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_371 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_372 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_373 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_374 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_375 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_376 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_377 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_378 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_379 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_380 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_381 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_382 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_383 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_384 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_385 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_386 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_387 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_388 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_389 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_390 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_391 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_392 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_393 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_394 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_395 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_396 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_397 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_398 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_399 int default 0;
+ALTER TABLE wc_Professions2 ADD COLUMN prof_400 int default 0;
+
+alter table wc_Professions2 
+change prof_203 prof2_203 int(10),
+change prof_204 prof2_204 int(10),
+change prof_205 prof2_205 int(10),
+change prof_206 prof2_206 int(10),
+change prof_207 prof2_207 int(10),
+change prof_208 prof2_208 int(10),
+change prof_209 prof2_209 int(10),
+change prof_210 prof2_210 int(10),
+change prof_211 prof2_211 int(10),
+change prof_212 prof2_212 int(10),
+change prof_213 prof2_213 int(10),
+change prof_214 prof2_214 int(10),
+change prof_215 prof2_215 int(10),
+change prof_216 prof2_216 int(10),
+change prof_217 prof2_217 int(10),
+change prof_218 prof2_218 int(10),
+change prof_219 prof2_219 int(10),
+change prof_220 prof2_220 int(10),
+change prof_221 prof2_221 int(10),
+change prof_222 prof2_222 int(10),
+change prof_223 prof2_223 int(10),
+change prof_224 prof2_224 int(10),
+change prof_225 prof2_225 int(10),
+change prof_226 prof2_226 int(10),
+change prof_227 prof2_227 int(10),
+change prof_228 prof2_228 int(10),
+change prof_229 prof2_229 int(10),
+change prof_230 prof2_230 int(10),
+change prof_231 prof2_231 int(10),
+change prof_232 prof2_232 int(10),
+change prof_233 prof2_233 int(10),
+change prof_234 prof2_234 int(10),
+change prof_235 prof2_235 int(10),
+change prof_236 prof2_236 int(10),
+change prof_237 prof2_237 int(10),
+change prof_238 prof2_238 int(10),
+change prof_239 prof2_239 int(10),
+change prof_240 prof2_240 int(10),
+change prof_241 prof2_241 int(10),
+change prof_242 prof2_242 int(10),
+change prof_243 prof2_243 int(10),
+change prof_244 prof2_244 int(10),
+change prof_245 prof2_245 int(10),
+change prof_246 prof2_246 int(10),
+change prof_247 prof2_247 int(10),
+change prof_248 prof2_248 int(10),
+change prof_249 prof2_249 int(10),
+change prof_250 prof2_250 int(10),
+change prof_251 prof2_251 int(10),
+change prof_252 prof2_252 int(10),
+change prof_253 prof2_253 int(10),
+change prof_254 prof2_254 int(10),
+change prof_255 prof2_255 int(10),
+change prof_256 prof2_256 int(10),
+change prof_257 prof2_257 int(10),
+change prof_258 prof2_258 int(10),
+change prof_259 prof2_259 int(10),
+change prof_260 prof2_260 int(10),
+change prof_261 prof2_261 int(10),
+change prof_262 prof2_262 int(10),
+change prof_263 prof2_263 int(10),
+change prof_264 prof2_264 int(10),
+change prof_265 prof2_265 int(10),
+change prof_266 prof2_266 int(10),
+change prof_267 prof2_267 int(10),
+change prof_268 prof2_268 int(10),
+change prof_269 prof2_269 int(10),
+change prof_270 prof2_270 int(10),
+change prof_271 prof2_271 int(10),
+change prof_272 prof2_272 int(10),
+change prof_273 prof2_273 int(10),
+change prof_274 prof2_274 int(10),
+change prof_275 prof2_275 int(10),
+change prof_276 prof2_276 int(10),
+change prof_277 prof2_277 int(10),
+change prof_278 prof2_278 int(10),
+change prof_279 prof2_279 int(10),
+change prof_280 prof2_280 int(10),
+change prof_281 prof2_281 int(10),
+change prof_282 prof2_282 int(10),
+change prof_283 prof2_283 int(10),
+change prof_284 prof2_284 int(10),
+change prof_285 prof2_285 int(10),
+change prof_286 prof2_286 int(10),
+change prof_287 prof2_287 int(10),
+change prof_288 prof2_288 int(10),
+change prof_289 prof2_289 int(10),
+change prof_290 prof2_290 int(10),
+change prof_291 prof2_291 int(10),
+change prof_292 prof2_292 int(10),
+change prof_293 prof2_293 int(10),
+change prof_294 prof2_294 int(10),
+change prof_295 prof2_295 int(10),
+change prof_296 prof2_296 int(10),
+change prof_297 prof2_297 int(10),
+change prof_298 prof2_298 int(10),
+change prof_299 prof2_299 int(10),
+change prof_300 prof2_300 int(10),
+change prof_301 prof2_301 int(10),
+change prof_302 prof2_302 int(10),
+change prof_303 prof2_303 int(10),
+change prof_304 prof2_304 int(10),
+change prof_305 prof2_305 int(10),
+change prof_306 prof2_306 int(10),
+change prof_307 prof2_307 int(10),
+change prof_308 prof2_308 int(10),
+change prof_309 prof2_309 int(10),
+change prof_310 prof2_310 int(10),
+change prof_311 prof2_311 int(10),
+change prof_312 prof2_312 int(10),
+change prof_313 prof2_313 int(10),
+change prof_314 prof2_314 int(10),
+change prof_315 prof2_315 int(10),
+change prof_316 prof2_316 int(10),
+change prof_317 prof2_317 int(10),
+change prof_318 prof2_318 int(10),
+change prof_319 prof2_319 int(10),
+change prof_320 prof2_320 int(10),
+change prof_321 prof2_321 int(10),
+change prof_322 prof2_322 int(10),
+change prof_323 prof2_323 int(10),
+change prof_324 prof2_324 int(10),
+change prof_325 prof2_325 int(10),
+change prof_326 prof2_326 int(10),
+change prof_327 prof2_327 int(10),
+change prof_328 prof2_328 int(10),
+change prof_329 prof2_329 int(10),
+change prof_330 prof2_330 int(10),
+change prof_331 prof2_331 int(10),
+change prof_332 prof2_332 int(10),
+change prof_333 prof2_333 int(10),
+change prof_334 prof2_334 int(10),
+change prof_335 prof2_335 int(10),
+change prof_336 prof2_336 int(10),
+change prof_337 prof2_337 int(10),
+change prof_338 prof2_338 int(10),
+change prof_339 prof2_339 int(10),
+change prof_340 prof2_340 int(10),
+change prof_341 prof2_341 int(10),
+change prof_342 prof2_342 int(10),
+change prof_343 prof2_343 int(10),
+change prof_344 prof2_344 int(10),
+change prof_345 prof2_345 int(10),
+change prof_346 prof2_346 int(10),
+change prof_347 prof2_347 int(10),
+change prof_348 prof2_348 int(10),
+change prof_349 prof2_349 int(10),
+change prof_350 prof2_350 int(10),
+change prof_351 prof2_351 int(10),
+change prof_352 prof2_352 int(10),
+change prof_353 prof2_353 int(10),
+change prof_354 prof2_354 int(10),
+change prof_355 prof2_355 int(10),
+change prof_356 prof2_356 int(10),
+change prof_357 prof2_357 int(10),
+change prof_358 prof2_358 int(10),
+change prof_359 prof2_359 int(10),
+change prof_360 prof2_360 int(10),
+change prof_361 prof2_361 int(10),
+change prof_362 prof2_362 int(10),
+change prof_363 prof2_363 int(10),
+change prof_364 prof2_364 int(10),
+change prof_365 prof2_365 int(10),
+change prof_366 prof2_366 int(10),
+change prof_367 prof2_367 int(10),
+change prof_368 prof2_368 int(10),
+change prof_369 prof2_369 int(10),
+change prof_370 prof2_370 int(10),
+change prof_371 prof2_371 int(10),
+change prof_372 prof2_372 int(10),
+change prof_373 prof2_373 int(10),
+change prof_374 prof2_374 int(10),
+change prof_375 prof2_375 int(10),
+change prof_376 prof2_376 int(10),
+change prof_377 prof2_377 int(10),
+change prof_378 prof2_378 int(10),
+change prof_379 prof2_379 int(10),
+change prof_380 prof2_380 int(10),
+change prof_381 prof2_381 int(10),
+change prof_382 prof2_382 int(10),
+change prof_383 prof2_383 int(10),
+change prof_384 prof2_384 int(10),
+change prof_385 prof2_385 int(10),
+change prof_386 prof2_386 int(10),
+change prof_387 prof2_387 int(10),
+change prof_388 prof2_388 int(10),
+change prof_389 prof2_389 int(10),
+change prof_390 prof2_390 int(10),
+change prof_391 prof2_391 int(10),
+change prof_392 prof2_392 int(10),
+change prof_393 prof2_393 int(10),
+change prof_394 prof2_394 int(10),
+change prof_395 prof2_395 int(10),
+change prof_396 prof2_396 int(10),
+change prof_397 prof2_397 int(10),
+change prof_398 prof2_398 int(10),
+change prof_399 prof2_399 int(10),
+change prof_400 prof2_400 int(10);
+

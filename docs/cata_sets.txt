@@ -1,0 +1,26 @@
+level quality source      Skill Range   notes
+82    green   recipe/shop   202-250         full set
+85    green   recipe/shop   245-300         full set
+83    blue    recipe/shop   295-340		    could lack 1-2 slots (No boots+cape)
+84    green   world drop     -      	  full set
+84    blue    world/boss     -          full set
+85    epic    boss only      -          full set
+85    blue    recipe/shop   340-395	       standard set, recipes should cost 0.5-5 gold (Neck only, no back)
+85    epic    recipe        390-430(450 max to get from weps)       standard set, recipes are world drop with miserable chance so it should be ~3 recipes a month (Necklace only from jewelries) 
+
+
+
+Done:
+82 green sets: DK, tank, dps, rogue, paladin, shaman
+82 green recipes: DK, tank, DpS, Rogue, Paladin, Shaman
+85 green sets: dps, tank, paladin, DK, Rogue, Shaman
+85 green recipes: dps, tank, paladin, Shaman, DK, Rogue
+83 blue sets: dps, tank, paladin, DK, Rogue, Shaman
+83 blue recipes: Shaman, Rogue, DK, paladin, tank, dps
+84 green sets: dps, tank, shaman, rogue, DK, paladin
+84 blue sets: paladin, dps, tank, DK, rogue, Shaman
+85 epic sets: paladin, dps, tank, dk ,rogue, shaman
+85 blue sets: paladin, dps, tank, DK, Rogue, Shaman
+85 blue recipes: Shaman, Rogue, dps, tank, DK, paladin
+85 epic sets: Paladin, dps, tank, dk, rogue, shaman
+85 epic recipes: Pala, dps, tank, dk, rogue, shaman

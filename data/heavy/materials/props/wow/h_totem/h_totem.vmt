@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	
+"$baseTexture" "props\wow\h_totem\h_totem"
+"$surfaceprop" "wood"
+"$bumpMap" "props\wow\h_totem\h_totem_n"
+"$model" 1
+
+"$phong" "1"
+"$phongexponent" "7"
+"$phongboost" "1"
+"$phongfresnelranges" "[0.1 0.1 0.1]"
+"$phongalbedotint" "1"
+
+}

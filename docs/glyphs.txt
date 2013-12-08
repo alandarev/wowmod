@@ -1,0 +1,167 @@
+Mage
+
+Glyph of Invisibility
+Increases your movement speed while invisible by 30%
+
+Glyph of Arcane Missiles
+Reduces the mana cost by 5, and increases the damage by 5%.
+
+Glyph of Molten Armor
+While your Mana Shield is active, you also gain 3% increased critical strike chance.
+
+Glyph of Living Bomb
+When your Living Bomb explodes, there is a 30% chance that the Living Bomb effect is put on a nearby target.
+
+Glyph of Frost Nova
+The cooldown of Frost Nova is reset whenever you use Ice Block.
+
+Glyph of Frostfire Orb
+Turns your Flame Orb into a Frostfire Bolt, slowing the victims by 20% for 0.5 seconds.
+
+Paladin
+
+
+Glyph of Reckoning
+When you hit an enemy with Reckoning active, you instantly generate 2% of your maximum mana.
+
+Glyph of Avenger's Shield
+Your Avenger's Shield also silences the target(s) for 1 seconds.
+
+Glyph of Divine Storm
+If your Divine Storm hits 3 or more enemies, you instantly generate 3 holy power.
+
+Glyph of Templar's Verdict
+Your Templar's Verdict has a 15% chance not to consume any holy power.
+
+Glyph of Spiritual Attunement
+Your Spiritual Attunement now also increases your mana regeneration.
+
+Glyph of Holy Radiance
+Causes all targets affected by your Holy Radiance to gain 10% increased damage for 3 seconds.
+
+
+Warlock
+
+Glyph of Mana Drain
+Your Life Drain spell now also steals mana from the enemy, equal to the amount of damage you deal.
+
+Glyph of Seed of Corruption
+Your last Corruption DoT tick deals twice more damage.
+
+Glyph of Immolate
+Your Immolate has 2 less ticks, damage of ticks is reduced by 5%, but the first hit deals extra damage equal to the 2 ticks.
+
+Glyph of Chaos Bolt
+Chaos Bolt now gets an increased damage against targets with resistance. ->   Resistance / 4 = %damage (So if target got 40 resistance, Chaos Bolt deals 10% more damage.)
+
+Glyph of Fear
+Reduces the time of Fear by 1 second, but the targets in Fear can now take 40 additional damage.
+
+Glyph of Metamorphosis
+Your Metamorphosis now also increases your resistance. (Depends on spellpower; ->   spellpower*0.3 = Resistance)
+
+
+
+Warrior
+
+Glyph of Shield Wall
+Increases the duration of Shield Wall by 1 second.
+
+Glyph of Enraged Regeneration
+Your Enraged Regeneration now also heals you instantly for 7.5% of your maximum health.
+
+Glyph of Heroic Strike
+Reduces the rage cost of Heroic Strike by 2
+
+Glyph of Rend
+Rend now also deals 15% of the total damage as instant damage.
+
+Glyph of Heroic Leap
+When used reduces the cooldown of Whirlwind by 10 seconds.
+
+Glyph of Mortal Strike
+Your Mortal Strike reduces the physical damage your enemy deals by 10%.
+
+Shaman
+
+Glyph of Healing Wave
+Your Healing Wave no longer grants armor, but the effectiveness of the heal is increased by 25%.
+
+Glyph of Water Shield
+Your Water Shield now also passively increases your mana regeneration, giving 1% of your maximum mana back every 5 seconds.
+
+Glyph of Earthbind Totem
+Increases slowdown effect by additional 10%
+
+Glyph of Frost Shock
+Frost Shock deals 50% more damage but does not slowdown your enemy
+
+Glyph of Fire Nova Totem
+Your Fire Nova Totem no longer explodes, instead it deals damage to all nearby enemies every second.
+
+Glyph of Shamanistic Rage
+Your Shamanistic Rage also causes you to be immune to all movement speed effects.
+
+
+
+Priest
+
+Glyph of Hymn of Hope
+Causes your Hymn of Hope to heal the targets by the equal amount of mana they gain.
+
+Glyph of Heals
+Reduces the CD, amount healed and the mana cost of your Greater Heal and Flash Heal by 30%.
+
+Glyph of Power Word: Shield
+Your PW:Shield now also heals the target instantly for 25% of the absorption amount.
+
+Glyph of Inner Fire
+Your Inner Fire now also increases your spellpower by 2/4/5%.
+
+Glyph of Shadowform
+Your Shadowform also increases all healing you take by 15%.
+
+Glyph of Shadow Word: Death
+Increases the damage of Shadow Word: Death by 50% if your target is at or under 35% health.
+
+
+Death Knight
+
+Glyph of Heartfire
+Your Heartfire also causes you to take 10% less damage from all sources.
+
+Glyph of Rune Tap
+Your Rune Tap also heals you for an additional 8% of your maximum health over 8 seconds.
+
+Glyph of Howling Blast
+Increases the damage of Icy Touch by 20%
+
+Glyph of Frost Strike
+Increases the chance for Frost Strike to happen by 5%.
+
+Glyph of Necrotic Strike
+Your Necrotic Strike now also deals 10% extra damage, but the duration of the de-buff is reduced to 6 seconds.
+
+Glyph of Scourge Strike
+If you have the Scourge Strike talent, your Plague Strike will also reduce the damage the target deals by 10%.
+
+
+Rogue
+
+Glyph of Adrenaline Rush
+While Adrenaline Rush is active, your attacks will also deal 50% of the damage to one nearby enemy.
+
+Glyph of Sinister Strike
+Reduces the energy cost by 5
+
+Glyph of Fan of Knives
+Your Fan of Knives ability can now proc Deadly Poison.
+
+Glyph of Poison
+Your poisons now ignore armor.
+
+Glyph of Stealth
+Reduces the time it takes to Stealth by 20%.
+
+Glyph of Ambush
+After you hit an enemy with Ambush, the target is slowed by 50% for 2 seconds.

@@ -1,0 +1,164 @@
+"spells"
+{
+  "1"
+  {
+    "name"  "Evade"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "18"
+    "cost" "100"
+    "duration"  "2.0"
+    "cooldowntype"  "2"
+    "cooldown"  "20.0"
+    "mana"  "20"
+    "manainc" "0.0"
+    "alpha" "130"
+    "chance"  "30"
+  }
+  "2"
+  {
+    "name"  "Sinister Strike"
+    "name_ru"   "TODO"
+    "event" "player_attacker"
+    "controlled"  "1"
+    "level" "1"
+    "cost" "10"
+    "mana" "10"
+    "chance"  "20" // max 100%
+    "agimulti" "0.04"
+    "apmulti" "0.12"
+  }
+  "3"
+  {
+    "name"  "Vanish"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "48"
+    "cost" "425"
+    "duration"  "6.0"
+    "cooldowntype"  "3"
+    "cooldown"  "30.0"
+    "mana"  "40"
+    "alpha" "0"
+    "threat" "-800"
+    "breakdmg"  "40"
+  }
+  "4"
+  {
+    "name"  "Backstab"
+    "name_ru"   "TODO"
+    "event" "player_attacker"
+    "level" "1"
+    "cost" "150"
+    "multi" "0.10" // total dmg * multi = +dmg
+  }
+  "5"
+  {
+    "name"  "Deadly Poison"
+    "name_ru"   "TODO"
+    "event" "player_spawn"
+    "level" "15"
+    "cost" "65"
+    // settings in effects, ID - 4
+  }
+  "6"
+  {
+    "name"  "Expose Armor"
+    "name_ru"   "TODO"
+    "event" "player_spawn"
+    "level" "26"
+    "cost" "170"
+    "chance"  "100" // max 100%
+    "multi" "0.3" // total AI * multi
+  }
+  "7"
+  {
+    "name"  "Sprint"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "37"
+    "cost" "290"
+    "duration"  "2.5"
+    "cooldowntype"  "4"
+    "cooldown"  "20.0"
+    "mana"  "30"
+    "multi" "1.2"
+  }
+  "8"
+  {
+    "name"  "Cheat Death"
+    "name_ru"   "TODO"
+    "event" "player_spellvictim"
+    "level" "54"
+    "cost" "1000"
+    "chance"  "40" // max 100%
+  }
+  "9"
+  {
+    "name"  "Cloak of Shadow"
+    "name_ru"   "TODO"
+    "event" "player_spawn"
+    "level" "60"
+    "cost" "3000"
+    "chance"  "100" // max 100%
+    "multi" "0.3" // total RES * multi
+  }
+  "10"
+  {
+    "name"  "Slice and Dice"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active" "1"
+    "level" "72"
+    "cost" "10000"
+    "multi" "0.2" // total RES * multi
+    "cooldowntype"  "5"
+    "cooldown"  "25.0"
+    "duration"  "4.0"
+    "mana"  "30"
+    "threat" "200"
+  }
+  "11"
+  {
+    "name"  "Stealth"
+    "name_ru"   "TODO"
+    "event" "player_spawn"
+    "active" "0"
+    "level" "1"
+    "cost" "400"
+  }
+  "12"
+  {
+    "name"  "Blind"
+    "name_ru"   "TODO"
+    "active"        "1"
+    "event"         "player_cast"
+    "cooldowntype"  "12"
+    "cooldown"      "25.0"
+    "mana"          "40"
+    "level"         "66"
+    "duration"      "2.0"
+    "noboss"        "1"
+    "ticks"  "10"
+    "tickdelay" "0.2"
+    "power" "400"
+  }
+  "13"
+  {
+    "name"  "Fan of Knives"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "80"
+    "cooldowntype"  "13"
+    "cooldown"  "2.5"
+    "basedmg" "16"
+    "mana"  "40"
+    "manainc" "0.0"
+    "multi" "0.36"
+    "distance"  "400.0"
+  }
+}

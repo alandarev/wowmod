@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\cf_textures/beerfest_keg_pony01"
+	"$model" "1"
+}

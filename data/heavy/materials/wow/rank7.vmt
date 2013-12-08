@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+$basetexture "wow/rank7"
+$vertexalpha 1
+$receiveflashlight 0 
+$singlepassflashlight 0 
+$alphatest 1 
+$translucent 1 
+}

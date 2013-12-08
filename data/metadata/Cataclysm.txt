@@ -1,0 +1,574 @@
+//Enchanting:
+//80 shop, 81-85 rare(+81-84epic), 81-84 green, 85 green, 85 epic.
+//Cataclysm reagents
+"14999"
+{
+"name"  "Chaos Orb" //The new HoF
+"noshop"  "3"
+"class" "0"
+"descr" "Orb filled with chaos"
+"version"	"1.11"
+"level" "85"
+"cost"  "2500"
+"amount"  "100"
+"category"  "8"
+}
+"15000"
+{
+"name"  "Hypnotic Dust" //81-84 green and 85 green.
+"noshop"  "1"
+"class" "0"
+"descr" "For Enchanting"
+"version"	"1.11"
+"level" "81"
+"cost"  "350"
+"amount"  "100"
+"category"  "8"
+}
+"15001"
+{
+"name"  "Celestial Essence" //81-84 green, 81-85 rare and 85 green.
+"noshop"  "1"
+"class" "0"
+"descr" "For Enchanting"
+"version"	"1.11"
+"level" "85"
+"cost"  "500"
+"amount"  "20"
+"category"  "8"
+}
+"15002"
+{
+"name"  "Small Heavenly Shard" //85 green and 81-85 rare.
+"noshop"  "2"
+"class" "0"
+"descr" "For Enchanting"
+"version"	"1.11"
+"level" "83"
+"cost"  "750"
+"amount"  "10"
+"category"  "8"
+}
+"15003"
+{
+"name"  "Heavenly Shard" //81-84 rare, 81-84 epic and 85 epic.
+"noshop"  "2"
+"class" "0"
+"descr" "For Enchanting"
+"version"	"1.11"
+"level" "85"
+"cost"  "1500"
+"amount"  "10"
+"category"  "8"
+}
+"15004"
+{
+"name"  "Maelstrom Crystal" //85 epic.
+"noshop"  "3"
+"class" "0"
+"descr" "For Enchanting"
+"version"	"1.11"
+"level" "85"
+"cost"  "3750"
+"amount"  "10"
+"category"  "8"
+}
+"15005"
+{
+"name"  "Armor Vellum" //80 shop
+"noshop"  "0"
+"class" "0"
+"descr" "Used to store enchants"
+"version"	"1.11"
+"level" "80"
+"cost"  "950"
+"amount"  "20"
+"category"  "8"
+}
+"15006"
+{
+"name"  "Obsidium Bar"
+"noshop"  "1"
+"class" "0"
+"descr" "Can be used by a BS or JC"
+"version"	"1.11"
+"level" "81"
+"cost"  "100"
+"amount"  "100"
+"category"  "8"
+}
+"15007"
+{
+"name"  "Elementium Bar"
+"noshop"  "1"
+"class" "0"
+"descr" "Can be used by a BS or JC"
+"version"	"1.11"
+"level" "85"
+"cost"  "250"
+"amount"  "100"
+"category"  "8"
+}
+"15008"
+{
+"name"  "Hardened Elementium Bar"
+"noshop"  "1"
+"class" "0"
+"descr" "Can be used by a BS or JC"
+"version"	"1.11"
+"level" "83"
+"cost"  "350"
+"amount"  "20"
+"category"  "8"
+}
+"15009"
+{
+"name"  "Pyrium Bar"
+"noshop"  "2"
+"class" "0"
+"descr" "Can be used by a BS or JC"
+"version"	"1.11"
+"level" "85"
+"cost"  "500"
+"amount"  "100"
+"category"  "8"
+}
+"15011"
+{
+"name"  "Folded Obsidium"
+"noshop"  "0"
+"class" "0"
+"descr" "Needed for Blacksmithing"
+"version"	"1.11"
+"level" "80"
+"cost"  "900"
+"amount"  "100"
+"category"  "8"
+}
+"15012"
+{
+"name"  "Chimera's Eye"
+"noshop"  "2"
+"class" "0"
+"descr" "Used for Jewelcrafting"
+"version"	"1.11"
+"level" "85"
+"cost"  "2500"
+"amount"  "10"
+"category"  "8"
+}
+"15013"
+{
+"name"  "Jeweler's Setting"
+"noshop"  "0"
+"class" "0"
+"descr" "Used for Jewelcrafting"
+"version"	"1.11"
+"level" "80"
+"cost"  "1200"
+"amount"  "100"
+"category"  "8"
+}
+"15017"
+{
+"name"  "Bolt of Embersilk Cloth"
+"noshop"  "2"
+"class" "0"
+"descr" "Soft!"
+"version"	"1.11"
+"level" "83"
+"cost"  "400"
+"amount"  "20"
+"category"  "8"
+}
+"15018"
+{
+"name"  "Dreamcloth"
+"noshop"  "2"
+"class" "0"
+"descr" "Dreamy!"
+"version"	"1.11"
+"level" "85"
+"cost"  "400"
+"amount"  "100"
+"category"  "8"
+}
+"15019"
+{
+"name"  "Embersilk Cloth"
+"noshop"  "1"
+"class" "0"
+"descr" "Soft!"
+"version"	"1.11"
+"level" "81"
+"cost"  "200"
+"amount"  "100"
+"category"  "8"
+}
+"15020"
+{
+"name"  "Fiery Silk Gland"
+"noshop"  "1"
+"class" "0"
+"descr" " It's hot and soft"
+"version"	"1.11"
+"level" "85"
+"cost"  "250"
+"amount"  "100"
+"category"  "8"
+}
+"15021"
+{
+"name"  "Savage Leather"
+"noshop"  "1"
+"class" "0"
+"descr" " "
+"version"	"1.11"
+"level" "81"
+"cost"  "100"
+"amount"  "100"
+"category"  "8"
+}
+"15022"
+{
+"name"  "Heavy Savage Leather"
+"noshop"  "2"
+"class" "0"
+"descr" " "
+"version"	"1.11"
+"level" "83"
+"cost"  "200"
+"amount"  "100"
+"category"  "8"
+}
+"15023"
+{
+"name"  "Blackened Dragonscale"
+"noshop"  "1"
+"class" "0"
+"descr" " "
+"version"	"1.11"
+"level" "85"
+"cost"  "100"
+"amount"  "100"
+"category"  "8"
+}
+"15024"
+{
+"name"  "Pristine Hide"
+"noshop"  "2"
+"class" "0"
+"descr" " "
+"version"	"1.11"
+"level" "85"
+"cost"  "800"
+"amount"  "100"
+"category"  "8"
+}
+"15025"
+{
+"name"  "Eternium Thread"
+"noshop"  "0"
+"class" "0"
+"descr" "For Tailoring and Leatherworking"
+"version"	"1.11"
+"level" "85"
+"cost"  "1000"
+"amount"  "100"
+"category"  "8"
+}
+
+
+
+//Cataclysm random drops
+  "100"
+  {
+    "minskill"  "340"
+    "skillup" "410"
+    "profession"  "6"
+    "minlevel"  "70"
+    "minimum" "0.005"
+    "maximum" "0.02"
+    "incriment" "0.0015"
+    "id"  "15021"
+    //Savage Leather
+  }
+  "101"
+  {
+    "minskill"  "380"
+    "skillup" "450"
+    "profession"  "6"
+    "minlevel"  "74"
+    "minimum" "0.001"
+    "maximum" "0.005"
+    "incriment" "0.0012"
+    "id"  "15022"
+    //Heavy Savage Leather
+  }
+    "102"
+  {
+    "minskill"  "420"
+    "skillup" "485"
+    "profession"  "6"
+    "minlevel"  "72"
+    "minimum" "0.003"
+    "maximum" "0.01"
+    "incriment" "0.00135"
+    "id"  "15023"
+    //Blackened Dragonscale
+  }
+      "103"
+  {
+    "minskill"  "475"
+    "skillup" "525"
+    "profession"  "6"
+    "minlevel"  "80"
+    "minimum" "0.00033"
+    "maximum" "0.0017"
+    "incriment" "0.00135"
+    "id"  "15024"
+    //Pristine Hide
+  }
+    "104"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "80"
+    "minimum" "0.00065"
+    "maximum" "0.00035"
+    "incriment" "0.0001625"
+    "id"  "14999"
+    "announce" "1"
+    //Chaos Orb
+  }
+    "105"
+  {
+    "minskill"  "340"
+    "skillup" "410"
+    "profession"  "7"
+    "minlevel"  "70"
+    "minimum" "0.005"
+    "maximum" "0.02"
+    "incriment" "0.0015"
+    "id"  "15019"
+    //Embersilk Cloth
+  }
+  "106"
+  {
+    "minskill"  "380"
+    "skillup" "450"
+    "profession"  "7"
+    "minlevel"  "74"
+    "minimum" "0.001"
+    "maximum" "0.005"
+    "incriment" "0.0012"
+    "id"  "15017"
+    //Bolt of Embersilk Cloth
+  }
+    "107"
+  {
+    "minskill"  "420"
+    "skillup" "485"
+    "profession"  "7"
+    "minlevel"  "72"
+    "minimum" "0.003"
+    "maximum" "0.01"
+    "incriment" "0.00135"
+    "id"  "15020"
+    //Fiery Silk Gland
+  }
+      "108"
+  {
+    "minskill"  "475"
+    "skillup" "525"
+    "profession"  "7"
+    "minlevel"  "80"
+    "minimum" "0.00033"
+    "maximum" "0.0017"
+    "incriment" "0.00135"
+    "id"  "15018"
+    //Dreamcloth
+  }
+        "109"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "80"
+    "minimum" "0.00033"
+    "maximum" "0.0017"
+    "incriment" "0.00135"
+    "id"  "15012"
+    //Chimera's Eye
+  }
+      "110"
+  {
+    "minskill"  "340"
+    "skillup" "410"
+    "profession"  "5"
+    "minlevel"  "70"
+    "minimum" "0.005"
+    "maximum" "0.02"
+    "incriment" "0.0015"
+    "id"  "15006"
+    //Obsidium Bar
+  }
+  "111"
+  {
+    "minskill"  "380"
+    "skillup" "450"
+    "profession"  "7"
+    "minlevel"  "74"
+    "minimum" "0.001"
+    "maximum" "0.005"
+    "incriment" "0.0012"
+    "id"  "15007"
+    //Elementium Bar
+  }
+    "112"
+  {
+    "minskill"  "420"
+    "skillup" "485"
+    "profession"  "7"
+    "minlevel"  "72"
+    "minimum" "0.003"
+    "maximum" "0.01"
+    "incriment" "0.00135"
+    "id"  "15008"
+    //Hardened Elemntium Bar
+  }
+      "113"
+  {
+    "minskill"  "475"
+    "skillup" "525"
+    "profession"  "7"
+    "minlevel"  "80"
+    "minimum" "0.00033"
+    "maximum" "0.0017"
+    "incriment" "0.00135"
+    "id"  "15009"
+    //Pyrium Bar
+  }
+  
+	"114"
+  {
+    "profession"  "8"
+    "minlevel"  "81"
+    "maxlevel" "84"
+    "chance" "0.32"
+    "amount" "8"
+    "quality" "1"
+    "id"  "15000"
+    //Hypnotic Dust
+  }
+  	"115"
+  {
+    "profession"  "8"
+    "minlevel"  "85"
+    "maxlevel" "85"
+    "chance" "0.44"
+    "amount" "7"
+    "quality" "1"
+    "id"  "15000"
+    //Hypnotic Dust
+  }
+    	"116"
+  {
+    "profession"  "8"
+    "minlevel"  "81"
+    "maxlevel" "84"
+    "chance" "0.35"
+    "amount" "4"
+    "quality" "1"
+    "id"  "15001"
+    //Celestial Essence
+  }
+      	"117"
+  {
+    "profession"  "8"
+    "minlevel"  "81"
+    "maxlevel" "85"
+    "chance" "0.44"
+    "amount" "6"
+    "quality" "2"
+    "id"  "15001"
+    //Celestial Essence
+  }
+		"118"
+  {
+    "profession"  "8"
+    "minlevel"  "85"
+    "maxlevel" "85"
+    "chance" "0.27"
+    "amount" "3"
+    "quality" "1"
+    "id"  "15002"
+    //Small Heavenly Shard
+  }
+  		"119"
+  {
+    "profession"  "8"
+    "minlevel"  "81"
+    "maxlevel" "85"
+    "chance" "0.34"
+    "amount" "3"
+    "quality" "2"
+    "id"  "15002"
+    //Small Heavenly Shard
+  }
+    	"120"
+  {
+    "profession"  "8"
+    "minlevel"  "81"
+    "maxlevel" "85"
+    "chance" "0.17"
+    "amount" "2"
+    "quality" "2"
+    "id"  "15003"
+    //Heavenly Shard
+  }
+      	"121"
+  {
+    "profession"  "8"
+    "minlevel"  "81"
+    "maxlevel" "84"
+    "chance" "0.46"
+    "amount" "3"
+    "quality" "3"
+    "id"  "15003"
+    //Heavenly Shard
+  }
+       	"122"
+  {
+    "profession"  "8"
+    "minlevel"  "85"
+    "maxlevel" "85"
+    "chance" "0.76"
+    "amount" "6"
+    "quality" "3"
+    "id"  "15003"
+    //Heavenly Shard
+  }
+       	"123"
+  {
+    "profession"  "8"
+    "minlevel"  "85"
+    "maxlevel" "85"
+    "chance" "0.44"
+    "amount" "8"
+    "quality" "1"
+    "id"  "15001"
+    //Celestial Essence
+  }
+         	"124"
+  {
+    "profession"  "8"
+    "minlevel"  "85"
+    "maxlevel" "85"
+    "chance" "0.77"
+    "amount" "2"
+    "quality" "3"
+    "id"  "15004"
+    //Maelstrom Crystal
+  }

@@ -1,0 +1,82 @@
+﻿"Phrases"
+{
+	"No bets after bomb planted"
+	{
+		"en"			"No bets allowed after the bomb has been planted."
+	}
+
+	"Must Be On A Team To Vote"
+	{
+		"en"			"You must join a team to place a bet."
+	}
+
+	"Already Betted"
+	{
+		"en"			"You have already placed a bet this round."
+	}
+	
+	"Must Be Dead To Vote"
+	{
+		"en"			"You must be dead to place a bet."
+	}
+	
+	"Invalid Team for Bet"
+	{
+		"en"			"Invalid team, please use 'ct' or 't'."
+	}
+	
+	"Invalid Bet Amount"
+	{
+		"en"			"You do not specify a valid bet. Please use 'all', 'half', 'third' or a number."
+	}
+	
+	"Not Enough Money"
+	{
+		"en"			"You do not have Silver for that bet."
+	}
+	
+	"Bet Made"
+	{
+		"#format"		"{1:d},{2:d},{3:d},{4:d}"
+		"en"			"Bet placed. Odds are {1} to {2}. You stand to win {3} silver on your {4} silver bet."
+	}
+	
+	"One Vs One"
+	{
+		"en"			"One vs One! Place your bets now!"
+	}
+	
+	"One Vs Many Start"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"      "{1} vs the {2} team! Place your bets now!"
+	}
+	
+	"One Vs Many Winner"
+	{
+		"#format"		"{1:s},{2:d}"
+		"en"			"{1} has won against the odds! {2} silver awarded from the losing pot!"
+	}
+	
+	"Bet Won"
+	{
+		"#format"		"{1:d},{2:d}"
+		"en"			"You won {1} silver on your bet of {2} silver."
+	}
+	
+	"Bet Lost"
+	{
+		"#format"		"{1:d}"
+		"en"			"You lost your {1} silver bet."
+	}
+	
+	"Players Are Dead"
+	{
+		"en"			"You can't bet when either team is dead."
+	}
+	
+	"Advertise Bets"
+	{
+		"en"			"Type 'bet team amount' to bet on the winning team!"
+	}
+}

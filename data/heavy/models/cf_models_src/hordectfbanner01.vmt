@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\cf_textures/hordectfbanner01"
+	"$model" "1"
+}

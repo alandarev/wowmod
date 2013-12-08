@@ -1,0 +1,62 @@
+
+  "50" //50+ = Cataclysm bosses.
+  {
+    "armor" "1500" //70% Dmg reduction
+    "sta"   "141030"
+    "str"   "75"
+    "agi"   "375"
+    "int" "0"
+    "speed" "0.2"
+    "dmg" "150"
+    "multi" "0"
+   "targets" "1" //Single target boss; Arms/Fury Warrior.
+   "enrage_level" "0.35"
+   "enrage_dmg" "150"
+   "enrage_multi" "0"
+   "enrage_targets" "1"
+    "xp"  "12500"
+    "totalxp" "17500"
+    "sets"  ""
+    "amount"  "3"
+    "chance"  "0.56"
+    "1"
+    {
+      "chance"  "100"
+      "id"  "14999"
+    }
+    "2"
+    {
+      "chance"  "18"
+      "id"  "180"
+    }
+    "3"
+    {
+      "chance"  "100"
+      "id"  "191"
+    }
+    "4"
+    {
+      "chance"  "100"
+      "id"  "204"
+    }
+    "5"
+    {
+      "chance"  "100"
+      "id"  "181"
+    }
+    "6"
+    {
+      "chance"  "19"
+      "id"  "196"
+    }
+    "7"
+    {
+      "chance"  "19"
+      "id"  "209"
+    }
+    "8"
+    {
+      "chance"  "19"
+      "id"  "1043"
+    }
+   }

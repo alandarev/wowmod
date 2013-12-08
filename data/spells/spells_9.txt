@@ -1,0 +1,157 @@
+"spells"
+{
+  "1"
+  {
+    "name"  "Jab"
+    "event" "player_attacker"
+    "level" "1"
+    "chance"  "15"
+    "mana" "20"
+    "multi" "0.10" //Scales off of agility
+  }
+  "2"
+  {
+    "name"  "Tiger Palm"
+    "event" "player_attacker" //"player_attacker": You must check & set cooldown manually inside skill
+    "chance"  "15"
+    "level" "24"
+    "mana" "20"
+    "base" "5"
+    "multi" "1.00"
+    "dmgmulti"  "0.16"
+    "cooldown" "10.0"
+    "cooldowntype" "2"
+    "duration" "10.0"
+  }
+  "3"
+  {
+    "name"  "Expel Harm"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "1"
+    "cooldowntype"  "3"
+    "cooldown"  "3.0"
+    "mana"  "40"
+    "base"  "7"
+    "multi" "0.18"
+    "distance"  "375.0" //Distance for the second heal
+  }
+  "4"
+  {
+    "name"  "Monk stance spell"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "30"
+    "cooldowntype"  "4"
+    //Revival from here till
+    "cooldown"  "15.0"
+    "base"  "10"
+    "multi" "0.45"
+    "distance"  "750.0"
+    "chimulti" "0.60" //How much each chi increases the healing by
+    //Revival till here
+    //Fists of Fury
+    "fistbase"    "5"
+    "fistmulti"   "0.030"
+    "fistdistance"  "275"
+    "fistchimulti"  "0.40"
+    "ticks"     "5" //One tick is instant hence not counted here
+    //Fists of Fury ends here
+    "brewmulti" "0.10" //Brewmaster
+  }
+  "5"
+  {
+    "name"  "Spinning Crane Kick"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "36"
+    "cost" "35"
+    "cooldown"  "10.0"
+    "cooldowntype"  "5"
+    "mana"  "40"
+    "distance"  "250.0"
+    "base" "12"
+    "multi" "0.12"
+    "delay" "1.250"
+  }
+  "6"
+  {
+    "name"  "Path of Blossoms"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "76"
+    "cost" "50"
+    "cooldown"  "25.0"
+    "cooldowntype"  "6"
+    "mana"  "60"
+    "distance"  "175.0"
+    "base" "1"
+    "multi" "0.020" //Scales from agility
+    "delay" "1.00" //How often the blossoms are dropped
+    "duration"  "3" //How long the blossoms stay for
+    "ticks"   "7" //How many blossoms are dropped
+    "ddelay" "0.5" //How often the blossoms deal damage; this doesn't actually change anything, it's a set number in monk.inc so please change that instead
+  }
+  "7"
+  {
+    "name"      "Enhanced Parry"
+    "name_ru"   "TODO"
+    "event"     "player_spawn"
+    "level"     "44"
+    "chance"    "0.20"
+    "reduce"    "0.20"
+    "range"     "750"  //information only, amount will be hard-coded
+  }
+  "8"
+  {
+    "name"      "Wild Experience"
+    "name_ru"   "TODO"
+    "level"     "1"
+  }
+  "9"
+  {
+    "name"      "Legacy of the White Tiger"
+    "name_ru"   "TODO"
+    "level"     "85"
+    "crit"      "0.030"
+  }
+  "10"
+  {
+    "name"      "Chi Burst"
+    "event"     "player_cast"
+    "active"    "1"
+    "level"     "60"
+    "cooldown"  "1.5" //Low cooldown due to costing chi
+    "cooldowntype"  "8"
+    "mana"      "0"
+    "base"      "5"
+    "multi"     "0.25" //Heal multi, spelldamage
+    "agimulti"     "0.11" //Damage multi, agility
+    "chi"       "1"
+    "distance"  "175.0"
+  }
+  "12"
+  {
+    "name"      "Stance of the Ox" //Here simply to explain what each stance does
+    "level"     "30"
+  }
+  "13"
+  {
+    "name"      "Stance of the Tiger" //Here simply to explain what each stance does
+    "level"     "30"
+  }
+  "14"
+  {
+    "name"      "Stance of the Serpent" //Here simply to explain what each stance does
+    "level"     "30"
+  }
+  "15"
+  {
+    "name"      "Sparring" //Here simply to explain what Sparring does
+    "level"     "52"
+  }
+}

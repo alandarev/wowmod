@@ -1,0 +1,1585 @@
+// drop table
+//  professions:
+//
+//
+//  5 - mining
+//  6 - Skinning
+//  7 - Weaver
+//  9 - Inscription
+// 10 - Herbalism
+"wcdrop"
+{
+  "1"
+  {
+    "minskill"  "0"
+    "skillup" "30"
+    "profession"  "7"
+    "minlevel"  "20"
+    "minimum" "0.20"
+    "maximum" "0.40"
+    "incriment" "0.00175"
+    "id"  "168"
+    //linen cloth
+  }
+  "2"
+  {
+    "minskill"  "15"
+    "skillup" "50"
+    "profession"  "7"
+    "minlevel"  "32"
+    "minimum" "0.019"
+    "maximum" "0.40"
+    "incriment" "0.00175"
+    "id"  "170"
+    //wool cloth
+  }
+  "3"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "40"
+    "minimum" "0.007"
+    "maximum" "0.012"
+    "incriment" "0.00025"
+    "id"  "172"
+    "autoauction" "0"
+    //small pearl
+  }
+  "4"
+  {
+    "minskill"  "35"
+    "skillup" "90"
+    "profession"  "7"
+    "minlevel"  "36"
+    "minimum" "0.09"
+    "maximum" "0.27"
+    "incriment" "0.00175"
+    "id"  "173"
+    //silk cloth
+  }
+  "5"
+  {
+    "minskill"  "60"
+    "skillup" "150"
+    "profession"  "7"
+    "minlevel"  "36"
+    "minimum" "0.15"
+    "maximum" "0.34"
+    "incriment" "0.00175"
+    "id"  "176"
+    //mageweave cloth
+  }
+  "6"
+  {
+    "minskill"  "50"
+    "skillup" "150"
+    "profession"  "7"
+    "minlevel"  "48"
+    "minimum" "0.009"
+    "maximum" "0.017"
+    "incriment" "0.00025"
+    "id"  "177"
+    //thick spider silk
+  }
+  "7"
+  {
+    "minskill"  "100"
+    "skillup" "200"
+    "profession"  "7"
+    "minlevel"  "52"
+    "minimum" "0.005"
+    "maximum" "0.008"
+    "incriment" "0.00025"
+    "id"  "178"
+    //globe of water
+  }
+  "8"
+  {
+    "minskill"  "100"
+    "skillup" "200"
+    "profession"  "7"
+    "minlevel"  "52"
+    "minimum" "0.08"
+    "maximum" "0.17"
+    "incriment" "0.00175"
+    "id"  "179"
+    //runecloth
+  }
+  "9"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "60"
+    "minimum" "0.0007"
+    "maximum" "0.0025"
+    "incriment" "0.0001625"
+    "id"  "180"
+    "autoauction" "0"
+    //heart of fire
+  }
+  "10"
+  {
+    "minskill"  "150"
+    "skillup" "290"
+    "profession"  "7"
+    "minlevel"  "62"
+    "minimum" "0.06"
+    "maximum" "0.12"
+    "incriment" "0.00175"
+    "id"  "181"
+    //felcloth
+  }
+  "11"
+  {
+    "minskill"  "100"
+    "skillup" "220"
+    "profession"  "7"
+    "minlevel"  "60"
+    "minimum" "0.007"
+    "maximum" "0.013"
+    "incriment" "0.00025"
+    "id"  "182"
+    //golden pearl
+  }
+  "12"
+  {
+    "minskill"  "220"
+    "skillup" "360"
+    "profession"  "7"
+    "minlevel"  "68"
+    "minimum" "0.07"
+    "maximum" "0.20"
+    "incriment" "0.00175"
+    "id"  "183"
+    //netherweave cloth
+  }
+  //mining
+  "13"
+  {
+    "minskill"  "0"
+    "skillup" "30"
+    "profession"  "5"
+    "minlevel"  "20"
+    "minimum" "0.20"
+    "maximum" "0.40"
+    "incriment" "0.00175"
+    "id"  "184"
+    //copper bar
+  }
+  "14"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "32"
+    "minimum" "0.010"
+    "maximum" "0.020"
+    "incriment" "0.00025"
+    "id"  "185"
+    "autoauction" "0"
+    //malachite
+  }
+  "15"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "44"
+    "minimum" "0.007"
+    "maximum" "0.014"
+    "incriment" "0.00025"
+    "id"  "186"
+    "autoauction" "0"
+    //shadowgem
+  }
+  "16"
+  {
+    "minskill"  "20"
+    "skillup" "70"
+    "profession"  "5"
+    "minlevel"  "32"
+    "minimum" "0.19"
+    "maximum" "0.40"
+    "incriment" "0.00175"
+    "id"  "187"
+    //bronze bar
+  }
+  "17"
+  {
+    "minskill"  "60"
+    "skillup" "150"
+    "profession"  "5"
+    "minlevel"  "40"
+    "minimum" "0.09"
+    "maximum" "0.22"
+    "incriment" "0.00175"
+    "id"  "188"
+    //iron bar
+  }
+  "18"
+  {
+    "minskill"  "90"
+    "skillup" "200"
+    "profession"  "5"
+    "minlevel"  "40"
+    "minimum" "0.06"
+    "maximum" "0.14"
+    "incriment" "0.00025"
+    "id"  "189"
+    //gold bar
+  }
+  "19"
+  {
+    "minskill"  "100"
+    "skillup" "200"
+    "profession"  "5"
+    "minlevel"  "48"
+    "minimum" "0.08"
+    "maximum" "0.20"
+    "incriment" "0.002"
+    "id"  "190"
+    //mithril bar
+  }
+  "20"
+  {
+    "minskill"  "130"
+    "skillup" "250"
+    "profession"  "5"
+    "minlevel"  "56"
+    "minimum" "0.011"
+    "maximum" "0.1"
+    "incriment" "0.00025"
+    "id"  "191"
+    //Truesilver Bar
+  }
+  "21"
+  {
+    "minskill"  "150"
+    "skillup" "250"
+    "profession"  "5"
+    "minlevel"  "48"
+    "minimum" "0.08"
+    "maximum" "0.19"
+    "incriment" "0.002"
+    "id"  "192"
+    //Thorium Bar
+  }
+  "22"
+  {
+    "minskill"  "180"
+    "skillup" "300"
+    "profession"  "5"
+    "minlevel"  "60"
+    "minimum" "0.010"
+    "maximum" "0.020"
+    "incriment" "0.00025"
+    "id"  "193"
+    //Dark Iron Bar
+  }
+  "23"
+  {
+    "minskill"  "220"
+    "skillup" "300"
+    "profession"  "5"
+    "minlevel"  "64"
+    "minimum" "0.09"
+    "maximum" "0.17"
+    "incriment" "0.002"
+    "id"  "194"
+    //Fel Iron Bar
+  }
+  "24"
+  {
+    "minskill"  "280"
+    "skillup" "380"
+    "profession"  "5"
+    "minlevel"  "68"
+    "minimum" "0.05"
+    "maximum" "0.12"
+    "incriment" "0.002"
+    "id"  "195"
+    //Adamantite Bar
+  }
+  "25"
+  {
+    "minskill"  "350"
+    "skillup" "400"
+    "profession"  "5"
+    "minlevel"  "64"
+    "minimum" "0.004"
+    "maximum" "0.012"
+    "incriment" "0.00025"
+    "id"  "196"
+    //Primal Might
+  }
+  //leather
+  "26"
+  {
+    "minskill"  "0"
+    "skillup" "30"
+    "profession"  "6"
+    "minlevel"  "20"
+    "minimum" "0.20"
+    "maximum" "0.40"
+    "incriment" "0.00175"
+    "id"  "197"
+    //Light Leather
+  }
+  "27"
+  {
+    "minskill"  "10"
+    "skillup" "50"
+    "profession"  "6"
+    "minlevel"  "32"
+    "minimum" "0.01"
+    "maximum" "0.04"
+    "incriment" "0.00025"
+    "id"  "198"
+    //Light Hide
+  }
+  "28"
+  {
+    "minskill"  "40"
+    "skillup" "100"
+    "profession"  "6"
+    "minlevel"  "44"
+    "minimum" "0.01"
+    "maximum" "0.03"
+    "incriment" "0.00025"
+    "id"  "199"
+    //Medium hide
+  }
+  "29"
+  {
+    "minskill"  "20"
+    "skillup" "70"
+    "profession"  "6"
+    "minlevel"  "32"
+    "minimum" "0.19"
+    "maximum" "0.40"
+    "incriment" "0.00175"
+    "id"  "200"
+    //Medium Leather
+  }
+  "30"
+  {
+    "minskill"  "60"
+    "skillup" "150"
+    "profession"  "6"
+    "minlevel"  "40"
+    "minimum" "0.08"
+    "maximum" "0.17"
+    "incriment" "0.00175"
+    "id"  "201"
+    //Heavy Leather
+  }
+  "31"
+  {
+    "minskill"  "90"
+    "skillup" "200"
+    "profession"  "6"
+    "minlevel"  "40"
+    "minimum" "0.012"
+    "maximum" "0.02"
+    "incriment" "0.00025"
+    "id"  "202"
+    //Heavy Hide
+  }
+  "32"
+  {
+    "minskill"  "100"
+    "skillup" "200"
+    "profession"  "6"
+    "minlevel"  "48"
+    "minimum" "0.08"
+    "maximum" "0.19"
+    "incriment" "0.002"
+    "id"  "203"
+    //Thick Leather
+  }
+  "33"
+  {
+    "minskill"  "130"
+    "skillup" "250"
+    "profession"  "6"
+    "minlevel"  "52"
+    "minimum" "0.011"
+    "maximum" "0.02"
+    "incriment" "0.00025"
+    "id"  "204"
+    //Thick Hide
+  }
+  "34"
+  {
+    "minskill"  "150"
+    "skillup" "250"
+    "profession"  "6"
+    "minlevel"  "56"
+    "minimum" "0.08"
+    "maximum" "0.21"
+    "incriment" "0.002"
+    "id"  "205"
+    //Rugged Leather
+  }
+  "35"
+  {
+    "minskill"  "250"
+    "skillup" "350"
+    "profession"  "6"
+    "minlevel"  "62"
+    "minimum" "0.008"
+    "maximum" "0.012"
+    "incriment" "0.00025"
+    "id"  "207"
+    //Fel Scales
+  }
+  "36"
+  {
+    "minskill"  "200"
+    "skillup" "300"
+    "profession"  "6"
+    "minlevel"  "59"
+    "minimum" "0.07"
+    "maximum" "0.19"
+    "incriment" "0.002"
+    "id"  "206"
+    //Knothide Leather
+  }
+  "37"
+  {
+    "minskill"  "280"
+    "skillup" "380"
+    "profession"  "6"
+    "minlevel"  "68"
+    "minimum" "0.04"
+    "maximum" "0.13"
+    "incriment" "0.002"
+    "id"  "208"
+    //Crystal Infused Leather
+  }
+  "38"
+  {
+    "minskill"  "350"
+    "skillup" "400"
+    "profession"  "6"
+    "minlevel"  "64"
+    "minimum" "0.002"
+    "maximum" "0.01"
+    "incriment" "0.00025"
+    "id"  "209"
+    //Cobra Scales
+  }
+  "39"
+  {
+    "minskill"  "350"
+    "skillup" "400"
+    "profession"  "7"
+    "minlevel"  "64"
+    "minimum" "0.002"
+    "maximum" "0.01"
+    "incriment" "0.00025"
+    "id"  "1043"
+    //Spellcloth
+  }
+  "40"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "50"
+    "minimum" "0.0002"
+    "maximum" "0.0016"
+    "incriment" "0.0001"
+    "set"   "60 26 27 26 27 26 27 107 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 108 125 126 127 128 129 130 131 132 133 134 111"
+    "announce" "1"
+    "autoauction" "1"
+    "autoauctiononly" "1" //this' so if auto-auction doesn't find a drop earlier than the last iteration of it's loop it will just grab anything from here.
+    //64 rare, 70 uncommon
+  }
+  "41"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "50"
+    "minimum" "0.0002"
+    "maximum" "0.0016"
+    "incriment" "0.0001"
+    "set"   "60 26 27 26 27 26 27 107 114"
+    "announce" "1"
+    "autoauction" "1"
+    //60 lvl epics
+  }
+  "42"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "55"
+    "minimum" "0.00005"
+    "maximum" "0.0002"
+    "incriment" "0.00005"
+    "set"   "28 29 30 31 32 33 34 35 36 28 29 30 31 32 33 34 35 36 106"
+    "announce" "1"
+    "autoauction" "1"
+    //78 lvl epic recipes + jewel recipes
+  }
+  "43"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "65"
+    "minimum" "0.00015"
+    "maximum" "0.0007"
+    "incriment" "0.00008"
+    "set"   "11 12 13 14 15 16 17 11 12 13 14 15 16 17 110 112"
+    "announce" "1"
+    "autoauction" "1"
+    //80 blue (before only boss) sets
+  }
+  "44"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "75"
+    "minimum" "0.000015"
+    "maximum" "0.00002"
+    "incriment" "0.000025"
+    "set"   "38"
+    "announce" "1"
+    "autoauction" "1"
+    //legendary pattern
+  }
+
+  "45"
+    {
+      "profession"  "8"
+      "tier"   "1"
+      "cMin"   "0"
+      "cMax"   "37"
+      "uMin"   "0"
+      "uMax"   "20"
+      "rMin"   "-1"
+      "rMax"   "-1"
+      "eMin"   "-1"
+      "eMax"   "-1"
+      "lMin"   "-1"
+      "lMax"   "-1"
+      "id"     "6297" //Strange Dust
+      "failId" "-1"   //None
+    }
+  "46"
+    {
+      "profession"  "8"
+      "tier"   "2"
+      "cMin"   "38"
+      "cMax"   "55"
+      "uMin"   "21"
+      "uMax"   "41"
+      "rMin"   "1"
+      "rMax"   "25"
+      "eMin"   "0"
+      "eMax"   "10"
+      "lMin"   "-1"
+      "lMax"   "-1"
+      "id"     "6298" //Soul Dust
+      "failId" "6297" //Strange Dust
+    }
+  "47"
+    {
+      "profession"  "8"
+      "tier"   "3"
+      "cMin"   "56"
+      "cMax"   "69"
+      "uMin"   "42"
+      "uMax"   "58"
+      "rMin"   "26"
+      "rMax"   "45"
+      "eMin"   "11"
+      "eMax"   "33"
+      "lMin"   "0"
+      "lMax"   "17"
+      "id"     "6299" //Hypnotic Dust
+      "failId" "6298" //Soul Dust
+    }
+  "48"
+    {
+      "profession"  "8"
+      "tier"   "4"
+      "cMin"   "70"
+      "cMax"   "79"
+      "uMin"   "59"
+      "uMax"   "71"
+      "rMin"   "46"
+      "rMax"   "61"
+      "eMin"   "34"
+      "eMax"   "52"
+      "lMin"   "18"
+      "lMax"   "40"
+      "id"     "6300" //Dream Dust
+      "failId" "6299" //Hypnotic Dust
+    }
+  "49"
+    {
+      "profession"  "8"
+      "tier"   "5"
+      "cMin"   "80"
+      "cMax"   "85"
+      "uMin"   "72"
+      "uMax"   "80"
+      "rMin"   "62"
+      "rMax"   "73"
+      "eMin"   "53"
+      "eMax"   "67"
+      "lMin"   "41"
+      "lMax"   "59"
+      "id"     "6301" //Arcane Dust
+      "failId" "6300" //Dream Dust
+    }
+  "50"
+    {
+      "profession"  "8"
+      "tier"   "6"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "81"
+      "uMax"   "85"
+      "rMin"   "74"
+      "rMax"   "81"
+      "eMin"   "68"
+      "eMax"   "78"
+      "lMin"   "60"
+      "lMax"   "74"
+      "id"     "15000" //Illusion Dust
+      "failId" "6301"  //Arcane Dust
+    }
+  "51"
+    {
+      "profession"  "8"
+      "tier"   "7"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "-1"
+      "uMax"   "-1"
+      "rMin"   "82"
+      "rMax"   "85"
+      "eMin"   "79"
+      "eMax"   "85"
+      "lMin"   "75"
+      "lMax"   "85"
+      "id"     "6302"  //Infinite Dust
+      "failId" "15000" //Illusion Dust
+    }
+  "52"
+    {
+      "profession"  "8"
+      "tier"   "1"
+      "cMin"   "0"
+      "cMax"   "37"
+      "uMin"   "0"
+      "uMax"   "20"
+      "rMin"   "-1"
+      "rMax"   "-1"
+      "eMin"   "-1"
+      "eMax"   "-1"
+      "lMin"   "-1"
+      "lMax"   "-1"
+      "id"     "6304" //Magic Essence
+      "failId" "-1"   //None
+    }
+  "53"
+    {
+      "profession"  "8"
+      "tier"   "2"
+      "cMin"   "38"
+      "cMax"   "55"
+      "uMin"   "21"
+      "uMax"   "41"
+      "rMin"   "0"
+      "rMax"   "25"
+      "eMin"   "0"
+      "eMax"   "10"
+      "lMin"   "-1"
+      "lMax"   "-1"
+      "id"     "6305" //Astral Essence
+      "failId" "6304" //Magic Essence
+    }
+  "54"
+    {
+      "profession"  "8"
+      "tier"   "3"
+      "cMin"   "56"
+      "cMax"   "69"
+      "uMin"   "42"
+      "uMax"   "58"
+      "rMin"   "26"
+      "rMax"   "45"
+      "eMin"   "11"
+      "eMax"   "33"
+      "lMin"   "0"
+      "lMax"   "17"
+      "id"     "6306" //Nether Essence
+      "failId" "6305" //Astral Essence
+    }
+  "55"
+    {
+      "profession"  "8"
+      "tier"   "4"
+      "cMin"   "70"
+      "cMax"   "79"
+      "uMin"   "59"
+      "uMax"   "71"
+      "rMin"   "46"
+      "rMax"   "61"
+      "eMin"   "34"
+      "eMax"   "52"
+      "lMin"   "18"
+      "lMax"   "40"
+      "id"     "6307" //Eternal Essence
+      "failId" "6306" //Nether Essence
+    }
+  "56"
+    {
+      "profession"  "8"
+      "tier"   "5"
+      "cMin"   "80"
+      "cMax"   "85"
+      "uMin"   "72"
+      "uMax"   "80"
+      "rMin"   "62"
+      "rMax"   "73"
+      "eMin"   "53"
+      "eMax"   "67"
+      "lMin"   "41"
+      "lMax"   "59"
+      "id"     "6308" //Planar Essence
+      "failId" "6307" //Eternal Essence
+    }
+  "57"
+    {
+      "profession"  "8"
+      "tier"   "6"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "81"
+      "uMax"   "85"
+      "rMin"   "74"
+      "rMax"   "81"
+      "eMin"   "68"
+      "eMax"   "78"
+      "lMin"   "60"
+      "lMax"   "74"
+      "id"     "15001" //Celestial Essence
+      "failId" "6308"  //Planar Essence
+    }
+  "58"
+    {
+      "profession"  "8"
+      "tier"   "7"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "-1"
+      "uMax"   "-1"
+      "rMin"   "82"
+      "rMax"   "85"
+      "eMin"   "79"
+      "eMax"   "85"
+      "lMin"   "75"
+      "lMax"   "85"
+      "id"     "6309"  //Cosmic Essence
+      "failId" "15001" //Celestial Essence
+    }
+  "59"
+    {
+      "profession"  "8"
+      "tier"   "2"
+      "cMin"   "0"
+      "cMax"   "55"
+      "uMin"   "0"
+      "uMax"   "41"
+      "rMin"   "0"
+      "rMax"   "29"
+      "eMin"   "-1"
+      "eMax"   "-1"
+      "lMin"   "-1"
+      "lMax"   "-1"
+      "id"     "6311" //Glimmering Shard
+      "failId" "-1"   //None
+    }
+  "60"
+    {
+      "profession"  "8"
+      "tier"   "3"
+      "cMin"   "56"
+      "cMax"   "69"
+      "uMin"   "42"
+      "uMax"   "58"
+      "rMin"   "30"
+      "rMax"   "49"
+      "eMin"   "0"
+      "eMax"   "29"
+      "lMin"   "-1"
+      "lMax"   "-1"
+      "id"     "6312" //Glowing Shard
+      "failId" "6311" //Glimmering Shard
+    }
+  "61"
+    {
+      "profession"  "8"
+      "tier"   "4"
+      "cMin"   "70"
+      "cMax"   "79"
+      "uMin"   "59"
+      "uMax"   "71"
+      "rMin"   "50"
+      "rMax"   "63"
+      "eMin"   "30"
+      "eMax"   "48"
+      "lMin"   "0"
+      "lMax"   "33"
+      "id"     "6313" //Radiant Shard
+      "failId" "6312" //Glowing Shard
+    }
+  "62"
+    {
+      "profession"  "8"
+      "tier"   "5"
+      "cMin"   "80"
+      "cMax"   "85"
+      "uMin"   "72"
+      "uMax"   "80"
+      "rMin"   "64"
+      "rMax"   "73"
+      "eMin"   "49"
+      "eMax"   "63"
+      "lMin"   "34"
+      "lMax"   "52"
+      "id"     "6314" //Brilliant Shard
+      "failId" "6313" //Radiant Shard
+    }
+  "63"
+    {
+      "profession"  "8"
+      "tier"   "6"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "81"
+      "uMax"   "85"
+      "rMin"   "74"
+      "rMax"   "79"
+      "eMin"   "64"
+      "eMax"   "74"
+      "lMin"   "53"
+      "lMax"   "67"
+      "id"     "6315" //Prismatic Shard
+      "failId" "6314" //Brilliant Shard
+    }
+  "64"
+    {
+      "profession"  "8"
+      "tier"   "7"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "-1"
+      "uMax"   "-1"
+      "rMin"   "80"
+      "rMax"   "83"
+      "eMin"   "75"
+      "eMax"   "81"
+      "lMin"   "68"
+      "lMax"   "78"
+      "id"     "15002" //Small Heavenly Shard
+      "failId" "6315"  //Prismatic Shard
+    }
+  "65"
+    {
+      "profession"  "8"
+      "tier"   "8"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "-1"
+      "uMax"   "-1"
+      "rMin"   "84"
+      "rMax"   "85"
+      "eMin"   "82"
+      "eMax"   "85"
+      "lMin"   "79"
+      "lMax"   "85"
+      "id"     "15003" //Large Heavenly Shard
+      "failId" "15002" //Small Heavenly Shard
+    }
+  "66"
+    {
+      "profession"  "8"
+      "tier"   "6"
+      "cMin"   "84"
+      "cMax"   "85"
+      "uMin"   "80"
+      "uMax"   "83"
+      "rMin"   "75"
+      "rMax"   "79"
+      "eMin"   "65"
+      "eMax"   "73"
+      "lMin"   "50"
+      "lMax"   "61"
+      "id"     "6318" //Nexus Crystal
+      "failId" "-1"   //None
+    }
+  "67"
+    {
+      "profession"  "8"
+      "tier"   "7"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "84"
+      "uMax"   "85"
+      "rMin"   "80"
+      "rMax"   "83"
+      "eMin"   "74"
+      "eMax"   "79"
+      "lMin"   "62"
+      "lMax"   "71"
+      "id"     "6319" //Void Crystal
+      "failId" "6318" //Nexus Crystal
+    }
+  "68"
+    {
+      "profession"  "8"
+      "tier"   "8"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "-1"
+      "uMax"   "-1"
+      "rMin"   "84"
+      "rMax"   "85"
+      "eMin"   "80"
+      "eMax"   "83"
+      "lMin"   "72"
+      "lMax"   "79"
+      "id"     "6320" //Abyss Crystal
+      "failId" "6319" //Void Crystal
+    }
+  "69"
+    {
+      "profession"  "8"
+      "tier"   "9"
+      "cMin"   "-1"
+      "cMax"   "-1"
+      "uMin"   "-1"
+      "uMax"   "-1"
+      "rMin"   "-1"
+      "rMax"   "-1"
+      "eMin"   "84"
+      "eMax"   "85"
+      "lMin"   "80"
+      "lMax"   "85"
+      "id"     "15004" //Maelstrom Crystal
+      "failId" "6320"  //Abyss Crystal
+    }
+  //Random drops
+  "81"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "20"
+    "minimum" "0.0002"
+    "maximum" "0.004"
+    "incriment" "0.0002"
+    "set"   "39 41 42 43 44 45 46 47 48 49 50 51"
+    "announce" "1"
+    "autoauction" "1"
+  }
+	  "83"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "68"
+    "minimum" "0.00015"
+    "maximum" "0.0008"
+    "incriment" "0.00005"
+    "set"   "52 53 55 56 57 58 59 61 52 53 55 56 57 58 59 61 109"
+    "announce" "1"
+    "autoauction" "1"
+    //74 rare drops
+	}
+	"84"   {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "70"
+    "minimum" "0.00004"
+    "maximum" "0.00005"
+    "incriment" "0.00001"
+    "set"   "63 64 65 66 67 68 69 70 63 64 65 66 67 68 69 70 105 115"
+    "announce" "1"
+    "autoauction" "1"
+    //80 epics
+  }
+  "85"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "50"
+    "minimum" "0.001"
+    "maximum" "0.0025"
+    "incriment" "0.00005"
+    "set"   "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 108"
+    "announce" "0"
+    "autoauction" "1"
+    //64 lvl rares
+	}
+  "86"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "40"
+    "minimum" "0.0015"
+    "maximum" "0.0035"
+    "incriment" "0.00006"
+    "set"   "125 126 127 128 129 130 131 132 133 134"
+    "announce" "0"
+    "autoauction" "1"
+    //70 lvl greens
+	}
+	
+  "87"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "50"
+    "minimum" "0.00009"
+    "maximum" "0.0002"
+    "incriment" "0.00005"
+    "set"   "135 139 140 141 142 143 144 145 146 147"
+    "announce" "1"
+    "autoauction" "1"
+    //73 Epic Recipe(s).
+	}
+	  "88"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "72"
+    "minimum" "0.00005"
+    "maximum" "0.00015"
+    "incriment" "0.00005"
+    "set"   "136"
+    "announce" "1"
+    "autoauction" "1"
+    //75 Epic Trinkets
+	}
+	"89"
+	  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "65"
+    "minimum" "0.00005"
+    "maximum" "0.0005"
+    "incriment" "0.00005"
+    "set"   "137"
+    "announce" "1"
+    "autoauction" "1"
+    //78 Rare necklaces
+	}
+	  "90"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "55"
+    "minimum" "0.0012"
+    "maximum" "0.0032"
+    "incriment" "0.0001625"
+    "id"  "13250"
+    "autoauction" "0"
+    //Seaspray Emerald
+  }
+    "100"
+  {
+    "minskill"  "340"
+    "skillup" "410"
+    "profession"  "6"
+    "minlevel"  "60"
+    "minimum" "0.02"
+    "maximum" "0.07"
+    "incriment" "0.0015"
+    "id"  "15021"
+    //Savage Leather
+  }
+  "101"
+  {
+    "minskill"  "380"
+    "skillup" "450"
+    "profession"  "6"
+    "minlevel"  "64"
+    "minimum" "0.015"
+    "maximum" "0.05"
+    "incriment" "0.0012"
+    "id"  "15022"
+    //Heavy Savage Leather
+  }
+    "102"
+  {
+    "minskill"  "420"
+    "skillup" "485"
+    "profession"  "6"
+    "minlevel"  "68"
+    "minimum" "0.015"
+    "maximum" "0.025"
+    "incriment" "0.0020"
+    "id"  "15023"
+    //Blackened Dragonscale
+  }
+      "103"
+  {
+    "minskill"  "475"
+    "skillup" "525"
+    "profession"  "6"
+    "minlevel"  "72"
+    "minimum" "0.001"
+    "maximum" "0.002"
+    "incriment" "0.00085"
+    "id"  "15024"
+    //Pristine Hide
+  }
+    "104"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "76"
+    "minimum" "0.0001"
+    "maximum" "0.0002"
+    "incriment" "0.0001625"
+    "id"  "14999"
+    "announce" "1"
+    "autoauction" "1"
+    //Chaos Orb
+  }
+    "105"
+  {
+    "minskill"  "340"
+    "skillup" "410"
+    "profession"  "7"
+    "minlevel"  "60"
+    "minimum" "0.02"
+    "maximum" "0.07"
+    "incriment" "0.0015"
+    "id"  "15019"
+    //Embersilk Cloth
+  }
+  "106"
+  {
+    "minskill"  "380"
+    "skillup" "450"
+    "profession"  "7"
+    "minlevel"  "64"
+    "minimum" "0.015"
+    "maximum" "0.05"
+    "incriment" "0.0012"
+    "id"  "15017"
+    //Bolt of Embersilk Cloth
+  }
+    "107"
+  {
+    "minskill"  "420"
+    "skillup" "485"
+    "profession"  "7"
+    "minlevel"  "68"
+    "minimum" "0.015"
+    "maximum" "0.025"
+    "incriment" "0.0020"
+    "id"  "15020"
+    //Fiery Silk Gland
+  }
+      "108"
+  {
+    "minskill"  "475"
+    "skillup" "525"
+    "profession"  "7"
+    "minlevel"  "72"
+    "minimum" "0.001"
+    "maximum" "0.002"
+    "incriment" "0.00085"
+    "id"  "15018"
+    //Dreamcloth
+  }
+        "109"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "76"
+    "minimum" "0.0001"
+    "maximum" "0.0002"
+    "incriment" "0.0001625"
+    "id"  "15012"
+    "autoauction" "0"
+    //Chimera's Eye
+  }
+      "110"
+  {
+    "minskill"  "340"
+    "skillup" "410"
+    "profession"  "5"
+    "minlevel"  "60"
+    "minimum" "0.02"
+    "maximum" "0.07"
+    "incriment" "0.0015"
+    "id"  "15006"
+    //Obsidium Bar
+  }
+  "111"
+  {
+    "minskill"  "380"
+    "skillup" "450"
+    "profession"  "5"
+    "minlevel"  "64"
+    "minimum" "0.015"
+    "maximum" "0.05"
+    "incriment" "0.0012"
+    "id"  "15007"
+    //Elementium Bar
+  }
+    "112"
+  {
+    "minskill"  "420"
+    "skillup" "485"
+    "profession"  "5"
+    "minlevel"  "68"
+    "minimum" "0.015"
+    "maximum" "0.025"
+    "incriment" "0.0020"
+    "id"  "15008"
+    //Hardened Elementium Bar
+  }
+      "113"
+  {
+    "minskill"  "475"
+    "skillup" "525"
+    "profession"  "5"
+    "minlevel"  "72"
+    "minimum" "0.001"
+    "maximum" "0.002"
+    "incriment" "0.00085"
+    "id"  "15009"
+    //Pyrium Bar
+  }
+    "125"
+	{
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "82"
+    "minimum" "0.000008"
+    "maximum" "0.000016"
+    "incriment" "0.00010"
+    "set"   "368 369 370 371 372 373 309 310 311 312 313"
+    "announce" "2"
+    //85 epic recipes
+  }
+   "126"
+   {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "74"
+    "minimum" "0.0004"
+    "maximum" "0.0008"
+    "incriment" "0.00008"
+    "set"   "303 304 305 356 357 358 359 360 361"
+    "announce" "1"
+    "autoauction" "1"
+    //84 blue
+  }
+    "127"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "40"
+    "minimum" "0.0004"
+    "maximum" "0.0011"
+    "incriment" "0.00004"
+    "set"   "350 351 352 353 354 355 300 301 302"
+    "announce" "0"
+    "autoauction" "1"
+    //84 lvl greens
+	}
+	  "128" //Peacebloom
+  {
+    "minskill"  "0"
+    "skillup" "50"
+    "profession"  "10"
+    "minlevel"  "0"
+    "minimum" "0.10"
+    "maximum" "0.20"
+    "incriment" "0.002"
+    "id"  "20000"
+  }
+  	  "129" //Silverleaf
+  {
+    "minskill"  "25"
+    "skillup" "65"
+    "profession"  "10"
+    "minlevel"  "15"
+    "minimum" "0.11"
+    "maximum" "0.14"
+    "incriment" "0.00145"
+    "id"  "20001"
+  }
+  	  "130" //Earthroot
+  {
+    "minskill"  "50"
+    "skillup" "100"
+    "profession"  "10"
+    "minlevel"  "20"
+    "minimum" "0.09"
+    "maximum" "0.12"
+    "incriment" "0.002"
+    "id"  "20002"
+  }
+    	  "131" //Mageroyal
+  {
+    "minskill"  "80"
+    "skillup" "150"
+    "profession"  "10"
+    "minlevel"  "25"
+    "minimum" "0.08"
+    "maximum" "0.11"
+    "incriment" "0.002"
+    "id"  "20003"
+  }
+      	"132" //Bruiseweed
+  {
+    "minskill"  "100"
+    "skillup" "155"
+    "profession"  "10"
+    "minlevel"  "40"
+    "minimum" "0.06"
+    "maximum" "0.08"
+    "incriment" "0.002"
+    "id"  "20004"
+  }
+        "133" //Kingsblood
+  {
+    "minskill"  "120"
+    "skillup" "175"
+    "profession"  "10"
+    "minlevel"  "44"
+    "minimum" "0.05"
+    "maximum" "0.07"
+    "incriment" "0.002"
+    "id"  "20005"
+  }
+          "134" //Fadeleaf
+  {
+    "minskill"  "150"
+    "skillup" "200"
+    "profession"  "10"
+    "minlevel"  "48"
+    "minimum" "0.01"
+    "maximum" "0.02"
+    "incriment" "0.0025"
+    "id"  "20006"
+  }
+            "135" //Goldthorn
+  {
+    "minskill"  "165"
+    "skillup" "200"
+    "profession"  "10"
+    "minlevel"  "48"
+    "minimum" "0.04"
+    "maximum" "0.06"
+    "incriment" "0.0025"
+    "id"  "20007"
+  }
+              "136" //Sungrass
+  {
+    "minskill"  "185"
+    "skillup" "235"
+    "profession"  "10"
+    "minlevel"  "56"
+    "minimum" "0.03"
+    "maximum" "0.05"
+    "incriment" "0.0025"
+    "id"  "20008"
+  }
+                "137" //Dreamfoil
+  {
+    "minskill"  "190"
+    "skillup" "275"
+    "profession"  "10"
+    "minlevel"  "56"
+    "minimum" "0.015"
+    "maximum" "0.02"
+    "incriment" "0.0025"
+    "id"  "20009"
+  }
+                  "138" //Purple Lotus
+  {
+    "minskill"  "225"
+    "skillup" "245"
+    "profession"  "10"
+    "minlevel"  "58"
+    "minimum" "0.02"
+    "maximum" "0.05"
+    "incriment" "0.0025"
+    "id"  "20010"
+  }
+                    "139" //Felweed
+  {
+    "minskill"  "235"
+    "skillup" "265"
+    "profession"  "10"
+    "minlevel"  "60"
+    "minimum" "0.02"
+    "maximum" "0.05"
+    "incriment" "0.0025"
+    "id"  "20011"
+  }
+"140" //Dreaming Glory
+  {
+    "minskill"  "250"
+    "skillup" "280"
+    "profession"  "10"
+    "minlevel"  "60"
+    "minimum" "0.0075"
+    "maximum" "0.015"
+    "incriment" "0.00075"
+    "id"  "20012"
+  }
+  "141" //Terocone
+  {
+    "minskill"  "270"
+    "skillup" "290"
+    "profession"  "10"
+    "minlevel"  "60"
+    "minimum" "0.005"
+    "maximum" "0.015"
+    "incriment" "0.00025"
+    "id"  "20013"
+  }
+    "142" //Netherbloom
+  {
+    "minskill"  "280"
+    "skillup" "335"
+    "profession"  "10"
+    "minlevel"  "62"
+    "minimum" "0.015"
+    "maximum" "0.035"
+    "incriment" "0.00075"
+    "id"  "20014"
+  }
+    "143" //Mana Thistle
+  {
+    "minskill"  "325"
+   "skillup" "350"
+    "profession"  "10"
+    "minlevel"  "64"
+    "minimum" "0.01"
+    "maximum" "0.03"
+    "incriment" "0.00075"
+    "id"  "20015"
+  }
+    "147" //Goldclover
+  {
+    "minskill"  "340"
+   "skillup" "375"
+    "profession"  "10"
+    "minlevel"  "66"
+    "minimum" "0.005"
+    "maximum" "0.01"
+    "incriment" "0.00075"
+    "id"  "20016"
+  }
+     "144"
+   {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "78"
+    "minimum" "0.0001"
+    "maximum" "0.0003"
+    "incriment" "0.00006"
+    "set"   "374 375"
+    "announce" "1"
+    "autoauction" "1"
+    //Rare drop enchants - Cataclysm
+  }
+       "145"
+   {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "78"
+    "minimum" "0.00001"
+    "maximum" "0.0000350"
+    "incriment" "0.00001"
+    "set"   "376"
+    "announce" "1"
+    //Epic drop enchants - Cataclysm
+  }
+   "146"
+   {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "74"
+    "minimum" "0.00004" //drop rates are based off of 84Rare set
+    "maximum" "0.00016"
+    "incriment" "0.000064"
+    "set"   "101 102 103 104"
+    "announce" "1"
+    //60/80 epic wep, 74/80 rare wep, no shields
+  }
+
+   "147" //Raid items
+   {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "85"
+    "minimum" "0.00001"
+    "maximum" "0.00001"
+    "incriment" "0.00"
+    "set"   "379"
+    "announce" "1"
+  }
+     "148" //Cabbage
+   {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "1"
+    "minimum" "0.000099"
+    "maximum" "0.000099"
+    "incriment" "0.00"
+    "id"      "20161"
+    "announce" "1"
+  }
+    "149"
+	{
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "70"
+    "minimum" "0.00002"
+    "maximum" "0.00004"
+    "incriment" "0.00001"
+    "set"   "113"
+    "announce" "1"
+    //85 rare monk
+  }
+}

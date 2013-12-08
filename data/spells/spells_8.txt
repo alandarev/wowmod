@@ -1,0 +1,154 @@
+"spells"
+{
+  "1"
+  {
+    "name"  "Blood Strike"
+    "name_ru"   "TODO"
+    "event" "player_attacker"
+    "level" "40"
+    "chance"  "15"
+    "regen" "15"
+    "multi" "0.15"
+  }
+  "2"
+  {
+    "name"  "Death Grip"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "16"
+    "runes"  "1"
+    "regen"  "10"
+    "cooldown"  "6.0"
+    "cooldowntype"  "1"
+
+    "z" "110.0"  //Z coordinate modifier
+    "push"  "1.0"
+    "threat"  "1000"
+  }
+  "3"
+  {
+    "name"  "Plague Strike"
+    "name_ru"   "TODO"
+    "event" "player_attacker"
+    "level" "1"
+    "chance"  "15"
+    "regen" "5"
+    "multi" "0.0"
+
+    "tickdelay" "3.0"
+    "ticks"  "3"
+    "aoe" "350"
+    "multief"   "0.06"
+    "baseef"  "4"
+  }
+  "4"
+  {
+    "name"  "Icy Touch"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"       "1"
+    "level"        "1"
+    "runes"        "1"
+    "regen"        "10"
+    "cooldown"     "4.0"
+    "cooldowntype" "2"
+
+    //slowdown
+    "multi" "0.85"
+    "duration"  "1.5"
+
+    //debuff
+    "tickdelay" "1.0"
+    "ticks"  "3"
+    "aoe" "450"
+    "multief"   "0.045"
+    "baseef"  "3"
+  }
+  "5"
+  {
+    "name"  "Death Strike"
+    "name_ru"      "TODO"
+    "event"        "player_attacker"
+    "level"        "54"
+    "cooldowntype"  "3"
+    "cooldown"      "6.0"
+    "chance"       "30"
+    "regen"        "10"
+    "multi"         "0.10"
+    "multief"       "0.05"
+  }
+  "6"
+  {
+    "name"  "Death Coil"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "30"
+    "cooldowntype"  "4"
+    "cooldown"  "2.5"
+    "mana"  "40"
+    "multi" "0.26"
+    "basedmg" "12"
+  }
+  "7"
+  {
+    "name"  "Anti-Magic Shell"
+    "name_ru"   "TODO"
+    "event" "player_spellvictim"
+    "level" "1"
+    "max"   "30"
+    "tick"  "3"
+  }
+  "8"
+  {
+    "name"  "Mind Freeze"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "70"
+    "cooldowntype"  "5"
+    "cooldown"  "13.0"
+    "mana"  "20"
+    "duration"  "3.0"
+  }
+  "9"
+  {
+    "name"  "Raise Ally"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"        "1"
+    "level"         "48"
+    "cooldowntype"  "6"
+    "cooldown"      "60.0"
+    "distance"  "400.0"
+  }
+  "10"
+  {
+    "name"  "Necrotic Strike"
+    "name_ru"   "TODO"
+    "event" "player_attacker"
+    "level" "77"
+    "chance"  "8" // max 100%
+    "multi" "0.7"
+    "duration"  "8.0"
+  }
+  "11"
+  {
+    "name"  "Death and Decay"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"    "1"
+    "level"     "80"
+    "cooldowntype"  "11"
+    "cooldown"      "15.0"
+    "runes"         "1"
+    "regen"         "10"
+    "base"          "2"
+    "distance"      "1000.0"
+    "aoe"           "250.0" //Code assumes it is 300, modifying will make no effect
+    "duration"      "12.0"
+    "multi"         "0.12"
+    "tick"          "1.0"
+  }
+}

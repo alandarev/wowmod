@@ -1,0 +1,58 @@
+Player hurt algorithm:
+
+Bullet Fire	{
+
+	onTakeDamage	{
+
+		give person hp if damage is bullet
+		event_hurt	{	
+			put hp back
+
+			run skills which might call 
+				shift hurt stack;
+				onTakeDamage	{
+					restore hp
+					event_hurt	{
+						put hp back;
+
+						run spells;
+
+						calculate;
+						silent hurt;
+						
+					}
+				}
+				reduce hurt stack;
+
+			calculate;
+			silent hurt;
+			
+		}
+	}
+
+}
+	
+silent hurt	{
+	take hp off;
+	if hp less than damage:
+		onTakeDamage	{
+			return continue;
+			on hurt_event	{
+				return handled;
+			}
+			on death {
+				run skills/spells;
+				return continue;
+			}
+		}
+
+}
+
+spells will call fake Bullet Fire forward.
+pros: 
+	system is not going to create lots of useless events to represent same damage.
+	can be looped only by spells calling each other, so good coded spells won't let it happen.
+cons:
+	according to my experience this might deform statistics, well native console report after death about who attacked you will be completely wrong
+	spawned damage entity which isn't supposed to exist but just to properly kill person instead of suicide is weak place.
+

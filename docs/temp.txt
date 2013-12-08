@@ -1,0 +1,66 @@
+itemId int(10) unsigned NOT NULL,
+standard writable stats,
+classes,
+sets,
+reagents
+reagent_%d
+reagent_%d_amount
+arg%d_type
+arg%d
+
+
+    standardWritableStats.add(general_name);
+    standardWritableStats.add(general_description);
+    standardWritableStats.add(general_version);
+    standardWritableStats.add(general_level);
+    standardWritableStats.add(general_cost);
+    standardWritableStats.add(general_gold);
+    standardWritableStats.add(general_honor);
+    standardWritableStats.add(general_noshop);
+    standardWritableStats.add(general_category);
+    standardWritableStats.add(general_amount);
+    standardWritableStats.add(general_usable);
+    standardWritableStats.add(general_notrade);
+    standardWritableStats.add(general_soulbound);
+    standardWritableStats.add(general_token_amount);
+    standardWritableStats.add(general_token);
+
+    standardWritableStats.add(weapon_speed);
+    standardWritableStats.add(weapon_attackPower);
+    standardWritableStats.add(weapon_spellPower);
+    standardWritableStats.add(weapon_twoHanded);
+
+    standardWritableStats.add(item_ilevel);
+    standardWritableStats.add(item_strength);
+    standardWritableStats.add(item_agility);
+    standardWritableStats.add(item_stamina);
+    standardWritableStats.add(item_intellect);
+    standardWritableStats.add(item_armorIgnore);
+    standardWritableStats.add(item_resistance);
+    standardWritableStats.add(item_manaRegeneration);
+    standardWritableStats.add(item_resilence);
+    standardWritableStats.add(item_armor);
+    standardWritableStats.add(item_spellDamage);
+    standardWritableStats.add(item_damage);
+    standardWritableStats.add(item_haste);
+    standardWritableStats.add(item_armorType);
+    standardWritableStats.add(item_effect);
+    standardWritableStats.add(item_attackSpeed);
+    standardWritableStats.add(item_criticalStrike);
+    standardWritableStats.add(item_movementSpeed);
+    standardWritableStats.add(item_accuracy);
+
+    standardWritableStats.add(item_sound);
+
+    standardWritableStats.add(recipe_requiredSkill);
+    standardWritableStats.add(recipe_itemid);
+    standardWritableStats.add(recipe_grey);
+    standardWritableStats.add(recipe_green);
+    standardWritableStats.add(recipe_orange);
+
+
+    standardWritableStats.add(usable_message);
+    standardWritableStats.add(usable_set);
+    standardWritableStats.add(usable_category2);
+    standardWritableStats.add(usable_function);
+    standardWritableStats.add(usable_args_check);

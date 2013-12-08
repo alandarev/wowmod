@@ -1,0 +1,118 @@
+DK plans
+
+Balance Table:
+(Talent Tree) | Blood | Frost | Unholy
+---------------------------------------
+Warrior DPS       =       =       -
+Warrior Tank      +       =       =
+Rogue             +       =       -
+Mage              -       -       +
+Priest Healer     +       =       +
+Priest Shadow     =       -       +
+Paladin           =       +       -
+Shaman            -       +       +
+Warlock           +       -       +
+
+make DK character loadable only for premium (subscription or buy once?)
+implement Power which is Rage like but generates from abilities only
+implement Runes, will have 2-3 runes, most abilities will require a rune to cast
+
+runes: max 3, regen 8 sec
+
+
+TODO Sounds:
+  wc/spells/presence_cast.wav ++
+  wc/spells/runes_regen.wav ++
+  wc/spells/dk_strike.wav ++
+  
+  wc/spells/icytouch.wav ++
+  
+  wc/spells/mindfreeze.wav ++
+      
+  wc/spells/runetap.wav ++
+  
+  wc/spells/hungeringcold.wav ++
+  
+  
+  wc/spells/antimagic.wav -- add to code!
+  
+  wc/spells/raiseally.wav ++
+  wc/spells/butchery.wav ++
+  wc/spells/vampiric.wav  - dk vampiric blood talent
+  wc/spells/deathcoil.wav ++
+  wc/spells/deathgrip.wav ++
+
+
+DK items
+
+Stances:
+Auto cast presence according to talents spent
+Blood Presence - +8% hp +60% armor -8% dmg taken
+Frost Presence - dmg +10% Runic Power generation +20%
+Unholy Presence - +10% attack speed + 10% movement speed -cooldowns 1sec
+
+Spells:
+
+Passive:
+  Blood Strike - % +dmg from weapon damage (+30%). level 10
+  Plague Strike - % +dmg from weapon + spell dmg debuff. level 45
+  Death Strike - % +big dmg from weapon dmg +10% hp with cooldown. level 60
+  Anti-Magic Shell - auto rechargable spell absorbing shield (40 max, +2/sec). level 70
+  
+Active:
+  Death Coil - shadow bolt like, dmg X + 40% AP / 40 runic power. level 65
+  Death Grip - push target towards you with Z power ~30 and direction power ~500 / 1 rune. level 30
+  Icy Touch - slowdown + spell DMG debuff for ~7 seconds / 1 rune. level 52
+  Mind Freeze - silence 5 sec. cooldown 10 sec / 20 runic power. level 75
+  Raise Ally - 1 min CD. revive a zombie ally until end of round - going to be hard to implement :). level 80
+
+
+Talents:
+
+  Blood:
+    [Done] Active/Ultimates Talents:
+      Rune Tap - +30% out of max hp, costs 1 rune. CD 30 sec.
+      Mark of Blood - vampirism 2 points
+      Vampiric Blood - +15% hp and +35% to healing for 15 sec. 30 runic power
+    [Done] Tier 1:
+      Blade Barrier: if no runes left, decrease damage taken by 5/10/15%
+      Toughness: +armor ? same as other classes
+      Butchery + 10/20% hp on killing target
+    [Done] Tier 2:
+      Improved Death Strike: +15/30% damage
+    Tier 3:
+    
+  Frost:
+    [Done] Active/Ultimates Talents:
+      Lichborne - immunity to fear, slowdowns ( freeze? )
+      Hungering Cold - Frost Nova like, but freeze is breakable on dmg done (after 20 dmg is done)
+      Frost Strike - % +dmg +spell dmg / no costs(or 10 runic power) but no regeneration  2 points
+    Tier 1:
+      Runic Power Mastery: Increases maximum runic power: +15/30
+      Improved Death Coil: increase death coil damage by 10/20/30%
+      Chilblains: Reduce slowdown multiplier of Icy Touch by 5/10/15%
+    Tier 2:
+      [Done] dual wield
+    
+    Tier 3:
+    
+  Unholy:
+    [Done] Active/Ultimates Talents:
+      Ghoul Frenzy - give +25% attack speed and movement speed to ghoul. passive
+      Bone Shield - next 3 dmg received deal 50% damage. / 1 rune power, ~20 sec CD
+      Scourge Strike - % chance on hit to deal +dmg and cast deseases / 1 rune power
+    Tier 1:
+      Virulance: Ignore resistance by 4/7/10% of STR
+      Epidemic: Increase duration of Scourge Strike debuff by 1/2/3 ticks
+      Magic Suppression: Increase Maximum Anti-Mgic shell absobtion by 5/10/15(not %) and duration of silence by 0.33/0.66/1
+    Tier 2:
+      [Done] Consume ghoul - +% hp each time ghoul takes damage
+    
+    Tier 3:
+  
+
+
+
+
+
+

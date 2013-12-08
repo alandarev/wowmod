@@ -1,0 +1,191 @@
+//shaman
+"spells"
+{
+  "1"
+  {
+    "name"  "Shield Block"
+    "name_ru"   "TODO"
+    "event" "player_victim"
+    "level" "1"
+    "cost" "105"
+    "chance"  "10" // %
+  }
+  "2"
+  {
+    "name"  "Windfury"
+    "name_ru"   "TODO"
+    "event" "player_attacker"
+    "chance"  "20"
+    "level" "1"
+    "cost" "50"
+    "mana"  "0"
+    "manainc" "0.0"
+    "multi" "1.20"
+  }
+  "3"
+  {
+    "name"  "Flame Shock"
+    "name_ru"   "TODO"
+    "autocast"    "1"
+    "active"      "1"
+    "event" "player_cast"
+    "chance"  "11"
+    "level" "24"
+    "cost" "75"
+    "mana"  "22"
+    "manainc" "0.38"
+    "multi" "0.18"
+    "base" "5"
+    "tickdelay" "2.0"
+    "ticks"  "3"
+    "multief"   "0.08"
+    "cooldown"  "0.5"
+    "cooldowntype"  "14"
+  }
+  "4"
+  {
+    "name"  "Frost Shock"
+    "name_ru"   "TODO"
+    "autocast"    "1"
+    "active"      "1"
+    "event" "player_cast"
+    "chance"  "11"
+    "level" "38"
+    "cost" "120"
+    "mana"  "11"
+    "manainc" "0.22"
+    "multi" "0.16"
+    "base" "2"
+    "slowmulti"   "0.90"
+    "slowtime"  "2.5"
+    "cooldown"  "0.5"
+    "cooldowntype"  "13"
+  }
+  "5"
+  {
+    "name"  "Earth Shock"
+    "name_ru"   "TODO"
+    "autocast"    "1"
+    "active"      "1"
+    "event" "player_cast"
+    "chance"  "11"
+    "level" "60"
+    "cost" "240"
+    "mana"  "11"
+    "manainc" "0.22"
+    "multi" "0.16"
+    "base" "2"
+    "silence"   "1.5"
+    "cooldown"  "0.5"
+    "cooldowntype"  "16"
+  }
+  "6"
+  {
+    "name"  "Healing Wave"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "30"
+    "cost" "360"
+    "cooldowntype"  "1"
+    "cooldown"  "8.0"
+    "mana"  "25"
+    "manainc" "0.75"
+    "multi" "0.65"
+    "multiar"   "0.5"
+  }
+  "7"
+  {
+    "name"  "Rockbiter Weapon"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"    "1"
+    "level" "54"
+    "cost" "1000"
+    "mana"   "10"
+    "manainc"   "0.0"
+  }
+  "8"
+  {
+    "name"  "Reincarnation"
+    "name_ru"   "TODO"
+    "event" "player_death"
+    "active"    "0"
+    "level" "46"
+    "cost" "4000"
+    "chance"	"40"
+  }
+  "9"
+  {
+    "name"   "Fire Nova Totem"
+    "name_ru"   "TODO"
+    "level"  "1"
+    "cost"   "10000"
+
+    "active" "1"
+    "mana"   "90"
+    "manainc"   "0.0"
+
+    "cooldowntype" "2"
+    "cooldown"  "22"
+
+    "dmg" "30"
+    "multi"  "0.62"
+
+    "delay"  "2.0"
+    "ticks"  "30"
+    "hp"  "30"
+    "aoe" "400"
+    "distance"  "400.0" //should be same as aoe
+  }
+  "10"
+  {
+    "name"   "Earthbind Totem"
+    "name_ru"   "TODO"
+    "level"  "70"
+
+    "active" "1"
+    "mana"   "55"
+    "manainc"   "0.0"
+
+    "cooldowntype" "10"
+    "cooldown"  "22"
+
+    "multi"  "0.75"
+
+    "delay"  "0.5"
+    "ticks"  "30"
+    "hp"  "30"
+    "aoe" "400"
+    "distance"  "400.0" //should be same as aoe
+  }
+  "11"
+  {
+    "name"  "Healing Rain"
+    "name_ru"   "TODO"
+    "event" "player_cast"
+    "active"  "1"
+    "level" "80"
+    "cooldowntype"  "11"
+    "cooldown"  "15.0"
+    "mana"  "47"
+    "manainc" "1"
+    "multi" "0.66"
+    "base"  "15"
+    "distance"  "850"
+  }
+  "12"              //increases armor by 1 per agi
+  {
+    "name"    "Agile Defence"
+    "name_ru" "TODO"
+    "event"   "player_spawn"
+    "level"   "12"
+  }
+  "13"
+  {
+    "name"    "Dual Wielding Shaman"
+    "name_ru" "TODO"
+    "event"   "player_spawn"
+    "level"   "30"
+  }
+}

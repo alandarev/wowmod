@@ -1,0 +1,913 @@
+"names"
+{
+  "1"
+  {
+    "minlevel"  "1" //Minimum level of this set: 1-85
+    "maxlevel"  "10" // Maximum level of this set: 1-85
+    "quality"   "1" // 1 - Common 2 - Rare 3 - Epic
+    "name"      "Easter" //Name of this set. For example: Easter  -> Easter Chest, Easter Helmet, etc...
+  }
+  "2"
+  {
+    "minlevel"  "4"
+    "maxlevel"  "14"
+    "quality"   "1"
+    "name"      "Nicolette's"
+  }
+  "3"
+  {
+    "minlevel"  "8"
+    "maxlevel"  "18"
+    "quality"   "1"
+    "name"      "Green"
+  }
+  "4"
+  {
+    "minlevel"  "12"
+    "maxlevel"  "22"
+    "quality"   "1"
+    "name"      "Farmhand's"
+  }
+  "5"
+  {
+    "minlevel"  "16"
+    "maxlevel"  "26"
+    "quality"   "1"
+    "name"      "Sanguine"
+  }
+  "6"
+  {
+    "minlevel"  "20"
+    "maxlevel"  "30"
+    "quality"   "1"
+    "name"      "Fen Keeper"
+  }
+  "7"
+  {
+    "minlevel"  "24"
+    "maxlevel"  "34"
+    "quality"   "1"
+    "name"      "Doomsayer's"
+  }
+  "8"
+  {
+    "minlevel"  "28"
+    "maxlevel"  "38"
+    "quality"   "1"
+    "name"      "Doomhearer's"
+  }
+ "9"
+  {
+    "minlevel"  "32"
+    "maxlevel"  "42"
+    "quality"   "1"
+    "name"      "Twizzlefixxit's"
+  }
+ "10"
+  {
+    "minlevel"  "36"
+    "maxlevel"  "46"
+    "quality"   "1"
+    "name"      "Infernal"
+  }
+ "11"
+  {
+    "minlevel"  "40"
+    "maxlevel"  "50"
+    "quality"   "1"
+    "name"      "Darkmist"
+  }
+ "12"
+  {
+    "minlevel"  "44"
+    "maxlevel"  "54"
+    "quality"   "1"
+    "name"      "Mindsurge"
+  }
+ "13"
+  {
+    "minlevel"  "48"
+    "maxlevel"  "58"
+    "quality"   "1"
+    "name"      "Imperial Red"
+  }
+ "14"
+  {
+    "minlevel"  "52"
+    "maxlevel"  "62"
+    "quality"   "1"
+    "name"      "Resplendent"
+  }
+ "15"
+  {
+    "minlevel"  "56"
+    "maxlevel"  "66"
+    "quality"   "1"
+    "name"      "High Councillor's"
+  }
+ "16"
+  {
+    "minlevel"  "60"
+    "maxlevel"  "70"
+    "quality"   "1"
+    "name"      "Master's"
+  }
+   "17"
+  {
+    "minlevel"  "64"
+    "maxlevel"  "74"
+    "quality"   "1"
+    "name"      "Glacial"
+  }
+   "18"
+  {
+    "minlevel"  "72"
+    "maxlevel"  "82"
+    "quality"   "1"
+    "name"      "The Hexer's"
+  }
+   "18"
+  {
+    "minlevel"  "75"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Bloodsoaked"
+  }
+   "19"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "10"
+    "quality"   "2"
+    "name"      "Lo'ap's Muck Diving"
+  }
+   "20"
+  {
+    "minlevel"  "4"
+    "maxlevel"  "14"
+    "quality"   "2"
+    "name"      "Corroded"
+  }
+   "21"
+  {
+    "minlevel"  "8"
+    "maxlevel"  "18"
+    "quality"   "2"
+    "name"      "Scaled Silithid"
+  }
+   "22"
+  {
+    "minlevel"  "12"
+    "maxlevel"  "22"
+    "quality"   "2"
+    "name"      "Plague Hunter's"
+  }
+   "23"
+  {
+    "minlevel"  "16"
+    "maxlevel"  "26"
+    "quality"   "2"
+    "name"      "G-Team"
+  }
+   "24"
+  {
+    "minlevel"  "20"
+    "maxlevel"  "30"
+    "quality"   "2"
+    "name"      "Dreamsinger"
+  }
+   "25"
+  {
+    "minlevel"  "24"
+    "maxlevel"  "34"
+    "quality"   "2"
+    "name"      "Beastmaster's"
+  }
+   "26"
+  {
+    "minlevel"  "28"
+    "maxlevel"  "38"
+    "quality"   "2"
+    "name"      "Blood Guard's"
+  }
+   "27"
+  {
+    "minlevel"  "32"
+    "maxlevel"  "42"
+    "quality"   "2"
+    "name"      "Thorbia's"
+  }
+   "28"
+  {
+    "minlevel"  "36"
+    "maxlevel"  "46"
+    "quality"   "2"
+    "name"      "Bloodsoul"
+  }
+   "29"
+  {
+    "minlevel"  "40"
+    "maxlevel"  "50"
+    "quality"   "2"
+    "name"      "Timmy's"
+  }
+ "30"
+  {
+    "minlevel"  "44"
+    "maxlevel"  "54"
+    "quality"   "2"
+    "name"      "Abyssal"
+  }
+ "31"
+  {
+    "minlevel"  "48"
+    "maxlevel"  "58"
+    "quality"   "2"
+    "name"      "Earthbound"
+  }
+ "32"
+  {
+    "minlevel"  "52"
+    "maxlevel"  "62"
+    "quality"   "2"
+    "name"      "Gilded"
+  }
+ "33"
+  {
+    "minlevel"  "56"
+    "maxlevel"  "66"
+    "quality"   "2"
+    "name"      "Terrible Price"
+  }
+ "34"
+  {
+    "minlevel"  "60"
+    "maxlevel"  "70"
+    "quality"   "2"
+    "name"      "Seafury"
+  }
+ "35"
+  {
+    "minlevel"  "64"
+    "maxlevel"  "74"
+    "quality"   "2"
+    "name"      "Replica Knight-Captain's"
+  }
+ "36"
+  {
+    "minlevel"  "68"
+    "maxlevel"  "78"
+    "quality"   "2"
+    "name"      "Knight-Captain's"
+  }
+ "37"
+  {
+    "minlevel"  "72"
+    "maxlevel"  "82"
+    "quality"   "2"
+    "name"      "Demon-Forged"
+  }
+ "38"
+  {
+    "minlevel"  "75"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Legion"
+  }
+ "39"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "10"
+    "quality"   "3"
+    "name"      "Stonerender"
+  }
+ "40"
+  {
+    "minlevel"  "4"
+    "maxlevel"  "14"
+    "quality"   "3"
+    "name"      "Narv's"
+  }
+ "41"
+  {
+    "minlevel"  "8"
+    "maxlevel"  "18"
+    "quality"   "3"
+    "name"      "Beastmaster's"
+  }
+ "42"
+  {
+    "minlevel"  "12"
+    "maxlevel"  "22"
+    "quality"   "3"
+    "name"      "Foror's"
+  }
+ "43"
+  {
+    "minlevel"  "16"
+    "maxlevel"  "26"
+    "quality"   "3"
+    "name"      "Lava"
+  }
+ "44"
+  {
+    "minlevel"  "20"
+    "maxlevel"  "30"
+    "quality"   "3"
+    "name"      "Aged Core"
+  }
+ "45"
+  {
+    "minlevel"  "24"
+    "maxlevel"  "34"
+    "quality"   "3"
+    "name"      "Wild Growth"
+  }
+ "46"
+  {
+    "minlevel"  "28"
+    "maxlevel"  "38"
+    "quality"   "3"
+    "name"      "Unnatural"
+  }
+ "47"
+  {
+    "minlevel"  "32"
+    "maxlevel"  "42"
+    "quality"   "3"
+    "name"      "Natural"
+  }
+ "48"
+  {
+    "minlevel"  "36"
+    "maxlevel"  "46"
+    "quality"   "3"
+    "name"      "Unforgiving"
+  }
+ "49"
+  {
+    "minlevel"  "40"
+    "maxlevel"  "50"
+    "quality"   "3"
+    "name"      "Forgiving"
+  }
+ "50"
+  {
+    "minlevel"  "44"
+    "maxlevel"  "54"
+    "quality"   "3"
+    "name"      "Devourer's"
+  }
+ "51"
+  {
+    "minlevel"  "48"
+    "maxlevel"  "58"
+    "quality"   "3"
+    "name"      "Creeping Vine"
+  }
+ "52"
+  {
+    "minlevel"  "52"
+    "maxlevel"  "62"
+    "quality"   "3"
+    "name"      "Taut"
+  }
+ "53"
+  {
+    "minlevel"  "56"
+    "maxlevel"  "66"
+    "quality"   "3"
+    "name"      "Love Tainted"
+  }
+ "54"
+  {
+    "minlevel"  "60"
+    "maxlevel"  "70"
+    "quality"   "3"
+    "name"      "Drudge"
+  }
+ "55"
+  {
+    "minlevel"  "64"
+    "maxlevel"  "74"
+    "quality"   "3"
+    "name"      "Polar"
+  }
+ "56"
+  {
+    "minlevel"  "68"
+    "maxlevel"  "78"
+    "quality"   "3"
+    "name"      "Pun"
+  }
+ "57"
+  {
+    "minlevel"  "72"
+    "maxlevel"  "82"
+    "quality"   "3"
+    "name"      "Executioner's"
+  }
+ "58"
+  {
+    "minlevel"  "75"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Mysterious"
+  }
+ //"60"
+ // {
+ //   "minlevel"  "1"
+ //   "maxlevel"  "85"
+ //   "quality"   "3"
+ //   "name"      "Candlejack's" //Temporary Halloween name
+ // }
+ //"61"
+ // {
+ //   "minlevel"  "1"
+ //   "maxlevel"  "85"
+ //   "quality"   "1"
+ //   "name"      "Spooky" //Temporary Halloween name
+ // }
+ //"62"
+//  {
+ //   "minlevel"  "2"
+  //  "maxlevel"  "85"
+  //  "quality"   "2"
+ //   "name"      "Haunting" //Temporary Halloween name
+//  }
+ //"63"
+//{
+ //   "minlevel"  "1"
+ //   "maxlevel"  "85"
+ //   "quality"   "4"
+ //   "name"      "Pumpkin Lord's" //Temporary Halloween name
+ // }
+  "64"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Epic"
+  }
+  "65"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Turkey King's" //Temporary Thanksgiving's name
+  }
+  "66"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Turkey Hunter's" //Temporary Thanksgiving's name
+  }
+  "67"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Ragnaros'"
+  }
+  "68"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "The Honorable's"
+  }
+  "69"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Windseeker's"
+  }
+  "70"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "The Exalted's"
+  }
+  "71"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Spring Onion"
+  }
+  "72"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Guardian's"
+  }
+  "73"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Ancient King's"
+  }
+  "74"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Infinite"
+  }
+  "75"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Nether"
+  }
+  "76"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Murloc Hunter's"
+  }
+  "77"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Cloudsinger's"
+  }
+  "78"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Firepaw's"
+  }
+  "79"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Shaohao's"
+  }
+  "80"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Stormstout's"
+  }
+  "81"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Greatpaw's"
+  }
+  "82"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Shang Xi's"
+  }
+  "83"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Earthsong's"
+  }
+  "84"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Greentouch's"
+  }
+  "85"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Honeybrew's"
+  }
+  "86"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Lightgrace's"
+  }
+  "87"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Reedwine's"
+  }
+  "88"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Sweetbarrow's"
+  }
+  "89"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Swiftpaw's"
+  }
+  "90"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Darnassian"
+  }
+  "91"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Dwarven"
+  }
+  "92"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Thalassian"
+  }
+  "93"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Gartihos'"
+  }
+  "94"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Velen's"
+  }
+  "95"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Akama's"
+  }
+  "96"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Ishanah's"
+  }
+  "97"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Maladaar's"
+  }
+  "98"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Naaru's"
+  }
+  "99"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Kil'jaeden's"
+  }
+  "100"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Tarecgosa's"
+  }
+  "101"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Trailseeker"
+  }
+  "102"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Sunsoul"
+  }
+  "103"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Mistdancer"
+  }
+  "104"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Sunsoul"
+  }
+  "105"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Lightdrinker"
+  }
+  "106"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Streamtalker"
+  }
+  "107"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Sapfly"
+  }
+  "108"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Wind-Reaver"
+  }
+  "109"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Lucidity"
+  }
+  "110"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Withered Wood"
+  }
+  "111"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Dreadspinner"
+  }
+  "112"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Xaril's"
+  }
+  "113"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Wingguard"
+  }
+  "114"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Vu's"
+  }
+  "115"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Saltscale"
+  }
+  "116"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Yak"
+  }
+  "117"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Waterfall"
+  }
+  "118"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Vine"
+  }
+  "119"
+  {
+    "minlevel"  "45"
+    "maxlevel"  "50"
+    "quality"   "3"
+    "name"      "Blackskull"
+  }
+  "120"
+  {
+    "minlevel"  "45"
+    "maxlevel"  "50"
+    "quality"   "1"
+    "name"      "Brutish"
+  }
+  "121"
+  {
+    "minlevel"  "40"
+    "maxlevel"  "45"
+    "quality"   "1"
+    "name"      "Chelsea's"
+  }
+  "122"
+  {
+    "minlevel"  "35"
+    "maxlevel"  "40"
+    "quality"   "1"
+    "name"      "Nasmira's"
+  }
+  "123"
+  {
+    "minlevel"  "15"
+    "maxlevel"  "60"
+    "quality"   "2"
+    "name"      "Enuremated"
+  }
+  "124"
+  {
+    "minlevel"  "40"
+    "maxlevel"  "45"
+    "quality"   "1"
+    "name"      "Oasis"
+  }
+  "125"
+  {
+    "minlevel"  "50"
+    "maxlevel"  "55"
+    "quality"   "1"
+    "name"      "The Burning Heart's"
+  }
+  "126"
+  {
+    "minlevel"  "50"
+    "maxlevel"  "55"
+    "quality"   "1"
+    "name"      "Outrider"
+  }
+  "127"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "70"
+    "quality"   "1"
+    "name"      "Shizzle's Nozzle"
+  }
+  "128"
+  {
+    "minlevel"  "55"
+    "maxlevel"  "60"
+    "quality"   "2"
+    "name"      "Power Infused Mushroom"
+  }
+  "129"
+  {
+    "minlevel"  "65"
+    "maxlevel"  "70"
+    "quality"   "2"
+    "name"      "Auchenai Anchorite's"
+  }
+  "130"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "55"
+    "quality"   "1"
+    "name"      "Warsong's"
+  }
+}

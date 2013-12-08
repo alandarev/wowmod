@@ -1,0 +1,14 @@
+﻿"Phrases"
+{
+	"Bots Autoslayed"
+	{
+		"en"		"Bots were autoslayed"
+		"ru"		"Боты были убиты автоматически"
+	}
+	
+	"Bots-Defusers"
+	{
+		"en"		"Let's see whether bots can defuse the bomb or not..."
+		"ru"		"Посмотрим, сумеют ли боты обезвредить бомбу или нет..."
+	}
+}

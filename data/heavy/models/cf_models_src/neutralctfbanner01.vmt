@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\cf_textures/neutralctfbanner01"
+	"$model" "1"
+}

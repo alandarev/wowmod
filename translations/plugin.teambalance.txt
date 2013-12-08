@@ -1,0 +1,105 @@
+"Phrases"
+{
+	"ct switch"
+	{
+		"en"		"You are being switched to the counter terrorist team"
+		"ru"		"Вы были перенесены за команду контр террористов"
+		"de"		"Du wurdest in das Counter Terroristen Team gewechselt"
+
+	}
+	"t switch"
+	{
+		"en"		"You are being switched to the terrorist team"
+		"ru"		"Вы были перенесены за команду террористов"
+		"de"		"Du wurdest in das Terroisten Team gewechselt"
+	}
+	"pending"
+	{
+		"en"		"The team balance is pending"
+		"ru"		"Балансировка команд"
+		"de"		"Die Teambalance ist unausgewogen"
+	}
+	"scramble"
+	{
+		"en"		"Teams scramble!"
+		
+	}
+	"balanced"
+	{
+		"en"		"The teams appear to be balanced"
+		"ru"		"Команды сбалансированы"
+		"de"		"Die Teams scheinen ausgeglichen"
+	}
+	"not balanced"
+	{
+		"en"		"The teams are not balanced"
+		"ru"		"Команды не сбалансированы"
+		"de"		"Die Teams sind nicht ausgeglichen"
+	}
+	"unbalanceable"
+	{
+		"en"		"The teams cannot be balanced"
+		"ru"		"Команды не могут быть сбалансированы"	
+		"de"		"Die Teams konnten nicht ausgeglichen werden"
+	}
+	"team management menu"
+	{
+		"en"		"Team Management"
+	}
+	"swap teams"
+	{
+		"en"		"Swap Teams"
+	}
+	"switch player"
+	{
+		"en"		"Switch Player"
+	}
+	"switch player next"
+	{
+		"en"		"Switch Player Next Round"
+	}
+	"announce preferences"
+	{
+		"en"		"Announce Preferences"
+	}
+	"maintain size on"
+	{
+		"en"		"Turn Maintain Size On"
+	}
+	"maintain size off"
+	{
+		"en"		"Turn Maintain Size Off"
+	}
+	"control joins on"
+	{
+		"en"		"Turn Control Joins On"
+	}
+	"control joins off"
+	{
+		"en"		"Turn Control Joins Off"
+	}
+	"enable balancer"
+	{
+		"en"		"Enable Team Balancing"
+	}
+	"disable balancer"
+	{
+		"en"		"Disable Team Balancing"
+	}
+	"kdr panel"
+	{
+		"en"		"CS:S Team Balance"
+	}
+	"internal stats"
+	{
+		"en"		"Internal Stats"
+	}
+	"display stats"
+	{
+		"en"		"Display Stats"
+	}
+	"dump settings"
+	{
+		"en"		"Dump Settings"
+	}
+}

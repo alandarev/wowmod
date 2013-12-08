@@ -1,0 +1,388 @@
+// help menus
+"help"
+{
+   "title" "Help Menu"
+   "menu"  "6"
+   "1 m"   "About the Classes"
+   "2 m"   "FAQ"
+   "3 m"   "Introduction to the Stats"
+   "4 m"   "Other Information"
+   "5 m"   "Commands"
+   "6 m"   "Contacts"
+   "1"
+   {
+      "menu"  "8"
+      "title" "About the Classes"
+      "1 m"   "General Introduction"
+      "2 m"   "Warrior"
+      "3 m"   "Rogue"
+      "4 m"   "Mage"
+      "5 m"   "Paladin"
+      "6 m"   "Priest"
+      "7 m"   "Shaman"
+      "8 m"   "Warlock"
+      "1"
+      {
+        "title" "General Introduction"
+        "text"  "Warrior, Shaman, Rogue and Paladin are the recommended classes to start with. Note that every class can be played by your own play style, which is the most fun for you. That allows you to test a lot of different ways to improve your class."
+      }
+      "2"
+      {
+        "menu"  "2"
+        "title" "Warrior"
+        "text"  "Mainly base their stats on Strength and Stamina, Either deal a lot of damage or can take a lot of damage."
+        "1 m"   "Tank Warrior"
+        "2 m"   "DPS Warrior"
+        "1"
+        {
+          "title" "Tank Warrior"
+          "text" "Can take a lot of damage and have a lot of Health. Stats on tank warriors should be 25-30 strength, 10 agility, 0-5 intelligence and rest Stamina. Armor should mostly be with stats on Stamina. Deals low damage. Has the ability to block damage and reflect damage/spells, very hard to kill."
+        }
+        "2"
+        {
+          "title" "DPS Warrior"
+          "text"  "Deals a lot of damage but can’t take much damage. Stats should be 25-30 stamina, 15 agility, 0 intelligence, and rest to strength. The armor u need should be those who give u extra stats on strength. Dps does a lot of damage cause of their high strength and warrior’s passive spells who gives extra damage. They get even stronger after level 60 when attack is even further increased."
+        }
+      }
+      "3"
+      {
+        "title" "Rogue"
+        "text"  "Rogues are fast moving assassins. Got a higher ammo clip then normal, and shoot a lot faster.  Deals high damage and poisons. Can go invisible either for a short time or standing still and going 90%  invisible. Your armor should be mostly that which gives most agility, speed and damage.  Stats should be 20 strength, 0-5 intelligence, 20-30 stamina and rest to agility."
+      }
+      "4"
+      {
+        "title" "Mage"
+        "text"  "Mage is the best if you like to play it solo, it has high mana and high spell damage. Has many damaging spell and can teleport himself.  The armor u pick should give u a lot of intelligence bonus. Stats are 32 stamina, enough strength and agility for your armor and rest to Intelligence."
+      }
+      "5"
+      {
+        "title" "Paladin"
+        "text"  "Paladin are very nice for players who prefer both damage and good survivability. They have both defensive, aggressive and healing skills. Armor u pick should have a mix stat of stamina, strength and intelligence. Stats u need should be added on exactly what you need for your armor. Rest of stats can be added on Strength for damage, Intelligence for spell damage and more mana or Stamina for more health. You can also mix these to find a special character of your own."
+      }
+      "6"
+      {
+        "title" "Priest"
+        "text" "Supportive class which are greatly appreciated by all of you teammate, especially at boss events. Got defensive support and healing spells for your teammates and yourself. They are very good versus other spellcasters. The armor u pick should give u a lot of intelligence bonus. Stats are 32 stamina, enough strength and agility for your armor and rest to. Can reincarnate a teammate."
+      }
+      "7"
+      {
+        "title" "Shaman"
+        "text" "A shaman is weak at the start, but grows to be 1 of the strongest characters after level 60. They have high damage, but low health and armor. They have reincarnation which allows them to spawn after 1st death. The armor u pick should be either that of Agility bonus or Intelligence bonus. Stats are just enough for armor, and rest to your preferring playstyle. Intelligence for spell damage and more mana, or agility for speed and increased physical damage."
+      }
+      "8"
+      {
+       "title" "Warlock"
+       "text" "Warlocks are very nice team players and high damaging spellcasters. They got high spell damage and high health, can easily kill enemies without shooting at them. Stats should be just enough to use the armor needed, and rest to intelligence. The armor u need should give u a lot of stamina and intelligence bonus."
+      }      
+   }
+   "2"
+   {
+      "title" "FAQ"
+      "menu"  "11"
+      "1 m"   "How do I choose a race/class?"
+      "2 m"   "How to buy skills/spells?"
+      "3 m"   "How do I use skills/spells?"
+      "4 m"   "Easier way to use spells"
+      "5 m"   "How do I get silver?"
+      "6 m"   "How do I get armor/items?"
+      "7 m"   "How to play another class?"
+      "8 m"   "How can I create new character?"
+      "9 m"  "How can I use Mail?"
+      "10 m"  "How can I install console?"
+      "11 m"  "What is Auction?"
+      "1"
+      {
+         "title" "How do I choose a race/class?"
+         "text"   "There are no races, there are@nclasses for your hero.@nYou can choose a class by going to the@nwcsmenu and press 'class menu',@nyou will be prompted to choose a class if@nyou selected that option for the first time.@nChoose carefully because you CANNOT change@nyour class after choosing!"
+      }
+      "2"
+      {
+         "title" "How to buy skills/spells?"
+         "text"  "After selecting a class, you can use@nthe class menu and select 'buy new spells'@n,when you're high enough level and have enough gold,@nyou can select the spell you want and then confirm buying"
+      }
+      "3"
+      {
+         "title" "How do I use skills/spells?"
+         "text"  "Go to the class menu and find@n'Manage your spells bar, spell book',@nthen select one of the places and@nselect a spell you bought to place there after.@nYou can say 'spellbar' to make your usable bar pop up.@nRemember that passive spells always work,@nand can't be put on the spellbar."
+      }
+      "4"
+      {
+         "title" "Easier way to use spells"
+         "text"  "The spellbar can be annoying to use,@nso Stinkyfax made it possible to bind keys to a spell.@nTo bind a spell, open console and type in ' bind KeyYouWant @'spell Number@'@nNumbers go from 1-7 . Example:@nbind k @'spell 5@'@nJust press the key and you will cast the spell!"
+      }
+      "5"
+      {
+         "title" "How do I get silver?"
+         "text"  "You can get silver by leveling.@nEach time you level you will get some silver,@nthe amount you get is based on your level.@nA very high person will get much, MUCH more then a level 2"
+      }
+      "6"
+      {
+         "title" "How do I get armor/items?"
+         "text"  "Go to the wcsmenu , choose Shop Menu,@npick a catagory and look at the items you want,@nas example Dagger of the Brotherhood (Agi) means that@nit's a weapon where you need mostly agi for,@nso it's for a rogue. Before you use stat points,@nit's smart to look at the requirments of such items.@nYou select an item and confirm buying if you are high enough level and gold,@nthen go to inventory menu, choose the item you@nbought and select Put on this item , you will equip it."
+      }
+      "7"
+      {
+         "title" "How to play another class?"
+         "text"  "As said in FAQ 1,@nyou cannot change your class after choosing.@nBut you CAN make a new character,@nand choose a different class then your first with it.@nYou can have 7 characters at maximum."
+      }
+      "8"
+      {
+          "title" "How can I create new character?"
+          "text"  "Open wcmenu, go Character Menu, then@nCreate/Change Character and here you are.@nTo create new one just press button 1,@nto load/delete existing one choose it and then press@nwhat you want. You are@nunable to delete character which are using now@n, changing character will make you die@nif you are alive."
+      }
+      "9"
+      {
+          "menu"  "1"
+         "title" "How can I use Mail?"
+         "text"   "It's very simple, open main menu (wcmenu)@npress Class Menu, then press Mail@nHere you will see Send mail button and@nalso mails if you have any,@nif u don't - only button @`Send Mail@`@nwill be available.@nYou can send gold and items to other characters."
+         "1 m"  "It asks me to type character Id, how can I know it?"
+         "1"
+         {
+            "title"   "Getting Character Id"
+            "text"    "To get your character Id go Character Stats Menu@nYour ID will be written in Title of menu.@nIf somebody's else then go Other Players Menu@n(it's on wcmenu) Pick player you want to send whom and@nhis ID will be written in Title of menu also."
+         }
+      }
+      "10"
+      {
+          "title" "How can I enable console?"
+          "text"  "Firstly check if you already have the@nconsole enabled, default button is ~ (near tab).@nIf not, there are 2 ways of dealing@nwith it. First one is easy,@nsecond in case first did not help."
+          "menu"  "2"
+          "1 m" "First way"
+          "2 m" "Second way (harder)"
+          "1"
+          {
+              "title" "Enabling console, first way"
+              "text"  "Press esc (to load main menu),@npress options, press keyboard,@npress Advanced.. And then tick the box@nnext to @'Enable developer console (~)@'.@nThat's all, now press OK, return@nback to game and have fun."
+          }
+          "2"
+          {
+              "title" "Enabling console, second way"
+              "text"  "You will have to exit CSS game and do next:@nOpen Steam, Choose bar @'My Games@',@nRight click on Counter-Strike:Source and@nchoose @'Properties@'.@nPress button @'Set Launch Options..@'@nAnd type there @'-console@', without @' @'@nPress OK And test. If console@nis not working yet then do next step!"
+              "menu"  "1"
+              "1 m"   "Next Step"
+              "1"
+              {
+                  "title" "Final step in second way of enabling console"
+                  "text"  "Go to your @'SteamApps@' folder(You can find it usually from:@n@'C:/program files/(valve)/steam/@' Then navigate to:@n@'SteamApps/(Your username)/counter-strike source/cstrike/cfg/@'@nThen open config.cfg with notepad.@nOn top add next line: bind z toggleconsole@nYou can use any button instead of z, default is ` ,but make@nsure this button is not used for another command for example radio1."
+              }
+          }
+      }
+      "11"
+      {
+        "title" "What is Auction?"
+        "text"  "Auction is the best way to buy items if@nyou want to save some money.@nMoreover it's good idea to sell items using Auction,@nbut use it with smart, else nobody will buy it."
+        "menu"  "3"
+        "1 m"   "How to create auction"
+        "1"
+        {
+          "title" "How to create auction"
+          "text"  "auction is found in wcsmenu->5 class menu-> 6 auction@npress 1 to create auction
+then find item u want to put on@nit when u choose item, say the amount of starting bid.@nsay it like u would say to other person in css.@nThen do same for the amount to buy out.@nthis means that for this amount he can buy emidiately.@nOr u can press 3 to disable this option.@nCheck everything and press 4.@nCongratulations! You have created action :)"
+        }
+        "2 m" "How to buy item"
+        "2"
+        {
+          "title" "How to buy item"
+          "text"  "to buy item(s) is very simple u can find@na category of which type items u search.@nWhen u find item which u were looking for@nu can choose 2 ways:@n1st. bid for it, and hope that no one else bids more.@n2nd. buy it out, it is more expensive, but u dont have to wait."
+        }
+        "3 m" "Getting items"
+        "3"
+        {
+          "title" "Getting items"
+          "text"  "You'll get mail (in 5-30mins period) with item, or gold.@nif no one buys ur item, after 120h@nyou'll get mail with ur item, so u DON'T loose it."
+        }
+      }
+   }
+   "3"
+   {
+      "menu"  "17"
+      "title" "Introduction to the Stats"
+      "text"  "Here are a few tips:"
+      "1 m"   "Strength"
+      "2 m"   "Agility"
+      "3 m"   "Intelligence"
+      "4 m"   "Stamina"
+      "5 m"   "Armor"
+      "6 m"   "Resistance"
+      "7 m"   "Attack Power"
+      "8 m"   "Spell Power"
+      "9 m"   "Critical Strike"
+      "10 m"  "Accuracy"
+      "11 m"  "Resillience"
+      "12 m"  "Block Chance"
+      "13 m"  "Armor Penetration"
+      "14 m"  "Weapon Speed"
+      "15 m"  "Max hp"
+      "16 m"  "Max mp"
+      "17 m"  "Mana Regen"
+      "1"
+      {
+         "title" "Strength"
+         "text"  "Gives bonus to your weapon damage."
+      }
+      "2"
+      {
+         "title" "Agility"
+         "text"  "Gives you more ammo on your weapon, and it shoots faster. And your speed also increased. ( you need a lot of agility before it is noticed)"
+      }
+      "3"
+      {
+         "title" "Intelligence"
+         "text"  "Gives higher mana regeneration and higher mana. Also increases you spell damage"
+      }
+      "4"
+      {
+         "title" "Stamina"
+         "text"  "Gives you armor and health increase."
+      }
+      "5"
+      {
+         "title" "Armor"
+         "text"  "Reduces physical damage taken."
+      }
+      "6"
+      {
+         "title" "Resistance"
+         "text"  "Reduces magical damage taken."
+      }
+      "7"
+      {
+         "title"  "Attack Power"
+         "text"   "Attack power can be gained of stats or your weapon, it increases the physical damage you do."
+      }
+      "8"
+      {
+         "title" "Spell Power"
+         "text" "Decides the amount of damage you do with spells. Can be increased with your weapon or intelligence."
+      }
+      "9"
+      {
+         "title" "Critical Strike"
+         "text"  "Some weapons and items can increase the rate of critical strikes."
+      }
+      "10"
+      {
+         "title"  "Accuracy"
+         "text"  "Some weapons and items can increase your accuracy."
+      }
+      "11"
+      {
+        "title" "Resillience"
+        "text"  "Reduces the damage taken from critical hits, and reduces the chance that you are critical hit"
+      }
+      "12"
+      {
+        "title" "Block Chance"
+        "text" "Is a skill that for examples warrior has with a shield, allows you to block an attack. Is increased by getting more armor and stamina."
+      }
+      "13"
+      {
+        "title" "Armor Penetration"
+        "text" "The amount of damage you deal through the armor of an enemy character. Can be increased by weapons."
+      }
+      "14"
+      {
+        "title" "Weapon Speed"
+        "text" "How fast you shoot, something that your weapon decides + your agility."
+      }
+      "15"
+      {
+        "title" "Max HP"
+        "text" "The maximum amount of health you character can have, it’s based on how much u add to stamina."
+      }
+      "16"
+      {
+        "title" "Max MP"
+        "text"  "How much mana you can have by adding a lot of intelligence."
+      }
+      "17"
+      {
+        "title" "Mana Regen"
+        "text" "Items and intelligence decide how fast mana you regenerate each 5 seconds."
+      }
+   }
+   "4"
+   {
+      "title" "Other Information"
+      "menu"  "8"
+      "1 m"   "Items"
+      "2 m"   "Money"
+      "3 m"   "Reagents"
+      "4 m"   "Crafting Proffesions"
+      "5 m"   "Gathering Proffesions"
+      "6 m"   "Enchanting"
+      "7 m"   "Trading"
+      "8 m"   "Auction"
+      "1"
+      {
+         "title" "Items"
+         "text"  "items are armor, trinket, weapon/shield and jewelries u put on for bonus stats. You have a lot of different combinations to pick from so you can gain the extra bonus stats to give you what u lack of stats from before. Every item needs certain amount of base stats to be used, that’s why you should always look at item information before you buy it. Items can be dropped by kills, or shop/auction from other players. Boss events will increase drop rate of better and high level items."
+         "1 m"   "Skills"
+      }
+      "2"
+      {
+         "title" "Money"
+         "text"  "Money is what you often trade with and buy gear with. You get certain amount of money after each kill, rest of money you have to get from killing people and selling drops. When you have reached a higher level, the best way to gain money is to trade items and reagents to people who need them."
+      }
+      "3"
+      {
+         "title" "Reagents"
+         "text"  "Reagents are materials used by some players to create gears. These are dropped from kills when you have a certain profession. The best way to earn money, is to sell reagents to  other players whom are really desperate to get them."
+      }
+      "4"
+      {
+         "title" "Crafting Proffesions"
+         "text"  "Crafting skills are Blacksmithing, Jewelcrafting, leatherworking and tailoring. With these professions you can create items for yourself or others. You need materials (reagents) to create items. Mages, priests and warlock should pick tailoring. Paladin and warriors should take Blacksmithing. Rogues and shamans should take leatherworking. Jewelcrafting is for all classes. Crafting professions also give you a small bonus to 1 or several of your stats."
+      }
+      "5"
+      {
+         "title" "Gathering Proffesions"
+         "text"  "Gathering professions give you reagents and it allows you to be independent from anyone else when it comes to money. Waevering, skinning and mining are the 3 different professions for gathering. You can pick whatever 2 out of 3, pick wisely the two you pick, are also the source of your income."
+      }
+      "6"
+      {
+         "title" "Enchanting"
+         "text" "Enchanting is the last crafting profession. It allows you to craft scrolls which you merger with your armor to give it an extra bonus. ( if you give it +2 strength, you can later replace the same scroll with a better scroll). These scrolls require a lot of extra armor and weapons/shields, so it is recommended to have a lot of money and materials richest 1st before getting this profession."
+      }
+      "7"
+      {
+       "title" "Trading"
+       "text" "Trading is as easy as that you give an items/money to someone else in return for an item/money. (If he doesn’t give you anything, that is at own risk, trade only with people you trust). The most important part of trading is Character ID, this is located in wcsmenu 4 of your character. It’s at Character ID: ***** it can be from 1-5 numbers. Then you go to mail and send it too that ID, be sure to write it right. How to send the mail will be explained in the mailing section."
+      }
+      "8"
+      {
+      "title" "Auction"
+      "text" "Auction is a free market where everyone puts up items so people can bid on it. This is a much easier solution, but it’s a gamble. You might sell the item underpriced, but if you sell it right you can get many times more than the items is worth. So using the auction right can give you a good healthy economy, but it can also ruin you."
+      }
+   }
+   "5"
+   {
+      "menu" "2"
+      "title" "Commands"
+      "text" "Wcmenu: brings forth this menu. @nWchelp: brings up the help menu directly"
+      "1 m" "Binding"
+      "2 m" "List of Commands"
+      "1"
+      {
+        "title" "Binding"
+        "text" "Let’s say you want to bind skill number 2 on your skillbar to the key x. Go to you console and write bind x ''spell 2''. If you want 2 skills to bind same key, number 1 and 3. Go to you console write bind x ''skill 1; skill 2''"
+      }
+      "2"
+      {
+        "menu" "1"
+        "title" "Commands:"
+        "text" "!roll : is for betting, typing it will give u a number from 1-100@n!s: communicate between servers, !s hey guys!. And people on other server will read  it.@n!selfcast: most for priests, healing spells will autocast@n!selfonly: all healing spells will autocast on you.@n!drop: drops all your armor and items except weapon"
+        "1 m" "More Commands"
+        "1"
+        {
+          "title" "Commands:"
+          "text" "!threat: for boss, shows who the bosses targets.@n!newbie: shows you the new players tips@n!debug_me: debugs your character@n!debug_give_talent: debugs you talents, it gets bugged sometimes@n!chat_victim: shows you what damage victim gets.@n!chat_target: Triggers Combat Messages for no-target@n!chat_attacker: Shows damage attacker deals to you."
+        }
+      }
+   }
+   "6"
+   {
+      "title" "Contacts"
+      "text"  "Forums are available at wowmod.eu@nMain Developer: Stinkyfax - Stinkyfax@gmail.com@nAdmins:@nAjrew@nAurora@nBanak@nLa Muerte@nTristen"
+   }
+}

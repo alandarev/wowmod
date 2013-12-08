@@ -1,0 +1,81 @@
+items info, not required by mod.
+
+Reagents:
+
+Linen Cloth - 168 lvl 5
+Wool Cloth - 170 lvl 8
+Fine Thread - 171 lvl 8
+Small Lustrous Pearl - 172 lvl 11
+Silk Cloth - 173 lvl 9
+Colored Dye - 174 lvl 9
+Silked Thread - 175 lvl 10
+Mageweave Cloth - 176 lvl 11
+Thick Spider's Silk - 177 lvl 12
+Globe of Water - 178 lvl 13
+Runecloh - 179 lvl 14
+Heart of Fire - 180 lvl 16
+Felcloth - 181 lvl 16
+Golden Pearl - 182 lvl 15
+Netherweave Cloth - 183 lvl 18
+Copper Bar - 184 lvl 5
+Malachite - 185 lvl 9
+Shadowgem - 186 lvl 12
+Bronze Bar - 187 lvl 9
+Iron Bar - 188 lvl 11
+Gold Bar - 189 lvl 13
+Mithril Bar - 190 lvl 13
+Truesilver Bar - 191 lvl 15
+Thorium Bar - 192 lvl 15
+Dark Iron Bar - 193 lvl 16
+Fel Iron Bar - 194 lvl 17
+Adamantite Bar - 195 lvl 19
+Primal Might - 196 lvl 18
+Light Leather - 197 lvl 5
+Light Hide - 198 lvl 7
+Medium Hide - 199 lvl 11
+Medium Leather - 200 lvl 9
+Heavy Leather - 201 lvl 11
+Heavy Hide - 202 lvl 13
+Thick Leather - 203 lvl 13
+Thick Hide - 204 lvl 15
+Rugged Leather - 205 lvl 15
+Knothide Leather - 206 lvl 16
+Fel Scales - 207 lvl 17
+Crystal Infused Leather - 208 lvl 19
+Cobra Scales - 209 lvl 18
+
+//Cataclysm
+//Enchanting reagents
+Chaos Orb - 14999 lvl 85 rare
+Hypnotic Dust - 15000 lvl 81 green
+Celestial Essence - 15001 lvl 85 green
+Small Heavenly Shard - 15002 lvl 83 rare
+Heavenly Shard - 15003 lvl 85 rare
+Maelstrom Crystal - 15004 lvl 85 epic (Only 85 epic reagent.)
+Armor Vellum - 15005 lvl 80 shop
+
+//Blacksmithing/Jewelcrafting reagents
+Obsidium Bar - 15006 lvl 81 green
+Elementium Bar - 15007 lvl 85 green
+Hardened Elementium Bar - 15008 lvl 83 rare
+Pyrium Bar - 15009 lvl 85 rare
+Folded Obsidium - 15011 lvl 80 shop
+
+//Jewelcrafting only
+Chimera's Eye - 15012 lvl 85 rare
+Jeweler's Setting - 15013 lvl 80 shop
+
+//Tailoring reagents
+Bolt of Embersilk Cloth - 15017 lvl 83 rare
+Dreamcloth - 15018 lvl 85 rare
+Embersilk Cloth - 15019 lvl 81 green
+Fiery Silk Gland - 15020 lvl 85 green
+
+//Leatherworking reagents
+Savage Leather - 15021 lvl 81 green
+Heavy Savage Leather - 15022 lvl 83 rare
+Blackened Dragonscale - 15023 85 green
+Pristine Hide - 15024 85 rare
+
+//Tailoring+LW Shop item =8
+Eternium Thread - 15025 80 shop (tailoring+leatherworking)

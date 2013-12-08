@@ -1,0 +1,20 @@
+Sounds to be added to cata version
+wc/spells/crusader.wav
+flameorb.wav - cast sound
+flameorb2.wav - tick sound
+blind.wav
+fanofknives.wav
+infernal.wav - summon of infernal
+necroticstrike.wav - necrotic strike 82lvl dk
+deathanddecay.wav
+
+for talents
+
+blizzard.wav
+arcanemissles.wav - victim side
+clearcast.wav
+aoeshield.wav
+lightwell20sec.wav
+mindflay.wav
+airshock.wav
+lavasurge.wav - caster side

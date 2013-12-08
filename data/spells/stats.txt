@@ -1,0 +1,432 @@
+"stats"
+{
+  "1" //warrior
+  {
+    "agi" "4"
+    "int" "0"
+    "sta" "48"
+    "str" "48"
+  }
+  "2" //rogue
+  {
+    "agi" "50"
+    "int" "0"
+    "sta" "27"
+    "str" "23"
+  }
+  "3" //mage
+  {
+    "agi" "0"
+    "int" "70"
+    "sta" "30"
+    "str" "0"
+  }
+  "4" //paladin
+  {
+    "str" "30"
+    "int" "40"
+    "sta" "30"
+    "agi" "0"
+  }
+  "5" //priest
+  {
+    "agi" "0"
+    "int" "65"
+    "sta" "35"
+    "str" "0"
+  }
+  "6" //shaman
+  {
+    "str" "10"
+    "agi" "30"
+    "sta" "30"
+    "int" "30"
+  }
+  "7" //warlock
+  {
+    "agi" "0"
+    "int" "50"
+    "sta" "50"
+    "str" "0"
+  }
+  "8" //DK
+  {
+    "str" "32"
+    "agi" "26"
+    "sta" "42"
+    "int" "0"
+  }
+  "9" //Monk
+  {
+    "str" "10"
+    "agi" "42"
+    "sta" "48"
+    "int" "0"
+  }
+  "bots"
+  {
+    "profiles"  "10" //Amount of bot profiles. If you add one more bot_X increase this by 1
+    //bot_X should start from 1 and increment by 1
+  }
+  "bots_high"
+  {
+    //Bots for high level servers
+    "profiles"  "11"
+    "start_id"  "1001"  //Starting id of bots
+  }
+  "bot_1" //Bot Warrior
+  {
+    "class"     "1"
+    "2hand"     "1"
+    "shield"    "0" //No shield, default is 0. Set to 1 if you want shield dependent spells work
+
+    "ws"        "0.85"   //Weapon speed
+    "damage"    "20"
+    "cs"        "0.10"
+    "spelldmg"  "0"
+
+    "armor"     "80"
+    "agi"       "20"
+    "sta"       "50"
+    "ai"        "10"
+  }
+  "bot_2" //Bot Paladin
+  {
+    "class"    "4"
+    "2hand"    "1"
+    "shield"   "0"
+
+    "ws"       "0.90"   //Weapon speed
+    "damage"   "20"
+    "cs"       "0.10"
+
+    "armor"    "80"
+    "sta"      "50"
+    "int"      "50"
+  }
+  "bot_3" //Bot Rogue
+  {
+    "class"  "2"
+    "2hand"  "0"
+    "shield" "0"
+
+    "ws"     "1.15"   //Weapon speed
+    "damage" "15"
+    "cs"     "0.08"
+
+    "armor"  "50"
+    "agi"    "40"
+    "sta"    "50"
+    "ai"     "30"
+    "speed"  "0.10"
+    "res"    "20"   //resistance
+  }
+  "bot_4" //Bot Shaman
+  {
+    "class"    "6"
+    "2hand"    "0"
+    "shield"   "0"
+
+    "ws"       "1.15"   //Weapon speed
+    "damage"   "15"
+    "spelldmg" "10"
+    "cs"       "0.10"
+
+    "agi"      "50"
+    "armor"    "150"
+    "sta"      "60"
+    "int"      "50"
+    "res"      "10"
+  }
+  "bot_5" //Bot Priest
+  {
+    "class"    "5"
+    "2hand"    "1"
+    "shield"   "0"
+
+    "ws"       "1.00"   //Weapon speed
+    "damage"   "0"
+    "spelldmg" "15"
+    "cs"       "0.10"
+
+    "armor"    "100"
+    "sta"      "40"
+    "int"      "120"
+    "regen"    "20"
+  }
+  "bot_6" //Bot Mage
+  {
+    "class"    "3"
+    "2hand"    "1"
+    "shield"   "0"
+
+    "ws"       "1.00"   //Weapon speed
+    "damage"   "0"
+    "spelldmg" "15"
+    "cs"       "0.10"
+
+    "armor"    "100"
+    "sta"      "40"
+    "int"      "120"
+    "regen"    "20"
+  }
+  "bot_7" //Bot Warlock
+  {
+    "class"    "7"
+    "shield"   "0"
+    "2hand"    "1"
+
+    "ws"       "1.05"   //Weapon speed
+    "damage"   "15"
+    "spelldmg" "15"
+    "cs"       "0.10"
+
+    "armor"    "100"
+    "sta"      "60"
+    "int"      "60"
+    "regen"    "20"
+  }
+  "bot_8" //Bot Warrior
+  {
+    "class"  "1"
+    "shield" "1" //Yes shield, default is 0. Set to 1 if you want shield dependent spells work
+    "2hand"  "0"
+
+    "ws"     "1.0"   //Weapon speed
+    "damage" "15"
+    "cs"     "0.05"
+
+    "armor"  "180"
+    "sta"    "120"
+    "agi"    "30"
+    "res"    "20"   //resistance
+  }
+  "bot_9" //Bot Paladin
+  {
+    "class"  "4"
+    "shield" "1"
+    "2hand"  "0"
+
+    "ws"     "0.90"   //Weapon speed
+    "damage" "15"
+    "cs"     "0.05"
+
+    "armor"  "150"
+    "sta"    "60"
+    "int"    "60"
+    "res"    "20"   //resistance
+  }
+  "bot_10" //Bot Monk
+  {
+    "class"  "9"
+    "shield" "0"
+    "2hand"  "1"
+
+    "ws"     "1.0"   //Weapon speed
+    "damage" "35"
+    "cs"     "0.05"
+    "parry"  "0.35"
+    "armor"  "150"
+    "sta"    "60"
+    "str"    "10"
+    "agi"    "180"
+    "res"    "20"   //resistance
+  }
+  "bot_11" //Bot Death Knight
+  {
+    "class"    "8"
+    "2hand"    "0"
+    "shield"   "0"
+
+    "damage"   "20"
+    "ws"       "0.80"   //Weapon speed
+    "cs"       "0.15"
+    "spelldmg" "0"
+
+    "armor"    "150"
+    "agi"      "40"
+    "int"      "40"
+    "sta"      "120"
+    "ai"       "55"
+  }
+
+  "bot_1001" //Bot Warrior
+  {
+    "class"     "1"
+    "2hand"     "1"
+    "shield"    "0" //No shield, default is 0. Set to 1 if you want shield dependent spells work
+
+    "ws"        "0.8"   //Weapon speed
+    "damage"    "50"
+    "cs"        "0.00"
+    "spelldmg"  "0"
+
+    "armor"     "400"
+    "str"       "300"
+    "agi"       "40"
+    "sta"       "250"
+    "ai"        "10"
+  }
+  "bot_1002" //Bot Paladin
+  {
+    "class"    "4"
+    "2hand"    "1"
+    "shield"   "0"
+
+    "ws"       "0.90"   //Weapon speed
+    "damage"   "30"
+    "spelldmg" "20"
+    "cs"       "0.00"
+
+    "armor"    "350"
+    "str"      "130"
+    "sta"      "200"
+    "int"      "130"
+  }
+  "bot_1003" //Bot Rogue
+  {
+    "class"  "2"
+    "2hand"  "0"
+    "shield" "0"
+
+    "ws"     "1.2"   //Weapon speed
+    "damage" "45"
+    "cs"     "0.00"
+
+    "armor"  "130"
+    "agi"    "200"
+    "sta"    "130"
+    "ai"     "100"
+    "speed"  "0.10"
+    "res"    "20"   //resistance
+  }
+  "bot_1004" //Bot Death Knight
+  {
+    "class"    "8"
+    "2hand"    "1"
+    "shield"   "0"
+
+    "damage"   "30"
+    "ws"       "0.80"   //Weapon speed
+    "cs"       "0.00"
+    "spelldmg" "0"
+
+    "armor"    "350"
+    "agi"      "50"
+    "int"      "40"
+    "sta"      "200"
+    "ai"       "30"
+    "str"      "200"
+  }
+  "bot_1005" //Bot Shaman
+  {
+    "class"    "6"
+    "2hand"    "0"
+    "shield"   "1"
+
+    "ws"       "1.15"   //Weapon speed
+    "damage"   "30"
+    "spelldmg" "40"
+    "cs"       "0.00"
+
+    "agi"      "125"
+    "armor"    "350"
+    "sta"      "120"
+    "int"      "195"
+    "res"      "5"
+  }
+  "bot_1006" //Bot Priest
+  {
+    "class"    "5"
+    "2hand"    "1"
+    "shield"   "0"
+
+    "ws"       "1.00"   //Weapon speed
+    "damage"   "30"
+    "spelldmg" "50"
+    "cs"       "0.0"
+
+    "armor"    "100"
+    "sta"      "220"
+    "int"      "300"
+  }
+  "bot_1007" //Bot Mage
+  {
+    "class"    "3"
+    "2hand"    "1"
+    "shield"   "0"
+
+    "ws"       "1.00"   //Weapon speed
+    "damage"   "30"
+    "spelldmg" "50"
+    "cs"       "0.0"
+
+    "armor"    "100"
+    "sta"      "150"
+    "int"      "340"
+  }
+  "bot_1008" //Bot Warlock
+  {
+    "class"    "7"
+    "shield"   "0"
+    "2hand"    "1"
+
+    "ws"       "1.05"   //Weapon speed
+    "damage"   "40"
+    "spelldmg" "50"
+    "cs"       "0.00"
+
+    "armor"    "120"
+    "sta"      "270"
+    "int"      "280"
+  }
+  "bot_1009" //Bot Warrior
+  {
+    "class"  "1"
+    "shield" "1" //Yes shield, default is 0. Set to 1 if you want shield dependent spells work
+    "2hand"  "0"
+
+    "ws"     "0.90"   //Weapon speed
+    "damage" "30"
+    "cs"     "0.00"
+
+    "armor"  "550"
+    "sta"    "480"
+    "str"    "80"
+    "agi"    "20"
+  }
+  "bot_1010" //Bot Paladin
+  {
+    "class"  "4"
+    "shield" "1"
+    "2hand"  "0"
+
+    "ws"     "0.90"   //Weapon speed
+    "damage" "30"
+    "spelldmg"  "30"
+    "cs"     "0.05"
+
+    "armor"  "450"
+    "sta"    "270"
+    "int"    "200"
+  }
+  "bot_1011" //Bot Monk
+  {
+    "class"  "9"
+    "shield" "0"
+    "2hand"  "1"
+
+    "ws"     "1.0"   //Weapon speed
+    "damage" "40"
+    "cs"     "0.15"
+    "parry"  "0.45"
+    "armor"  "275"
+    "sta"    "160"
+    "str"    "30"
+    "agi"    "260"
+    "res"    "30"   //resistance
+  }
+
+
+}
+

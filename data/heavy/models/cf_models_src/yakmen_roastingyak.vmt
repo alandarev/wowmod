@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\cf_textures/yakmen_roastingyak"
+	"$model" "1"
+}

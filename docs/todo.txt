@@ -1,0 +1,27 @@
+change mage
+change warlock
+
+multi server talk:
+table with 3 columns.
+autoincrement serv_id message
+
+on startup localIncr = maxIncr
+
+each 10 sec all servers grab info with WHERE incr > localIncr.
+localIncr is = incr last time obtained.
+ignore own messages!
+
+each minute main server removes messages with autoIncr < localIncr - 100
+So the table will have last 100 messages (will become boggus of people send more than 100 messages per 10 sec
+which is impossible anyway, number can be increased anyway)
+
+This system will easely support as many servers as needed instead of limited.
+
+
+Recode hp system to have 0-100
+Recode boss system to lock round end
+
+Add taunt
+add new spell for each class?
+
+escapestring for nicks

@@ -1,0 +1,292 @@
+"spells"
+{
+  "1"
+  {
+    "name"  "Shield Block"
+      "name_ru"   "TODO"
+      "event" "player_victim"
+      "level" "1"
+      "cost" "40"
+      "chance"  "10" // %
+  }
+  "2"
+  {
+    "name"  "Divine Shield"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "1"
+      "level" "1"
+      "cost" "100"
+      "duration"  "8.0"
+      "cooldowntype"  "1"
+      "cooldown"  "60.0"
+      "mana"  "30"
+      "manainc" "0.75"
+      "threat" "-800"
+  }
+  "3"
+  {
+    "name"  "Flash Heal"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "1"
+      "level" "1"
+      "cost" "33"
+      "cooldowntype"  "2"
+      "cooldown"  "6.5"
+      "mana"  "22"
+      "manainc" "0.6"
+      "multi" "0.30"
+      "base"  "9"
+  }
+  "4"
+  {
+    "name"  "Greater Heal"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "1"
+      "level" "40"
+      "cost" "180"
+      "cooldowntype"  "3"
+      "mana"  "35"
+      "cooldown"  "12.5"
+      "manainc" "1"
+      "base"  "18"
+      "multi" "0.60"
+  }
+  "5"
+  {
+    "name"  "Blessing of Freedom"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "1"
+      "level" "60"
+      "cost" "950"
+      "duration"  "7.50"
+      "cooldowntype"  "4"
+      "cooldown"  "15.0"
+      "mana"  "30"
+      "manainc" "0.5"
+  }
+  "6"
+  {
+    // + effect
+    "name"  "Seal of Command"                       //Chance to deal extra damage upon attack
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "0"
+      "level" "70"
+      "cost" "400"
+      "duration"  "10.0"
+      "cooldowntype"  "5"
+      "cooldown"  "5.0"
+      "mana"  "4"
+      "manainc" "0.5"
+      "chance"  "40"
+      "judge" "0.3"
+      "judgemulti" "0.15"
+      "multi" "0.05"
+      "base" "0.30"
+  }
+  "7"
+  {
+    // + effect
+    "name"  "Seal of Crusader"                    //increases attack speed
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "0"
+      "level" "54"
+      "cost" "450"
+      "duration"  "10.0"
+      "cooldowntype"  "5"
+      "cooldown"  "5.0"
+      "mana"  "4"
+      "manainc" "0.5"
+      "base"   "1.4"
+      "multi" "0.2"
+      "judge" "0.3"
+      "judgemulti" "0.15"
+  }
+  "8"
+  {
+    // + effect
+    "name"  "Judgement"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "1"
+      "level" "54"
+      "cost" "350"
+      "cooldowntype"  "6"
+      "cooldown"  "7.5"
+      "mana"  "15"
+      "manainc" "0.65"
+
+      "judge" "0.5"
+      "judgemulti" "0.08"
+
+      "threat"  "1000"
+  }
+  "9"
+  {
+    "name"  "Blessing of Kings"
+      "name_ru"   "TODO"
+      "event" "player_spawn"
+      "level" "32"
+      "cost" "650"
+      "multi" "0.20"
+  }
+  "10"
+  {
+    "name"  "Spiritual Attunement"
+      "name_ru"   "TODO"
+      "event" "player_spawn"
+      "level" "20"
+      "cost" "3500"
+      "multi" "0.7"
+  }
+  "11"
+  {
+    "name"  "Greater Blessing of Kings"
+      "name_ru"   "TODO"
+      "event" "player_spawn"
+      "level" "68"
+      "cost" "12000"
+  }
+  "12"
+  {
+    "name" "Seal of Justice"        //Reduced damage taken
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "0"
+      "level" "54"
+      "duration" "10.0"
+      "cooldowntype" "5"
+      "cooldown" "5.0"
+      "mana" "4"
+      "manainc" "0.5"
+      "base" "0.10"
+      "multi" "0.05"
+      "judgebase" "0.90"
+      "judgemulti" "0.05"
+      "judgeduration" "3.0"
+  }
+  "13"
+  {
+    "name" "Seal of Righteousness"     //Heals paladin upon attack
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "0"
+      "level" "70"
+      "duration" "10.0"
+      "cooldowntype" "5"
+      "cooldown" "5.0"
+      "mana" "4"
+      "manainc" "0.5"
+      "base" "0.005"
+      "multi" "0.006"
+      "judgebase" "0.90"
+      "judgemulti" "0.05"
+      "judgeduration" "3.0"
+  }
+  "14"
+  {
+    "name" "Seal of Light"           //Increases effect of healing spells
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "0"
+      "level" "54"
+      "duration" "10.0"
+      "cooldowntype" "5"
+      "cooldown" "5.0"
+      "mana" "4"
+      "manainc" "0.5"
+      "base" "0.05"
+      "multi" "0.05"
+      "judge" "0.14"
+      "judgemulti" "0.07"
+      "judgedur"  "30.0"
+  }
+  "15"
+  {
+    "name" "Seal of Wisdom"           //Regens mana upon attack
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "0"
+      "level" "70"
+      "duration" "10.0"
+      "cooldowntype" "5"
+      "cooldown" "5.0"
+      "mana" "4"
+      "manainc" "0.5"
+      "base" "0.0025"
+      "multi" "0.003"
+      "judge" "0.14"
+      "judgemulti" "0.07"
+      "judgedur"  "30.0"
+  }
+  "16"
+  {
+    "name" "Cast Seal"           //Regens mana upon attack
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "1"
+      "level" "54"
+      "duration" "30.0"
+      "cooldowntype" "5"
+      "cooldown" "1.0"
+      "mana" "4"
+      "manainc" "0.5"
+      "base" "0.01"
+  }
+  "17"
+  {
+    "name"  "Word of Glory"
+      "name_ru"   "TODO"
+      "event" "player_custom"
+      "level" "76"
+      "base"  "5"
+      "multi" "0.05"
+  }
+  "18"
+  {
+    "name"  "Holy Radiance"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active"  "1"
+      "level" "80"
+      "cooldowntype"  "18"
+      "cooldown"  "15.0"
+      "mana"  "63"
+      "manainc" "2.25"
+      "multi" "0.81"
+      "base"  "15"
+      "distance"  "850"
+  }
+  "19"
+  {
+    "name"  "Seal of Truth"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "0"
+      "level" "80"
+      "chance"  "8"
+  }
+  "20"
+  {
+    "name"  "Seal of Blood"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "0"
+      "level" "80"
+      "multi"  "1.125"
+  }
+  "21"
+  {
+    "name"  "Seal of Insight"
+      "name_ru"   "TODO"
+      "event" "player_cast"
+      "active" "0"
+      "level" "80"
+      "multi"  "1.125"
+  }
+}

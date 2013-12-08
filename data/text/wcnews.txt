@@ -1,0 +1,10 @@
+// File: wcnews.txt
+// Author: Stinkyfax (aka jozh)
+// Description: Here you can edit the news the server randomly shouts out.
+"news"
+{
+    "news"
+    {
+      "amount"  "17"
+    }
+}

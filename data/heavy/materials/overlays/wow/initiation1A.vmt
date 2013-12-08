@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "overlays/wow/initiation1A"
+	"$translucent" 1
+	"$model" 1
+}

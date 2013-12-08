@@ -1,0 +1,417 @@
+// File: effects.txt
+// Author: Stinkyfax (aka jozh)
+// Description: Here you can add/edit/delete effects DB.
+// slots: weapon - 1,
+// effect 2 - bloodthirst, settings in spell_1_3
+// effect 3 - evade, settings in spell_2_1
+// effect 4 - deadly poison for rogue
+// effect 5 - absorb shield
+// effect 7 - peppermint cakes
+// Supported effect Events:
+// Attacker
+// Victim
+// SpellAtt
+// SpellVic
+// use (hardly supported yet :( )
+
+//Since version 1.21
+//Effects > 100 are multi-effects, mainly used for enchanting
+//Each 100th id has his own multi-effect source
+//So for example 101 and 199 effects differ only in settings, not the code
+//200 differs in code from 101 and 199
+//To add new effect which uses existing "multi code" you don't need to
+//modify source, hence is easy to add special effects for enchants.
+//do not forget to add translations for effects!
+"effects"
+{
+  "1"
+  {
+    "chance"  "10"
+    "effectevent" "Attacker"
+    "tickdelay" "3"
+    "ticks" "3"
+    "tickdamage"  "4"
+  }
+  "4" //Deadly Poison
+  {
+    "chance"  "20"
+    "effectevent" "Attacker"
+    "tickdelay" "3.0"
+    "ticks" "3"
+    "damage"  "3"
+    "multi" "0.018"
+  }
+  "6"
+  {
+    "chance" "50"
+    "effectevent"  "Attacker"
+    "restore" "0.01"
+  }
+  "7"
+  {
+    "chance" "100"
+    "mindmg" "0.1"
+    "effectevent"  "SpellAtt"
+    "restore" "0.02"
+  }
+  "8"
+  {
+    "chance" "60"
+    "effectevent"  "Victim"
+    "restore" "0.01"
+  }
+  "9"
+  {
+    "chance" "100"
+    "mindmg"  "0.09" //If less than minimum % then chance is 4 times lower (else would be overpowered against tick dmg)
+    "effectevent"  "SpellVic"
+    "restore" "0.03"
+  }
+  //legendary item effects
+  "20"
+  {
+    "effectevent" "Attacker"
+    "amount"  "8"
+  }
+  "21"
+  {
+    "effectevent" "SpellAtt"
+    "multi" "1.1"
+  }
+  "22"
+  {
+    "effectevent" "SpellVic"
+    "chance"  "0.3"
+  }
+  "23"
+  {
+    "effectevent" "Attacker"
+    "hp"  "0.5"
+    "inc" "1.05"
+  }
+	"40"
+  {
+    "chance"  "13"
+    "effectevent" "Attacker"
+    "tickdelay" "4"
+    "ticks" "3"
+    "damage"  "2"
+    "multi" "0.060"
+  }
+  "101" //1XX support only Attackers, not Victims!
+  {
+    "chance"  "10"  //must be an integer 0-100
+    "effectevent" "Attacker"  //Better don't touch it here :D
+    "sound"   "1"   //Use fireball sound or not (0/1)
+    "damage"  "13"  //Initial damage
+    "type"    "2"
+    //Type:
+    //  0: physical affected by armor (example: whirlwind)
+    //  1: physical damage ignoring armor (example: poison)
+    //  2: spell damage
+    "translate" "Chance to cast a Fireblast at a victim."
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Now attacker/victim messages, format same as in translations.txt
+    "attMsg"  "You used @lightgreenFireblast enchant @defaultto @vic and did @dmg damage."
+    "vicMsg"  ""  //We leave it blank as we don't want to spam victim
+  }
+  "125"
+  {
+    "chance"  "15"  //must be an integer 0-100
+    "effectevent" "Attacker"  //Better don't touch it here :D
+    "sound"   "0"   //Use fireball sound or not (0/1)
+    "damage"  "25"  //Initial damage
+    "type"    "2"
+    //Type:
+    //  0: physical affected by armor (example: whirlwind)
+    //  1: physical damage ignoring armor (example: poison)
+    //  2: spell damage
+    "translate" "It has the power to create powerful lightnings."
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Now attacker/victim messages, format same as in translations.txt
+    "attMsg"  "You used @lightgreenThunderfury @defaultto @vic and did @dmg damage."
+    "vicMsg"  "You have been shocked by a lightning"  //We leave it blank as we don't want to spam victim"
+  }
+  "201" //(200-299 possibles)
+  {
+    "chance"  "10"  //must be an integer 0-100
+    "effectevent" "Attacker,SpellAtt"  //Better don't touch it here :D
+    "sound"   "0"   //Use crusader sound or not (0/1)
+    "heal"    "0" //Initial heal
+    "bonuses"    "23001" //Item ID which will be considered as bonus to stats
+    "duration"   "10.0" //Duration of bonus
+
+    "translate" "Dealing damage has a chance to activate Landslide for the next 10 seconds, increasing your attack power by 15"
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Name of modifier to be displayed in chat, with 'Crusader' it will look
+    //something like this: You deal 38 damage to Stinky (Affected by: Sinister Strike, Crusader)
+    "modifierName" "Landslide"
+
+  }
+  "205" // (200-299 possibles)
+  {
+    "chance"  "10"  //must be an integer 0-100
+    "effectevent" "Attacker,SpellAtt"  //Better don't touch it here :D
+    "sound"   "0"   //Use crusader sound or not (0/1)
+    "heal"    "0" //Initial heal
+    "bonuses"    "23003" //Item ID which will be considered as bonus to stats
+    "duration"   "10.0" //Duration of bonus
+
+    "translate" "Dealing damage has a chance to activate Power Torrent for the next 10 seconds, increasing your spellpower by 15"
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Name of modifier to be displayed in chat, with 'Crusader' it will look
+    //something like this: You deal 38 damage to Stinky (Affected by: Sinister Strike, Crusader)
+    "modifierName" "Power Torrent"
+
+  }
+	"207" // (200-299 possibles)
+  {
+    "chance"  "10"  //must be an integer 0-100
+    "effectevent" "Attacker,SpellAtt"  //Better don't touch it here :D
+    "sound"   "0"   //Use crusader sound or not (0/1)
+    "heal"    "0" //Initial heal
+    "bonuses"    "23004" //Item ID which will be considered as bonus to stats
+    "duration"   "10.0" //Duration of bonus
+
+    "translate" "Dealing damage has a chance to activate Mongoose for the next 10 seconds, increasing your agility by 75"
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Name of modifier to be displayed in chat, with 'Crusader' it will look
+    //something like this: You deal 38 damage to Stinky (Affected by: Sinister Strike, Crusader)
+    "modifierName" "Mongoose"
+
+  }
+	"208" // (200-299 possibles) //Crusader Enchantment
+  {
+    "chance"  "10"  //must be an integer 0-100
+    "effectevent" "Attacker"  //Better don't touch it here :D
+    "sound"   "1"   //Use crusader sound or not (0/1)
+    "heal"    "12" //Initial heal
+    "cha"     "1" //crit heal allowed
+    "bonuses"    "23006" //Item ID which will be considered as bonus to stats
+    "duration"   "10.0" //Duration of bonus
+
+    "translate" "Dealing damage has a chance to activate Crusader for the next 10 seconds, healing you for 12 and increasing strength by 35"
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Name of modifier to be displayed in chat, with 'Crusader' it will look
+    //something like this: You deal 38 damage to Stinky (Affected by: Sinister Strike, Crusader)
+    "modifierName" "Crusader"
+
+  }
+	"209" // (200-299 possibles)
+  {
+    "chance"  "10"
+    "effectevent" "Attacker,SpellAtt"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "23005"
+    "duration"   "10.5" //Duration of bonus
+
+    "translate" "Dealing damage has a chance to activate Heartsong and regenerate 80 mana over 10 seconds"
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Name of modifier to be displayed in chat, with 'Crusader' it will look
+    //something like this: You deal 38 damage to Stinky (Affected by: Sinister Strike, Crusader)
+    "modifierName" "Heartsong"
+
+  }
+	"210" // (200-299 possibles)
+  {
+    "chance"  "10"
+    "effectevent" "Attacker,SpellAtt"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "23002"
+    "duration"   "6.0" //Duration of bonus
+
+    "translate" "Chance to activate Wind Walk for the next 10 seconds, increasing movement speed by 6% and armor by 170"
+    //leave blanked ("") if you want to use translations.txt instead.
+    //Is useful to create custom effects without modifying translations
+
+    //Name of modifier to be displayed in chat, with 'Crusader' it will look
+    //something like this: You deal 38 damage to Stinky (Affected by: Sinister Strike, Crusader)
+    "modifierName" "Windwalk"
+
+  }
+  "212" // (200-299 possibles)
+  {
+    "chance"  "6"
+    "effectevent" "Attacker"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13551"
+    "duration"   "8.0"
+
+    "translate" "Weapon damage has a chance to grant 10% critical strike chance for 8 sec."
+    "modifierName" "Cyclone"
+
+  }
+  "213" // (200-299 possibles)
+  {
+    "chance"  "6"
+    "effectevent" "Attacker"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13573"
+    "duration"   "10.0"
+
+    "translate" "Weapon damage has a chance to grant 40 haste rating for 10 seconds"
+    "modifierName" "Gravity"
+
+  }
+  "214" // (200-299 possibles)
+  {
+    "chance"  "10"
+    "effectevent" "SpellAtt"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13750"
+    "duration"   "8.0"
+
+    "translate" "Equip: Your spells have a chance to give 45 spell power for 8 sec."
+    "modifierName" "Heart's Revelation"
+
+  }
+	"215" // (200-299 possibles)
+  {
+    "chance"  "10"
+    "effectevent" "SpellAtt"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13751"
+    "duration"   "8.0"
+    "stacks"	"0"
+
+    "translate" "Equip: Your spells have a chance to give 15% critical hit chance for 8 seconds."
+    "modifierName" "Reflection"
+  }
+  "216" // (200-299 possibles)
+  {
+    "chance"  "12"
+    "effectevent" "Victim"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13752"
+    "duration"   "12.0"
+	  "stacks"	"0"
+    "translate" "Equip: When receiving a melee attack, you have a chance to gain +217 armor for 12 seconds."
+    "modifierName" "Memories"
+  }
+	"217" // (200-299 possibles)
+    {
+      "chance"  "20"
+      "effectevent" "SpellAtt"
+      "sound"   "0"
+      "heal"    "0"
+      "bonuses"    "13760"
+      "duration"   "15.0"
+	  "stacks"	"0"
+
+      "translate" "Equip: Your attack spells have a chance to grant +22 haste for 15 seconds."
+      "modifierName" "Rainsong"
+
+    }
+	"218" // (200-299 possibles)
+    {
+      "chance"  "10"
+      "effectevent" "Victim"
+      "sound"   "0"
+      "heal"    "0"
+      "bonuses"    "13761"
+      "duration"   "15.0"
+	  "stacks"	"0"
+
+      "translate" "Equip: When you are hit, you have a chance to increase your maximum health by 50 for 15 seconds."
+      "modifierName" "Thundering Heart"
+
+    }
+    "219" // (200-299 possibles)
+    {
+      "chance"  "8"
+      "effectevent" "Attacker"
+      "sound"   "0"
+      "heal"    "0"
+      "bonuses"    "13762"
+      "duration"   "15.0"
+	  "stacks"	"0"
+
+      "translate" "Equip: Your attacks have a chance to grant 40 agility for 15 seconds."
+      "modifierName" "Endless Chambers"
+
+    }
+	"220" // (200-299 possibles)
+  {
+    "chance"  "12"
+    "effectevent" "Attacker"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13763"
+    "duration"   "15.0"
+    "stacks"	"0"
+    "translate" "Equip: Your attacks have a chance to grant 40 strength for 15 seconds."
+    "modifierName" "Gravity's Reflection"
+  }
+  "221" // (200-299 possibles)
+  {
+    "chance"  "20"
+    "effectevent" "SpellAtt"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13764"
+    "duration"   "15.0"
+    "stacks"	"0"
+    "translate" "Equip: Your spells have a chance to grant 20 mp5 for 15 seconds."
+    "modifierName" "Bloody Tears"
+  }
+  "222" // (200-299 possibles)
+  {
+    "chance"  "12"
+    "effectevent" "SpellAtt"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "13765"
+    "duration"   "15.0"
+    "stacks"	"0"
+    "translate" "Equip: Your spells have a chance to grant 12 spelldamage for 15 seconds."
+    "modifierName" "Burrowing Darkness"
+  }
+  "223" // (200-299 possibles)
+  {
+    "chance"  "12"
+    "effectevent" "Victim"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "18396"
+    "duration"   "6.0"
+    "stacks"	"0"
+  
+    "translate" "Equip: When you are hit, you have a chance to receive a massive speed boost."
+    "modifierName" "Turn of the Worm"
+  }
+    "224" // (200-299 possibles)
+  {
+    "chance"  "10"
+    "effectevent" "Attacker"
+    "sound"   "0"
+    "heal"    "0"
+    "bonuses"    "20157"
+    "duration"   "3.0"
+    "stacks"  "0"
+
+    "translate" "Weapon damage has a chance to increase attack speed by 10% for a short duration"
+    "modifierName" "Exceptional Speed"
+
+  }
+}
