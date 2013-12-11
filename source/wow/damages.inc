@@ -1,10 +1,6 @@
   /*
 * File: damages.inc
 * Description: Damage functions
-// This file includes:
-	// Damage Reduction from Armour
-	// Checks if player is new (isPlayerNew) and changes damage accordingly (use this for bonus exp if player is new/give starting level if player is new [for beta])
-
 * Author(s): Stinkyfax
 */
 
