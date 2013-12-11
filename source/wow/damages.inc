@@ -1,9 +1,10 @@
-// This file includes:
-	// Damage Reduction from Armour (GetDmgRed)
-	// dif is for finding the level difference between the attacker and victim
-/*
+  /*
 * File: damages.inc
 * Description: Damage functions
+// This file includes:
+	// Damage Reduction from Armour
+	// Checks if player is new (isPlayerNew) and changes damage accordingly (use this for bonus exp if player is new/give starting level if player is new [for beta])
+
 * Author(s): Stinkyfax
 */
 
@@ -33,7 +34,7 @@ stock LowLvlDmg(victim,attacker,&dmg,bool:spell)
   //if(GetLevel(attacker) > GetLevel(victim))
   //  return; //No nerf's for high levels
   if(IsBoss() || IsHNS())  return; //No bonus during boss event
-  new dif=(GetLevel(attacker)-GetLevel(victim)); // Find the level difference between the two players
+  new dif=(GetLevel(attacker)-GetLevel(victim));
   if((dif > 0 ) && IsZombie(victim))
     return;
   if((dif < 0) && IsZombie(attacker))
@@ -60,15 +61,15 @@ stock LowLvlDmg(victim,attacker,&dmg,bool:spell)
   else
     extra = isPlayerNew(victim);
 
-  //Extra penalty for being above average player levels
-//  if(GetLevel(attacker)>GetLevel(victim) && GetLevel(attacker)>(GetAverageLevel()+10) && GetLevel(victim)<GetAverageLevel())
-//  {
-//    dif+=(GetLevel(attacker)-GetAverageLevel()-15)/2;
-//  }
-//  else if(GetLevel(attacker)<GetLevel(victim) && GetLevel(attacker)<GetAverageLevel() && GetLevel(victim)>(GetAverageLevel()+10))
-//  {
-//    dif-=(GetLevel(victim)-GetAverageLevel()-15)/2;
-//  }
+  //Extra penality for being above average player levels
+  if(GetLevel(attacker)>GetLevel(victim) && GetLevel(attacker)>(GetAverageLevel()+10) && GetLevel(victim)<GetAverageLevel())
+  {
+    dif+=(GetLevel(attacker)-GetAverageLevel()-15)/2;
+  }
+  else if(GetLevel(attacker)<GetLevel(victim) && GetLevel(attacker)<GetAverageLevel() && GetLevel(victim)>(GetAverageLevel()+10))
+  {
+    dif-=(GetLevel(victim)-GetAverageLevel()-15)/2;
+  }
 
   if (mod>8)
   {
@@ -542,8 +543,7 @@ stock wcPhysicalDamage(userid,attacker,amount, String:amsg[]="", String:vmsg[]="
 stock Float:GetDmgRed(armor, userid)   {
    new Float:dred;
    if (armor>0)
-//      dred=float(1) - (float(armor) / (float(armor) + (10.0*float(GetLevel(userid))+20.0))); // Old Method
-	  dred=float(armor) / (85 * float(GetLevel(userid)) + float(armor) + 400)
+      dred=float(1) - (float(armor) / (float(armor) + (10.0*float(GetLevel(userid))+20.0)));
    else
       dred=1.0;
    if (dred < 0.1)
