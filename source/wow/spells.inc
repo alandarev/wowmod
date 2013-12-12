@@ -1,3 +1,6 @@
+// This file includes:
+	// Shield Block Chance [Shaman, Warrior, Paladin] (GetBlockChance)
+
 /*
 * File: spells.inc
 * Description: This file contains most spell functions
@@ -4637,20 +4640,24 @@ wcRunSpell_4_11(client)   {
 }
 
 
-stock Float:GetBlockChance(client, bool:extra=true, attacker = 0) {
-  if(!HasShield(client))
-  return 0.0;
-  new Float:chance = 0.10;
+stock Float:GetBlockChance(client, bool:extra=true, attacker = 0) {	// For Finding Block Chance (Block% = 5% base chance + Block Rating + contribution from talents)
+  if(!HasShield(client))											// 25 Defence = 122 Block Rating = 1% Block Chance
+  return 0.0;														// Start All Players With 300 Defence (Some Items Give Block Rating)
+  new Float:chance = 0.05;			// base given block chance
+  new Float:blockrating = 1464.00;	// from the 300 defence skill given
+  new Float:br = 0.00; 				// get block rating from items (make GetBlockRating function when I find items with block rating)
+  blockrating += br;
+  chance += (blockrating/122)/100;	// determine chance to block before talents
   if(!extra)
   return chance;
   new Float:talentbonus =0.0;
   decl String:line[255];
-  if(GetClass(client)==1)
+  if(GetClass(client)==1)	// Warrior
   {
     wcGetTalentInfo(1,1,1,1,client,"increment",line);
     talentbonus = StringToFloat(line);
   }
-  else if(GetClass(client)==4)
+  else if(GetClass(client)==4)	//Paladin
   {
     wcGetTalentInfo(4,2,2,3,client,"increment",line);
     talentbonus = StringToFloat(line);
