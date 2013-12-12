@@ -274,6 +274,7 @@ enum UniqueItem
   Item_regen,
   Item_ai,
   Item_haste,
+  Item_block,
 
   Item_gold,
   Item_forGold,
