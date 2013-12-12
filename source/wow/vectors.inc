@@ -313,6 +313,10 @@ AddItemBonuses(id, item[UniqueItem], &effect, &Float:rating)  {
     wcClientsBonusStats[id][RESILIENCE]+=bufferf;  //resilence
     rating+= bufferf * RATING_RESILENCE;
 
+    bufferf=float(item[Item_block]);	//block
+    wcClientsBonusStats[id][BLOCK]+=bufferf;  
+    rating+= bufferf * RATING_BLOCK;	
+	
     bufferf=item[Item_acc];
     wcClientsBonusStats[id][ACC]+=bufferf;  //accuracy
     rating+= bufferf * RATING_ACC;
@@ -335,11 +339,7 @@ AddItemBonuses(id, item[UniqueItem], &effect, &Float:rating)  {
 
     bufferf=item[Item_parry]; //parry
     wcClientsStats[id][PARRY]+=bufferf;
-    rating+= bufferf * RATING_PARRY;
-
-    bufferf=float(item[Item_block]);	//block
-    wcClientsBonusStats[id][BLOCK]+=bufferf;  
-    rating+= bufferf * RATING_BLOCK;		
+    rating+= bufferf * RATING_PARRY;		
 	
     bufferf=float(item[Item_effect]);
     if (bufferf != float(0))
