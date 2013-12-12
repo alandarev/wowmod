@@ -1,7 +1,3 @@
-// This file includes:
-	// The Event That Finds Final Total Damage to Player (PlayerHurtEvent)
-	// Block is controlled in this section (wcRunEffects - wcRunSpell)
-
 /*
 * File: hooks.inc
 * Description: This file hooks commands/actions

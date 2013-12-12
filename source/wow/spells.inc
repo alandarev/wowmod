@@ -1,5 +1,6 @@
 // This file includes:
-	// Shield Block Chance [Shaman, Warrior, Paladin] (GetBlockChance)
+	// Damage Reduction from Armour (GetDmgRed)
+	// dif is for finding the level difference between the attacker and victim
 
 /*
 * File: spells.inc
@@ -1054,14 +1055,8 @@ public wcRunSpell_1_1(spellid,race,victim,attacker,&totaldmg) //Warrior Shield B
 		decl Float:location[3];
 		GetClientAbsOrigin(victim,location);
 		EmitAmbientSound("wc/spells/shieldwall.wav",location);
-		new Float:shieldAbsorb = GetBlock(victim) + RoundToNearest(float((GetStr(victim)+GetBonusStr(victim))/2));	// Formula for Amount of Damage Absorbed by Shield
-		totaldmg -= shieldAbsorb;																					// subtract from totaldmg and check it isn't less than 0
-		if (totaldmg < 0)
-		{
-			totaldmg = 0;
-		}
-		//    totaldmg =0;	//old wowmod damage reduction for shield
-	
+		totaldmg=0;
+
 		AddEMsgAff("blocked damage", true);
 	}
 	return totaldmg;
@@ -4646,24 +4641,20 @@ wcRunSpell_4_11(client)   {
 }
 
 
-stock Float:GetBlockChance(client, bool:extra=true, attacker = 0) {	// For Finding Block Chance (Block% = 5% base chance + Block Rating + contribution from talents)
-  if(!HasShield(client))											// 25 Defence = 122 Block Rating = 1% Block Chance
-  return 0.0;														// Start All Players With 300 Defence (Some Items Give Block Rating)
-  new Float:chance = 0.05;			// base given block chance
-  new Float:blockrating = 1464.00;	// from the 300 defence skill given
-  new Float:br = 0.00; 				// get block rating from items (make GetBlockRating function when I find items with block rating)
-  blockrating += br;
-  chance += (blockrating/122)/100;	// determine chance to block before talents
+stock Float:GetBlockChance(client, bool:extra=true, attacker = 0) {
+  if(!HasShield(client))
+  return 0.0;
+  new Float:chance = 0.10;
   if(!extra)
   return chance;
   new Float:talentbonus =0.0;
   decl String:line[255];
-  if(GetClass(client)==1)	// Warrior
+  if(GetClass(client)==1)
   {
     wcGetTalentInfo(1,1,1,1,client,"increment",line);
     talentbonus = StringToFloat(line);
   }
-  else if(GetClass(client)==4)	//Paladin
+  else if(GetClass(client)==4)
   {
     wcGetTalentInfo(4,2,2,3,client,"increment",line);
     talentbonus = StringToFloat(line);

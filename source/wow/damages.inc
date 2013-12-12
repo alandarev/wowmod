@@ -1,10 +1,3 @@
-// This file includes:
-	// Damage Reduction from Armour (GetDmgRed)
-	// dif is for finding the level difference between the attacker and victim
-	// Dealing Damage to player (wcDealDamage)
-	// Dealing Spell Damage to player from spells (wcSpellDamage)
-	// 
-
   /*
 * File: damages.inc
 * Description: Damage functions
@@ -546,8 +539,7 @@ stock wcPhysicalDamage(userid,attacker,amount, String:amsg[]="", String:vmsg[]="
 stock Float:GetDmgRed(armor, userid)   {
    new Float:dred;
    if (armor>0)
-//      dred=float(1) - (float(armor) / (float(armor) + (10.0*float(GetLevel(userid))+20.0))); // Old Method
-	  dred=float(armor) / (85 * float(GetLevel(userid)) + float(armor) + 400)
+      dred=float(1) - (float(armor) / (float(armor) + (10.0*float(GetLevel(userid))+20.0)));
    else
       dred=1.0;
    if (dred < 0.1)

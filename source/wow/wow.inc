@@ -108,7 +108,6 @@ Author(s): Stinkyfax
 #define RATING_EFFECT FindSettingFloat("rating","effect")
 #define RATING_HASTE FindSettingFloat("rating","haste")
 #define RATING_PARRY FindSettingFloat("rating","parry")
-#define RATING_BLOCK FindSettingFloat("rating","block")
 #define RATING_ILEVEL FindSettingFloat("rating","ilevel")
 #define RATING_WEAPON_AP FindSettingFloat("rating","weapon_ap")
 #define RATING_WEAPON_SP FindSettingFloat("rating","weapon_sp")
@@ -369,8 +368,7 @@ new Float:PlayerSilence[65];
 #define RESILIENCE 23
 #define HASTE 24
 #define PARRY 25
-#define BLOCK 26
-//UNUSED stat numbers: 1,2,27-29 //these are unconfirmed as of yet.
+//UNUSED stat numbers: 1,2,26-29 //these are unconfirmed as of yet.
 //EFFECTS occupy wcClientsStats[][X]: 30->70
 new Float:wcClientsStats[65][71];
 new Float:wcClientsBonusStats[65][31];

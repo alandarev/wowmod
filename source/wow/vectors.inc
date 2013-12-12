@@ -1,7 +1,3 @@
-// This file includes:
-	// Weapon Speed Formula (ws2)
-	// Has Attack Power Formula (damage)
-	// Includes the recalculating of stats (wcRecalculateStats)
 /*
 * File: vectors.inc
 * Description: Thil file contains all the vectors/spawn/stats functions
@@ -129,7 +125,7 @@ public GetPlayerID(client)
 // formula armor: armor + agi/(2/3)
 // formula bonus spell damage: total int
 // damage 1, armor 2, str - 3, agi - 4, int - 5, AI - 6, bonus damage - 7, max/spawn hp - 8, max mana - 9, mana regen - 10, total armor - 11, attack speed - 12, current mana - 13, stamina - 14, spell dmg - 15, normal speed - 16 effects from 20
-// client stat 24=haste, 25=parry, 26=block
+// client stat 24=haste, 25=parry.
 
 
 public Action:SpawnAmmo(Handle:timer, any:client)
@@ -321,18 +317,13 @@ AddItemBonuses(id, item[UniqueItem], &effect, &Float:rating)  {
     wcClientsBonusStats[id][ACC]+=bufferf;  //accuracy
     rating+= bufferf * RATING_ACC;
 
-    bufferf=float(item[Item_block]);	//Block
-    wcClientsStats[id][BLOCK]+=bufferf;
-    rating+= bufferf * RATING_BLOCK;
-
     bufferf=item[Item_ws];	//get item.txt weapon speed
     if(bufferf > 0.0) {
       new Float:ws2 = GetWeaponSpeed(id, false);	
       if (ws2 > 0.0)
-//      bufferf = (bufferf + ws2) / 2.0; //old wowmod formula
       bufferf = (2.0 / bufferf);	//new WoW based formula
       SetWeaponSpeed(id, bufferf);
-    }	
+    }
 
     bufferf=item[Item_cs]; //Critical Strike
     wcClientsBonusStats[id][CRITCHANCE]+=bufferf;
@@ -433,9 +424,6 @@ Float:GetItemRating(item[UniqueItem])  {
 
     bufferf=item[Item_parry]; //parry
     rating+= bufferf * RATING_PARRY;
-	
-    bufferf=float(item[Item_block]);	//block
-    rating+= bufferf * RATING_BLOCK;
 
     bufferf=float(item[Item_weapon_ap]); //weapon_ap
     rating+= bufferf * RATING_DAMAGE;
@@ -513,10 +501,7 @@ public wcRecalculateStats(client) {
   wcClientsStats[id][RESISTANCE]= float(GetLevel(client))*0.125 + wcClientsBonusStats[id][RESISTANCE];
   //cs
   wcClientsStats[id][CRITCHANCE]=wcClientsBonusStats[id][CRITCHANCE]+0.05+float(GetAgi(client)+GetBonusAgi(client))/( 0.125 * float(GetLevel(client)) + 0.8)/100.0 + float(GetInt(client)+GetBonusInt(client))/(0.25 * float(GetLevel ( client )) +  3.0) / 100.0;
-  //parry
   wcClientsStats[id][PARRY] = 0.05 + wcClientsBonusStats[id][PARRY];
-  //parry
-  wcClientsStats[id][BLOCK] = wcClientsBonusStats[id][BLOCK];
   //resilence
   wcClientsStats[id][RESILIENCE] = wcClientsBonusStats[id][RESILIENCE];
   //accuracy
@@ -645,11 +630,6 @@ public GetBonusSta(client)
   return  RoundToNearest(wcClientsStats[GetPlayerID(client)][STA]);
 }
 
-public GetBonusBlock(client)
-{
-  return RoundToNearest(wcClientsStats[GetPlayerID(client)][BLOCK]);
-}
-
 public SetBonusStr(client,amount)
 {
   wcClientsStats[GetPlayerID(client)][STR]=float(amount);
@@ -668,11 +648,6 @@ public SetBonusInt(client,amount)
 public SetBonusSta(client,amount)
 {
   wcClientsStats[GetPlayerID(client)][STA]=float(amount);
-}
-
-public SetBonusBlock(client,amount)
-{
-  wcClientsStats[GetPlayerID(client)][BLOCK]=float(amount);
 }
 
 public GetMaxHealth(client)
