@@ -452,6 +452,8 @@ stock SaveItemCode(item[UniqueItem])  {
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `regen` = '%i'", item[Item_regen]);
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `ai` = '%i'", item[Item_ai]);
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `haste` = '%i'", item[Item_haste]);
+  len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `block` = '%i'", item[Item_block]);
+  
 
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `as` = '%i'", RoundToNearest(item[Item_as]*100.0));
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `cs` = '%i'", RoundToNearest(item[Item_cs]*100.0));
@@ -734,6 +736,7 @@ stock GetStandardItem(item[UniqueItem], id) {
   item[Item_ai] = KvGetNum(items, "ai", 0);
   item[Item_haste] = KvGetNum(items, "haste", 0);
   item[Item_parry] = KvGetFloat(items, "parry", 0.0);
+  item[Item_block] = KvGetNum(items, "block", 0);
   
   item[Item_as] = KvGetFloat(items, "as", 0.0);
   item[Item_cs] = KvGetFloat(items, "cs", 0.0);
@@ -751,7 +754,6 @@ stock GetStandardItem(item[UniqueItem], id) {
   item[Item_damage]    = KvGetNum(items, "damage", 0);
   item[Item_spelldmg]  = KvGetNum(items, "spelldmg", 0);
   item[Item_effect]    = KvGetNum(items, "effect", 0);
-  item[Item_block] = KvGetNum(items, "block", 0);
 
   item[Item_forGold] = KvGetNum(items, "forgold", 0); //if 1, then no need to pay silver/honor
 
@@ -2286,6 +2288,10 @@ ItemCompare(newitem[UniqueItem], olditem[UniqueItem],client)
   if((newitem[Item_haste]-olditem[Item_parry])!=0)
   {
     Format(buffer,sizeof(buffer),"%s %T %i,",buffer,"name parry",client,newitem[Item_parry]-olditem[Item_parry]);
+  }
+  if((newitem[Item_block]-olditem[Item_block])!=0)
+  {
+    Format(buffer,sizeof(buffer),"%s %T %i,",buffer,"name block",client,newitem[Item_block]-olditem[Item_block]);
   }
   if((newitem[Item_as]-olditem[Item_as])!=0)
   {
