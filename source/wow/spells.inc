@@ -1025,46 +1025,46 @@ public wcRunSpell_6_8(spellid,race,client)
 
 public wcRunSpell_1_1(spellid,race,victim,attacker,&totaldmg) //Warrior Shield Block
 {
-  decl String:line[255];
-  new Float:chance = GetBlockChance(victim,true,attacker);
-  decl Float:clienta[3],Float:targeta[3];
-  GetClientEyeAngles(attacker, clienta);
-  GetClientEyeAngles(victim, targeta);
-  new Float:angle=clienta[1]-targeta[1];
-  if(angle<0.0)
-  angle*=-1.0;
-  if(angle>180.0)
-  angle = 360.0-angle;
+	decl String:line[255];
+	new Float:chance = GetBlockChance(victim,true,attacker);
+	decl Float:clienta[3],Float:targeta[3];
+	GetClientEyeAngles(attacker, clienta);
+	GetClientEyeAngles(victim, targeta);
+	new Float:angle=clienta[1]-targeta[1];
+	if(angle<0.0)
+	angle*=-1.0;
+	if(angle>180.0)
+	angle = 360.0-angle;
 
-  if( (chance>=GetRandomFloat(0.0001,1.0)) && (angle > 100.0 || !IsValidShooting(attacker, victim)) )
-  {
-    for(new x=1;x<=50;x++)
-    {
-      if((spellid=wcGetSpell(victim,x))!=0)
-      {
-        wcGetSpellInfo(race,spellid,"event",line);
-        if(StrEqual(line,"player_block",false))
-        {
-          new tmp=0;
-          wcRunSpell(spellid,race,victim,attacker,totaldmg,tmp,tmp,tmp,tmp,tmp,tmp,victim);
-        }
-      }
-    }
-    wcRunOnBlockTalents(victim,attacker);
-    decl Float:location[3];
-    GetClientAbsOrigin(victim,location);
-    EmitAmbientSound("wc/spells/shieldwall.wav",location);
-	new Float:shieldAbsorb = GetBlock(victim) + RoundToNearest(float((GetStr(victim)+GetBonusStr(victim))/2));	// Formula for Amount of Damage Absorbed by Shield
-	totaldmg -= shieldAbsorb;																					// subtract from totaldmg and check it isn't less than 0
-	if (totaldmg < 0)
+	if( (chance>=GetRandomFloat(0.0001,1.0)) && (angle > 100.0 || !IsValidShooting(attacker, victim)) )
 	{
-		totaldmg = 0;
-	}
-//    totaldmg =0;	//old wowmod damage reduction for shield
+		for(new x=1;x<=50;x++)
+		{
+			if((spellid=wcGetSpell(victim,x))!=0)
+			{
+				wcGetSpellInfo(race,spellid,"event",line);
+				if(StrEqual(line,"player_block",false))
+				{
+					new tmp=0;
+					wcRunSpell(spellid,race,victim,attacker,totaldmg,tmp,tmp,tmp,tmp,tmp,tmp,victim);
+				}
+			}
+		}
+		wcRunOnBlockTalents(victim,attacker);
+		decl Float:location[3];
+		GetClientAbsOrigin(victim,location);
+		EmitAmbientSound("wc/spells/shieldwall.wav",location);
+		new Float:shieldAbsorb = GetBlock(victim) + RoundToNearest(float((GetStr(victim)+GetBonusStr(victim))/2));	// Formula for Amount of Damage Absorbed by Shield
+		totaldmg -= shieldAbsorb;																					// subtract from totaldmg and check it isn't less than 0
+		if (totaldmg < 0)
+		{
+			totaldmg = 0;
+		}
+		//    totaldmg =0;	//old wowmod damage reduction for shield
 	
-    AddEMsgAff("blocked damage", true);
-  }
-  return totaldmg;
+		AddEMsgAff("blocked damage", true);
+	}
+	return totaldmg;
 }
 
 public wcRunSpell_1_7(spellid,race,&victim,&attacker,totaldmg,&any:stop) //Spell Reflection
