@@ -320,6 +320,10 @@ AddItemBonuses(id, item[UniqueItem], &effect, &Float:rating)  {
     wcClientsBonusStats[id][ACC]+=bufferf;  //accuracy
     rating+= bufferf * RATING_ACC;
 
+    bufferf=float(item[Item_block]);	//Block
+    wcClientsStats[id][BLOCK]+=bufferf;
+    rating+= bufferf * RATING_BLOCK;
+
     bufferf=item[Item_ws];	//get item.txt weapon speed
     if(bufferf > 0.0) {
       new Float:ws2 = GetWeaponSpeed(id, false);	
@@ -634,6 +638,11 @@ public GetBonusSta(client)
   return  RoundToNearest(wcClientsStats[GetPlayerID(client)][STA]);
 }
 
+public GetBonusBlock(client)
+{
+  return RoundToNearest(wcClientsStats[GetPlayerID(client)][BLOCK]);
+}
+
 public SetBonusStr(client,amount)
 {
   wcClientsStats[GetPlayerID(client)][STR]=float(amount);
@@ -652,6 +661,11 @@ public SetBonusInt(client,amount)
 public SetBonusSta(client,amount)
 {
   wcClientsStats[GetPlayerID(client)][STA]=float(amount);
+}
+
+public SetBonusBlock(client,amount)
+{
+  wcClientsStats[GetPlayerID(client)][BLOCK]=float(amount);
 }
 
 public GetMaxHealth(client)
