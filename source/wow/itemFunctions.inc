@@ -452,7 +452,8 @@ stock SaveItemCode(item[UniqueItem])  {
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `regen` = '%i'", item[Item_regen]);
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `ai` = '%i'", item[Item_ai]);
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `haste` = '%i'", item[Item_haste]);
-
+  len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `block` = '%i'", item[Item_block]);
+  
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `as` = '%i'", RoundToNearest(item[Item_as]*100.0));
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `cs` = '%i'", RoundToNearest(item[Item_cs]*100.0));
   len+=Format(profbuffer[len],sizeof(profbuffer)-len,", `speed` = '%i'", RoundToNearest(item[Item_speed]*100.0));
@@ -607,6 +608,8 @@ stock GetItemProperties(item[UniqueItem], itemId, uniqueId=-1)  {
 
       if(uniItem[Item_resilence]>-100)
         item[Item_resilence]=uniItem[Item_resilence];
+      if(uniItem[Item_block]>-100)
+        item[Item_block]=uniItem[Item_block];
       if(uniItem[Item_armor]>=0)
         item[Item_armor]=uniItem[Item_armor];
       if(uniItem[Item_armor_type]>=0)
@@ -734,6 +737,7 @@ stock GetStandardItem(item[UniqueItem], id) {
   item[Item_ai] = KvGetNum(items, "ai", 0);
   item[Item_haste] = KvGetNum(items, "haste", 0);
   item[Item_parry] = KvGetFloat(items, "parry", 0.0);
+  item[Item_block] = KvGetNum(items, "block", 0);
   
   item[Item_as] = KvGetFloat(items, "as", 0.0);
   item[Item_cs] = KvGetFloat(items, "cs", 0.0);
@@ -1495,6 +1499,10 @@ Float:removeTempItem(client, item[UniqueItem])  {
     bufferf=item[Item_parry];
     wcClientsBonusStats[id][PARRY]-=bufferf;
     rating-= bufferf * RATING_PARRY;
+	
+    bufferf=float(item[Item_block]);
+    wcClientsBonusStats[id][BLOCK]-=bufferf;
+    rating-= bufferf * RATING_BLOCK;
 
     wcRecalculateStats(client);
   }
@@ -2228,6 +2236,7 @@ AddItem(adding[UniqueItem],ret[UniqueItem]) {
   ret[Item_ai] += adding[Item_ai];
   ret[Item_haste] += adding[Item_haste];
   ret[Item_parry] += adding[Item_parry];
+  ret[Item_block] += adding[Item_block];
   ret[Item_as] += adding[Item_as];
   ret[Item_cs] += adding[Item_cs];
   ret[Item_speed] += adding[Item_speed];
@@ -2286,6 +2295,10 @@ ItemCompare(newitem[UniqueItem], olditem[UniqueItem],client)
   if((newitem[Item_haste]-olditem[Item_parry])!=0)
   {
     Format(buffer,sizeof(buffer),"%s %T %i,",buffer,"name parry",client,newitem[Item_parry]-olditem[Item_parry]);
+  }
+  if((newitem[Item_block]-olditem[Item_block])!=0)
+  {
+    Format(buffer,sizeof(buffer),"%s %T %i,",buffer,"name block",client,newitem[Item_block]-olditem[Item_block]);
   }
   if((newitem[Item_as]-olditem[Item_as])!=0)
   {
