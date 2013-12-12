@@ -6101,6 +6101,12 @@ public ItemInfMenu(client,item[UniqueItem],bool:back)
       Format(fbuffer, sizeof(fbuffer), "%T", "bonus parry", client, RoundToNearest(bufferf*100.0));
       AddMenuItem(menu_iteminf,info,fbuffer,ITEMDRAW_DISABLED);
    }
+   bufferi=item[Item_block];
+   if (bufferi>0)
+   {
+      Format(fbuffer, sizeof(fbuffer), "%T", "bonus block", client, bufferi);
+      AddMenuItem(menu_iteminf,info,fbuffer,ITEMDRAW_DISABLED);
+   }
    bufferi=item[Item_effect];
    if (bufferi>0)
    {
