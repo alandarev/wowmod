@@ -307,6 +307,7 @@ bool:LoadItemCode(Handle:query, id, bool:noSQL=false)  {
     item[Item_regen] = GetSQLDataInt(query,"regen");
     item[Item_ai] = GetSQLDataInt(query,"ai");
     item[Item_haste] = GetSQLDataInt(query,"haste");
+    item[Item_block] = GetSQLDataInt(query,"block");
 
     item[Item_as] = float(GetSQLDataInt(query,"as")) / 100.0;
     item[Item_cs] = float(GetSQLDataInt(query,"cs")) / 100.0;
@@ -733,7 +734,7 @@ stock GetStandardItem(item[UniqueItem], id) {
   item[Item_ai] = KvGetNum(items, "ai", 0);
   item[Item_haste] = KvGetNum(items, "haste", 0);
   item[Item_parry] = KvGetFloat(items, "parry", 0.0);
-
+  
   item[Item_as] = KvGetFloat(items, "as", 0.0);
   item[Item_cs] = KvGetFloat(items, "cs", 0.0);
   item[Item_speed] = KvGetFloat(items, "speed", 0.0);
@@ -750,6 +751,7 @@ stock GetStandardItem(item[UniqueItem], id) {
   item[Item_damage]    = KvGetNum(items, "damage", 0);
   item[Item_spelldmg]  = KvGetNum(items, "spelldmg", 0);
   item[Item_effect]    = KvGetNum(items, "effect", 0);
+  item[Item_block] = KvGetNum(items, "block", 0);
 
   item[Item_forGold] = KvGetNum(items, "forgold", 0); //if 1, then no need to pay silver/honor
 
@@ -795,6 +797,7 @@ stock GiveItemUnknownProps(item[UniqueItem])  {
 	item[Item_ai]=0;
 	item[Item_haste]=0;
 	item[Item_parry]=0.0;
+	item[Item_block]=0;
 	
 	item[Item_as]=0.0;
 	item[Item_cs]=0.0;
@@ -1391,6 +1394,10 @@ Float:addTempItem(client, item[UniqueItem]) {
     bufferf=item[Item_parry];
     wcClientsBonusStats[id][PARRY]+=bufferf;
     rating+= bufferf * RATING_PARRY;
+	
+    bufferf=float(item[Item_block]);	//Block
+    wcClientsStats[id][BLOCK]+=bufferf;
+    rating+= bufferf * RATING_BLOCK;
 
     wcRecalculateStats(client);
   }
