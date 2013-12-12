@@ -369,7 +369,8 @@ new Float:PlayerSilence[65];
 #define RESILIENCE 23
 #define HASTE 24
 #define PARRY 25
-//UNUSED stat numbers: 1,2,26-29 //these are unconfirmed as of yet.
+#define BLOCK 26
+//UNUSED stat numbers: 1,2,27-29 //these are unconfirmed as of yet.
 //EFFECTS occupy wcClientsStats[][X]: 30->70
 new Float:wcClientsStats[65][71];
 new Float:wcClientsBonusStats[65][31];
