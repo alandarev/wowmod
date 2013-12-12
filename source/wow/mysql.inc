@@ -1102,6 +1102,8 @@ public CreateItemsTable()
         while(!SQL_FastQuery(hSQL,query)) { PrintToServer("Trying 1015"); }
         Format(query,256,"ALTER TABLE wc_Items ADD COLUMN `resilence` int(4) NOT NULL default '-100'");
         while(!SQL_FastQuery(hSQL,query)) { PrintToServer("Trying 1015"); }
+        Format(query,256,"ALTER TABLE wc_Items ADD COLUMN `block` int(6) NOT NULL default '-100'");
+        while(!SQL_FastQuery(hSQL,query)) { PrintToServer("Trying 1015"); }
         Format(query,256,"ALTER TABLE wc_Items ADD COLUMN `armor` int(6) NOT NULL default '-1'");
         while(!SQL_FastQuery(hSQL,query)) { PrintToServer("Trying 1015"); }
         Format(query,256,"ALTER TABLE wc_Items ADD COLUMN `ai` int(6) NOT NULL default '-100'");
