@@ -1,6 +1,7 @@
 // This file includes:
 	// Weapon Speed Formula (ws2)
 	// Has Attack Power Formula (damage)
+	// Includes the recalculating of stats (wcRecalculateStats)
 /*
 * File: vectors.inc
 * Description: Thil file contains all the vectors/spawn/stats functions
@@ -512,7 +513,10 @@ public wcRecalculateStats(client) {
   wcClientsStats[id][RESISTANCE]= float(GetLevel(client))*0.125 + wcClientsBonusStats[id][RESISTANCE];
   //cs
   wcClientsStats[id][CRITCHANCE]=wcClientsBonusStats[id][CRITCHANCE]+0.05+float(GetAgi(client)+GetBonusAgi(client))/( 0.125 * float(GetLevel(client)) + 0.8)/100.0 + float(GetInt(client)+GetBonusInt(client))/(0.25 * float(GetLevel ( client )) +  3.0) / 100.0;
+  //parry
   wcClientsStats[id][PARRY] = 0.05 + wcClientsBonusStats[id][PARRY];
+  //parry
+  wcClientsStats[id][BLOCK] = wcClientsBonusStats[id][BLOCK];
   //resilence
   wcClientsStats[id][RESILIENCE] = wcClientsBonusStats[id][RESILIENCE];
   //accuracy
