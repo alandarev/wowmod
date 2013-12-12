@@ -43,6 +43,7 @@ arg%d
     standardWritableStats.add(item_spellDamage);
     standardWritableStats.add(item_damage);
     standardWritableStats.add(item_haste);
+    standardWritableStats.add(item_block);
     standardWritableStats.add(item_armorType);
     standardWritableStats.add(item_effect);
     standardWritableStats.add(item_attackSpeed);
