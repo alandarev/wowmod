@@ -337,6 +337,10 @@ AddItemBonuses(id, item[UniqueItem], &effect, &Float:rating)  {
     wcClientsStats[id][PARRY]+=bufferf;
     rating+= bufferf * RATING_PARRY;
 
+    bufferf=float(item[Item_block]);	//block
+    wcClientsBonusStats[id][BLOCK]+=bufferf;  
+    rating+= bufferf * RATING_BLOCK;		
+	
     bufferf=float(item[Item_effect]);
     if (bufferf != float(0))
     {
@@ -425,6 +429,9 @@ Float:GetItemRating(item[UniqueItem])  {
     bufferf=item[Item_parry]; //parry
     rating+= bufferf * RATING_PARRY;
 
+    bufferf=float(item[Item_block]);	//block
+    rating+= bufferf * RATING_BLOCK;	
+	
     bufferf=float(item[Item_weapon_ap]); //weapon_ap
     rating+= bufferf * RATING_DAMAGE;
 
@@ -502,6 +509,8 @@ public wcRecalculateStats(client) {
   //cs
   wcClientsStats[id][CRITCHANCE]=wcClientsBonusStats[id][CRITCHANCE]+0.05+float(GetAgi(client)+GetBonusAgi(client))/( 0.125 * float(GetLevel(client)) + 0.8)/100.0 + float(GetInt(client)+GetBonusInt(client))/(0.25 * float(GetLevel ( client )) +  3.0) / 100.0;
   wcClientsStats[id][PARRY] = 0.05 + wcClientsBonusStats[id][PARRY];
+  //block
+  wcClientsStats[id][BLOCK] = wcClientsBonusStats[id][BLOCK];
   //resilence
   wcClientsStats[id][RESILIENCE] = wcClientsBonusStats[id][RESILIENCE];
   //accuracy
@@ -524,6 +533,7 @@ RecalculatePetStats(id) {
   wcClientsStats[id][SPELLDAMAGE]=     0.0;  //Spell Dmg
   wcClientsStats[id][MOVESPEED]=       1.0;  //Movement Speed
   wcClientsStats[id][RESISTANCE]=      0.0;  //Resistance
+  wcClientsStats[id][BLOCK]=      	   0.0;  //Block
   wcClientsStats[id][CRITCHANCE]=      0.25; //Critical Hit Chance
   wcClientsStats[id][ACC]=             0.0;  //Accuracy
   wcClientsStats[id][MINUSCRITCHANCE]= 0.0;  //-crit chance
@@ -732,6 +742,16 @@ public GetResistance(client)
 public AddResistance(client,Float:amount)
 {
   wcClientsBonusStats[client][RESISTANCE] += amount;
+}
+
+public GetBlock(client)
+{
+  return RoundToNearest(wcClientsStats[GetPlayerID(client)][BLOCK]);
+}
+
+public AddBlock(client,Float:amount)
+{
+  wcClientsBonusStats[client][BLOCK] += amount;
 }
 
 public GetResilence(client)
