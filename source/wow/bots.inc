@@ -101,6 +101,8 @@ BotCalculateStats(client) {
   wcClientsStats[client][HASTE]+=bufferf;
   bufferf=float(KvGetNum(StatsDB, "parry"));
   wcClientsStats[client][PARRY]+=bufferf;
+  bufferf=float(KvGetNum(StatsDB, "block"));
+  wcClientsBonusStats[client][BLOCK]+=bufferf;  //block
 }
 
 new Float:g_ff_bot_think[65];
