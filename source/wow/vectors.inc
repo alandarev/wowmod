@@ -1,3 +1,6 @@
+// This file includes:
+	// Weapon Speed Formula (ws2)
+	// Has Attack Power Formula (damage)
 /*
 * File: vectors.inc
 * Description: Thil file contains all the vectors/spawn/stats functions
@@ -317,13 +320,14 @@ AddItemBonuses(id, item[UniqueItem], &effect, &Float:rating)  {
     wcClientsBonusStats[id][ACC]+=bufferf;  //accuracy
     rating+= bufferf * RATING_ACC;
 
-    bufferf=item[Item_ws];
+    bufferf=item[Item_ws];	//get item.txt weapon speed
     if(bufferf > 0.0) {
-      new Float:ws2 = GetWeaponSpeed(id, false);
+      new Float:ws2 = GetWeaponSpeed(id, false);	
       if (ws2 > 0.0)
-      bufferf = (bufferf + ws2) / 2.0;
+      //bufferf = (bufferf + ws2) / 2.0; //old wowmod formula
+      bufferf = (2.0 / bufferf);	//new WoW based formula
       SetWeaponSpeed(id, bufferf);
-    }
+    }	
 
     bufferf=item[Item_cs]; //Critical Strike
     wcClientsBonusStats[id][CRITCHANCE]+=bufferf;
