@@ -432,6 +432,9 @@ Float:GetItemRating(item[UniqueItem])  {
 
     bufferf=item[Item_parry]; //parry
     rating+= bufferf * RATING_PARRY;
+	
+    bufferf=float(item[Item_block]);	//block
+    rating+= bufferf * RATING_BLOCK;
 
     bufferf=float(item[Item_weapon_ap]); //weapon_ap
     rating+= bufferf * RATING_DAMAGE;
