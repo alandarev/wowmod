@@ -324,7 +324,7 @@ AddItemBonuses(id, item[UniqueItem], &effect, &Float:rating)  {
     if(bufferf > 0.0) {
       new Float:ws2 = GetWeaponSpeed(id, false);	
       if (ws2 > 0.0)
-      //bufferf = (bufferf + ws2) / 2.0; //old wowmod formula
+//      bufferf = (bufferf + ws2) / 2.0; //old wowmod formula
       bufferf = (2.0 / bufferf);	//new WoW based formula
       SetWeaponSpeed(id, bufferf);
     }	
