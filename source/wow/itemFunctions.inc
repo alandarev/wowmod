@@ -2230,6 +2230,7 @@ AddItem(adding[UniqueItem],ret[UniqueItem]) {
   ret[Item_ai] += adding[Item_ai];
   ret[Item_haste] += adding[Item_haste];
   ret[Item_parry] += adding[Item_parry];
+  ret[Item_block] += adding[Item_block];
   ret[Item_as] += adding[Item_as];
   ret[Item_cs] += adding[Item_cs];
   ret[Item_speed] += adding[Item_speed];
