@@ -1,6 +1,7 @@
 // This file includes:
 	// Damage Reduction from Armour (GetDmgRed)
 	// dif is for finding the level difference between the attacker and victim
+	// Dealing Damage to player from spells and such (wcDealDamage)
 
   /*
 * File: damages.inc
