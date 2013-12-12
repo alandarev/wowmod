@@ -108,6 +108,7 @@ Author(s): Stinkyfax
 #define RATING_EFFECT FindSettingFloat("rating","effect")
 #define RATING_HASTE FindSettingFloat("rating","haste")
 #define RATING_PARRY FindSettingFloat("rating","parry")
+#define RATING_BLOCK FindSettingFloat("rating","block")
 #define RATING_ILEVEL FindSettingFloat("rating","ilevel")
 #define RATING_WEAPON_AP FindSettingFloat("rating","weapon_ap")
 #define RATING_WEAPON_SP FindSettingFloat("rating","weapon_sp")
