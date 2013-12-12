@@ -128,7 +128,7 @@ public GetPlayerID(client)
 // formula armor: armor + agi/(2/3)
 // formula bonus spell damage: total int
 // damage 1, armor 2, str - 3, agi - 4, int - 5, AI - 6, bonus damage - 7, max/spawn hp - 8, max mana - 9, mana regen - 10, total armor - 11, attack speed - 12, current mana - 13, stamina - 14, spell dmg - 15, normal speed - 16 effects from 20
-// client stat 24=haste, 25=parry.
+// client stat 24=haste, 25=parry, 26=block
 
 
 public Action:SpawnAmmo(Handle:timer, any:client)
