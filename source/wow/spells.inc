@@ -1054,8 +1054,8 @@ public wcRunSpell_1_1(spellid,race,victim,attacker,&totaldmg) //Warrior Shield B
     decl Float:location[3];
     GetClientAbsOrigin(victim,location);
     EmitAmbientSound("wc/spells/shieldwall.wav",location);
-	new Float:shieldabsorb = block + RoundToNearest(float((GetStr(victim)+GetBonusStr(victim))/2));	// Formula for Amount of Damage Absorbed by Shield
-	totaldmg -= shieldabsorb;																		// subtract from totaldmg and check it isn't less than 0
+	new Float:shieldAbsorb = GetBlock(victim) + RoundToNearest(float((GetStr(victim)+GetBonusStr(victim))/2));	// Formula for Amount of Damage Absorbed by Shield
+	totaldmg -= shieldAbsorb;																					// subtract from totaldmg and check it isn't less than 0
 	if (totaldmg < 0)
 	{
 		totaldmg = 0;
