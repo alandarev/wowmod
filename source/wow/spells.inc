@@ -987,7 +987,7 @@ public wcRunSpell_6_7(spellid,race,client)
   {
     new manareq = GetSpellCost(client, spellid);
     wcSetMana(client,GetMana(client)-manareq);
-    new Float:pen = float(GetIgnoreArmor(client)) / 4.5;
+    new Float:pen = float(GetBonusAgi(client)+GetAgi(client)) / 11.0;
     WCMessage(client,"rockbiter cast",client,pen);
     bMagicDamage[client]=true;
   }
