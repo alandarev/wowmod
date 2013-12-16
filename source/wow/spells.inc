@@ -5390,7 +5390,17 @@ bool:TryCast(client, spellid, bool:auto=false, victim=0)  {
   new manareq = GetSpellCost(client, spellid);
   if(mana < manareq)  {
     if(!auto)
-    WCMessage(client,"no mana",client);
+    {
+      new class = GetClass(client);
+      if(class==1)
+        WCMessage(client,"no rage",client);
+      if(class==2 || class==9)
+        WCMessage(client,"no energy",client);
+      if(class==3 || class==4 || class==5 || class==6 || class==7)
+        WCMessage(client,"no mana",client);
+      if(class==8)
+        WCMessage(client,"no runic",client);
+    }
     return false;
   }
 

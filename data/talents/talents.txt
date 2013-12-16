@@ -9463,21 +9463,21 @@
             "name"  "ECH"
             "max" "3"
             "saveid"  "J"
-            "multi" "0.15"
+            "multi" "0.10"
           }
           "2"
           {
             "name"  "ECH"
             "max" "3"
             "saveid"  "J"
-            "multi" "0.30"
+            "multi" "0.20"
           }
           "3"
           {
             "name"  "ECH"
             "max" "3"
             "saveid"  "J"
-            "multi" "0.45"
+            "multi" "0.30"
           }
         }
         "4"

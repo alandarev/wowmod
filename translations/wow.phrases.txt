@@ -1782,7 +1782,7 @@
   }
   "no mana"
   {
-    "en"      "@greenYour Mana is too low"
+    "en"      "@greenNot enough mana"
   }
   "no runes"
   {
@@ -8976,7 +8976,15 @@
   }
   "no energy"
   {
-    "en"      "@greenYour energy is too low"
+    "en"      "@greenNot enough energy"
+  }
+  "no runic"
+  {
+    "en"      "@greenNot enough runic power"
+  }
+  "no rage"
+  {
+    "en"      "@greenNot enough rage"
   }
   "roll cooldown"
   {
@@ -9831,7 +9839,7 @@
   }
   "ECH info"
   {
-    "en"		"<Passive> Increases the healing on Chi Burst.\n    Rank 1: +15%% healing\n    Rank 2: +30%% healing\n    Rank 3: +45%% healing"
+    "en"		"<Passive> Increases the healing on Chi Burst.\n    Rank 1: +10%% healing\n    Rank 2: +20%% healing\n    Rank 3: +30%% healing"
   }
   "ECH name"
   {
