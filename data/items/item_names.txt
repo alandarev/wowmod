@@ -910,4 +910,111 @@
     "quality"   "1"
     "name"      "Warsong's"
   }
+  //Christmas start
+  "131"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Candy"
+  }
+  "132"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Santa's"
+  }
+  "133"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Christmas"
+  }
+  "134"
+  {
+    "minlevel"  "1"
+    "maxlevel"  "85"
+    "quality"   "4"
+    "name"      "Big Red Fatso's"
+  } 
+  //Christmas end
+  "135"
+  {
+    "minlevel"  "70"
+    "maxlevel"  "80"
+    "quality"   "3"
+    "name"      "Mogu"
+  }
+  "136"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Tigerfang"
+  }
+  "137"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Oxhorn"
+  }
+  "138"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Cranewing"
+  }
+  "139"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Jadefire"
+  }
+  "140"
+  {
+    "minlevel"  "81"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Ancient Mogu"
+  }
+  "141"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Wasteland"
+  }
+  "142"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Bejeweled"
+  }
+  "143"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Kafa"
+  }
+  "144"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Sunset"
+  }
+  "145"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "2"
+    "name"      "Golden"
+  }
 }
