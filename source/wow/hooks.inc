@@ -1985,8 +1985,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         //WCMessage(attacker,"testmessageF",attacker,"[rockbiter] damagemulti",damagemulti);
       }
       damagemulti*=GetWeaponModifier(weaponname,attacker);
-      if(CanWearShield(attacker) && HasShield(attacker))
-      damagemulti *= 0.8;
+      if(CanWearShield(attacker) && HasShield(attacker) && GetClass(attacker)!=6)
+        damagemulti *= 0.8;
       CalculateCrit(attacker,victim,false,spellname,bCS);
       if(IsMageInvis(attacker))
       {

@@ -6242,6 +6242,8 @@ public wcRunSpell_1_15(spellid,race,client)
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line);
   new manareq = GetSpellCost(client, spellid);
+  if(HasGlyph(client, GLYPH_WARRIOR_LEAP))
+    manareq = 0;
   wcSetMana(client,GetMana(client)-manareq);
   SetCdSpell(client, cdtype, cd, spellid);
 
@@ -6251,14 +6253,6 @@ public wcRunSpell_1_15(spellid,race,client)
   HookLand(client);
 
   PushPlayerView(client, power, zPower);
-  if(HasGlyph(client, GLYPH_WARRIOR_LEAP))  {
-
-    wcGetSpellInfo(race,1,"cooldown",line);
-    cd = StringToFloat(line);
-    wcGetSpellInfo(race,spellid,"glyph",line);
-    cd *= (1.0-StringToFloat(line));
-    SetCdSpell(client, 1, GetCDSpell(client, 1) - GetTickedTime() -cd, 2); //Whirlwind cd reduced
-  }
 }
 
 new bool:g_ff_hookland[65];

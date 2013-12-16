@@ -1595,7 +1595,7 @@
             }
             "1"
             {
-              "chance"  "20"
+              "chance"  "15"
               "name"  "Hack and Slash"
               "max"  "1"
               "saveid"  "b"
@@ -1753,8 +1753,8 @@
               "name"  "Master of Basics"
               "max" "1"
               "saveid"  "u"
-              "multi" "0.25"
-              "chance"  "25"
+              "multi" "0.20"
+              "chance"  "20"
               "mana"  "5"
             }
           }
@@ -9158,9 +9158,9 @@
           "1"
           {
             "name"  "Seven Sided Strikes"
-            "multi"  "0.020000"
+            "multi"  "0.01"
             "chance"  "100"
-            "stacks" "10"
+            "stacks" "8"
             "duration" "5.0"
             "max"  "3"
             "saveid"  "v"
@@ -9168,9 +9168,9 @@
           "2"
           {
             "name"  "Seven Sided Strikes"
-            "multi"  "0.040000"
+            "multi"  "0.02"
             "chance"  "100"
-            "stacks" "10"
+            "stacks" "8"
             "duration" "5.0"
             "max"  "3"
             "saveid"  "v"
@@ -9178,9 +9178,9 @@
           "3"
           {
             "name"  "Seven Sided Strikes"
-            "multi"  "0.060000"
+            "multi"  "0.03"
             "chance"  "100"
-            "stacks" "10"
+            "stacks" "8"
             "duration" "5.0"
             "max"  "3"
             "saveid"  "v"
@@ -9365,7 +9365,7 @@
             "name"  "Chi Explosion"
             "max" "2"
             "saveid"  "G"
-            "multi" "0.10" //Scales with agi
+            "multi" "0.08" //Scales with agi
             "chimulti"  "0.125" //How much damage is increased per chi
             "duration"  "6.0"
             "base"      "8" //Base explosion damage
@@ -9379,7 +9379,7 @@
             "name"  "Chi Explosion"
             "max" "2"
             "saveid"  "G"
-            "multi" "0.10" //Scales with agi
+            "multi" "0.08" //Scales with agi
             "chimulti"  "0.25" //How much damage is increased per chi
             "duration"  "6.0"
             "base"      "8" //Base explosion damage

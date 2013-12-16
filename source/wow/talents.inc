@@ -788,8 +788,8 @@ wcRunOnDeathTalents(victim,attacker)
       }
       case 2:
       {
-        if(CheckRequirements(attacker,2,2,4,1))
-          wcRunTalent_2_KillingSpree(attacker);
+        //if(CheckRequirements(attacker,2,2,4,1))
+          //wcRunTalent_2_KillingSpree(attacker);
         //if(CheckRequirements(attacker,2,3,3,2))
           //wcRunTalent_2_MurderousIntent(attacker);
         if(HasGlyph(attacker, GLYPH_ROGUE_SSTEP))
@@ -2373,7 +2373,7 @@ wcRunTalent_2_ReinforcedLeather(client)
   }
 }*/
 
-wcRunTalent_2_KillingSpree(client)
+/*wcRunTalent_2_KillingSpree(client)
 {
   new rweapon = GetEntDataEnt2(client, ACTIVEWEAPON);
   if(!IsValidEntity(rweapon))
@@ -2438,7 +2438,7 @@ wcRunTalent_2_KillingSpree(client)
     ammo+=clip;
     SetEntData(rweapon, CLIPOFFSET, ammo, 4, true);
   }
-}
+}*/
 
 /*wcRunTalent_2_MurderousIntent(client)
 {
@@ -7647,7 +7647,7 @@ RemoveReadiness(client)
   g_iCombatReady[client]=0;
   g_iCombatReadyB[client]=0;
 }
-wcRunTalent_2_BasicMaster(client,victim,&totaldmg)
+wcRunTalent_2_BasicMaster(client,victim,&totaldmg) //Master of Basics
 {
   decl String:line[255];
   new random=GetRandomInt(1,100);

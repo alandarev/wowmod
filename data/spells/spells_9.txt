@@ -131,7 +131,7 @@
     "base"      "5"
     "multi"     "0.25" //Heal multi, spelldamage
     "agimulti"     "0.11" //Damage multi, agility
-    "chi"       "1"
+    "chi"       "2"
     "distance"  "175.0"
   }
   "12"

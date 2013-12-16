@@ -7086,7 +7086,7 @@
   }
   "Hack and Slash info"
   {
-    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50% of its damage.\n    Rank 1: 20%% chance"
+    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50% of its damage.\n    Rank 1: 15%% chance"
   }
   "Improved Sinister Strike info"
   {
@@ -7122,7 +7122,7 @@
   }
   "Master of Basics info"
   {
-    "en" "<Passive> Your attacks have a 25%% chance to deal 25%% bonus damage and restore 5 energy."
+    "en" "<Passive> Your attacks have a 20%% chance to deal 20%% bonus damage and restore 5 energy."
   }
   "Fan of Swords info"
   {
@@ -7138,7 +7138,7 @@
   }
   "Lethality info"
   {
-    "en"		"<Passive> Increases your critical damage bonus by a percentage.\n    Rank 1: +12.5%% critical damage\n    Rank 2: +25%% critical damage"
+    "en"		"<Passive> Increases your critical damage bonus by a percentage.\n    Rank 1: +10%% critical damage\n    Rank 2: +20%% critical damage"
   }
   "Improved Poisons info"
   {
@@ -9733,7 +9733,7 @@
   }
   "Seven Sided Strikes info"
   {
-    "en"		"<Passive> Your critical hits increase your damage for 5 seconds. Stacks up to 10 times.\n    Rank 1: +2%% damage\n    Rank 2: +4%% damage\n    Rank 3: +6%% damage"
+    "en"		"<Passive> Your critical hits increase your damage for 5 seconds. Stacks up to 8 times.\n    Rank 1: +1%% damage\n    Rank 2: +2%% damage\n    Rank 3: +3%% damage"
   }
   "Seven Sided Strikes name"
   {
@@ -10100,7 +10100,7 @@
   }
   "Chi Burst info"
   {
-    "en" "Throw a flying purple-ass chicken which heals and damanges enemies."
+    "en" "Shoot a ball of Chi that travels forward in front of you, healing allies and damaging enemies. Costs 2 chi."
   }
   "chi burst cast"
   {

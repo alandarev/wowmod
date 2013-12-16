@@ -3563,7 +3563,7 @@ public Effect51(client,damage,victim,bonushit) //Adrenaline Strike with Glyph
   if(bonushit==0)
   {
     new Float:range = 225.0;
-    damage = RoundToNearest(damage*0.30);
+    damage = RoundToNearest(damage*0.20);
     new Float:location[3];
     GetClientAbsOrigin(victim,location);
     new target[2];
