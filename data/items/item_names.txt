@@ -448,19 +448,75 @@
     "quality"   "3"
     "name"      "Epic"
   }
+  //"65"
+  //{
+  //  "minlevel"  "1"
+  //  "maxlevel"  "85"
+  //  "quality"   "4"
+  //  "name"      "Turkey King's" //Temporary Thanksgiving's name
+  //}
+  //"66"
+  //{
+  //  "minlevel"  "1"
+  //  "maxlevel"  "85"
+  //  "quality"   "3"
+  //  "name"      "Turkey Hunter's" //Temporary Thanksgiving's name
+  //}
+  "59"
+  {
+    "minlevel"  "81"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Ancient Mogu"
+  }
+  "60"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Wasteland"
+  }
+  "61"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Bejeweled"
+  }
+  "62"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Kafa"
+  }
+  "63"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "1"
+    "name"      "Sunset"
+  }
+  "64"
+  {
+    "minlevel"  "80"
+    "maxlevel"  "85"
+    "quality"   "3"
+    "name"      "Cranewing"
+  }
   "65"
   {
-    "minlevel"  "1"
+    "minlevel"  "80"
     "maxlevel"  "85"
-    "quality"   "4"
-    "name"      "Turkey King's" //Temporary Thanksgiving's name
+    "quality"   "3"
+    "name"      "Jadefire"
   }
   "66"
   {
-    "minlevel"  "1"
+    "minlevel"  "80"
     "maxlevel"  "85"
-    "quality"   "3"
-    "name"      "Turkey Hunter's" //Temporary Thanksgiving's name
+    "quality"   "2"
+    "name"      "Golden"
   }
   "67"
   {
@@ -960,61 +1016,5 @@
     "maxlevel"  "85"
     "quality"   "3"
     "name"      "Oxhorn"
-  }
-  "138"
-  {
-    "minlevel"  "80"
-    "maxlevel"  "85"
-    "quality"   "3"
-    "name"      "Cranewing"
-  }
-  "139"
-  {
-    "minlevel"  "80"
-    "maxlevel"  "85"
-    "quality"   "3"
-    "name"      "Jadefire"
-  }
-  "140"
-  {
-    "minlevel"  "81"
-    "maxlevel"  "85"
-    "quality"   "3"
-    "name"      "Ancient Mogu"
-  }
-  "141"
-  {
-    "minlevel"  "80"
-    "maxlevel"  "85"
-    "quality"   "1"
-    "name"      "Wasteland"
-  }
-  "142"
-  {
-    "minlevel"  "80"
-    "maxlevel"  "85"
-    "quality"   "1"
-    "name"      "Bejeweled"
-  }
-  "143"
-  {
-    "minlevel"  "80"
-    "maxlevel"  "85"
-    "quality"   "1"
-    "name"      "Kafa"
-  }
-  "144"
-  {
-    "minlevel"  "80"
-    "maxlevel"  "85"
-    "quality"   "1"
-    "name"      "Sunset"
-  }
-  "145"
-  {
-    "minlevel"  "80"
-    "maxlevel"  "85"
-    "quality"   "2"
-    "name"      "Golden"
   }
 }
