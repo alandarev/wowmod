@@ -1657,13 +1657,13 @@ public wcRunTalent_9_Mistweaver(client,&damage)
   }
   else
   {
-    new Float:multi = (wcClientsStats[GetPlayerID(client)][SPELLDAMAGE])*0.0020;
+    new Float:multi = (wcClientsStats[GetPlayerID(client)][SPELLDAMAGE])*0.010;
     SetMist(client, (mist+1));
     new newmistdmg = 0;
     if(IsBoss())
-      newmistdmg=RoundToNearest(float(mistdmg)+RoundToNearest(1+(multi*float(damage))*0.10));
+      newmistdmg=RoundToNearest(float(mistdmg)+RoundToNearest(1+(multi*float(damage))*0.05));
     else
-      newmistdmg=RoundToNearest(float(mistdmg)+1+(multi*float(damage)));
+      newmistdmg=RoundToNearest(float(mistdmg)+(multi*float(damage)));
     SetMistDmg(client, newmistdmg);
   }
 }

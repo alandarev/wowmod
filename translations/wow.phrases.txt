@@ -10120,7 +10120,7 @@
   }
   "Stance of the Serpent info"
   {
-    "en" "Increases healing done by 25%%, and every 6 hits you heal nearby allies depending on your spelldamage and damage you dealt over the 6 hits.\n    Formula: Heal = Damage * (0.0020 * spelldamage) + 6"
+    "en" "Increases healing done by 25%%, and every 6 hits you heal nearby allies depending on your spelldamage and damage you dealt over the 6 hits.\n    Formula: Heal = Damage * (0.01 * spelldamage)"
   }
   "Stance of the Tiger name"
   {
