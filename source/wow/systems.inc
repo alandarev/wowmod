@@ -901,26 +901,59 @@ public wcSetLevel(client,amount)
    //80 lvl - 413614       3765 gold
    // 80 lvl ratio gold/exp 0.009
 }
-stock _getReqXp(amount)  {
-  new d = amount % 4;
-  new d2 = RoundToFloor(float(amount)/4.0);
-  new Float:modifier = 0.2;
+// Determining how much XP per level
+stock _getReqXp(amount)  {		// New Method that is SIMILIAR to WoW
+  new d = RoundToFloor(float(amount)/10.0);
+  new d2 = amount;
+  new Float:d3 = 0.0;
   switch(d)   {
+	case 0:
+	d3 = 40 * Pow(float(d2),2.0) + 360 * d2;
     case 1:
-    modifier = 0.22;
+    d3 = -0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
     case 2:
-    modifier = 0.28;
+    d3 = -0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
     case 3:
-    modifier = 0.3;
+    d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+    case 4:
+    d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+    case 5:
+    d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+    case 6:
+    d3 = (155 + (45 + (5 * d2))) * (1344 - ((69-60) * (3 + (69-60) * 4)));
   }
   //amount = Roun
   //2nd version. 1st had 1.58 power, 220.0 coef
-  new Float:reqxp=Pow(1.49,float(d2));
-  if(amount >= 80) {
-    reqxp *= 1.25;
-  }
-  return RoundToCeil(500.0*reqxp*modifier);
+//  new Float:reqxp=Pow(1.49,float(d2));
+//  if(amount >= 80) {
+//    reqxp *= 1.25;
+//  }
+  new d4 = RoundToNearest(d3);
+//  new Float:remove = d4 % 100.0; // remove becomes 70.4
+//  d4 -= remove;
+  return (d4 -= d4 % 100);
 }
+
+//stock _getReqXp(amount)  {
+//  new d = amount % 4;
+//  new d2 = RoundToFloor(float(amount)/4.0);
+//  new Float:modifier = 0.2;
+//  switch(d)   {
+//    case 1:
+//    modifier = 0.22;
+//    case 2:
+//    modifier = 0.28;
+//    case 3:
+//    modifier = 0.3;
+//  }
+  //amount = Roun
+  //2nd version. 1st had 1.58 power, 220.0 coef
+//  new Float:reqxp=Pow(1.49,float(d2));
+//  if(amount >= 80) {
+//    reqxp *= 1.25;
+//  }
+//  return RoundToCeil(500.0*reqxp*modifier);
+//}
 
 stock RemoveLevelSpells(client) {
   if(GetClass(client)<=0)
