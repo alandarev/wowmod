@@ -1,3 +1,6 @@
+// This file includes:
+	// Determining players experience to level (_getReqXp)
+
 /*
 * File: systems.inc
 * Description: contains xp system/item system/stats functions
