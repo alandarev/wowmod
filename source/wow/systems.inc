@@ -911,19 +911,19 @@ stock _getReqXp(amount)  {		// New Method that is SIMILIAR to WoW
   new Float:d3 = 0.0;
   switch(d)   {
 	case 0:
-	d3 = 40 * Pow(float(d2),2.0) + 360 * d2;
+		d3 = 40 * Pow(float(d2),2.0) + 360 * d2;
     case 1:
-    d3 = -0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
+		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0)) + (396 * d2);
     case 2:
-    d3 = -0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
+		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
     case 3:
-    d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+		d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
     case 4:
-    d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+		d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
     case 5:
-    d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+		d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
     case 6:
-    d3 = (155 + (45 + (5 * d2))) * (1344 - ((69-60) * (3 + (69-60) * 4)));
+		d3 = (155 + (45 + (5 * d2))) * (1344 - ((69-60) * (3 + (69-60) * 4)));
   }
   //amount = Roun
   //2nd version. 1st had 1.58 power, 220.0 coef
