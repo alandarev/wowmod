@@ -907,23 +907,23 @@ public wcSetLevel(client,amount)
 // Determining how much XP per level
 stock _getReqXp(amount)  {		// New Method that is SIMILIAR to WoW
   new d = RoundToFloor(float(amount)/10.0);
-  new d2 = amount;
+  new Float:d2 = amount;
   new Float:d3 = 0.0;
   switch(d)   {
 	case 0:
-		d3 = 40 * Pow(float(d2),2.0) + 360 * d2;
+		d3 = 40.0 * Pow(float(d2),2.0) + 360.0 * d2;
     case 1:
-		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
+		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396.0 * d2);
     case 2:
-		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
+		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396.0 * d2);
     case 3:
-		d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+		d3 = (65.0 * (Pow(float(d2),2.0)) - (165.0 * d2) - 6750.0) * 0.82;
     case 4:
-		d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+		d3 = (65.0 * (Pow(float(d2),2.0)) - (165.0 * d2) - 6750.0) * 0.82;
     case 5:
-		d3 = (65 * (Pow(float(d2),2.0)) - (165 * d2) - 6750) * 0.82;
+		d3 = (65.0 * (Pow(float(d2),2.0)) - (165.0 * d2) - 6750.0) * 0.82;
     case 6:
-		d3 = (155 + (45 + (5 * d2))) * (1344 - ((69-60) * (3 + (69-60) * 4)));
+		d3 = (155.0 + (45.0 + (5.0 * d2))) * (1344.0 - ((69.0-60.0) * (3.0 + (69.0-60.0) * 4.0)));
   }
   //amount = Roun
   //2nd version. 1st had 1.58 power, 220.0 coef
