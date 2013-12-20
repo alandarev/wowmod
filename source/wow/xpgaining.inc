@@ -1,3 +1,7 @@
+// This file includes:
+	// Determining how much experience a player is worth (GetTargetXPWorth) and (PlayerKillXp)
+	// Low Level Damage Modifier I think? (LowLevelInfo)
+
 /*
 * File: xpgaining.inc
 * Description: This file contains xp gained functions
@@ -324,25 +328,71 @@ LowLevelInfo(victim, attacker)  {
 
 }
 
-public GetTargetXPWorth(client,attacker,bool:head)
+// New Experience per kill method, similar to WoW
+ public GetTargetXPWorth(client,attacker,bool:head)
 {
-   new worth=RoundToCeil((200+Pow(float(GetLevel(client))*1.0,1.45))*EXP_KILL*(1.0+EXP_SPREE*float(g_Deaths[attacker]))*GetRandomFloat(0.85,1.2)*GLOBAL_XP*GetTempVar(attacker, Temp_XPRate));
-   if(IsFakeClient(client)) {
-      if( SERVER_LEVEL_POLICY == 1) worth = RoundToNearest(BOT_HIGH_RATE*worth);
-      else  worth = RoundToNearest(BOT_NORMAL_RATE*worth);
-   }
-   if(head)
-      worth=RoundToNearest(EXP_HEADSHOT*float(worth));
-   g_Deaths[attacker]=0;
-   //if(UniqueID(client)==1)
-   //   worth=RoundToNearest(0.33*float(worth));
-   new levelbetween = GetLevel(client) - GetLevel(attacker);
-   if(0>=levelbetween)
-    levelbetween = 1;
-   new Float:lowlvlworth = 1.0 + (float(levelbetween) / 20);
-   worth+= RoundToCeil(float(worth) * lowlvlworth);
-   return worth;
+	new Float:base = float(GetLevel(client) * 5) + 45.0;
+	new Float:worth = 0.0;
+	new d = GetLevel(client) - GetLevel(attacker);
+	new levelbetween = (d>0) ? RoundToFloor(d/10) ? RoundToCeil(d/10);
+	switch(levelbetween)
+	{
+		case 1,2,3,4,5,6: //,7,8: //***
+		worth=RoundToCeil((1 + 0.05 * d) * base);
+		case 0:
+			worth=base;
+		case -1:
+			worth=RoundToCeil((1 - ((-d) / 7)) * base);
+		case -2:
+			worth=RoundToCeil((1 - ((-d) / 11)) * base);
+		case -3:
+			worth=RoundToCeil((1 - ((-d) / 12)) * base);
+		case -4:
+			worth=RoundToCeil((1 - ((-d) / 13)) * base);
+		case -5:
+			worth=RoundToCeil((1 - ((-d) / 15)) * base);
+		case -6:
+			worth=RoundToCeil((1 - ((-d) / 17)) * base);
+		// originally you only pasted to me from 1-6 but if you have more just uncomment and place here
+		//case -7:
+		//  worth=RoundToCeil((1 - ((-d) / 7)) * base);
+		//case -8:
+		//  worth=RoundToCeil((1 - ((-d) / 7)) * base);
+		default:
+			worth=base;
+	}
+   
+	if(IsFakeClient(client))
+	{
+		if( SERVER_LEVEL_POLICY == 1)
+			worth = RoundToNearest(BOT_HIGH_RATE*worth);
+		else  
+			worth = RoundToNearest(BOT_NORMAL_RATE*worth);
+	}
+	g_Deaths[attacker]=0;
+	return worth;
 }
+
+// Old method for determining players experience
+//public GetTargetXPWorth(client,attacker,bool:head)
+//{
+//   new worth=RoundToCeil((200+Pow(float(GetLevel(client))*1.0,1.45))*EXP_KILL*(1.0+EXP_SPREE*float(g_Deaths[attacker]))*GetRandomFloat(0.85,1.2)*GLOBAL_XP*GetTempVar(attacker, Temp_XPRate));
+//   if(IsFakeClient(client)) {
+//      if( SERVER_LEVEL_POLICY == 1) worth = RoundToNearest(BOT_HIGH_RATE*worth);
+//      else  worth = RoundToNearest(BOT_NORMAL_RATE*worth);
+//   }
+//   if(head)
+//      worth=RoundToNearest(EXP_HEADSHOT*float(worth));
+//   g_Deaths[attacker]=0;
+//   //if(UniqueID(client)==1)
+//   //   worth=RoundToNearest(0.33*float(worth));
+//   new levelbetween = GetLevel(client) - GetLevel(attacker);
+//   if(0>=levelbetween)
+//    levelbetween = 1;
+//   new Float:lowlvlworth = 1.0 + (float(levelbetween) / 20);
+//   worth+= RoundToCeil(float(worth) * lowlvlworth);
+//   return worth;
+//}
 
 public Float:TeamRatio(team)
 {
