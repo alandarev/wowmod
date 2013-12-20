@@ -334,7 +334,7 @@ LowLevelInfo(victim, attacker)  {
 	new Float:base = float(GetLevel(client) * 5) + 45.0;
 	new Float:worth = 0.0;
 	new d = GetLevel(client) - GetLevel(attacker);
-	new levelbetween = (d>0) ? RoundToFloor(d/10) ? RoundToCeil(d/10);
+	new levelbetween = (d>0) ? RoundToFloor(d/10) : RoundToCeil(d/10);
 	switch(levelbetween)
 	{
 		case 1,2,3,4,5,6: //,7,8: //***
