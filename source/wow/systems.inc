@@ -913,7 +913,7 @@ stock _getReqXp(amount)  {		// New Method that is SIMILIAR to WoW
 	case 0:
 		d3 = 40 * Pow(float(d2),2.0) + 360 * d2;
     case 1:
-		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0)) + (396 * d2);
+		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
     case 2:
 		d3 = (-0.4 * (Pow(float(d2),3.0))) + (40.4 * (Pow(float(d2),2.0))) + (396 * d2);
     case 3:
