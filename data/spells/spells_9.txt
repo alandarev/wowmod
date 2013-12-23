@@ -7,7 +7,7 @@
     "level" "1"
     "chance"  "15"
     "mana" "20"
-    "multi" "0.10" //Scales off of agility
+    "multi" "0.092" //Scales off of agility
   }
   "2"
   {
@@ -32,7 +32,7 @@
     "level" "1"
     "cooldowntype"  "3"
     "cooldown"  "3.0"
-    "mana"  "45"
+    "mana"  "50"
     "base"  "7"
     "multi" "0.18"
     "distance"  "375.0" //Distance for the second heal

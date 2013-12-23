@@ -195,7 +195,7 @@
     "active"  "1"
     "level" "80"
     "cost" "1200"
-    "mana"  "15"
+    //"mana"  "15"
     "multi" "0.29"
     "basedmg"   "20"
     "distance"  "330.0"

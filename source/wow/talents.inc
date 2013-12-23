@@ -1451,7 +1451,8 @@ public Action:EndLastStand(Handle:timer, Handle:datapack)
     {
       SetBonusMaxHealth(client, oldhp);
       wcRecalculateStats(client);
-      WCMessage(client,"Deactivate Last Stand",client);
+      if(GetClass(client)==1)
+        WCMessage(client,"Deactivate Last Stand",client);
       multi*=-1;
       RestoreHealthP(client,multi);
     }

@@ -19,7 +19,7 @@ new Float:wcClientSealT[65],Float:wcClientHM[65],Float:wcClientHMT[65];
 
 new Float:g_RoundTime; //stores round duration while boss event
 
-
+new g_iRenewingGlyph[65];
 new bool:g_ffUseCmd[65];
 public Action:OnPlayerRunCmd(client, &buttons, &impulse, Float:vel[3], Float:angles[3], &weapon)
 {
@@ -1710,7 +1710,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(GetMonkStance(attacker)==1)
     damagemulti*=0.85;
   if(GetEventBool(event,"bonushit"))
-  bonushit=1;
+    bonushit=1;
+  if(g_iRenewingGlyph[victim]>0)
+    damagemulti*=1.00-(((g_iRenewingGlyph[victim]*0.025+0.025)*0.66)+0.017);
 
   new hpRestoreTo = victim;
   if((attacker > 0) && (victim > 0) && (redirection > 0) && (redirectTo > 0) )

@@ -102,6 +102,9 @@ _setChi(client, amount) {
 stock addChi(client, amount=1)  {
   // Do not give more than maximum
   new curChi = getChi(client);
+  if(HasGlyph(client, GLYPH_MONK_CHI))
+    if(10>=GetRandomInt(1,100))
+      amount+=1;
   if (MAX_CHI < curChi + amount)  {
     amount = MAX_CHI - curChi;
   }
@@ -121,7 +124,14 @@ stock bool:spendChi(client, amount) {
     if(CheckRequirements(client,9,3,1,2))
       wcRunTalent_9_ManaThistleTea(client, amount);
     if(CheckRequirements(client,9,1,3,2))
+    {
       wcRunTalent_9_TigereyeBrew(client, amount);
+      if(HasGlyph(client, GLYPH_MONK_TBREW))
+      {
+        new heal = RoundToNearest(GetMaxHealth(client) * 0.01 * float(amount));
+        wcHeal(client, client, heal,0,false);
+      }
+    }
     return true;
   }
 }
@@ -191,7 +201,14 @@ public wcRunSpell_9_1(spellid,race,victim,attacker,&totaldmg) //Jab
   GetClientAbsOrigin(victim, location1);
   MonkJabEffect(location, location1);
   AddEMsgAff("jab", true);
-
+  if(HasGlyph(client, GLYPH_MONK_JAB))
+  {
+    new Float:timeleft=GetCDSpell(attacker,4)-GetTickedTime();
+    if(0.51>=timeleft)
+      SetCdSpell(attacker, 4, 0.0, 4);
+    else
+      SetCdSpell(attacker, 4, timeleft-0.50, 4);
+  }
   return totaldmg;
 }
 
@@ -396,6 +413,20 @@ public wcRunSpell_9_4_BrewmasterPurifyingBrew(spellid,race,client)
   {
     Format(line,sizeof(line),"wc/spells/burb%d.wav",getChi(client));
     EmitAmbientSound(line,location);
+    if(HasGlyph(client, GLYPH_MONK_PBREW))
+    {
+      new bhealth = RoundToNearest(0.03*float(GetMaxHealth(client)));
+      new thealth=GetBonusMaxHealth(client)+bhealth;
+      new oldhp=GetBonusMaxHealth(client);
+      SetBonusMaxHealth(client, thealth);
+      wcRecalculateStats(client);
+      new Handle:datapack4=CreateDataPack();
+      WritePackCell(datapack4,client);
+      WritePackFloat(datapack4,0.03);
+      WritePackCell(datapack4,g_RoundCount);
+      WritePackCell(datapack4, oldhp);
+      CreateTimer(8.0,EndLastStand,datapack4,TIMER_HNDL_CLOSE);
+    }
   }
 }
 public wcRunSpell_9_4_WindwalkerFistsofFury(spellid,race,client)
@@ -460,6 +491,21 @@ public wcRunSpell_9_4_WindwalkerFistsofFury(spellid,race,client)
       wcPhysicalDamage(x,client,dmg, "", vicMsg, true,line);
       BloodSpray(x);
       count++;
+      if(HasGlyph(client, GLYPH_MONK_FISTS))
+      {
+        new Float:oldspeed=GetClientSpeed(x);
+        new Float:newspeed=GetNormalSpeed(x);
+        newspeed*=0.9;
+        if(newspeed<oldspeed)
+        {
+          SetClientSpeed(x,newspeed);
+          new Handle:datapack2=CreateDataPack();
+          WritePackCell(datapack2,x); // Write the client index of owner
+          WritePackFloat(datapack2,newspeed);
+          WritePackFloat(datapack2,0.9);
+          CreateTimer(0.49,RemoveSpeedEffect,datapack2,TIMER_HNDL_CLOSE);
+        }
+      }
     }
   }
   if(count>0)
@@ -533,12 +579,49 @@ public wcRunSpell_9_4_MistweaverRevival(spellid,race,client)
         Format(stargets,sizeof(stargets),"%s, %s",stargets,name2);
       else
         Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
+      if(HasGlyph(client, GLYPH_MONK_REVIVAL))
+      {
+        new effid=CreateEffectData(client,x,RoundToNearest(heal*0.05),3,0,0,0,0,g_RoundCount);
+        CreateTimer(2.0, RevivalHoT, effid, TIMER_REPEAT);
+      }
     }
   }
   WCMessage(client,"revival healed",client,stargets,healed);
   MonkRevivalEffect(location);
   EmitAmbientSound("wc/spells/revival.wav",location);
+}
+public Action:RevivalHoT(Handle:timer, any:effid)
+{
+  if (effectsdata[effid][0]==0)
+    return Plugin_Stop;
+  new caster = effectsdata[effid][1];
+  new target = effectsdata[effid][2];
+  new ticks = effectsdata[effid][4];
+  new heal = effectsdata[effid][3];
+  if (!IsClientInGame(caster) || !IsClientInGame(target))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (!IsPlayerAlive(target))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (ticks<=0)
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  effectsdata[effid][4]--;
+  if (effectsdata[effid][9]!=g_RoundCount)
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
 
+  wcHeal(caster, target, heal,0,cancrit);
+  return Plugin_Continue;
 }
 public wcRunSpell_9_4(spellid,race,client) //Stance spells
 {
@@ -614,6 +697,21 @@ public Action:FistsOfFuryRepeat(Handle:timer, any:effid)
       wcPhysicalDamage(x,client,dmg, "", vicMsg, true);
       BloodSpray(x);
       count++;
+      if(HasGlyph(client, GLYPH_MONK_FISTS))
+      {
+        new Float:oldspeed=GetClientSpeed(x);
+        new Float:newspeed=GetNormalSpeed(x);
+        newspeed*=0.9;
+        if(newspeed<oldspeed)
+        {
+          SetClientSpeed(x,newspeed);
+          new Handle:datapack2=CreateDataPack();
+          WritePackCell(datapack2,x); // Write the client index of owner
+          WritePackFloat(datapack2,newspeed);
+          WritePackFloat(datapack2,0.9);
+          CreateTimer(0.49,RemoveSpeedEffect,datapack2,TIMER_HNDL_CLOSE);
+        }
+      }
     }
   }
   if(count>0)
@@ -1018,6 +1116,19 @@ public Action:BlossomPath2(Handle:timer, any:effid2) //Makes the petals deal dam
   location[1] = Float:effectsdata[effid2][7];
   location[2] = Float:effectsdata[effid2][8];
   wcSpellAoeDamageLocation(client, client, location, effectsdata[effid2][3], effectsdata[effid2][4], effectsdata[effid2][5], line);
+  if(HasGlyph(client, GLYPH_MONK_BLOSSOMS))
+  {
+    new targets[MAXPLAYERS];
+    new amount;
+    if(effectsdata[effid2][5]==3)
+      amount=GetNearClients("@ct",location,targets,float(effectsdata[effid2][4]));
+    if(effectsdata[effid2][5]==2)
+      amount=GetNearClients("@t",location,targets,float(effectsdata[effid2][4]));
+    for (new x=0;x<=(amount-1);x++)
+    {
+      new healed=wcHeal(client,targets[x],RoundToNearest(float(effectsdata[effid][3])*0.25),0,true);
+    }
+  }
   return Plugin_Continue;
 }
 
@@ -1657,11 +1768,11 @@ public wcRunTalent_9_Mistweaver(client,&damage)
   }
   else
   {
-    new Float:multi = (wcClientsStats[GetPlayerID(client)][SPELLDAMAGE])*0.010;
+    new Float:multi = (wcClientsStats[GetPlayerID(client)][SPELLDAMAGE])*0.0010;
     SetMist(client, (mist+1));
     new newmistdmg = 0;
     if(IsBoss())
-      newmistdmg=RoundToNearest(float(mistdmg)+RoundToNearest(1+(multi*float(damage))*0.05));
+      newmistdmg=RoundToNearest(float(mistdmg)+RoundToNearest(1+(multi*float(damage))*0.005));
     else
       newmistdmg=RoundToNearest(float(mistdmg)+(multi*float(damage)));
     SetMistDmg(client, newmistdmg);
@@ -1857,6 +1968,7 @@ public wcRunTalent_9_RenewingMist(client) //Renewing Mist
 public Action:RenewingMistHeal(Handle:timer, any:effid)
 {
   new client = effectsdata[effid][1];
+  new target = effectsdata[effid][2];
   new heal = effectsdata[effid][3];
   new jumps = effectsdata[effid][5];
   new roundcount = effectsdata[effid][9];
@@ -1923,6 +2035,8 @@ public Action:RenewingMistHeal(Handle:timer, any:effid)
           else
           Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
           healed=wcHeal(client,targets[x],heal,0,true);
+          
+          
           if(targets[x]!=client)
           {
             WCMessage(targets[x],"uplift target",targets[x],name,healed);
@@ -1944,12 +2058,23 @@ public Action:RenewingMistHeal(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true);
+  if(HasGlyph(client, GLYPH_MONK_RENEWING)) 
+  {
+    g_iRenewingGlyph[target]+=1;
+    CreateTimer(1.0,RemoveMist,target,TIMER_HNDL_CLOSE);
+  }
   effectsdata[effid][4]-=1;
   return Plugin_Continue;
+}
+public Action:RemoveMist(Handle:timer, any:target) {
+  g_iRenewingGlyph[target]-=1;
+  if(0>g_iRenewingGlyph[target])
+    g_iRenewingGlyph[target]=0;
 }
 public Action:RenewingMistHeal2(Handle:timer, any:effid)
 {
   new client = effectsdata[effid][1];
+  new target = effectsdata[effid][2];
   new heal = effectsdata[effid][3];
   new jumps = effectsdata[effid][5];
   new roundcount = effectsdata[effid][9];
@@ -2037,6 +2162,11 @@ public Action:RenewingMistHeal2(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true);
+  if(HasGlyph(client, GLYPH_MONK_RENEWING)) 
+  {
+    g_iRenewingGlyph[target]+=1;
+    CreateTimer(1.0,RemoveMist,target,TIMER_HNDL_CLOSE);
+  }
   effectsdata[effid][4]-=1;
   return Plugin_Continue;
 }
@@ -2288,7 +2418,10 @@ stock KickLand(client)  {
   }
   if(amount==0)
     Format(stargets,sizeof(stargets),"%T","nobody",client);
-
+  if(HasGlyph(client, GLYPH_MONK_FLYING))
+    if(amount!=0)
+      addChi(client,1);
+    
   new color[4]={55,255,55,55};
   BeamRingEffect("@all",location,10.0,40.0,g_ef_lgtning,0,10,3.0,100.0,color,0.0,20);
   color[3]=255;
@@ -2725,6 +2858,9 @@ public Action:EffectAfterlife(Handle:timer, Handle:datapack)
                 return Plugin_Continue;
               health = RoundToNearest(multi*float(GetMaxHealth(client)));
               wcHeal(client,client,health,0,false);
+              if(HasGlyph(client, GLYPH_MONK_AFTERLIFE))
+                if(GetClass(client)==9)
+                  addChi(client,1);
               WCMessage(client,"afterlife msg",client, health);
               g_fAfterlifeDuration=0.0;
               return Plugin_Stop;
@@ -2742,6 +2878,9 @@ public Action:EffectAfterlife(Handle:timer, Handle:datapack)
         return Plugin_Continue;
       health = RoundToNearest(multi*float(GetMaxHealth(target)));
       wcHeal(client,target,health,0,false);
+      if(HasGlyph(client, GLYPH_MONK_AFTERLIFE))
+        if(GetClass(target)==9)
+          addChi(target,1);
       decl String:name[255],String:name2[255];
       GetClientName(client,name,sizeof(name));
       GetClientName(target,name2,sizeof(name2));
@@ -2970,6 +3109,26 @@ public Action:ChiBurstThink(Handle:timer, Handle:datapack)  {
     if(target!=client)
       VS_BeamPoints(entpos, location, g_ef_orangelight1, g_ef_orangelight1, 0, 0, 0.50, 6.00, 6.00, 0, 0.00, {255, 155, 15, 255}, 160);
     EmitAmbientSound("wc/spells/chiburstheal.wav",location);
+    if(HasGlyph(client, GLYPH_MONK_CHIBURST))
+    {
+      new targets[MAXPLAYERS];
+      new amount;
+      if(team==3)
+        amount=GetNearClients("@ct",location,targets,200.0);
+      if(team==2)
+        amount=GetNearClients("@t",location,targets,200.0);
+      for (new x=0;x<=(amount-1);x++)
+      {
+        new healed=wcHeal(client,targets[x],RoundToNearest(float(base)*0.15),0,true);
+      }
+      decl color[4];
+      color[0]=10;
+      color[1]=220;
+      color[2]=10;
+      color[3]=255;
+      TE_SetupBeamRingPoint(location, 20.0, 200.0, g_ef_laserbeam, g_HaloSprite, 0, 15, 1.0, 5.0, 0.0, color, 10, 0);
+      TE_SendToAll();
+    }
     //PrintToChatAll("Hitting target %d", target);
   }
 
@@ -3026,6 +3185,18 @@ public Action:ChiBurstThink(Handle:timer, Handle:datapack)  {
     location[2]+=40;
     VS_BeamPoints(entpos, location, g_ef_orangelight1, g_ef_orangelight1, 0, 0, 0.50, 6.00, 6.00, 0, 0.00, {255, 255, 255, 255}, 160);
     EmitAmbientSound("wc/spells/chiburstdmg.wav",location);
+    if(HasGlyph(client, GLYPH_MONK_CHIBURST))
+    {
+      new tteam = (team-1) % 2 + 2;
+      wcSpellAoeDamage(target,client,RoundToNearest(float(dmg)*0.15),150,tteam,line);
+      decl color[4];
+      color[0]=220;
+      color[1]=10;
+      color[2]=10;
+      color[3]=255;
+      TE_SetupBeamRingPoint(location, 20.0, 150.0, g_ef_laserbeam, g_HaloSprite, 0, 15, 1.0, 5.0, 0.0, color, 10, 0);
+      TE_SendToAll();
+    }
     // Ent pos is a current location of our flying chicken
 
     //PrintToChatAll("Hitting target %d", target);
@@ -3225,6 +3396,8 @@ public wcRunTalent_9_HealingBrew(client)
   decl String:line[255];
   wcGetTalentInfo(9,1,3,3,client,"limit",line);
   new Float:limit=StringToFloat(line);
+  if(HasGlyph(client, GLYPH_MONK_HBREW))
+    limit+=0.10;
   new Float:hp = float(wcGetHealth(client)) / float(GetMaxHealth(client));
   if(hp > limit)
     return 0;

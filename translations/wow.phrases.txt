@@ -1913,7 +1913,7 @@
   }
   "Shield Block info"
   {
-    "en"    "Gives a 10%% chance to block an attack while using a shield."
+    "en"    "Gives a 10%% chance to block an attack while using a shield. Equipping a shield reduces your damage dealt by 20%%"
   }
   "Whirlwind info"
   {
@@ -7110,7 +7110,7 @@
   }
   "Expose Weakness info"
   {
-    "en" "<Passive> Your attacks ignore some of the target's armor. Goes before armor penetration.\n    Rank 1: 10%% of armor ignored\n    Rank 2: 20%% of armor ignored\n    Rank 3: 30%% of armor ignored"
+    "en" "<Passive> Your attacks ignore some of the target's armor. Goes before armor penetration.\n    Rank 1: 8%% of armor ignored\n    Rank 2: 16%% of armor ignored\n    Rank 3: 25%% of armor ignored"
   }
   "Combat Readiness info"
   {
@@ -7122,7 +7122,7 @@
   }
   "Master of Basics info"
   {
-    "en" "<Passive> Your attacks have a 20%% chance to deal 20%% bonus damage and restore 5 energy."
+    "en" "<Passive> Your attacks have a 12%% chance to deal 20%% bonus damage and restore 5 energy."
   }
   "Fan of Swords info"
   {
@@ -9520,7 +9520,7 @@
   }
   "Spinning Fire Blossom info"
   {
-    "en"  "<Passive> Your Chi Burst deals 50%% bonus damage and snares the target for 0.75 seconds if the target is at least 300 radius away from the Chi Burst's original location"
+    "en"  "<Passive> Your Chi Burst deals 50%% bonus damage and snares the target for 0.75 seconds\n    if the target is at least 300 radius away from the Chi Burst's original location"
   }
   "Touch of Karma"
   {
@@ -9741,7 +9741,7 @@
   }
   "Seven Sided Strikes info"
   {
-    "en"		"<Passive> Your critical hits increase your damage for 5 seconds. Stacks up to 8 times.\n    Rank 1: +1%% damage\n    Rank 2: +2%% damage\n    Rank 3: +3%% damage"
+    "en"		"<Passive> Your critical hits increase your damage for 5 seconds. Stacks up to 10 times.\n    Rank 1: +1%% damage\n    Rank 2: +2%% damage\n    Rank 3: +3%% damage"
   }
   "Seven Sided Strikes name"
   {
@@ -9757,7 +9757,7 @@
   }
   "Muscle Memory info"
   {
-    "en"		"<Passive> Each one of your Jabs increases your next Tiger Palm's damage. No limit.\n    Rank 1: +8%% damage per Jab\n    Rank 2: +16%% damage per Jab\n    Rank 3: +25%% damage per Jab"
+    "en"		"<Passive> Each one of your Jabs increases your next Tiger Palm's damage. No limit.\n    Rank 1: +7%% damage per Jab\n    Rank 2: +13%% damage per Jab\n    Rank 3: +20%% damage per Jab"
   }
   "Muscle Memory name"
   {
@@ -9773,7 +9773,7 @@
   }
   "Chi Explosion info"
   {
-    "en"		"<Passive> Your attacks have a chance to cause the target be tagged with a Chi Bomb.\n    The bomb blows up after 6 seconds, dealing magic damage to nearby enemies. \n    How much Chi you had at the time of tagging the target increases its damage."
+    "en"		"<Passive> Your attacks have a chance to cause the target be tagged with a Chi Explosion.\n    The chi explosion blows up after 6 seconds, dealing magic damage to nearby enemies. \n    How much Chi you had at the time of tagging the target increases its damage."
   }
   "Chi Explosion name"
   {
@@ -9793,7 +9793,7 @@
   }
   "Flying Serpent Kick info"
   {
-    "en"		"<Active> Heroic Leap v2"
+    "en"		"<Active> Soar through the air forward at an increased speed, landing near your aimed location"
   }
   "Flying Serpent Kick name"
   {
@@ -9818,7 +9818,7 @@
   }
   "Mana Thistle Tea info"
   {
-    "en"		"<Passive> Spending Chi gives you back energy depending on the amount of chi spent.\n    Rank 1: +3 energy per Chi\n    Rank 2: +6 energy per Chi\n    Rank 3: +10 energy per Chi"
+    "en"		"<Passive> Spending Chi gives you back energy depending on the amount of chi spent.\n    Rank 1: +1 energy per Chi\n    Rank 2: +3 energy per Chi\n    Rank 3: +5 energy per Chi"
   }
   "Mana Thistle Tea name"
   {
@@ -10055,7 +10055,7 @@
   }
   "Thunder Focus Tea info"
   {
-    "en" "<Passive> Your Expel Harms increase the strength of your next Revival.\n    Rank 1: +6%% stronger Revival per cast\n    Rank 2: +13%% stronger Revival per cast\n    Rank 3: +20%% stronger Revival per cast"
+    "en" "<Passive> Your Expel Harms increase the strength of your next Revival.\n    Rank 1: +3%% stronger Revival per cast\n    Rank 2: +6%% stronger Revival per cast\n    Rank 3: +10%% stronger Revival per cast"
   }
   "Tigereye Brew name"
   {

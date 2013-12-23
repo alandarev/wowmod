@@ -977,11 +977,11 @@ public Action:RemoveArmorTimer(Handle:timer, Handle:pack) {
 public wcRunSpell_6_7(spellid,race,client)
 {
 
-  //if(IsBoss())  
-  //{ //Has mana cost now, it's k
-  //  WCMessage(client, "boss spell blocked", client);
-  //  return;
-  //}
+  if(IsBoss())  
+  {
+    WCMessage(client, "boss spell blocked", client);
+    return;
+  }
 
   if(!bMagicDamage[client])
   {
@@ -1831,7 +1831,10 @@ public Action:ResurrectionEffect(Handle:timer, any:client)
   new hp = GetMaxHealth(client);
   hp = RoundToNearest(float(hp) * 0.5);
   new mn = GetMaxMana(client);
-  mn = RoundToNearest(float(mn) * 0.5);
+  if(!IsBoss())
+    mn = RoundToNearest(float(mn) * 0.5);
+  if(IsBoss())
+    mn = RoundToNearest(float(mn) * 0.15);
   wcSetHealth(client,hp);
   wcSetMana(client,mn);
   SetEntProp(client, Prop_Send, "m_ArmorValue", 100, 1);
@@ -6251,18 +6254,23 @@ public wcRunSpell_1_15(spellid,race,client)
   new cdtype=StringToInt(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line);
-  new manareq = GetSpellCost(client, spellid);
+  new manareq = 15;
   if(HasGlyph(client, GLYPH_WARRIOR_LEAP))
     manareq = 0;
-  wcSetMana(client,GetMana(client)-manareq);
-  SetCdSpell(client, cdtype, cd, spellid);
+  if(GetMana(client)>=manareq)
+  {
+    wcSetMana(client,GetMana(client)-manareq);
+    SetCdSpell(client, cdtype, cd, spellid);
 
-  new Float:power = wcGetSpellInfoFloat(race, spellid, "power");
-  new Float:zPower = wcGetSpellInfoFloat(race, spellid, "zpower");
+    new Float:power = wcGetSpellInfoFloat(race, spellid, "power");
+    new Float:zPower = wcGetSpellInfoFloat(race, spellid, "zpower");
 
-  HookLand(client);
+    HookLand(client);
 
-  PushPlayerView(client, power, zPower);
+    PushPlayerView(client, power, zPower);
+  }
+  else
+    WCMessage(client,"no rage",client);
 }
 
 new bool:g_ff_hookland[65];
