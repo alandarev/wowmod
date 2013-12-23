@@ -201,7 +201,7 @@ public wcRunSpell_9_1(spellid,race,victim,attacker,&totaldmg) //Jab
   GetClientAbsOrigin(victim, location1);
   MonkJabEffect(location, location1);
   AddEMsgAff("jab", true);
-  if(HasGlyph(client, GLYPH_MONK_JAB))
+  if(HasGlyph(attacker, GLYPH_MONK_JAB))
   {
     new Float:timeleft=GetCDSpell(attacker,4)-GetTickedTime();
     if(0.51>=timeleft)
@@ -620,7 +620,7 @@ public Action:RevivalHoT(Handle:timer, any:effid)
     return Plugin_Stop;
   }
 
-  wcHeal(caster, target, heal,0,cancrit);
+  wcHeal(caster, target, heal,0,true);
   return Plugin_Continue;
 }
 public wcRunSpell_9_4(spellid,race,client) //Stance spells
@@ -1126,7 +1126,7 @@ public Action:BlossomPath2(Handle:timer, any:effid2) //Makes the petals deal dam
       amount=GetNearClients("@t",location,targets,float(effectsdata[effid2][4]));
     for (new x=0;x<=(amount-1);x++)
     {
-      new healed=wcHeal(client,targets[x],RoundToNearest(float(effectsdata[effid][3])*0.25),0,true);
+      wcHeal(client,targets[x],RoundToNearest(float(effectsdata[effid2][3])*0.25),0,true);
     }
   }
   return Plugin_Continue;
@@ -1989,7 +1989,6 @@ public Action:RenewingMistHeal(Handle:timer, any:effid)
   {
     if(jumps>0)
     {
-      new target;
       new distance = effectsdata[effid][7];
       decl Float:location[3];
       GetClientAbsOrigin(effectsdata[effid][2],location);
@@ -2095,7 +2094,6 @@ public Action:RenewingMistHeal2(Handle:timer, any:effid)
   {
     if(jumps>0)
     {
-      new target;
       new distance = effectsdata[effid][7];
       decl Float:location[3];
       GetClientAbsOrigin(effectsdata[effid][2],location);
@@ -3119,7 +3117,7 @@ public Action:ChiBurstThink(Handle:timer, Handle:datapack)  {
         amount=GetNearClients("@t",location,targets,200.0);
       for (new x=0;x<=(amount-1);x++)
       {
-        new healed=wcHeal(client,targets[x],RoundToNearest(float(base)*0.15),0,true);
+        wcHeal(client,targets[x],RoundToNearest(float(base)*0.15),0,true);
       }
       decl color[4];
       color[0]=10;
