@@ -586,6 +586,8 @@ checkTalentPoints(client) {
     new ttpoints=getTPoints(client, spec);
     ttpoints+=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
 
+    PrintToServer("should = %d, has = %d", shouldHave, ttpoints);
+
     if(ttpoints > shouldHave) {
       new diff = ttpoints - shouldHave;
       if(getTPoints(client, spec) < diff) {
@@ -986,7 +988,7 @@ public wcRunPassiveTalents(client)
         SetHealingBonus(client, GetHealingBonus(client)+0.25);
       if(CheckRequirements(client,9,1,1,4))
         wcRunTalent_9_1_1_4(client); //Parry Control
-      
+
     }
   }
 }
@@ -6192,7 +6194,7 @@ public wcRunTalent_7_3(client)                                                  
     new Float:reduction = GetSpellReduction(target,0.0);
     if(HasGlyph(client, GLYPH_WARLOCK_CHAOS))
     {
-      
+
       new resred = RoundToNearest(reduction*0.35); //20% Reduction
       if(10 > resred)
         resred = 10;
@@ -6993,7 +6995,7 @@ public Action:EffectParasites(Handle:timer, any:effid)
   location[1] = Float:effectsdata[effid][7];
   location[2] = Float:effectsdata[effid][8];
   wcSpellAoeDamageLocation(effectsdata[effid][2], effectsdata[effid][2], location, damage, aoe, team, line);
-  VS_BeamRingPoint(location,50.00,150.00,g_ef_glow01,g_ef_glow01, 10, 10, 0.50, float(aoe), 0.00, {196, 3, 35, 255}, 10, 0);     
+  VS_BeamRingPoint(location,50.00,150.00,g_ef_glow01,g_ef_glow01, 10, 10, 0.50, float(aoe), 0.00, {196, 3, 35, 255}, 10, 0);
   wcGetTalentInfo(8,1,4,2,effectsdata[effid][2],"heal",line); //Base heal the parasites do
   new baseheal = StringToInt(line);
   new targets[MAXPLAYERS];
@@ -7200,7 +7202,7 @@ public wcRunTalent_7_SacrificalPact(client) //Sacrifical Pact
   if(timeleft > 0.0)
     return 0;
   SetCdSpell(client, cdtype, cooldown, 0, "Sacrifical Pact");
-  
+
   wcGetTalentInfo(7,2,4,1,client,"duration",line);
   new Float:duration=StringToFloat(line);
   wcGetTalentInfo(7,2,4,1,client,"multi",line);
@@ -7216,7 +7218,7 @@ public wcRunTalent_7_SacrificalPact(client) //Sacrifical Pact
   SetEffectVictim(client,5); // absorb shield
   SetEffectSpellVic(client,5); //Absorb magic dmg
   g_iShieldStack[client]+=1;
-  
+
   new Handle:datapack2=CreateDataPack();
   WritePackCell(datapack2,client); // Write the client index of owner
   WritePackCell(datapack2,5);
@@ -7370,13 +7372,13 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
     wcRunTalent_6_ChainLightning(client,true);
     WCMessage(client,"Echo of the Elements activate",client);
   }
-  
+
   wcGetTalentInfo(6,1,2,3,client,"multi",line);
   new Float:multi=StringToFloat(line);
   wcGetTalentInfo(6,1,2,3,client,"base",line);
   new base=StringToInt(line);
   new dmg = RoundToNearest(GetSpellDmg(client,multi)+float(base));
-  
+
 
   decl String:name[255],String:name2[255];
   GetClientName(client,name,sizeof(name));
@@ -7390,7 +7392,7 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
   wcGetTalentInfo(6,1,2,3,client,"distance",line);
   new Float:distance=StringToFloat(line);
   wcGetTalentInfo(6,2,3,2,client,"name",line); //line must contain talentname after this line
-  
+
   new amount;
   new people[3];
   new Float:coords[3][3];
@@ -7412,7 +7414,7 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
     WCMessage(client,"testmessageF",client,"coord A-0",coords[0][0]);
     WCMessage(client,"testmessageF",client,"coord A-1",coords[0][1]);
     WCMessage(client,"testmessageF",client,"coord A-2",coords[0][0]);
-    
+
     for (new i=1;i<amount;i++)
     {
       WCMessage(client,"testmessageF",client,"coord A-0",coords[i][0]);
@@ -7426,7 +7428,7 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
   }
   else
     return 0;
-  
+
   return 1;
 }
 
@@ -7508,7 +7510,7 @@ stock GetPlayerChain(client, team, Float:loc[3], Float:distance, length, people[
         }
       }
     }
-    
+
     if(found)
     {
       chain[i]=index;
