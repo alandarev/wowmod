@@ -7897,13 +7897,13 @@
           {
             "name"   "Blood Parasites"
             "max"    "2"
-            "saveid" "4"
+            "saveid" "R"
           }
           "1"
           {
             "name"         "Blood Parasites"
             "max"          "2"
-            "saveid"       "4"
+            "saveid"       "R"
             "multi"        "0.04" //Damage multi of parasites
             "base"        "1" //Base damage of parasites
             "chance"      "15"
@@ -7916,7 +7916,7 @@
           {
             "name"         "Blood Parasites"
             "max"          "2"
-            "saveid"       "4"
+            "saveid"       "R"
             "multi"        "0.08" //Damage multi of parasites
             "base"        "2" //Base damage of parasites
             "chance"      "15"
