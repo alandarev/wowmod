@@ -586,13 +586,11 @@ checkTalentPoints(client) {
     new ttpoints=getTPoints(client, spec);
     ttpoints+=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
 
-    PrintToServer("should = %d, has = %d", shouldHave, ttpoints);
-
     if(ttpoints > shouldHave) {
       new diff = ttpoints - shouldHave;
       if(getTPoints(client, spec) < diff) {
         wcResetTalents(client, spec, true); //true to prevent weapon loss since it's on loading
-        LogMessage("fixed talent points for character %d spec %d. Too few", characterids[client][0], spec);
+        LogMessage("fixed talent points for character %d spec %d. With reset of talents", characterids[client][0], spec);
       }
 
       if(getTPoints(client, spec) >= diff)  {
@@ -615,7 +613,16 @@ checkTalentPoints(client) {
 
 setTPoints(client, spec, points)
 {
-  g_ff_tpoints[client][spec]=points;
+  new shouldHave = getMaxTalents(GetLevel(client));
+  new ttpoints=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
+
+  LogError("[WC] Trying to set wrong amount of points. Client %d, characterId %d, spec = %d. Must %d, setting %d",
+            client, characterids[client][0], spec, shouldHave, points + ttpoints);
+  new apply = shouldHave - ttpoints;
+  if (apply < 0)  {
+    apply = 0
+  }
+  g_ff_tpoints[client][spec] = apply;
 }
 
 
