@@ -615,7 +615,6 @@ setTPoints(client, spec, points)
 {
   new shouldHave = getMaxTalents(GetLevel(client));
   new ttpoints=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
-  PrintToServer("ttpoints = %d spec = %d", ttpoints, spec);
 
   new apply = shouldHave - ttpoints;
   if (apply < 0)  {
@@ -644,7 +643,6 @@ stock wcGetTreeTotal(client, spec, tree)
       treetotal+=g_iClientTalents[client+(64*spec)][tree][i][p];
     }
   }
-  PrintToServer("Getting total from spec %d. String: %s. Found tree %d amount %d", spec, buffer, tree, treetotal);
   return treetotal;
 }
 
@@ -3150,7 +3148,6 @@ wcRunTalent_3_Blizzard(client)  {
   GetViewPoint(client, distance, location);
 
   new dmg = base + GetSpellDmg(client, multi);
-  PrintToServer("ticks: %d", RoundToNearest(duration / tick) );
 
   //Create the hellfire like (different) effect
   new effid=CreateEffectData(client,_:slow,dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount);
