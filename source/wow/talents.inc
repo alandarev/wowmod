@@ -633,6 +633,9 @@ setTPoints(client, spec, points)
 
 stock wcGetTreeTotal(client, spec, tree)
 {
+  decl String:buffer[255];
+
+  getClientTalents_string(client, spec, buffer, 255);
   new treetotal = 0;
   for(new i=0; i<10; i++)
   {
@@ -641,6 +644,7 @@ stock wcGetTreeTotal(client, spec, tree)
       treetotal+=g_iClientTalents[client+(64*spec)][tree][i][p];
     }
   }
+  PrintToServer("Getting total from spec %d. String: %s. Found tree %d amount %d", spec, buffer, tree, treetotal);
   return treetotal;
 }
 
