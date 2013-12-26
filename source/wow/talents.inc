@@ -582,7 +582,6 @@ getTPoints(client, spec)
 checkTalentPoints(client) {
   new shouldHave = getMaxTalents(GetLevel(client));
   for(new spec=0;spec<2;spec++) {
-
     new ttpoints=getTPoints(client, spec);
     ttpoints+=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
 
@@ -608,6 +607,7 @@ checkTalentPoints(client) {
       setTPoints(client,spec,shouldHave);
       LogMessage("fixed talent points for character %d spec %d. Too few", characterids[client][0], spec);
     }
+    setTPoints(client, spec, getTPoints(client, spec));
   }
 }
 
