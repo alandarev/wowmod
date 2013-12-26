@@ -616,7 +616,7 @@ setTPoints(client, spec, points)
   new shouldHave = getMaxTalents(GetLevel(client));
   new ttpoints=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
 
-  if (points+ttpoints != shohuldHave) {
+  if (points+ttpoints != shouldHave) {
     LogError("[WC] Trying to set wrong amount of points. Client %d, characterId %d, spec = %d. Must %d, setting %d",
             client, characterids[client][0], spec, shouldHave, points + ttpoints);
   }
