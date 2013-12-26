@@ -595,7 +595,7 @@ checkTalentPoints(client) {
       if(getTPoints(client, spec) >= diff)  {
         setTPoints(client, spec, getTPoints(client, spec)-diff);
         LogMessage("fixed talent points for character %d spec %d. Too many", characterids[client][0], spec);
-        return;
+        continue;
       }
 
       else
@@ -607,8 +607,7 @@ checkTalentPoints(client) {
       setTPoints(client,spec,shouldHave);
       LogMessage("fixed talent points for character %d spec %d. Too few", characterids[client][0], spec);
     }
-    PrintToServer("checking talent points for spec %d", spec);
-    setTPoints(client, spec, getTPoints(client, spec));
+    /*setTPoints(client, spec, getTPoints(client, spec));*/
   }
 }
 
