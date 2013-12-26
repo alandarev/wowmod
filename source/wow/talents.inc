@@ -620,7 +620,7 @@ setTPoints(client, spec, points)
             client, characterids[client][0], spec, shouldHave, points + ttpoints);
   new apply = shouldHave - ttpoints;
   if (apply < 0)  {
-    apply = 0
+    apply = 0;
   }
   g_ff_tpoints[client][spec] = apply;
 }
