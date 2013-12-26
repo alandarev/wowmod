@@ -592,14 +592,6 @@ checkTalentPoints(client) {
         LogMessage("fixed talent points for character %d spec %d. With reset of talents", characterids[client][0], spec);
       }
 
-      if(getTPoints(client, spec) >= diff)  {
-        setTPoints(client, spec, getTPoints(client, spec)-diff);
-        LogMessage("fixed talent points for character %d spec %d. Too many", characterids[client][0], spec);
-        continue;
-      }
-
-      else
-        LogError("Error #368 in talents logics");
     }
     if(ttpoints < shouldHave)
     {
@@ -607,7 +599,7 @@ checkTalentPoints(client) {
       setTPoints(client,spec,shouldHave);
       LogMessage("fixed talent points for character %d spec %d. Too few", characterids[client][0], spec);
     }
-    /*setTPoints(client, spec, getTPoints(client, spec));*/
+    setTPoints(client, spec, getTPoints(client, spec));
   }
 }
 
