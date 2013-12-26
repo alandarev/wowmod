@@ -607,6 +607,7 @@ checkTalentPoints(client) {
       setTPoints(client,spec,shouldHave);
       LogMessage("fixed talent points for character %d spec %d. Too few", characterids[client][0], spec);
     }
+    PrintToServer("checking talent points for spec %d", spec);
     setTPoints(client, spec, getTPoints(client, spec));
   }
 }
