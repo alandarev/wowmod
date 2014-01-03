@@ -617,17 +617,17 @@ AnnounceEnrage(client)  {
 
 
 BossTryHit(boss, dmg, target)   {
-  new bool:ignoreLimit = (g_iThreatOngoin == g_RoundCount);
-   if((target > 0) && IsClientInGame(target) && IsPlayerAlive(target) && (GetThreat(target)>=MIN_THREAT || ignoreLimit))   {
-      g_iThreatOngoing = g_RoundCount;
-      BossShoot(boss,target,dmg);
-      decl Float:loc1[3],Float:loc2[3];
-      GetClientAbsOrigin(boss,loc1);
-      GetClientAbsOrigin(target,loc2);
-      loc1[2]+=25.0;
-      loc2[2]+=25.0;
-      BeamEffect("@all",loc1,loc2,g_ef_tp_beam001,5,1.0,7.0,10.0,{100, 100, 100, 255},0.0,5);
-   }
+  new bool:ignoreLimit = (g_iThreatOngoing == g_RoundCount);
+  if((target > 0) && IsClientInGame(target) && IsPlayerAlive(target) && (GetThreat(target)>=MIN_THREAT || ignoreLimit))   {
+    g_iThreatOngoing = g_RoundCount;
+    BossShoot(boss,target,dmg);
+    decl Float:loc1[3],Float:loc2[3];
+    GetClientAbsOrigin(boss,loc1);
+    GetClientAbsOrigin(target,loc2);
+    loc1[2]+=25.0;
+    loc2[2]+=25.0;
+    BeamEffect("@all",loc1,loc2,g_ef_tp_beam001,5,1.0,7.0,10.0,{100, 100, 100, 255},0.0,5);
+  }
 }
 
 BossShoot(boss, target, dmg)  {
