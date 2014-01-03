@@ -7322,7 +7322,7 @@
   }
   "Focused Mind info"
   {
-    "en"		"<Passive> Grants bonus Haste stat.\n    Rank 1: Grants 10.0 + 7%% Intellect as haste.\n    Rank 2: Grants 20.0 + 7%% Intellect as haste, Increases max cooldown reduction from 35%% to 40%%."
+    "en"		"<Passive> Grants bonus Haste stat.\n    Rank 1: Grants 10.0 + 3%% Intellect as haste.\n    Rank 2: Grants 15.0 + 6%% Intellect as haste, Increases max cooldown reduction from 35%% to 40%%."
   }
   "Master of Magic info"
   {
