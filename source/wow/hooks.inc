@@ -137,14 +137,14 @@ public Action:SayCommand(index,argc)
       if(index>0) SetUserAdmin(index, adm, true);
       return Plugin_Handled;
     }
-    
+
     if(g_TreasureMenuOccupiedByClient == index)
     {
       WCMessage(index,"testmessage",index,"YES: if(g_TreasureMenuOccupiedByClient == index)",index);
       GetCmdArgString(g_TreasureSpawnName,32);
       PrepareTreasureSpawnMenu(index, g_TreasureSpawnName);
     }
-  
+
     if(StrEqual(command, "exit") && g_ffSlideStep[index] > 0) {
       //Turn off slides for this person
       TurnOffSlides(index);
@@ -1942,7 +1942,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       }
 
       RunParry(victim,attacker,damage);
-      
+
       if(GetFear(victim))
       {
         if(GetFearDmg(victim)>olddmg)
@@ -1987,7 +1987,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         //WCMessage(attacker,"testmessageF",attacker,"[rockbiter] damagemulti",damagemulti);
       }
       damagemulti*=GetWeaponModifier(weaponname,attacker);
-      if(CanWearShield(attacker) && HasShield(attacker) && GetClass(attacker)!=6)
+      if(CanWearShield(attacker) && HasShield(attacker) && GetClass(attacker)==1)
         damagemulti *= 0.8;
       CalculateCrit(attacker,victim,false,spellname,bCS);
       if(IsMageInvis(attacker))
@@ -2072,7 +2072,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           //  wcGetTalentInfo(2,3,2,4,attacker,"multi",line);
           //  angle*=(1-StringToFloat(line));
           //}
-          
+
           if(angle<=90.0 && IsValidShooting(attacker, victim))
           {
             wcGetTalentInfo(2,3,2,1,attacker,"increment",line);
