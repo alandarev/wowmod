@@ -7601,7 +7601,7 @@ public wcRunTalent_6_AncestorsProtection(client)  {
 
   new agility = GetAgi(client)+GetBonusAgi(client);
 
-  new resbonus=RoundToNearest(float(bonus)*multi);
+  new resbonus=RoundToNearest(float(agility)*multi);
   wcClientsBonusStats[client][RESISTANCE]+=resbonus;
 
   new bonus = RoundToNearest(float(agility)*multi_armor);
