@@ -7782,7 +7782,7 @@
   }
   "Ancestor's Protection info"
   {
-    "en"		"Your Agile Defence also increases your resistance. \n     Rank 1: 12.5%% of your agility turned into resistance\n     Rank 2: 25%% of your agility turned into resistance"
+    "en"		"Increase your armor and resistance based on agility. \n     Rank 1: 20%% into armor, 7.5%% into resistance.\n     Rank 2: 40%% into armor, 15%% into resistance."
   }
   "Shamanistic Focus info"
   {

@@ -955,6 +955,8 @@ public wcRunPassiveTalents(client)
         wcRunTalent_6_NaturesPower(client);
       if(CheckRequirements(client,6,2,1,4))
         wcRunTalent_6_FeralForm(client);
+      if(CheckRequirements(client,6,2,4,2))
+        wcRunTalent_6_AncestorsProtection(client); //Natures Protection
     }
     case 7:
     {
@@ -7589,6 +7591,25 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
     EmitAmbientSound("wc/spells/fireball.wav",location);
   }
 }
+
+public wcRunTalent_6_AncestorsProtection(client)  {
+  decl String:line[255];
+  wcGetTalentInfo(6,2,4,2,client,"multi",line);
+  new Float:multi=StringToFloat(line);
+  wcGetTalentInfo(6,2,4,2,client,"multi_armor",line);
+  new Float:multi_armor=StringToFloat(line);
+
+  new agility = GetAgi(client)+GetBonusAgi(client);
+
+  new resbonus=RoundToNearest(float(bonus)*multi);
+  wcClientsBonusStats[client][RESISTANCE]+=resbonus;
+
+  new bonus = RoundToNearest(float(agility)*multi_armor);
+  SetBonusArmor(client, float(GetBonusArmor(client)+bonus));
+
+  wcRecalculateStats(client);
+}
+
 public wcRunTalent_2_GarroteDamage(client,victim,&damage)
 {
   decl String:line[255];

@@ -174,13 +174,13 @@
     "base"  "15"
     "distance"  "850"
   }
-  "12"              //increases armor by 1 per agi
-  {
-    "name"    "Agile Defence"
-    "name_ru" "TODO"
-    "event"   "player_spawn"
-    "level"   "12"
-  }
+//  "12"              //increases armor by 1 per agi
+//  {
+//    "name"    "Agile Defence"
+//    "name_ru" "TODO"
+//    "event"   "player_spawn"
+//    "level"   "12"
+//  }
   "13"
   {
     "name"    "Dual Wielding Shaman"

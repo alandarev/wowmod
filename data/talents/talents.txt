@@ -6079,14 +6079,16 @@
               "name"  "Ancestor's Protection"
               "max"  "2"
               "saveid"  "P"
-              "multi" "0.125"
+              "multi" "0.075"
+              "multi_armor" "0.20"
             }
             "2"
             {
               "name"  "Ancestor's Protection"
               "max"  "2"
               "saveid"  "P"
-              "multi" "0.25"
+              "multi" "0.15"
+              "multi_armor" "0.40"
             }
           }
       }

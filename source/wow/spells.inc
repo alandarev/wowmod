@@ -977,7 +977,7 @@ public Action:RemoveArmorTimer(Handle:timer, Handle:pack) {
 public wcRunSpell_6_7(spellid,race,client)
 {
 
-  if(IsBoss())  
+  if(IsBoss())
   {
     WCMessage(client, "boss spell blocked", client);
     return;
@@ -1092,13 +1092,13 @@ public wcRunSpell_1_6(spellid,race,victim,attacker,totaldmg) //Revenge
   new Float:multi=StringToFloat(line);
   wcGetSpellInfo(race,spellid,"base",line);
   new Float:base=StringToFloat(line);
-  
+
   if (GetBoss(attacker)>0)
   {
     wcGetSpellInfo(race,spellid,"threat",line);
     AddThreat(victim,StringToInt(line));
   }
-  
+
   decl String:vicMsg[300], String:attMsg[300];
   if (wcGetTalentLevel(victim,1,1,3)>0)
   {
@@ -1114,11 +1114,11 @@ public wcRunSpell_1_6(spellid,race,victim,attacker,totaldmg) //Revenge
     Format(vicMsg,sizeof(vicMsg),"%T","revenge got", attacker);
     Format(attMsg,sizeof(attMsg),"%T","revenge used", victim);
   }
-  
+
   new dmg = RoundToNearest(
     base +
     ( float(GetDamage(victim)) * 0.12 +
-      float(GetSta(victim)+GetBonusSta(victim)) * 0.13   ) * 
+      float(GetSta(victim)+GetBonusSta(victim)) * 0.13   ) *
     multi);
   wcPhysicalDamage(attacker,victim,dmg,attMsg,vicMsg, true);
 }
@@ -3388,7 +3388,7 @@ public wcRunSpell_7_1(spellid,race, target,client,bool:nightfall)
         new Float:duration = StringToFloat(line);
         SetHMT(target,duration);
       }
-      
+
       wcGetSpellInfo(race,spellid,"basedmg",line);
       new basedmg=StringToInt(line);
       wcSetMana(client,GetMana(client)-manareq);
@@ -4462,7 +4462,7 @@ public wcRunSpell_4_8(spellid,race,client) //Judgement(Judgment)
           new heal = RoundToNearest(dmg*StringToFloat(line));
           heal=wcHeal(client,client,heal,0,true);
         }
-          
+
         decl String:vicMsg[300], String:attMsg[300];
         Format(vicMsg,sizeof(vicMsg),"%T","judge command target", target);
         Format(attMsg,sizeof(attMsg),"%T","judge command caster", client);
@@ -6543,11 +6543,11 @@ wcRunSpell_6_11(spellid,race,client,bool:echo=false) //Healing Rain
     new manareq = GetSpellCost(client, spellid);
     wcSetMana(client,GetMana(client)-manareq);
     SetCdSpell(client, cdtype, cd, spellid);
-    
+
   }
   wcGetTalentInfo(6,2,3,2,client,"chance",line);
   new echochance = StringToInt(line);
-  if(echochance>=GetRandomInt(1,100)) 
+  if(echochance>=GetRandomInt(1,100))
   {
     wcRunSpell_6_11(spellid,race,client,true);
     WCMessage(client,"Echo of the Elements activate",client);
@@ -6799,7 +6799,7 @@ public wcRunSpell_7_2(spellid,race,client) //Soul Harvest
     return;
   else
     wcSetMana(client,GetMana(client)-mana);
-  
+
   //Cooldown
   new cdtype=wcGetSpellInfoInt(race,spellid,"cooldowntype");
   new Float:cd=wcGetSpellInfoFloat(race,spellid,"cooldown");
@@ -6817,7 +6817,7 @@ public wcRunSpell_7_2(spellid,race,client) //Soul Harvest
     WCMessage(pet,"soul harvest pet",pet,multi*100.0);
     RestoreHealthP(pet,multi);
   }
-  else 
+  else
   {
     WCMessage(client,"soul harvest caster",client,multi*100.0);
   }
@@ -6854,15 +6854,6 @@ wcRunSpell_6_12(client)
   SetBonusArmor(client, float(GetBonusArmor(client)+bonus));
   wcRecalculateStats(client);
   WCMessage(client,"agile defence effect",client,bonus,GetArmor(client));
-  if(CheckRequirements(client,6,2,4,2))
-  {
-    decl String:line[255];
-    wcGetTalentInfo(6,2,4,2,client,"multi",line);
-    new Float:multi=StringToFloat(line);
-    new resbonus=RoundToNearest(float(bonus)*multi);
-    wcClientsBonusStats[client][RESISTANCE]+=resbonus;
-    wcRecalculateStats(client);
-  }
 }
 
 stock SoulHarvestEffect(client)
