@@ -4073,7 +4073,7 @@ public wcRunSpell_7_8(spellid,race,client) //metamorphosis
   WritePackCell(datapack,g_RoundCount);
   WritePackCell(datapack,newarm);
   WritePackCell(datapack, res);
-  CreateTimer(duration,DestroyDemonForm,datapack,TIMER_HNDL_CLOSE,0);
+  CreateTimer(duration,DestroyDemonForm,datapack,TIMER_HNDL_CLOSE);
   new color[4] = { 10, 10, 50, 255 };
   SetClientColor(client,color);
   new Handle:datapack2=CreateDataPack();
@@ -4173,7 +4173,7 @@ public wcRunSpell_7_9(spellid,race,client)
   //Setting up effect
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,spellid,dmg,selfDmg,aoe,team,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,dmg,selfDmg,aoe,team,0,0,g_RoundCount,0);
   if (multi==0.0 || period == 0.0 || castTime == 0.0) {
     LogError("ERROR: hellfire spell corrupted.");
     DeleteEffectData(effid);

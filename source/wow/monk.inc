@@ -464,7 +464,7 @@ public wcRunSpell_9_4_WindwalkerFistsofFury(spellid,race,client)
   decl String:name2[255];
   new count=0;
   spendAllChi(client);
-  new effid=CreateEffectData(client,dmg,ticks,range,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,dmg,ticks,range,0,0,0,0,g_RoundCount,0);
   CreateTimer(0.5, FistsOfFuryRepeat, effid, TIMER_REPEAT);
   for(new x=1;x<=maxplayers;x++)
   {
@@ -581,7 +581,7 @@ public wcRunSpell_9_4_MistweaverRevival(spellid,race,client)
         Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
       if(HasGlyph(client, GLYPH_MONK_REVIVAL))
       {
-        new effid=CreateEffectData(client,x,RoundToNearest(heal*0.05),3,0,0,0,0,g_RoundCount);
+        new effid=CreateEffectData(client,x,RoundToNearest(heal*0.05),3,0,0,0,0,g_RoundCount,0);
         CreateTimer(2.0, RevivalHoT, effid, TIMER_REPEAT);
       }
     }
@@ -984,7 +984,7 @@ public wcRunSpell_9_6(spellid,race,client) //Path of Blossoms
   team = (team-1) % 2 + 2;
   new Float:agility=float(GetAgi(client)+GetBonusAgi(client));
   new dmg=RoundToNearest((multi*agility)+float(base));
-  new effid=CreateEffectData(client,ticks,dmg,RoundToNearest(aoe),team,duration,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,ticks,dmg,RoundToNearest(aoe),team,duration,0,0,g_RoundCount,0);
   CreateTimer((1.0*(1.0-GetHasteEffect(client))),BlossomPath,effid,TIMER_REPEAT);
   WCMessage(client,"path of blossoms",client,dmg*2,duration);
 
@@ -1048,7 +1048,7 @@ public Action:BlossomPath(Handle:timer, any:effid) //Drops down the petals that 
   decl Float:location[3];
   effectsdata[effid][2]-=1;
   GetClientAbsOrigin(client,location);
-  new effid2=CreateEffectData(client,dticks,effectsdata[effid][3],effectsdata[effid][4],effectsdata[effid][5],_:location[0],_:location[1],_:location[2],g_RoundCount);
+  new effid2=CreateEffectData(client,dticks,effectsdata[effid][3],effectsdata[effid][4],effectsdata[effid][5],_:location[0],_:location[1],_:location[2],g_RoundCount,0);
   CreateTimer(ddelay,BlossomPath2,effid2,TIMER_REPEAT);
 
   switch (GetRandomInt(1,3))
@@ -1933,7 +1933,7 @@ public wcRunTalent_9_RenewingMist(client) //Renewing Mist
       if(IsFakeClient(client))
         range = 350;
       new team = GetClientTeam(client);
-      new effid=CreateEffectData(client,target,heal,ticks,jumps,team,range,ticks,g_RoundCount);
+      new effid=CreateEffectData(client,target,heal,ticks,jumps,team,range,ticks,g_RoundCount,0);
       CreateTimer(ticklength, RenewingMistHeal, effid, TIMER_REPEAT);
       new Handle:datapack4=CreateDataPack();
       WritePackCell(datapack4,RenewingEffect(target));
@@ -2001,7 +2001,7 @@ public Action:RenewingMistHeal(Handle:timer, any:effid)
         return Plugin_Stop;
       jumps-=1;
       effectsdata[effid][4]+=origin;
-      new effid2=CreateEffectData(client,target,heal,effectsdata[effid][4],jumps,team,distance,origin,roundcount);
+      new effid2=CreateEffectData(client,target,heal,effectsdata[effid][4],jumps,team,distance,origin,roundcount,0);
       CreateTimer(1.0, RenewingMistHeal2, effid2, TIMER_REPEAT);
       new Handle:datapack4=CreateDataPack();
       WritePackCell(datapack4,RenewingEffect(target));
@@ -2106,7 +2106,7 @@ public Action:RenewingMistHeal2(Handle:timer, any:effid)
         return Plugin_Stop;
       jumps-=1;
       effectsdata[effid][4]+=origin;
-      new effid2=CreateEffectData(client,target,heal,effectsdata[effid][4],jumps,team,distance,origin,roundcount);
+      new effid2=CreateEffectData(client,target,heal,effectsdata[effid][4],jumps,team,distance,origin,roundcount,0);
       CreateTimer(1.0, RenewingMistHeal2, effid2, TIMER_REPEAT);
       new Handle:datapack4=CreateDataPack();
       WritePackCell(datapack4,RenewingEffect(target));
@@ -2159,7 +2159,7 @@ public Action:RenewingMistHeal2(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
-  wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true);
+  wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true,0);
   if(HasGlyph(client, GLYPH_MONK_RENEWING)) 
   {
     g_iRenewingGlyph[target]+=1;
@@ -2910,7 +2910,7 @@ public Action:EndAfterlife(Handle:timer, Handle:datapack)
 stock ChiBombEffect(client)
 {
   PrintToChat(client,"Got to effect creation");
-  new effid=CreateEffectData(client,60,0,0,0,0,0,0,0);
+  new effid=CreateEffectData(client,60,0,0,0,0,0,0,0,0);
   CreateTimer(0.10, ChiBombEffectRepeat, effid, TIMER_REPEAT);
 }
 public Action:ChiBombEffectRepeat(Handle:timer, any:effid)
@@ -3457,7 +3457,7 @@ public wcRunTalent_9_Guard(client)
     new Float:location[3];
     GetClientAbsOrigin(client,location);
     EmitAmbientSound("wc/spells/guard.wav",location);
-    new effid=CreateEffectData(client,0,16,0,0,0,0,0,g_RoundCount);
+    new effid=CreateEffectData(client,0,16,0,0,0,0,0,g_RoundCount,0);
     if(effid!=0)
     {
       effectsdata[effid][7]=GuardEffect(client);

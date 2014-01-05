@@ -5880,7 +5880,7 @@ wcRunTalent_6_LightningNovaTotem(client)  {
 
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,0,dmg,0,aoe,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,0,dmg,0,aoe,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new iTotem = -1;
@@ -6392,7 +6392,7 @@ wcRunTalent_7_CursedSoul(client)
       wcGetTalentInfo(7,1,4,1,client,"base",line);
       new base=StringToInt(line);
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,base,aoe,team,0,0,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,base,aoe,team,0,0,g_RoundCount,0);
       if (tickdelay==0.0 || ticks == 0)
       {
         LogError("ERROR: cursed soul spell corrupted.");
@@ -6799,7 +6799,7 @@ wcRunTalent_6_HealingTideTotem(client)  {
   WCMessage(client,"heal tide totem cast",client,RoundToNearest(tickdur*float(ticks)));
 
   new team=GetClientTeam(client);
-  new effid=CreateEffectData(client,add,heal,0,radius,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,add,heal,0,radius,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new hp=RoundToNearest(float(GetMaxHealth(client))*0.05);
@@ -6923,7 +6923,7 @@ wcRunTalent_8_BloodParasites(client,victim)
     new dmg = RoundToNearest(float(base) + RoundToNearest(float(GetDamage(client))*multi));
     decl Float:location[3];
     GetClientAbsOrigin(victim,location);
-    new effid=CreateEffectData(victim,client,ticks,dmg,_:location[0],heal,_:location[1],_:location[2],g_RoundCount);
+    new effid=CreateEffectData(victim,client,ticks,dmg,_:location[0],heal,_:location[1],_:location[2],g_RoundCount,0);
     if(effid!=0)
     {
       CreateTimer(delay, EffectParasites, effid, TIMER_REPEAT);
@@ -7620,7 +7620,7 @@ public wcRunTalent_2_GarroteDamage(client,victim,&damage)
   wcGetTalentInfo(2,3,4,2,client,"ticks",line);
   new ticks = StringToInt(line);
   bleed = RoundToNearest(float(bleed)/float(ticks));
-  new effid=CreateEffectData(victim,client,ticks,bleed,0,0,0,0,g_respawns[victim]);
+  new effid=CreateEffectData(victim,client,ticks,bleed,0,0,0,0,g_respawns[victim],0);
   CreateTimer(tickdelay, Garrote, effid, TIMER_REPEAT);
 }
 public Action:Garrote(Handle:timer, any:effid)

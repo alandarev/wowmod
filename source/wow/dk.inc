@@ -1429,8 +1429,7 @@ wcRunSpell_8_11(spellid,race,client) //Death and decay
   dmg += RoundToNearest(GetDamage(client) * multi);
 
   //Create the hellfire like (different) effect
-  new effid=CreateEffectData(client,spellid,
-    dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount);
+  new effid=CreateEffectData(client,spellid,dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount,0);
   if (multi==0.0 || tick == 0.0 || duration == 0.0) {
     LogError("ERROR: death and decay spell corrupted.");
     DeleteEffectData(effid);
