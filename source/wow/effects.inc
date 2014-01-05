@@ -1662,7 +1662,7 @@ public Action:Effect4Action(Handle:timer, any:effid)
 }
 
 
-public CreateEffectData(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9)
+public CreateEffectData(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9,tmp10)
 {
   for (new i=1;i<=299;i++)
   {
