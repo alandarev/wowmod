@@ -2090,6 +2090,11 @@ public Action:RenewingMistHeal2(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
+  if(effectsdata[effid][10]<GetClientDeaths(effectsdata[effid][1]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
   if(effectsdata[effid][4]<=0)
   {
     if(jumps>0)
@@ -2159,7 +2164,7 @@ public Action:RenewingMistHeal2(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
-  wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true,0);
+  wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true);
   if(HasGlyph(client, GLYPH_MONK_RENEWING)) 
   {
     g_iRenewingGlyph[target]+=1;
@@ -2259,7 +2264,7 @@ public wcRunTalent_9_ChiExplosion(client,victim)
     dmg = RoundToNearest(float(dmg)*(1.0+(float(getChi(client))*StringToFloat(line))));
     wcGetTalentInfo(9,2,2,3,client,"multi",line);
     dmg = RoundToNearest(float(dmg)*(1.0+StringToFloat(line)));
-    new effid=CreateEffectData(victim,client,1,dmg,aoe,team,0,901,g_RoundCount);
+    new effid=CreateEffectData(victim,client,1,dmg,aoe,team,0,901,g_RoundCount,0);
     if(effid!=0)
       CreateTimer(delay, EffectAoeDamage, effid, TIMER_REPEAT);
     AddEMsgAff("Chi Explosion", true);
