@@ -9472,7 +9472,7 @@
   }
   "full health"
   {
-    "en"    "@lightgreenYou@ have full health."
+    "en"    "@lightgreenYou have full health."
   }
   "free soul"
   {
