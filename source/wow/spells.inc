@@ -657,11 +657,11 @@ public wcRunSpell_6_3(spellid,race,victim,attacker) //Flame Shock
       new ticks=StringToInt(line);
       ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(attacker)));
       tickdelay = tickdelay*(1.0-GetHasteEffect(attacker));
-      new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,1,g_RoundCount);
+      new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,1,g_RoundCount,GetClientDeaths(victim));
       g_iFlameShock[victim]+=1;
       new Handle:datapack=CreateDataPack();
       WritePackCell(datapack,victim);
-      CreateTimer(tickdelay*ticks,RemoveFlameShockInt,datapack,TIMER_HNDL_CLOSE,GetClientDeaths(victim));
+      CreateTimer(tickdelay*ticks,RemoveFlameShockInt,datapack,TIMER_HNDL_CLOSE);
       if(effid!=0)
       {
         CreateTimer(tickdelay, EffectFlameShockAction, effid, TIMER_REPEAT);
@@ -3620,7 +3620,7 @@ public wcRunSpell_7_3(spellid,race, target,client)
       wcGetSpellInfo(race,spellid,"aoe",line);
       new aoe=StringToInt(line)+talentbonusrange;
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,3,g_RoundCount,GetClientDeaths(target););
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,3,g_RoundCount,GetClientDeaths(target));
       if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
       {
         LogError("ERROR: immolate spell corrupted.");
@@ -4014,7 +4014,7 @@ public wcRunSpell_7_7(spellid,race,client)
       wcGetSpellInfo(race,spellid,"aoe",line);
       new aoe=StringToInt(line)+talentbonusrange;
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,0,g_RoundCount,GetClientDeaths(target);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,0,g_RoundCount,GetClientDeaths(target));
       if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
       {
         LogError("ERROR: immolate spell corrupted.");
@@ -5791,7 +5791,7 @@ RunSealsHit(attacker,victim,&damage,prio,Float:weaponmodifier,bool:crit, bool:sp
 
 
 stock Renew(caster, target, heal, ticks, cancrit, Float:delay) {
-  new effid = CreateEffectData(caster, target, ticks, heal, cancrit, 0, 0, 0, g_RoundCount,GetClientDeaths(target);
+  new effid = CreateEffectData(caster, target, ticks, heal, cancrit, 0, 0, 0, g_RoundCount,GetClientDeaths(target));
   if(effid!=0)
   {
     CreateTimer(delay, EffectRenewAction, effid, TIMER_REPEAT);

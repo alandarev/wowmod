@@ -1679,6 +1679,7 @@ public CreateEffectData(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9)
       effectsdata[i][7]=tmp7;
       effectsdata[i][8]=tmp8;
       effectsdata[i][9]=tmp9;
+      effectsdata[i][10]=tmp10;
       return i;
     }
   }
