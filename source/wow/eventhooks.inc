@@ -190,10 +190,6 @@ public RoundStartEvent(Handle:event,const String:name[],bool:dontBroadcast)
       PlainMessage(x, FUN_MESSAGE);
    }
   }
-  for(int i=0;i<MAXPLAYERS;i++)
-  {
-    SetHarvest(i, 0);
-  }
   if(((g_RoundCount % 5) == 0) && (g_newVersion))
    for(new x=1;x<=GetMaxClients();x++) {
     if(IsClientInGame(x))
