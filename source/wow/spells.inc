@@ -661,7 +661,7 @@ public wcRunSpell_6_3(spellid,race,victim,attacker) //Flame Shock
       g_iFlameShock[victim]+=1;
       new Handle:datapack=CreateDataPack();
       WritePackCell(datapack,victim);
-      CreateTimer(tickdelay*ticks,RemoveFlameShockInt,datapack,TIMER_HNDL_CLOSE);
+      CreateTimer(tickdelay*ticks,RemoveFlameShockInt,datapack,TIMER_HNDL_CLOSE,GetClientDeaths(victim));
       if(effid!=0)
       {
         CreateTimer(tickdelay, EffectFlameShockAction, effid, TIMER_REPEAT);
@@ -3556,7 +3556,7 @@ public Action:HaniGlyphFearThing(Handle:timer, any:effid)
       new talentbonusrange=StringToInt(line);
       wcGetSpellInfo(race,spellid,"aoe",line);
       aoe=StringToInt(line)+talentbonusrange;
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount,GetClientDeaths(target));
       if(effid!=0)
         {
           CreateTimer(tickdelay, EffectAoeDamage, effid, TIMER_REPEAT);
@@ -3620,7 +3620,7 @@ public wcRunSpell_7_3(spellid,race, target,client)
       wcGetSpellInfo(race,spellid,"aoe",line);
       new aoe=StringToInt(line)+talentbonusrange;
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,3,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,3,g_RoundCount,GetClientDeaths(target););
       if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
       {
         LogError("ERROR: immolate spell corrupted.");
@@ -4014,7 +4014,7 @@ public wcRunSpell_7_7(spellid,race,client)
       wcGetSpellInfo(race,spellid,"aoe",line);
       new aoe=StringToInt(line)+talentbonusrange;
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,0,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,0,g_RoundCount,GetClientDeaths(target);
       if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
       {
         LogError("ERROR: immolate spell corrupted.");
@@ -5791,7 +5791,7 @@ RunSealsHit(attacker,victim,&damage,prio,Float:weaponmodifier,bool:crit, bool:sp
 
 
 stock Renew(caster, target, heal, ticks, cancrit, Float:delay) {
-  new effid = CreateEffectData(caster, target, ticks, heal, cancrit, 0, 0, 0, g_RoundCount);
+  new effid = CreateEffectData(caster, target, ticks, heal, cancrit, 0, 0, 0, g_RoundCount,GetClientDeaths(target);
   if(effid!=0)
   {
     CreateTimer(delay, EffectRenewAction, effid, TIMER_REPEAT);

@@ -767,13 +767,6 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
       LegacyClient[client]=false;
       ArcaneClient[client]=false;
       SetHarvest(client,0);
-      //Remove HoTs and DoTs
-      KillTimer(client,EffectAoeDamage);
-      KillTimer(client,EffectRenewAction);
-      KillTimer(client,EffectLifeDrainAction);
-      KillTimer(client,Effect4Action); // Rend, poison.
-      KillTimer(client,EffectFlameShockAction);
-      
       SetShamanisticRage(client, 0.0);
       SetBoW(client, 0);
       SetBoM(client, 0.0);

@@ -2694,7 +2694,7 @@ public wcRunTalent_3_2(client)                                                  
       wcGetTalentInfo(3,2,3,1,client,"range",line);
       new aoe=StringToInt(line);
 
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,1,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,1,g_RoundCount,GetClientDeaths(target));
       if(effid!=0)
       {
         CreateTimer(tickdelay, EffectAoeDamage, effid, TIMER_REPEAT);
@@ -6723,7 +6723,7 @@ public wcRunTalent_7_Immolate(client)
       talentbonusrange=StringToInt(line);
       wcGetTalentInfo(7,3,3,1,client,"aoe",line);
       aoe=StringToInt(line)+talentbonusrange;
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount,GetClientDeaths(target));
       if(effid!=0)
         {
           CreateTimer(tickdelay, EffectAoeDamage, effid, TIMER_REPEAT);
