@@ -916,7 +916,7 @@ public Action:EffectFlameShockAction(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
-  if(effectsdata[effid][5]<GetClientDeaths(effectsdata[effid][1]))
+  if(effectsdata[effid][10]<GetClientDeaths(effectsdata[effid][1]))
   {
     DeleteEffectData(effid);
     return Plugin_Stop;
