@@ -7250,7 +7250,7 @@
   }
   "Improved Fireball info"
   {
-    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +6%% damage, -0.1 seconds cooldown\n    Rank 2: +13%% damage, -0.3 seconds cooldown\n    Rank 3: +20%% damage, -0.5 seconds cooldown"
+    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +12.5%% damage, -0.25 seconds cooldown\n    Rank 2: +25%% damage, -0.5 seconds cooldown"
   }
   "Burning Soul info"
   {
