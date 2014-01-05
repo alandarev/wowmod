@@ -5766,11 +5766,18 @@ RunSealsHit(attacker,victim,&damage,prio,Float:weaponmodifier,bool:crit, bool:sp
     new random = GetRandomInt(1,100);
     if(chance>=random)
     {
-      new mana = damage+GetMana(attacker);
-      if(mana>GetMaxMana(victim))
-      mana=GetMaxMana(victim);
-      wcSetMana(attacker,mana);
-      damage=0;
+      new oldmana = GetMana(victim);
+      new mana = GetMana(victim)-damage;
+      if(mana>0)
+      {
+        wcSetMana(victim,mana);
+        damage=0;
+      }
+      else
+      {
+        wcSetMana(victim,0);
+        damage=damage-oldmana;
+      }
       AddEMsgAff("seal of truth", true);
     }
   }
