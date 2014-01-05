@@ -1250,7 +1250,7 @@ public wcRunSpell_1_12(spellid,race,client)
 
   SetEffectVictim(client,13);
   SetEffectSpellVic(client,13);
-  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     effectsdata[effid][7]=WallEffect(client);
@@ -1599,7 +1599,7 @@ public wcRunSpell_3_2(spellid,race,client) //Frost Nova
       newspeed*=slowmulti;
       if(newspeed<oldspeed)
       {
-        new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100));
+        new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100),0);
         SetClientSpeed(targets[x],newspeed);
         SetFrostNovaFreezeDmg(targets[x],breakdmg);
         SetFrostNovaFreeze(targets[x],effid2);
@@ -3353,7 +3353,7 @@ public wcRunSpell_5_9(spellid,race,client)
 
   //Setting up effect
   new team=GetClientTeam(client);
-  new effid=CreateEffectData(client,spellid,RoundToNearest(perc*10.0),0,aoe,team,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,RoundToNearest(perc*10.0),0,aoe,team,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     effectsdata[effid][7]=SpawnHymn(client);
@@ -3416,7 +3416,7 @@ public wcRunSpell_7_1(spellid,race, target,client,bool:nightfall)
         new breakdmg = RoundToNearest(2000.0);
         new Float:tickdelay=0.50;
         new ticks = RoundToNearest(6.0);
-        new effid=CreateEffectData(target,client,ticks,0,breakdmg,0,0,race,g_RoundCount);
+        new effid=CreateEffectData(target,client,ticks,0,breakdmg,0,0,race,g_RoundCount,0);
         if(effid!=0)
         {
           SetFearDmg(target,breakdmg);
@@ -3739,7 +3739,7 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
     if(UnableToAttack[targets[x]])
     continue;
 
-    new effid=CreateEffectData(targets[x],client,ticks,power,breakdmg,0,RoundToNearest(ticks*0.5),race,g_RoundCount);
+    new effid=CreateEffectData(targets[x],client,ticks,power,breakdmg,0,RoundToNearest(ticks*0.5),race,g_RoundCount,0);
     if (tickdelay==0.0 || ticks == 0)
     {
       LogError("ERROR: fear spell corrupted.");
@@ -4073,7 +4073,7 @@ public wcRunSpell_7_8(spellid,race,client) //metamorphosis
   WritePackCell(datapack,g_RoundCount);
   WritePackCell(datapack,newarm);
   WritePackCell(datapack, res);
-  CreateTimer(duration,DestroyDemonForm,datapack,TIMER_HNDL_CLOSE);
+  CreateTimer(duration,DestroyDemonForm,datapack,TIMER_HNDL_CLOSE,0);
   new color[4] = { 10, 10, 50, 255 };
   SetClientColor(client,color);
   new Handle:datapack2=CreateDataPack();
@@ -4264,7 +4264,7 @@ public wcRunSpell_4_2(spellid,race,client)
   UnableToAttack[client]=true;
   UnableToVictim[client]=true;
 
-  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     effectsdata[effid][7]=BubbleEffect(client);
@@ -5188,7 +5188,7 @@ wcRunSpell_6_9(spellid,race,client) {
   //Setting up effect
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,spellid,dmg,0,aoe,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,dmg,0,aoe,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new iTotem = -1;
@@ -5940,7 +5940,7 @@ public wcRunSpell_3_11(spellid,race,client,attacker, &totaldmg)
   SetIceBlocks(client, 3);
 
   // removing anti victim
-  new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     CreateTimer(duration/3.0, EffectIceBlock, effid, TIMER_REPEAT);
@@ -6142,7 +6142,7 @@ public wcRunSpell_2_12(spellid,race,client) //Blind
   if(!UnableToAttack[target]) {
 
 
-    new effid=CreateEffectData(target,client,ticks,power,0,0,0,race,g_RoundCount);
+    new effid=CreateEffectData(target,client,ticks,power,0,0,0,race,g_RoundCount,0);
     new color2[4]={203,55,149,255};
     FadeEffect(target,2,300,50,color2);
     new Float:dur=tickdelay*float(ticks);
@@ -6512,7 +6512,7 @@ wcRunSpell_6_10(spellid,race,client) {
   //Setting up effect
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,spellid,any:multi,0,aoe,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,any:multi,0,aoe,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new iTotem = -1;

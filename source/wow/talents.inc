@@ -1971,7 +1971,7 @@ wcRunTalent_1_DeepWounds(attacker,victim,damage)
     new Float:tickdelay=StringToFloat(line);
     if (dmgef==0)
       dmgef = 1;
-    new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_respawns[victim]);
+    new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_respawns[victim],0);
     if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
     {
       LogError("ERROR: deepwounds talent corrupted.");
@@ -2142,7 +2142,7 @@ public wcRunTalent_2_2(client)                                                  
   new Handle:datapack4=CreateDataPack();
   WritePackCell(datapack4,client);
   CreateTimer(duration,EndAdrenalineRush,datapack4,TIMER_HNDL_CLOSE);
-  new effid=CreateEffectData(client,ticks,mana,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,ticks,mana,0,0,0,0,0,g_RoundCount,0);
   CreateTimer(delay, AdrenalineMana, effid, TIMER_REPEAT);
   SetCdSpell(client,cdtype,cd, 0, "Adrenaline Rush");
   if(HasGlyph(client, GLYPH_ROGUE_RUSH))  {
@@ -2889,7 +2889,7 @@ public wcRunTalent_3_11(attacker,victim,damage,Float:damagemulti)
   new Float:tickdelay=StringToFloat(line);
   ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(attacker)));
   tickdelay = tickdelay*(1.0-GetHasteEffect(attacker));
-  new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_RoundCount);
+  new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_RoundCount,0);
   if (dmgef==0)
     dmgef = 1;
   if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
@@ -3007,7 +3007,7 @@ wcRunTalent_3_ShatteredBarrier(client)
     newspeed*=slowmulti;
     if(newspeed<oldspeed)
     {
-      new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100));
+      new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100),0);
       SetClientSpeed(targets[x],newspeed);
       SetFrostNovaFreezeDmg(targets[x],breakdmg);
       SetFrostNovaFreeze(targets[x],effid2);
@@ -3144,7 +3144,7 @@ wcRunTalent_3_Blizzard(client)  {
   new dmg = base + GetSpellDmg(client, multi);
 
   //Create the hellfire like (different) effect
-  new effid=CreateEffectData(client,_:slow,dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount);
+  new effid=CreateEffectData(client,_:slow,dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount,0);
   if (multi==0.0 || tick == 0.0 || duration == 0.0) {
     LogError("ERROR: blizzard talent corrupted.");
     DeleteEffectData(effid);
@@ -3947,7 +3947,7 @@ wcRunTalent_4_DivineInt(client, &damage)
       {
         new Float:duration = 30.0;
         SetIceBlocks(client, 1);
-        new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount);
+        new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount,0);
         if(effid!=0)
         {
           CreateTimer(duration/1.0, EffectIceBlock, effid, TIMER_REPEAT);
@@ -4083,7 +4083,7 @@ public wcRunTalent_5_1(client)                                                  
 
 
 
-  new effid=CreateEffectData(client,26,10,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,26,10,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
       effectsdata[effid][7]=PainEffect(client);
@@ -4986,7 +4986,7 @@ wcRunTalent_5_LightWell(client)
   GetClientAbsOrigin(client,location);
   //Setting up effect
   new team=GetClientTeam(client);
-  new effid=CreateEffectData(client,cdtype,heal,RoundToNearest(location[0]),aoe,team,RoundToNearest(location[1]),RoundToNearest(location[2]),g_RoundCount);
+  new effid=CreateEffectData(client,cdtype,heal,RoundToNearest(location[0]),aoe,team,RoundToNearest(location[1]),RoundToNearest(location[2]),g_RoundCount,0);
   new Float:center[3];
   GetClientAbsOrigin(client, center);
   center[2]+=25.0;
@@ -5169,7 +5169,7 @@ wcRunTalent_5_MindFlay(client)
       ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
       tickdelay = tickdelay*(1.0-GetHasteEffect(client));
 
-      new effid=CreateEffectData(target,client,ticks,dmgef,0,0,0,0,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,0,0,0,0,g_RoundCount,0);
       if(effid!=0)
       {
         CreateTimer(tickdelay, EffectMindFlayAction, effid, TIMER_REPEAT);

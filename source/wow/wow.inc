@@ -341,7 +341,7 @@ new Float:wcUsersFloat0[65][USERS_FLOAT_0];
 new Float:wcUsersFloat1[65][USERS_FLOAT_1];
 
 // effects data
-new effectsdata[300][10];
+new effectsdata[300][11];
 
 //values for reboot
 new G_RebootTotal,G_RebootQueue;

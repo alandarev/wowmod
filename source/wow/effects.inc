@@ -750,7 +750,7 @@ public Effect1(userid,attacker)
       new tickdelay=KvGetNum(effectsdb,"tickdelay",0);
       new ticks=KvGetNum(effectsdb,"ticks",0);
       new tickdamage=KvGetNum(effectsdb,"tickdamage",0);
-      new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,0);
+      new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,0,0);
       if (tickdelay==0.0 || ticks == 0 || tickdamage == 0)
         LogError("ERROR: effects database corrupted.");
       else
