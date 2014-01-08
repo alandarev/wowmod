@@ -5257,9 +5257,15 @@ public Action:EndElementalFury(Handle:timer, Handle:datapack)
 */
 
 new Float:g_fShamanisticRage[65];
-stock SetShamanisticRage(client, Float:duration)  {
+new g_iShamanisticRageProcs[65];
+stock SetShamanisticRage(client, Float:duration, procs)  {
   g_fShamanisticRage[client] = GetTickedTime() + duration;
+  g_iShamanisticRageProcs[client] = procs;
 }
+stock bool:SpendShamanisticProc(client) {
+  return (g_iShamanisticRageProcs[client]-- > 0);
+}
+
 stock bool:HasShamanisticRage(client)  {
   return (GetTickedTime() < g_fShamanisticRage[client]);
 }
@@ -5273,6 +5279,9 @@ public wcRunTalent_6_3(client)                                                  
   new Float:cd=StringToFloat(line);
   wcGetTalentInfo(6,2,3,1,client,"duration",line);
   new Float:duration=StringToFloat(line);
+  wcGetTalentInfo(6,2,3,1,client,"procs",line);
+  new procs=StringToInt(line);
+
   new manareq = GetTalentCost(client, 2, 3, 1);
   wcSetMana(client,GetMana(client)-manareq);
   SetCdSpell(client,cdtype,cd, 0, "Shamanistic Rage");
@@ -5296,7 +5305,7 @@ public wcRunTalent_6_3(client)                                                  
   new Float:location[3];
   GetClientAbsOrigin(client, location);
   EmitAmbientSound("wc/spells/shamanisticrage.wav",location);
-  SetShamanisticRage(client, duration);
+  SetShamanisticRage(client, duration, procs);
   if(HasGlyph(client, GLYPH_SHAMAN_RAGE) && HasShamanisticRage(client))
   {
     new Float:oldspeed=GetClientSpeed(client);

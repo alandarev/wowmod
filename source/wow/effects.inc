@@ -3110,7 +3110,7 @@ public Effect38(client, &damage)                                                
   wcGetTalentInfo(6,2,3,1,client,"chance",line);
   new chance = StringToInt(line);
   new random = GetRandomInt(1,100);
-  if (chance >= random)
+  if (chance >= random && SpendShamanisticProc(client))
   {
     wcGetTalentInfo(6,2,3,1,client,"multi",line);
     new Float:mana=StringToFloat(line);

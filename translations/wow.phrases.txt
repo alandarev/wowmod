@@ -7766,7 +7766,7 @@
   }
   "Shamanistic Rage info"
   {
-    "en"		"For 5 seconds, reduces damage taken by 20%% and your attacks have a 25%% chance of restoring 10%% of your mana"
+    "en"		"For 5 seconds, reduces damage taken by 20%% and your attacks \nhave a 25%% chance of restoring 5%% of your mana up to 6 times."
   }
   "Counter Strike info"
   {
