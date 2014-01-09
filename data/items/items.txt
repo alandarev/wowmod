@@ -141271,7 +141271,7 @@
 
 "20115"
 {
-"name"   "Book: Glyph of Natures Power"
+"name"   "Book: Glyph of Flame Shock"
 "version"   "5.02"
 "level"   "64"
 "cost"   "7500"
