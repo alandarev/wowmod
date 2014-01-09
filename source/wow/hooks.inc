@@ -1562,8 +1562,8 @@ public BossModChanged(Handle:g_BossMod2, const String:oldValue[], const String:n
         IntToString(GetBoss(x),temp,sizeof(temp));
         KvJumpToKey(wcbossdrop,temp);
         totalxp+=KvGetNum(wcbossdrop,"totalxp");
-        //totalxp+=g_BossEndXP;
-        //g_BossEndXP=0;
+        totalxp+=g_BossEndXP;
+        g_BossEndXP=0;
       }
     }
     if(totalxp>0)
