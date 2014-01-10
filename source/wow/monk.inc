@@ -2264,7 +2264,7 @@ public wcRunTalent_9_ChiExplosion(client,victim)
     dmg = RoundToNearest(float(dmg)*(1.0+(float(getChi(client))*StringToFloat(line))));
     wcGetTalentInfo(9,2,2,3,client,"multi",line);
     dmg = RoundToNearest(float(dmg)*(1.0+StringToFloat(line)));
-    new effid=CreateEffectData(victim,client,1,dmg,aoe,team,0,901,g_RoundCount,0);
+    new effid=CreateEffectData(victim,client,1,dmg,aoe,team,0,901,g_RoundCount,GetClientDeaths(victim));
     if(effid!=0)
       CreateTimer(delay, EffectAoeDamage, effid, TIMER_REPEAT);
     AddEMsgAff("Chi Explosion", true);
