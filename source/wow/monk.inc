@@ -2914,7 +2914,6 @@ public Action:EndAfterlife(Handle:timer, Handle:datapack)
 }
 stock ChiBombEffect(client)
 {
-  PrintToChat(client,"Got to effect creation");
   new effid=CreateEffectData(client,60,0,0,0,0,0,0,0,0);
   CreateTimer(0.10, ChiBombEffectRepeat, effid, TIMER_REPEAT);
 }
