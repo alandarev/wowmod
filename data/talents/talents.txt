@@ -5974,8 +5974,8 @@
             "1"
             {
               "increment"  "0.200000"
-              "multi"  "0.050000"
-              "procs"   "6"
+              "multi"  "0.100000"
+              "procs"   "4"
               "chance"  "25"
               "event"  "player_cast"
               "active"  "1"
