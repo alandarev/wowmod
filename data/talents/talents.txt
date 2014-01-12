@@ -5974,8 +5974,8 @@
             "1"
             {
               "increment"  "0.200000"
-              "multi"  "0.100000"
-              "procs"   "4"
+              "multi"  "0.050000"
+              "procs"   "6"
               "chance"  "25"
               "event"  "player_cast"
               "active"  "1"
@@ -7113,7 +7113,7 @@
               "base"  "15"
               "smulti" "0.2"
               "distance" "200.0"
-              "push"  "-700"
+              "push"  "700"
           }
           "2"
           {
@@ -7123,7 +7123,7 @@
               "base"  "15"
               "smulti" "0.2"
               "distance"  "350.0"
-              "push"  "-1200"
+              "push"  "1200"
           }
           "3"
           {
@@ -7133,7 +7133,7 @@
               "base"  "30"
               "smulti" "0.3"
               "distance"  "350.0"
-              "push"  "-1200"
+              "push"  "-200"
           }
         }
       }
