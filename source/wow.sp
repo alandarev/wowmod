@@ -38,7 +38,7 @@ new g_TreasureMenuOccupiedByClient=0;
 new Handle:hTreasureSpawnMenu=INVALID_HANDLE;
 #define DB_VERSION 30
 #define VERSION 5.06
-#define STR_VERSION "5.06b"
+#define STR_VERSION "5.06c"
 #define WIKI_VERSION "5.06" //should not contain spaces or any special characters
 
 
