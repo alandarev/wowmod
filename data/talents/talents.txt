@@ -7113,7 +7113,7 @@
               "base"  "15"
               "smulti" "0.2"
               "distance" "200.0"
-              "push"  "140"
+              "push"  "40"
           }
           "2"
           {
@@ -7123,7 +7123,7 @@
               "base"  "15"
               "smulti" "0.2"
               "distance"  "350.0"
-              "push"  "240"
+              "push"  "80"
           }
           "3"
           {
@@ -7133,7 +7133,7 @@
               "base"  "30"
               "smulti" "0.3"
               "distance"  "350.0"
-              "push"  "240"
+              "push"  "80"
           }
         }
       }
