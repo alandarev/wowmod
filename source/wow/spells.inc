@@ -4109,12 +4109,12 @@ public wcRunSpell_7_8(spellid,race,client) //metamorphosis
       GetClientAbsOrigin(targets[x],loc2);
       dmg = RoundToNearest(float(dmg)* (400.0 / (250.0 + GetDistanceBetween(locationb,loc2))));
       wcSpellDamage(targets[x],client,dmg, "", "","Chaos Wave");
-      new Float:zPower = 130.0;
+      /*new Float:zPower = 130.0;
       wcGetTalentInfo(7,2,3,3,client,"push",line);
       new Float:power = StringToFloat(line);
       power = power * (400.0 / (150.0 + GetDistanceBetween(locationb,loc2)));
       if(GetBoss(targets[x])<=0 || (!IsBoss()) )
-        PushPlayerTowardsPlayer(targets[x], client, power, zPower);
+        PushPlayerTowardsPlayer(targets[x], client, power, zPower);*/
     }
   }
   if(wcGetTalentLevel(client,2,2,2)>0) {
