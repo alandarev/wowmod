@@ -5806,7 +5806,7 @@
             "1"
             {
               "base"  "2"
-              "multi"  "0.050000"
+              "multi"  "0.005000"
               "name"  "Weapon Mastery"
               "max"  "2"
               "saveid"  "0"
