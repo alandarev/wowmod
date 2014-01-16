@@ -30,6 +30,30 @@ enum PDModule
 native Float:wow_getTempPlayerRating(client, teamWon=-1);
 
 /**
+ * Gets Class ID of a player.
+ * If player has no class, or not loaded, then 0 is returned.
+ * @param client Client
+ * @return Class ID. (From 1 to 9)
+ */
+native wow_getClass(client);
+
+/**
+ * Returns bits of player's leading talent trees.
+ * @param client Client
+ * @return bits of leading trees with 6 or more talent points.
+ *
+ * Consider Warrior with trees: Protection, Arms, Fury (in this order).
+ * Talents: 0/0/0 - returns 0
+ * Talents: 15/0/0 - returns 1
+ * Talents: 0/15/0 - returns 2
+ * Talents: 0/0/15 - returns 4
+ * Talents: 7/7/0 - returns 3
+ * Talents: 0/7/7 - returns 6
+ * Talents 6/6/6 - returns 7
+ */
+native wow_getTalentTrees(client);
+
+/**
  * Scrambles teams using neat  algorithm
  *
  * @return				void
