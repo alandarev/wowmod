@@ -17573,7 +17573,7 @@
 "level"   "76"
 "cost"   "150"
 "honor" "150"
-"noshop"   "1"
+"noshop"   "0"
 "category"   "8"
 "amount"   "150"
 "use"   "0"
