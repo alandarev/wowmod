@@ -45,7 +45,7 @@ public Native_getTalentTrees(Handle:plugin, numParams)  {
   new spec = getActiveSpec(client);
   new bool:trees[3];
   for (new i=1; i<4; i++)
-    trees = wcGetTreeTotal(client, spec,i) >= 6;
+    trees[i-1] = wcGetTreeTotal(client, spec,i) >= 6;
   new sum;
   for (new i=0; i<3; i++) {
     if(trees[i])  sum += 1 << i;
