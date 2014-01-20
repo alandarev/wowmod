@@ -2908,7 +2908,7 @@ public MenuSendMail(client)
       Format(buffer,sizeof(buffer),"%T","mail topic name",client,topic);
       AddMenuItem(menu_mail,"0",buffer,ITEMDRAW_DISABLED);
       Format(buffer,sizeof(buffer),"%T","type gold",client);
-      Format(buffer2, sizeof(buffer2), "Your silver: %d.", GetMoney(client)); //bb
+      Format(buffer2, sizeof(buffer2), "\nYour silver: %d.", GetMoney(client)); //bb
       StrCat(buffer, sizeof(buffer), buffer2);
       AddMenuItem(menu_mail,"gold",buffer);
     }
@@ -2928,6 +2928,10 @@ public MenuSendMail(client)
       Format(buffer,sizeof(buffer),"%T","mail gold",client,gold);
       AddMenuItem(menu_mail,"0",buffer,ITEMDRAW_DISABLED);
       Format(buffer,sizeof(buffer),"%T","type real",client);
+      decl String:sReal[20];
+      IntToStringfloat(GetGold(client), sReal, sizeof(sReal));
+      Format(buffer2, sizeof(buffer2), "\nYour gold: %s.", sReal); //bb
+      StrCat(buffer, sizeof(buffer), buffer2);
       AddMenuItem(menu_mail,"real",buffer);
     }
     case 4:
