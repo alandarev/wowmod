@@ -23,7 +23,7 @@ public OnPluginStart() {
   HookConVarChange(g_hEnabled, Stats_OnCvarSwitch);
   Stats_HookHandler(GetConVarBool(g_hEnabled));
   
-  RegConsoleCmd("wow_stats_last_5", Stats_Retrieve5Entries, "Retrieves last 5 WoWMod Stat Tracker entries.");
+  //RegConsoleCmd("wow_stats_last_5", Stats_Retrieve5Entries, "Retrieves last 5 WoWMod Stat Tracker entries.");
   
   PrintToServer("Started Stat Tracker!");
   Stats_StartSQL();
