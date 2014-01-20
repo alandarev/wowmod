@@ -2872,6 +2872,7 @@ public MenuSendMail(client)
   SetMenuExitBackButton(menu_mail,false);
   decl String:title[255];
   new String:buffer[255];
+  new String:buffer2[255]; //bb
   Format(title,sizeof(title),"%T","wc mail send mod",client);
   SetMenuTitle(menu_mail,title);
   switch(x)
@@ -2907,6 +2908,8 @@ public MenuSendMail(client)
       Format(buffer,sizeof(buffer),"%T","mail topic name",client,topic);
       AddMenuItem(menu_mail,"0",buffer,ITEMDRAW_DISABLED);
       Format(buffer,sizeof(buffer),"%T","type gold",client);
+      Format(buffer2, sizeof(buffer2), "Your silver: %d.", GetMoney(client)); //bb
+      StrCat(buffer, sizeof(buffer), buffer2));
       AddMenuItem(menu_mail,"gold",buffer);
     }
     case 3:
