@@ -2909,7 +2909,7 @@ public MenuSendMail(client)
       AddMenuItem(menu_mail,"0",buffer,ITEMDRAW_DISABLED);
       Format(buffer,sizeof(buffer),"%T","type gold",client);
       Format(buffer2, sizeof(buffer2), "Your silver: %d.", GetMoney(client)); //bb
-      StrCat(buffer, sizeof(buffer), buffer2));
+      StrCat(buffer, sizeof(buffer), buffer2);
       AddMenuItem(menu_mail,"gold",buffer);
     }
     case 3:
