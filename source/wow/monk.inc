@@ -2826,6 +2826,10 @@ public Action:EffectAfterlife(Handle:timer, Handle:datapack)
 {
   ResetPack(datapack);
   new client = ReadPackCell(datapack);
+  if(!IsClientConnected(client)){ 
+    g_fAfterlifeDuration=0.0;
+    return Plugin_Stop; 
+    }
   new Float:multi = ReadPackFloat(datapack);
   new Float:distance = ReadPackFloat(datapack);
   new Float:selfduration = ReadPackFloat(datapack);
