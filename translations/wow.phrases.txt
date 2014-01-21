@@ -9765,7 +9765,7 @@
   }
   "Afterlife info"
   {
-    "en"		"<Passive> Upon killing an enemy, they spawn a small soul above their body that you can pick up for 20%% of your health.\n    After 3 seconds, your allies can also pick it up."
+    "en"		"<Passive> Upon killing an enemy, they spawn a small soul above their body that you can pick up for 15%% of your health.\n    After 3 seconds, your allies can also pick it up."
   }
   "Afterlife name"
   {
@@ -10021,7 +10021,7 @@
   }
   "Uplift info"
   {
-    "en" "<Passive> Your Renewing Mist's last tick will also create an AoE heal.\n    Rank 1: 60%% of the original heal\n    Rank 2: 120%% of the original heal"
+    "en" "<Passive> Your Renewing Mist's last tick will also create an AoE heal.\n    Rank 1: 50%% of the original heal\n    Rank 2: 100%% of the original heal"
   }
   "uplift client"
   {
