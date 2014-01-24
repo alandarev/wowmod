@@ -24,7 +24,6 @@ public LoadTranslationFile()
  */
 public WCMessage(target,any:...)
 {
-  return;
   if(IsClientInGame(target) || (target==0))
   {
     decl String:translation[350],String:buffer[350];
