@@ -9450,7 +9450,7 @@
   "soul harvest pet"
   {
     "#format" "{1:0.1f}"
-    "en" "Your @lightgreenMaster@default casts @greenSoul Harvest@default restoring you for @greeen{1}@perc@default of your max health."
+    "en" "Your @lightgreenMaster@default casts @greenSoul Harvest@default restoring you for @green{1}@perc@default of your max health."
   }
   "soul harvest caster"
   {
