@@ -9413,7 +9413,7 @@
   "revival heal"
   {
     "#format" "{1:s}{2:i}"
-    "en"      "@green{1} @defaulthealed you for @lightgreen{1} health."
+    "en"      "@green{1} @defaulthealed you for @lightgreen{2} health."
   }
   "Dark Transformation info"
   {
