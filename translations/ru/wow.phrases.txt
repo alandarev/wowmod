@@ -8157,7 +8157,7 @@
   }
     "2h weap spec used"
   {
-    "ru" "Специализация на двуручном оружии: Вы увиличили ваш крит шанс с {1}@perc до {2}@perc"
+    "ru" "Специализация на двуручном оружии: Вы увеличили ваш крит шанс с {1}@perc до {2}@perc"
   }
   "2h weap spec glyph used"
   {
@@ -8165,7 +8165,7 @@
   }
     "juggernaut used"
   {
-    "ru" "Джаггернаут: Вы увиличили вашу силу с {1} до {2}"
+    "ru" "Джаггернаут: Вы увеличили вашу силу с {1} до {2}"
   }
     "Bladestorm Ends"
   {
@@ -9711,6 +9711,95 @@
   "gold chest"
   {
     "ru"      "@lightgreenВы получили {1} золота за открытие сундука с сокровищами!"
+  }
+  }
+  "experience chest"
+  {
+    "ru"      "@lightgreenВы получили {1} опыта за открытие сундука с сокровищами!"
+  }
+  "Alliance End Victory"
+  {
+    "ru"      "@lightgreenАльянс выиграл со счетом {1}-{2}!"
+  }
+  "Horde End Victory"
+  {
+    "ru"      "@lightgreenОрда выиграла со счетом {1}-{2}!"
+  }
+  "Alliance Victory"
+  {
+    "ru"      "@lightgreenАльянс выиграл этот раунд со счетом {1}-{2}!"
+  }
+  "Horde Victory"
+  {
+    "ru"      "@lightgreenОрда выиграла этот раунд со счетом {1}-{2}!"
+  }
+  "Alliance Score Equal"
+  {
+    "ru"      "@lightgreenАльянс даже с ордой со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Alliance Score Winning"
+  {
+    "ru"      "@lightgreenАльянс выигрывает у орды со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Alliance Score Losing"
+  {
+    "ru"      "@lightgreenАльянс проигрывает орде со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Horde Score Equal"
+  {
+    "ru"      "@lightgreenОрда даже с альянсом со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Horde Score Winning"
+  {
+    "ru"      "@lightgreenОрда выигрывает у альянса со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Horde Score Losing"
+  {
+    "ru"      "@lightgreenОрда проигрывает альянсу со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "CTF Return Horde Flag"
+  {
+    "ru"      "@green{1} @lightgreenвернул флаг орды на свою базу!"
+  }
+  "CTF Return Alliance Flag"
+  {
+    "ru"      "@green{1} @lightgreenвернул флаг альянса на свою базу!"
+  }
+  "CTF Carry Alliance Flag"
+  {
+    "ru"      "@green{1} @lightgreenподобрал флаг альянса!"
+  }
+  "CTF Carry Horde Flag"
+  {
+    "ru"      "@green{1} @lightgreenподобрал флаг орды!"
+  }
+  "Horde Flag Drop"
+  {
+    "ru"      "@green{1} @lightgreenпотерял флаг орды!"
+  }
+  "Alliance Flag Drop"
+  {
+    "ru"      "@green{1} @lightgreenпотерял флаг альянса!"
+  }
+  "CTF Picked Alliance"
+  {
+    "ru"      "@green{1} @lightgreenпринял флаг альянса на своей базе!"
+  }
+  "CTF Picked Horde"
+  {
+    "ru"      "@green{1} @lightgreenпринял флаг орды на своей базе!"
+  }
+  "earth grip client"
+  {
+    "ru"      "Ваша @greenВласть Земли @defaultзамедлила @green{1} @defaultна @lightgreen{2} секунд."
+  }
+  "earth grip attacker"
+  {
+    "ru"      "Вы были замедлены навыков @greenВласть земли @lightgreenигрока @green{1} @defaultна @lightgreen{2} секунд."
+  }
+  "unchaining end"
+  {
+    "ru"      "@greenНеконтролируемая ярость @lightgreenзакончилась"
   }
 }
 
