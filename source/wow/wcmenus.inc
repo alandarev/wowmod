@@ -2467,7 +2467,7 @@ MailMenuDisplay(client)
    Format(buffer,sizeof(buffer),"%T","send message",client);
    AddMenuItem(menu_mail,"0",buffer);
    new String:id[20];
-   for(new x=0;x<50;x++)  if(ClientMailDataId[client][x]>0)
+   for(new x=0;x<=50;x++)  if(ClientMailDataId[client][x]>0)
    {
     //LogMessage("mail id = %i",mailIds[x]);
     IntToString(ClientMailDataId[client][x],id,sizeof(id));

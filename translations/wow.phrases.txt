@@ -3474,7 +3474,7 @@
   }
   "wc debug menu warning"
   {
-    "en"    "please MAKE SURE server is working fine.\nMAKE SURE Database is working\nAsk others if they have same problem before using this menu.\nIf you screw this, we can't help you."
+    "en"    "please MAKE SURE server is working fine before continuing.\nAsk others if they have same problem before using this menu."
   }
   "wc debug menu mail"
   {
@@ -3486,7 +3486,7 @@
   }
   "wc debug mail1"
   {
-    "en"    "This is the list of bugged mails you have.\nEnsure database is working fine\nBy clicking Agree you will remove those mails from your mailbox to fix it."
+    "en"    "This is the list of ghost mails you have.\nContinue to clean them up."
   }
   "wc debug menu mail2"
   {
