@@ -2332,7 +2332,7 @@ public MenuAuctionReadHandle(Handle:menu_auction,MenuAction:action,client,slot)
 public ClearMailMenu(client)
 {
   ClientMailQueue[client]=0;
-  for(new x=1;x<=50;x++)
+  for(new x=0;x<=50;x++)
   {
     ClientMailDataId[client][x]=0;
     ClientMailTime[client][x]=0;
