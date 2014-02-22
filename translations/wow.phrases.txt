@@ -3474,7 +3474,7 @@
   }
   "wc debug menu warning"
   {
-    "en"    "please MAKE SURE server is working fine.\nMAKE SURE Database is working\nAsk others if they have same problem before using this menu.\nIf you screw this, we can't help you."
+    "en"    "please MAKE SURE server is working fine before continuing.\nAsk others if they have same problem before using this menu."
   }
   "wc debug menu mail"
   {
@@ -3486,7 +3486,7 @@
   }
   "wc debug mail1"
   {
-    "en"    "This is the list of bugged mails you have.\nEnsure database is working fine\nBy clicking Agree you will remove those mails from your mailbox to fix it."
+    "en"    "This is the list of ghost mails you have.\nContinue to clean them up."
   }
   "wc debug menu mail2"
   {
@@ -9413,7 +9413,7 @@
   "revival heal"
   {
     "#format" "{1:s}{2:i}"
-    "en"      "@green{1} @defaulthealed you for @lightgreen{1} health."
+    "en"      "@green{1} @defaulthealed you for @lightgreen{2} health."
   }
   "Dark Transformation info"
   {
@@ -9450,7 +9450,7 @@
   "soul harvest pet"
   {
     "#format" "{1:0.1f}"
-    "en" "Your @lightgreenMaster@default casts @greenSoul Harvest@default restoring you for @greeen{1}@perc@default of your max health."
+    "en" "Your @lightgreenMaster@default casts @greenSoul Harvest@default restoring you for @green{1}@perc@default of your max health."
   }
   "soul harvest caster"
   {
@@ -9765,7 +9765,7 @@
   }
   "Afterlife info"
   {
-    "en"		"<Passive> Upon killing an enemy, they spawn a small soul above their body that you can pick up for 20%% of your health.\n    After 3 seconds, your allies can also pick it up."
+    "en"		"<Passive> Upon killing an enemy, they spawn a small soul above their body that you can pick up for 15%% of your health.\n    After 3 seconds, your allies can also pick it up."
   }
   "Afterlife name"
   {
@@ -10021,7 +10021,7 @@
   }
   "Uplift info"
   {
-    "en" "<Passive> Your Renewing Mist's last tick will also create an AoE heal.\n    Rank 1: 60%% of the original heal\n    Rank 2: 120%% of the original heal"
+    "en" "<Passive> Your Renewing Mist's last tick will also create an AoE heal.\n    Rank 1: 50%% of the original heal\n    Rank 2: 100%% of the original heal"
   }
   "uplift client"
   {

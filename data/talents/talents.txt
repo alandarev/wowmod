@@ -5814,7 +5814,7 @@
             "2"
             {
               "base"  "5"
-              "multi"  "0.010000"
+              "multi"  "0.100000"
               "name"  "Weapon Mastery"
               "max"  "2"
               "saveid"  "0"
@@ -5982,8 +5982,8 @@
               "cooldown"  "25.000000"
               "cooldowntype"  "5"
               "duration"  "5.000000"
-              "mana"  "40"
-              "manainc"  "0.250000"
+              "mana"  "0"
+              "manainc"  "0"
               "name"  "Shamanistic Rage"
               "max"  "1"
               "saveid"  "d"
@@ -9144,7 +9144,7 @@
             "name"  "Afterlife"
             "max"  "1"
             "saveid"  "u"
-            "multi" "0.2"
+            "multi" "0.15"
             "duration"  "10.0"
             "selfduration"  "3.0"
             "distance"  "100.0"
@@ -9693,14 +9693,14 @@
             "name"  "Uplift"
             "max" "2"
             "saveid"  "R"
-            "heal"  "0.60"
+            "heal"  "0.50"
           }
           "2"
           {
             "name"  "Uplift"
             "max" "2"
             "saveid"  "R"
-            "heal"  "1.20"
+            "heal"  "1.00"
           }
         }
       }
