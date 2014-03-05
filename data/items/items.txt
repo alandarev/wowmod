@@ -141831,7 +141831,7 @@
 "cost"   "1000"
 "noshop"   "2"
 "category"   "8"
-"amount"   "1"
+"amount"   "500"
 "use"   "0"
 "ilevel"   "1"
 "class" "0"
