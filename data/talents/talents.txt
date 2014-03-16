@@ -6919,20 +6919,23 @@
               "name"  "Demonic Curse"
               "max"  "3"
               "miss"  "1"
+              "duration"  "6.0"
               "saveid"  "q"
             }
             "2"
             {
               "name"  "Demonic Curse"
               "max"  "3"
-              "miss"  "3"
+              "miss"  "2"
+              "duration"  "6.0"
               "saveid"  "q"
             }
             "3"
             {
               "name"  "Demonic Curse"
               "max"  "3"
-              "miss"  "5"
+              "miss"  "3"
+              "duration"  "6.0"
               "saveid"  "q"
             }
           }
@@ -7158,7 +7161,7 @@
             "multi" "0.50"
             "cost"  "0.70" //25% cost
             "talentid"  "5"
-            "duration"  "15.00"
+            "duration"  "8.00"
             "cooldown"     "25.000000"
             "cooldowntype"  "11"
           }

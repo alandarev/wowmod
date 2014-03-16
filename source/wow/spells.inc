@@ -6679,14 +6679,36 @@ wcRunSpell_7_10(spellid,race,victim,client,&totaldmg)
     {
       decl String:line[255];
       wcGetTalentInfo(7,2,1,4,client,"miss",line);
-      SetMiss(victim,StringToInt(line));
+      new missA=StringToInt(line);
+      wcGetTalentInfo(7,2,1,4,client,"duration",line);
+      new Float:time=StringToFloat(line);
+      SetMiss(victim,missA);
       SetEffectAttacker(victim,54); // Miss effect
+      new Handle:datapack2=CreateDataPack();
+      WritePackCell(datapack2,victim); // Write the client index of owner
+      WritePackCell(datapack2,missA);
+      CreateTimer(time,RemoveMiss,datapack2,TIMER_HNDL_CLOSE);
     }
     AddEMsgAff("curse", true);
 
 
   }
   return totaldmg;
+}
+public Action:RemoveMiss(Handle:timer, Handle:datapack)
+{
+  ResetPack(datapack); // Set the reading position to the first cell
+  new client=ReadPackCell(datapack);  // Get the client index of owner
+  new amount =ReadPackCell(datapack);
+  if (!IsClientInGame(client))
+  {
+    return Plugin_Stop;
+  }
+  if(GetMiss(client)>amount)
+    SetMiss(client,(GetMiss(client)-amount));
+  else
+    SetMiss(client,0);
+  return Plugin_Stop;
 }
 
 new Float:g_fDamageBuff[65][2];
