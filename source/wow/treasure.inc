@@ -8,7 +8,8 @@ new g_LastLocation[65];
 new Float:g_fLastChestSpawn;
 
 stock bool:SpawnChests(bool:safe=true)  {
-  if (safe && (GetEngineTime() - 90.0 < g_fLastChestSpawn)) {
+  if (safe && !IsTreasureHunt()
+      && (GetEngineTime() - 90.0 < g_fLastChestSpawn)) {
     return false;
   }
   new chance = 7;
