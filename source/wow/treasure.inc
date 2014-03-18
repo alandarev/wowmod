@@ -5,27 +5,54 @@ new Float:g_SpawnAngles[MAX_TREASURE_SPAWNS][3];
 new String:g_SpawnNames[MAX_TREASURE_SPAWNS][32];
 new g_SpawnCount = 0;
 new g_LastLocation[65];
+new Float:g_fLastChestSpawn;
+
+stock bool:SpawnChests(bool:safe=true)  {
+  if (safe && (GetEngineTime() - 90.0 < g_fLastChestSpawn)) {
+    return false;
+  }
+  new chance = 7;
+  new times = 1;
+  if(IsDmEnabled())
+    chance = 1000;
+  if(IsTreasureHunt()) {
+    chance = 1000;
+    if(PlayersInTeams(true)>8)
+      times++;
+    if(PlayersInTeams(true)>12)
+      times++;
+    if(PlayersInTeams(true)>16)
+      times++;
+    if(PlayersInTeams(true)>24)
+      times++;
+  }
+  new bool:spawned = TreasureChestMap(chance, times) > 0;
+  if (spawned)  {
+    g_fLastChestSpawn = GetEngineTime();
+  }
+  return spawned;
+}
 
 bool:WriteTreasureMapConfig()
-{ 
+{
   new String:map[64];
   GetCurrentMap(map, sizeof(map));
-  
+
   new String:path[255];
   Format(path, sizeof(path), "cfg/treasure/spawns/%s.txt", map);
-  
+
   new Handle:file = OpenFile(path, "wt");
   if (file == INVALID_HANDLE)
   {
     LogError("Could not open spawn point file \"%s\" for writing.", path);
     return false;
   }
-  
+
   for (new i=0; i<g_SpawnCount; i++)
-  { 
+  {
     //example: %f|%f|%f|pitch|yaw|roll|name
-    //WriteFileLine(file, "%f|%f|%f|%f|%f|%f|%s", 
-    WriteFileLine(file, "%f|%f|%f|0.0|%f|0.0|%s", 
+    //WriteFileLine(file, "%f|%f|%f|%f|%f|%f|%s",
+    WriteFileLine(file, "%f|%f|%f|0.0|%f|0.0|%s",
       g_SpawnOrigins[i][0],
       g_SpawnOrigins[i][1],
       g_SpawnOrigins[i][2],
@@ -34,27 +61,27 @@ bool:WriteTreasureMapConfig()
       //g_SpawnAngles[i][2],
       g_SpawnNames[i]);
   }
-  
+
   CloseHandle(file);
-  
+
   return true;
 }
 
 bool:Hani()
-{ 
+{
   new String:map[64];
   GetCurrentMap(map, sizeof(map));
-  
+
   new String:path[255];
   Format(path, sizeof(path), "cfg/treasure/spawns/%s.txt", map);
-  
+
   new Handle:file = OpenFile(path, "wt");
   if (file == INVALID_HANDLE)
   {
     LogError("Could not open spawn point file \"%s\" for writing.", path);
     return false;
   }
-  
+
   if(StrEqual(map,"de_dust2",false)) {
     WriteFileLine(file,"733.5|680.0|96.0|0.0|0.0|0.0|Side Door");
     WriteFileLine(file,"495.9|1368.0|96.0|0.0|0.0|0.0|Middle");
@@ -245,31 +272,31 @@ bool:Hani()
   {
     LogError("Spawns MUST be defined for treasure chests to be available!");
   }
-  
+
   CloseHandle(file);
   g_AreWeSpawningTreasure = LoadTreasureMapConfig(false);
   return true;
 }
 
 bool:LoadTreasureMapConfig(bool:emo=true)
-{ 
+{
   new String:map[64];
   GetCurrentMap(map, sizeof(map));
-  
+
   new String:path[255];
   Format(path, sizeof(path), "cfg/treasure/spawns/%s.txt", map);
-  
+
   g_SpawnCount = 0;
-  
+
   new Handle:file = OpenFile(path, "rt");
   if (file == INVALID_HANDLE)
   {
     LogError("Could not find spawn point file \"%s\"", path);
     if(emo)
-      Hani();    
+      Hani();
     return false;
   }
-  
+
   new String:buffer[255];
   new String:parts[7][32];
   new partCount;
@@ -290,24 +317,24 @@ bool:LoadTreasureMapConfig(bool:emo=true)
     g_SpawnNames[g_SpawnCount] = parts[6];
     g_SpawnCount++;
   }
-  
+
   CloseHandle(file);
-  
+
   LogMessage("Preset treasure spawn points loaded (number %d) (map %s)", g_SpawnCount, map);
-  
+
   return true;
 }
 
 GetNearestSpawn(client)
-{ 
+{
   if (!g_SpawnCount)
   {
     return -1;
   }
-  
+
   new Float:clorigin[3];
   GetClientAbsOrigin(client, clorigin);
-  
+
   new Float:low_diff = GetDistanceBetween(g_SpawnOrigins[0], clorigin);
   new low_index = 0;
   for (new i=1; i<g_SpawnCount; i++)
@@ -319,46 +346,46 @@ GetNearestSpawn(client)
       low_index = i;
     }
   }
-  
+
   return low_index;
 }
 
 AddSpawnFromClient(client)
-{ 
+{
   if (g_SpawnCount >= MAX_TREASURE_SPAWNS)
   {
     return -1;
   }
-  
+
   GetClientAbsOrigin(client, g_SpawnOrigins[g_SpawnCount]);
   GetClientAbsAngles(client, g_SpawnAngles[g_SpawnCount]);
   g_SpawnNames[g_SpawnCount]=g_TreasureSpawnName;
   new old = g_SpawnCount++;
-  
+
   return old;
 }
 
 bool:DeleteSpawn(index)
-{ 
+{
   if (index < 0 || index >= g_SpawnCount)
   {
     return false;
   }
-  
+
   for (new i=index; i<g_SpawnCount-1; i++)
   {
     g_SpawnAngles[i] = g_SpawnAngles[i+1];
     g_SpawnOrigins[i] = g_SpawnOrigins[i+1];
     g_SpawnNames[i] = g_SpawnNames[i+1];
   }
-  
+
   g_SpawnCount--;
-  
+
   return true;
 }
 
 public Action:Command_TreasureSpawnMenu(client, args)
-{ 
+{
   if (client == 0)
   {
     ReplyToCommand(client, "[Treasure] This command is not available from the server console.");
@@ -377,7 +404,7 @@ public Panel_VerifyDeleteSpawns(Handle:menu, MenuAction:action, param1, param2)
       g_SpawnCount = 0;
       if (!WriteTreasureMapConfig())
         PrintToChat(param1, "[Treasure] Could not write to spawn config file.");
-      else 
+      else
         PrintToChat(param1, "[Treasure] All spawn points have been deleted.");
     }
     PrepareTreasureSpawnMenu(param1);
@@ -390,18 +417,18 @@ InsertSpawnFromClient(client, bool:pre, index)
   {
     return AddSpawnFromClient(client);
   }
-  
+
   if (g_SpawnCount >= MAX_TREASURE_SPAWNS)
   {
     return -1;
   }
-  
+
   /* If this is a post-insertion, unmark the index for moving */
   if (!pre)
   {
     index++;
   }
-  
+
   /* Move all of the slots down */
   for (new i=g_SpawnCount-1; i>=index; i--)
   {
@@ -409,14 +436,14 @@ InsertSpawnFromClient(client, bool:pre, index)
     g_SpawnAngles[i+1] = g_SpawnAngles[i];
     g_SpawnNames[i+1] = g_SpawnNames[i];
   }
-  
+
   GetClientAbsOrigin(client, g_SpawnOrigins[index]);
   GetClientAbsAngles(client, g_SpawnAngles[index]);
   g_SpawnNames[index]=g_TreasureSpawnName;
 
-  
+
   g_SpawnCount++;
-  
+
   return index;
 }
 
@@ -431,7 +458,7 @@ public Action:TimerKillEnt(Handle:timer, Handle:dp)
 }
 
 PrepareTreasureSpawnMenu(client, String:title[32]="Treasure Spawn Point Editor")
-{ 
+{
   if (g_TreasureMenuOccupiedByClient == client ||
       g_TreasureMenuOccupiedByClient == 0)
   { //only one person at a time to keep it simple.
@@ -580,7 +607,7 @@ public Menu_EditTreasureSpawns(Handle:menu, MenuAction:action, param1, param2)
   }
   //if (action == MenuAction_Cancel) //param1 client, param2 MenuCancel reason
   if (action == MenuAction_End) //param1 MenuEnd reason, param2 If param1 is MenuEnd_Cancelled, the MenuCancel reason
-  { //this is called when all clients have closed this menu and 
+  { //this is called when all clients have closed this menu and
     g_TreasureMenuOccupiedByClient=0; //no longer in use
   }
 }
