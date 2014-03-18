@@ -7898,7 +7898,7 @@
   }
   "Demonic Curse info"
   {
-    "en"		"<Passive> Your curse also makes the target's next attacks miss.\n    Rank 1: Make 1 attack miss\n    Rank 2: Make 3 attacks miss\n    Rank 3: Make 5 attacks miss"
+    "en"		"<Passive> Your curse also causes the target's next attacks to miss. Lasts for 6 seconds.\n    Rank 1: Make 1 attack miss\n    Rank 2: Make 2 attacks miss\n    Rank 3: Make 3 attacks miss"
   }
   "Soul Gathering info"
   {
@@ -7930,7 +7930,7 @@
   }
   "Sacrifical Pact info"
   {
-    "en"		"<Active> Sacrifice 30%% of your current health to shield yourself for 50%% of your maximum health. Lasts for 15 seconds."
+    "en"		"<Active> Sacrifice 30%% of your current health to shield yourself for 50%% of your maximum health. Lasts for 8 seconds."
   }
   "Infernal Hellfire Aura name"
   {
