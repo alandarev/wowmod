@@ -6070,7 +6070,7 @@ wcRunTalent_6_Earthgrip(client,attacker)
   GetClientName(client,name,sizeof(name));
   GetClientName(attacker,name2,sizeof(name2));
   WCMessage(client,"earth grip client",client,name2,RoundToNearest(duration));
-  WCMessage(attacker,"earth grip attacer",attacker,name,RoundToNearest(duration));
+  WCMessage(attacker,"earth grip attacker",attacker,name,RoundToNearest(duration));
 }
 
 wcRunTalent_6_NaturesAvatar(client)
