@@ -774,6 +774,7 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
       SetShadowGateLocation(client,0,0.0);
       SetShadowGateLocation(client,1,0.0);
       SetShadowGateLocation(client,2,0.0);
+      SetHealthstone(client,0);
       SetHolyShock(client,true);
       SetPWF(client, 0);
       SetFlurry(client,0);

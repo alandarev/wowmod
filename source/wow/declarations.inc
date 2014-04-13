@@ -140,6 +140,7 @@ new g_iTargetOnly[64]; // For !target
 
 new g_SlideBits[65];
 new g_iCombatReady[65];
+new g_iHStone[65];
 new g_ef_physring1;
 new g_ef_splodesprite;
 new g_ef_bluelight;
