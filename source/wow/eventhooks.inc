@@ -124,6 +124,7 @@ public RoundStartEvent(Handle:event,const String:name[],bool:dontBroadcast)
   for(new i=0;i<65;i++)
   {
     g_iCombatReady[i]=0;
+    g_iHStone[i]=0;
   }
   /*for(new i=0;i<5;i++)
   {
