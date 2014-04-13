@@ -125205,7 +125205,7 @@
 "13858"
 {
 "name"   "Glyph of Adrenaline Rush"
-"descr"   "Your attacks also deal 50% of the damage to one nearby enemy."
+"descr"   "Your attacks also deal 20% of the damage to one nearby enemy."
 "version"   "5.02"
 "level"   "60"
 "cost"   "400"
@@ -125458,20 +125458,6 @@
 "class" "2"
 }
 
-"20104"
-{
-"name"   "Glyph of Murderous Intent"
-"descr"   "Restores 10/20% of your health instead"
-"version"   "5.02"
-"level"   "64"
-"cost"   "600"
-"honor"   "0"
-"noshop"   "1"
-"category"   "30"
-"use"   "0"
-"ilevel"   "64"
-"class" "2"
-}
 
 "20106"
 {
@@ -141161,27 +141147,6 @@
 "class" "0"
 "reagents" "1"
 "reagent_1" "20014"
-"reagent_1_amount" "15"
-}
-
-"20105"
-{
-"name"   "Book: Glyph of Murderous Intent"
-"version"   "5.02"
-"level"   "64"
-"cost"   "10000"
-"noshop"   "0"
-"category"   "9"
-"use"   "1"
-"ilevel"   "64"
-"reqskill"   "165"
-"itemid"   "20104"
-"grey"   "154"
-"green"   "152"
-"orange"   "150"
-"class" "0"
-"reagents" "1"
-"reagent_1" "20015"
 "reagent_1_amount" "15"
 }
 
