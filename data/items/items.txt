@@ -147393,3 +147393,23 @@
 "reagent_1_amount" "10"
 }
 }
+"25186"
+{
+"name"   "Recipe: Cabbage Soup"
+"version"   "5.02"
+"level"   "85"
+"cost"   "250000"
+"noshop"   "0"
+"category"   "9"
+"use"   "1"
+"ilevel"   "64"
+"reqskill"   "180"
+"itemid"   "20158"
+"grey"   "160"
+"green"   "157"
+"orange"   "155"
+"class" "0"
+"reagents" "1"
+"reagent_1" "20161"
+"reagent_1_amount" "15"
+}
