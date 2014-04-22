@@ -266,7 +266,6 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
     heal = RoundToNearest(float(heal)*CTF_NERF);
   if(g_iNecrotic[client]>0)
   {
-    new healsave = heal;
     if(heal>=g_iNecrotic[client])
     {
       heal-=g_iNecrotic[client];

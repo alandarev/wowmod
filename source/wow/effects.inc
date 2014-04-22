@@ -1640,7 +1640,7 @@ public Action:Effect4Action(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   effectsdata[effid][3]--;
-  if((g_iDispatch[effectsdata[effid][1]]>0) && GetClass(effectsdata[effid][2])==2);
+  if((g_iDispatch[effectsdata[effid][1]]>0) && GetClass(effectsdata[effid][2])==2)
   {
     effectsdata[effid][3]==3;
     g_iDispatch[effectsdata[effid][1]]-=1;
@@ -3347,7 +3347,7 @@ public Action:EffectCursedSoulDamage(Handle:timer, any:effid)
     multi = (1.30 - float(wcGetHealth(victim)) / float(GetMaxHealth(victim))) * multi;
   if(HasGlyph(client, GLYPH_WARLOCK_CURSEDSOUL))
   {
-    new percentage = (1.5 - float(wcGetHealth(client) / float(GetMaxHealth(victim))));
+    new Float:percentage = (1.5 - float(wcGetHealth(client)) / float(GetMaxHealth(victim)));
     if(1.0>percentage || percentage > 1.5)
       percentage=1.0;
     multi*=percentage;

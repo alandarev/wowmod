@@ -4,7 +4,6 @@
 new g_iClientTalents[65*2][10][10][10];
 new g_iTalentUnique[RACES][10][10][10];  //Constant, is constructed on talents database load
 new g_iTalentsMap[RACES][MAX_TALENTS+30]; //Constant, is constructed on talents database load
-new g_bShadowform[65];
 //new g_iElementalFury[65];
 new g_iEarthShield[65][2];
 //new g_iDeathWish[65];
@@ -1197,7 +1196,7 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
       {
         new Float:random=GetRandomFloat(0.0,1.0);
         if(GetCriticalStrike(attacker)>random)
-          wcRunTalent_1_DeepWounds(attacker,victim,damage)
+          wcRunTalent_1_DeepWounds(attacker,victim,damage);
       }
     }
 

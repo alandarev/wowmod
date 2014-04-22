@@ -2600,7 +2600,7 @@ wcRunSpell_2_10(spellid, race, client) {
   new cdtype=StringToInt(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line);
-  manareq=30;
+  new manareq=30;
   if(GetMana(client) >= 30)
   {
     if(HasGlyph(client, GLYPH_ROGUE_SLICENDICE))

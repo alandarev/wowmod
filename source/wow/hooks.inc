@@ -11,6 +11,7 @@ new bAutoCrit[65];
 new g_iOffs_ActiveWeapon = -1;
 new g_vOffs_Punch = -1;
 new g_iOffs_NextPrimaryAttack = -1;
+new g_bShadowform[65];
 
 new wcClientSeal[65];
 //new wcClientSealP[65];
@@ -1877,7 +1878,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           g_iDispatch[victim]+=1;
       }
       if(currenthealth > 0.35)
-        g_iDispatch[victim]==0;
+        g_iDispatch[victim]=0;
       CalculateCrit(attacker,victim,false,"Physical",bCS);
 
       if(bCS) {
