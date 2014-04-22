@@ -3495,10 +3495,9 @@ public wcRunTalent_4_1(client,victim)                                           
 
     new Float:locationSound[3];
     GetClientAbsOrigin(victim, locationSound);
-    EmitAmbientSound("wc/spells/holyshock.wav",locationSound);'
+    EmitAmbientSound("wc/spells/holyshock.wav",locationSound);
     if(HasGlyph(client, GLYPH_PALADIN_SHOCK))
     {
-      new Float:location[3];
       GetClientAbsOrigin(client,location);
       new targets[MAXPLAYERS];
       new team=GetClientTeam(client);
@@ -3511,7 +3510,7 @@ public wcRunTalent_4_1(client,victim)                                           
       {
         if(targets[x]!=client)
         {
-          wcHeal(client,targets[x],heal,0,true);
+          wcHeal(client,targets[x],dmg,0,true);
         }
       }
     }
@@ -4356,7 +4355,7 @@ public wcRunTalent_5_3(client)                                                  
       WCMessage(client,"shadow form deactivated",client);
       g_bShadowform[client]=false;
    }
-   else if(g_bShadowform[client]==false)
+   else if(!g_bShadowform[client])
    {
      SetEffectVictim(client,28);
      SetEffectSpellVic(client,28);
@@ -7822,7 +7821,7 @@ public wcRunTalent_4_HolyShieldGlyph(victim,attacker) //Holy Shield Revenge glyp
   decl String:line[255];
 
   new dmg = RoundToNearest(
-    base +
+    2 +
     ( float(GetDamage(victim)) * 0.03 +
       float(GetSta(victim)+GetBonusSta(victim)) * 0.04   ) *
     multi);

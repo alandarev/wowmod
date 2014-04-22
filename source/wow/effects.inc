@@ -1642,7 +1642,7 @@ public Action:Effect4Action(Handle:timer, any:effid)
   effectsdata[effid][3]--;
   if((g_iDispatch[effectsdata[effid][1]]>0) && GetClass(effectsdata[effid][2])==2)
   {
-    effectsdata[effid][3]==3;
+    effectsdata[effid][3]=3;
     g_iDispatch[effectsdata[effid][1]]-=1;
   }
   decl Float:vec[3],Float:rightVec[3],Float:upVec[3];

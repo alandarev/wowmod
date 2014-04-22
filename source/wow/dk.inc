@@ -1365,7 +1365,7 @@ public wcRunSpell_8_10(spellid,race,victim,attacker,&totaldmg) //Necrotic Strike
         duration = 6.0;
         totaldmg = RoundToNearest(1.1 * totaldmg);
       }
-      if(HasGlyph(client, GLYPH_DK_NECROTICSTRIKE))
+      if(HasGlyph(attacker, GLYPH_DK_NECROTICSTRIKE))
         g_iNecrotic[victim]+=RoundToNearest(totaldmg*0.20);
       SetHM(victim,multief);
       SetHMT(victim,duration);
