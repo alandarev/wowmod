@@ -121936,9 +121936,9 @@
 "amount"   "1"
 "use"   "0"
 "ilevel"   "5"
-"str"   "2"
-"sta"   "14"
-"res"   "10"
+"str"   "13"
+"sta"   "8 "
+"cs"    "0.2"
 "armor_type"   "0"
 "class" "0"
 }
