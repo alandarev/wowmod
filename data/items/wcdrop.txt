@@ -1588,8 +1588,8 @@
    "skillup" "390"
     "profession"  "10"
     "minlevel"  "66"
-    "minimum" "0.002"
-    "maximum" "0.006"
+    "minimum" "0.004"
+    "maximum" "0.008"
     "incriment" "0.00075"
     "id"  "20017"
   }
@@ -1599,8 +1599,8 @@
    "skillup" "410"
     "profession"  "10"
     "minlevel"  "66"
-    "minimum" "0.001"
-    "maximum" "0.003"
+    "minimum" "0.002"
+    "maximum" "0.006"
     "incriment" "0.00075"
     "id"  "20018"
   }
@@ -1610,8 +1610,8 @@
    "skillup" "425"
     "profession"  "10"
     "minlevel"  "66"
-    "minimum" "0.0005"
-    "maximum" "0.001"
+    "minimum" "0.001"
+    "maximum" "0.002"
     "incriment" "0.00075"
     "id"  "20019"
   }

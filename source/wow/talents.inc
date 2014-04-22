@@ -764,6 +764,11 @@ wcRunOnBlockTalents(victim, attacker)
       if(CheckRequirements(victim,1,1,3,2))
         wcRunTalent_1_ManoAMano(victim,attacker);
     }
+    case 4:
+    {
+      if((HasGlyph(victim, GLYPH_PALADIN_SHIELD)) && CheckRequirements(victim,4,2,2,4))
+        wcRunTalent_4_HolyShieldGlyph(victim,attacker);
+    }
   }
 }
 
@@ -1022,6 +1027,12 @@ public wcRunCritBonusChanceTalents(attacker,victim,&Float:critbonus, String:spel
       {
         wcGetTalentInfo(4,3,1,1,attacker,"increment",line);
         critbonus=StringToFloat(line);
+        if(HasGlyph(attacker, GLYPH_PALADIN_CONVICTION))
+        {
+          new Float:currenthealth = float(wcGetHealth(victim)) / float(GetMaxHealth(victim));
+          if(0.35 >= currenthealth)
+            critbonus*=5.0;
+        }
       }
     }
   }
@@ -1087,6 +1098,11 @@ public wcRunTalentSpellCrit(attacker,victim,String:spellname[],&damage,&Float:da
       {
         wcRunTalent_3_11(attacker,victim,damage,damagemulti);
       }
+      if((StrEqual(spellname,"Living Bomb",false)) && HasGlyph(attacker, GLYPH_MAGE_IGNITE))
+      {
+        wcRunTalent_3_11(attacker,victim,damage,damagemulti);
+      }
+      
       if(spellid == 1 && CheckRequirements(attacker,3,1,1,4))
         wcRunTalent_3_PiercingChills(attacker,victim);
       if(spellid == 3 && CheckRequirements(attacker,3,2,2,4))
@@ -1177,6 +1193,12 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
         wcRunTalent_1_Execute(attacker,victim,damage);
       if(CheckRequirements(attacker,1,3,4,2) && prio ==1 && !spell)
         wcRunTalent_1_ColossusSmash(attacker,victim,damage);
+      if(CheckRequirements(attacker,1,3,3,2) && !spell && HasGlyph(attacker, GLYPH_WARRIOR_DEEPWOUNDS))
+      {
+        new Float:random=GetRandomFloat(0.0,1.0);
+        if(GetCriticalStrike(attacker)>random)
+          wcRunTalent_1_DeepWounds(attacker,victim,damage)
+      }
     }
 
     case 2:
@@ -1480,6 +1502,11 @@ public wcRunTalent_1_2(client, &damage) //Raging Blow
   {
     wcGetTalentInfo(1,2,3,1,client,"multi",line);
     new Float:multi = StringToFloat(line);
+    if(HasGlyph(client, GLYPH_WARRIOR_RAGING))
+    {
+      multi*1.3;
+      g_iEnrage[client]-=1;
+    }
     damage += RoundToNearest(multi*GetDamage(client));
     /*Format(line,sizeof(line),"%T", "raging blow", client);*/
     AddEMsgAff("raging blow", true);
@@ -2590,6 +2617,13 @@ wcRunTalent_2_ShadowGate(client)
       new Float:cd=StringToFloat(line);
       wcGetTalentInfo(2,1,3,1,client,"cooldowntype",line);
       SetCdSpell(client, StringToInt(line), cd, 0,"Shadow Gate");
+      if(HasGlyph(client, GLYPH_ROGUE_SHADOWGATE))
+      {
+        SetShadowGateLocation(client,0,0.0);
+        SetShadowGateLocation(client,1,0.0);
+        SetShadowGateLocation(client,2,0.0);
+        WCMessage(client,"shadowgate reset",client);
+      }
     }
   }
 }
@@ -2625,7 +2659,6 @@ public wcRunTalent_3_1(client)                                                  
   new Float:duration=StringToFloat(line);
   absorb+=GetSpellDmg(client,multi);
   wcClientAbsorb[client]=absorb;
-
   SetEffectVictim(client,25); // absorb shield
   SetEffectSpellVic(client,25); //Absorb magic dmg
   new Handle:datapack2=CreateDataPack();
@@ -3463,7 +3496,26 @@ public wcRunTalent_4_1(client,victim)                                           
 
     new Float:locationSound[3];
     GetClientAbsOrigin(victim, locationSound);
-    EmitAmbientSound("wc/spells/holyshock.wav",locationSound);
+    EmitAmbientSound("wc/spells/holyshock.wav",locationSound);'
+    if(HasGlyph(client, GLYPH_PALADIN_SHOCK))
+    {
+      new Float:location[3];
+      GetClientAbsOrigin(client,location);
+      new targets[MAXPLAYERS];
+      new team=GetClientTeam(client);
+      new amount;
+      if(team==3)
+      amount=GetNearClients("@ct",location,targets,500.0);
+      if(team==2)
+      amount=GetNearClients("@t",location,targets,500.0);
+      for (new x=0;x<=(amount-1);x++)
+      {
+        if(targets[x]!=client)
+        {
+          wcHeal(client,targets[x],heal,0,true);
+        }
+      }
+    }
   }
 }
 
@@ -4297,7 +4349,7 @@ public wcRunTalent_5_3(client)                                                  
     cd -= minusCd;
 
    SetCdSpell(client,cdtype,cd, 0, "Shadow Form");
-   if(g_bShadowform[client])
+   if(g_bShadowform[client] && !HasGlyph(client, GLYPH_PRIEST_SHADOWF))
    {
       RemoveEffectVictim(client,28);
       RemoveEffectSpellVic(client,28);
@@ -4305,7 +4357,7 @@ public wcRunTalent_5_3(client)                                                  
       WCMessage(client,"shadow form deactivated",client);
       g_bShadowform[client]=false;
    }
-   else
+   else if(g_bShadowform[client]==false)
    {
      SetEffectVictim(client,28);
      SetEffectSpellVic(client,28);
@@ -4364,6 +4416,12 @@ wcRunTalent_5_6(client,bool:noisy) { //Mental Strength
   new base =  GetInt(client)+GetBonusInt(client);
   new bonus = RoundToNearest(StringToFloat(line)*base);
   SetBonusInt(client, bonus+GetBonusInt(client));
+  if(HasGlyph(client, GLYPH_PRIEST_MENTAL))
+  {
+    wcGetTalentInfo(5,1,3,2,client,"multi",line);
+    new mana = RoundToNearest(GetMaxMana(client)*(1+StringToFloat(line)));
+    SetMaxMana(client,mana);
+  }
   wcRecalculateStats(client);
   if(noisy)
     WCMessage(client,"mental strength used", client, bonus, GetInt(client)+GetBonusInt(client));
@@ -5994,6 +6052,21 @@ wcRunTalent_6_LavaSurge(client,victim) //Lava Lash
       wcRunTalent_6_LavaSurge(client,victim);
       WCMessage(client,"Echo of the Elements activate",client);
     }
+    if(HasGlyph(client, GLYPH_SHAMAN_LAVALASH))
+    {
+      new shockrandom=GetRandomInt(1,100);
+      if(20>=shockrandom) {
+        wcRunSpell_6_3(3,6,victim,client);
+      }
+      shockrandom=GetRandomInt(1,100);
+      if(20>=shockrandom) {
+        wcRunSpell_6_4(4,6,victim,client);
+      }
+      shockrandom=GetRandomInt(1,100);
+      if(20>=shockrandom) {
+        wcRunSpell_6_5(5,6,victim,client);
+      }
+    }
     decl Float:soundlocation[3];
     GetClientAbsOrigin(client,soundlocation);
     EmitAmbientSound("wc/spells/lavasurge.wav",soundlocation);
@@ -6904,6 +6977,28 @@ public Action:EffectHealingTideTotem(Handle:timer, any:effid)
     if(targets[x]!=client)
       WCMessage(targets[x],"heal tide totem vict",targets[x],healed);
   }
+  if(HasGlyph(client, GLYPH_SHAMAN_HTD))
+  {
+    new Float:distance = 400.0;
+    decl Float:locationb[3];
+    GetClientAbsOrigin(client,locationb);
+    new targeto[MAXPLAYERS];
+    new zad;
+    if(team==2)
+      zad=GetNearClients("@ct",locationb,targeto,distance);
+    if(team==3)
+      zad=GetNearClients("@t",locationb,targeto,distance);
+    for (new x=0;x<=(zad-1);x++)
+    {
+      decl Float:loc2[3];
+      GetClientAbsOrigin(targeto[x],loc2);
+      new Float:zPower = 130.0;
+      new Float:power = 90.0;
+      power = power * (400.0 / (150.0 + GetDistanceBetween(locationb,loc2)));
+      if(GetBoss(targeto[x])<=0 || (!IsBoss()) )
+        PushPlayerAwayPlayer(targeto[x], client, power, zPower);
+    }
+  }
   EmitAmbientSound("wc/spells/tidetotem.wav",location);
   return Plugin_Continue;
 
@@ -6979,6 +7074,8 @@ public Action:EffectParasites(Handle:timer, any:effid)
       if(targeta[x]!=effectsdata[effid][2])
       {
         WCMessage(targeta[x],"parasite heal",targeta[x],name,healed);
+        if(HasGlyph(effectsdata[effid][2], GLYPH_DK_PARASITES))
+          wcHeal(effectsdata[effid][2],effectsdata[effid][2],effectsdata[effid][6],0,true);
       }
     }
     DeleteEffectData(effid);
@@ -7043,6 +7140,16 @@ wcRunTalent_8_Obliterate(client, victim, &totaldmg)
           wcSetMana(client,130);
         wcGetTalentInfo(8,2,4,2,client,"multi",line);
         new Float:multi=StringToFloat(line);
+        if(HasGlyph(client, GLYPH_DK_OBLITERATE))
+        {
+          new Float:percent = oldspeed/normalspeed;
+          new Float:stra = 0.6+(0.4 / percent);
+          if(1.0>stra)
+            stra=1.0;
+          if(stra>1.5)
+            stra=1.5;
+          multi*=stra;
+        }
         new dmg=RoundToNearest(float(totaldmg)*multi);
         totaldmg+=dmg;
         decl Float:location[3];
@@ -7589,6 +7696,9 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
     new Float:multi=StringToFloat(line);
     new dmg=GetSpellDmg(client,multi)+basedmg;
     dmg=RoundToNearest(float(dmg)*float(g_iFlameShock[victim]));
+    if(HasGlyph(client, GLYPH_SHAMAN_LAVABURST))
+      if(g_iFlameShock[victim]==0)
+        wcRunSpell_6_3(3,6,victim,client);
     decl String:name[255],String:name2[255];
     GetClientName(client,name,sizeof(name));
     GetClientName(victim,name2,sizeof(name2));
@@ -7708,3 +7818,23 @@ wcRunTalent_2_BasicMaster(client,victim,&totaldmg) //Master of Basics
   }
   return totaldmg;
 }
+public wcRunTalent_4_HolyShieldGlyph(victim,attacker) //Holy Shield Revenge glyph
+{
+  decl String:line[255];
+
+  new dmg = RoundToNearest(
+    base +
+    ( float(GetDamage(victim)) * 0.03 +
+      float(GetSta(victim)+GetBonusSta(victim)) * 0.04   ) *
+    multi);
+  wcSpellDamage(attacker,victim,dmg, "", "",line);
+}
+
+
+
+
+
+
+
+
+

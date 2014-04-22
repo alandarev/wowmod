@@ -4825,7 +4825,7 @@
   }
   "Rend info"
   {
-    "en"      "Gives you a slight chance to activate Rend on the target when you shoot him.\nRend deals a fair amount of damage over a long time.\nEquipping a 2-handed weapon increases Rend's chance to proc."
+    "en"      "Your attacks have a chance to leave a DoT effect on the target dealing physical damage.\nEquipping a 2-handed weapon increases Rend's chance to proc."
   }
   "character name w id"
   {
@@ -5295,7 +5295,7 @@
   }
   "Garrote info"
   {
-    "en"    "<Passive> Ambush now also silences the enemy and leaves a DoT effect on the target.\n    Rank 1: Silences for 0.75 seconds and 20% of damage done as DoT\n    Rank 2: Silences for 1.5 seconds and 40% of damage done as DoT"
+    "en"    "<Passive> Ambush now also silences the enemy and leaves a DoT effect on the target.\n    Rank 1: Silences for 0.75 seconds and 20%% of damage done as DoT\n    Rank 2: Silences for 1.5 seconds and 40%% of damage done as DoT"
   }
   "grand crussade"
   {
@@ -6224,7 +6224,7 @@
   }
   "Retribution Judgement name"
   {
-    "en"   "Retribution Judgement"
+    "en"   "Retributive Judgement"
   }
   "Inner Fire name"
   {
@@ -7010,7 +7010,7 @@
   }
   "Colossus Smash info"
   {
-    "en"		"<Passive> Your attacks have a chance to reduce the enemy's armor and deal extra damage.\n    Rank 1: 10%% chance, 30% reduction\n    Rank 2: 20%% chance, 30% reduction"
+    "en"		"<Passive> Your attacks have a chance to reduce the enemy's armor and deal extra damage.\n    Rank 1: 10%% chance, 30%% reduction\n    Rank 2: 20%% chance, 30%% reduction"
   }
   "Master of Deception info"
   {
@@ -7086,7 +7086,7 @@
   }
   "Hack and Slash info"
   {
-    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50% of its damage.\n    Rank 1: 15%% chance"
+    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50%% of its damage.\n    Rank 1: 15%% chance"
   }
   "Improved Sinister Strike info"
   {
@@ -7174,7 +7174,7 @@
   }
   "Dispatch info"
   {
-    "en"		"<Passive> You deal increased damage to enemies that are below 35% health.\n    Rank 1: +10%% damage\n    Rank 2: +20%% damage"
+    "en"		"<Passive> You deal increased damage to enemies that are below 35%% health.\n    Rank 1: +10%% damage\n    Rank 2: +20%% damage"
   }
   "dispatch msg"
   {
@@ -7386,7 +7386,7 @@
   }
   "Healing Light info"
   {
-    "en"		"<Passive> Increases the multiplier of Flash & Greater Heal.\n    Rank 1: +3%% healing\n    Rank 2: +6%% healing\n    Rank 3: +10%% healing"
+    "en"		"<Passive> Increases the healing of Flash & Greater Heal.\n    Rank 1: +10%% to Flash Heal, +5%% to Greater Heal\n    Rank 2: +20%% to Flash Heal, +10%% to Greater Heal\n    Rank 3: +30%% to Flash Heal, +15%% to Greater Heal"
   }
   "Beacon of Light info"
   {
@@ -7474,7 +7474,7 @@
   }
   "Righteous Warrior info"
   {
-    "en"		"<Passive> Every Holy Power spend restores a portion of your health and mana.\n    Rank 1: +1.5% health and mana\n    Rank 2: +3% health and mana"
+    "en"		"<Passive> Every Holy Power spend restores a portion of your health and mana.\n    Rank 1: +1.5%% health and mana\n    Rank 2: +3%% health and mana"
   }
   "Divine Blood info"
   {
@@ -7554,11 +7554,11 @@
   }
   "Soul Warding info"
   {
-    "en"		"<Passive> Your Shield spells grant temporary damage reduction.\n    Rank 1: -5% damage\n    Rank 2: -10% damage"
+    "en"		"<Passive> Your Shield spells grant temporary damage reduction.\n    Rank 1: -5%% damage\n    Rank 2: -10%% damage"
   }
   "Focused Will info"
   {
-    "en"		"<Passive> When you take more than 10%% of your maximum health damage in a single hit there is a chance your next spell will cost 0 mana.\n    Rank 1: 10%% chance\n    Rank 2: 20%% chance\n    Rank 3: 30%% chance"
+    "en"		"<Passive> When you take more than 10%% of your maximum health damage in a single hit there is a chance your next spell will cost 0 mana.\n    Rank 1: 15%% chance\n    Rank 2: 30%% chance\n    Rank 3: 45%% chance"
   }
   "Divine Aegis info"
   {
@@ -7566,7 +7566,7 @@
   }
   "Power Word:Barrier info"
   {
-    "en"		"<Activated> Casts PW:Shield on every nerby ally, with a duration of 20 seconds."
+    "en"		"<Activated> Casts PW:Shield on every nearby ally, with a duration of 20 seconds."
   }
   "Grace info"
   {
@@ -7630,7 +7630,7 @@
   }
   "Improved Mind Blast info"
   {
-    "en"		"<Passive> Increases the damage done by Mind Blast and decreases it's cooldown.\n    Rank 1; +3%% damage, -0.5 second cooldown\n    Rank 2: +6%% damage, -1.0 second cooldown\n    Rank 3: +10%% damage, -1.5 second cooldown"
+    "en"		"<Passive> Increases the damage done by Mind Blast and decreases it's cooldown.\n    Rank 1; +10%% damage, -0.5 second cooldown\n    Rank 2: +20%% damage, -1.0 second cooldown\n    Rank 3: +30%% damage, -1.5 second cooldown"
   }
   "Focused Mind priest info"
   {
@@ -7738,7 +7738,7 @@
   }
   "Elemental Weapons info"
   {
-    "en"		"<Passive> Increases Windfury's bonus damage\n    Rank 1: +7.5%% damage\n    Rank 2: +15%% damage"
+    "en"		"<Passive> Increases Windfury's bonus damage\n    Rank 1: +37.5%% damage\n    Rank 2: +75%% damage"
   }
   "Weapon Mastery info"
   {
@@ -7918,7 +7918,7 @@
   }
   "Healthstone info"
   {
-    "en"		"<Active> Create a healthstone for 20%% of your current health that will heal you or another target for 30%% of your maximum health."
+    "en"		"<Active> Create a healthstone for 20%% of your current health that will heal you or another target for 20%% of your maximum health."
   }
   "Mana Feed info"
   {
@@ -8026,7 +8026,7 @@
   }
   "Blood Parasites info"
   {
-    "en" "Your attacks cause bloodworms that deal magic damage every half a second for 3 seconds\nThey then explode and heal all allies for the damage they dealt\n   15% chance\n    Rank 1: Normal damage, normal range\n    Rank 2: High damage, high range"
+    "en" "Your attacks cause bloodworms that deal magic damage every half a second for 3 seconds\n   They then explode and heal all allies for the damage they dealt\n   15%% chance\n    Rank 1: Normal damage, normal range\n    Rank 2: High damage, high range"
   }
   "Rune Warding info"
   {
@@ -8086,7 +8086,7 @@
   }
   "Hypothermia info"
   {
-    "en"		"Direct damage spell, uses all your power and damage depends on the power spend. Cost 1 Rune"
+    "en"		"Deal a massive amount of spell damage upon a target enemy, consuming all runic power. Costs 1 rune."
   }
   "Virulance info"
   {
@@ -10415,6 +10415,19 @@
   "unchaining end"
   {
     "en"      "@greenUnchaining Wrath @lightgreenhas ended"
+  }
+  "shadowgate reset"
+  {
+    "en"      "Your @greenShadowgate's @defaultlocation has been reset"
+  }
+  "fanofswords"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"      "You cast Fan of Swords at @green{1} @default and deal @lightgreen{2} @default dmg."
+  }
+  "fanofswords target"
+  {
+    "en"      "@att has cast @lightgreenFan of Swords @defaultto You and did @dmg damage"
   }
 }
 

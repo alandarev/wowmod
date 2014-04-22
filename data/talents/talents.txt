@@ -1771,14 +1771,14 @@
               "name"  "Fan of Swords"
               "max" "2"
               "saveid"  "B"
-              "multi"   "1.25"
+              "multi"   "1.15"
             }
             "2"
             {
               "name"  "Fan of Swords"
               "max" "2"
               "saveid"  "B"
-              "multi"   "1.50"
+              "multi"   "1.30"
             }
           }
       }
@@ -4430,7 +4430,7 @@
             "name"  "Focused Will"
             "max"  "3"
             "saveid"  "n"
-            "chance"  "10"
+            "chance"  "15"
             "healthper" "0.1"
           }
           "2"
@@ -4438,7 +4438,7 @@
             "name"  "Focused Will"
             "max"  "3"
             "saveid"  "n"
-            "chance"  "20"
+            "chance"  "30"
             "healthper" "0.1"
           }
           "3"
@@ -4446,7 +4446,7 @@
             "name"  "Focused Will"
             "max"  "3"
             "saveid"  "n"
-            "chance"  "30"
+            "chance"  "45"
             "healthper" "0.1"
           }
         }
@@ -5028,13 +5028,14 @@
         {
           "0"
           {
+            "increment"  "1.0"
             "name"  "Improved Mind Blast"
             "max"  "3"
             "saveid"  "f"
           }
           "1"
           {
-            "increment"  "0.030000"
+            "increment"  "1.10"
             "cooldown"  "0.500000"
             "name"  "Improved Mind Blast"
             "max"  "3"
@@ -5042,7 +5043,7 @@
           }
           "2"
           {
-            "increment"  "0.060000"
+            "increment"  "1.20"
             "cooldown"  "1.00000"
             "name"  "Improved Mind Blast"
             "max"  "3"
@@ -5050,7 +5051,7 @@
           }
           "3"
           {
-            "increment"  "0.100000"
+            "increment"  "1.30"
             "cooldown"  "1.50000"
             "name"  "Improved Mind Blast"
             "max"  "3"
@@ -7066,7 +7067,7 @@
             "1"
             {
               "multi"        "0.80" //1-multi = cost of healthstone
-              "heal"         "0.30"
+              "heal"         "0.20"
               "event"        "player_cast"
               "active"        "1"
               "cooldown"     "15.000000"

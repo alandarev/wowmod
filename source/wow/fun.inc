@@ -2594,7 +2594,7 @@ public Action:TreasureChestTick(Handle: timer, Handle:datapack)
   location[2]=ReadPackFloat(datapack);
   decl String:name[20];
   GetClientName(claimer,name,sizeof(name));
-  if(GetCombat(claimer)>0) {
+  if(GetCombat(claimer)>0 || IsPolymorphed(claimer)) {
     PrintToChatAll("\x04%s \x03has been interrupted while claiming a treasure chest!",name);
     SetChestTick(claimer,chestrarity);
     new roundcount=g_RoundCount;

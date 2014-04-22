@@ -901,13 +901,15 @@ public Action:HostageRescueEvent(Handle:event,const String:name[],bool:dontBroad
   wcGiveXp(client,xp,true);
   return Plugin_Continue;
 }
-public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast)
+public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast) //Deathevent, Death, Death event, Playerdeath, Player death
 {
   //PrintToServer("player death");
   new userid=GetClientOfUserId(GetEventInt(event,"userid"));
   CreateTimer(6.0, DisplayTodoMenu,userid, TIMER_FLAG_NO_MAPCHANGE);
   if(IsMageInvis(userid))
   SetMageInvis(userid, false);
+  g_bShadowform[userid]=false;
+  g_iNecrotic[userid]=0;
   new attacker=GetClientOfUserId(GetEventInt(event,"attacker"));
   GetClientAbsOrigin(userid,vClientCorpse[userid]);
   CheckClientHpBar(userid);
@@ -1868,7 +1870,14 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       damagemulti*=getDamageBuff(attacker);
       if(g_iCarry[attacker]>0)
         damagemulti*CTF_NERF;
-
+      new Float:currenthealth = float(wcGetHealth(victim)) / float(GetMaxHealth(victim));
+      if(CheckRequirements(attacker,2,3,3,2))
+      {
+        if(0.35 >= currenthealth)
+          g_iDispatch[victim]+=1;
+      }
+      if(currenthealth > 0.35)
+        g_iDispatch[victim]==0;
       CalculateCrit(attacker,victim,false,"Physical",bCS);
 
       if(bCS) {
