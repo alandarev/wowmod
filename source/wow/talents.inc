@@ -7824,7 +7824,7 @@ public wcRunTalent_4_HolyShieldGlyph(victim,attacker) //Holy Shield Revenge glyp
     2 +
     ( float(GetDamage(victim)) * 0.03 +
       float(GetSta(victim)+GetBonusSta(victim)) * 0.04   ) *
-    multi);
+    0.4);
   wcSpellDamage(attacker,victim,dmg, "", "",line);
 }
 
