@@ -9199,11 +9199,11 @@
   }
   "Wc Tips Msg 13"
   {
-    "en"  "Remember there are menu shortcuts for many things, why not try typing one of these into chat? @lightgreen'professions' | 'mail' | 'inventory' | 'spells' | 'changerace' | 'talents'" //??
+    "en"  "If you discover a bug, please report it on the forums at @lightgreenwowmod.eu! @defaultWe'll be delighted!"
   }
   "Wc Tips Msg 14"
   {
-    "en"  "Don't forget that you can donate for gold with @lightgreen$1 = 1gold. defaultDonate by typing in chat 'donate' and follow steps. (Supports only paypal at the moment)"
+    "en"  "Don't forget that you can donate for gold with @lightgreen$1 = 1gold. @defaultDonate by typing in chat 'donate' and follow steps. (Supports only paypal at the moment)"
   }
   "Wc Tips Msg 15"
   {
@@ -9211,11 +9211,39 @@
   }
   "Wc Tips Msg 16"
   {
-    "en"  "Please respect all of your fellow members, do not forget to read our rules at @lightgreenhttp://wiki.wowmod.eu/index.php/Rules!"
+    "en"  "Please respect all of your fellow members, and do not forget to read our rules at @lightgreenhttp://wiki.wowmod.eu/index.php/Rules!"
   }
   "Wc Tips Msg 17"
   {
-    "en"  "Not sure what to do? type:  @lightgreen'/todo' @defaultin chat to see a list of your available tasks." //really?!
+    "en"  "Spamming AoE spells through the walls is NOT usually the definition of fun!" //really?!
+  }
+  "Wc Tips Msg 18"
+  {
+    "en"  "You can earn @lightgreengold @defaultby playing! Every 10 minutes one random player gets 0.1g!"
+  }
+  "Wc Tips Msg 19"
+  {
+    "en"  "If you're a @lightgreenNo-Steam @defaultplayer and purchase Cs:S at a later date, you can get your characters transferred!"
+  }
+  "Wc Tips Msg 20"
+  {
+    "en"  "Did you know @lightgreenScout @defaulthas increased damage? It's pretty deadly with Rogue's @lightgreenShadow Blades!"
+  }
+  "Wc Tips Msg 21"
+  {
+    "en"  "It's not everyday you see a @lightgreenDeath Knight. @defaultYou usually get to see them once a month!"
+  }
+  "Wc Tips Msg 22"
+  {
+    "en"  "Did you know we used to have a @lightgreenUSA server? @defaultWell, we don't anymore! So donate!"
+  }
+  "Wc Tips Msg 23"
+  {
+    "en"  "There's two kinds of people in this world: Those who like @lightgreenWoWmod, @defaultand those who don't matter."
+  }
+  "Wc Tips Msg 24"
+  {
+    "en"  "The Priest claimed to not have had any sexual relations with the young Paladin apprentice, but we all know better."
   }
   //Referrer
   "Say Refferrer ID"

@@ -4377,9 +4377,9 @@ wcRunTalent_5_4(client,bool:noisy) { //Inner Fire
   {
     new lvl = wcGetTalentLevel(client,1,1,1);
     new sp = GetSpellDmg(client, 1.0);
-    new Float:multi2 = 0.02*lvl;
-    if(multi2 > 0.05)
-      multi2 = 0.05;
+    new Float:multi2 = 0.034*lvl;
+    if(multi2 > 0.10)
+      multi2 = 0.10;
     new Float:bonus2 = sp * multi2;
     SetBonusSpellDmg(client, float(GetBonusSpellDmg(client,1.0)) + bonus2);
 

@@ -124865,7 +124865,7 @@
 "13840"
 {
 "name"   "Glyph of Inner Fire"
-"descr"   "Your Inner Fire now also increases your spellpower by 2/4/5%."
+"descr"   "Your Inner Fire now also increases your spellpower by 3/6/10%."
 "version"   "5.02"
 "level"   "60"
 "cost"   "400"
@@ -141131,7 +141131,7 @@
 
 "20103"
 {
-"name"   "Book: Glyph of ShadowStep"
+"name"   "Book: Glyph of Shadowstep"
 "version"   "5.02"
 "level"   "64"
 "cost"   "7500"
@@ -147519,7 +147519,7 @@
 }
 "25197"
 {
-"name"   "Glyph of Light Well"
+"name"   "Glyph of Swift Well"
 "descr"   "Targets healed receive 15% increased movement speed for 2 seconds."
 "version"   "5.02"
 "level"   "60"
@@ -147533,7 +147533,7 @@
 }
 "25198"
 {
-"name"   "Glyph of Shadowform"
+"name"   "Glyph of Deathform"
 "descr"   "Increases Shadowform's strength by 40%, but once entered, cannot be exited."
 "version"   "5.02"
 "level"   "60"
@@ -147575,8 +147575,8 @@
 }
 "25201"
 {
-"name"   "Glyph of Necrotic Strike"
-"descr"   "Also absorbs healing for 20% of the damage dealt"
+"name"   "Glyph of Absorbing Strike"
+"descr"   "Necrotic Strike also absorbs healing for 20% of the damage dealt"
 "version"   "5.02"
 "level"   "60"
 "cost"   "400"
@@ -147915,7 +147915,7 @@
 }
 "25221"
 {
-"name"   "Book: Glyph of Lightwell"
+"name"   "Book: Glyph of Swift Well"
 "version"   "5.02"
 "level"   "64"
 "cost"   "12500"
@@ -147935,7 +147935,7 @@
 }
 "25222"
 {
-"name"   "Book: Glyph of Shadowform"
+"name"   "Book: Glyph of Deathform"
 "version"   "5.02"
 "level"   "64"
 "cost"   "12500"
@@ -147995,7 +147995,7 @@
 }
 "25225"
 {
-"name"   "Book: Glyph of Necrotic Strike"
+"name"   "Book: Glyph of Absorbing Strike"
 "version"   "5.02"
 "level"   "64"
 "cost"   "12500"
