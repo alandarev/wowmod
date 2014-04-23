@@ -121938,7 +121938,7 @@
 "ilevel"   "5"
 "str"   "13"
 "sta"   "8 "
-"cs"    "0.2"
+"cs"    "0.02"
 "armor_type"   "0"
 "class" "0"
 }
