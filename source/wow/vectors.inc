@@ -1508,9 +1508,9 @@ public wcShootEffect(effectid,&tmp1,&tmp2,&tmp3,bool:crit,tmp5,tmp6,tmp7,tmp8,tm
   case 43:
     if(tmp9==2)
     Effect43(tmp2,tmp3);
-  case 44:
-    if(tmp9==2)
-    Effect44(tmp2,tmp3);
+  //case 44:
+    //if(tmp9==2)
+    //Effect44(tmp2,tmp3);
   case 45:
     if(tmp9==2)
     Effect45(tmp2,tmp3);
