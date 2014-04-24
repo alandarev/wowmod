@@ -7837,6 +7837,7 @@ public wcRunTalent_4_RighteousShield(client)
     PrintToChatAll("Got this far2");
     wcGetTalentInfo(4,2,4,1,client,"holy",line);
     new holyreq=StringToInt(line);
+    PrintToChatAll("Holyreq is %i",holyreq);
     new power=GetHolyPower(client);
     PrintToChatAll("Got this far3");
     if(power>=holyreq)
@@ -7848,6 +7849,7 @@ public wcRunTalent_4_RighteousShield(client)
         WCMessage(client,"righteous shield on",client);
         SetHolyPower(client,GetHolyPower(client)-holyreq);
         g_iRighteousShield[client]=1;
+        PrintToChatAll("g_i is %i",g_iRighteousShield[client]);
       }
       else
         WCMessage(client,"already active",client);
