@@ -2985,9 +2985,16 @@ public Effect27(target, &damage)                                                
    decl String:line[255];
    wcGetTalentInfo(5,3,3,1,target,"multi",line);
    new Float:multi = StringToFloat(line);
+   PrintToChatAll("Target is %i",target);
    if(HasGlyph(target, GLYPH_PRIEST_SHADOWF))
-    multi*1.90;
+   {
+      PrintToChatAll("Multi is %f",multi);
+      multi*1.90;
+      PrintToChatAll("Multi is now %f",multi);
+   }
+   PrintToChatAll("Damage is %i",damage);
    damage = RoundToNearest (float(damage) * (1+multi));
+   PrintToChatAll("Damage is now %i",damage);
    return true;
 }
 

@@ -4348,7 +4348,6 @@ public wcRunTalent_5_3(client)                                                  
    if(minusCd > 0.0)
     cd -= minusCd;
 
-   SetCdSpell(client,cdtype,cd, 0, "Shadow Form");
    if(g_bShadowform[client] && !HasGlyph(client, GLYPH_PRIEST_SHADOWF))
    {
       RemoveEffectVictim(client,28);
@@ -4356,6 +4355,7 @@ public wcRunTalent_5_3(client)                                                  
       RemoveEffectSpellAtt(client,27);
       WCMessage(client,"shadow form deactivated",client);
       g_bShadowform[client]=false;
+      SetCdSpell(client,cdtype,cd, 0, "Shadow Form");
    }
    else if(!g_bShadowform[client])
    {
@@ -4366,6 +4366,7 @@ public wcRunTalent_5_3(client)                                                  
      g_bShadowform[client]=true;
      new manareq = GetTalentCost(client, 3, 3, 1);
      wcSetMana(client,GetMana(client)-manareq);
+     SetCdSpell(client,cdtype,cd, 0, "Shadow Form");
    }
 }
 
