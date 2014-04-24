@@ -6360,7 +6360,7 @@
   }
   "Mana Manipulaation name"
   {
-    "en"  	"Mana Manipulaation"
+    "en"  	"Mana Manipulation"
   }
   "Shadowform name"
   {
