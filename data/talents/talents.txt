@@ -3897,6 +3897,7 @@
             {
               "name"  "Shield of the Righteous"
               "max"  "1"
+              "event"  "player_cast"
               "active"  "1"
               "saveid"  "u"
               "cooldowntype" "17"

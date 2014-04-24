@@ -7442,7 +7442,7 @@
   }
   "Shield of the Righteous info"
   {
-    "en"		"<Active> Cause your next shot to deal increased damage, and to reduce the physical damage dealt to you for 5 seconds by 20%.\n    Each use increases your next Greater Heal's strength by 50%.\n    Costs 3 holy power."
+    "en"		"<Active> Cause your next shot to deal increased damage, and to reduce the physical damage dealt to you for 5 seconds by 20%%.\n    Each use increases your next Greater Heal's strength by 50%%.\n    Costs 3 holy power."
   }
   "Great Blessing of Kings info"
   {
