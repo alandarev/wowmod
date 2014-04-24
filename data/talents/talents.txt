@@ -2753,7 +2753,7 @@
             {
               "event"  "player_cast"
               "active"  "1"
-              "cooldown"  "30.000000"
+              "cooldown"  "20.000000"
               "cooldowntype"  "9"
               "duration"  "10.000000"
               "mana"  "80"
@@ -2864,18 +2864,18 @@
             }
             "1"
             {
-            "multi"  "0.075000"
-            "ticks"  "2"
-            "tickdelay" "2.0"
+            "multi"  "0.05000"
+            "ticks"  "3"
+            "tickdelay" "3.0"
             "name"  "Ignite"
             "max"  "2"
             "saveid"  "8"
             }
             "2"
             {
-            "multi"  "0.15000"
-            "ticks"  "2"
-            "tickdelay" "2.0"
+            "multi"  "0.1000"
+            "ticks"  "3"
+            "tickdelay" "3.0"
             "name"  "Ignite"
             "max"  "2"
             "saveid"  "8"
@@ -3810,8 +3810,8 @@
             }
             "1"
             {
-              "multi"  "0.00000"
-              "amulti"  "0.420000"
+              "multi"  "0.320000"
+              "amulti"  "0.550000"
               "event"  "player_cast"
               "active"  "1"
               "cooldown"  "10.000000"
@@ -5332,7 +5332,7 @@
             "tickdelay"  "0.5"
             "ticks" "5"
             "slowmulti" "0.85"
-            "multi" "0.07"
+            "multi" "0.08"
             "base"  "4"
             "mana"  "15"
             "manainc" "0.25"
@@ -9531,7 +9531,7 @@
             "saveid"  "L"
             "talentid"  "3"
             "active"  "1"
-            "multi"   "0.085"
+            "multi"   "0.055"
             "base"    "3"
             "jumps"   "5" //How many times it should jump
             "ticklength"    "1.0" //How long it takes for each tick to activate
@@ -9747,14 +9747,14 @@
             "name"  "Serene Mists"
             "max" "2"
             "saveid"  "T"
-            "jumps" "1"
+            "jumps" "0"
           }
           "2"
           {
             "name"  "Serene Mists"
             "max" "2"
             "saveid"  "T"
-            "jumps" "2"
+            "jumps" "1"
           }
         }
       }

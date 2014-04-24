@@ -1706,14 +1706,18 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   damagemulti*=1.05;
   if(PlayerHasBonusFast(victim, Profession:Prof_ExtraDef))
   damagemulti*=0.95;
-  if(GetStance(victim)==1)
-    damagemulti*=0.92;
+  //if(GetStance(victim)==1)
+    //damagemulti*=0.92;
   if(GetMonkStance(attacker)==2)
     damagemulti*=1.0;
   if(GetMonkStance(attacker)==3)
     damagemulti*=0.65;
   if(GetMonkStance(attacker)==1)
     damagemulti*=0.85;
+  if(GetMonkStance(victim)==3)
+    damagemulti*=1.2;
+  if(GetMonkStance(victim)==2)
+    damagemulti*=1.1;
   if(GetEventBool(event,"bonushit"))
     bonushit=1;
   if(g_iRenewingGlyph[victim]>0)
