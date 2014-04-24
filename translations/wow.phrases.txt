@@ -10465,5 +10465,9 @@
   {
     "en"      "@greenThat ability is already active"
   }
+  "righteous shield on"
+  {
+    "en"      "@greenRighteous Shield @defaulthas been activated"
+  }
 }
 
