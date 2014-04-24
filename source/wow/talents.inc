@@ -4419,10 +4419,14 @@ wcRunTalent_5_6(client,bool:noisy) { //Mental Strength
   if(HasGlyph(client, GLYPH_PRIEST_MENTAL))
   {
     wcGetTalentInfo(5,1,3,2,client,"multi",line);
-    new mana = RoundToNearest(GetMaxMana(client)*(1+StringToFloat(line)));
-    SetMaxMana(client,mana);
+    new mana = RoundToNearest(GetMaxMana(client)*(StringToFloat(line)));
+    wcClientsBonusStats[client][MAXMP]+=mana;
+    wcRecalculateStats(client);
+    new newMana=RoundToNearest(GetMaxMana(client) * multi);
+    wcSetMana(client,newMana);
   }
-  wcRecalculateStats(client);
+  else
+    wcRecalculateStats(client);
   if(noisy)
     WCMessage(client,"mental strength used", client, bonus, GetInt(client)+GetBonusInt(client));
 }
