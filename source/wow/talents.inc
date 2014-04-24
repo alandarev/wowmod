@@ -7846,6 +7846,7 @@ public wcRunTalent_4_RighteousShield(client)
       if(g_iRighteousShield[client]==0)
       {
         PrintToChatAll("Got this far5");
+        PrintToChatAll("client is %i",client);
         WCMessage(client,"righteous shield on",client);
         SetHolyPower(client,GetHolyPower(client)-holyreq);
         g_iRighteousShield[client]=1;

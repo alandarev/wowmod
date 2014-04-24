@@ -12,7 +12,6 @@ new g_iOffs_ActiveWeapon = -1;
 new g_vOffs_Punch = -1;
 new g_iOffs_NextPrimaryAttack = -1;
 new g_bShadowform[65];
-new g_iRighteousShield[65];
 
 new wcClientSeal[65];
 //new wcClientSealP[65];

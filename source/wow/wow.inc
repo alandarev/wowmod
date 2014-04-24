@@ -335,6 +335,7 @@ new g_bloodModel,g_bloodsprayModel,g_ef_ocean,g_ef_airlock_laser,g_ef_lgtning,g_
 new ClientTracer;
 new g_mdl_totem_h, g_mdl_totem_a, g_ef_flatflame;
 new g_iTotems[65][10];
+new g_iRighteousShield[65];
 //Effects since 1.06
 new g_ef_bluecore;
 //shaman effects
