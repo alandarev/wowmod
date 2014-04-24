@@ -2986,7 +2986,7 @@ public Effect27(target, &damage)                                                
    wcGetTalentInfo(5,3,3,1,target,"multi",line);
    new Float:multi = StringToFloat(line);
    if(HasGlyph(target, GLYPH_PRIEST_SHADOWF))
-    multi*1.40;
+    multi*1.90;
    damage = RoundToNearest (float(damage) * (1+multi));
    return true;
 }
@@ -2997,7 +2997,7 @@ public Effect28(victim, &damage)                                                
    wcGetTalentInfo(5,3,3,1,victim,"multi",line);
    new Float:multi = StringToFloat(line)*0.5;
    if(HasGlyph(victim, GLYPH_PRIEST_SHADOWF))
-    multi*1.40;
+    multi*1.90;
    damage = RoundToNearest (float(damage) * (1-multi));
    return true;
 }
