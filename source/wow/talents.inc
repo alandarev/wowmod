@@ -7830,6 +7830,7 @@ public wcRunTalent_4_HolyShieldGlyph(victim,attacker) //Holy Shield Revenge glyp
 
 public wcRunTalent_4_RighteousShield(client)
 {
+  decl String:line[255];
   if(HasShield(client)) 
   {
     wcGetTalentInfo(4,2,4,1,client,"holy",line);
@@ -7867,7 +7868,7 @@ public wcRunTalent_4_RighteousShieldActivate(client,victim,&totaldmg) //Shield o
   wcGetTalentInfo(4,2,4,1,client,"base",line);
   new dmg = StringToInt(line);
   wcGetTalentInfo(4,2,4,1,client,"multi",line);
-  dmg+=RoundToNearest(float(+GetSta(client)+GetBonusSta(client))*StringToFloat(line));
+  dmg+=RoundToNearest(float(GetSta(client)+GetBonusSta(client))*StringToFloat(line));
   totaldmg+=dmg;
   g_iRighteousShield[client]=0;
   new Float:location[3];

@@ -2831,7 +2831,7 @@ public wcRunSpell_5_3(spellid,race,client) //Greater Heal
   EmitAmbientSound("wc/spells/heal.wav",location);
   if(g_fGreaterHeal[client]>1.0)
   {
-    heal = RoundToNearest(g_fGreaterHeal[client] * float(heal))
+    heal = RoundToNearest(g_fGreaterHeal[client] * float(heal));
     wcGetTalentInfo(4,2,4,1,client,"heal",line);
     g_fGreaterHeal[client]-=StringToFloat(line);
   }

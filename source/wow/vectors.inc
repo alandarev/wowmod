@@ -1432,7 +1432,7 @@ public wcShootEffect(effectid,&tmp1,&tmp2,&tmp3,bool:crit,tmp5,tmp6,tmp7,tmp8,tm
     Effect12(tmp3, tmp1);
   case 13:
     if(tmp9==2)
-    Effect13(tmp3); //Shield Wall
+    Effect13(tmp3, tmp1); //Shield Wall
   case 14:
     if(tmp9==1)
     Effect14(tmp2); //Unleash stealth
