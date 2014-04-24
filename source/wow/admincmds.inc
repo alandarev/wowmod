@@ -609,6 +609,7 @@ public Action:TalentCmd(client,args)
         {
           if(CheckRequirements(client,4, 3, 3, 1))
             wcRunTalent_4_3(client); //Divine Storm
+        }
       case 4:
       {
         if(CheckRequirements(client,4,2,4,1))
