@@ -125,6 +125,7 @@ public PrecacheModels()
   PrecacheSound("wc/spells/corpseexplosionnew.wav");
   PrecacheSound("wc/spells/soulharvest.wav");
   PrecacheSound("wc/spells/taunt.wav");
+  PrecacheSound("wc/spells/Shield_of_the_Righteous.wav");
 
   //Monk sounds
   PrecacheSound("wc/spells/expelharm1.wav");
@@ -2237,13 +2238,23 @@ bool:Effect12(&damage, client) //Berserker Stance
    return true;
 }
 
-bool:Effect13(&damage)
+bool:Effect13(client, &damage)
 {
    decl String:line[255];
-   wcGetSpellInfo(1,12,"multi",line);
-   new Float:multi = StringToFloat(line);
-   damage = RoundToNearest (float(damage) * multi);
-   return true;
+   if(GetClass(client)==1)
+   {
+     wcGetSpellInfo(1,12,"multi",line);
+     new Float:multi = StringToFloat(line);
+     damage = RoundToNearest (float(damage) * multi);
+     return true;
+   }
+   else
+   {
+     wcGetTalentInfo(4,2,4,1,client,"reduction",line);
+     new Float:multi = StringToFloat(line);
+     damage = RoundToNearest (float(damage) * multi);
+     return true;
+   }
 }
 
 bool:Effect11(client, &damage)
@@ -3291,12 +3302,12 @@ Effect43(client,&damage)
   damage=RoundToNearest(damage*(1+StringToFloat(line)));
 }
 
-Effect44(client,&damage)
+/*Effect44(client,&damage)
 {
   decl String:line[255];
   wcGetTalentInfo(4,2,4,1,client,"multi",line);
   damage=RoundToNearest(damage*(1+StringToFloat(line)));
-}
+}*/
 
 Effect45(client,&damage)
 {

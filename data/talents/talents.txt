@@ -3646,7 +3646,7 @@
             {
               "cooldown"  "15.000000"
               "duration"  "2.000000"
-              "mutli" "0.0"
+              "multi" "0.0"
               "name"  "Guardian's Favor"
               "max"  "3"
               "saveid"  "9"
@@ -3657,28 +3657,21 @@
             "0"
             {
               "name"  "Devotion Aura"
-              "max"  "3"
+              "max"  "2"
               "saveid"  "0"
             }
             "1"
             {
-              "multi"  "0.070000"
+              "multi"  "0.10"
               "name"  "Devotion Aura"
-              "max"  "3"
+              "max"  "2"
               "saveid"  "0"
             }
             "2"
             {
-              "multi"  "0.130000"
+              "multi"  "0.20"
               "name"  "Devotion Aura"
-              "max"  "3"
-              "saveid"  "0"
-            }
-            "3"
-            {
-              "multi"  "0.200000"
-              "name"  "Devotion Aura"
-              "max"  "3"
+              "max"  "2"
               "saveid"  "0"
             }
           }
@@ -3695,14 +3688,14 @@
               "name"  "Divine Body"
               "max"  "2"
               "saveid"  "q"
-              "multi" "0.05"
+              "multi" "0.075"
             }
             "2"
             {
               "name"  "Divine Body"
               "max"  "2"
               "saveid"  "q"
-              "multi" "0.1"
+              "multi" "0.15"
             }
           }
         }
@@ -3896,17 +3889,25 @@
           {
             "0"
             {
-              "name"  "Divine Guardian"
+              "name"  "Shield of the Righteous"
               "max"  "1"
               "saveid"  "u"
-              "multi" "0.05"
             }
             "1"
             {
-              "name"  "Divine Guardian"
+              "name"  "Shield of the Righteous"
               "max"  "1"
+              "active"  "1"
               "saveid"  "u"
-              "multi" "0.05"
+              "cooldowntype" "17"
+              "cooldown"  "8.0"
+              "holy"  "3"
+              "heal"  "0.50"
+              "reduction" "0.80"
+              "base"  "12"
+              "multi" "0.06"
+              "talentid"  "4"
+              "duration"  "5.0"
             }
           }
           "2"

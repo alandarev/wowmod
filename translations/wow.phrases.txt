@@ -6166,9 +6166,9 @@
   {
     "en"  	"Divine Intervention"
   }
-  "Divine Guardian name"
+  "Shield of the Righteous name"
   {
-    "en"  	"Divine Guardian"
+    "en"  	"Shield of the Righteous"
   }
   "Great Blessing of Kings name"
   {
@@ -7406,11 +7406,11 @@
   }
   "Devotion Aura info"
   {
-    "en"		"<Passive> Increases your armor. Requires a shield.\n    Rank 1: +7%% armor\n    Rank 2: +13%% armor\n    Rank 3: +20%% armor"
+    "en"		"<Passive> Increases your armor. Requires a shield.\n    Rank 1: +10%% armor\n    Rank 2: +20%% armor"
   }
   "Divine Body info"
   {
-    "en"		"<Passive> You gain increased healing from others.\n    Rank 1: +5%% healing\n    Rank 2: +10%% healing"
+    "en"		"<Passive> You gain increased healing from others.\n    Rank 1: +7.5%% healing\n    Rank 2: +15%% healing"
   }
   "Reckoning info"
   {
@@ -7440,9 +7440,9 @@
   {
     "en"		"<Passive> Any hit that would kill you has a small chance to heal you instead.\n    Rank 1: 8%% chance\n    Rank 2: 16%% chance\n    Rank 3: 25%% chance"
   }
-  "Divine Guardian info"
+  "Shield of the Righteous info"
   {
-    "en"		"<Passive> Reduces the damage your entire team takes.\n    Rank 1: -5%% team damage"
+    "en"		"<Active> Cause your next shot to deal increased damage, and to reduce the physical damage dealt to you for 5 seconds by 20%.\n    Each use increases your next Greater Heal's strength by 50%.\n    Costs 3 holy power."
   }
   "Great Blessing of Kings info"
   {
@@ -8978,6 +8978,10 @@
   {
     "en"      "@greenNot enough energy"
   }
+  "no holy"
+  {
+    "en"      "@greenNot enough holy power"
+  }
   "no runic"
   {
     "en"      "@greenNot enough runic power"
@@ -10456,6 +10460,10 @@
   "fanofswords target"
   {
     "en"      "@att has cast @lightgreenFan of Swords @defaultto You and did @dmg damage"
+  }
+  "already active"
+  {
+    "en"      "@greenThat ability is already active"
   }
 }
 

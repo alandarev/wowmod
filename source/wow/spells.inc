@@ -32,6 +32,7 @@ new g_iMiss[65];
 new g_iHarvest[65];
 new g_iEcho[65];
 new g_iPolycaster[65];
+new Float:g_fGreaterHeal[65]=1.0;
 
 stock bool:addToSpellbar(client, id)  {
   for(new i=0; i<7; i++)  {
@@ -2828,6 +2829,12 @@ public wcRunSpell_5_3(spellid,race,client) //Greater Heal
   heal = RoundToNearest(0.7 * heal);
   new maxHeal = heal;
   EmitAmbientSound("wc/spells/heal.wav",location);
+  if(g_fGreaterHeal[client]>1.0)
+  {
+    heal = RoundToNearest(g_fGreaterHeal[client] * float(heal))
+    wcGetTalentInfo(4,2,4,1,client,"heal",line);
+    g_fGreaterHeal[client]-=StringToFloat(line);
+  }
   heal=wcHeal(client,target,heal,spellid,true);
   if(race == 5 && wcSearchSpell(client,10)>0) {
     //Inner fire bonuses

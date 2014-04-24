@@ -927,8 +927,8 @@ public wcRunPassiveTalents(client)
         wcRunTalent_4_13(client); //Eye for an eye
       if(CheckRequirements(client,4,1,4,1))
         wcRunTalent_4_BeaconOfLight(client);
-      if(CheckRequirements(client,4,2,4,1))
-        wcRunTalent_4_DivineGuardian(client);
+      //if(CheckRequirements(client,4,2,4,1))
+        //wcRunTalent_4_DivineGuardian(client);
       if(CheckRequirements(client,4,3,1,4))
         wcRunTalent_4_SpeedOfLight(client);
     }
@@ -4013,7 +4013,7 @@ wcRunTalent_4_DivineInt(client, &damage)
   }
 }
 
-wcRunTalent_4_DivineGuardian(client)
+/*wcRunTalent_4_DivineGuardian(client)
 {
 
   WCMessage(client,"divine guardian",client);
@@ -4032,7 +4032,7 @@ wcRunTalent_4_DivineGuardian(client)
       SetEffectSpellVic(clients[i],44);
     }
   }
-}
+}*/
 
 wcRunTalent_4_SpeedOfLight(client)
 {
@@ -4076,7 +4076,7 @@ wcRunTalent_4_VengefulWarrior(client,victim)
   }
 }
 
-wcRunTalent_4_GrandCrussade(client,&damage)
+wcRunTalent_4_GrandCrussade(client,&damage) //Templar's Verdict
 {
   decl String:line[255];
   wcGetTalentInfo(4,3,4,1,client,"chance",line);
@@ -7828,9 +7828,63 @@ public wcRunTalent_4_HolyShieldGlyph(victim,attacker) //Holy Shield Revenge glyp
   wcSpellDamage(attacker,victim,dmg, "", "",line);
 }
 
+public wcRunTalent_4_RighteousShield(client)
+{
+  if(HasShield(client)) 
+  {
+    wcGetTalentInfo(4,2,4,1,client,"holy",line);
+    new holyreq=StringToInt(line);
+    new power=GetHolyPower(client);
+    if(power>=holyreq)
+    {
+      if(g_iRighteousShield[client]==0)
+      {
+        WCMessage(client,"righteous shield on",client);
+        SetHolyPower(client,GetHolyPower(client)-holyreq);
+        g_iRighteousShield[client]=1;
+      }
+      else
+        WCMessage(client,"already active",client);
+    }
+    else
+      WCMessage(client,"no holy",client);
+  }
+  else
+    WCMessage(client, "need shield", client);
+}
 
+public wcRunTalent_4_RighteousShieldActivate(client,victim,&totaldmg) //Shield of the Righteous
+{
+  decl String:line[255];
+  wcGetTalentInfo(4,2,4,1,client,"heal",line);
+  g_fGreaterHeal[client]+=StringToFloat(line);
+  AddEMsgAff("Shield of the Righteous name", true);
+  wcGetTalentInfo(4,2,4,1,client,"cooldowntype",line);
+  new cdtype=StringToInt(line);
+  wcGetTalentInfo(4,2,4,1,client,"cooldown",line);
+  new Float:cd=StringToFloat(line);
+  SetCdSpell(client,cdtype,cd, 0, "Shield of the Righteous");
+  wcGetTalentInfo(4,2,4,1,client,"base",line);
+  new dmg = StringToInt(line);
+  wcGetTalentInfo(4,2,4,1,client,"multi",line);
+  dmg+=RoundToNearest(float(+GetSta(client)+GetBonusSta(client))*StringToFloat(line));
+  totaldmg+=dmg;
+  g_iRighteousShield[client]=0;
+  new Float:location[3];
+  GetClientAbsOrigin(victim,location);
+  EmitAmbientSound("wc/spells/Shield_of_the_Righteous.wav",location);
+  
+  wcGetTalentInfo(4,2,4,1,client,"duration",line);
+  new Float:duration=StringToFloat(line);
+  SetEffectVictim(client,13);
+  CreateTimer(duration,RemoveRighteous,client);
+  return totaldmg;
 
-
+}
+public Action:RemoveRighteous(Handle:timer, any:client)
+{
+  RemoveEffectVictim(client,13);
+}
 
 
 

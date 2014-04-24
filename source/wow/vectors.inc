@@ -2178,6 +2178,8 @@ public InstallDownloads()
     AddFileToDownloadsTable("sound/wc/spells/corpseexplosionnew.wav");
     AddFileToDownloadsTable("sound/wc/spells/soulharvest.wav");
     AddFileToDownloadsTable("sound/wc/spells/taunt.wav");
+    AddFileToDownloadsTable("sound/wc/spells/Shield_of_the_Righteous.wav");
+    
 
     //Monk sounds
     AddFileToDownloadsTable("sound/wc/spells/expelharm1.wav");

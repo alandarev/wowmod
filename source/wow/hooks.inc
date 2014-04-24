@@ -12,6 +12,7 @@ new g_iOffs_ActiveWeapon = -1;
 new g_vOffs_Punch = -1;
 new g_iOffs_NextPrimaryAttack = -1;
 new g_bShadowform[65];
+new g_iRighteousShield[65];
 
 new wcClientSeal[65];
 //new wcClientSealP[65];
@@ -1863,6 +1864,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     else if(StrEqual(weaponname,"Physical",false)) //physical damage
     {
       new bool:red = GetEventBool(event, "reduction");
+      if(g_iRighteousShield[attacker]==1)
+        wcRunTalent_4_RighteousShieldActivate(attacker,victim,damage);
       if(GetStance(attacker)==2)
         damagemulti *= 1.1;
       //Curse?
