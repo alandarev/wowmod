@@ -1236,6 +1236,8 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
         wcRunTalent_4_1(attacker,victim);
       if(CheckRequirements(attacker,4,3,4,1) && prio == 2 && !spell)
         wcRunTalent_4_GrandCrussade(attacker,damage);
+      if(g_iRighteousShield[attacker]>0)
+        wcRunTalent_4_RighteousShieldActivate(attacker,victim,damage);
     }
     case 5:
     {
@@ -7862,7 +7864,7 @@ public wcRunTalent_4_RighteousShield(client)
     WCMessage(client, "need shield", client);
 }
 
-public wcRunTalent_4_RighteousShieldActivate(client,victim,&totaldmg) //Shield of the Righteous
+public wcRunTalent_4_RighteousShieldActivate(client,victim,&damage) //Shield of the Righteous
 {
   decl String:line[255];
   wcGetTalentInfo(4,2,4,1,client,"heal",line);
@@ -7877,7 +7879,7 @@ public wcRunTalent_4_RighteousShieldActivate(client,victim,&totaldmg) //Shield o
   new dmg = StringToInt(line);
   wcGetTalentInfo(4,2,4,1,client,"multi",line);
   dmg+=RoundToNearest(float(GetSta(client)+GetBonusSta(client))*StringToFloat(line));
-  totaldmg+=dmg;
+  damage+=dmg;
   g_iRighteousShield[client]=0;
   new Float:location[3];
   GetClientAbsOrigin(victim,location);
@@ -7887,7 +7889,6 @@ public wcRunTalent_4_RighteousShieldActivate(client,victim,&totaldmg) //Shield o
   new Float:duration=StringToFloat(line);
   SetEffectVictim(client,13);
   CreateTimer(duration,RemoveRighteous,client);
-  return totaldmg;
 
 }
 public Action:RemoveRighteous(Handle:timer, any:client)

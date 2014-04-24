@@ -1863,8 +1863,6 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     else if(StrEqual(weaponname,"Physical",false)) //physical damage
     {
       new bool:red = GetEventBool(event, "reduction");
-      if(g_iRighteousShield[attacker]>0)
-        wcRunTalent_4_RighteousShieldActivate(attacker,victim,damage);
       if(GetStance(attacker)==2)
         damagemulti *= 1.1;
       //Curse?
