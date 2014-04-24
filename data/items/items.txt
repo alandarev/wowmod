@@ -147534,7 +147534,7 @@
 "25198"
 {
 "name"   "Glyph of Deathform"
-"descr"   "Increases Shadowform's strength by 40%, but once entered, cannot be exited."
+"descr"   "Increases Shadowform's strength by 50%, but once entered, cannot be exited."
 "version"   "5.02"
 "level"   "60"
 "cost"   "400"
