@@ -4422,7 +4422,8 @@ wcRunTalent_5_6(client,bool:noisy) { //Mental Strength
     new mana = RoundToNearest(GetMaxMana(client)*(StringToFloat(line)));
     wcClientsBonusStats[client][MAXMP]+=mana;
     wcRecalculateStats(client);
-    new newMana=RoundToNearest(GetMaxMana(client) * multi);
+    wcGetTalentInfo(5,1,3,2,client,"multi",line);
+    new newMana=RoundToNearest(GetMaxMana(client) * StringToFloat(line));
     wcSetMana(client,newMana);
   }
   else
