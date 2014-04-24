@@ -7831,15 +7831,20 @@ public wcRunTalent_4_HolyShieldGlyph(victim,attacker) //Holy Shield Revenge glyp
 public wcRunTalent_4_RighteousShield(client)
 {
   decl String:line[255];
+  PrintToChatAll("Got this far");
   if(HasShield(client)) 
   {
+    PrintToChatAll("Got this far2");
     wcGetTalentInfo(4,2,4,1,client,"holy",line);
     new holyreq=StringToInt(line);
     new power=GetHolyPower(client);
+    PrintToChatAll("Got this far3");
     if(power>=holyreq)
     {
+      PrintToChatAll("Got this far4");
       if(g_iRighteousShield[client]==0)
       {
+        PrintToChatAll("Got this far5");
         WCMessage(client,"righteous shield on",client);
         SetHolyPower(client,GetHolyPower(client)-holyreq);
         g_iRighteousShield[client]=1;
