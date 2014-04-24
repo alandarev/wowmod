@@ -7833,26 +7833,18 @@ public wcRunTalent_4_HolyShieldGlyph(victim,attacker) //Holy Shield Revenge glyp
 public wcRunTalent_4_RighteousShield(client)
 {
   decl String:line[255];
-  PrintToChatAll("Got this far");
   if(HasShield(client)) 
   {
-    PrintToChatAll("Got this far2");
     wcGetTalentInfo(4,2,4,1,client,"holy",line);
     new holyreq=StringToInt(line);
-    PrintToChatAll("Holyreq is %i",holyreq);
     new power=GetHolyPower(client);
-    PrintToChatAll("Got this far3");
     if(power>=holyreq)
     {
-      PrintToChatAll("Got this far4");
       if(g_iRighteousShield[client]==0)
       {
-        PrintToChatAll("Got this far5");
-        PrintToChatAll("client is %i",client);
         WCMessage(client,"righteous shield on",client);
         SetHolyPower(client,GetHolyPower(client)-holyreq);
         g_iRighteousShield[client]=1;
-        PrintToChatAll("g_i is %i",g_iRighteousShield[client]);
       }
       else
         WCMessage(client,"already active",client);
@@ -7867,6 +7859,8 @@ public wcRunTalent_4_RighteousShield(client)
 public wcRunTalent_4_RighteousShieldActivate(client,victim,&damage) //Shield of the Righteous
 {
   decl String:line[255];
+  if(1.0>g_fGreaterHeal[client])
+    g_fGreaterHeal[client]=1.0;
   wcGetTalentInfo(4,2,4,1,client,"heal",line);
   g_fGreaterHeal[client]+=StringToFloat(line);
   AddEMsgAff("Shield of the Righteous name", true);

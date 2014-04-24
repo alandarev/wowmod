@@ -32,7 +32,7 @@ new g_iMiss[65];
 new g_iHarvest[65];
 new g_iEcho[65];
 new g_iPolycaster[65];
-new Float:g_fGreaterHeal[65]=1.0;
+new Float:g_fGreaterHeal[65];
 
 stock bool:addToSpellbar(client, id)  {
   for(new i=0; i<7; i++)  {
