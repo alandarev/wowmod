@@ -1884,7 +1884,7 @@ TriggerBossDrop() {
           new StringID=BreakString(Ssets, Stemp, sizeof(Stemp));
           new amount=1;
           sets[1]=StringToInt(Stemp);
-          /*
+          
           while(StringID>=0)
           {
             PrintToChatAll("7");
@@ -1958,7 +1958,7 @@ TriggerBossDrop() {
               if(IsClientInGame(x) && (x!=winner))
               WCMessage(x,"item dropped back",x,winnername,uitem[Item_Name]);
             }
-          }*/
+          }
 
         }
         //end of sets drops
