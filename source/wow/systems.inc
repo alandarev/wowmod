@@ -1933,6 +1933,7 @@ TriggerBossDrop() {
             {
               PrintToChatAll("12");
               winner=RollBetween(targets,pamount);
+
               if(wcDamageDone[winner]<g_iBossDropDmgMin && wcHealingDone[winner]<g_iBossDropHealMin)
               {
                 PrintToChatAll("13");
@@ -1941,8 +1942,8 @@ TriggerBossDrop() {
               }
               else
                 foundwinner=true;
-            }
-            
+            }*/
+
             PrintToChatAll("14");
             if(winner==0)
             LogError("[WC] Could not roll for item");
@@ -1960,7 +1961,7 @@ TriggerBossDrop() {
               for(new x=1;x<=GetMaxClients();x++)
               if(IsClientInGame(x) && (x!=winner))
               WCMessage(x,"item dropped back",x,winnername,uitem[Item_Name]);
-            }*/
+            }
           }
 
         }
