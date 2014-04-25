@@ -147375,7 +147375,7 @@
 "class" "0"
 "reagents" "1"
 "reagent_1" "20161"
-"reagent_1_amount" "15"
+"reagent_1_amount" "30"
 }
 "25187"
 {
