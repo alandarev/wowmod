@@ -1987,7 +1987,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       else //Rockbiter "magical" damage
       {
         wcSetMana(attacker, GetMana(attacker) - 3);
-        new Float:penetration = float(GetBonusAgi(attacker)+GetAgi(attacker)) / 0.0; //Used to be 14.0, before that 11.0
+        new Float:penetration = 0.0; //Used to be 14.0, before that 11.0
         new armor=GetArmor(victim)-GetIgnoreArmor(attacker);
         new Float:improck=wcRunTalent_6_ImpRock(attacker);
         damagemulti *= (GetSpellReduction(victim,penetration)*(1.0+improck)+GetDmgRed(armor,victim)*(1.0-improck))/2.0;
