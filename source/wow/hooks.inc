@@ -1702,6 +1702,10 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   SetCombat(attacker, 8);
   SetCombat(victim,   8);
 
+  new itemid[UniqueItem];
+  GetCharItem(itemid, attacker, 22);
+  PrintToChatAll("Itemid is %i",itemid);
+  
   if(PlayerHasBonusFast(attacker, Profession:Prof_ExtraDamage))
   damagemulti*=1.05;
   if(PlayerHasBonusFast(victim, Profession:Prof_ExtraDef))

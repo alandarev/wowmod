@@ -2864,8 +2864,6 @@ stock Effect_m2(effid, client)
   }
 }
 
-
-
 //public Effect24(client, &damage)                                                //Death Wish
 //{
 //   decl String:line[255];
