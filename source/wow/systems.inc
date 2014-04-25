@@ -1928,8 +1928,8 @@ TriggerBossDrop() {
             new pamount=FindMatchingPlayers("@ct",targets);
             new winner=RollBetween(targets,pamount);
             new bool:foundwinner=false;
-            while(!foundwinner)
             /*
+            while(!foundwinner)
             {
               PrintToChatAll("12");
               winner=RollBetween(targets,pamount);
