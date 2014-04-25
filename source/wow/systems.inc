@@ -1895,10 +1895,10 @@ TriggerBossDrop() {
             StringID=-1;
             sets[amount]=StringToInt(Stemp);
           }
-          /*
           PrintToChatAll("8");
           new setitems[1501];
           new Iamount=0;
+          /*
           for(new x=1;x<=amount;x++)
           {
             PrintToChatAll("9");
