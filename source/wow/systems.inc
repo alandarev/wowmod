@@ -1898,7 +1898,7 @@ TriggerBossDrop() {
           PrintToChatAll("8");
           new setitems[1501];
           new Iamount=0;
-          /*
+          
           for(new x=1;x<=amount;x++)
           {
             PrintToChatAll("9");
@@ -1920,6 +1920,7 @@ TriggerBossDrop() {
               setitems[Iamount]=StringToInt(Stemp);
             }
           }
+          /*
           for(new y=1;y<=Camount;y++) if(setchance>=GetRandomFloat(0.0,1.0))
           {
             PrintToChatAll("11");
