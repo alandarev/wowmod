@@ -1876,14 +1876,15 @@ TriggerBossDrop() {
         //giving sets drops
         decl String:Ssets[255];
         KvGetString(wcbossdrop,"sets",Ssets,sizeof(Ssets),"0");
-        /*if((!StrEqual(Ssets,"0",false)) && (setchance>0.0)&&(Camount>0))
+        if((!StrEqual(Ssets,"0",false)) && (setchance>0.0)&&(Camount>0))
         {
           PrintToChatAll("6");
-          new sets[51];
+          new sets[128];
           decl String:Stemp[255];
           new StringID=BreakString(Ssets, Stemp, sizeof(Stemp));
           new amount=1;
           sets[1]=StringToInt(Stemp);
+          /*
           while(StringID>=0)
           {
             PrintToChatAll("7");
