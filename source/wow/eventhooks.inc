@@ -261,7 +261,7 @@ public RoundEndEvent(Handle:event,const String:name[],bool:dontBroadcast)
   ArenaRoundEnd(winner);
   if(IsBoss() || IsHNS())
   {
-    TriggerBossDrop();
+    //TriggerBossDrop();
     for(new x=1;x<=GetMaxClients();x++)
     {
       if(IsClientInGame(x))  {
