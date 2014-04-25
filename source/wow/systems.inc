@@ -1920,7 +1920,6 @@ TriggerBossDrop() {
               setitems[Iamount]=StringToInt(Stemp);
             }
           }
-          /*
           for(new y=1;y<=Camount;y++) if(setchance>=GetRandomFloat(0.0,1.0))
           {
             PrintToChatAll("11");
@@ -1942,6 +1941,7 @@ TriggerBossDrop() {
               else
                 foundwinner=true;
             }
+            /*
             PrintToChatAll("14");
             if(winner==0)
             LogError("[WC] Could not roll for item");
