@@ -1929,6 +1929,7 @@ TriggerBossDrop() {
             new winner=RollBetween(targets,pamount);
             new bool:foundwinner=false;
             while(!foundwinner)
+            /*
             {
               PrintToChatAll("12");
               winner=RollBetween(targets,pamount);
@@ -1941,7 +1942,7 @@ TriggerBossDrop() {
               else
                 foundwinner=true;
             }
-            /*
+            
             PrintToChatAll("14");
             if(winner==0)
             LogError("[WC] Could not roll for item");
