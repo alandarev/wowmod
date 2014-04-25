@@ -1958,9 +1958,9 @@ TriggerBossDrop() {
               if(IsClientInGame(x) && (x!=winner))
               WCMessage(x,"item dropped back",x,winnername,uitem[Item_Name]);
             }
-          }
+          }*/
 
-        }*/
+        }
         //end of sets drops
         if(KvGotoFirstSubKey(wcbossdrop))
         {
