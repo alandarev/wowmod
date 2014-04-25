@@ -3397,8 +3397,6 @@
       "speed" "0.4"
       "int"   "100"
       "xp"  "2000"
-	  "dropall" "13584"
-	  "dropall_amount" "1"
       "totalxp" "7000"
       "dmg"   "70"  //It is bullet damage, must be alot higher if you want it
       //to deal high damage.
