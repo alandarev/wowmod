@@ -2534,12 +2534,19 @@
   }
   "Rockbiter Weapon info"
   {
-    "en"     "Your weapon hits deal 50%% magical damage and 50%% physical.\nGrants additional spell penetration depending on your armor penetration.\nToggleable, costs 2 mana per hit."
+    "en"     "Your weapon hits deal 50%% magical damage and 50%% physical.   \nToggleable, costs 2 mana per hit."
   }
   "rockbiter cast"
   {
-    "#format" "{1:0.1f}"
-    "en"     "You cast @greenRockbiter Weapon @default. Your weapon shots will cost you 3 mana but do half magic damage with spell penetration of @lightgreen{1}"
+    "en"     "You cast @greenRockbiter Weapon @default. Your weapon shots will cost you 3 mana but do 50% magic damage"
+  }
+  "rockbiter cast improved"
+  {
+    "en"     "You cast @greenImproved Rockbiter Weapon @default. Your weapon shots will cost you 3 mana but do 62.5% magic damage"
+  }
+  "rockbiter cast improved2"
+  {
+    "en"     "You cast @greenImproved Rockbiter Weapon @default. Your weapon shots will cost you 3 mana but do 75% magic damage"
   }
   "rockbiter off"
   {
@@ -4645,7 +4652,7 @@
   }
   "Death Strike info"
   {
-    "en"    "A moderate chance on hit to increase your melee damage by 10%, also:\nHeals you for 5%% of your maximum health\nGenerates Runic Power."
+    "en"    "A moderate chance on hit to increase your melee damage by 10%, also:\nHeals you for 10%% of your maximum health\nGenerates Runic Power."
   }
   "death coil caster"
   {
@@ -7030,7 +7037,7 @@
   }
   "Fleet Footed info"
   {
-    "en"		"<Passive> Increases you movement speed and decreases your gravity.\n    Rank 1: +3%% movement speed, -10% gravity\n    Rank 2: +6%% movement speed, -20% gravity\n    Rank 3: +10%% movement speed, -30% gravity"
+    "en"		"<Passive> Increases you movement speed and decreases your gravity.\n    Rank 1: +3%% movement speed, -10%% gravity\n    Rank 2: +6%% movement speed, -20%% gravity\n    Rank 3: +10%% movement speed, -30%% gravity"
   }
   "Improved Cheat Death info"
   {
@@ -7094,7 +7101,7 @@
   }
   "Ambidexterity info"
   {
-    "en" "<Passive> Increases your attack power scaling on your agility\n    Rank 1: +25%% attack power scaling\n    Rank 2: +50%% attack power scaling"
+    "en" "<Passive> Increases the amount of attack power you gain from agility\n    Rank 1: +25%% attack power\n    Rank 2: +50%% attack power"
   }
   "Adrenaline Rush info"
   {
@@ -7762,7 +7769,7 @@
   }
   "Improved Rockbiter info"
   {
-    "en"		"Increases the amount of your attack that counts as magic\n    Rank One: +15%%\n    Rank Two: +25%%"
+    "en"		"Increases the amount of your attack that counts as magic\n    Rank One: +12.5%%\n    Rank Two: +25%%"
   }
   "Shamanistic Rage info"
   {
@@ -7994,7 +8001,7 @@
   }
   "Death-Knight Toughness info"
   {
-    "en"	  "Increases your armor.\n    Rank 1: +5%% armor\n    Rank 2: +10%% armor\n    Rank 3: +15%% armor"
+    "en"	  "Increases your armor.\n    Rank 1: +7%% armor\n    Rank 2: +13%% armor\n    Rank 3: +20%% armor"
   }
   "Mark of Blood info"
   {
@@ -9392,7 +9399,7 @@
   }
   "Agile Armor info"
   {
-    "en"  "Increases your armor depending your agility.\n    Rank 1: 33%% of your agility turned into armor\n    Rank 2: 66%% of your agility turned into armor\n    Rank 3: 100%% of your agility turned into armor"
+    "en"  "Increases your armor depending your agility.\n    Rank 1: 22%% of your agility turned into armor\n    Rank 2: 44%% of your agility turned into armor\n    Rank 3: 66%% of your agility turned into armor"
   }
   "tiger palm"
   {
@@ -9641,7 +9648,7 @@
   }
   "Enhanced Parry info"
   {
-    "en" "Increases your Parry chance and its damage reduction by 20%% each. Requires Ox or Tiger stance."
+    "en" "Increases your Parry chance and its damage reduction by 10%% each. Requires Ox or Tiger stance."
   }
   "chi hint"
   {

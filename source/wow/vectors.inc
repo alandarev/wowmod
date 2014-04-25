@@ -448,7 +448,7 @@ Float:GetItemRating(item[UniqueItem])  {
   return rating;
 }
 
-public wcRecalculateStats(client) {
+public wcRecalculateStats(client) { //Stats
   new id=GetPlayerID(client);
   if(IsZombie(client))
   {
@@ -465,11 +465,11 @@ public wcRecalculateStats(client) {
   {
     decl String:line[255];
     wcGetTalentInfo(2,2,2,4,client,"increase",line);
-    new Float:multi = 1.0 + StringToFloat(line);
+    new Float:multi =1.0 + StringToFloat(line);
     wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335*multi));
   }
   else
-    wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+float(GetAgi(client)+GetBonusAgi(client))*0.08335;
+    wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335));
 
   wcClientsStats[id][MAXHP]=150.0+(float(GetSta(client))+float(GetBonusSta(client)))*0.95+float(GetLevel(client))*1.2+wcClientsBonusStats[id][MAXHP];
   if(IsHeroic())

@@ -48,7 +48,7 @@
           }
           "1"
           {
-            "base"        "30"
+            "base"        "10"
             "multi"      "0.050000"
             "name"      "Warrior Toughness"
             "max"        "3"
@@ -56,7 +56,7 @@
           }
           "2"
           {
-            "base"        "30"
+            "base"        "20"
             "multi"      "0.100000"
             "name"      "Warrior Toughness"
             "max"        "3"
@@ -5952,7 +5952,7 @@
             "name"  "Improved Rockbiter"
               "max"  "2"
               "saveid"  "r"
-              "increment" "0.15"
+              "increment" "0.125"
           }
           "2"
           {
@@ -8668,21 +8668,21 @@
             "name"  "Agile Armor"
             "max" "3"
             "saveid"  "c"
-            "multi"   "3.0" //Not a mistake, bonus armor is agility / multi
+            "multi"   "4.5" //Not a mistake, bonus armor is agility / multi
           }
           "2"
           {
             "name"  "Agile Armor"
             "max" "3"
             "saveid"  "c"
-            "multi"   "2.0" //Not a mistake, bonus armor is agility / multi
+            "multi"   "3.0" //Not a mistake, bonus armor is agility / multi
           }
           "3"
           {
             "name"  "Agile Armor"
             "max" "3"
             "saveid"  "c"
-            "multi"   "1.0" //Not a mistake, bonus armor is agility / multi
+            "multi"   "1.5" //Not a mistake, bonus armor is agility / multi
           }
         }
         "3"

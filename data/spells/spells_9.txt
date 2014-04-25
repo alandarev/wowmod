@@ -102,8 +102,8 @@
     "name_ru"   "TODO"
     "event"     "player_spawn"
     "level"     "44"
-    "chance"    "0.20"
-    "reduce"    "0.20"
+    "chance"    "0.10"
+    "reduce"    "0.10"
     "range"     "750"  //information only, amount will be hard-coded
   }
   "8"
