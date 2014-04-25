@@ -423,8 +423,8 @@ new playerids[65],playerloaded[65],characterids[65][20];
 //end of vectors
 new wcHealingDone[65],wcDamageDone[65],wcDamageTaken[65],wcTotalHealing[65];
 // Boss dmg/healing done min for drops
-new g_iBossDropDmgMin=2000;
-new g_iBossDropHealMin=500;
+//new g_iBossDropDmgMin=2000;
+//new g_iBossDropHealMin=500;
 // absorb shields
 new wcClientAbsorb[65],wcManaShield[65];
 // seal store

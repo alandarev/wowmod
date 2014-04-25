@@ -1818,7 +1818,6 @@ stock TriggerDrop(client,victim, bool:self=false, Float:custom_rate=1.0)
 TriggerBossDrop() {
   if(!IsBoss() &&  !IsHNS())
   return;
-  PrintToChatAll("1");
   //HNS Integration
   if(IsHNS()) {
     new bool:hns_won=true;
@@ -1848,17 +1847,14 @@ TriggerBossDrop() {
       }
     }
   }
-  PrintToChatAll("2");
+
 
   if(IsBoss() ) for(new i=1;i<=GetMaxClients();i++)  {
-    PrintToChatAll("3");
     if(IsClientConnected(i))   if(IsClientInGame(i))   if(playerloaded[i]>=1)
     if(IsKilled(i))  {
-      PrintToChatAll("4");
       new boss=GetBoss(i);
       if(boss>0)
       {
-        PrintToChatAll("5");
         KvRewind(wcbossdrop);
         decl String:temp[9];
         IntToString(boss,temp,sizeof(temp));
@@ -1878,7 +1874,6 @@ TriggerBossDrop() {
         KvGetString(wcbossdrop,"sets",Ssets,sizeof(Ssets),"0");
         if((!StrEqual(Ssets,"0",false)) && (setchance>0.0)&&(Camount>0))
         {
-          PrintToChatAll("6");
           new sets[128];
           decl String:Stemp[255];
           new StringID=BreakString(Ssets, Stemp, sizeof(Stemp));
@@ -1887,7 +1882,6 @@ TriggerBossDrop() {
           
           while(StringID>=0)
           {
-            PrintToChatAll("7");
             amount++;
             new StringID2=BreakString(Ssets[StringID], Stemp, sizeof(Stemp));
             StringID+=StringID2;
@@ -1895,13 +1889,11 @@ TriggerBossDrop() {
             StringID=-1;
             sets[amount]=StringToInt(Stemp);
           }
-          PrintToChatAll("8");
           new setitems[1501];
           new Iamount=0;
           
           for(new x=1;x<=amount;x++)
           {
-            PrintToChatAll("9");
             KvRewind(wcsets);
             decl String:Sset[800];
             Format(Stemp,sizeof(Stemp),"set%i",sets[x]);
@@ -1911,7 +1903,6 @@ TriggerBossDrop() {
             setitems[Iamount]=StringToInt(Stemp);
             while(StringID>=0)
             {
-              PrintToChatAll("10");
               Iamount++;
               new StringID2=BreakString(Sset[StringID], Stemp, sizeof(Stemp));
               StringID+=StringID2;
@@ -1922,21 +1913,19 @@ TriggerBossDrop() {
           }
           for(new y=1;y<=Camount;y++) if(setchance>=GetRandomFloat(0.0,1.0))
           {
-            PrintToChatAll("11");
             new itemId=GetRandomInt(1,Iamount);
             new targets[65];
             new pamount=FindMatchingPlayers("@ct",targets);
             new winner=RollBetween(targets,pamount);
-            new bool:foundwinner=false;
-            /*
+            
+            //This breaks bossmod, DO NOT UNCOMMENT WITHOUT FIXING
+            /*new bool:foundwinner=false;
             while(!foundwinner)
             {
-              PrintToChatAll("12");
               winner=RollBetween(targets,pamount);
 
               if(wcDamageDone[winner]<g_iBossDropDmgMin && wcHealingDone[winner]<g_iBossDropHealMin)
               {
-                PrintToChatAll("13");
                 PrintToChat(winner,"Ineligible for boss drops.");
                 foundwinner=false;
               }
@@ -1944,7 +1933,6 @@ TriggerBossDrop() {
                 foundwinner=true;
             }*/
 
-            PrintToChatAll("14");
             if(winner==0)
             LogError("[WC] Could not roll for item");
             new String:winnername[50];
@@ -1956,7 +1944,6 @@ TriggerBossDrop() {
             WCMessage(winner,"failed drop",winner,uitem[Item_Name]);
             else
             {
-              PrintToChatAll("15");
               WCMessage(winner,"item dropped",winner,uitem[Item_Name]);
               for(new x=1;x<=GetMaxClients();x++)
               if(IsClientInGame(x) && (x!=winner))
@@ -1968,14 +1955,11 @@ TriggerBossDrop() {
         //end of sets drops
         if(KvGotoFirstSubKey(wcbossdrop))
         {
-          PrintToChatAll("16");
           do
           {
-            PrintToChatAll("17");
             new chance=KvGetNum(wcbossdrop,"chance");
             if(chance>=GetRandomInt(1,100))
             {
-              PrintToChatAll("18");
               new id=KvGetNum(wcbossdrop,"id");
               new targets[65];
               new amount=FindMatchingPlayers("@ct",targets);
@@ -1992,7 +1976,6 @@ TriggerBossDrop() {
               WCMessage(winner,"failed drop",winner,uitem[Item_Name]);
               else
               {
-                PrintToChatAll("19");
                 WCMessage(winner,"item dropped",winner,uitem[Item_Name]);
                 for(new x=1;x<=GetMaxClients();x++)
                 if(IsClientInGame(x) && (x!=winner))
@@ -2001,7 +1984,6 @@ TriggerBossDrop() {
             }
           } while(KvGotoNextKey(wcbossdrop));
         }
-        PrintToChatAll("20");
         if(tokenId > 0 && tokenAmount > 0) {
           new uitem[UniqueItem];
           GetItemProperties(uitem, tokenId, 0);
