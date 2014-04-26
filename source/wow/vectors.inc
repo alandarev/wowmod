@@ -470,6 +470,8 @@ public wcRecalculateStats(client) { //Stats
   }
   else if(GetMonkStance(client)!=3)
     wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335));
+  if(GetMonkStance(client)==3)
+    wcClientsStats[id][DAMAGE]=float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE];
 
   wcClientsStats[id][MAXHP]=150.0+(float(GetSta(client))+float(GetBonusSta(client)))*0.95+float(GetLevel(client))*1.2+wcClientsBonusStats[id][MAXHP];
   if(IsHeroic())
