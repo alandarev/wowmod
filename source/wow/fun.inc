@@ -232,10 +232,10 @@ public Action:RunQuiz(client, args)
 
    g_quizCorrectId = 0;
 
-   new String:answers[10][255];
+   new String:answers[10][500];
    while (pos != -1 && answerCount < 8)
 	{	
-      decl String:temp[255];
+      decl String:temp[500];
       pos = BreakString(text[len], temp, sizeof(temp));
       answers[answerCount]=temp;
       answerCount++;
@@ -249,13 +249,13 @@ public Action:RunQuiz(client, args)
 	// Shuffling array
    for (new x=1;x<answerCount;x++) {
     new y=GetRandomInt(x,answerCount-1);
-    decl String:temp[255];
+    decl String:temp[500];
     temp=answers[x];
     answers[x]=answers[y];
     answers[y]=temp;
 	}
    g_quizCorrectId = GetRandomInt(0, answerCount - 1);
-   new String:temp[255];
+   new String:temp[500];
    temp=answers[0];
    answers[0]=answers[g_quizCorrectId];
    answers[g_quizCorrectId]=temp;
@@ -266,7 +266,7 @@ public Action:RunQuiz(client, args)
    if(g_hQuizMenu != INVALID_HANDLE)
     QuizMenuClose();
    ReplyToCommand(client,"%c[WC] %c%t",COLOR_GREEN,COLOR_DEFAULT,"Admin quiz started");
-   decl String:item_name[255];
+   decl String:item_name[500];
    if(g_quizItemId>0)
       GetItemName(g_quizItemId,item_name);
    else
@@ -307,7 +307,7 @@ public Action:EndQuiz(Handle:timer, any:trash)
     GetItemProperties(uitem, g_quizItemId);
    for(new i=1;i<=GetMaxClients();i++) {
       if(IsClientConnected(i))   if(IsClientInGame(i)) {
-         decl String:uAnswer[255],String:rAnswer[255];
+         decl String:uAnswer[500],String:rAnswer[500];
          if (g_iQuizCAnswer[i] >= 0) {
             total++;
             GetMenuItem(g_hQuizMenu,g_iQuizCAnswer[i], uAnswer, sizeof(uAnswer) );
@@ -318,7 +318,7 @@ public Action:EndQuiz(Handle:timer, any:trash)
          WCMessage(i,"Q right answer",i, rAnswer, uAnswer);
          if (g_iQuizCAnswer[i] == g_quizCorrectId) {
             totalC++;
-            decl String:itemName[255];
+            decl String:itemName[500];
             if(g_quizItemId>0)
                GetItemName(g_quizItemId,itemName);
             else

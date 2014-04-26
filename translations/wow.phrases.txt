@@ -4604,7 +4604,7 @@
   }
   "Blood Strike info"
   {
-    "en"    "Increases your melee damage by 15% and generates 15 Runic Power.\n15% chance to cast on hit."
+    "en"    "Increases your melee damage by 15%% and generates 15 Runic Power.\n15%% chance to cast on hit."
   }
   "death grip caster"
   {
@@ -4652,7 +4652,7 @@
   }
   "Death Strike info"
   {
-    "en"    "A moderate chance on hit to increase your melee damage by 10%, also:\nHeals you for 10%% of your maximum health\nGenerates Runic Power."
+    "en"    "A moderate chance on hit to increase your melee damage by 10%%, also:\nHeals you for 10%% of your maximum health\nGenerates Runic Power."
   }
   "death coil caster"
   {
@@ -9234,7 +9234,7 @@
   }
   "Wc Tips Msg 17"
   {
-    "en"  "Spamming AoE spells through the walls is NOT usually the definition of fun!" //really?!
+    "en"  "Spamming AoE spells through the walls is usually NOT the definition of fun!"
   }
   "Wc Tips Msg 18"
   {
@@ -9262,7 +9262,7 @@
   }
   "Wc Tips Msg 24"
   {
-    "en"  "The Priest claimed to not have had any sexual relations with the young Paladin apprentice, but we all know better."
+    "en"  "The @lightgreenPriest @defaultclaimed to not have had any sexual relations with the young @lightgreenPaladin @defaultapprentice, but we all know better."
   }
   //Referrer
   "Say Refferrer ID"
