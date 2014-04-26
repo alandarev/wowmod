@@ -3818,8 +3818,6 @@ public Effect59(client) //Energetic Recovery
     wcGetTalentInfo(2,2,2,2,client,"restore",line);
     new heal = RoundToNearest(StringToFloat(line)*float(GetMaxHealth(client)));
     wcHeal(client,client,heal,0,true);
-    if(0==1)
-      PrintToChatAll("This shouldn't be happening, and btw the heal is %i you dumb compiler",heal);
   }
 }
 

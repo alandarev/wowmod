@@ -7895,23 +7895,6 @@ public Action:RemoveRighteous(Handle:timer, any:client)
 {
   RemoveEffectVictim(client,13);
 }
-public wcRunTalent_2_EnergeticRecovery(client) //Energetic Recovery
-{
-
-  wcGetTalentInfo(2,2,2,2,client,"restore",line);
-  new Float:heal=StringToFloat(line);
-
-
-
-
-
-
-}
-
-
-
-
-
 
 
 
