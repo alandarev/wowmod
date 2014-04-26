@@ -3809,6 +3809,7 @@ public Action:EffectUnchaining(Handle:timer, Handle:datapack)
 }
 public Effect59(client) //Energetic Recovery
 {
+  decl String:line[255];
   new Float:accuracy = GetBonusAccuracy(client)+GetAccuracy(client);
   PrintToChatAll("accuracy is %f",accuracy);
   new Float:random = GetRandomFloat(0.0,1.0);
@@ -3817,6 +3818,8 @@ public Effect59(client) //Energetic Recovery
     wcGetTalentInfo(2,2,2,2,client,"restore",line);
     new heal = RoundToNearest(StringToFloat(line)*float(GetMaxHealth(client)));
     wcHeal(client,client,heal,0,true);
+    if(0==1)
+      PrintToChatAll("This shouldn't be happening, and btw the heal is %i you dumb compiler",heal);
   }
 }
 
