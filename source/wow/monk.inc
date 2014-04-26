@@ -3739,6 +3739,7 @@ stock KegActivate(entity) {
 
   SDKUnhook(entity, SDKHook_StartTouch, KegTouchHook);
   SDKUnhook(entity, SDKHook_OnTakeDamage, KegDamageHook);
+  SDKUnhook(entity, SDKHook_OnTakeDamage, KegDamageHook); //Remove this soon
 
   if(GetEntProp(entity, Prop_Data, "m_takedamage") == DAMAGE_YES){
 
