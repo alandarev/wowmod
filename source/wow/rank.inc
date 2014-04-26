@@ -89,7 +89,8 @@ stock spawnPlayerAttachedEntity(client, String:path[]) {
   new Ent = CreateEntityByName("env_sprite");
   if(!Ent) return -1;
 
-  SetEntityModel(Ent, path);
+  if(!CSGO)
+    SetEntityModel(Ent, path);
   /*DispatchKeyValue(Ent, "model", sprite);*/
   DispatchKeyValue(Ent, "classname", "env_sprite");
   DispatchKeyValue(Ent, "spawnflags", "1");

@@ -3706,7 +3706,8 @@ stock _spawnClientHpBar(client) {
 
   decl String:model[255];
   GetClientHpBarModel(GetClientHealth(client), model, sizeof(model));
-  SetEntityModel(Ent, model);
+  if(!CSGO)
+    SetEntityModel(Ent, model);
   /*DispatchKeyValue(Ent, "model", sprite);*/
   DispatchKeyValue(Ent, "classname", "env_sprite");
   DispatchKeyValue(Ent, "spawnflags", "1");
@@ -3769,7 +3770,8 @@ stock UpdateClientHpBar(client, hp=-1) {
     hp = GetClientHealth(client);
   }
   GetClientHpBarModel(hp, model, sizeof(model));
-  SetEntityModel(g_eHp[client], model);
+  if(!CSGO)
+    SetEntityModel(g_eHp[client], model);
 }
 
 stock RemoveClientHpBar(client) {

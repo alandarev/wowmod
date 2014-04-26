@@ -381,7 +381,8 @@ stock SpawnCTFHorde(Float:location[3])
     PrintToChatAll("Failed at SpawnCTFHorde");
     return;
   }
-  SetEntityModel(g_iFlag[0], "models/cf_models_src/ctf_80rd3.mdl");
+  if(!CSGO)
+    SetEntityModel(g_iFlag[0], "models/cf_models_src/ctf_80rd3.mdl");
   for(new x=0;x<1;x++)
   {
     SetEntityMoveType( g_iFlag[x], MOVETYPE_NONE );
@@ -402,7 +403,8 @@ stock SpawnCTFAlliance(Float:location[3])
     PrintToChatAll("Failed at SpawnCTFAlliance");
     return;
   }
-  SetEntityModel(g_iFlag[1], "models/cf_models_src/ctf_41114nc3.mdl");
+  if(!CSGO)
+    SetEntityModel(g_iFlag[1], "models/cf_models_src/ctf_41114nc3.mdl");
   for(new x=1;x<2;x++)
   {
     SetEntityMoveType( g_iFlag[x], MOVETYPE_NONE );
