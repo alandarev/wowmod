@@ -266,7 +266,7 @@ public Action:RunQuiz(client, args)
    if(g_hQuizMenu != INVALID_HANDLE)
     QuizMenuClose();
    ReplyToCommand(client,"%c[WC] %c%t",COLOR_GREEN,COLOR_DEFAULT,"Admin quiz started");
-   decl String:item_name[500];
+   decl String:item_name[255];
    if(g_quizItemId>0)
       GetItemName(g_quizItemId,item_name);
    else
@@ -318,7 +318,7 @@ public Action:EndQuiz(Handle:timer, any:trash)
          WCMessage(i,"Q right answer",i, rAnswer, uAnswer);
          if (g_iQuizCAnswer[i] == g_quizCorrectId) {
             totalC++;
-            decl String:itemName[500];
+            decl String:itemName[255];
             if(g_quizItemId>0)
                GetItemName(g_quizItemId,itemName);
             else
