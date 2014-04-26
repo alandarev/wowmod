@@ -461,14 +461,14 @@ public wcRecalculateStats(client) { //Stats
   if(GetStance(client)==3) //Unholy DK
   wcClientsStats[id][ATTACKSPEED]+=0.1;
 
-  if(CheckRequirements(client,2,2,2,4))
+  if((CheckRequirements(client,2,2,2,4)) && (GetMonkStance(client)!=3))
   {
     decl String:line[255];
     wcGetTalentInfo(2,2,2,4,client,"increase",line);
     new Float:multi =1.0 + StringToFloat(line);
     wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335*multi));
   }
-  else
+  else if(GetMonkStance(client)!=3)
     wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335));
 
   wcClientsStats[id][MAXHP]=150.0+(float(GetSta(client))+float(GetBonusSta(client)))*0.95+float(GetLevel(client))*1.2+wcClientsBonusStats[id][MAXHP];
