@@ -1589,14 +1589,14 @@
           {
             "0"
             {
-              "name"  "Hack and Slash"
+              "name"  "Energetic Recovery"
               "max"  "1"
               "saveid"  "b"
             }
             "1"
             {
-              "chance"  "15"
-              "name"  "Hack and Slash"
+              "restore"  "0.01"
+              "name"  "Energetic Recovery"
               "max"  "1"
               "saveid"  "b"
             }

@@ -2642,6 +2642,15 @@ wcRunSpell_2_10(spellid, race, client) {
     WritePackFloat(datapack3,oldspeed);
     CreateTimer(duration,RemoveAccuracy,datapack3,TIMER_HNDL_CLOSE);
     wcRecalculateStats(client);
+    if(CheckRequirements(client,2,2,2,2))
+    {
+      SetEffectAttacker(client,59);
+      new Handle:datapack2=CreateDataPack();
+      WritePackCell(datapack2,client);
+      WritePackCell(datapack2,59);
+      CreateTimer(duration,DestroyEffectAttacker,datapack2,TIMER_HNDL_CLOSE);
+    
+    }
     }
   else
   {

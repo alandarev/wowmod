@@ -1550,6 +1550,9 @@ public wcShootEffect(effectid,&tmp1,&tmp2,&tmp3,bool:crit,tmp5,tmp6,tmp7,tmp8,tm
   case 58:
     if(tmp9==1)
     Effect58(tmp2);
+  case 59:
+    if(tmp9==1)
+    Effect58(tmp2);
   default:  {
       //Multi effects
       if(effectid>100)  {

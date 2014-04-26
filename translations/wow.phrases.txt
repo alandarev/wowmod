@@ -2534,19 +2534,19 @@
   }
   "Rockbiter Weapon info"
   {
-    "en"     "Your weapon hits deal 50%% magical damage and 50%% physical.   \nToggleable, costs 2 mana per hit."
+    "en"     "Your weapon hits deal 50%% magical damage and 50%% physical.   \nToggleable, costs 3 mana per hit."
   }
   "rockbiter cast"
   {
-    "en"     "You cast @greenRockbiter Weapon @default. Your weapon shots will cost you 3 mana but do 50% magic damage"
+    "en"     "You cast @greenRockbiter Weapon@default. Your weapon shots will cost you @lightgreen3 @defaultmana but do @lightgreen50%% @defaultmagic damage"
   }
   "rockbiter cast improved"
   {
-    "en"     "You cast @greenImproved Rockbiter Weapon @default. Your weapon shots will cost you 3 mana but do 62.5% magic damage"
+    "en"     "You cast @greenImproved Rockbiter Weapon@default. Your weapon shots will cost you @lightgreen3 @defaultmana but do @lightgreen62.5%% @defaultmagic damage"
   }
   "rockbiter cast improved2"
   {
-    "en"     "You cast @greenImproved Rockbiter Weapon @default. Your weapon shots will cost you 3 mana but do 75% magic damage"
+    "en"     "You cast @greenImproved Rockbiter Weapon@default. Your weapon shots will cost you @lightgreen3 @defaultmana but do @lightgreen75%% @defaultmagic damage"
   }
   "rockbiter off"
   {
@@ -5853,6 +5853,10 @@
   {
     "en"  	"Hack and Slash"
   }
+  "Energetic Recovery name"
+  {
+    "en"  	"Energetic Recovery"
+  }
   "Improved Sinister Strike name"
   {
     "en"  	"Improved Sinister Strike"
@@ -7094,6 +7098,10 @@
   "Hack and Slash info"
   {
     "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50%% of its damage.\n    Rank 1: 15%% chance"
+  }
+  "Energetic Recovery info"
+  {
+    "en"		"<Passive> While Slice and Dice is active, your attacks have a chance equal to your accuracy to restore 1%% of your health"
   }
   "Improved Sinister Strike info"
   {

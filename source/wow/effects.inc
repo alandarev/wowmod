@@ -506,7 +506,7 @@ stock SetSilence(client,Float:silence,bool:trueSilence=false)
   if(!trueSilence)
     switch(GetClass(client))  {
       case 1: return;
-      case 2: return;
+      //case 2: return;
   }
   new bool:avoid=true;
   if(!trueSilence && GetClass(client)==3)
@@ -3807,3 +3807,25 @@ public Action:EffectUnchaining(Handle:timer, Handle:datapack)
     WCMessage(client,"Unchaining end",client);
   }
 }
+public Effect59(client) //Energetic Recovery
+{
+  new Float:accuracy = GetBonusAccuracy(client)+GetAccuracy(client);
+  PrintToChatAll("accuracy is %f",accuracy);
+  new Float:random = GetRandomFloat(0.0,1.0);
+  if(accuracy>random)
+  {
+    wcGetTalentInfo(2,2,2,2,client,"restore",line);
+    new heal = RoundToNearest(StringToFloat(line)*float(GetMaxHealth(client)));
+    wcHeal(client,client,heal,0,true);
+  }
+}
+
+
+
+
+
+
+
+
+
+

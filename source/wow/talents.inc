@@ -1206,8 +1206,8 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
         wcRunTalent_2_4(attacker);
       if(CheckRequirements(attacker,2,1,2,3) && prio ==2 && !spell)
         wcRunTalent_2_7(attacker,damage);
-      if(CheckRequirements(attacker,2,2,2,2) && prio ==1 && !spell)
-        wcRunTalent_2_8(attacker,victim,olddmg,source);
+      //if(CheckRequirements(attacker,2,2,2,2) && prio ==1 && !spell)
+        //wcRunTalent_2_8(attacker,victim,olddmg,source);
       /*if(CheckRequirements(attacker,2,2,3,2) && prio ==1 && !spell)
         wcRunTalent_2_BladeTwisting(attacker,victim);*/
       if(CheckRequirements(attacker,2,2,3,3) && prio ==1 && !spell)
@@ -2316,7 +2316,7 @@ public wcRunTalent_2_9(client)                                                  
   wcRecalculateStats(client);
 }
 
-public wcRunTalent_2_8(client,victim, damage, String:weaponname[])             //Hack and Slash.
+/*public wcRunTalent_2_8(client,victim, damage, String:weaponname[])             //Hack and Slash.
 {
   decl String:line[255];
   wcGetTalentInfo(2,2,2,2,client,"chance",line);
@@ -2332,7 +2332,7 @@ public wcRunTalent_2_8(client,victim, damage, String:weaponname[])             /
   }
 
   return damage;
-}
+}*/
 
 public wcRunTalent_2_11(client,&Float:damagemulti)                              //Lethality
 {
@@ -7895,6 +7895,28 @@ public Action:RemoveRighteous(Handle:timer, any:client)
 {
   RemoveEffectVictim(client,13);
 }
+public wcRunTalent_2_EnergeticRecovery(client) //Energetic Recovery
+{
+
+  wcGetTalentInfo(2,2,2,2,client,"restore",line);
+  new Float:heal=StringToFloat(line);
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
