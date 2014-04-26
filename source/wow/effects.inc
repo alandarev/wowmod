@@ -3809,6 +3809,7 @@ public Action:EffectUnchaining(Handle:timer, Handle:datapack)
 }
 public Effect59(client) //Energetic Recovery
 {
+  PrintToChatAll("Got here too");
   decl String:line[255];
   new Float:accuracy = GetBonusAccuracy(client)+GetAccuracy(client);
   PrintToChatAll("accuracy is %f",accuracy);

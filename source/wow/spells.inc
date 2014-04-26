@@ -2644,12 +2644,13 @@ wcRunSpell_2_10(spellid, race, client) {
     wcRecalculateStats(client);
     if(CheckRequirements(client,2,2,2,2))
     {
+      PrintToChatAll("Got here!");
       SetEffectAttacker(client,59);
       new Handle:datapack2=CreateDataPack();
       WritePackCell(datapack2,client);
       WritePackCell(datapack2,59);
       CreateTimer(duration,DestroyEffectAttacker,datapack2,TIMER_HNDL_CLOSE);
-    
+      PrintToChatAll("Duration is %f!",duration);
     }
     }
   else
