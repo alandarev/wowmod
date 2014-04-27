@@ -3759,8 +3759,8 @@ stock DoKegSpell(client, Float:location[3])  {
   new Float:multi = StringToFloat(line);
   wcGetTalentInfo(9,1,3,1,client,"kegs",line);
   new kegamount = StringToInt(line);
-  //wcGetTalentInfo(9,1,3,1,client,"alpha",line);
-  //new alpha = StringToInt(line);
+  wcGetTalentInfo(9,1,3,1,client,"alpha",line);
+  new alpha = StringToInt(line);
   wcGetTalentInfo(9,1,3,1,client,"amount",line);
   new miss = StringToInt(line);
   new dmg =RoundToNearest(float(GetAgi(client)+GetBonusAgi(client))*multi)+base;
