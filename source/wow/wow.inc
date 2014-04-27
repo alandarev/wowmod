@@ -116,6 +116,7 @@ Author(s): Stinkyfax
 #define NEWBIE_UNTIL FindSettingInt("general","NEWBIE_UNTIL")
 
 #define SERVER_LEVEL_POLICY FindSettingInt("general", "SERVER_LEVEL_POLICY")
+
 #define FFADE_IN			0x0001		// Just here so we don't pass 0 into the function
 #define FFADE_OUT			0x0002		// Fade out (not in)
 #define FFADE_MODULATE			0x0004		// Modulate (don't blend)
