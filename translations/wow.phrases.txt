@@ -1749,12 +1749,12 @@
   "hp mp dmg taken"
   {
     "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s}"
-    "en" "HP: {1}/{2}\n{7}: {3}/{4}\nDamage Done: {5} | Damage Taken: {6}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4}\nDamage Done: {5} | Damage Taken: {6}"
   }
   "hp mp dmg threat"
   {
     "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s}"
-    "en" "HP: {1}/{2}\n{7}: {3}/{4}\nDamage Done: {5}\nThreat: {6}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4}\nDamage Done: {5}\nThreat: {6}"
   }
   "hint healing done"
   {
