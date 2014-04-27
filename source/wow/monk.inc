@@ -3266,7 +3266,10 @@ stock CreateChiBurst(client)  {
 
   SetEntityMoveType(entity, MOVETYPE_FLY);
   SetEntPropEnt(entity, Prop_Send, "m_hOwnerEntity", client);
-  SetEntityModel(entity, "models/effects/combineball.mdl");  // flying chicken? :D
+  if(!CSGO)
+    SetEntityModel(entity, "models/effects/combineball.mdl");  // flying chicken? :D
+  else
+    SetEntityModel(entity, "models/effects/energyball.mdl");
   TeleportEntity(entity, resultposition, clienteyeangle, anglevector);
 
   new gascloud = CreateEntityByName("env_rockettrail");

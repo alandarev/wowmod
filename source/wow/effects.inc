@@ -267,7 +267,7 @@ PrecacheCSGO()	{
   PrecacheModel("particle/star_ob_noz.vmt.vmt");
   SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
   ShieldSprite=PrecacheModel("sprites/strider_blackball.vmt"); //PowerWordShield Priest
-  ChaosSprite=PrecacheModel("effects/crystal_beam1.vmt"); // Chaos Bolt Sprite
+  ChaosSprite=PrecacheModel("sprites/crystal_beam1.vmt"); // Chaos Bolt Sprite
   g_ef_playerredsmall = PrecacheModel("sprites/player_red_small.vmt");
   g_ef_tpbeam001 = PrecacheModel("sprites/tp_beam001.vmt");
   g_ef_bluecore = PrecacheModel("sprites/physcannon_bluecore1b.vmt");
@@ -315,7 +315,7 @@ PrecacheCSGO()	{
   g_ef_hydragutbeam = PrecacheModel("effects/blueblacklargebeam.vmt");
   g_ef_blueblackflash = PrecacheModel("sprites/blueflare1.vmt");
   g_ef_fire01 = PrecacheModel("sprites/fire1.vmt");
-  g_ef_xbeam2 = PrecacheModel("sprites/crystal_beam1.vmt");
+  g_ef_xbeam2 = PrecacheModel("sprites/tp_beam001.vmt");
   g_ef_striderdarkflare = PrecacheModel("particle/particle_flares/aircraft_white.vmt");
   g_ef_particle_noisesphere = PrecacheModel ("particle/particle_noisesphere.vmt");
   g_ef_trail_blue = PrecacheModel("effects/bluespark.vmt");
