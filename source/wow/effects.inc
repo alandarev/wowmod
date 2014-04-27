@@ -564,10 +564,11 @@ public bool:FadeEffect(client,type,time,duration,const color[4])
       new Handle:hBf=StartMessageOne("Fade",client);
       if(hBf!=INVALID_HANDLE)
       {
-        PbSetInt(hBf, "duration", duration);
-        PbSetInt(hBf, "time", time);
-        PbSetInt(hBf, "type", type);
+        PbSetInt(hBf, "duration", duration); //Time it takes to fade 
+        PbSetInt(hBf, "hold_time", time); //How long it stays
+        PbSetInt(hBf, "flags", (FFADE_PURGE|FFADE_IN));
         PbSetColor(hBf, "clr", color);
+        
       }
     }
     else
