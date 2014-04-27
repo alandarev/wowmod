@@ -221,6 +221,16 @@ public RoundEndEvent(Handle:event,const String:name[],bool:dontBroadcast)
   LowLevelRound(); // give exp to low lvls every round
   for (new i=0;i<=299;i++)
     effectsdata[i][0]=0;  // clearing the effects
+
+  // Artificial limit for damage done/taken
+  for (new i=0; i<65; i++)  {
+    if (wcDamageDone[i] > 100000)
+      wcDamageDone[i] = 100000;
+    if (wcDamageTaken[i] > 100000)
+      wcDamageTaken[i] = 100000;
+    if (wcHealingDone[i] > 50000)
+      wcHealingDone[i] = 50000;
+  }
   CreateTimer(0.3,RoundStats,0);
   CreateTimer(0.5,DamageDoneXP,0);
   CreateTimer(0.5,HealingDoneXP,0);
