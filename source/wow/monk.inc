@@ -3759,8 +3759,8 @@ stock DoKegSpell(client, Float:location[3])  {
   new Float:multi = StringToFloat(line);
   wcGetTalentInfo(9,1,3,1,client,"kegs",line);
   new kegamount = StringToInt(line);
-  wcGetTalentInfo(9,1,3,1,client,"alpha",line);
-  new alpha = StringToInt(line);
+  //wcGetTalentInfo(9,1,3,1,client,"alpha",line);
+  //new alpha = StringToInt(line);
   wcGetTalentInfo(9,1,3,1,client,"amount",line);
   new miss = StringToInt(line);
   new dmg =RoundToNearest(float(GetAgi(client)+GetBonusAgi(client))*multi)+base;
@@ -3773,7 +3773,7 @@ stock DoKegSpell(client, Float:location[3])  {
   for (new x=0;x<=(amount-1);x++)
   {
     wcSpellDamage(targets[x],client,dmg, "", "",line);
-    FadeEffect(targets[x],2,alpha,duration,{253,219,196,211});
+    //FadeEffect(targets[x],2,alpha,duration,{253,219,196,211});
     WCMessage(targets[x],"dizzying haze target",targets[x],name,dmg,RoundToNearest(float(duration)/100));
     SetBrew(targets[x], GetBrew(targets[x])+kegamount);
     GetClientName(targets[x],name2,sizeof(name2));
