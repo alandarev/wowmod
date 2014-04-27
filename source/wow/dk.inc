@@ -868,26 +868,22 @@ public Action:GhoulEffect(Handle:timer, any:client)
   new team = GetClientTeam(client);
   if(GetZombieType(client) == 1)  switch(team)  {
     case 2:
-      if(!CSGO)
-        SetEntityModel(client,"models/player/slow/zombie_package/slow_5.mdl");
+      SetEntityModel(client,"models/player/slow/zombie_package/slow_5.mdl");
     case 3:
-      if(!CSGO)
-        SetEntityModel(client,"models/player/slow/zombie_package/slow_4.mdl");
+      SetEntityModel(client,"models/player/slow/zombie_package/slow_4.mdl");
   }
   else if(GetZombieType(client) == 2) switch(team)  {
     //TODO: infernal model
     case 2: {
       WCMessage(client, "boss spell blocked", client);
       if(!IsBoss())
-        if(!CSGO)
-          SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
+        SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
       new color2[4] = { 255, 200, 255, 255 };
       SetClientColor(client, color2);
     }
     case 3: {
       if(!IsBoss())
-        if(!CSGO)
-          SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
+        SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
       new color2[4] = { 200, 255, 255, 255 };
       SetClientColor(client, color2);
     }

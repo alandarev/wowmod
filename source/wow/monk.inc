@@ -2333,42 +2333,21 @@ public wcRunTalent_9_2_3_1(client, chi) //Monk DPS Increase from Chi Use
 }
 stock SpinningCraneKickEffect(client)
 {
-  if(GetLevel(client)>85)
-  {
-    new Float:location[3];
-    GetClientAbsOrigin(client,location);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
-    EmitAmbientSound("wc/spells/whirlwind.wav",location);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
-  }
-  else
-  {
-    new Float:location[3];
-    GetClientAbsOrigin(client,location);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-    EmitAmbientSound("wc/spells/whirlwind.wav",location);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-    location[2]+=10;
-    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  }
+  new Float:location[3];
+  GetClientAbsOrigin(client,location);
+  location[2]+=10;
+  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  location[2]+=10;
+  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  location[2]+=10;
+  VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  EmitAmbientSound("wc/spells/whirlwind.wav",location);
+  location[2]+=10;
+  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  location[2]+=10;
+  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  location[2]+=10;
+  VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
 }
 
 
@@ -3287,8 +3266,7 @@ stock CreateChiBurst(client)  {
 
   SetEntityMoveType(entity, MOVETYPE_FLY);
   SetEntPropEnt(entity, Prop_Send, "m_hOwnerEntity", client);
-  if(!CSGO)
-    SetEntityModel(entity, "models/effects/combineball.mdl");  // flying chicken? :D
+  SetEntityModel(entity, "models/effects/combineball.mdl");  // flying chicken? :D
   TeleportEntity(entity, resultposition, clienteyeangle, anglevector);
 
   new gascloud = CreateEntityByName("env_rockettrail");
@@ -3671,8 +3649,7 @@ stock createKeg(client) {
   SetEntPropFloat(entity, Prop_Data, "m_flGravity", 0.15);
   /*SetEntityModel(entity, "models/Items/ar2_grenade.mdl");*/
   /*SetEntityModel(entity, "models/lduke/chicken/chicken3.mdl");  // flying chicken? :D*/
-  if(!CSGO)
-    SetEntityModel(entity, "models/cf_models_src/beerfest_keg_pony01.mdl");
+  SetEntityModel(entity, "models/cf_models_src/beerfest_keg_pony01.mdl");
   /*SetEntityModel(entity, "models/cf_models_src/treasurechest01.mdl");*/
   // Play sound
 

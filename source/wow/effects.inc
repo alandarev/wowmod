@@ -262,7 +262,7 @@ PrecacheCSS()	{
 }
 
 PrecacheCSGO()	{
-  g_ef_physring1 = PrecacheModel("TODO");
+  g_ef_physring1 = PrecacheModel("sprites/physring1.vmt");
   PrecacheModel("particle/star_ob_noz.vmt.vmt");
   SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
   ShieldSprite=PrecacheModel("particle/muzzleflash/noisecloud1.vmt"); //PowerWordShield Priest
@@ -3706,8 +3706,7 @@ stock _spawnClientHpBar(client) {
 
   decl String:model[255];
   GetClientHpBarModel(GetClientHealth(client), model, sizeof(model));
-  if(!CSGO)
-    SetEntityModel(Ent, model);
+  SetEntityModel(Ent, model);
   /*DispatchKeyValue(Ent, "model", sprite);*/
   DispatchKeyValue(Ent, "classname", "env_sprite");
   DispatchKeyValue(Ent, "spawnflags", "1");
@@ -3770,8 +3769,7 @@ stock UpdateClientHpBar(client, hp=-1) {
     hp = GetClientHealth(client);
   }
   GetClientHpBarModel(hp, model, sizeof(model));
-  if(!CSGO)
-    SetEntityModel(g_eHp[client], model);
+  SetEntityModel(g_eHp[client], model);
 }
 
 stock RemoveClientHpBar(client) {

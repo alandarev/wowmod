@@ -2387,23 +2387,19 @@ stock SpawnChestModel(Float:location[3],Float:angles[3],chestrarity) {
   switch(chestrarity) {
     case 1:
     {
-      if(!CSGO)
-        SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest02.mdl");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest02.mdl");
     }
     case 2:
     {
-      if(!CSGO)
-        SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest05.mdl");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest05.mdl");
     }
     case 3:
     {
-      if(!CSGO)
-        SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest03.mdl");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest03.mdl");
     }
     case 4:
     {
-      if(!CSGO)
-        SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest04.mdl");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "models/cf_models_src/treasurechest04.mdl");
     }
   }
 
