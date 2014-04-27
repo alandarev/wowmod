@@ -562,6 +562,7 @@ public bool:FadeEffect(client,type,time,duration,const color[4])
     if(CSGO)
     {
       new Handle:hBf=StartMessageOne("Fade",client);
+      EndMessage();
       if(hBf!=INVALID_HANDLE)
       {
         PbSetInt(hBf, "duration", duration); //Time it takes to fade 
