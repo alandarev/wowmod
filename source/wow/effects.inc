@@ -208,6 +208,7 @@ PrecacheCSS()	{
   g_plasmaember = PrecacheModel("sprites/plasmaember.vmt");
   g_purplelaser1 = PrecacheModel("sprites/purplelaser1.vmt");
   g_ef_yellowflare = PrecacheModel("effects/yellowflare.vmt");
+  
   g_ef_physring1 = PrecacheModel("sprites/physring1.vmt");
   g_ef_flatflame = PrecacheModel("sprites/flatflame.vmt");
   g_mdl_totem_h = PrecacheModel("models/props/wow/h_totem/totem.mdl");
@@ -265,33 +266,37 @@ PrecacheCSGO()	{
   g_ef_physring1 = PrecacheModel("sprites/physring1.vmt");
   PrecacheModel("particle/star_ob_noz.vmt.vmt");
   SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
-  ShieldSprite=PrecacheModel("particle/muzzleflash/noisecloud1.vmt"); //PowerWordShield Priest
-  ChaosSprite=PrecacheModel("particle/muzzleflash/noisecloud1.vmt"); // Chaos Bolt Sprite
-  g_ef_bluecore = PrecacheModel("effects/energyball.vmt");
-  g_ef_hydragutbeam = PrecacheModel("effects/blueblacklargebeam.vmt");
+  ShieldSprite=PrecacheModel("sprites/strider_blackball.vmt"); //PowerWordShield Priest
+  ChaosSprite=PrecacheModel("effects/crystal_beam1.vmt"); // Chaos Bolt Sprite
+  g_ef_playerredsmall = PrecacheModel("sprites/player_red_small.vmt");
+  g_ef_tpbeam001 = PrecacheModel("sprites/tp_beam001.vmt");
+  g_ef_bluecore = PrecacheModel("sprites/physcannon_bluecore1b.vmt");
+  g_ef_hydragutbeampoison = PrecacheModel("sprites/hydragutbeam.vmt");
   g_ef_smoke = PrecacheModel("sprites/smoke.vmt");
-  g_ef_tp_beam001 = PrecacheModel("sprites/physbeam.vmt");
+  g_ef_tp_beam001 = PrecacheModel("sprites/tp_beam001.vmt");
   g_ef_old_xfire = PrecacheModel("sprites/xfireball3.vmt");
-  g_ef_glow1 = PrecacheModel("particle/star_noz.vmt");
+  g_ef_glow1 = PrecacheModel("sprites/glow.vmt");
   g_ef_glow01 = PrecacheModel("sprites/glow01.vmt");
   g_ef_lgtning = PrecacheModel("sprites/lgtning.vmt");
   g_ef_airlock_laser = PrecacheModel("sprites/laserbeam.vmt");
-  g_ef_ocean = PrecacheModel("effect/splash3.vmt");
+  g_ef_ocean = PrecacheModel("effect/splash4.vmt");
   g_bloodModel = PrecacheModel("sprites/zerogxplode.vmt");
+  g_ef_shellchrome = PrecacheModel("sprites/shellchrome.vmt");
   g_bloodsprayModel = PrecacheModel("sprites/bloodspray.vmt");
   //g_ar2_altfire1 = PrecacheModel("effects/ar2_altfire1.vmt"); - bugged in orange box
   g_redglow1 = PrecacheModel("sprites/ledglow.vmt");
   g_blueglow1 = PrecacheModel("sprites/blueglow1.vmt");
-  g_plasmaember = PrecacheModel("particle/particle_flares/aircraft_green.vmt");
+  g_plasmaember = PrecacheModel("sprites/plasmaember.vmt");
   g_purplelaser1 = PrecacheModel("sprites/purplelaser1.vmt");
   g_ef_yellowflare = PrecacheModel("effects/yellowflare.vmt");
 
-  g_ef_flatflame = PrecacheModel("particle/fire_particle_2/fire_particle_2.vmt");
+  g_ef_flatflame = PrecacheModel("sprites/flatflame.vmt");
   g_mdl_totem_h = PrecacheModel("models/props/wow/h_totem/totem.mdl");
   g_mdl_totem_a = PrecacheModel("models/props/wow/a_totem/totem.mdl");
-  g_plasmabeam = PrecacheModel ("particle/beam_smoke_01_addself.vmt");
-  g_bluelight1 = PrecacheModel ("particle/beam_taser.vmt");
+  g_plasmabeam = PrecacheModel ("sprites/plasma1.vmt");
+  g_bluelight1 = PrecacheModel ("sprites/bluelight1.vmt");
   precache_laser=PrecacheModel("sprites/laserbeam.vmt");
+  g_ef_laserbeam=PrecacheModel("materials/sprites/laserbeam.vmt");
 
   g_ef_splodesprite = PrecacheModel("particle/particle_flares/particle_flare_004.vmt");
   g_ef_bluelight = PrecacheModel ("particle/beam_taser.vmt");
@@ -304,12 +309,20 @@ PrecacheCSGO()	{
   //g_ef_glow = PrecacheModel ("materials/sprites/glow");
   g_ef_rollermine = PrecacheModel ("particle/particle_glow_03.vmt");
   g_ef_hydraspinalcord = PrecacheModel ("sprites/cbbl_smoke.vmt");
+  g_ef_overlay = PrecacheModel ("sun/overlay.vmt");
+  g_ef_striderbulgedudvdx60 = PrecacheModel("effects/strider_bulge_dudv_dx60.vmt");
+  g_ef_rollerglow = PrecacheModel("effects/rollerglow.vmt");
+  g_ef_hydragutbeam = PrecacheModel("effects/blueblacklargebeam.vmt");
+  g_ef_blueblackflash = PrecacheModel("sprites/blueflare1.vmt");
+  g_ef_fire01 = PrecacheModel("sprites/fire1.vmt");
+  g_ef_xbeam2 = PrecacheModel("sprites/crystal_beam1.vmt");
+  g_ef_striderdarkflare = PrecacheModel("particle/particle_flares/aircraft_white.vmt");
   g_ef_particle_noisesphere = PrecacheModel ("particle/particle_noisesphere.vmt");
   g_ef_trail_blue = PrecacheModel("effects/bluespark.vmt");
   g_ef_yellowflare1 = PrecacheModel("materials/sprites/yelflare1.vmt");
-  g_ef_combineball = PrecacheModel("models/Effects/combineball.mdl");
-  g_ef_orangeflare1 = PrecacheModel("particle/particle_flares_aircraft_red.vmt");
-  g_ef_orangelight1 = PrecacheModel("particle/bendibeam_cheap.vmt");
+  g_ef_combineball = PrecacheModel("effects/fire_cloud1");
+  g_ef_orangeflare1 = PrecacheModel("effects/yellowflare_noz.vmt");
+  g_ef_orangelight1 = PrecacheModel("sprites/orangelight1.vmt");
   g_ef_yellowglow1 = PrecacheModel("sprites/glow03.vmt");
   g_ef_WXplo1 = PrecacheModel("prites/zerogxplode.vmt");
   g_ef_greenglow1 = PrecacheModel("particle/particle_flares/aircraft_green.vmt");
@@ -324,8 +337,8 @@ PrecacheCSGO()	{
 
 
   //DK
-  AMSSprite=PrecacheModel("particle/particle_flares/aircraft_green.vmt");
-
+  AMSSprite=PrecacheModel("sprites/plasmaember.vmt");
+  g_HaloSprite = PrecacheModel("sprites/halo01.vmt");
 }
 
 
@@ -3632,11 +3645,8 @@ public Action:EffectMindFlayAction(Handle:timer, any:effid)
   GetClientAbsOrigin(effectsdata[effid][1], location);
   location[2]+=40;
   locationatt[2]+=40;
-  if(!CSGO)
-  {
-    VS_BeamPoints(location, locationatt, g_ef_scanner,g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 1.00, {80, 0, 80, 255}, 9);
-    VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 0.00, {80, 0, 80, 255}, 9);
-  }
+  VS_BeamPoints(location, locationatt, g_ef_scanner,g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 1.00, {80, 0, 80, 255}, 9);
+  VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 0.00, {80, 0, 80, 255}, 9);
   VS_BeamPoints(locationatt, location, g_ef_glow1, g_ef_glow1, 1, 5, 1.00, 20.00, 10.00, 10, 0.00, {80, 0, 80, 255}, 8);
   VS_BeamPoints(locationatt, location, g_ef_lgtning, g_ef_glow1, 1, 5, 1.00, 20.00, 10.00, 0, 0.00, {80, 0, 80, 255}, 8);
 
