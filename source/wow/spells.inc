@@ -2364,16 +2364,19 @@ public wcRunSpell_2_3(spellid,race,client)
   SmokeEffect("@all", location, g_ef_smoke, 100.0, 10);
   //es est_effect 7 #a 0 sprites/smoke.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 100 10
   // invisibility
-  wcGetSpellInfo(race,spellid,"alpha",line);
-  new alpha=StringToInt(line);
-  wcGetSpellInfo(race,spellid,"duration",line);
-  new Float:duration=StringToFloat(line);
-  decl color[4];
-  for (new x=0;x<=2;x++)
-  color[x]=255;
-  color[3]=alpha;
-  SetClientColor(client,color);
-
+  if(CSGO)
+    SetEntityRenderMode(client, RENDER_NONE);
+  else{
+    wcGetSpellInfo(race,spellid,"alpha",line);
+    new alpha=StringToInt(line);
+    wcGetSpellInfo(race,spellid,"duration",line);
+    new Float:duration=StringToFloat(line);
+    decl color[4];
+    for (new x=0;x<=2;x++)
+    color[x]=255;
+    color[3]=alpha;
+    SetClientColor(client,color);
+  }
   //threat
   wcGetSpellInfo(race,spellid,"threat",line);
   AddThreat(client,StringToInt(line));
@@ -2411,6 +2414,8 @@ public Action:DestroyVanish(Handle:timer, Handle:pack)
   if(vanishId != g_ffVanishId[client])  return Plugin_Stop;
   if(bVanish[client]) {
     SetStealth(client, -30.0);
+    if(CSGO)
+      SetEntityRenderMode(client, RENDER_NORMAL);
     WCMessage(client,"vanish expired",client);
 
   }
@@ -3833,7 +3838,7 @@ public Action:EffectRemoveFearVictim(Handle:timer, any:client)
   return Plugin_Handled;
 }
 
-public Action:EffectFearAction(Handle:timer, any:effid) //Tristen fear
+public Action:EffectFearAction(Handle:timer, any:effid)
 {
   if (effectsdata[effid][0]==0)
   return Plugin_Stop;
