@@ -2370,7 +2370,7 @@ public wcRunSpell_2_3(spellid,race,client)
   new Float:duration=StringToFloat(line);
   if(CSGO){
     SetEntityRenderMode(client, RENDER_NONE);
-    SetEntityRenderColor(Client, 255, 255, 255, 0);
+    SetEntityRenderColor(client, 255, 255, 255, 0);
     }
   else{
     decl color[4];
@@ -2417,8 +2417,8 @@ public Action:DestroyVanish(Handle:timer, Handle:pack)
   if(bVanish[client]) {
     SetStealth(client, -30.0);
     if(CSGO){
-      SetEntityRenderMode(entity, RENDER_TRANSCOLOR);
-      SetEntityRenderColor(Client, 255, 255, 255, 255);
+      SetEntityRenderMode(client, RENDER_TRANSCOLOR);
+      SetEntityRenderColor(client, 255, 255, 255, 255);
       }
     WCMessage(client,"vanish expired",client);
 
