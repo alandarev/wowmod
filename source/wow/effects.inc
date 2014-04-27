@@ -559,19 +559,33 @@ public bool:FadeEffect(client,type,time,duration,const color[4])
 {
   if(client)
   {
-    new Handle:hBf=StartMessageOne("Fade",client);
-    if(hBf!=INVALID_HANDLE)
+    if(CSGO)
     {
-      BfWriteShort(hBf,duration);
-      BfWriteShort(hBf,time);
-      BfWriteShort(hBf,type);
-      BfWriteByte(hBf,color[0]);
-      BfWriteByte(hBf,color[1]);
-      BfWriteByte(hBf,color[2]);
-      BfWriteByte(hBf,color[3]);
-      EndMessage();
-      return true;
+      new Handle:hBf=StartMessageOne("Fade",client);
+      if(hBf!=INVALID_HANDLE)
+      {
+        PbSetInt(hBf, "duration", duration);
+        PbSetInt(hBf, "time", time);
+        PbSetInt(hBf, "type", type);
+        PbSetColor(hBf, "clr", color);
+      }
     }
+    else
+    {
+      new Handle:hBf=StartMessageOne("Fade",client);
+      if(hBf!=INVALID_HANDLE)
+      {
+        BfWriteShort(hBf,duration);
+        BfWriteShort(hBf,time);
+        BfWriteShort(hBf,type);
+        BfWriteByte(hBf,color[0]);
+        BfWriteByte(hBf,color[1]);
+        BfWriteByte(hBf,color[2]);
+        BfWriteByte(hBf,color[3]);
+      }
+    }
+    EndMessage();
+    return true;
   }
   return false;
 }
