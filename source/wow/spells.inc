@@ -266,7 +266,7 @@ public Action:RemoveCDSpell(Handle:timer,Handle:datapack)
   SetCdSpell(client,cdtype,float(0), 0);
 }
 
-public wcRunSpell_1_3(spellid,race,client) //enrage rengeneration
+public wcRunSpell_1_3(spellid,race,client) //enraged rengeneration
 {
   /*if(GetConVarBool(g_BossMod))
   {
@@ -292,7 +292,7 @@ public wcRunSpell_1_3(spellid,race,client) //enrage rengeneration
   for (new x=0;x<=2;x++)
   location2[x]=location[x];
   location2[2]+=100;
-  new color[4]= {255,255,255,255};
+  new color[4]= {255,0,0,255};
   BeamEffect("@all",location,location2,g_ef_airlock_laser,5,5.0,20.0,20.0,color,0.0,5);
   BeamRingEffect("@all",location2,20.0,30.0,g_ef_airlock_laser,0,3,5.0,40.0,color,0.0,3);
   new amount = RoundToNearest(float(GetMaxHealth(client))*multi);
