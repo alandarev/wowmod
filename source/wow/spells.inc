@@ -2368,8 +2368,10 @@ public wcRunSpell_2_3(spellid,race,client)
   new alpha=StringToInt(line);
   wcGetSpellInfo(race,spellid,"duration",line);
   new Float:duration=StringToFloat(line);
-  if(CSGO)
+  if(CSGO){
     SetEntityRenderMode(client, RENDER_NONE);
+    SetEntityRenderColor(Client, 255, 255, 255, 0);
+    }
   else{
     decl color[4];
     for (new x=0;x<=2;x++)
@@ -2414,8 +2416,10 @@ public Action:DestroyVanish(Handle:timer, Handle:pack)
   if(vanishId != g_ffVanishId[client])  return Plugin_Stop;
   if(bVanish[client]) {
     SetStealth(client, -30.0);
-    if(CSGO)
-      SetEntityRenderMode(client, RENDER_NORMAL);
+    if(CSGO){
+      SetEntityRenderMode(entity, RENDER_TRANSCOLOR);
+      SetEntityRenderColor(Client, 255, 255, 255, 255);
+      }
     WCMessage(client,"vanish expired",client);
 
   }
