@@ -5290,7 +5290,7 @@ stock SetMageInvis(client, bool:value, bool:announce=false, bool:overlay=true)  
 
     if(overlay) {
       ClientCommand(client, "r_screenoverlay effects/tp_eyefx/tp_eyefx.vmt");
-      sendshakemsg(client, all:SHAKE_START, 0.2, 1.0, 10.0);
+      //sendshakemsg(client, all:SHAKE_START, 0.2, 1.0, 10.0);
     }
     new Float:position[3];
     GetClientAbsOrigin(client, position);
@@ -5300,7 +5300,7 @@ stock SetMageInvis(client, bool:value, bool:announce=false, bool:overlay=true)  
   }
   else  {
     ClientCommand(client, "r_screenoverlay 0");
-    sendshakemsg(client, all:SHAKE_STOP, 0.2, 1.0, 10.0);
+    //sendshakemsg(client, all:SHAKE_STOP, 0.2, 1.0, 10.0);
   }
 }
 
