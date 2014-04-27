@@ -2364,13 +2364,13 @@ public wcRunSpell_2_3(spellid,race,client)
   SmokeEffect("@all", location, g_ef_smoke, 100.0, 10);
   //es est_effect 7 #a 0 sprites/smoke.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 100 10
   // invisibility
+  wcGetSpellInfo(race,spellid,"alpha",line);
+  new alpha=StringToInt(line);
+  wcGetSpellInfo(race,spellid,"duration",line);
+  new Float:duration=StringToFloat(line);
   if(CSGO)
     SetEntityRenderMode(client, RENDER_NONE);
   else{
-    wcGetSpellInfo(race,spellid,"alpha",line);
-    new alpha=StringToInt(line);
-    wcGetSpellInfo(race,spellid,"duration",line);
-    new Float:duration=StringToFloat(line);
     decl color[4];
     for (new x=0;x<=2;x++)
     color[x]=255;
@@ -3485,7 +3485,6 @@ public wcRunSpell_7_1(spellid,race, target,client,bool:nightfall)
       }
       location[2]+=40;
       locationatt[2]+=40;
-      
       VS_BeamPoints(location, locationatt, g_ef_scanner,g_ef_scanner, 1, 5, 3.00, 15.00, 15.00, 1, 0.00, {153, 0, 153, 255}, 20);
       VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 3.00, 15.00, 15.00, 1, 0.00, {153, 0, 153, 255}, 20);
       VS_BeamPoints(locationatt, location, g_ef_glow1, g_ef_glow1, 1, 5, 3.00, 20.00, 10.00, 10, 0.00, {153, 0, 153, 255}, 160);
