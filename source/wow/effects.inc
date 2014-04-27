@@ -274,7 +274,7 @@ PrecacheCSGO()	{
   g_ef_old_xfire = PrecacheModel("sprites/xfireball3.vmt");
   g_ef_glow1 = PrecacheModel("particle/star_noz.vmt");
   g_ef_glow01 = PrecacheModel("sprites/glow01.vmt");
-  g_ef_lgtning = PrecacheModel("particle/bendibeam.vmt");
+  g_ef_lgtning = PrecacheModel("sprites/lgtning.vmt");
   g_ef_airlock_laser = PrecacheModel("sprites/laserbeam.vmt");
   g_ef_ocean = PrecacheModel("effect/splash3.vmt");
   g_bloodModel = PrecacheModel("sprites/zerogxplode.vmt");
@@ -297,7 +297,7 @@ PrecacheCSGO()	{
   g_ef_bluelight = PrecacheModel ("particle/beam_taser.vmt");
   g_ef_muzzleflashX = PrecacheModel ("effects/muzzleflashX.vmt");
   g_ef_animglow = PrecacheModel ("spritres/glow04.vmt");
-  g_ef_scanner = PrecacheModel ("decals/88.vmt");
+  g_ef_scanner = PrecacheModel ("sprites/scanner_bottom.vmt");
   g_ef_fire1 = PrecacheModel ("particle/fire_particle_2/fire_particle_2_ob.vmt");
   g_ef_fire2 = PrecacheModel ("particle/fire_particle_2/fire_particle_2.vmt");
   g_ef_train = PrecacheModel ("vgui/hud/icons_arrow_plain.vmt");
