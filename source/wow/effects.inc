@@ -298,8 +298,8 @@ PrecacheCSGO()	{
   g_ef_muzzleflashX = PrecacheModel ("effects/muzzleflashX.vmt");
   g_ef_animglow = PrecacheModel ("spritres/glow04.vmt");
   g_ef_scanner = PrecacheModel ("sprites/scanner_bottom.vmt");
-  g_ef_fire1 = PrecacheModel ("particle/fire_particle_2/fire_particle_2_ob.vmt");
-  g_ef_fire2 = PrecacheModel ("particle/fire_particle_2/fire_particle_2.vmt");
+  g_ef_fire1 = PrecacheModel ("sprites/fire.vmt");
+  g_ef_fire2 = PrecacheModel ("sprites/fire1.vmt");
   g_ef_train = PrecacheModel ("vgui/hud/icons_arrow_plain.vmt");
   //g_ef_glow = PrecacheModel ("materials/sprites/glow");
   g_ef_rollermine = PrecacheModel ("particle/particle_glow_03.vmt");
@@ -3632,8 +3632,11 @@ public Action:EffectMindFlayAction(Handle:timer, any:effid)
   GetClientAbsOrigin(effectsdata[effid][1], location);
   location[2]+=40;
   locationatt[2]+=40;
-  VS_BeamPoints(location, locationatt, g_ef_scanner,g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 1.00, {80, 0, 80, 255}, 9);
-  VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 0.00, {80, 0, 80, 255}, 9);
+  if(!CSGO)
+  {
+    VS_BeamPoints(location, locationatt, g_ef_scanner,g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 1.00, {80, 0, 80, 255}, 9);
+    VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 1.00, 15.00, 15.00, 1, 0.00, {80, 0, 80, 255}, 9);
+  }
   VS_BeamPoints(locationatt, location, g_ef_glow1, g_ef_glow1, 1, 5, 1.00, 20.00, 10.00, 10, 0.00, {80, 0, 80, 255}, 8);
   VS_BeamPoints(locationatt, location, g_ef_lgtning, g_ef_glow1, 1, 5, 1.00, 20.00, 10.00, 0, 0.00, {80, 0, 80, 255}, 8);
 
