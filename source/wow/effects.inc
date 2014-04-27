@@ -3260,11 +3260,20 @@ stock sendshakemsg(client, all:shakeflag, Float:amplitude, Float:frequency, Floa
 		
 	}
 
-	BfWriteByte(shakemsg, shakeflag);
-	BfWriteFloat(shakemsg, amplitude);
-	BfWriteFloat(shakemsg, frequency);
-	BfWriteFloat(shakemsg, duration);
-	EndMessage();
+	if(CSGO){
+    PbSetInt(shakemsg, "command", shakeflag);
+    PbSetFloat(shakemsg, "local_amplitude", amplitude);
+    PbSetFloat(shakemsg, "frequency", frequency);
+    PbSetFloat(shakemsg, "duration", duration);
+    EndMessage();
+  }
+  else{
+    BfWriteByte(shakemsg, shakeflag);
+    BfWriteFloat(shakemsg, amplitude);
+    BfWriteFloat(shakemsg, frequency);
+    BfWriteFloat(shakemsg, duration);
+    EndMessage();
+  }
 	
 }
 
