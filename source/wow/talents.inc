@@ -6538,8 +6538,8 @@ wcRunTalent_PainAbsorbtion(client)
       wcGetTalentInfo(7,2,3,2,client,"ticks",line);
       new ticks=StringToInt(line);
 
-      //new color2[4]={53,55,149,255};
-      //FadeEffect(victim,2,300,50,color2);
+      new color2[4]={53,55,149,255};
+      FadeEffect(victim,2,300,50,color2);
 
       wcGetSpellInfo(7,4,"power",line);
       new power=StringToInt(line);

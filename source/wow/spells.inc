@@ -3474,7 +3474,7 @@ public wcRunSpell_7_1(spellid,race, target,client,bool:nightfall)
           SetFear(target,effid);
           g_fearspeed[target][0]=GetClientSpeed(target);
           g_fearspeed[target][1]=GetClientSpeed(target);
-          //FadeEffect(target,2,300,50,{53,55,40,230});
+          FadeEffect(target,2,300,50,{53,55,40,230});
           CreateTimer(tickdelay, EffectFearAction, effid, TIMER_REPEAT);
         }
       }
@@ -3523,7 +3523,7 @@ public Action:HaniGlyphFearThing(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   effectsdata[effid][3]--; //ticks--
-  //FadeEffect(effectsdata[effid][1],2,300,50,{53,55,40,230});
+  FadeEffect(effectsdata[effid][1],2,300,50,{53,55,40,230});
 
   return Plugin_Continue;
 }
@@ -3773,7 +3773,7 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
   new power=StringToInt(line);
   new Float:location2[3];
   new Float:distance;
-  //new color2[4]={53,55,149,255};
+  new color2[4]={53,55,149,255};
 
   for (new x=0;x<=(amount-1);x++)
   {
@@ -3812,7 +3812,7 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
       distance=GetDistanceBetween(location,location2);
       if(distance<=range/2) //close enough to be scared out of their wits!
       {
-        //FadeEffect(targets[x],2,300,50,color2);
+        FadeEffect(targets[x],2,300,50,color2);
         effectsdata[effid][6] = 1;
       }
       CreateTimer(tickdelay, EffectFearAction, effid, TIMER_REPEAT);
@@ -3832,7 +3832,7 @@ public Action:EffectRemoveFearVictim(Handle:timer, any:client)
   return Plugin_Handled;
 }
 
-public Action:EffectFearAction(Handle:timer, any:effid)
+public Action:EffectFearAction(Handle:timer, any:effid) //Tristen fear
 {
   if (effectsdata[effid][0]==0)
   return Plugin_Stop;
@@ -3863,7 +3863,7 @@ public Action:EffectFearAction(Handle:timer, any:effid)
     return Plugin_Stop;
   }
 
-  //new color2[4]={53,55,149,255};
+  new color2[4]={53,55,149,255};
   effectsdata[effid][3]--;
   //if true and more than X% and they are scared out of their wits
   if(( effectsdata[effid][6]             == 1                             //victim was close enough to be totally feared.
@@ -3871,7 +3871,7 @@ public Action:EffectFearAction(Handle:timer, any:effid)
         && GetFearDmg(effectsdata[effid][1])  > effectsdata[effid][5] * 0.60) //and breakdamage remaining higher than partial fear threshold
       || effectsdata[effid][8]             == 2)                            //or casters class is rogue
   {
-    //FadeEffect(effectsdata[effid][1],2,300,50,color2);
+    FadeEffect(effectsdata[effid][1],2,300,50,color2);
     new Float:power=float(effectsdata[effid][4]);
     decl Float:vec[3],Float:rightVec[3],Float:upVec[3];
     GetClientEyePosition(effectsdata[effid][1], vec);
@@ -3899,8 +3899,8 @@ public Action:EffectFearAction(Handle:timer, any:effid)
       effectsdata[effid][6] = 0;
       SetSilence(effectsdata[effid][1],0.0,true);
     }
-    //color2[3] = 40;
-    //FadeEffect(effectsdata[effid][1],2,300,50,color2);
+    color2[3] = 40;
+    FadeEffect(effectsdata[effid][1],2,300,50,color2);
   }
   return Plugin_Continue;
 }
