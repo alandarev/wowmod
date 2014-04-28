@@ -2428,7 +2428,7 @@ stock KickLand(client)  {
   new color[4]={55,255,55,55};
   BeamRingEffect("@all",location,10.0,40.0,g_ef_lgtning,0,10,3.0,100.0,color,0.0,20);
   color[3]=255;
-  BeamRingEffect("@all",location,50.0,245.0,g_ef_lgtning,0,10,3.0,50.0,color,0.0,10);
+  BeamRingEffect("@all",location,50.0,245.0,g_ef_lgtning,0,10,3.0,90.0,color,0.0,10);
   WCMessage(client,"flying serpent kick caster",client,stargets,dmg);
   EmitAmbientSound("wc/spells/serpentland.wav",location);
 

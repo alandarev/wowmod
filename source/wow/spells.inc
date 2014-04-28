@@ -1416,7 +1416,7 @@ public wcRunSpell_1_10(spellid,race,client)
     new color[4]={55,55,255,55};
     BeamRingEffect("@all",location,10.0,40.0,g_ef_lgtning,0,10,3.0,100.0,color,0.0,20);
     color[3]=255;
-    BeamRingEffect("@all",location,50.0,350.0,g_ef_lgtning,0,10,3.0,50.0,color,0.0,10);
+    BeamRingEffect("@all",location,50.0,350.0,g_ef_lgtning,0,10,3.0,75.0,color,0.0,10);
     WCMessage(client,"thunder clap caster",client,stargets,dmg);
     EmitAmbientSound("wc/spells/thunderclap.wav",location);
 
@@ -4007,7 +4007,7 @@ public wcRunSpell_7_6(spellid,race,client)
   WCMessage(client,"demon skin cast",client,bonus,GetArmor(client));
 }
 
-public wcRunSpell_7_7(spellid,race,client)
+public wcRunSpell_7_7(spellid,race,client) //Drain Life, Life Drain
 {
   new target=GetAimTarget(client,15.0);
   decl String:line[255];
@@ -4903,7 +4903,7 @@ public Action:HymnTE(Handle:timer, Handle:pack)   {
   orig[2] = ReadPackFloat(pack);
   new color[4] = { 245, 175, 255, 255 };
   orig[2]+=5;
-  BeamRingEffect("@all",orig, 10.0, 500.0, g_ef_lgtning,0, 3, 2.0, 10.0, color,0.0,1);
+  BeamRingEffect("@all",orig, 10.0, 500.0, g_ef_lgtning,0, 3, 2.0, 11.0, color,0.0,1);
 
 }
 
@@ -6400,7 +6400,7 @@ stock LeapLand(client)  {
   new color[4]={55,55,255,55};
   BeamRingEffect("@all",location,10.0,40.0,g_ef_lgtning,0,10,3.0,100.0,color,0.0,20);
   color[3]=255;
-  BeamRingEffect("@all",location,50.0,350.0,g_ef_lgtning,0,10,3.0,50.0,color,0.0,10);
+  BeamRingEffect("@all",location,50.0,350.0,g_ef_lgtning,0,10,3.0,75.0,color,0.0,10);
   WCMessage(client,"heroic leap caster",client,stargets,dmg);
   EmitAmbientSound("wc/spells/thunderclap.wav",location);
 

@@ -6480,6 +6480,18 @@ wcRunTalent_7_CursedSoul(client)
       new base=StringToInt(line);
       new team=GetClientTeam(target);
       new effid=CreateEffectData(target,client,ticks,base,aoe,team,0,0,g_RoundCount,0);
+      
+      new Float:loc[3];
+      new Float:locatt[3];
+      GetClientAbsOrigin(target,loc);
+      GetClientAbsOrigin(client,locatt);
+      loc[2]+=50;
+      locatt[2]+=40;
+      VS_BeamPoints(locationatt, location, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 1, 5, 3.00, 5.00, 1.00, 1, 0.00, {31, 31, 61, 255}, 20);
+      VS_BeamRingPoint(location, 19.00, 20.00, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 100, 300, 3.00, 30.00, 1.00, {31, 31, 61, 255}, 300, 0);
+      
+      
+      
       if (tickdelay==0.0 || ticks == 0)
       {
         LogError("ERROR: cursed soul spell corrupted.");
