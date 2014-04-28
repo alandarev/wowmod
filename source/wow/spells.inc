@@ -6111,7 +6111,7 @@ public Action:TimedOrb(Handle:timer,Handle:pack) {
   location[1] = ReadPackFloat(pack);
   location[2] = ReadPackFloat(pack);
 
-  //VS_GlowSprite(location, g_ef_combineball, 0.50, 2.00, 255);
+  VS_GlowSprite(location, g_ef_redflare, 0.50, 2.00, 255);
   VS_GlowSprite(location, g_ef_orangeflare1, 0.50, 2.00, 255);
 
   if(!IsClientInGame(client))

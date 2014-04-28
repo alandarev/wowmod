@@ -329,6 +329,7 @@ PrecacheCSGO()	{
   //g_ef_firecloud2 = PrecacheModel("materials/effects/fire_cloud2.vmt");
   PrecacheModel("effects/bluespark.vmt");
   g_ef_energyball = PrecacheModel("models/effects/energyball.mdl");
+  g_ef_redflare = PrecacheModel("particle/particle_flares/aircraft_red.vmt");
 
   //ctf
   g_ctf_horde    = PrecacheModel("models/cf_models_src/ctf_80rd3.mdl");

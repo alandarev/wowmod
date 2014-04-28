@@ -349,6 +349,7 @@ new g_redglow1,g_blueglow1,g_plasmaember;
 new g_ef_tpbeam001, g_ef_playerredsmall, g_ef_shellchrome, g_ef_overlay;
 new g_ef_striderbulgedudvdx60, g_ef_fire01, g_ef_rollerglow;
 new g_ef_blueblackflash, g_ef_xbeam2, g_ef_striderdarkflare;
+new g_ef_redflare;
 
 
 

@@ -3269,7 +3269,7 @@ stock CreateChiBurst(client)  {
   if(!CSGO)
     SetEntityModel(entity, "models/effects/combineball.mdl");  // flying chicken? :D
   else
-    SetEntityModel(entity, "models/effects/energyball.mdl");
+    SetEntityModel(entity, "sprites/plasmaember.vmt");
   TeleportEntity(entity, resultposition, clienteyeangle, anglevector);
 
   new gascloud = CreateEntityByName("env_rockettrail");
