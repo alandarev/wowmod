@@ -1718,8 +1718,7 @@ public Action:FrostNovaVisualEffect(Handle:timer, any:dp)
     location[i]= ReadPackFloat(dp);
   }
   new color[4]={75,75,255,255};
-  if(!BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10))
-  LogError("didn't create effect #935");
+  BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
 
   ResetPack(dp,true);
   WritePackCell (dp,caster);
@@ -1828,8 +1827,7 @@ public Action:ReincEffect2(Handle:timer, any:client)
   wcSetMana(client,mn);
   SetEntProp(client, Prop_Send, "m_ArmorValue", 100, 1);
   SetEntProp(client, Prop_Send, "m_bHasHelmet", 1, 1);
-  if(!BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10))
-  LogError("didn't create effect #1002");
+  BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
   return Plugin_Stop;
 }
 
@@ -1862,8 +1860,7 @@ public Action:ResurrectionEffect(Handle:timer, any:client)
   wcSetMana(client,mn);
   SetEntProp(client, Prop_Send, "m_ArmorValue", 100, 1);
   SetEntProp(client, Prop_Send, "m_bHasHelmet", 1, 1);
-  if(!BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10))
-  LogError("didn't create effect #1002");
+  BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
   return Plugin_Stop;
 }
 
@@ -1881,8 +1878,7 @@ public Action:ArcaneEffect(Handle:timer, any:client)
   decl Float:location[3];
   new color[4]={204,204,204,210};
   GetClientAbsOrigin(client,location);
-  if(!BeamRingEffect("@all",location,199.0,199.0,g_ef_lgtning,0,20,0.5,199.0,color,0.5,15))
-  LogError("didn't create effect #963");
+  BeamRingEffect("@all",location,199.0,199.0,g_ef_lgtning,0,20,0.5,199.0,color,0.5,15);
   return Plugin_Stop;
 }
 
@@ -2051,8 +2047,7 @@ public Action:BlinkwakeEffect(Handle:timer, any:client)
   decl Float:location[3];
   new color[4]={255,69,0,255};  //red orange
   GetClientAbsOrigin(client,location);
-  if(!BeamRingEffect("@all",location,10.0,ERradius,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10))
-  LogError("didn't create effect #935 Blinkwake");
+  BeamRingEffect("@all",location,10.0,ERradius,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
   return Plugin_Stop;
 }
 
@@ -2098,7 +2093,7 @@ stock bool:CastArcane(client, Float:multi, bool:cast=false, bool:custom=false)  
   return true;
 }
 
-public wcRunSpell_3_7(spellid,race,client)
+public wcRunSpell_3_7(spellid,race,client) //Arcane Explosion
 {
   {
     decl String:line[255];
@@ -2789,8 +2784,7 @@ public wcRunSpell_5_2(spellid,race,client) //Prayer of Healing
     Format(stargets,sizeof(stargets),"%T","nobody",client);
     new color[4]={250,250,17,255};
     location[2]+=50;
-    if(!BeamRingEffect("@all",location,150.0,90.0,g_purplelaser1,0,10,3.0,80.0,color,0.0,3))
-    LogError("[WC ERROR]: didn't create effect #1341");
+    BeamRingEffect("@all",location,150.0,90.0,g_purplelaser1,0,10,3.0,80.0,color,0.0,3);
     WCMessage(client,"prayer of healing caster",client,stargets,heal);
     EmitAmbientSound("wc/spells/heal.wav",location);
   }
@@ -6111,7 +6105,6 @@ public Action:TimedOrb(Handle:timer,Handle:pack) {
   location[1] = ReadPackFloat(pack);
   location[2] = ReadPackFloat(pack);
 
-  VS_GlowSprite(location, g_ef_redflare, 0.50, 2.00, 255);
   VS_GlowSprite(location, g_ef_orangeflare1, 0.50, 2.00, 255);
 
   if(!IsClientInGame(client))

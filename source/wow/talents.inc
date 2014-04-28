@@ -4326,8 +4326,7 @@ public wcRunTalent_5_2(client) //Circle of Healing
     Format(stargets,sizeof(stargets),"%T","nobody",client);
   new color[4]={250,250,17,255};
   location[2]+=50;
-  if(!BeamRingEffect("@all",location,150.0,90.0,g_purplelaser1,0,10,3.0,80.0,color,0.0,3))
-    LogError("[WC ERROR]: didn't create effect #1341");
+  BeamRingEffect("@all",location,150.0,90.0,g_purplelaser1,0,10,3.0,80.0,color,0.0,3);
   WCMessage(client,"circle of healing caster",client,stargets,heal);
   EmitAmbientSound("wc/spells/heal.wav",location);
   VS_BeamRingPoint(location, 50.00, 100.00, g_ef_lgtning, g_ef_lgtning, 20, 50, 3.00, 50.00, 1.00, {255, 255, 20, 255}, 10, 0);

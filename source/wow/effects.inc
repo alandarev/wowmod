@@ -328,8 +328,8 @@ PrecacheCSGO()	{
   g_ef_greenglow1 = PrecacheModel("particle/particle_flares/aircraft_green.vmt");
   //g_ef_firecloud2 = PrecacheModel("materials/effects/fire_cloud2.vmt");
   PrecacheModel("effects/bluespark.vmt");
-  g_ef_energyball = PrecacheModel("models/effects/energyball.mdl");
-  g_ef_redflare = PrecacheModel("particle/particle_flares/aircraft_red.vmt");
+  g_ef_energyball = PrecacheModel("models/effects/energyball.mdl"); //Bad, do not use
+  g_ef_redflare = PrecacheModel("particle/particle_flares/aircraft_red.vmt"); //Bad, do not use
 
   //ctf
   g_ctf_horde    = PrecacheModel("models/cf_models_src/ctf_80rd3.mdl");

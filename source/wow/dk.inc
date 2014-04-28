@@ -862,8 +862,7 @@ public Action:GhoulEffect(Handle:timer, any:client)
 
   SetEntProp(client, Prop_Send, "m_ArmorValue", 100, 1);
   SetEntProp(client, Prop_Send, "m_bHasHelmet", 1, 1);
-  if(!BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10))
-    LogError("didn't create effect #763");
+  BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
 
   //Model
   new team = GetClientTeam(client);
