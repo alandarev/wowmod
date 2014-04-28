@@ -1878,7 +1878,7 @@ public Action:ArcaneEffect(Handle:timer, any:client)
   decl Float:location[3];
   new color[4]={204,204,204,210};
   GetClientAbsOrigin(client,location);
-  BeamRingEffect("@all",location,75.0,100.0,g_ef_lgtning,0,20,0.5,75.0,color,0.5,15);
+  BeamRingEffect("@all",location,75.0,150.0,g_ef_lgtning,0,20,1.2,125.0,color,0.5,15);
   return Plugin_Stop;
 }
 
