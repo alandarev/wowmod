@@ -264,8 +264,8 @@ PrecacheCSS()	{
 
 PrecacheCSGO()	{
   g_ef_physring1 = PrecacheModel("sprites/physring1.vmt");
-  PrecacheModel("particle/star_ob_noz.vmt.vmt");
-  SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
+  PrecacheModel("particle/star_ob_noz.vmt");
+  SWD_sprite=PrecacheModel("effects/bluespark.vmt"); //ShadowWord Death Priest
   ShieldSprite=PrecacheModel("sprites/strider_blackball.vmt"); //PowerWordShield Priest
   ChaosSprite=PrecacheModel("sprites/crystal_beam1.vmt"); // Chaos Bolt Sprite
   g_ef_playerredsmall = PrecacheModel("sprites/player_red_small.vmt");
