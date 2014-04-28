@@ -6446,7 +6446,7 @@ wcRunTalent_7_ShadowGrip(client,target)
   }
 }
 
-wcRunTalent_7_CursedSoul(client)
+wcRunTalent_7_CursedSoul(client) //Cursed Soul
 {
   new target=GetAimTarget(client,15.0);
   decl String:line[255];
@@ -6487,8 +6487,8 @@ wcRunTalent_7_CursedSoul(client)
       GetClientAbsOrigin(client,locatt);
       loc[2]+=50;
       locatt[2]+=40;
-      VS_BeamPoints(locationatt, location, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 1, 5, 3.00, 5.00, 1.00, 1, 0.00, {31, 31, 61, 255}, 20);
-      VS_BeamRingPoint(location, 19.00, 20.00, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 100, 300, 3.00, 30.00, 1.00, {31, 31, 61, 255}, 300, 0);
+      VS_BeamPoints(locatt, loc, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 1, 5, 3.00, 5.00, 1.00, 1, 0.00, {31, 31, 61, 255}, 20);
+      VS_BeamRingPoint(loc, 19.00, 20.00, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 100, 300, 3.00, 30.00, 1.00, {31, 31, 61, 255}, 300, 0);
       
       
       

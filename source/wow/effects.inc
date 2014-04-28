@@ -3409,7 +3409,7 @@ public Action:EffectCursedSoulDamage(Handle:timer, any:effid) //Cursed Soul effe
   wcSpellAoeDamage(effectsdata[effid][1],effectsdata[effid][2],damage,aoe,effectsdata[effid][6],line);
   new Float:distance=float(aoe);
   new Float:location[3];
-  GetClientAbsOrigin(effectsdata[effid][2], location);
+  GetClientAbsOrigin(effectsdata[effid][1], location);
   location[2]+=40;
   VS_BeamRingPoint(location, 90.00, 60.00, g_ef_glow1, g_ef_lgtning, 10, 10, 3.00, 50.00, 0.00, {43, 87, 111, 255}, 60, 0);
   location[2]-=40;
