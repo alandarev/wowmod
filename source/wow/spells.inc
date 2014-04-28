@@ -565,14 +565,14 @@ public wcRunSpell_6_2(spellid,race,victim,attacker,&dmg)
       if(!IsBoss())
       {
         EmitAmbientSound("wc/spells/rend.wav",location);
-        new color[4] = { 150, 150, 100, 130 };
-        new Float:width=20.0;
+        new color[4] = { 255, 255, 255, 255 };
+        new Float:width=10.0;
         BeamRingEffect("@all",location,20.0,80.0,g_ef_ocean,0,10,2.6,width,color,0.0,10);
         location[2]+=20;
-        width+=20.0;
+        width+=10.0;
         BeamRingEffect("@all",location,20.0,80.0,g_ef_ocean,0,10,2.6,width,color,0.0,10);
         location[2]+=20;
-        width+=20.0;
+        width+=10.0;
         BeamRingEffect("@all",location,20.0,80.0,g_ef_ocean,0,10,2.6,width,color,0.0,10);
       }
       return true;

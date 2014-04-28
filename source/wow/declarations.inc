@@ -328,6 +328,7 @@ new g_ef_orangelight1;
 new g_ef_yellowglow1;
 new g_ef_WXplo1;
 new g_ef_greenglow1;
+new g_ef_energyball;
 //new g_ef_firecloud2;
 new g_mRanks[15];
 
