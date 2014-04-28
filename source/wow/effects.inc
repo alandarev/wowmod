@@ -321,7 +321,7 @@ PrecacheCSGO()	{
   g_ef_trail_blue = PrecacheModel("effects/bluespark.vmt");
   g_ef_yellowflare1 = PrecacheModel("materials/sprites/yelflare1.vmt");
   g_ef_combineball = PrecacheModel("sprites/strider_blackball");
-  g_ef_orangeflare1 = PrecacheModel("effects/yellowflare_noz.vmt");
+  g_ef_orangeflare1 = PrecacheModel("sprites/yelflare1.vmt");
   g_ef_orangelight1 = PrecacheModel("sprites/orangelight1.vmt");
   g_ef_yellowglow1 = PrecacheModel("sprites/glow03.vmt");
   g_ef_WXplo1 = PrecacheModel("prites/zerogxplode.vmt");

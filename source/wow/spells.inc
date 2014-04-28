@@ -566,13 +566,13 @@ public wcRunSpell_6_2(spellid,race,victim,attacker,&dmg)
       {
         EmitAmbientSound("wc/spells/rend.wav",location);
         new color[4] = { 255, 255, 255, 255 };
-        new Float:width=10.0;
+        new Float:width=6.0;
         BeamRingEffect("@all",location,20.0,80.0,g_ef_ocean,0,10,2.6,width,color,0.0,10);
         location[2]+=20;
-        width+=10.0;
+        width+=6.0;
         BeamRingEffect("@all",location,20.0,80.0,g_ef_ocean,0,10,2.6,width,color,0.0,10);
         location[2]+=20;
-        width+=10.0;
+        width+=6.0;
         BeamRingEffect("@all",location,20.0,80.0,g_ef_ocean,0,10,2.6,width,color,0.0,10);
       }
       return true;
@@ -6111,7 +6111,7 @@ public Action:TimedOrb(Handle:timer,Handle:pack) {
   location[1] = ReadPackFloat(pack);
   location[2] = ReadPackFloat(pack);
 
-  VS_GlowSprite(location, g_ef_combineball, 0.50, 2.00, 255);
+  //VS_GlowSprite(location, g_ef_combineball, 0.50, 2.00, 255);
   VS_GlowSprite(location, g_ef_orangeflare1, 0.50, 2.00, 255);
 
   if(!IsClientInGame(client))
