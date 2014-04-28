@@ -1878,7 +1878,7 @@ public Action:ArcaneEffect(Handle:timer, any:client)
   decl Float:location[3];
   new color[4]={204,204,204,210};
   GetClientAbsOrigin(client,location);
-  BeamRingEffect("@all",location,199.0,199.0,g_ef_lgtning,0,20,0.5,199.0,color,0.5,15);
+  BeamRingEffect("@all",location,99.0,99.0,g_ef_lgtning,0,20,0.5,99.0,color,0.5,15);
   return Plugin_Stop;
 }
 
@@ -6105,7 +6105,7 @@ public Action:TimedOrb(Handle:timer,Handle:pack) {
   location[1] = ReadPackFloat(pack);
   location[2] = ReadPackFloat(pack);
 
-  VS_GlowSprite(location, g_ef_orangeflare1, 0.50, 2.00, 255);
+  VS_GlowSprite(location, g_ef_orangelight1, 0.50, 2.00, 255);
 
   if(!IsClientInGame(client))
   return Plugin_Stop;
