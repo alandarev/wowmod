@@ -3107,7 +3107,7 @@ public wcRunSpell_5_5(spellid,race, target,client)
   WCMessage(client,"no target",client);
 }
 
-public wcRunSpell_5_6(spellid,race,client)
+public wcRunSpell_5_6(spellid,race,client) //Mana Burn
 {
   new target=GetAimTarget(client,15.0);
   if(!IsBoss())
@@ -3163,10 +3163,6 @@ public wcRunSpell_5_6(spellid,race,client)
         wcGetSpellInfo(race,spellid,"name",line);
         wcSpellDamage(target,client,dmg, attMsg, vicMsg,line);
 
-        TE_SetupBubbles(location, location,SWD_sprite,100.0,100,1000.0);
-        TE_SendToAll();
-        TE_SetupDynamicLight(location, 255,20,20,400,20.0,1.0,0.1);
-        TE_SendToAll();
       }
       else  if(IsChat(client,Chat:Chat_Target))
       WCMessage(client,"wrong target",client);

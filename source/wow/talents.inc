@@ -3768,9 +3768,9 @@ public wcRunTalent_4_3(client)                                                  
   EmitAmbientSound("wc/spells/divinestorm.wav",location);
   location[2]+=40;
   location2[2]+=300;
-  VS_BeamPoints(location, location2, g_plasmabeam, g_plasmabeam, 1, 5, 1.00, 15.00, 15.00, 1, 0.00, {255, 255, 255, 255}, 80);
-  VS_BeamRingPoint(location, 20.00, 40.00, g_plasmabeam, g_plasmabeam, 20, 50, 1.00, 20.00, 1.00, {255, 255, 255, 255}, 30, 0);
-  VS_BeamRingPoint(location2, 20.00, 500.00, g_plasmabeam, g_plasmabeam, 10, 30, 1.00, 80.00, 4.00, {255, 255, 255, 255}, 30, 0);
+  VS_BeamPoints(location, location2, g_plasmabeam, g_plasmabeam, 1, 5, 2.00, 15.00, 15.00, 1, 0.00, {255, 255, 255, 255}, 120);
+  VS_BeamRingPoint(location, 20.00, 40.00, g_plasmabeam, g_plasmabeam, 20, 50, 2.00, 20.00, 1.00, {255, 255, 255, 255}, 30, 0);
+  VS_BeamRingPoint(location2, 20.00, 500.00, g_plasmabeam, g_plasmabeam, 10, 30, 2.00, 80.00, 4.00, {255, 255, 255, 255}, 30, 0);
 
 
   WCMessage(client,"divine storm caster",client,stargets,effect);
