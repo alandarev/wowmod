@@ -279,7 +279,7 @@ PrecacheCSGO()	{
   g_ef_glow01 = PrecacheModel("sprites/glow01.vmt");
   g_ef_lgtning = PrecacheModel("sprites/lgtning.vmt");
   g_ef_airlock_laser = PrecacheModel("sprites/laserbeam.vmt");
-  g_ef_ocean = PrecacheModel("effect/splash4.vmt");
+  g_ef_ocean = PrecacheModel("effects/splash4.vmt");
   g_bloodModel = PrecacheModel("sprites/zerogxplode.vmt");
   g_ef_shellchrome = PrecacheModel("sprites/shellchrome.vmt");
   g_bloodsprayModel = PrecacheModel("sprites/bloodspray.vmt");
