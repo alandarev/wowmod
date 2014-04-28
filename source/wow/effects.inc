@@ -3414,8 +3414,8 @@ public Action:EffectCursedSoulDamage(Handle:timer, any:effid) //Cursed Soul effe
   VS_BeamRingPoint(location, 90.00, 60.00, g_ef_glow1, g_ef_lgtning, 10, 10, 3.00, 50.00, 0.00, {43, 87, 111, 255}, 60, 0);
   location[2]-=40;
   VS_GlowSprite(location, g_blueglow1, 3.00, 1.00, 255);
-  VS_BeamRingPoint(location, 40.00, 199.00, g_blueglow1, g_blueglow1, 100, 300, 2.00, 20.00, 0.80, {255, 255, 255, 255}, 20, 0);
-  VS_BeamRingPoint(location, 50.00, 10.00, g_blueglow1, g_blueglow1, 100, 300, 1.00, 199.00, 0.00, {255, 255, 255, 255}, 20, 0);
+  VS_BeamRingPoint(location, 20.00, 99.00, g_blueglow1, g_blueglow1, 100, 300, 1.00, 10.00, 0.80, {255, 255, 255, 255}, 20, 0);
+  VS_BeamRingPoint(location, 25.00, 5.00, g_blueglow1, g_blueglow1, 100, 300, 0.5.00, 99.00, 0.00, {255, 255, 255, 255}, 20, 0);
   
   new targets[MAXPLAYERS];
   new amount;
