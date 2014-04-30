@@ -329,7 +329,7 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true) //Healing
       if(GetClientTeam(client)==3)
         damagetarget = GetNearestClient("@t",loc2,200.0);
       if(damagetarget!=0)
-        wcSpellDamage(damagetarget,client,RoundToNearest(float(hp)*0.30), "", "",line);
+        wcSpellDamage(damagetarget,client,RoundToNearest(float(heal)*0.30), "", "",line);
     }
   //Get heal percentage and push it to stack
   
