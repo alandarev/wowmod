@@ -462,15 +462,15 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   IntToString(damage,dmg_str,16);
   new String:dmg_type_str[32];
 
-  /*PrintToServer("Calling sdkhook take damage. victim %d attacker %d damage %d",victim, attacker, damage);*/
+  /*PrintToServer("Calling sdkhook take damage. victim %d attacker %d damage %d",victim, attacker, damage);
   new Handle:pack = CreateDataPack();
   WritePackCell(pack, victim);
   WritePackCell(pack, attacker);
   WritePackCell(pack, damage);
-  PushArrayCell(g_dmgArray, _:pack);
+  PushArrayCell(g_dmgArray, _:pack);*/
   /*CreateTimer(0.0, TimerDmg, pack, TIMER_HNDL_CLOSE);*/
 
-  /*SDKHooks_TakeDamage(victim, attacker, attacker, float(damage));*/
+  SDKHooks_TakeDamage(victim, attacker, attacker, float(damage));
   IntToString(dmg_bullet,dmg_type_str,32);
   /*new pointHurt=CreateEntityByName("point_hurt");*/
   /*if(pointHurt)*/
