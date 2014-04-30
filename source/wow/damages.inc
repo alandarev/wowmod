@@ -335,7 +335,6 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true) //Healing
   
   
   new random=GetRandomInt(1,100);
-  new item[UniqueItem];
   GetCharItem(item, client, 20);
   if(item[Item_defId]==25248 && 80>GetLevel(client))
     if(15>=random)

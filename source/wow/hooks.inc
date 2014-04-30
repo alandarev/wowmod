@@ -1766,7 +1766,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(item[Item_defId]==25250 && 80>GetLevel(attacker))
     if(9 >= GetRandomInt(1,100))
     {
-      wcSpellDamage(client, attacker, GetSpellDmg(caster,0.045)+4, "", "",line);
+      wcSpellDamage(victim, attacker, GetSpellDmg(caster,0.045)+4, "", "",line);
       AddEMsgAff( "lightning bolt", true);
     }
   GetCharItem(item, victim, 20);
@@ -1779,7 +1779,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   GetCharItem(item, attacker, 22);
   if(item[Item_defId]==25257 && 80>GetLevel(attacker))
     if(7 >= GetRandomInt(1,100))
-      wcRunSpell_8_4(4,8,attacker,victim,bool:endbringer=true);
+      wcRunSpell_8_4(4,8,attacker,victim,true);
     
     
   if(PlayerHasBonusFast(attacker, Profession:Prof_ExtraDamage))

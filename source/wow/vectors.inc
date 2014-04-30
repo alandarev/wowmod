@@ -1854,7 +1854,7 @@ public wcRunSpell(spellid,race,&tmp1,&tmp2,&tmp3,&any:tmp4,&tmp5,&tmp6,&tmp7,&tm
             if(tmp9==2)
               wcRunSpell_8_3(spellid,race,tmp2,tmp1,tmp3); //plague strike
           case 4:
-            wcRunSpell_8_4(spellid,race,tmp1); //icy touch
+            wcRunSpell_8_4(spellid,race,tmp1,0,0); //icy touch
           case 5:
             if(tmp9==2)
               wcRunSpell_8_5(spellid,race,tmp2,tmp1,tmp3); //death Strike
