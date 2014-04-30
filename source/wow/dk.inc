@@ -348,7 +348,7 @@ wcRunSpell_8_2(spellid,race,client) //Death Grip
     GetClientAbsOrigin(target,locationz);
     new team=GetClientTeam(target);
     if(team==2)
-      targett=GetNearestClient("@ct",locationz,500,target);
+      targett=GetNearestClient("@ct",locationz,500.0,target);
     if(targett>0)
       if(GetBoss(targett)<=0 || (!IsBoss()) )
         PushPlayerTowardsPlayer(targett, client, power, zPower);

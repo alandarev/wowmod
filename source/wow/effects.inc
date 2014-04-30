@@ -4025,11 +4025,10 @@ public SenJin(userid,attacker)
   //creating visual effect
   decl Float:location[3];
   GetClientAbsOrigin(attacker,location);
-  new color[4]= {5,154,99,130};
-  VS_BeamRingPoint(location, 15.00, 20.00, g_ef_glow01, g_ef_glow01, 0, 0, 0.50, 1.50, 0.00, {205, 205, 255, 255}, 5, 0);
+  VS_BeamRingPoint(location, 15.00, 20.00, g_ef_glow01, g_ef_glow01, 0, 0, 0.50, 1.50, 0.00, {5, 154, 99, 130}, 5, 0);
   // end of visual effect
   new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid],GetClientDeaths(userid));
-  else if(effid!=0)
+  if(effid!=0)
   {
     CreateTimer(float(tickdelay), Effect4Action, effid, TIMER_REPEAT);
   }
