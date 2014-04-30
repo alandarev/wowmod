@@ -2385,7 +2385,7 @@ public wcRunSpell_2_3(spellid,race,client)
   new Float:duration=StringToFloat(line);
   if(CSGO){
     SetMageInvis(client,true,false,false,false);
-    CreateTimer(client,DestroyMageInvis,duration);
+    CreateTimer(duration,DestroyMageInvis,client);
     }
   else{
     decl color[4];
