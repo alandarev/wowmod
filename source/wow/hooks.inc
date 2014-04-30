@@ -1657,10 +1657,10 @@ public Action:TransmitHpBarHook(entity, client) {
 public Action:SetTransmitHook(entity, client) {
   //Invisibility code
   if(IsClientConnectedIngameAlive(client) && IsClientConnectedIngameAlive(entity) && entity != client){
-    if(IsMageInvis(client)) if(GetClientTeam(client) != GetClientTeam(entity))  {
+    if(IsMageInvis(client) && GetClass(client)!=2) if(GetClientTeam(client) != GetClientTeam(entity))  {
       return Plugin_Handled;
     }
-    if(IsMageInvis(entity)) if(GetClientTeam(client) != GetClientTeam(entity))  {
+    if(IsMageInvis(entity) ^^ GetClass(client)!=2) if(GetClientTeam(client) != GetClientTeam(entity))  {
       return Plugin_Handled;
     }
   }
