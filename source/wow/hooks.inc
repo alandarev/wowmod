@@ -1766,7 +1766,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(item[Item_defId]==25250 && 80>GetLevel(attacker))
     if(9 >= GetRandomInt(1,100))
     {
-      wcSpellDamage(victim, attacker, GetSpellDmg(caster,0.045)+4, "", "",line);
+      wcSpellDamage(victim, attacker, GetSpellDmg(attacker,0.045)+4, "", "",line);
       AddEMsgAff( "lightning bolt", true);
     }
   GetCharItem(item, victim, 20);
@@ -1910,7 +1910,6 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         EmitAmbientSound("wc/spells/invisibility.wav",location);
         WCMessage(attacker,"doomrel",attacker,1.5);
       }
-      new itemz[UniqueItem];
       GetCharItem(itemz, attacker, 22);
       if(itemz[Item_defId]==25255 && 80>GetLevel(attacker) && 1 >= GetRandomInt(1,100))
       {
@@ -1920,11 +1919,10 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         else
         {
           new ticks = 10;
-          new tickdelay = 0.2;
+          new Float:tickdelay = 0.2;
           new power = 700;
-          new Float:range=750.0;
           new breakdmg = 60;
-          new effid=CreateEffectData(victim,attacker,ticks,power,breakdmg,0,RoundToNearest(ticks*0.5),race,g_RoundCount,0);
+          new effid=CreateEffectData(victim,attacker,ticks,power,breakdmg,0,RoundToNearest(ticks*0.5),7,g_RoundCount,0);
           if (tickdelay==0.0 || ticks == 0)
           {
             LogError("ERROR: fear spell corrupted.");
@@ -1934,8 +1932,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           {
             SetFearDmg(victim,breakdmg);
             SetFear(victim,effid);
-            SetSilence(victim,dur * 0.5,true);
-            GetClientAbsOrigin(victim,location2);
+            SetSilence(victim,4 * 0.5,true);
             g_fearspeed[victim][0]=GetClientSpeed(victim);
             g_fearspeed[victim][1]=GetClientSpeed(victim);
             new color2[4]={53,55,149,255};

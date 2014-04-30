@@ -3913,7 +3913,6 @@ public EffectSun(client)
     VS_BeamPoints(location2, location, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 1, 5, 8.00, 1.25, 1.75, 1, 0.00, {253, 187, 66, 120}, 20);
   }
 
-  new Float:location[3];
   GetClientAbsOrigin(client,location);
   new ticks = 8;
   new effid=CreateEffectData(0,client,ticks,0,_:location[0],0,_:location[1],_:location[2],g_RoundCount,0);
@@ -3971,7 +3970,7 @@ public Action:EffectSunCreate(Handle:timer, any:effid)
     Format(stargets,sizeof(stargets),"%s, %s",stargets,name2);
     else
     Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
-    new healed=wcHeal(client,targets[x],heal,spellid,true);
+    new healed=wcHeal(client,targets[x],heal,0,true);
     if(targets[x]!=client)
     {
       WCMessage(targets[x],"sun target",targets[x],name,healed);
@@ -3993,7 +3992,6 @@ public Action:EffectSunCreate(Handle:timer, any:effid)
 public Action:CastAtiesh(Handle:timer, any:client)
 {
   if(!IsClientInGame(client) || !IsPlayerAlive(client))  return;
-  decl String:line[255];
   WCMessage(client,"atiesh cast all",client);
   new clients[MAXPLAYERS];
   new team=GetClientTeam(client);

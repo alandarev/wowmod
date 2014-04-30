@@ -273,10 +273,9 @@ public wcRunSpell_9_2(spellid,race,victim,attacker,&totaldmg) //Tiger Palm
   GetCharItem(item, attacker, 10);
   if(item[Item_defId]==25261 && 80>GetLevel(attacker))
   {
-    decl String:line[255];
     new dmgef = RoundToNearest(dmg*0.50);
     new effid=CreateEffectData(victim,attacker,3,dmgef,0,0,0,2,g_respawns[victim],0);
-    else  if(effid!=0)
+    if(effid!=0)
     {
       CreateTimer(2.0, Effect4Action, effid, TIMER_REPEAT);
     }
@@ -2366,6 +2365,7 @@ public wcRunTalent_9_2_3_1(client, chi) //Monk DPS Increase from Chi Use
 }
 stock SpinningCraneKickEffect(client)
 {
+  new item[UniqueItem];
   GetCharItem(item, client, 22);
   if(item[Item_defId]==25259 && 80>GetLevel(client))
   {
