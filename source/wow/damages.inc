@@ -408,7 +408,7 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
 {
   //Checks are done fbefore, so we just go straight into damage
   //type: DMG_BULLET
-
+  PrintToChatAll("wcFatalDamageCS just ran!");
   wcKillHeadshot=headshot;
   wcKillHandled=true;
   wcKillHandled2=true;
