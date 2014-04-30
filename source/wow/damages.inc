@@ -362,8 +362,7 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 
 //(War3_DealDamage(i,KnivesTFDamage,victim,DMG_BULLET,"knives",W3DMGORIGIN_SKILL,W3DMGTYPE_MAGIC))
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
-  if(CSGO)  wcFatalDamageGO(attacker, victim, weapon, damage, headshot);
-  else  wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
+  wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
 }
 
 stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headshot=false)
