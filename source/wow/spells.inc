@@ -6588,8 +6588,8 @@ public wcRunSpell_5_11(spellid, race, client)    //Fade - mage invis copy
 
 wcRunSpell_6_10(spellid,race,client) {
   //Earthbind totem
-  if(CSGO)
-  return;
+  //if(CSGO)
+  //return;
   decl String:line[255];
   //CD and mana
   wcGetSpellInfo(race,spellid,"cooldowntype",line);

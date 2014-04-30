@@ -2493,15 +2493,17 @@ stock SpawnTotem(Float:location[3], bool:horde, hp, type=1) {
   }
   if(horde)   {
     SetEntProp( ent, Prop_Data, "m_nModelIndex", g_mdl_totem_h );
-    //if(!CSGO) {
+    if(!CSGO)
+      SetEntityModel(client,"models/chicken/chicken.mdl");
+    else
       SetEntityModel( ent, g_sTotemHorde );
-    //}
   }
   else  {
     SetEntProp( ent, Prop_Data, "m_nModelIndex", g_mdl_totem_a );
-    //if(!CSGO) {
+    if(!CSGO)
+      SetEntityModel(client,"models/chicken/chicken.mdl");
+    else
       SetEntityModel( ent, g_sTotemAlliance );
-    //}
   }
 
   switch(type) {
