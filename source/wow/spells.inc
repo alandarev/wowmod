@@ -2364,8 +2364,8 @@ public wcRunSpell_2_3(spellid,race,client)
   wcGetSpellInfo(race,spellid,"duration",line);
   new Float:duration=StringToFloat(line);
   if(CSGO){
-    SetEntityRenderMode(client, RENDER_NONE);
-    SetEntityRenderColor(client, 255, 255, 255, 0);
+    SetMageInvis(client,true,false,false,false);
+    CreateTimer(client,DestroyMageInvis,duration);
     }
   else{
     decl color[4];
@@ -5278,7 +5278,7 @@ bool:IsMageInvis(client)  {
   return g_mageInv[client];
 }
 
-stock SetMageInvis(client, bool:value, bool:announce=false, bool:overlay=true)  {
+stock SetMageInvis(client, bool:value, bool:announce=false, bool:overlay=true, bool:effect=true)  {
   if(announce && g_mageInv[client] && (!value))  {
     WCMessage(client, "invis expired", client);
   }
@@ -5291,11 +5291,13 @@ stock SetMageInvis(client, bool:value, bool:announce=false, bool:overlay=true)  
       ClientCommand(client, "r_screenoverlay effects/tp_eyefx/tp_eyefx.vmt");
       //sendshakemsg(client, all:SHAKE_START, 0.2, 1.0, 10.0);
     }
-    new Float:position[3];
-    GetClientAbsOrigin(client, position);
-    position[2]+=40;
-    VS_GlowSprite(position, g_ef_muzzleflashX, 1.00, 0.30, 255);
-    VS_GlowSprite(position, g_ef_animglow, 1.00, 0.50, 255);
+    if(effect){
+      new Float:position[3];
+      GetClientAbsOrigin(client, position);
+      position[2]+=40;
+      VS_GlowSprite(position, g_ef_muzzleflashX, 1.00, 0.30, 255);
+      VS_GlowSprite(position, g_ef_animglow, 1.00, 0.50, 255);
+    }
   }
   else  {
     ClientCommand(client, "r_screenoverlay 0");
