@@ -298,10 +298,10 @@ PrecacheCSGO()	{
   precache_laser=PrecacheModel("sprites/laserbeam.vmt");
   g_ef_laserbeam=PrecacheModel("materials/sprites/laserbeam.vmt");
 
-  g_ef_splodesprite = PrecacheModel("particle/particle_flares/particle_flare_004.vmt");
+  g_ef_splodesprite = PrecacheModel("sprites/glow04.vmt");
   g_ef_bluelight = PrecacheModel ("particle/beam_taser.vmt");
   g_ef_muzzleflashX = PrecacheModel ("effects/muzzleflashX.vmt");
-  g_ef_animglow = PrecacheModel ("spritres/glow04.vmt");
+  g_ef_animglow = PrecacheModel ("sprites/glow04.vmt");
   g_ef_scanner = PrecacheModel ("sprites/scanner_bottom.vmt");
   g_ef_fire1 = PrecacheModel ("sprites/fire.vmt");
   g_ef_fire2 = PrecacheModel ("sprites/fire1.vmt");
@@ -1130,7 +1130,13 @@ public Action:EffectAoeDamage(Handle:timer, any:effid)
     }
   }
   else if(effectsdata[effid][8]==803)
+  {
     line="Plague Strike";
+    new item[UniqueItem];
+    GetCharItem(item, effectsdata[effid][2], 13);
+    if(item[Item_defId]==25258 && 80>GetLevel(effectsdata[effid][2]))
+      g_iNecrotic[effectsdata[effid][1]]+=damage;
+  }
   else if(effectsdata[effid][8]==804)
     line="Icy Touch";
   new is_immolate = effectsdata[effid][7];
@@ -1701,7 +1707,14 @@ public Action:Effect4Action(Handle:timer, any:effid)
         wcSpellDamage(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][4], "", "",line);
       }
     }
-
+  new item[UniqueItem];
+  GetCharItem(item, effectsdata[effid][2], 13);
+  if(item[Item_defId]==25240 && 80>GetLevel(effectsdata[effid][2]))
+    if(4 >= GetRandomInt(1,100))
+    {
+      SetCdSpell(effectsdata[effid][2], 3, 0.0, 3);
+      WCMessage(effectsdata[effid][2],"gauntlets of vancleef",effectsdata[effid][2]);
+    }
   if(wcGetTalentLevel(effectsdata[effid][2],3,1,4)>0)
   {
 
@@ -1942,6 +1955,22 @@ public Action:PWSHaste(Handle:timer, Handle:datapack)
     return Plugin_Stop;
   }
   AddHaste(client, -25.0);
+  wcRecalculateStats(client);
+  return Plugin_Stop;
+}
+public Action:Bladefist(Handle:timer, Handle:datapack)
+{
+  ResetPack(datapack); // Set the reading position to the first cell
+  new client=ReadPackCell(datapack);  // Get the client index of owner
+  if (!IsClientInGame(client))
+  {
+    return Plugin_Stop;
+  }
+  if (!IsPlayerAlive(client))
+  {
+    return Plugin_Stop;
+  }
+  AddHaste(client, -35.0);
   wcRecalculateStats(client);
   return Plugin_Stop;
 }
@@ -3415,7 +3444,7 @@ public Action:EffectCursedSoulDamage(Handle:timer, any:effid) //Cursed Soul effe
   location[2]-=40;
   VS_GlowSprite(location, g_blueglow1, 3.00, 1.00, 255);
   VS_BeamRingPoint(location, 20.00, 99.00, g_blueglow1, g_blueglow1, 100, 300, 1.00, 10.00, 0.80, {255, 255, 255, 255}, 20, 0);
-  VS_BeamRingPoint(location, 25.00, 5.00, g_blueglow1, g_blueglow1, 100, 300, 0.5.00, 99.00, 0.00, {255, 255, 255, 255}, 20, 0);
+  VS_BeamRingPoint(location, 25.00, 5.00, g_blueglow1, g_blueglow1, 100, 300, 0.5, 99.00, 0.00, {255, 255, 255, 255}, 20, 0);
   
   new targets[MAXPLAYERS];
   new amount;
@@ -3868,12 +3897,158 @@ public Effect59(client) //Energetic Recovery
   }
 }
 
+public EffectSun(client)
+{
+  new Float:location2[3];
+  GetClientAbsOrigin(client,location2);
+  location2[2]+=600;
+  VS_GlowSprite(location2, g_ef_orangeflare1, 8.0, 2.00, 255);
+  new Float:location[3];
+  new amount = 12;
+  for (new x=0;x<=(amount-1);x++)
+  {
+    location[2]=location2[2]-GetRandomFloat(50.0, 75.0);
+    location[1]=location2[1]-GetRandomFloat(50.0, 85.0);
+    location[0]=location2[0]-GetRandomFloat(50.0, 85.0);
+    VS_BeamPoints(location2, location, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 1, 5, 8.00, 1.25, 1.75, 1, 0.00, {253, 187, 66, 120}, 20);
+  }
+
+  new Float:location[3];
+  GetClientAbsOrigin(client,location);
+  new ticks = 8;
+  new effid=CreateEffectData(0,client,ticks,0,_:location[0],0,_:location[1],_:location[2],g_RoundCount,0);
+  if(effid!=0)
+  {
+    CreateTimer(0.1, EffectSunCreate, effid, TIMER_REPEAT);
+  }
+  WCMessage(client,"sun cast",client);
+}
 
 
+public Action:EffectSunCreate(Handle:timer, any:effid)
+{
+  if (effectsdata[effid][0]==0) //empty effectdata
+    return Plugin_Stop;
+  if (!IsClientInGame(effectsdata[effid][2]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (effectsdata[effid][3]<=0) //ticks
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (effectsdata[effid][9]!=g_RoundCount)
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  effectsdata[effid][3]--; //expend one tick and continue
+
+  new Float:location[3];
+  location[0] = Float:effectsdata[effid][5];
+  location[1] = Float:effectsdata[effid][7];
+  location[2] = Float:effectsdata[effid][8];
+
+  new client=effectsdata[effid][2];
+  new targets[MAXPLAYERS];
+  new team=GetClientTeam(client);
+  new amount;
+  if(team==3)
+    amount=GetNearClients("@ct",location,targets,300.0);
+  if(team==2)
+    amount=GetNearClients("@t",location,targets,300.0);
+  decl String:name[255],String:name2[255];
+  GetClientName(client,name,sizeof(name));
+  new String:stargets[255];
+  new heal=GetSpellDmg(client,0.03);
+  heal+=2;
+  for (new x=0;x<=(amount-1);x++)
+  {
+    GetClientName(targets[x],name2,sizeof(name2));
+    if(x>0)
+    Format(stargets,sizeof(stargets),"%s, %s",stargets,name2);
+    else
+    Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
+    new healed=wcHeal(client,targets[x],heal,spellid,true);
+    if(targets[x]!=client)
+    {
+      WCMessage(targets[x],"sun target",targets[x],name,healed);
+    }
+  }
+  if(amount==0)
+  Format(stargets,sizeof(stargets),"%T","nobody",client);
+  WCMessage(client,"sun caster",client,stargets,heal);
+  
+  
+  
+  
+  
+  
+  return Plugin_Continue;
+}
 
 
+public Action:CastAtiesh(Handle:timer, any:client)
+{
+  if(!IsClientInGame(client) || !IsPlayerAlive(client))  return;
+  decl String:line[255];
+  WCMessage(client,"atiesh cast all",client);
+  new clients[MAXPLAYERS];
+  new team=GetClientTeam(client);
+  new amount;
+  if(team==2)
+    amount=FindMatchingPlayers("@t",clients);
+  if(team==3)
+    amount=FindMatchingPlayers("@ct",clients);
+  for(new i=0;i<amount;i++)
+  {
+    if(IsClientInGame(clients[i]))
+      if(GetClass(clients[i])!= 1 || GetClass(clients[i])!= 2 || GetClass(clients[i])!= 8 || GetClass(clients[i])!= 9)
+      {
+        CastWisdom(clients[i],6);
+      }
+  }
+}
 
-
-
-
-
+public SenJin(userid,attacker)
+{
+  decl String:name[50],String:victimname[50];
+  GetClientName(attacker,name,sizeof(name));
+  GetClientName(userid,victimname,sizeof(victimname));
+  new tickdelay=KvGetNum(effectsdb,"tickdelay",0);
+  new ticks=3;
+  new tickdamage=4;
+  new Float:multi=0.08;
+  tickdamage+=RoundToNearest(float(GetDamage(attacker))*multi);
+  WCMessage(attacker,"senjin casted",attacker,victimname,tickdamage);
+  WCMessage(userid,"senjin casted victim",userid,name,tickdamage);
+  //creating visual effect
+  decl Float:location[3];
+  GetClientAbsOrigin(attacker,location);
+  new color[4]= {5,154,99,130};
+  VS_BeamRingPoint(location, 15.00, 20.00, g_ef_glow01, g_ef_glow01, 0, 0, 0.50, 1.50, 0.00, {205, 205, 255, 255}, 5, 0);
+  // end of visual effect
+  new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid],GetClientDeaths(userid));
+  else if(effid!=0)
+  {
+    CreateTimer(float(tickdelay), Effect4Action, effid, TIMER_REPEAT);
+  }
+}
+public Action:Guldan(Handle:timer, Handle:datapack)
+{
+  ResetPack(datapack); // Set the reading position to the first cell
+  new client=ReadPackCell(datapack);  // Get the client index of owner
+  if (!IsClientInGame(client))
+  {
+    return Plugin_Stop;
+  }
+  if (!IsPlayerAlive(client))
+  {
+    return Plugin_Stop;
+  }
+  AddHaste(client, -10.0);
+  wcRecalculateStats(client);
+  return Plugin_Stop;
+}

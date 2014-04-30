@@ -9413,6 +9413,10 @@
   {
     "en"     "Tiger Palm"
   }
+  "tigery palm"
+  {
+    "en"     "Tigery Palm"
+  }
   "Tiger Palm info"
   {
     "en"    "Chance on attack to increase your armor penetration by 50%% for 10 seconds and deal a burst of damage. 10 second cooldown."
@@ -10483,6 +10487,94 @@
   "righteous shield on" //
   {
     "en"     "@greenRighteous Shield @defaulthas been activated"
+  }
+  "split"
+  {
+    "en"		"Gorehowl"
+  }
+  "bladefist"
+  {
+    "en"		"Bladefist"
+  }
+  "blinkstrike"
+  {
+    "en"		"Blinkstrike"
+  }
+  "fortishal"
+  {
+    "en"		"Fortishal"
+  }
+  "fear greymane"
+  {
+    "#format" "{1:s}"
+    "en"     "@defaultYou @greenhowl @defaultat @lightgreen{1} @default"
+  }
+  "gauntlets of vancleef"
+  {
+    "en"     "@greenVanish's cooldown has been reset"
+  }
+  "lights vengeance"
+  {
+    "en"     "Light's Vengeance"
+  }
+  "truesilver champion"
+  {
+    "en"     "Well Met"
+  }
+  "sun caster"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "The @greensun of Helios @defaulthealed @lightgreen{1} @default and restored @lightgreen{2} @defaulthealth."
+  }
+  "sun target"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "@lightgreen{1}'s @greensun of Helios @defaultheals you for @lightgreen{2} @defaulthealth."
+  }
+  "sun cast"
+  {
+    "en"     "@lightgreenYour prayers @defaulthave been answered and a @greensun of Helios @defaulthas been summoned."
+  }
+  "atiesh cast all"
+  {
+    "en"     "Your @greenPrayer of Fortitude @defaultincreases your entire teams stamina"
+  }
+  "lightning bolt"
+  {
+    "en"     "Lightning Bolt"
+  }
+  "senjin poison"
+  {
+    "en"     "Sen'Jin's Poison"
+  }
+  "senjin casted"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "Your @greenSen'Jin's Poison struck @defaulton {1} @defaultfor @lightgreen{2} @defaultdamage per tick."
+  }
+  "senjin casted victim"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "{1}'s @greenSen'Jin's Poison @defaultstruck you for @lightgreen{2} @defaultdamage per tick."
+  }
+  "doomrel"
+  {
+    "#format" "{1:0.2f}"
+    "en"    "@greenDoomrel's Ghostshroud @defaulthas protected you, granting you invisibility for @lightgreen1.5 @defaultseconds."
+  }
+  "fiery spinning crane kick"
+  {
+    "#format" "{1:i},{2:s}"
+    "en" "Your @lightgreenFiery Spinning Crane Kick @defaultdoes @lightgreen{1} @defaultdamage to @green{2}"
+  }
+  "fiery spinning crane kick target"
+  {
+    "en"     "@green@att's Fiery Spinning Crane Kick @defaulthits you for @lightgreen@dmg @defaultdamage"
+  }
+  "fiery spinning crane kick miss"
+  {
+    "#format" "{1:i}"
+    "en" "Your @lightgreenFiery Spinning Crane Kick @defaultdoes @lightgreen{1} @defaultdamage to @greennobody"
   }
 }
 

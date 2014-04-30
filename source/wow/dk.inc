@@ -337,7 +337,22 @@ wcRunSpell_8_2(spellid,race,client) //Death Grip
   GetClientAbsOrigin(target,loc2);
   new Float:multi =wcGetSpellInfoFloat(race,spellid,"push");
   new Float:power = 175 + GetDistanceBetween(loc1,loc2) * multi;
-
+  
+  new itemz[UniqueItem];
+  GetCharItem(itemz, client, 22);
+  if(itemz[Item_defId]==25256 && 80>GetLevel(client))
+  {
+    power+=300;
+    new targett;
+    new Float:locationz[3];
+    GetClientAbsOrigin(target,locationz);
+    new team=GetClientTeam(target);
+    if(team==2)
+      targett=GetNearestClient("@ct",locationz,500,target);
+    if(targett>0)
+      if(GetBoss(targett)<=0 || (!IsBoss()) )
+        PushPlayerTowardsPlayer(targett, client, power, zPower);
+  }
   //Spell code
   //if not boss
   if(GetBoss(target)<=0 || (!IsBoss()) )
@@ -473,7 +488,7 @@ public Action:EndPlaguebringer(Handle:timer, Handle:datapack)
   RemoveEffectSpellVic(client,48);
 }
 
-wcRunSpell_8_4(spellid,race,client)  { //Icy Touch
+wcRunSpell_8_4(spellid,race,client,victim,bool:endbringer=false)  { //Icy Touch
   //Standard Targetting
   new target=GetAimTarget(client,15.0);
   if(target<=0) {
@@ -487,13 +502,17 @@ wcRunSpell_8_4(spellid,race,client)  { //Icy Touch
     return;
   }
 
-
+  if(victim>0)
+    target=victim;
   //DK specific
-  new runes = wcGetSpellInfoInt(race,spellid,"runes");
-  if(runes>0)
-    if(!SpendRune(client))  {
-      WCMessage(client, "no runes", client);
-      return;
+  if(!endbringer)
+  {
+    new runes = wcGetSpellInfoInt(race,spellid,"runes");
+    if(runes>0)
+      if(!SpendRune(client))  {
+        WCMessage(client, "no runes", client);
+        return;
+    }
   }
   new regen = wcGetSpellInfoInt(race,spellid,"regen");
   if(GetStance(client)==2)

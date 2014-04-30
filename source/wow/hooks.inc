@@ -753,6 +753,13 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
     UpdatePlayerRating(client, rating);
     if(IsPlayerAlive(client))
     {
+      new item[UniqueItem];
+      GetCharItem(item, client, 22);
+      if(item[Item_defId]==25249 && 80>GetLevel(client))
+        CreateTimer(0.5, CastAtiesh, client);
+        
+        
+        
       if(!bArenaActive) {
         for (new x=0;x<=19;x++)
         ClientCDSpells[client][x]=GetTickedTime();
@@ -902,7 +909,7 @@ public Action:HostageRescueEvent(Handle:event,const String:name[],bool:dontBroad
   wcGiveXp(client,xp,true);
   return Plugin_Continue;
 }
-public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast) //Deathevent, Death, Death event, Playerdeath, Player death
+public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast) //Deathevent, Death, Death event, Playerdeath, Player death, OnDeath
 {
   //PrintToServer("player death");
   new userid=GetClientOfUserId(GetEventInt(event,"userid"));
@@ -1702,10 +1709,79 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   SetCombat(attacker, 8);
   SetCombat(victim,   8);
 
-  //new item[UniqueItem];
-  //GetCharItem(item, attacker, 22);
-  //PrintToChatAll("item is %i",item[Item_defId]);
-  
+  new item[UniqueItem];
+  GetCharItem(item, attacker, 22);
+  if(item[Item_defId]==25236 && 80>GetLevel(attacker))
+  {
+    if(10 >= GetRandomInt(1,100))
+    {
+      AddHaste(attacker, 35.0);
+      wcRecalculateStats(attacker);
+      new Handle:datapack4=CreateDataPack();
+      WritePackCell(datapack4,attacker); // Write the attacker index of owner
+      CreateTimer(8.0,Bladefist,datapack4,TIMER_HNDL_CLOSE);
+      AddEMsgAff("bladefist",true);
+    }
+  }
+  if(2 >= GetRandomInt(1,150))
+  {
+    GetCharItem(item, attacker, 16);
+    if(item[Item_defId]==25237 && 80>GetLevel(attacker))
+      wcRunSpell_7_4(4,7,attacker);
+    GetCharItem(item, victim, 16);
+    if(item[Item_defId]==25237 && 80>GetLevel(victim))
+      wcRunSpell_7_4(4,7,victim);
+  }
+  GetCharItem(item, attacker, 22);
+  if(item[Item_defId]==25238 && 80>GetLevel(attacker))
+    if(5 >= GetRandomInt(1,100))
+    {
+      AddEMsgAff( "blinkstrike", true);
+      damagemulti*=1.20;
+    }
+  GetCharItem(item, attacker, 22);
+  if(item[Item_defId]==25239 && 80>GetLevel(attacker))
+    if(7 >= GetRandomInt(1,100))
+      if(GetClass(victim)!= 1 && GetClass(victim)!= 2 && GetClass(victim)!=8 && GetClass(victim)!= 9)
+      {
+        wcSetMana(victim,GetMana(victim)-20);
+        AddEMsgAff( "fortishal", true);
+      }
+  GetCharItem(item, attacker, 22);
+  if(item[Item_defId]==25244 && 80>GetLevel(attacker))
+    if(6 >= GetRandomInt(1,100))
+    {
+      SetHolyPower(attacker, GetHolyPower(attacker)+1);
+      AddEMsgAff( "lights vengeance", true);
+    }
+  GetCharItem(item, attacker, 22);
+  if(item[Item_defId]==25245 && 80>GetLevel(attacker))
+    if(20 >= GetRandomInt(1,100))
+      {
+        new heal = RoundToNearest(float(GetMaxHealth(attacker))*0.02);
+        wcHeal(attacker,attacker,heal,0,true);
+        AddEMsgAff( "truesilver champion", true);
+      }
+  GetCharItem(item, attacker, 22);
+  if(item[Item_defId]==25250 && 80>GetLevel(attacker))
+    if(9 >= GetRandomInt(1,100))
+    {
+      wcSpellDamage(client, attacker, GetSpellDmg(caster,0.045)+4, "", "",line);
+      AddEMsgAff( "lightning bolt", true);
+    }
+  GetCharItem(item, victim, 20);
+  if(item[Item_defId]==25251 && 80>GetLevel(victim))
+    if(12 >= GetRandomInt(1,100))
+    {
+      SenJin(attacker,victim);
+      AddEMsgAff( "senjin poison", true);
+    }
+  GetCharItem(item, attacker, 22);
+  if(item[Item_defId]==25257 && 80>GetLevel(attacker))
+    if(7 >= GetRandomInt(1,100))
+      wcRunSpell_8_4(4,8,attacker,victim,bool:endbringer=true);
+    
+    
   if(PlayerHasBonusFast(attacker, Profession:Prof_ExtraDamage))
   damagemulti*=1.05;
   if(PlayerHasBonusFast(victim, Profession:Prof_ExtraDef))
@@ -1811,10 +1887,76 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       }
       wcGetSpellInfo(4,6,"name",line);
       if(GetClass(attacker)==4 && bCS && StrEqual(spellname,line,false))
-      wcRunTalent_4_DivineBlood(attacker);
+        wcRunTalent_4_DivineBlood(attacker);
+        
+      new itemz[UniqueItem];
+      GetCharItem(itemz, attacker, 14);
+      if(itemz[Item_defId]==25253 && 80>GetLevel(attacker) && 4 >= GetRandomInt(1,100))
+      {
+        CreateTimer(1.5,DestroyMageInvis,attacker);
+        if(Defuser==attacker)
+        {
+          new bombent = FindEntityByClassname(-1,"planted_c4");
+          if (bombent>-1)
+          {
 
+            WCMessage(attacker, "cant defuse", attacker);
+            CreateTimer(0.2,DefuseDelay,0);
+          }
+        }
+        SetMageInvis(attacker,true, false, false);  //No overlay effects
+        new Float:location[3];
+        GetClientAbsOrigin(attacker,location);
+        EmitAmbientSound("wc/spells/invisibility.wav",location);
+        WCMessage(attacker,"doomrel",attacker,1.5);
+      }
+      new itemz[UniqueItem];
+      GetCharItem(itemz, attacker, 22);
+      if(itemz[Item_defId]==25255 && 80>GetLevel(attacker) && 1 >= GetRandomInt(1,100))
+      {
+        if((GetClass(victim)!=8 && wcGetTalentLevel(victim,2,2,1)!=0) || (!UnableToAttack[victim]))
+        {
+        }
+        else
+        {
+          new ticks = 10;
+          new tickdelay = 0.2;
+          new power = 700;
+          new Float:range=750.0;
+          new breakdmg = 60;
+          new effid=CreateEffectData(victim,attacker,ticks,power,breakdmg,0,RoundToNearest(ticks*0.5),race,g_RoundCount,0);
+          if (tickdelay==0.0 || ticks == 0)
+          {
+            LogError("ERROR: fear spell corrupted.");
+            DeleteEffectData(effid);
+          }
+          else if(effid!=0)
+          {
+            SetFearDmg(victim,breakdmg);
+            SetFear(victim,effid);
+            SetSilence(victim,dur * 0.5,true);
+            GetClientAbsOrigin(victim,location2);
+            g_fearspeed[victim][0]=GetClientSpeed(victim);
+            g_fearspeed[victim][1]=GetClientSpeed(victim);
+            new color2[4]={53,55,149,255};
+            FadeEffect(victim,2,300,50,color2);
+            effectsdata[effid][6] = 1;
+            CreateTimer(tickdelay, EffectFearAction, effid, TIMER_REPEAT);
+          }
+        }
+      }
       if(bCS)
       {
+        new item2[UniqueItem];
+        GetCharItem(item2, attacker, 22);
+        if(item2[Item_defId]==25235 && 80>GetLevel(attacker))
+        {
+          if(18 >= GetRandomInt(1,100))
+          {
+            wcPhysicalDamage(victim,attacker,12, "", "",true,line);
+            AddEMsgAff("split",true);
+          }
+        }
         wcGetTalentCritDamageBonus(attacker,spellname,talentcritdamagebonus,true);
         damagemulti*=(1.50+talentcritdamagebonus)*(1.0 - GetMinusCrit(victim));
         wcRunTalentSpellCrit(attacker,victim,spellname,damage,damagemulti,isAoe);

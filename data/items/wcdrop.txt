@@ -1615,4 +1615,18 @@
     "incriment" "0.00075"
     "id"  "20019"
   }
+  "154"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "1"
+    "minimum" "0.0001"
+    "maximum" "0.0002"
+    "incriment" "0.00005"
+    "set"   "381 382"
+    "announce" "1"
+    "autoauction" "1"
+    //40-80 legendaries
+	}
 }

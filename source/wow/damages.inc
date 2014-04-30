@@ -157,7 +157,7 @@ stock PushHealed(const client, const amount)  {
 }
 
 //Percentage heals should not crit as they heal a set percent.
-wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
+wcHeal(client,target,heal, spellid=0, bool:cancrit=true) //Healing
 {
   //heal = HealControl(target, heal);
   SetFocusedWill(client,false);
@@ -316,8 +316,48 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
     }
   }
   //PrintToServer("Healing done: %d target = %d, client = %d", heal, target, client);
-
+  new item[UniqueItem];
+  GetCharItem(item, client, 20);
+  if(item[Item_defId]==25246 && 80>GetLevel(client))
+    if(25 >= GetRandomInt(1,100))
+    {
+      decl Float:loc2[3];
+      GetClientAbsOrigin(client,loc2);
+      new damagetarget;
+      if(GetClientTeam(client)==2)
+        damagetarget = GetNearestClient("@ct",loc2,200.0);
+      if(GetClientTeam(client)==3)
+        damagetarget = GetNearestClient("@t",loc2,200.0);
+      if(damagetarget!=0)
+        wcSpellDamage(damagetarget,client,RoundToNearest(float(hp)*0.30), "", "",line);
+    }
   //Get heal percentage and push it to stack
+  
+  
+  new random=GetRandomInt(1,100);
+  new item[UniqueItem];
+  GetCharItem(item, client, 20);
+  if(item[Item_defId]==25248 && 80>GetLevel(client))
+    if(15>=random)
+    {
+      if(GetMana(client)+20>GetMaxMana(client))
+        wcSetMana(client,GetMaxMana(client));
+      else
+        wcSetMana(client,GetMana(client)+20);
+      
+    }
+  GetCharItem(item, client, 20);
+  if(item[Item_defId]==25260 && 80>GetLevel(client))
+    if(20 >= GetRandomInt(1,100))
+      if(client==target)
+      {
+        new energyrestore = RoundToNearest(float(heal)*0.15)+2;
+        if(GetMana(client)+energyrestore>GetMaxMana(client))
+          wcSetMana(client,GetMaxMana(client));
+        else
+          wcSetMana(client,GetMana(client)+energyrestore);
+      }
+  
   new perc = RoundToNearest(float(heal) / float(GetMaxHealth(client)) * 100.0);
   PushHealed(client, perc);
   if(target!=client)

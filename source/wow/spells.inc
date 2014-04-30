@@ -1035,7 +1035,13 @@ public wcRunSpell_6_8(spellid,race,client)
   decl String:line[255];
   wcGetTalentInfo(6,3,2,2,client,"multi",line);
   chance+=StringToInt(line);
-
+  new item[UniqueItem];
+  GetCharItem(item, client, 20);
+  if(item[Item_defId]==25252 && 80>GetLevel(client))
+  {
+    chance=100;
+  }
+  
   if((amount>0) && (getOneRound(client)==0) && (!IsDmEnabled()) && (chance >= GetRandomInt(1,100)) )   {
     setOneRound(client,1);
     WCMessage(client,"reincarnation",client);
@@ -1766,7 +1772,18 @@ public wcRunSpell_3_3(spellid,race, target,client)
       Format(vicMsg,sizeof(vicMsg),"%T","fireball target", target);
       Format(attMsg,sizeof(attMsg),"%T","fireball caster", client);
       wcGetSpellInfo(race,spellid,"name",line);
-      wcSpellDamage(target,client,dmg, attMsg, vicMsg,line);
+      
+      new team = GetClientTeam(client);
+      if(team==2)
+        team=3;
+      else
+        team=2;
+      new item[UniqueItem];
+      GetCharItem(item, client, 13);
+      if(item[Item_defId]==25241 && 80>GetLevel(client))
+        wcSpellAoeDamage(target,client,dmg,150,team,line);
+      else
+        wcSpellDamage(target,client,dmg, attMsg, vicMsg,line);
 
       location[2]+=40;
       locationatt[2]+=40;
@@ -2246,7 +2263,10 @@ public wcRunSpell_3_10(spellid,race, client)
 
         WCMessage(target, "polymorph target", target, duration, name);
         WCMessage(client, "polymorph caster", client, duration, name2);
-
+        new item[UniqueItem];
+        GetCharItem(item, client, 22);
+        if(item[Item_defId]==25242 && 80>GetLevel(client))
+          duration=10.0;
         setPolymorph(target, duration);
         g_iPolycaster[target] = client;
 
@@ -2787,6 +2807,14 @@ public wcRunSpell_5_2(spellid,race,client) //Prayer of Healing
     BeamRingEffect("@all",location,150.0,90.0,g_purplelaser1,0,10,3.0,80.0,color,0.0,3);
     WCMessage(client,"prayer of healing caster",client,stargets,heal);
     EmitAmbientSound("wc/spells/heal.wav",location);
+
+
+    new random=GetRandomInt(1,100);
+    new item[UniqueItem];
+    GetCharItem(item, client, 16);
+    if(item[Item_defId]==25247 && 80>GetLevel(client))
+      if(30>=random)
+        EffectSun(client);
   }
 }
 
@@ -3718,18 +3746,23 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
   new cdtype=StringToInt(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line);
-  wcGetTalentInfo(7,2,2,4,client,"fcd",line);
-  cd-=StringToFloat(line);
-  SetCdSpell(client, cdtype, cd, spellid);
-  new manareq = GetSpellCost(client, spellid);
-  wcSetMana(client,GetMana(client)-manareq);
-
+  if(GetClass(client)==7)
+  {
+    wcGetTalentInfo(7,2,2,4,client,"fcd",line);
+    cd-=StringToFloat(line);
+    SetCdSpell(client, cdtype, cd, spellid);
+    new manareq = GetSpellCost(client, spellid);
+    wcSetMana(client,GetMana(client)-manareq);
+  }
   //Range of fear
   wcGetSpellInfo(race,spellid,"range",line);
   new Float:range=StringToFloat(line);
-  wcGetTalentInfo(7,2,2,1,client,"multi",line);
-  range*=(1.0+StringToFloat(line));
-
+  
+  if(GetClass(client)==7)
+  {
+    wcGetTalentInfo(7,2,2,1,client,"multi",line);
+    range*=(1.0+StringToFloat(line));
+  }
   new Float:location[3];
   GetClientAbsOrigin(client,location);
   new targets[MAXPLAYERS];
@@ -3751,9 +3784,11 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
   //Number of ticks
   wcGetSpellInfo(race,spellid,"ticks",line);
   new ticks=StringToInt(line);
-  wcGetTalentInfo(7,2,2,1,client,"duration",line);
-  ticks += StringToInt(line);
-
+  if(GetClass(client)==7)
+  {
+    wcGetTalentInfo(7,2,2,1,client,"duration",line);
+    ticks += StringToInt(line);
+  }
   //duration
   new Float:dur=tickdelay*float(ticks);
 
@@ -3798,10 +3833,13 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
     else if(effid!=0)
     {
       //anti defuse
-      AntiDefuse(client);
-      SetWarlockFeared(client, true);
+      if(GetClass(client)==7)
+      {
+        AntiDefuse(client);
+        SetWarlockFeared(client, true);
 
-      CreateTimer(dur, DestroyWarlockFeared, client);
+        CreateTimer(dur, DestroyWarlockFeared, client);
+      }
       SetFearDmg(targets[x],breakdmg);
       SetFear(targets[x],effid);
       SetSilence(targets[x],dur * 0.5,true);
@@ -3819,7 +3857,10 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
   }
   if(amount==0)
   Format(stargets,sizeof(stargets),"%T","nobody",client);
-  WCMessage(client,"fear caster",client,stargets);
+  if(GetClass(client)==1)
+    WCMessage(client,"fear greymane",client,stargets);
+  else
+    WCMessage(client,"fear caster",client,stargets);
   EmitAmbientSound("wc/spells/fear.wav",location);
 
   VS_BeamRingPoint(location, 5.00, 300.00, g_ef_scanner, g_ef_bluelight, 10, 30, 1.00, 50.00, 0.20, {255, 255, 255, 255}, 3, 0);
@@ -3933,7 +3974,7 @@ GetFearDmg(client)
   return maxFear[client];
 }
 
-public wcRunSpell_7_5(spellid,race,client) //Lifetap / Life Tap
+public wcRunSpell_7_5(spellid,race,client) //Lifetap, Life Tap
 {
   if(GetMaxMana(client) == GetMana(client)) {
     WCMessage(client, "full mana", client);
@@ -3982,9 +4023,20 @@ public wcRunSpell_7_5(spellid,race,client) //Lifetap / Life Tap
     wcSetMana(client,mp);
     mp-=oldmp;
     WCMessage(client,"life tap cast",client,hp,mp);
+    
+    new item[UniqueItem];
+    GetCharItem(item, client, 20);
+    if(item[Item_defId]==25254 && 80>GetLevel(client))
+    {
+      AddHaste(client, 10.0);
+      wcRecalculateStats(client);
+      new Handle:datapack4=CreateDataPack();
+      WritePackCell(datapack4,client); // Write the client index of owner
+      CreateTimer(12.0,Guldan,datapack4,TIMER_HNDL_CLOSE);
+    }
   }
   else
-  WCMessage(client,"too low hp life tap",client);
+    WCMessage(client,"too low hp life tap",client);
 }
 
 public wcRunSpell_7_6(spellid,race,client)

@@ -266,8 +266,24 @@ public wcRunSpell_9_2(spellid,race,victim,attacker,&totaldmg) //Tiger Palm
   GetClientAbsOrigin(victim,location);
   MonkTigerPalmEffect(location);
   //EmitAmbientSound("wc/spells/tigerpalm.wav",location);
-  AddEMsgAff("tiger palm", true);
 
+
+  
+  new item[UniqueItem];
+  GetCharItem(item, attacker, 10);
+  if(item[Item_defId]==25261 && 80>GetLevel(attacker))
+  {
+    decl String:line[255];
+    new dmgef = RoundToNearest(dmg*0.50);
+    new effid=CreateEffectData(victim,attacker,3,dmgef,0,0,0,2,g_respawns[victim],0);
+    else  if(effid!=0)
+    {
+      CreateTimer(2.0, Effect4Action, effid, TIMER_REPEAT);
+    }
+    AddEMsgAff("tigery palm", true);
+  }
+  else
+    AddEMsgAff("tiger palm", true);
   return totaldmg;
 }
 public Action:RemoveTigerPalmBonus(Handle:timer, any:pack)
@@ -757,6 +773,11 @@ public wcRunSpell_9_5(spellid,race,client) //Spinning Crane Kick
   new String:stargets[255];
   new Float:agility=float(GetAgi(client)+GetBonusAgi(client));
   new dmg=RoundToNearest(float(base)+agility*multi);
+  
+  new item[UniqueItem];
+  GetCharItem(item, client, 22);
+  if(item[Item_defId]==25259 && 80>GetLevel(client))
+    dmg=RoundToNearest(float(dmg)*1.30);
   for (new x=0;x<=(amount-1);x++)
   {
     GetClientName(targets[x],name2,sizeof(name2));
@@ -766,9 +787,15 @@ public wcRunSpell_9_5(spellid,race,client) //Spinning Crane Kick
     Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
   }
   if(amount>=1)
-    WCMessage(client,"spinning crane kick",client,dmg,stargets);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick",client,dmg,stargets);
   if(amount==0)
-    WCMessage(client,"spinning crane kick miss",client,dmg);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick miss",client,dmg);
 
   new olddmg = dmg;
   new Float:talentmulti = 1.00;
@@ -799,8 +826,13 @@ public wcRunSpell_9_5(spellid,race,client) //Spinning Crane Kick
     if(targets[x]>=3 && GetMonkStance(client)==2)
       addChi(client,1);
     decl String:vicMsg[300];
-    Format(vicMsg,sizeof(vicMsg),"%T","spinning crane kick target", targets[x]);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      Format(vicMsg,sizeof(vicMsg),"%T","fiery spinning crane kick target", targets[x]);
+    else
+      Format(vicMsg,sizeof(vicMsg),"%T","spinning crane kick target", targets[x]);
     wcPhysicalDamage(targets[x],client,dmg, "", vicMsg, true);
+    
+    
     dmg = olddmg; //So that the damage isn't increased and then sent to the repeat part where it'll be increased again, and to avoid it stacking multiplicatively from the amount of targets (e.g 3 targets would cause it to be 1.3^3 damage.)
     BloodSpray(targets[x]);
   }
@@ -1461,6 +1493,7 @@ stock MonkSpinningCraneKickEffect(Float: loc[3])  {
   loc1[1]=loc[1];
   loc1[2]=loc[2];
   loc1[2] += 25;
+  
   VS_BeamRingPoint(loc1, 150.0, 151.0, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 0, 1, 1.0, 5.0, 0.0, {25, 75, 100, 25}, 0, 0, 0.0);
   VS_BeamRingPoint(loc1, 150.0, 151.0, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 0, 1, 0.9, 10.0, 0.0, {25, 75, 100, 50}, 5, 0, 0.1);
   VS_BeamRingPoint(loc1, 150.0, 151.0, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 0, 1, 0.7, 15.0, 0.0, {25, 75, 100, 75}, 10, 0, 0.3);
@@ -2333,21 +2366,43 @@ public wcRunTalent_9_2_3_1(client, chi) //Monk DPS Increase from Chi Use
 }
 stock SpinningCraneKickEffect(client)
 {
-  new Float:location[3];
-  GetClientAbsOrigin(client,location);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  EmitAmbientSound("wc/spells/whirlwind.wav",location);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  GetCharItem(item, client, 22);
+  if(item[Item_defId]==25259 && 80>GetLevel(client))
+  {
+    new Float:location[3];
+    GetClientAbsOrigin(client,location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    EmitAmbientSound("wc/spells/whirlwind.wav",location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+  }
+  else
+  {
+    new Float:location[3];
+    GetClientAbsOrigin(client,location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    EmitAmbientSound("wc/spells/whirlwind.wav",location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  }
 }
 
 

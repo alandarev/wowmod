@@ -2006,10 +2006,10 @@ wcRunTalent_1_DeepWounds(attacker,victim,damage)
       DeleteEffectData(effid);
     }
     else  if(effid!=0)
-      {
-        CreateTimer(tickdelay, Effect4Action, effid, TIMER_REPEAT);
-        WCMessage(attacker,"deep wounds",attacker,dmgef*2,tickdelay*ticks);
-      }
+    {
+      CreateTimer(tickdelay, Effect4Action, effid, TIMER_REPEAT);
+      WCMessage(attacker,"deep wounds",attacker,dmgef*2,tickdelay*ticks);
+    }
   }
 }
 
@@ -2830,6 +2830,10 @@ public wcRunTalent_3_4(client,victim, String:source[])                          
       chance+=5;
   }
   new random=GetRandomInt(1,100);
+  new item[UniqueItem];
+  GetCharItem(item, client, 16);
+  if(item[Item_defId]==25243 && 80>GetLevel(client))
+    chance+=5;
   if(chance>=random && GetClientSpeed(victim)>0.1)
   {
     wcGetTalentInfo(3,1,2,3,client,"slowmulti",line);

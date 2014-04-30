@@ -147,7 +147,7 @@
     "name_ru"   "TODO"
     "event" "player_cast"
     "active"  "1"
-    "level"   "62"
+    "level"   "40"
     "cost"    "5000"
     "cooldowntype"  "11"
     "cooldown"      "18.0"
