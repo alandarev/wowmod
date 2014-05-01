@@ -402,7 +402,7 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 //(War3_DealDamage(i,KnivesTFDamage,victim,DMG_BULLET,"knives",W3DMGORIGIN_SKILL,W3DMGTYPE_MAGIC))
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
   if(CSGO)
-    // wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
+    wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
     return;
   else
     wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
@@ -474,7 +474,7 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   PushArrayCell(g_dmgArray, _:pack);*/
   /*CreateTimer(0.0, TimerDmg, pack, TIMER_HNDL_CLOSE);*/
 
-  SDKHooks_TakeDamage(victim, attacker, attacker, float(damage));
+  //SDKHooks_TakeDamage(victim, attacker, attacker, float(damage));
   IntToString(dmg_bullet,dmg_type_str,32);
   /*new pointHurt=CreateEntityByName("point_hurt");*/
   /*if(pointHurt)*/
@@ -495,6 +495,7 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   /*}*/
   new String:vName[50];
   GetClientName(victim, vName, 50);
+  PrintToChatAll("Ran wcFatalDamageGO. Victim: %d, Attacker: %d, Damage: %d", victim, attacker, damage);
   return true;
 }
 
