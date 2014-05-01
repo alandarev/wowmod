@@ -335,11 +335,11 @@ PrecacheCSGO()	{
   g_ctf_horde    = PrecacheModel("models/cf_models_src/ctf_80rd3.mdl");
   g_ctf_alliance = PrecacheModel("models/cf_models_src/ctf_41114nc3.mdl");
 
-  PrecacheModel("models/cf_models_src/treasurechest01.mdl");
-  PrecacheModel("models/cf_models_src/treasurechest02.mdl");
-  PrecacheModel("models/cf_models_src/treasurechest03.mdl");
-  PrecacheModel("models/cf_models_src/treasurechest04.mdl");
-  PrecacheModel("models/cf_models_src/treasurechest05.mdl");
+  PrecacheModel("heavy/models/cf_models_src/treasurechest01.mdl");
+  PrecacheModel("heavy/models/cf_models_src/treasurechest02.mdl");
+  PrecacheModel("heavy/models/cf_models_src/treasurechest03.mdl");
+  PrecacheModel("heavy/models/cf_models_src/treasurechest04.mdl");
+  PrecacheModel("heavy/models/cf_models_src/beerfest_keg_pony01.mdl");
   //CS:GO Chicken
 
 
