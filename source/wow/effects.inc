@@ -184,7 +184,7 @@ PrecacheHP()  {
 PrecacheCSS()	{
 
   PrecacheModel("particle/fire.vmt");
-  SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
+  //SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
   ShieldSprite=PrecacheModel("sprites/strider_blackball.vmt"); //PowerWordShield Priest
   ChaosSprite=PrecacheModel("models/manhack/blur01.vmt"); // Chaos Bolt Sprite
   g_ef_playerredsmall = PrecacheModel("sprites/player_red_small.vmt");
@@ -239,7 +239,7 @@ PrecacheCSS()	{
   g_ef_striderdarkflare = PrecacheModel("effects/strider_dark_flare.vmt");
   g_ef_particle_noisesphere = PrecacheModel ("materials/particle/particle_noisesphere.vmt");
   g_ef_trail_blue = PrecacheModel("materials/sprites/combineball_trail_blue_1.vmt");
-  g_ef_combineball = PrecacheModel("models/Effects/combineball.mdl");
+  //g_ef_combineball = PrecacheModel("models/Effects/combineball.mdl");
   g_ef_yellowflare1 = PrecacheModel("materials/sprites/yelflare1.vmt");
   g_ef_orangeflare1 = PrecacheModel("materials/sprites/orangeflare1.vmt");
   g_ef_orangelight1 = PrecacheModel("materials/sprites/orangelight1.vmt");
@@ -265,7 +265,7 @@ PrecacheCSS()	{
 PrecacheCSGO()	{
   g_ef_physring1 = PrecacheModel("sprites/physring1.vmt");
   PrecacheModel("particle/star_ob_noz.vmt");
-  SWD_sprite=PrecacheModel("effects/bluespark.vmt"); //ShadowWord Death Priest
+  //SWD_sprite=PrecacheModel("effects/bluespark.vmt"); //ShadowWord Death Priest
   ShieldSprite=PrecacheModel("sprites/strider_blackball.vmt"); //PowerWordShield Priest
   ChaosSprite=PrecacheModel("sprites/crystal_beam1.vmt"); // Chaos Bolt Sprite
   g_ef_playerredsmall = PrecacheModel("sprites/player_red_small.vmt");
@@ -320,7 +320,7 @@ PrecacheCSGO()	{
   g_ef_particle_noisesphere = PrecacheModel ("particle/particle_noisesphere.vmt");
   g_ef_trail_blue = PrecacheModel("effects/bluespark.vmt");
   g_ef_yellowflare1 = PrecacheModel("materials/sprites/yelflare1.vmt");
-  g_ef_combineball = PrecacheModel("sprites/strider_blackball");
+  //g_ef_combineball = PrecacheModel("sprites/strider_blackball");
   g_ef_orangeflare1 = PrecacheModel("sprites/yelflare1.vmt");
   g_ef_orangelight1 = PrecacheModel("sprites/orangelight1.vmt");
   g_ef_yellowglow1 = PrecacheModel("sprites/glow03.vmt");
@@ -328,13 +328,18 @@ PrecacheCSGO()	{
   g_ef_greenglow1 = PrecacheModel("particle/particle_flares/aircraft_green.vmt");
   //g_ef_firecloud2 = PrecacheModel("materials/effects/fire_cloud2.vmt");
   PrecacheModel("effects/bluespark.vmt");
-  g_ef_energyball = PrecacheModel("models/effects/energyball.mdl"); //Bad, do not use
-  g_ef_redflare = PrecacheModel("particle/particle_flares/aircraft_red.vmt"); //Bad, do not use
+  //g_ef_energyball = PrecacheModel("models/effects/energyball.mdl"); //Bad, do not use
+  //g_ef_redflare = PrecacheModel("particle/particle_flares/aircraft_red.vmt"); //Bad, do not use
 
   //ctf
   g_ctf_horde    = PrecacheModel("models/cf_models_src/ctf_80rd3.mdl");
   g_ctf_alliance = PrecacheModel("models/cf_models_src/ctf_41114nc3.mdl");
 
+  PrecacheModel("models/cf_models_src/treasurechest01.mdl");
+  PrecacheModel("models/cf_models_src/treasurechest02.mdl");
+  PrecacheModel("models/cf_models_src/treasurechest03.mdl");
+  PrecacheModel("models/cf_models_src/treasurechest04.mdl");
+  PrecacheModel("models/cf_models_src/treasurechest05.mdl");
   //CS:GO Chicken
 
 

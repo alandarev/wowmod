@@ -154,7 +154,7 @@ new g_ef_laserbeam;
 new g_HaloSprite;
 
 //Shadow Word Death
-new SWD_sprite;
+//new SWD_sprite;
 //Power Word Shield Sprite
 new ShieldSprite;
 //ChaosBolt
@@ -321,14 +321,14 @@ enum UniqueItem
 new AMSSprite;
 
 new g_ef_trail_blue;
-new g_ef_combineball;
+//new g_ef_combineball;
 new g_ef_yellowflare1;
 new g_ef_orangeflare1;
 new g_ef_orangelight1;
 new g_ef_yellowglow1;
 new g_ef_WXplo1;
 new g_ef_greenglow1;
-new g_ef_energyball;
+//new g_ef_energyball;
 //new g_ef_firecloud2;
 new g_mRanks[15];
 
