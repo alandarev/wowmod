@@ -82,6 +82,13 @@ new g_ffSlideStep[65];
 new String:g_ffSlidePath[65][63];
 new g_ffSlideHook[65];
 
+new const String:chest1[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:chest2[] = "models/cf_models_src/treasurechest02.mdl";
+new const String:chest3[] = "models/cf_models_src/treasurechest03.mdl";
+new const String:chest4[] = "models/cf_models_src/treasurechest04.mdl";
+new const String:chest5[] = "models/cf_models_src/treasurechest05.mdl";
+new const String:keg[] = "models/cf_models_src/beerfest_keg_pony01.mdl";
+
 
 enum CachedPlayer {
   CP_id,
