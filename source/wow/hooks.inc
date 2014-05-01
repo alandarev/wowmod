@@ -615,7 +615,7 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
     new client=GetClientOfUserId(GetEventInt(event,"userid"));
     g_respawns[client]++;
     flushTempItems(client);
-    g_fGreaterHeal[userid]=0.0;
+    g_fGreaterHeal[client]=0.0;
     ActivateStance(client);
     resetSpar(client);
     ActivateMonkStance(client);

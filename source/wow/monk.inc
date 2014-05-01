@@ -907,6 +907,9 @@ public Action:SpinningCraneKickRepeat(Handle:timer, Handle:datapack)
     else
     Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
   }
+  
+  new item[UniqueItem];
+  GetCharItem(item, client, 22);
   if(amount>=1)
     if(item[Item_defId]==25259 && 80>GetLevel(client))
       WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
@@ -917,7 +920,6 @@ public Action:SpinningCraneKickRepeat(Handle:timer, Handle:datapack)
       WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
     else
       WCMessage(client,"spinning crane kick miss",client,dmg,stargets);
-
   new olddmg = dmg;
   new Float:talentmulti = 1.00;
   for (new x=0;x<=(amount-1);x++)
