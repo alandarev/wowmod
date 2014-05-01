@@ -2388,22 +2388,22 @@ stock SpawnChestModel(Float:location[3],Float:angles[3],chestrarity) {
     case 1:
     {
       SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest2 );
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest2");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], chest2);
     }
     case 2:
     {
       SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest5 );
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest5");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], chest5);
     }
     case 3:
     {
       SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest3 );
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest3");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], chest3);
     }
     case 4:
     {
       SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest4 );
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest4");
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], chest4);
     }
   }
 

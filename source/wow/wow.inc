@@ -340,6 +340,7 @@ new g_bloodModel,g_bloodsprayModel,g_ef_ocean,g_ef_airlock_laser,g_ef_lgtning,g_
 new ClientTracer;
 new g_mdl_totem_h, g_mdl_totem_a, g_ef_flatflame;
 new g_chest1, g_chest2, g_chest3, g_chest4, g_chest5;
+new g_keg;
 new g_iTotems[65][10];
 new g_iRighteousShield[65];
 //Effects since 1.06

@@ -3708,7 +3708,7 @@ stock createKeg(client) {
   /*SetEntityModel(entity, "models/Items/ar2_grenade.mdl");*/
   /*SetEntityModel(entity, "models/lduke/chicken/chicken3.mdl");  // flying chicken? :D*/
   SetEntProp(entity, Prop_Data, "m_nModelIndex", g_keg );
-  SetEntityModel(entity, "keg");
+  SetEntityModel(entity, keg);
   /*SetEntityModel(entity, "models/cf_models_src/treasurechest01.mdl");*/
   // Play sound
 
