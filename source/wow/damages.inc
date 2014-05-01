@@ -375,12 +375,14 @@ public wcDealDamage(userid,attacker,totaldmg,String:source[],bool:headshot)
   if(IsPlayerAlive(userid))
   {
     new hp=wcGetHealth(userid);
-    /*if (hp<=totaldmg) {
+    if (hp<=totaldmg) {
       wcFatalDamage(attacker, userid, source, totaldmg, headshot);
       //KillTarget(userid,attacker,source,headshot);
     }
-    else*/
-    wcSetHealth(userid,hp-totaldmg);
+    else
+    {
+      wcSetHealth(userid,hp-totaldmg);
+    }
     GenerateDMGThreat(attacker,userid,totaldmg);
   }
 }
@@ -399,11 +401,14 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 
 //(War3_DealDamage(i,KnivesTFDamage,victim,DMG_BULLET,"knives",W3DMGORIGIN_SKILL,W3DMGTYPE_MAGIC))
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
-  if(CSGO)
+/*
+    if(CSGO)
   {
-    SDKHooks_TakeDamage(victim, attacker, attacker, float(damage), DMG_BULLET, GetEntPropEnt(attacker, Prop_Data, "m_hActiveWeapon"));
+    wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
+    return;
   }
   else
+  */
     wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
 }
 
@@ -436,7 +441,7 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
       DispatchKeyValue(pointHurt,"classname",weapon);
     }
     DispatchSpawn(pointHurt);
-    //AcceptEntityInput(pointHurt,"Hurt",(attacker>0)?attacker:-1);
+    AcceptEntityInput(pointHurt,"Hurt",(attacker>0)?attacker:-1);
     DispatchKeyValue(pointHurt,"classname","point_hurt");
     DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage
     RemoveEdict(pointHurt);
