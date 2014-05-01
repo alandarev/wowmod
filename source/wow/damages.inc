@@ -401,7 +401,7 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 
 //(War3_DealDamage(i,KnivesTFDamage,victim,DMG_BULLET,"knives",W3DMGORIGIN_SKILL,W3DMGTYPE_MAGIC))
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
-    if(CSGO)
+  if(CSGO)
   {
     wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
     return;
@@ -460,9 +460,6 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   SetEventInt(event,"dmg_health",damage);
   SetEventString(event,"weapon",weaponName);
   SetEventInt(event,"hitgroup",2);
-  SetEventString(event,"amsg",amsg);
-  SetEventString(event,"vmsg",vmsg);
-  SetEventString(event,"name",source);
   FireEvent(event);
   return true;
 }
