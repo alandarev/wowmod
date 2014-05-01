@@ -401,12 +401,14 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 
 //(War3_DealDamage(i,KnivesTFDamage,victim,DMG_BULLET,"knives",W3DMGORIGIN_SKILL,W3DMGTYPE_MAGIC))
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
-  if(CSGO)
+/*
+    if(CSGO)
   {
     wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
     return;
   }
   else
+  */
     wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
 }
 
@@ -414,7 +416,6 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
 {
   //Checks are done fbefore, so we just go straight into damage
   //type: DMG_BULLET
-  PrintToChatAll("wcFatalDamageCS just ran!");
   wcKillHeadshot=headshot;
   wcKillHandled=true;
   wcKillHandled2=true;
@@ -442,11 +443,12 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
     DispatchSpawn(pointHurt);
     AcceptEntityInput(pointHurt,"Hurt",(attacker>0)?attacker:-1);
     DispatchKeyValue(pointHurt,"classname","point_hurt");
-    DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage
+    //DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage
     RemoveEdict(pointHurt);
   }
   new String:vName[50];
   GetClientName(victim, vName, 50);
+  PrintToChatAll("Ran wcFatalDamageGO. Victim: %d, Attacker: %d, Damage: %d", victim, attacker, damage);
   return true;
 }
 
