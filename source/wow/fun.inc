@@ -2387,19 +2387,23 @@ stock SpawnChestModel(Float:location[3],Float:angles[3],chestrarity) {
   switch(chestrarity) {
     case 1:
     {
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "heavy/models/cf_models_src/treasurechest02.mdl");
+      SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest2 );
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest2");
     }
     case 2:
     {
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "heavy/models/cf_models_src/treasurechest05.mdl");
+      SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest5 );
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest5");
     }
     case 3:
     {
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "heavy/models/cf_models_src/treasurechest03.mdl");
+      SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest3 );
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest3");
     }
     case 4:
     {
-      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "heavy/models/cf_models_src/treasurechest04.mdl");
+      SetEntProp(ChestEntity[g_iTreasureChestNumber], Prop_Data, "m_nModelIndex", g_chest4 );
+      SetEntityModel(ChestEntity[g_iTreasureChestNumber], "chest4");
     }
   }
 

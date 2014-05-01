@@ -14,6 +14,14 @@ new precache_laser;
 
 new const String:g_sTotemHorde[] = "models/props/wow/h_totem/totem.mdl";
 new const String:g_sTotemAlliance[] = "models/props/wow/a_totem/totem.mdl";
+
+new const String:chest1[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:chest2[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:chest3[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:chest4[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:chest5[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:keg[] = "models/cf_models_src/beerfest_keg_pony01.mdl";
+
 public PrecacheModels()
 {
    //end of quake sounds
@@ -335,12 +343,12 @@ PrecacheCSGO()	{
   g_ctf_horde    = PrecacheModel("models/cf_models_src/ctf_80rd3.mdl");
   g_ctf_alliance = PrecacheModel("models/cf_models_src/ctf_41114nc3.mdl");
 
-  PrecacheModel("heavy/models/cf_models_src/treasurechest01.mdl");
-  PrecacheModel("heavy/models/cf_models_src/treasurechest02.mdl");
-  PrecacheModel("heavy/models/cf_models_src/treasurechest03.mdl");
-  PrecacheModel("heavy/models/cf_models_src/treasurechest04.mdl");
-  PrecacheModel("heavy/models/cf_models_src/treasurechest05.mdl");
-  PrecacheModel("heavy/models/cf_models_src/beerfest_keg_pony01.mdl");
+  g_chest1 = PrecacheModel("models/cf_models_src/treasurechest01.mdl");
+  g_chest2 = PrecacheModel("models/cf_models_src/treasurechest02.mdl");
+  g_chest3 = PrecacheModel("models/cf_models_src/treasurechest03.mdl");
+  g_chest4 = PrecacheModel("models/cf_models_src/treasurechest04.mdl");
+  g_chest5 = PrecacheModel("models/cf_models_src/treasurechest05.mdl");
+  g_keg = PrecacheModel("models/cf_models_src/beerfest_keg_pony01.mdl");
   //CS:GO Chicken
 
 
