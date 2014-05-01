@@ -10,7 +10,6 @@ new wcSuicideUserid=0;
 new wcSuicideAttacker=0;
 new bool:wcSuicideHeadshot=false;
 
-
 //new way of handling kills
 new bool:wcKillHandled=false;
 new bool:wcKillHandled2=false;
@@ -443,7 +442,7 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
     }
     DispatchSpawn(pointHurt);
     //AcceptEntityInput(pointHurt,"Hurt",(attacker>0)?attacker:-1);
-    SDKHooks_TakeDamage(victim, attacker, attacker, float(damage), DMG_BULLET, weapon);
+    SDKHooks_TakeDamage(victim, attacker, attacker, float(damage), DMG_BULLET, GetEntPropEnt(attacker, Prop_Data, "m_hActiveWeapon"));
     DispatchKeyValue(pointHurt,"classname","point_hurt");
     DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage
     RemoveEdict(pointHurt);
