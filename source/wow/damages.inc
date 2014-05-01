@@ -442,6 +442,7 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
     }
     DispatchSpawn(pointHurt);
     //AcceptEntityInput(pointHurt,"Hurt",(attacker>0)?attacker:-1);
+    SDKHooks_TakeDamage(victim, attacker, attacker, float(damage), dmg_type_str, weapon);
     DispatchKeyValue(pointHurt,"classname","point_hurt");
     DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage
     RemoveEdict(pointHurt);
