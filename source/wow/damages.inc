@@ -452,13 +452,10 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
 
 stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headshot=false)
 {	
-  new String:weaponName[64];
-  GetClientWeapon(attacker,weaponName,64);
   new Handle:event=CreateEvent("player_death");
   SetEventInt(event,"userid",GetClientUserId(victim));
   SetEventInt(event,"attacker",GetClientUserId(attacker));
-  SetEventInt(event,"dmg_health",damage);
-  SetEventString(event,"weapon",weaponName);
+  SetEventString(event,"weapon",weapon);
   SetEventInt(event,"headshot",headshot);
   FireEvent(event);
   return true;
