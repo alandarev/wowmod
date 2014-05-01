@@ -443,8 +443,8 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
     DispatchSpawn(pointHurt);
     AcceptEntityInput(pointHurt,"Hurt",(attacker>0)?attacker:-1);
     DispatchKeyValue(pointHurt,"classname","point_hurt");
-    //DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage
-    RemoveEdict(pointHurt);
+    DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage
+    //RemoveEdict(pointHurt);
   }
   new String:vName[50];
   GetClientName(victim, vName, 50);
