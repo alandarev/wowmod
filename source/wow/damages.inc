@@ -10,6 +10,13 @@ new wcSuicideUserid=0;
 new wcSuicideAttacker=0;
 new bool:wcSuicideHeadshot=false;
 
+new const String:chest1[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:chest2[] = "models/cf_models_src/treasurechest02.mdl";
+new const String:chest3[] = "models/cf_models_src/treasurechest03.mdl";
+new const String:chest4[] = "models/cf_models_src/treasurechest04.mdl";
+new const String:chest5[] = "models/cf_models_src/treasurechest05.mdl";
+new const String:keg[] = "models/cf_models_src/beerfest_keg_pony01.mdl";
+
 //new way of handling kills
 new bool:wcKillHandled=false;
 new bool:wcKillHandled2=false;

@@ -15,12 +15,6 @@ new precache_laser;
 new const String:g_sTotemHorde[] = "models/props/wow/h_totem/totem.mdl";
 new const String:g_sTotemAlliance[] = "models/props/wow/a_totem/totem.mdl";
 
-new const String:chest1[] = "models/cf_models_src/treasurechest01.mdl";
-new const String:chest2[] = "models/cf_models_src/treasurechest01.mdl";
-new const String:chest3[] = "models/cf_models_src/treasurechest01.mdl";
-new const String:chest4[] = "models/cf_models_src/treasurechest01.mdl";
-new const String:chest5[] = "models/cf_models_src/treasurechest01.mdl";
-new const String:keg[] = "models/cf_models_src/beerfest_keg_pony01.mdl";
 
 public PrecacheModels()
 {
