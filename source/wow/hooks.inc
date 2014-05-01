@@ -615,7 +615,7 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
     new client=GetClientOfUserId(GetEventInt(event,"userid"));
     g_respawns[client]++;
     flushTempItems(client);
-
+    g_fGreaterHeal[userid]=0.0;
     ActivateStance(client);
     resetSpar(client);
     ActivateMonkStance(client);
@@ -918,6 +918,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   SetMageInvis(userid, false);
   g_bShadowform[userid]=false;
   g_iNecrotic[userid]=0;
+  g_fGreaterHeal[userid]=0.0;
   new attacker=GetClientOfUserId(GetEventInt(event,"attacker"));
   GetClientAbsOrigin(userid,vClientCorpse[userid]);
   CheckClientHpBar(userid);

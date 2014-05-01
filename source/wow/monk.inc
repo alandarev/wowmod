@@ -794,7 +794,7 @@ public wcRunSpell_9_5(spellid,race,client) //Spinning Crane Kick
     if(item[Item_defId]==25259 && 80>GetLevel(client))
       WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
     else
-      WCMessage(client,"spinning crane kick miss",client,dmg);
+      WCMessage(client,"spinning crane kick miss",client,dmg,stargets);
 
   new olddmg = dmg;
   new Float:talentmulti = 1.00;
@@ -908,9 +908,15 @@ public Action:SpinningCraneKickRepeat(Handle:timer, Handle:datapack)
     Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
   }
   if(amount>=1)
-    WCMessage(client,"spinning crane kick",client,dmg,stargets);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick",client,dmg,stargets);
   if(amount==0)
-    WCMessage(client,"spinning crane kick miss",client,dmg);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick miss",client,dmg,stargets);
 
   new olddmg = dmg;
   new Float:talentmulti = 1.00;
