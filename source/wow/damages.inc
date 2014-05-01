@@ -401,12 +401,14 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 
 //(War3_DealDamage(i,KnivesTFDamage,victim,DMG_BULLET,"knives",W3DMGORIGIN_SKILL,W3DMGTYPE_MAGIC))
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
-  if(CSGO)
+/*
+    if(CSGO)
   {
     wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
     return;
   }
   else
+  */
     wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
 }
 
@@ -446,18 +448,57 @@ stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headsh
   }
   new String:vName[50];
   GetClientName(victim, vName, 50);
-  PrintToChatAll("Ran wcFatalDamageGO. Victim: %d, Attacker: %d, Damage: %d", victim, attacker, damage);
   return true;
 }
 
 stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headshot=false)
 {	
-  new Handle:event=CreateEvent("player_death");
-  SetEventInt(event,"userid",GetClientUserId(victim));
-  SetEventInt(event,"attacker",GetClientUserId(attacker));
-  SetEventString(event,"weapon",weapon);
-  SetEventInt(event,"headshot",headshot);
-  FireEvent(event);
+  //Checks are done fbefore, so we just go straight into damage
+  //type: DMG_BULLET
+
+  wcKillHeadshot=headshot;
+  wcKillHandled=true;
+  wcKillHandled2=true;
+
+  //Set armor to 0, no need to restore because he is dying anyway.
+  SetEntData(victim, offsArmor, 0);
+			
+  new dmg_bullet = (1 << 1);
+
+  new String:dmg_str[16];
+  IntToString(damage,dmg_str,16);
+  new String:dmg_type_str[32];
+
+  /*PrintToServer("Calling sdkhook take damage. victim %d attacker %d damage %d",victim, attacker, damage);
+  new Handle:pack = CreateDataPack();
+  WritePackCell(pack, victim);
+  WritePackCell(pack, attacker);
+  WritePackCell(pack, damage);
+  PushArrayCell(g_dmgArray, _:pack);*/
+  /*CreateTimer(0.0, TimerDmg, pack, TIMER_HNDL_CLOSE);*/
+
+  SDKHooks_TakeDamage(victim, attacker, attacker, damage, DMG_GENERIC, GetPlayerWeaponSlot(attacker, 1))  
+  IntToString(dmg_bullet,dmg_type_str,32);
+  /*new pointHurt=CreateEntityByName("point_hurt");*/
+  /*if(pointHurt)*/
+  /*{*/
+    /*DispatchKeyValue(victim,"targetname","war3_hurtme"); //set victim as the target for damage*/
+    /*DispatchKeyValue(pointHurt,"DamageTarget","war3_hurtme");*/
+    /*DispatchKeyValue(pointHurt,"Damage",dmg_str);*/
+    /*DispatchKeyValue(pointHurt,"DamageType",dmg_type_str);*/
+    /*if(!StrEqual(weapon,""))*/
+    /*{*/
+      /*DispatchKeyValue(pointHurt,"classname",weapon);*/
+    /*}*/
+    /*DispatchSpawn(pointHurt);*/
+    /*AcceptEntityInput(pointHurt,"Hurt",(attacker>0)?attacker:-1);*/
+    /*DispatchKeyValue(pointHurt,"classname","point_hurt");*/
+    /*DispatchKeyValue(victim,"targetname","no_hurt_me_t"); //unset the victim as target for damage*/
+    /*RemoveEdict(pointHurt);*/
+  /*}*/
+  new String:vName[50];
+  GetClientName(victim, vName, 50);
+  PrintToChatAll("Ran wcFatalDamageGO. Victim: %d, Attacker: %d, Damage: %d", victim, attacker, damage);
   return true;
 }
 
