@@ -339,6 +339,7 @@ PrecacheCSGO()	{
   PrecacheModel("heavy/models/cf_models_src/treasurechest02.mdl");
   PrecacheModel("heavy/models/cf_models_src/treasurechest03.mdl");
   PrecacheModel("heavy/models/cf_models_src/treasurechest04.mdl");
+  PrecacheModel("heavy/models/cf_models_src/treasurechest05.mdl");
   PrecacheModel("heavy/models/cf_models_src/beerfest_keg_pony01.mdl");
   //CS:GO Chicken
 

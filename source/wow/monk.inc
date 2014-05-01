@@ -3707,7 +3707,7 @@ stock createKeg(client) {
   SetEntPropFloat(entity, Prop_Data, "m_flGravity", 0.15);
   /*SetEntityModel(entity, "models/Items/ar2_grenade.mdl");*/
   /*SetEntityModel(entity, "models/lduke/chicken/chicken3.mdl");  // flying chicken? :D*/
-  SetEntityModel(entity, "models/cf_models_src/beerfest_keg_pony01.mdl");
+  SetEntityModel(entity, "heavy/models/cf_models_src/beerfest_keg_pony01.mdl");
   /*SetEntityModel(entity, "models/cf_models_src/treasurechest01.mdl");*/
   // Play sound
 
