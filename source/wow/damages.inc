@@ -375,14 +375,12 @@ public wcDealDamage(userid,attacker,totaldmg,String:source[],bool:headshot)
   if(IsPlayerAlive(userid))
   {
     new hp=wcGetHealth(userid);
-    if (hp<=totaldmg) {
+    /*if (hp<=totaldmg) {
       wcFatalDamage(attacker, userid, source, totaldmg, headshot);
       //KillTarget(userid,attacker,source,headshot);
     }
-    else
-    {
-      wcSetHealth(userid,hp-totaldmg);
-    }
+    else*/
+    wcSetHealth(userid,hp-totaldmg);
     GenerateDMGThreat(attacker,userid,totaldmg);
   }
 }
