@@ -2225,6 +2225,66 @@ public InstallDownloads()
 
   }
   //totems
+  
+  AddFileToDownloadsTable("materials/models/cf_textures/activechest01.vmt");
+  AddFileToDownloadsTable("materials/models/cf_textures/activechest01.vtf");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _02.vmt");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _02.vtf");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _03.vmt");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _03.vtf");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _04.vmt");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _04.vtf");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _05.vmt");
+  AddFileToDownloadsTable("materials/models/cf_textures/treasurechest _05.vtf");
+  
+  AddFileToDownloadsTable("materials/models/cf_textures/beerfest_keg_pony01.vmt");
+  AddFileToDownloadsTable("materials/models/cf_textures/beerfest_keg_pony01.vtf");
+  
+
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest01.dx80.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest01.dx90.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest01.mdl");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest01.phy");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest01.sw.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest01.vvd");
+  
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest02.dx80.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest02.dx90.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest02.mdl");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest02.phy");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest02.sw.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest02.vvd");
+  
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest03.dx80.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest03.dx90.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest03.mdl");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest03.phy");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest03.sw.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest03.vvd");
+  
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest04.dx80.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest04.dx90.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest04.mdl");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest04.phy");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest04.sw.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest04.vvd");
+  
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest05.dx80.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest05.dx90.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest05.mdl");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest05.phy");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest05.sw.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/treasurechest05.vvd");
+  
+  AddFileToDownloadsTable("models/cf_models_src/beerfest_keg_pony01.dx80.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/beerfest_keg_pony01.dx90.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/beerfest_keg_pony01.mdl");
+  AddFileToDownloadsTable("models/cf_models_src/beerfest_keg_pony01.phy");
+  AddFileToDownloadsTable("models/cf_models_src/beerfest_keg_pony01.sw.vtx");
+  AddFileToDownloadsTable("models/cf_models_src/beerfest_keg_pony01.vvd");
+  
+  
+  
   //Horde
   AddFileToDownloadsTable("materials/props/wow/h_totem/h_totem.vmt");
   AddFileToDownloadsTable("materials/props/wow/h_totem/h_totem.vtf");
