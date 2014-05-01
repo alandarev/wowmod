@@ -4345,6 +4345,7 @@ public wcRunSpell_4_1(spellid,race,victim,attacker,&totaldmg) //Paladin Shield B
     GetClientAbsOrigin(victim,location);
     EmitAmbientSound("wc/spells/shieldwall.wav",location);
     totaldmg=0;
+    wcRunOnBlockTalents(victim,attacker);
 
     AddEMsgAff("blocked damage", true);
   }
@@ -5249,8 +5250,8 @@ stock bool:KillTotem(ent) {
 }
 
 wcRunSpell_6_9(spellid,race,client) {
-  if(CSGO)
-  return;
+  //if(CSGO)
+  //return;
   //Fire nova totem
   decl String:line[255];
   //CD and mana

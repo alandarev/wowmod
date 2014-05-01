@@ -5916,8 +5916,8 @@ wcRunTalent_6_AirShock(attacker,victim)
   return 1;
 }
 wcRunTalent_6_LightningNovaTotem(client)  {
-  if(CSGO)
-    return;
+  //if(CSGO)
+    //return;
   decl String:line[255];
   wcGetTalentInfo(6,3,1,1,client,"multi",line);
   new Float:talentbonus=StringToFloat(line);
@@ -6857,8 +6857,8 @@ stock wcRunTalent_GiveItem(client, race, tree, tier, talent)  {
 
 //heal totem
 wcRunTalent_6_HealingTideTotem(client)  {
-  if(CSGO)
-    return;
+  //if(CSGO)
+    //return;
   decl String:line[255];
   wcGetTalentInfo(6,3,1,1,client,"multi",line);
   new Float:talentbonus=StringToFloat(line);
