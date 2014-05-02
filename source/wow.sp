@@ -250,7 +250,7 @@ public OnMapStart()
   if(g_T2Queue > 20)
       BlockServer(); // Blocks playing on the server for the period of loading data
 }
-public AddBots(amount)
+public Action:AddBots(Handle:timer, any:amount)
 {
   new Handle:bots=FindConVar("bot_quota");
   if(GetConVarInt(bots)>0)
