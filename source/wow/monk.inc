@@ -3668,7 +3668,7 @@ stock RevivalEffect(target) {
 
 public wcRunTalent_9_Keg(client)
 {
-  if(CSGO)
+  if(!CSGO)
   {
     PrintToChat(client, "Please do not attempt to use keg as it currently crashes the server!");
   }
@@ -3863,5 +3863,5 @@ stock DoKegSpell(client, Float:location[3])  {
     SetEffectAttacker(targets[x],54); // Miss effect
   }
   WCMessage(client,"dizzying haze caster",client,stargets,dmg,RoundToNearest(float(duration)/100));
-  MonkKegEffect(location, radius);
+  //MonkKegEffect(location, radius);
 }
