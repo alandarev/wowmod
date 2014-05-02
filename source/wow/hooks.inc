@@ -12,6 +12,7 @@ new g_iOffs_ActiveWeapon = -1;
 new g_vOffs_Punch = -1;
 new g_iOffs_NextPrimaryAttack = -1;
 new g_bShadowform[65];
+new bool:g_PlayerIsDead[MAXPLAYERS];
 
 new wcClientSeal[65];
 //new wcClientSealP[65];
@@ -909,7 +910,6 @@ public Action:HostageRescueEvent(Handle:event,const String:name[],bool:dontBroad
   wcGiveXp(client,xp,true);
   return Plugin_Continue;
 }
-new bool:g_PlayerIsDead[MAXPLAYERS];
 public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast) //Deathevent, Death, Death event, Playerdeath, Player death, OnDeath
 {
   //PrintToServer("player death");
