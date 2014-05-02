@@ -1541,7 +1541,7 @@
     "maximum" "0.00016"
     "incriment" "0.000064"
     "set"   "101 102 103 104"
-    "announce" "1"
+    "announce" "0"
     //60/80 epic wep, 74/80 rare wep, no shields
   }
 
@@ -1621,8 +1621,8 @@
     "skillup" "0"
     "profession"  "0"
     "minlevel"  "1"
-    "minimum" "0.0001"
-    "maximum" "0.0002"
+    "minimum" "0.00003"
+    "maximum" "0.00006"
     "incriment" "0.00005"
     "set"   "381 382"
     "announce" "1"
