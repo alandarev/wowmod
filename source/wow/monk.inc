@@ -1560,7 +1560,7 @@ stock MonkDampenHarmEffect(Float: loc[3])  {
   VS_BeamRingPoint(loc1, 25.0, 75.0, g_ef_overlay, g_ef_overlay, 0, 1, 1.0, 2.0, 0.0, {0, 255, 255, 255}, 25, 0, 0.0);
 }
 
-stock MonkKegEffect(Float: loc[3], Float:radius)  {
+stock MonkKegEffect(Float: loc[3], Float:radius)  { //For some reason crashes the Cs:Go server
   new Float:loc1[3];
   loc1[0]=loc[0];
   loc1[1]=loc[1];
@@ -3863,5 +3863,5 @@ stock DoKegSpell(client, Float:location[3])  {
     SetEffectAttacker(targets[x],54); // Miss effect
   }
   WCMessage(client,"dizzying haze caster",client,stargets,dmg,RoundToNearest(float(duration)/100));
-  MonkKegEffect(location, radius);
+  //MonkKegEffect(location, radius);
 }

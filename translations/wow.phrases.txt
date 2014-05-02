@@ -9264,6 +9264,10 @@
   {
     "en"  "The @lightgreenPriest @defaultclaimed to not have had any sexual relations with the young @lightgreenPaladin @defaultapprentice, but we all know better."
   }
+  "Wc Tips Msg 25"
+  {
+    "en"  "@greenHave you noticed our sounds don't work? We have a lot of them! Write snd_rebuildaudiocache into your console in order to hear them! They help a lot!"
+  }
   //Referrer
   "Say Refferrer ID"
   {

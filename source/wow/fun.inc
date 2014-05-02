@@ -843,103 +843,105 @@ stock TreasureChestMap(chance, times=1)
       decl Float:location[3];
       spawnedChests++;
       GetCurrentMap(sMap,sizeof(sMap));
+      if((CSGO) && !StrEqual(sMap,"de_dust2",false))
+        return;
       if(StrEqual(sMap,"de_dust2",false))  {
         new random=GetRandomInt(1,11);
         if(random==1 && g_iTaken==0) {
-          location[0]=-2072.9;
-          location[1]=1301.2;
-          location[2]=159.2;
-          TreasureChestName = 2; //999
+          location[0]=-873.02;
+          location[1]=1352.03;
+          location[2]=47.91;
+          TreasureChestName = 55; //Lower Tunnel
           g_iTaken=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==2 && g_iTakenb==0) {
-          location[0]=-1195.5;
-          location[1]=1263.9;
-          location[2]=48.9;
-          TreasureChestName = 2; //Tunnel
+          location[0]=-1296.91;
+          location[1]=1239.98;
+          location[2]=133.08;
+          TreasureChestName = 56; //Upper Tunnel
           g_iTakenb=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==3 && g_iTakenc==0) {
-          location[0]=-272.0;
-          location[1]=1429.3;
-          location[2]=-31.9;
-          TreasureChestName = 3; //Double Doors
+          location[0]=-1820.69;
+          location[1]=1827.09;
+          location[2]=212.07;
+          TreasureChestName = 4; //Bombsite B
           g_iTakenc=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==4 && g_iTakend==0) {
-          location[0]=-860.1;
-          location[1]=2572.4;
-          location[2]=-46.8;
+          location[0]=-2199.97;
+          location[1]=2097.03;
+          location[2]=89.37;
           TreasureChestName = 4; //Bombsite B
           g_iTakend=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==5 && g_iTakene==0) {
-          location[0]=-2063.5;
-          location[1]=3119.9;
-          location[2]=160.0;
-          TreasureChestName = 4; //Bombsite B
+          location[0]=-272.03;
+          location[1]=1428.81;
+          location[2]=36.18;
+          TreasureChestName = 57; //T Ramp
           g_iTakene=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==6 && g_iTakenf==0) {
-          location[0]=495.9;
-          location[1]=1368.0;
-          location[2]=96.0;
-          TreasureChestName = 6; //Middle
+          location[0]=718.33;
+          location[1]=653.26;
+          location[2]=138.09;
+          TreasureChestName = 58; //Long Doors
           g_iTakenf=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==7 && g_iTakeng==0) {
-          location[0]=1438.5;
-          location[1]=188.8;
-          location[2]=-190.5;
-          TreasureChestName = 7; //Side
+          location[0]=1296.00;
+          location[1]=672.06;
+          location[2]=44.65;
+          TreasureChestName = 59; //Pit
           g_iTakeng=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==8 && g_iTakenh==0) {
-          location[0]=733.5;
-          location[1]=680.0;
-          location[2]=96.0;
-          TreasureChestName = 8; //Side Door
+          location[0]=-1200.00;
+          location[1]=1441.04;
+          location[2]=-47.91;
+          TreasureChestName = 55; //Lower Tunnel
           g_iTakenh=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==9 && g_iTakeni==0) {
-          location[0]=-572.7;
-          location[1]=649.6;
-          location[2]=160.0;
-          TreasureChestName = 6;
+          location[0]=487.97;
+          location[1]=1360.03;
+          location[2]=144.09;
+          TreasureChestName = 60; //Short stairs
           g_iTakeni=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==10 && g_iTakenj==0) {
-          location[0]=-828.4;
-          location[1]=1362.2;
-          location[2]=16.0;
-          TreasureChestName = 2;
+          location[0]=-580.01;
+          location[1]=682.52;
+          location[2]=176.09;
+          TreasureChestName = 61;
           g_iTakenj=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==11 && g_iTakenk==0) {
-          location[0]=690.9;
-          location[1]=2763.8;
-          location[2]=224.0;
-          TreasureChestName = 9; //Bombsite A
+          location[0]=447.20;
+          location[1]=1775.98;
+          location[2]=64.09;
+          TreasureChestName = 60; //Short Stairs
           g_iTakenk=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
@@ -2533,7 +2535,16 @@ stock TreasureChestClaimed(claimer,Float:location[3],TreasureChestName,entity,ch
     case 52: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Underpass",name,raritystr);
     case 53: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Ramp",name,raritystr);
     case 54: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Main Hall",name,raritystr);
-  }
+    case 55: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Lower Tunnel",name,raritystr);
+    case 56: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Upper Tunnel",name,raritystr);
+    case 57: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at T Ramp",name,raritystr);
+    case 58: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Long Doors",name,raritystr);
+    case 59: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Pit",name,raritystr);
+    case 60: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Short Stairs",name,raritystr);
+    case 61: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Top of Mid",name,raritystr);
+
+
+    }
   SetChestTick(claimer,chestrarity);
   new Handle:datapack=CreateDataPack();
   WritePackCell(datapack,claimer);
