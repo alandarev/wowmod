@@ -386,7 +386,16 @@ public Action:ManaTimer(Handle:timer, any:temp)
         decl String:restype[10];
         GetManaName(x, restype);
         if(!boss || IsHNS())
-          Format(buffer,sizeof(buffer),"%T","hp mp dmg taken",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype);
+        {
+          if(GetClass(x)!=4 && GetClass(x)!=8 && GetClass(x)!=9)
+            Format(buffer,sizeof(buffer),"%T","hp mp dmg taken",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype);
+          if(GetClass(x)==9)
+            Format(buffer,sizeof(buffer),"%T","hp mp dmg taken chi",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype,getChi(x));
+          if(GetClass(x)==4)
+            Format(buffer,sizeof(buffer),"%T","hp mp dmg taken hopo",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype,GetHolyPower(x));
+          if(GetClass(x)==8)
+            Format(buffer,sizeof(buffer),"%T","hp mp dmg taken runes",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype,GetRunes(x));
+        }
         else
           Format(buffer,sizeof(buffer),"%T","hp mp dmg threat",x,hp,maxhp,mana,maxmana,wcDamageDone[x],GetThreat(x),restype);
 
@@ -394,12 +403,12 @@ public Action:ManaTimer(Handle:timer, any:temp)
         {
           Format(buffer,sizeof(buffer),"%s%T",buffer,"hint healing done",x,wcHealingDone[x]);
         }
-        if(GetClass(x)==4)
-          Format(buffer,sizeof(buffer),"%s%T",buffer,"holy power hint",x,GetHolyPower(x));
-        if(GetClass(x)==8)
-          Format(buffer,sizeof(buffer),"%s%T",buffer,"runes hint",x,GetRunes(x));
-        if(GetClass(x)==9)
-          Format(buffer,sizeof(buffer),"%s%T",buffer,"chi hint",x,getChi(x));
+        //if(GetClass(x)==4)
+          //Format(buffer,sizeof(buffer),"%s%T",buffer,"holy power hint",x,GetHolyPower(x));
+        //if(GetClass(x)==8)
+          //Format(buffer,sizeof(buffer),"%s%T",buffer,"runes hint",x,GetRunes(x));
+        //if(GetClass(x)==9)
+          //Format(buffer,sizeof(buffer),"%s%T",buffer,"chi hint",x,getChi(x));
         if(HasStealth(x))
         {
           new alpha=ModifyStealth(x);

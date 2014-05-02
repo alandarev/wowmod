@@ -1746,6 +1746,21 @@
     "#format" "{1:d},{2:d},{3:d},{4:d}"
     "en" "HP: {1}/{2} | MP: {3}/{4}"
   }
+  "hp mp dmg taken chi"
+  {
+    "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4} | Chi: {8}\nDmg Done: {5} | Dmg Taken: {6}"
+  }
+  "hp mp dmg taken hopo"
+  {
+    "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4} | HoPo: {8}\nDmg Done: {5} | Dmg Taken: {6}"
+  }
+  "hp mp dmg taken runes"
+  {
+    "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4} | HoPo: {8}\nDmg Done: {5} | Dmg Taken: {6}"
+  }
   "hp mp dmg taken"
   {
     "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s}"
