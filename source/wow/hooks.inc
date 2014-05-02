@@ -926,7 +926,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   {
     if(g_PlayerIsDead[userid]){
       g_PlayerIsDead[userid]=false;
-      return;
+      return Plugin_Handled;
       }
     
     if(IsZombie(attacker))
