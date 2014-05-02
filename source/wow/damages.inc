@@ -577,7 +577,7 @@ stock wcSpellAoeDamageLocation(userid,attacker, Float:location[3],dmg,iDistance,
 }
 
 
-stock wcPhysicalDamage(userid,attacker,amount, bool:headshot=false, String:amsg[]="", String:vmsg[]="", bool:reduction=false, String:source[]="", String:weapon[]="Physical")
+stock wcPhysicalDamage(userid,attacker,amount, String:amsg[]="", String:vmsg[]="", bool:reduction=false, String:source[]="", String:weapon[]="Physical",  bool:headshot=false)
 {
   /*return;*/
   new Handle:event=CreateEvent("player_hurt");
