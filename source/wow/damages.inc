@@ -496,7 +496,7 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   /*}*/
   new String:vName[50];
   GetClientName(victim, vName, 50);
-  PrintToChatAll("Ran wcFatalDamageGO. Victim: %d, Attacker: %d, Damage: %d", victim, attacker, damage);
+  //PrintToChatAll("Ran wcFatalDamageGO. Victim: %d, Attacker: %d, Damage: %d", victim, attacker, damage);
   return true;
 }
 
