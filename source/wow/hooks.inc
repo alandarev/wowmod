@@ -909,6 +909,7 @@ public Action:HostageRescueEvent(Handle:event,const String:name[],bool:dontBroad
   wcGiveXp(client,xp,true);
   return Plugin_Continue;
 }
+new bool:g_PlayerIsDead[MAXPLAYERS];
 public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast) //Deathevent, Death, Death event, Playerdeath, Player death, OnDeath
 {
   //PrintToServer("player death");
@@ -923,6 +924,11 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   CheckClientHpBar(userid);
   if(attacker!=0)
   {
+    if(g_PlayerIsDead[userid]){
+      g_PlayerIsDead[userid]=false;
+      return;
+      }
+    
     if(IsZombie(attacker))
     {
       new owner = GetZombie(attacker);
@@ -1077,6 +1083,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
     }
   }
   SetHarvest(userid, 0);
+  g_PlayerIsDead[userid]=true;
   return Plugin_Continue;
 }
 public PetDied(pet,owner) {
@@ -2322,9 +2329,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     SetEventInt(event,"dmg_health",damage);
     wcDamageDone[attacker]+=damage;
     wcDamageTaken[victim]+=damage;
-    if(GetEventInt(event,"hitgroup")==1)
-      headshot=true;
-    wcPhysicalDamage(victim,attacker,damage,"","",false,"",weaponname,headshot);
+    wcDealDamage(victim,attacker,damage,weaponname,headshot);
 
     //Ghoul heal owner talent
     new owner = GetZombie(victim);
