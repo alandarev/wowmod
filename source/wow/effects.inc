@@ -317,8 +317,8 @@ PrecacheCSGO()	{
   g_ef_hydragutbeam = PrecacheModel("effects/blueblacklargebeam.vmt");
   g_ef_blueblackflash = PrecacheModel("sprites/blueflare1.vmt");
   g_ef_fire01 = PrecacheModel("sprites/fire1.vmt");
-  g_ef_xbeam2 = PrecacheModel("sprites/tp_beam001.vmt");
-  g_ef_striderdarkflare = PrecacheModel("particle/particle_flares/aircraft_white.vmt");
+  g_ef_xbeam2 = PrecacheModel("particle/beam_taser.vmt");
+  g_ef_striderdarkflare = PrecacheModel("sprites/fire1.vmt");
   g_ef_particle_noisesphere = PrecacheModel ("particle/particle_noisesphere.vmt");
   g_ef_trail_blue = PrecacheModel("effects/bluespark.vmt");
   g_ef_yellowflare1 = PrecacheModel("materials/sprites/yelflare1.vmt");
