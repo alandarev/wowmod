@@ -611,11 +611,11 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
 {
   if(ENABLE)
   {
-
+    
     new client=GetClientOfUserId(GetEventInt(event,"userid"));
     g_respawns[client]++;
     flushTempItems(client);
-
+    g_PlayerIsDead[client]=false;
     ActivateStance(client);
     resetSpar(client);
     ActivateMonkStance(client);
