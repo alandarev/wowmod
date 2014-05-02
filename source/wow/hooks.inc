@@ -2322,7 +2322,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     SetEventInt(event,"dmg_health",damage);
     wcDamageDone[attacker]+=damage;
     wcDamageTaken[victim]+=damage;
-    wcPhysicalDamage(victim,attacker,damage,"","",false,"",weapon,headshot);
+    if(GetEventInt(event,"hitgroup")==1)
+      headshot=true;
+    wcPhysicalDamage(victim,attacker,damage,"","",false,"",weaponname,headshot);
 
     //Ghoul heal owner talent
     new owner = GetZombie(victim);
