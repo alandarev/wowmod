@@ -2308,15 +2308,15 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       decl String:bsource[255];
       GetEventString(event,"bonussource",bsource,sizeof(bsource));
       AddEMsgAff(bsource, false);
-    {
     }
     if(bVanish[victim])
+    {
       SetVanishBreakDmg(victim,GetVanishBreakDmg(victim)-damage);
       if(GetVanishBreakDmg(victim)<1)
-      bVanish[victim]=false;
+        bVanish[victim]=false;
     }
-    GetClientName(victim,vicName,sizeof(vicName));
     new String:vicName[20];
+    GetClientName(victim,vicName,sizeof(vicName));
     AddEMsgDetails(msgId, vicName,damage);
     CastEMsg(msgId, att,vic);
     SetEventInt(event,"dmg_health",damage);
