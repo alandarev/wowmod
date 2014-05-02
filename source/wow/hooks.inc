@@ -615,7 +615,7 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
     new client=GetClientOfUserId(GetEventInt(event,"userid"));
     g_respawns[client]++;
     flushTempItems(client);
-    g_fGreaterHeal[client]=0.0;
+
     ActivateStance(client);
     resetSpar(client);
     ActivateMonkStance(client);
@@ -918,7 +918,6 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   SetMageInvis(userid, false);
   g_bShadowform[userid]=false;
   g_iNecrotic[userid]=0;
-  g_fGreaterHeal[userid]=0.0;
   new attacker=GetClientOfUserId(GetEventInt(event,"attacker"));
   GetClientAbsOrigin(userid,vClientCorpse[userid]);
   CheckClientHpBar(userid);
@@ -2301,29 +2300,29 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           wcRunTalent_RogueVampirism(attacker, damage, victim);
         }
 
-      }
     }
+      }
     //else  damage=0;
     if(bonushit==1)
     {
       decl String:bsource[255];
       GetEventString(event,"bonussource",bsource,sizeof(bsource));
       AddEMsgAff(bsource, false);
+    {
     }
     if(bVanish[victim])
-    {
       SetVanishBreakDmg(victim,GetVanishBreakDmg(victim)-damage);
       if(GetVanishBreakDmg(victim)<1)
       bVanish[victim]=false;
     }
-    new String:vicName[20];
     GetClientName(victim,vicName,sizeof(vicName));
+    new String:vicName[20];
     AddEMsgDetails(msgId, vicName,damage);
     CastEMsg(msgId, att,vic);
     SetEventInt(event,"dmg_health",damage);
     wcDamageDone[attacker]+=damage;
     wcDamageTaken[victim]+=damage;
-    wcDealDamage(victim,attacker,damage,weaponname,headshot);
+    wcPhysicalDamage(victim,attacker,damage,headshot,"","",false,"",weapon);
 
     //Ghoul heal owner talent
     new owner = GetZombie(victim);
