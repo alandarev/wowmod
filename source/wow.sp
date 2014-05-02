@@ -231,8 +231,14 @@ public OnMapStart()
   //Bind entity manager
   new PMIndex = FindEntityByClassname(0, "cs_player_manager");
   SDKHook(PMIndex, SDKHook_ThinkPost, OnThinkPost);
-
-
+  new Handle:bots=FindConVar("bot_quota");
+  if(GetConVarInt(bots)>0)
+    CloseHandle(bots);
+  else
+  {
+    SetConVarInt(bots, 8);
+    CloseHandle(bots);
+  }
   g_RoundCount=-1;
 
   InitClock();
