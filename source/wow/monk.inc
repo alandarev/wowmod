@@ -3668,22 +3668,29 @@ stock RevivalEffect(target) {
 
 public wcRunTalent_9_Keg(client)
 {
-  decl String:line[255];
-  wcGetTalentInfo(9,1,3,1,client,"chi",line);
-  new req=StringToInt(line);
-  if(spendChi(client, req))
+  if(CSGO)
   {
-    // Spawn Keg
-    // Pretty much it, wait for the keg to touch ground
-    if (createKeg(client))  {
-      wcGetTalentInfo(9,1,3,1,client,"cooldown",line);
-      new Float:cd=StringToFloat(line);
-      wcGetTalentInfo(9,1,3,1,client,"cooldowntype",line);
-      new cdtype = StringToInt(line);
-      SetCdSpell(client,cdtype,cd,0,"Dizzying Haze");
-    }
-    else  {
-      LogError("[WC] Failed creating keg. Entity invalid");
+    PrintToChat(client, "Please do not attempt to use keg as it currently crashes the server :)"
+  }
+  else
+  {
+    decl String:line[255];
+    wcGetTalentInfo(9,1,3,1,client,"chi",line);
+    new req=StringToInt(line);
+    if(spendChi(client, req))
+    {
+      // Spawn Keg
+      // Pretty much it, wait for the keg to touch ground
+      if (createKeg(client))  {
+        wcGetTalentInfo(9,1,3,1,client,"cooldown",line);
+        new Float:cd=StringToFloat(line);
+        wcGetTalentInfo(9,1,3,1,client,"cooldowntype",line);
+        new cdtype = StringToInt(line);
+        SetCdSpell(client,cdtype,cd,0,"Dizzying Haze");
+      }
+      else  {
+        LogError("[WC] Failed creating keg. Entity invalid");
+      }
     }
   }
 }
