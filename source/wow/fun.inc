@@ -844,7 +844,7 @@ stock TreasureChestMap(chance, times=1)
       spawnedChests++;
       GetCurrentMap(sMap,sizeof(sMap));
       if((CSGO) && !StrEqual(sMap,"de_dust2",false))
-        return;
+        return 0;
       if(StrEqual(sMap,"de_dust2",false))  {
         new random=GetRandomInt(1,11);
         if(random==1 && g_iTaken==0) {
