@@ -522,9 +522,9 @@ stock bool:CanSilence(client) {
 stock GetManaName(client, String:name[])  {
   switch(GetClass(client))  {
     case 1: Format(name, 9, "Rage");
-    case 2: Format(name, 9, "Energy");
+    case 2: Format(name, 9, "NRG");
     case 8: Format(name, 9, "Power");
-    case 9: Format(name, 9, "Energy");
+    case 9: Format(name, 9, "NRG");
     default: Format(name, 9, "Mana");
   }
 }
