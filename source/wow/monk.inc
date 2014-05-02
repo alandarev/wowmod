@@ -3670,7 +3670,7 @@ public wcRunTalent_9_Keg(client)
 {
   if(CSGO)
   {
-    PrintToChat(client, "Please do not attempt to use keg as it currently crashes the server :)"
+    PrintToChat(client, "Please do not attempt to use keg as it currently crashes the server!");
   }
   else
   {
