@@ -231,14 +231,9 @@ public OnMapStart()
   //Bind entity manager
   new PMIndex = FindEntityByClassname(0, "cs_player_manager");
   SDKHook(PMIndex, SDKHook_ThinkPost, OnThinkPost);
-  new Handle:bots=FindConVar("bot_quota");
-  if(GetConVarInt(bots)>0)
-    CloseHandle(bots);
-  else
-  {
-    SetConVarInt(bots, 8);
-    CloseHandle(bots);
-  }
+  
+  CreateTimer(15.0,AddBots);
+  
   g_RoundCount=-1;
 
   InitClock();
@@ -254,6 +249,17 @@ public OnMapStart()
   InstallDownloads();
   if(g_T2Queue > 20)
       BlockServer(); // Blocks playing on the server for the period of loading data
+}
+public AddBots()
+{
+  new Handle:bots=FindConVar("bot_quota");
+  if(GetConVarInt(bots)>0)
+    CloseHandle(bots);
+  else
+  {
+    SetConVarInt(bots, 8);
+    CloseHandle(bots);
+  }
 }
 
 public OnClientPutInServer(client)
