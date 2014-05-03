@@ -1058,7 +1058,7 @@ public Action:EffectAoeDamage(Handle:timer, any:effid)
       }
       //Visual effect
       VS_BeamRingPoint(position_victim, 19.00, 20.00, g_ef_splodesprite, g_ef_splodesprite, 100, 300, 0.50, 60.00, 1.00, {255, 255, 255, 255}, 300, 0);
-      VS_BeamRingPoint(position_victim, 19.00, 500.00, g_ef_splodesprite, g_ef_splodesprite, 100, 300, 0.50, 60.00, 1.00, {255, 255, 255, 255}, 300, 0);
+      VS_BeamRingPoint(position_victim, 19.00, 50.00, g_ef_splodesprite, g_ef_splodesprite, 100, 300, 0.50, 60.00, 1.00, {255, 255, 255, 255}, 300, 0);
 
       //Living Bomb Glyph
       if(HasGlyph(effectsdata[effid][2], GLYPH_MAGE_BOMB) && GetRandomInt(1,3)==1)  {

@@ -369,11 +369,11 @@ wcRunSpell_8_2(spellid,race,client) //Death Grip
   //TE_SendToAll();
   //TE_SetupBeamPoints(pos, targpos, g_purplelaser1, g_purplelaser1, 0, 8, 0.5, 10.0, 10.0, 10, 10.0, {255,255,255,255}, 70);
   //TE_SendToAll();	
-  VS_BeamRingPoint(pos, 50.00, 150.00, g_ef_lgtning, g_ef_lgtning, 10, 10, 1.00, 500.00, 0.00, {51, 51, 255, 255}, 10, 0);
-  VS_BeamRingPoint(pos, 50.00, 150.00, g_ef_lgtning, g_ef_lgtning, 10, 10, 1.00, 500.00, 0.00, {102, 51, 255, 255}, 10, 0);
+  VS_BeamRingPoint(pos, 50.00, 150.00, g_ef_lgtning, g_ef_lgtning, 10, 10, 1.00, 99.00, 0.00, {51, 51, 255, 255}, 10, 0);
+  VS_BeamRingPoint(pos, 50.00, 150.00, g_ef_lgtning, g_ef_lgtning, 10, 10, 1.00, 99.00, 0.00, {102, 51, 255, 255}, 10, 0);
   pos[2] += 40.0;
-  VS_BeamPoints(pos, targpos, g_ef_lgtning, g_ef_lgtning, 1, 5, 1.00, 15.00, 15.00, 1, 100.00, {51, 51, 255, 255}, 200);
-  VS_BeamPoints(pos, targpos, g_ef_lgtning, g_ef_lgtning, 1, 5, 1.00, 15.00, 15.00, 1, 100.00, {102, 51, 255, 255}, 200);
+  VS_BeamPoints(pos, targpos, g_ef_lgtning, g_ef_lgtning, 1, 5, 1.00, 15.00, 15.00, 1, 99.00, {51, 51, 255, 255}, 200);
+  VS_BeamPoints(pos, targpos, g_ef_lgtning, g_ef_lgtning, 1, 5, 1.00, 15.00, 15.00, 1, 99.00, {102, 51, 255, 255}, 200);
 
   decl Float:location[3];
   GetClientAbsOrigin(target,location);
@@ -429,9 +429,9 @@ wcRunSpell_8_3(spellid,race,victim,client,&totaldmg) //Plague Strike
     AddEMsgAff("plague strike", true);
     new Float:pos[3];
     GetClientAbsOrigin(victim,pos);
-    VS_BeamRingPoint(pos, 50.00, 49.00, g_ef_glow1, g_ef_lgtning, 10, 10, 0.50, 60.00, 0.00, {0, 204, 0, 255}, 10, 0);
+    VS_BeamRingPoint(pos, 48.00, 49.00, g_ef_glow1, g_ef_lgtning, 10, 10, 0.50, 60.00, 0.00, {0, 204, 0, 255}, 10, 0);
     pos[2]+=45.0;
-    VS_BeamRingPoint(pos, 50.00, 49.00, g_ef_glow1, g_ef_lgtning, 10, 10, 0.50, 60.00, 0.00, {0, 204, 0, 255}, 10, 0);
+    VS_BeamRingPoint(pos, 48.00, 49.00, g_ef_glow1, g_ef_lgtning, 10, 10, 0.50, 60.00, 0.00, {0, 204, 0, 255}, 10, 0);
     new Float:tickdelay=wcGetSpellInfoFloat(race,spellid,"tickdelay");
     new ticks=wcGetSpellInfoInt(race,spellid,"ticks");
     if(CheckRequirements(client,8,3,1,2)) {
@@ -721,7 +721,7 @@ wcRunSpell_8_6(spellid,race,client)  {
   VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 3.00, 15.00, 15.00, 1, 0.00, {153, 0, 153, 255}, 20);
   VS_BeamPoints(locationatt, location, g_ef_glow1, g_ef_glow1, 1, 5, 3.00, 20.00, 10.00, 10, 0.00, {153, 0, 153, 255}, 160);
   VS_BeamPoints(locationatt, location, g_ef_lgtning, g_ef_glow1, 1, 5, 3.00, 20.00, 10.00, 0, 0.00, {153, 0, 153, 255}, 160);
-  VS_BeamRingPoint(location, 90.00, 60.00, g_ef_glow1, g_ef_lgtning, 10, 10, 3.00, 50.00, 0.00, {153, 0, 153, 255}, 60, 0);
+  VS_BeamRingPoint(location, 60.00, 90.00, g_ef_glow1, g_ef_lgtning, 10, 10, 3.00, 50.00, 0.00, {153, 0, 153, 255}, 60, 0);
 
 
   //Message
@@ -881,7 +881,7 @@ public Action:GhoulEffect(Handle:timer, any:client)
 
   SetEntProp(client, Prop_Send, "m_ArmorValue", 100, 1);
   SetEntProp(client, Prop_Send, "m_bHasHelmet", 1, 1);
-  BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
+  BeamRingEffect("@all",location,10.0,80.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
 
   //Model
   new team = GetClientTeam(client);

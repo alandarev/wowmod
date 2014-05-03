@@ -407,7 +407,10 @@ stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot
     return;
   }
   else
+  {
     wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
+    return;
+  }
 }
 
 stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headshot=false)

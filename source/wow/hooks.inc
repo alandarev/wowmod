@@ -914,6 +914,11 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
 {
   //PrintToServer("player death");
   new userid=GetClientOfUserId(GetEventInt(event,"userid"));
+  if(g_PlayerIsDead[userid])
+  {
+    g_PlayerIsDead[userid]=false;
+    return Plugin_Handled;
+  }
   CreateTimer(6.0, DisplayTodoMenu,userid, TIMER_FLAG_NO_MAPCHANGE);
   if(IsMageInvis(userid))
   SetMageInvis(userid, false);
@@ -924,10 +929,6 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   CheckClientHpBar(userid);
   if(attacker!=0)
   {
-    if(g_PlayerIsDead[userid]){
-      g_PlayerIsDead[userid]=false;
-      return Plugin_Handled;
-      }
     
     if(IsZombie(attacker))
     {
@@ -2329,7 +2330,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     SetEventInt(event,"dmg_health",damage);
     wcDamageDone[attacker]+=damage;
     wcDamageTaken[victim]+=damage;
-    wcDealDamage(victim,attacker,damage,weaponname,headshot);
+    if(IsPlayerAlive(victim))
+      wcDealDamage(victim,attacker,damage,weaponname,headshot);
 
     //Ghoul heal owner talent
     new owner = GetZombie(victim);
