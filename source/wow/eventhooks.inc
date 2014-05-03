@@ -182,6 +182,21 @@ public RoundStartEvent(Handle:event,const String:name[],bool:dontBroadcast)
     if(IsClientInGame(x))
       WCMessage(x,"Announce server new ver",x);
   }
+
+
+  if(PlayersInTeams(true) >= 1)
+  {
+    new Handle:bots=FindConVar("bot_quota");
+    if(GetConVarInt(bots)>0)
+      CloseHandle(bots);
+    else
+    {
+      SetConVarInt(bots, 8);
+      CloseHandle(bots);
+    }
+  }
+}
+  
   CalculateAverageLevel();
 }
 

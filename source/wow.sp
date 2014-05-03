@@ -252,13 +252,16 @@ public OnMapStart()
 }
 public Action:AddBots(Handle:timer, any:amount)
 {
-  new Handle:bots=FindConVar("bot_quota");
-  if(GetConVarInt(bots)>0)
-    CloseHandle(bots);
-  else
+  if(PlayersInTeams(true) >= 1)
   {
-    SetConVarInt(bots, amount);
-    CloseHandle(bots);
+    new Handle:bots=FindConVar("bot_quota");
+    if(GetConVarInt(bots)>0 && GetConVarInt(bots)>=8)
+      CloseHandle(bots);
+    else
+    {
+      SetConVarInt(bots, amount);
+      CloseHandle(bots);
+    }
   }
 }
 
