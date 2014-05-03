@@ -41956,8 +41956,8 @@
 "descr"   "On using activates Death Knight Expansion"
 "version"   "5.02"
 "level"   "4"
-"cost"   "50000"
-"gold"   "2000"
+"cost"   "1" //Was 50000
+"gold"   "1" //Was 2000
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
@@ -41975,8 +41975,8 @@
 "descr"   "Gives access to Monk Class (not tradeable)"
 "version"   "5.02"
 "level"   "80"
-"cost"   "50000"
-"gold"   "500"
+"cost"   "1" //Was 50000
+"gold"   "1" //Was 500
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
