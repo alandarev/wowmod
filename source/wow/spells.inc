@@ -2654,7 +2654,7 @@ wcRunSpell_2_10(spellid, race, client) {
     if(threat>0)
     AddThreat(client,threat);
     new color[4]={255,255,255,150};
-    BeamRingEffect("@all",location,10.0,20.0,g_ef_lgtning,0,10,3.0,50.0,color,0.0,20);
+    BeamRingEffect("@all",location,10.0,20.0,g_ef_lgtning,0,10,3.0,150.0,color,0.0,20);
     EmitAmbientSound("wc/spells/sprint.wav",location);
 
     new Float:oldspeed=GetBonusAccuracy(client);
@@ -2681,11 +2681,11 @@ wcRunSpell_2_10(spellid, race, client) {
   }
 }
 
-public wcRunSpell_2_11(spellid,race,client)
+/*public wcRunSpell_2_11(spellid,race,client)
 {
   SetEffectVictim(client,14); // unleash stealth
   //WCMessage(client,"stealth activated",client);
-}
+}*/
 
 // Priest spells 5_
 

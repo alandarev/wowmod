@@ -409,12 +409,12 @@ public Action:ManaTimer(Handle:timer, any:temp)
           //Format(buffer,sizeof(buffer),"%s%T",buffer,"runes hint",x,GetRunes(x));
         //if(GetClass(x)==9)
           //Format(buffer,sizeof(buffer),"%s%T",buffer,"chi hint",x,getChi(x));
-        if(HasStealth(x))
+        /*if(HasStealth(x))
         {
           new alpha=ModifyStealth(x);
           new perc= RoundToNearest( (1.0-float(alpha)/255.0)*100.0 );
           Format(buffer,sizeof(buffer),"%s%T",buffer,"hint stealth",x,perc);
-        }
+        }*/
         else
         {
           g_alpha[x]=255;
