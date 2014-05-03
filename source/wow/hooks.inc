@@ -2330,8 +2330,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     SetEventInt(event,"dmg_health",damage);
     wcDamageDone[attacker]+=damage;
     wcDamageTaken[victim]+=damage;
-    if(IsPlayerAlive(victim))
-      wcDealDamage(victim,attacker,damage,weaponname,headshot);
+    if(!CSGO)
+      if(IsPlayerAlive(victim))
+        wcDealDamage(victim,attacker,damage,weaponname,headshot);
 
     //Ghoul heal owner talent
     new owner = GetZombie(victim);
