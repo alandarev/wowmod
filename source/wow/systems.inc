@@ -1761,7 +1761,7 @@ stock TriggerDrop(client,victim, bool:self=false, Float:custom_rate=1.0)
             case 2: chance *= BOT_NORMAL_RATE;
           }
         }
-        chance *= custom_rate*GLOBAL_DROP*GetTempVar(client, Temp_DropRate)*(PlayerHasBonusFast(client, Profession:Prof_ExtraDrop)?1.1:1.0);
+        chance *= 20.0*custom_rate*GLOBAL_DROP*GetTempVar(client, Temp_DropRate)*(PlayerHasBonusFast(client, Profession:Prof_ExtraDrop)?1.1:1.0); //Remove 20.0 after open beta!!!
         if(isClientPDModule(client, PDModule:PDM_drop))
           chance *= 1.25;
         if(!self)
