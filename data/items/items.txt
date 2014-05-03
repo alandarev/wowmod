@@ -41937,8 +41937,8 @@
 "descr"   "On using activates Cataclysm Expansion"
 "version"   "5.02"
 "level"   "4"
-"cost"   "10000"
-"gold"   "800"
+"cost"   "1" //Used to be 10000
+"gold"   "1" //Used to be 800
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
