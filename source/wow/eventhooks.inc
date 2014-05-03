@@ -340,14 +340,10 @@ public GetFrags(client)
 
 public SetFrags(client, frags)
 {
-    if(g_iFragsGet[client]==0)
+    new g_i_frags = FindDataMapOffs(client, "m_iFrags");
+    if (g_i_frags != -1)
     {
-      new g_i_frags = FindDataMapOffs(client, "m_iFrags");
-      if (g_i_frags != -1)
-      {
-          SetEntData(client, g_i_frags, frags);
-      }
-      g_iFragsGet[client]=1;
+        SetEntData(client, g_i_frags, frags);
     }
 }
 

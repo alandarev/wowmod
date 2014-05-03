@@ -939,20 +939,19 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
     new effectid=0,tmp=0;
     if (userid==wcSuicideUserid && attacker==userid && (!StrEqual(wcSuicideSource,"0")))
     {
-      g_iFragsGet[attacker]=0;
       UnhookLand(userid);
       SetEventInt(event,"attacker",GetClientUserId(wcSuicideAttacker));
       SetEventString(event,"weapon",wcSuicideSource);
       SetEventBool(event,"headshot",wcSuicideHeadshot);
-      SetFrags(userid,GetFrags(userid)+1);
+      //SetFrags(userid,GetFrags(userid)+1);
       if(!(GetClientTeam(userid)==GetClientTeam(wcSuicideAttacker)))
       {
         Killed(userid,true);
         TriggerDrop(wcSuicideAttacker,userid);
-        SetFrags(wcSuicideAttacker,GetFrags(wcSuicideAttacker)+1);
+        //SetFrags(wcSuicideAttacker,GetFrags(wcSuicideAttacker)+1);
       }
       else
-      SetFrags(wcSuicideAttacker,GetFrags(wcSuicideAttacker)-1);
+      //SetFrags(wcSuicideAttacker,GetFrags(wcSuicideAttacker)-1);
       attacker=wcSuicideAttacker;
       wcSuicideUserid=0;
       wcSuicideAttacker=0;
