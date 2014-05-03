@@ -403,11 +403,13 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
   if(CSGO)
   {
+    PrintToChatAll("CSGO Fatal damage");
     wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
     return;
   }
   else
   {
+    PrintToChatAll("CSS Fatal damage");
     wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
     return;
   }
@@ -478,7 +480,7 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   PushArrayCell(g_dmgArray, _:pack);*/
   /*CreateTimer(0.0, TimerDmg, pack, TIMER_HNDL_CLOSE);*/
 
-  SDKHooks_TakeDamage(victim, attacker, attacker, float(damage), DMG_GENERIC, GetPlayerWeaponSlot(attacker, 1));
+  //SDKHooks_TakeDamage(victim, attacker, attacker, float(damage), DMG_GENERIC, GetPlayerWeaponSlot(attacker, 1));
   IntToString(dmg_bullet,dmg_type_str,32);
   /*new pointHurt=CreateEntityByName("point_hurt");*/
   /*if(pointHurt)*/

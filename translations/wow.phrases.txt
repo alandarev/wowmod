@@ -1574,12 +1574,12 @@
   "XpForDamage"
   {
     "#format"	"{1:i},{2:i}"
-    "en"			"@lightgreenYou Gained: @green{1} XP @lightgreenfor making @green{2} @lightgreenTotal Damage"
+    "en"			"@lightgreenYou Gained: @green{1} XP @lightgreenfor dealing @green{2} @lightgreenTotal Damage"
   }
   "XpForHealing"
   {
     "#format"	"{1:i},{2:i}"
-    "en"			"@lightgreenYou Gained: @green{1} XP @lightgreenfor making @green{2} @lightgreenTeam Healing"
+    "en"			"@lightgreenYou Gained: @green{1} XP @lightgreenfor @green{2} @lightgreenTeam Healing"
   }
   "class_0"
   {
