@@ -337,13 +337,17 @@ public GetFrags(client)
 
     return 0;
 }
-
+new g_iFragsGet[65];
 public SetFrags(client, frags)
 {
-    new g_i_frags = FindDataMapOffs(client, "m_iFrags");
-    if (g_i_frags != -1)
+    if(g_iFragsGet[client]==0)
     {
-        SetEntData(client, g_i_frags, frags);
+      new g_i_frags = FindDataMapOffs(client, "m_iFrags");
+      if (g_i_frags != -1)
+      {
+          SetEntData(client, g_i_frags, frags);
+      }
+      g_iFragsGet[client]=1;
     }
 }
 
