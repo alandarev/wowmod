@@ -3668,12 +3668,6 @@ stock RevivalEffect(target) {
 
 public wcRunTalent_9_Keg(client)
 {
-  if(!CSGO)
-  {
-    PrintToChat(client, "Please do not attempt to use keg as it currently crashes the server!");
-  }
-  else
-  {
     decl String:line[255];
     wcGetTalentInfo(9,1,3,1,client,"chi",line);
     new req=StringToInt(line);
@@ -3692,7 +3686,6 @@ public wcRunTalent_9_Keg(client)
         LogError("[WC] Failed creating keg. Entity invalid");
       }
     }
-  }
 }
 
 
