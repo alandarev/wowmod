@@ -844,7 +844,8 @@ stock TreasureChestMap(chance, times=1)
       spawnedChests++;
       GetCurrentMap(sMap,sizeof(sMap));
       if((CSGO) && !StrEqual(sMap,"de_dust2",false))
-        return 0;
+        if((CSGO) && !StrEqual(sMap,"de_inferno",false))
+          return 0;
       if(StrEqual(sMap,"de_dust2",false))  {
         new random=GetRandomInt(1,11);
         if(random==1 && g_iTaken==0) {
@@ -1199,122 +1200,120 @@ stock TreasureChestMap(chance, times=1)
       if(StrEqual(sMap,"de_inferno",false))  {
         new random=GetRandomInt(1,13);
         if(random==1 && g_iTaken==0) {
-          location[0]=690.9;
-          location[1]=2763.8;
-          location[2]=224.0;
-          TreasureChestName = 27; //Window
+          location[0]=272.03;
+          location[1]=-271.94;
+          location[2]=160.09;
+          TreasureChestName = 62; //Second Mid
           g_iTaken=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==2 && g_iTakenb==0) {
-          location[0]=-178.7;
-          location[1]=-696.6;
-          location[2]=64.0;
-          TreasureChestName = 27;
+          location[0]=272.03;
+          location[1]=-271.97;
+          location[2]=380.09;
+          TreasureChestName = 62;
           g_iTakenb=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==3 && g_iTakenc==0) {
-          location[0]=-214.3;
-          location[1]=96.5;
-          location[2]=182.0;
-          TreasureChestName = 28; //Upstairs
+          location[0]=865.10;
+          location[1]=-791.97;
+          location[2]=161.21;
+          TreasureChestName = 34;
           g_iTakenc=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==4 && g_iTakend==0) {
-          location[0]=75.7;
-          location[1]=181.0;
-          location[2]=182.0;
-          TreasureChestName = 29; //Deck
+          location[0]=932.00;
+          location[1]=-118.11;
+          location[2]=320.09;
+          TreasureChestName = 31;
           g_iTakend=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==5 && g_iTakene==0) {
-          location[0]=-480.0;
-          location[1]=-564.4;
-          location[2]=192.0;
-
-          TreasureChestName = 28; //Upstairs
+          location[0]=198.23;
+          location[1]=444.74;
+          location[2]=144.09;
+          TreasureChestName = 6;
           g_iTakene=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==6 && g_iTakenf==0) {
-          location[0]=1059.8;
-          location[1]=-517.5;
-          location[2]=256.0;
-          TreasureChestName = 30; //Bedroom
+          location[0]=888.49;
+          location[1]=138.29;
+          location[2]=149.67;
+          TreasureChestName = 63;
           g_iTakenf=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==7 && g_iTakeng==0) {
-          location[0]=1131.8;
-          location[1]=-245.4;
-          location[2]=256.0;
-          TreasureChestName = 31; //Balcony
+          location[0]=352.83;
+          location[1]=2128.00;
+          location[2]=198.71;
+          TreasureChestName = 64;
           g_iTakeng=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==8 && g_iTakenh==0) {
-          location[0]=2465.7;
-          location[1]=-39.4;
-          location[2]=80.0;
-          TreasureChestName = 4;
+          location[0]=879.97;
+          location[1]=1901.03;
+          location[2]=200.08;
+          TreasureChestName = 64;
           g_iTakenh=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==9 && g_iTakeni==0) {
-          location[0]=-76.4;
-          location[1]=1412.2;
-          location[2]=106.0;
-
-          TreasureChestName = 32; //Alley
+          location[0]=106.27;
+          location[1]=1572.47;
+          location[2]=173.29;
+          TreasureChestName = 64;
           g_iTakeni=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==10 && g_iTakenj==0) {
-          location[0]=863.9;
-          location[1]=1895.3;
-          location[2]=134.5;
-          TreasureChestName = 32; //Garage
+          location[0]=285.32;
+          location[1]=558.30;
+          location[2]=60.25;
+          TreasureChestName = 33;
           g_iTakenj=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==11 && g_iTakenk==0) {
-          location[0]=292.3;
-          location[1]=521.3;
-          location[2]=21.9;
-          TreasureChestName = 33; //Crawlspace
+          location[0]=902.36;
+          location[1]=135.17;
+          location[2]=276.35;
+          TreasureChestName = 63;
           g_iTakenk=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==12 && g_iTakenl==0) {
-          location[0]=653.9;
-          location[1]=3077.6;
-          location[2]=160.0;
+          location[0]=936.77;
+          location[1]=-376.12;
+          location[2]=320.09;
 
-          TreasureChestName = 9;
+          TreasureChestName = 34;
           g_iTakenl=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
         }
         if(random==13 && g_iTakenm==0) {
-          location[0]=943.8;
-          location[1]=136.3;
-          location[2]=256.0;
+          location[0]=759.72;
+          location[1]=721.25;
+          location[2]=176.51;
 
-          TreasureChestName = 34; //Back Alley
+          TreasureChestName = 6;
           g_iTakenm=1;
           TreasureChest(location,TreasureChestName);
           g_iTreasureChestNumber++;
@@ -2542,6 +2541,9 @@ stock TreasureChestClaimed(claimer,Float:location[3],TreasureChestName,entity,ch
     case 59: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Pit",name,raritystr);
     case 60: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Short Stairs",name,raritystr);
     case 61: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Top of Mid",name,raritystr);
+    case 62: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Second Mid",name,raritystr);
+    case 63: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Hay",name,raritystr);
+    case 64: PrintToChatAll("\x04%s \x03has claimed %s treasure chest at Banana",name,raritystr);
 
 
     }
