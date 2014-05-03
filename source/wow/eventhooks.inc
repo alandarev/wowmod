@@ -195,7 +195,6 @@ public RoundStartEvent(Handle:event,const String:name[],bool:dontBroadcast)
       CloseHandle(bots);
     }
   }
-}
   
   CalculateAverageLevel();
 }
