@@ -939,7 +939,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
     new effectid=0,tmp=0;
     if (userid==wcSuicideUserid && attacker==userid && (!StrEqual(wcSuicideSource,"0")))
     {
-      g_iFragsGet[attacker]==0;
+      g_iFragsGet[attacker]=0;
       UnhookLand(userid);
       SetEventInt(event,"attacker",GetClientUserId(wcSuicideAttacker));
       SetEventString(event,"weapon",wcSuicideSource);

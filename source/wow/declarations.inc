@@ -81,6 +81,7 @@ new Slide:g_ffSlideType[65];
 new g_ffSlideStep[65];
 new String:g_ffSlidePath[65][63];
 new g_ffSlideHook[65];
+new g_iFragsGet[65];
 
 new const String:chest1[] = "models/cf_models_src/treasurechest01.mdl";
 new const String:chest2[] = "models/cf_models_src/treasurechest02.mdl";

@@ -337,7 +337,7 @@ public GetFrags(client)
 
     return 0;
 }
-new g_iFragsGet[65];
+
 public SetFrags(client, frags)
 {
     if(g_iFragsGet[client]==0)
