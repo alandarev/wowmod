@@ -266,8 +266,23 @@ public wcRunSpell_9_2(spellid,race,victim,attacker,&totaldmg) //Tiger Palm
   GetClientAbsOrigin(victim,location);
   MonkTigerPalmEffect(location);
   //EmitAmbientSound("wc/spells/tigerpalm.wav",location);
-  AddEMsgAff("tiger palm", true);
 
+
+  
+  new item[UniqueItem];
+  GetCharItem(item, attacker, 10);
+  if(item[Item_defId]==25261 && 80>GetLevel(attacker))
+  {
+    new dmgef = RoundToNearest(dmg*0.50);
+    new effid=CreateEffectData(victim,attacker,3,dmgef,0,0,0,2,g_respawns[victim],0);
+    if(effid!=0)
+    {
+      CreateTimer(2.0, Effect4Action, effid, TIMER_REPEAT);
+    }
+    AddEMsgAff("tigery palm", true);
+  }
+  else
+    AddEMsgAff("tiger palm", true);
   return totaldmg;
 }
 public Action:RemoveTigerPalmBonus(Handle:timer, any:pack)
@@ -757,6 +772,11 @@ public wcRunSpell_9_5(spellid,race,client) //Spinning Crane Kick
   new String:stargets[255];
   new Float:agility=float(GetAgi(client)+GetBonusAgi(client));
   new dmg=RoundToNearest(float(base)+agility*multi);
+  
+  new item[UniqueItem];
+  GetCharItem(item, client, 22);
+  if(item[Item_defId]==25259 && 80>GetLevel(client))
+    dmg=RoundToNearest(float(dmg)*1.30);
   for (new x=0;x<=(amount-1);x++)
   {
     GetClientName(targets[x],name2,sizeof(name2));
@@ -766,9 +786,15 @@ public wcRunSpell_9_5(spellid,race,client) //Spinning Crane Kick
     Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
   }
   if(amount>=1)
-    WCMessage(client,"spinning crane kick",client,dmg,stargets);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick",client,dmg,stargets);
   if(amount==0)
-    WCMessage(client,"spinning crane kick miss",client,dmg);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick miss",client,dmg,stargets);
 
   new olddmg = dmg;
   new Float:talentmulti = 1.00;
@@ -799,8 +825,13 @@ public wcRunSpell_9_5(spellid,race,client) //Spinning Crane Kick
     if(targets[x]>=3 && GetMonkStance(client)==2)
       addChi(client,1);
     decl String:vicMsg[300];
-    Format(vicMsg,sizeof(vicMsg),"%T","spinning crane kick target", targets[x]);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      Format(vicMsg,sizeof(vicMsg),"%T","fiery spinning crane kick target", targets[x]);
+    else
+      Format(vicMsg,sizeof(vicMsg),"%T","spinning crane kick target", targets[x]);
     wcPhysicalDamage(targets[x],client,dmg, "", vicMsg, true);
+    
+    
     dmg = olddmg; //So that the damage isn't increased and then sent to the repeat part where it'll be increased again, and to avoid it stacking multiplicatively from the amount of targets (e.g 3 targets would cause it to be 1.3^3 damage.)
     BloodSpray(targets[x]);
   }
@@ -876,11 +907,19 @@ public Action:SpinningCraneKickRepeat(Handle:timer, Handle:datapack)
     else
     Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
   }
+  
+  new item[UniqueItem];
+  GetCharItem(item, client, 22);
   if(amount>=1)
-    WCMessage(client,"spinning crane kick",client,dmg,stargets);
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick",client,dmg,stargets);
   if(amount==0)
-    WCMessage(client,"spinning crane kick miss",client,dmg);
-
+    if(item[Item_defId]==25259 && 80>GetLevel(client))
+      WCMessage(client,"fiery spinning crane kick",client,dmg,stargets);
+    else
+      WCMessage(client,"spinning crane kick miss",client,dmg,stargets);
   new olddmg = dmg;
   new Float:talentmulti = 1.00;
   for (new x=0;x<=(amount-1);x++)
@@ -1461,6 +1500,7 @@ stock MonkSpinningCraneKickEffect(Float: loc[3])  {
   loc1[1]=loc[1];
   loc1[2]=loc[2];
   loc1[2] += 25;
+  
   VS_BeamRingPoint(loc1, 150.0, 151.0, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 0, 1, 1.0, 5.0, 0.0, {25, 75, 100, 25}, 0, 0, 0.0);
   VS_BeamRingPoint(loc1, 150.0, 151.0, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 0, 1, 0.9, 10.0, 0.0, {25, 75, 100, 50}, 5, 0, 0.1);
   VS_BeamRingPoint(loc1, 150.0, 151.0, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 0, 1, 0.7, 15.0, 0.0, {25, 75, 100, 75}, 10, 0, 0.3);
@@ -1520,7 +1560,7 @@ stock MonkDampenHarmEffect(Float: loc[3])  {
   VS_BeamRingPoint(loc1, 25.0, 75.0, g_ef_overlay, g_ef_overlay, 0, 1, 1.0, 2.0, 0.0, {0, 255, 255, 255}, 25, 0, 0.0);
 }
 
-stock MonkKegEffect(Float: loc[3], Float:radius)  {
+stock MonkKegEffect(Float: loc[3], Float:radius)  { //For some reason crashes the Cs:Go server
   new Float:loc1[3];
   loc1[0]=loc[0];
   loc1[1]=loc[1];
@@ -2333,21 +2373,44 @@ public wcRunTalent_9_2_3_1(client, chi) //Monk DPS Increase from Chi Use
 }
 stock SpinningCraneKickEffect(client)
 {
-  new Float:location[3];
-  GetClientAbsOrigin(client,location);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  EmitAmbientSound("wc/spells/whirlwind.wav",location);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  new item[UniqueItem];
+  GetCharItem(item, client, 22);
+  if(item[Item_defId]==25259 && 80>GetLevel(client))
+  {
+    new Float:location[3];
+    GetClientAbsOrigin(client,location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    EmitAmbientSound("wc/spells/whirlwind.wav",location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {255, 32, 0, 255}, 20, 0);
+  }
+  else
+  {
+    new Float:location[3];
+    GetClientAbsOrigin(client,location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    EmitAmbientSound("wc/spells/whirlwind.wav",location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  }
 }
 
 
@@ -2428,7 +2491,7 @@ stock KickLand(client)  {
   new color[4]={55,255,55,55};
   BeamRingEffect("@all",location,10.0,40.0,g_ef_lgtning,0,10,3.0,100.0,color,0.0,20);
   color[3]=255;
-  BeamRingEffect("@all",location,50.0,245.0,g_ef_lgtning,0,10,3.0,50.0,color,0.0,10);
+  BeamRingEffect("@all",location,50.0,245.0,g_ef_lgtning,0,10,3.0,90.0,color,0.0,10);
   WCMessage(client,"flying serpent kick caster",client,stargets,dmg);
   EmitAmbientSound("wc/spells/serpentland.wav",location);
 
@@ -3266,7 +3329,10 @@ stock CreateChiBurst(client)  {
 
   SetEntityMoveType(entity, MOVETYPE_FLY);
   SetEntPropEnt(entity, Prop_Send, "m_hOwnerEntity", client);
-  SetEntityModel(entity, "models/effects/combineball.mdl");  // flying chicken? :D
+  if(!CSGO)
+    SetEntityModel(entity, "models/effects/combineball.mdl");  // flying chicken? :D
+  else
+    SetEntityModel(entity, "sprites/plasmaember.vmt");
   TeleportEntity(entity, resultposition, clienteyeangle, anglevector);
 
   new gascloud = CreateEntityByName("env_rockettrail");
@@ -3602,22 +3668,29 @@ stock RevivalEffect(target) {
 
 public wcRunTalent_9_Keg(client)
 {
-  decl String:line[255];
-  wcGetTalentInfo(9,1,3,1,client,"chi",line);
-  new req=StringToInt(line);
-  if(spendChi(client, req))
+  if(!CSGO)
   {
-    // Spawn Keg
-    // Pretty much it, wait for the keg to touch ground
-    if (createKeg(client))  {
-      wcGetTalentInfo(9,1,3,1,client,"cooldown",line);
-      new Float:cd=StringToFloat(line);
-      wcGetTalentInfo(9,1,3,1,client,"cooldowntype",line);
-      new cdtype = StringToInt(line);
-      SetCdSpell(client,cdtype,cd,0,"Dizzying Haze");
-    }
-    else  {
-      LogError("[WC] Failed creating keg. Entity invalid");
+    PrintToChat(client, "Please do not attempt to use keg as it currently crashes the server!");
+  }
+  else
+  {
+    decl String:line[255];
+    wcGetTalentInfo(9,1,3,1,client,"chi",line);
+    new req=StringToInt(line);
+    if(spendChi(client, req))
+    {
+      // Spawn Keg
+      // Pretty much it, wait for the keg to touch ground
+      if (createKeg(client))  {
+        wcGetTalentInfo(9,1,3,1,client,"cooldown",line);
+        new Float:cd=StringToFloat(line);
+        wcGetTalentInfo(9,1,3,1,client,"cooldowntype",line);
+        new cdtype = StringToInt(line);
+        SetCdSpell(client,cdtype,cd,0,"Dizzying Haze");
+      }
+      else  {
+        LogError("[WC] Failed creating keg. Entity invalid");
+      }
     }
   }
 }
@@ -3649,7 +3722,8 @@ stock createKeg(client) {
   SetEntPropFloat(entity, Prop_Data, "m_flGravity", 0.15);
   /*SetEntityModel(entity, "models/Items/ar2_grenade.mdl");*/
   /*SetEntityModel(entity, "models/lduke/chicken/chicken3.mdl");  // flying chicken? :D*/
-  SetEntityModel(entity, "models/cf_models_src/beerfest_keg_pony01.mdl");
+  SetEntProp(entity, Prop_Data, "m_nModelIndex", g_keg );
+  SetEntityModel(entity, keg);
   /*SetEntityModel(entity, "models/cf_models_src/treasurechest01.mdl");*/
   // Play sound
 
@@ -3789,5 +3863,5 @@ stock DoKegSpell(client, Float:location[3])  {
     SetEffectAttacker(targets[x],54); // Miss effect
   }
   WCMessage(client,"dizzying haze caster",client,stargets,dmg,RoundToNearest(float(duration)/100));
-  MonkKegEffect(location, radius);
+  //MonkKegEffect(location, radius);
 }

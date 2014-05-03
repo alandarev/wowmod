@@ -37,9 +37,9 @@ new bool:g_AreWeSpawningTreasure = false;
 new g_TreasureMenuOccupiedByClient=0;
 new Handle:hTreasureSpawnMenu=INVALID_HANDLE;
 #define DB_VERSION 30
-#define VERSION 5.06
-#define STR_VERSION "5.06c"
-#define WIKI_VERSION "5.06" //should not contain spaces or any special characters
+#define VERSION 5.11
+#define STR_VERSION "5.11"
+#define WIKI_VERSION "5.11" //should not contain spaces or any special characters
 
 
 #include <sourcemod>
@@ -231,8 +231,9 @@ public OnMapStart()
   //Bind entity manager
   new PMIndex = FindEntityByClassname(0, "cs_player_manager");
   SDKHook(PMIndex, SDKHook_ThinkPost, OnThinkPost);
-
-
+  
+  CreateTimer(15.0,AddBots,8);
+  
   g_RoundCount=-1;
 
   InitClock();
@@ -248,6 +249,17 @@ public OnMapStart()
   InstallDownloads();
   if(g_T2Queue > 20)
       BlockServer(); // Blocks playing on the server for the period of loading data
+}
+public Action:AddBots(Handle:timer, any:amount)
+{
+  new Handle:bots=FindConVar("bot_quota");
+  if(GetConVarInt(bots)>0)
+    CloseHandle(bots);
+  else
+  {
+    SetConVarInt(bots, amount);
+    CloseHandle(bots);
+  }
 }
 
 public OnClientPutInServer(client)

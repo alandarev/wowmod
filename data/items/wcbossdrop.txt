@@ -3386,5 +3386,34 @@
   "chance"  "100"
 "id"  "13513"
 }
-  }
+}
+
+   "58" //Low level boss, drops legendaries
+  {
+"armor" "1600"
+  "sta"   "50000"
+  "str"   "250"
+  "agi"   "50"
+  "int" "3000"
+  "speed" "0.2"
+  "dmg" "90"
+  "multi" "0"
+  "targets" "2"
+  "enrage_level" "0.35"
+  "enrage_dmg" "135"
+  "enrage_multi" "0"
+  "enrage_targets" "3"
+  "xp"  "7500"
+  "totalxp" "20000"
+  "sets"  "381 382 26 27 60"
+  "amount"  "6"
+  "chance"  "0.70"
+  "dropall" "0"
+  "dropall_amount" "0"
+}
+
+
+
+
+
 } //bosses before this bracket

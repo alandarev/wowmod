@@ -82,6 +82,13 @@ new g_ffSlideStep[65];
 new String:g_ffSlidePath[65][63];
 new g_ffSlideHook[65];
 
+new const String:chest1[] = "models/cf_models_src/treasurechest01.mdl";
+new const String:chest2[] = "models/cf_models_src/treasurechest02.mdl";
+new const String:chest3[] = "models/cf_models_src/treasurechest03.mdl";
+new const String:chest4[] = "models/cf_models_src/treasurechest04.mdl";
+new const String:chest5[] = "models/cf_models_src/treasurechest05.mdl";
+new const String:keg[] = "models/cf_models_src/beerfest_keg_pony01.mdl";
+
 
 enum CachedPlayer {
   CP_id,
@@ -140,6 +147,7 @@ new g_iTargetOnly[64]; // For !target
 
 new g_SlideBits[65];
 new g_iCombatReady[65];
+new g_iHStone[65];
 new g_ef_physring1;
 new g_ef_splodesprite;
 new g_ef_bluelight;
@@ -153,7 +161,7 @@ new g_ef_laserbeam;
 new g_HaloSprite;
 
 //Shadow Word Death
-new SWD_sprite;
+//new SWD_sprite;
 //Power Word Shield Sprite
 new ShieldSprite;
 //ChaosBolt
@@ -320,13 +328,14 @@ enum UniqueItem
 new AMSSprite;
 
 new g_ef_trail_blue;
-new g_ef_combineball;
+//new g_ef_combineball;
 new g_ef_yellowflare1;
 new g_ef_orangeflare1;
 new g_ef_orangelight1;
 new g_ef_yellowglow1;
 new g_ef_WXplo1;
 new g_ef_greenglow1;
+//new g_ef_energyball;
 //new g_ef_firecloud2;
 new g_mRanks[15];
 

@@ -339,7 +339,7 @@ public GetTargetXPWorth(client,attacker,bool:head)
    new levelbetween = GetLevel(client) - GetLevel(attacker);
    if(0>=levelbetween)
     levelbetween = 1;
-   new Float:lowlvlworth = 1.0 + (float(levelbetween) / 20);
+   new Float:lowlvlworth = 1.0 + (float(levelbetween) / 500); //500 used to be 20, change it back later once more people hit 85 :)
    worth+= RoundToCeil(float(worth) * lowlvlworth);
    return worth;
 }

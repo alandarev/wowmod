@@ -5,6 +5,6 @@
 {
     "news"
     {
-      "amount"  "17"
+      "amount"  "25"
     }
 }

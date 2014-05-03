@@ -337,7 +337,22 @@ wcRunSpell_8_2(spellid,race,client) //Death Grip
   GetClientAbsOrigin(target,loc2);
   new Float:multi =wcGetSpellInfoFloat(race,spellid,"push");
   new Float:power = 175 + GetDistanceBetween(loc1,loc2) * multi;
-
+  
+  new itemz[UniqueItem];
+  GetCharItem(itemz, client, 22);
+  if(itemz[Item_defId]==25256 && 80>GetLevel(client))
+  {
+    power+=300;
+    new targett;
+    new Float:locationz[3];
+    GetClientAbsOrigin(target,locationz);
+    new team=GetClientTeam(target);
+    if(team==2)
+      targett=GetNearestClient("@ct",locationz,500.0,target);
+    if(targett>0)
+      if(GetBoss(targett)<=0 || (!IsBoss()) )
+        PushPlayerTowardsPlayer(targett, client, power, zPower);
+  }
   //Spell code
   //if not boss
   if(GetBoss(target)<=0 || (!IsBoss()) )
@@ -473,7 +488,7 @@ public Action:EndPlaguebringer(Handle:timer, Handle:datapack)
   RemoveEffectSpellVic(client,48);
 }
 
-wcRunSpell_8_4(spellid,race,client)  { //Icy Touch
+wcRunSpell_8_4(spellid,race,client,victim,bool:endbringer=false)  { //Icy Touch
   //Standard Targetting
   new target=GetAimTarget(client,15.0);
   if(target<=0) {
@@ -487,13 +502,17 @@ wcRunSpell_8_4(spellid,race,client)  { //Icy Touch
     return;
   }
 
-
+  if(victim>0)
+    target=victim;
   //DK specific
-  new runes = wcGetSpellInfoInt(race,spellid,"runes");
-  if(runes>0)
-    if(!SpendRune(client))  {
-      WCMessage(client, "no runes", client);
-      return;
+  if(!endbringer)
+  {
+    new runes = wcGetSpellInfoInt(race,spellid,"runes");
+    if(runes>0)
+      if(!SpendRune(client))  {
+        WCMessage(client, "no runes", client);
+        return;
+    }
   }
   new regen = wcGetSpellInfoInt(race,spellid,"regen");
   if(GetStance(client)==2)
@@ -697,6 +716,7 @@ wcRunSpell_8_6(spellid,race,client)  {
   EmitAmbientSound("wc/spells/deathcoil.wav",location);
   location[2]+=40;
   locationatt[2]+=40;
+  
   VS_BeamPoints(location, locationatt, g_ef_scanner,g_ef_scanner, 1, 5, 3.00, 15.00, 15.00, 1, 0.00, {153, 0, 153, 255}, 20);
   VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 3.00, 15.00, 15.00, 1, 0.00, {153, 0, 153, 255}, 20);
   VS_BeamPoints(locationatt, location, g_ef_glow1, g_ef_glow1, 1, 5, 3.00, 20.00, 10.00, 10, 0.00, {153, 0, 153, 255}, 160);
@@ -861,29 +881,32 @@ public Action:GhoulEffect(Handle:timer, any:client)
 
   SetEntProp(client, Prop_Send, "m_ArmorValue", 100, 1);
   SetEntProp(client, Prop_Send, "m_bHasHelmet", 1, 1);
-  if(!BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10))
-    LogError("didn't create effect #763");
+  BeamRingEffect("@all",location,10.0,500.0,g_ef_lgtning,0,10,2.0,100.0,color,0.0,10);
 
   //Model
   new team = GetClientTeam(client);
   if(GetZombieType(client) == 1)  switch(team)  {
     case 2:
-      SetEntityModel(client,"models/player/slow/zombie_package/slow_5.mdl");
+      if(!CSGO)
+        SetEntityModel(client,"models/player/slow/zombie_package/slow_5.mdl");
     case 3:
-      SetEntityModel(client,"models/player/slow/zombie_package/slow_4.mdl");
+      if(!CSGO)
+        SetEntityModel(client,"models/player/slow/zombie_package/slow_4.mdl");
   }
   else if(GetZombieType(client) == 2) switch(team)  {
     //TODO: infernal model
     case 2: {
       WCMessage(client, "boss spell blocked", client);
       if(!IsBoss())
-        SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
+        if(!CSGO)
+          SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
       new color2[4] = { 255, 200, 255, 255 };
       SetClientColor(client, color2);
     }
     case 3: {
       if(!IsBoss())
-        SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
+        if(!CSGO)
+          SetEntityModel(client,"models/player/drcube/firegolem/firegolem.mdl");
       new color2[4] = { 200, 255, 255, 255 };
       SetClientColor(client, color2);
     }
@@ -1365,6 +1388,8 @@ public wcRunSpell_8_10(spellid,race,victim,attacker,&totaldmg) //Necrotic Strike
         duration = 6.0;
         totaldmg = RoundToNearest(1.1 * totaldmg);
       }
+      if(HasGlyph(attacker, GLYPH_DK_NECROTICSTRIKE))
+        g_iNecrotic[victim]+=RoundToNearest(totaldmg*0.20);
       SetHM(victim,multief);
       SetHMT(victim,duration);
       /*decl String:buffer[30];*/

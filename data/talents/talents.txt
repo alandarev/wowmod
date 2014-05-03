@@ -48,7 +48,7 @@
           }
           "1"
           {
-            "base"        "30"
+            "base"        "10"
             "multi"      "0.050000"
             "name"      "Warrior Toughness"
             "max"        "3"
@@ -56,7 +56,7 @@
           }
           "2"
           {
-            "base"        "30"
+            "base"        "20"
             "multi"      "0.100000"
             "name"      "Warrior Toughness"
             "max"        "3"
@@ -1589,14 +1589,14 @@
           {
             "0"
             {
-              "name"  "Hack and Slash"
+              "name"  "Energetic Recovery"
               "max"  "1"
               "saveid"  "b"
             }
             "1"
             {
-              "chance"  "15"
-              "name"  "Hack and Slash"
+              "restore"  "0.01"
+              "name"  "Energetic Recovery"
               "max"  "1"
               "saveid"  "b"
             }
@@ -1771,14 +1771,14 @@
               "name"  "Fan of Swords"
               "max" "2"
               "saveid"  "B"
-              "multi"   "1.25"
+              "multi"   "1.15"
             }
             "2"
             {
               "name"  "Fan of Swords"
               "max" "2"
               "saveid"  "B"
-              "multi"   "1.50"
+              "multi"   "1.30"
             }
           }
       }
@@ -2753,7 +2753,7 @@
             {
               "event"  "player_cast"
               "active"  "1"
-              "cooldown"  "30.000000"
+              "cooldown"  "20.000000"
               "cooldowntype"  "9"
               "duration"  "10.000000"
               "mana"  "80"
@@ -2864,18 +2864,18 @@
             }
             "1"
             {
-            "multi"  "0.075000"
-            "ticks"  "2"
-            "tickdelay" "2.0"
+            "multi"  "0.05000"
+            "ticks"  "3"
+            "tickdelay" "3.0"
             "name"  "Ignite"
             "max"  "2"
             "saveid"  "8"
             }
             "2"
             {
-            "multi"  "0.15000"
-            "ticks"  "2"
-            "tickdelay" "2.0"
+            "multi"  "0.1000"
+            "ticks"  "3"
+            "tickdelay" "3.0"
             "name"  "Ignite"
             "max"  "2"
             "saveid"  "8"
@@ -3646,7 +3646,7 @@
             {
               "cooldown"  "15.000000"
               "duration"  "2.000000"
-              "mutli" "0.0"
+              "multi" "0.0"
               "name"  "Guardian's Favor"
               "max"  "3"
               "saveid"  "9"
@@ -3657,28 +3657,21 @@
             "0"
             {
               "name"  "Devotion Aura"
-              "max"  "3"
+              "max"  "2"
               "saveid"  "0"
             }
             "1"
             {
-              "multi"  "0.070000"
+              "multi"  "0.10"
               "name"  "Devotion Aura"
-              "max"  "3"
+              "max"  "2"
               "saveid"  "0"
             }
             "2"
             {
-              "multi"  "0.130000"
+              "multi"  "0.20"
               "name"  "Devotion Aura"
-              "max"  "3"
-              "saveid"  "0"
-            }
-            "3"
-            {
-              "multi"  "0.200000"
-              "name"  "Devotion Aura"
-              "max"  "3"
+              "max"  "2"
               "saveid"  "0"
             }
           }
@@ -3695,14 +3688,14 @@
               "name"  "Divine Body"
               "max"  "2"
               "saveid"  "q"
-              "multi" "0.05"
+              "multi" "0.075"
             }
             "2"
             {
               "name"  "Divine Body"
               "max"  "2"
               "saveid"  "q"
-              "multi" "0.1"
+              "multi" "0.15"
             }
           }
         }
@@ -3817,8 +3810,8 @@
             }
             "1"
             {
-              "multi"  "0.00000"
-              "amulti"  "0.420000"
+              "multi"  "0.320000"
+              "amulti"  "0.550000"
               "event"  "player_cast"
               "active"  "1"
               "cooldown"  "10.000000"
@@ -3896,17 +3889,26 @@
           {
             "0"
             {
-              "name"  "Divine Guardian"
+              "name"  "Shield of the Righteous"
               "max"  "1"
               "saveid"  "u"
-              "multi" "0.05"
             }
             "1"
             {
-              "name"  "Divine Guardian"
+              "name"  "Shield of the Righteous"
               "max"  "1"
+              "event"  "player_cast"
+              "active"  "1"
               "saveid"  "u"
-              "multi" "0.05"
+              "cooldowntype" "17"
+              "cooldown"  "8.0"
+              "holy"  "3"
+              "heal"  "0.50"
+              "reduction" "0.80"
+              "base"  "12"
+              "multi" "0.06"
+              "talentid"  "4"
+              "duration"  "5.0"
             }
           }
           "2"
@@ -4430,7 +4432,7 @@
             "name"  "Focused Will"
             "max"  "3"
             "saveid"  "n"
-            "chance"  "10"
+            "chance"  "15"
             "healthper" "0.1"
           }
           "2"
@@ -4438,7 +4440,7 @@
             "name"  "Focused Will"
             "max"  "3"
             "saveid"  "n"
-            "chance"  "20"
+            "chance"  "30"
             "healthper" "0.1"
           }
           "3"
@@ -4446,7 +4448,7 @@
             "name"  "Focused Will"
             "max"  "3"
             "saveid"  "n"
-            "chance"  "30"
+            "chance"  "45"
             "healthper" "0.1"
           }
         }
@@ -5028,13 +5030,14 @@
         {
           "0"
           {
+            "increment"  "1.0"
             "name"  "Improved Mind Blast"
             "max"  "3"
             "saveid"  "f"
           }
           "1"
           {
-            "increment"  "0.030000"
+            "increment"  "1.10"
             "cooldown"  "0.500000"
             "name"  "Improved Mind Blast"
             "max"  "3"
@@ -5042,7 +5045,7 @@
           }
           "2"
           {
-            "increment"  "0.060000"
+            "increment"  "1.20"
             "cooldown"  "1.00000"
             "name"  "Improved Mind Blast"
             "max"  "3"
@@ -5050,7 +5053,7 @@
           }
           "3"
           {
-            "increment"  "0.100000"
+            "increment"  "1.30"
             "cooldown"  "1.50000"
             "name"  "Improved Mind Blast"
             "max"  "3"
@@ -5325,11 +5328,11 @@
             "max"  "1"
             "saveid"  "z"
             "active"  "1"
-            "duration"  "3.0"
+            "duration"  "2.5"
             "tickdelay"  "0.5"
-            "ticks" "6"
+            "ticks" "5"
             "slowmulti" "0.85"
-            "multi" "0.07"
+            "multi" "0.08"
             "base"  "4"
             "mana"  "15"
             "manainc" "0.25"
@@ -5949,7 +5952,7 @@
             "name"  "Improved Rockbiter"
               "max"  "2"
               "saveid"  "r"
-              "increment" "0.15"
+              "increment" "0.125"
           }
           "2"
           {
@@ -7066,7 +7069,7 @@
             "1"
             {
               "multi"        "0.80" //1-multi = cost of healthstone
-              "heal"         "0.30"
+              "heal"         "0.20"
               "event"        "player_cast"
               "active"        "1"
               "cooldown"     "15.000000"
@@ -8665,21 +8668,21 @@
             "name"  "Agile Armor"
             "max" "3"
             "saveid"  "c"
-            "multi"   "3.0" //Not a mistake, bonus armor is agility / multi
+            "multi"   "4.5" //Not a mistake, bonus armor is agility / multi
           }
           "2"
           {
             "name"  "Agile Armor"
             "max" "3"
             "saveid"  "c"
-            "multi"   "2.0" //Not a mistake, bonus armor is agility / multi
+            "multi"   "3.0" //Not a mistake, bonus armor is agility / multi
           }
           "3"
           {
             "name"  "Agile Armor"
             "max" "3"
             "saveid"  "c"
-            "multi"   "1.0" //Not a mistake, bonus armor is agility / multi
+            "multi"   "1.5" //Not a mistake, bonus armor is agility / multi
           }
         }
         "3"
@@ -9528,7 +9531,7 @@
             "saveid"  "L"
             "talentid"  "3"
             "active"  "1"
-            "multi"   "0.085"
+            "multi"   "0.055"
             "base"    "3"
             "jumps"   "5" //How many times it should jump
             "ticklength"    "1.0" //How long it takes for each tick to activate
@@ -9744,14 +9747,14 @@
             "name"  "Serene Mists"
             "max" "2"
             "saveid"  "T"
-            "jumps" "1"
+            "jumps" "0"
           }
           "2"
           {
             "name"  "Serene Mists"
             "max" "2"
             "saveid"  "T"
-            "jumps" "2"
+            "jumps" "1"
           }
         }
       }

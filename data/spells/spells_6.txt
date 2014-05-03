@@ -111,7 +111,7 @@
     "name_ru"   "TODO"
     "event" "player_death"
     "active"    "0"
-    "level" "46"
+    "level" "40"
     "cost" "4000"
     "chance"	"40"
   }

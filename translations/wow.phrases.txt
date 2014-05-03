@@ -27,19 +27,19 @@
   "seal cast"
   {
     "#format" "{1:s},{2:0.1f}"
-    "en"      "You cast @lightgreenSeals (@green{1}@lightgreen) @default on yourself which will last for @lightgreen{2}@default sec or untill @lightgreenJudged"
+    "en"     "You cast @lightgreenSeals (@green{1}@lightgreen) @default on yourself which will last for @lightgreen{2}@default sec or untill @lightgreenJudged"
   }
   "Cast Seal info"
   {
-    "en"      "Cast seals you have for 30 seconds. Owning seals are defined by talents.\nDamage of judgement depends on: Spell Power and Holy Power"
+    "en"     "Cast seals you have for 30 seconds. Owning seals are defined by talents.\nDamage of judgement depends on: Spell Power and Holy Power"
   }
   "Seal of Command info"
   {
-    "en"      "Gives you a chance of dealing Holy damage depending\non your bonus damage.\nREQUIRES 2 Handed Weapon!"
+    "en"     "Gives you a chance of dealing Holy damage depending\non your bonus damage.\nREQUIRES 2 Handed Weapon!"
   }
   "seal of command activated"
   {
-    "en"      "@att's @lightgreenSeal of Command @defaultdid extra @dmg damage to @vic"
+    "en"     "@att's @lightgreenSeal of Command @defaultdid extra @dmg damage to @vic"
   }
   "no seal for judge"
   {
@@ -51,7 +51,7 @@
   }
   "Judgement info"
   {
-    "en"      "Judges current seal on target,\nDeals high spell damage to the target.\nEach Holy Power adds damage\nDamage depends on Spell Power"
+    "en"     "Judges current seal on target,\nDeals high spell damage to the target.\nEach Holy Power adds damage\nDamage depends on Spell Power"
   }
   "seal 6"
   {
@@ -79,72 +79,72 @@
   }
   "Seal of Crusader info"
   {
-    "en"      "Gives a 30 percent chance that bullet which hits enemy will be returned into clip."
+    "en"     "Gives a 30 percent chance that bullet which hits enemy will be returned into clip."
   }
   "judge crusader caster"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"      "You cast @lightgreenJudgement of Seal of Crusader@default at @green{1} @default and reduce his resistance from {2} to {3}."
+    "en"     "You cast @lightgreenJudgement of Seal of Crusader@default at @green{1} @default and reduce his resistance from {2} to {3}."
   }
   "judge crusader target"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"      "@green{1} @default has cast @lightgreenJudgement of Seal of Crusader@default at you has reduced your resistance from {2} to {3}."
+    "en"     "@green{1} @default has cast @lightgreenJudgement of Seal of Crusader@default at you has reduced your resistance from {2} to {3}."
   }
   "judge command caster"
   {
-    "en"      "You cast @lightgreenJudgement of Seal@default at @vic and deal @dmg damage"
+    "en"     "You cast @lightgreenJudgement of Seal@default at @vic and deal @dmg damage"
   }
   "judge command target"
   {
-    "en"      "@att has cast @lightgreenJudgement of Seal@default at You and has done @dmg damage"
+    "en"     "@att has cast @lightgreenJudgement of Seal@default at You and has done @dmg damage"
   }
   "freedom cast"
   {
     "#format" "{1:0.1f},{2:s}"
-    "en"      "@greenYou cast Blessing of Freedom on {2} which will last for @lightgreen{1} @greensec."
+    "en"     "@greenYou cast Blessing of Freedom on {2} which will last for @lightgreen{1} @greensec."
   }
   "freedom cast victim"
   {
     "#format" "{1:0.1f},{2:s}"
-    "en"      "@lightgreen{2} @greencasts @lightgreenBlessing of Freedom @greenon you which will last for @lightgreen{1} @greensec."
+    "en"     "@lightgreen{2} @greencasts @lightgreenBlessing of Freedom @greenon you which will last for @lightgreen{1} @greensec."
   }
   "Blessing of Freedom info"
   {
-    "en"      "Makes target invulnerable to immobilizing effects for 7.5 seconds."
+    "en"     "Causes the target to be immune to immobilizing effects for 7.5 seconds."
   }
   "freedom expired"
   {
-    "en"  "@lightgreenBlessin of Freedom is expired."
+    "en"  "@lightgreenBlessing of Freedom has expired."
   }
   "shield cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "@greenYou cast Divine Shield on yourself which will last for @lightgreen{1} @greensec."
+    "en"     "@greenYou cast Divine Shield on yourself which will last for @lightgreen{1} @greensec."
   }
   "Blessing of Kings info"
   {
-    "en"      "Increases all your stats (str,agi,int,sta)\nby 20 percent."
+    "en"     "Increases all your stats (str,agi,int,sta)\nby 20 percent."
   }
   "Greater Blessing of Kings info"
   {
-    "en"      "Increases all stats (str,agi,int,sta)\nby 20 percent of your team (Does not stack)."
+    "en"     "Increases all stats (str,agi,int,sta)\nby 20 percent of your team (Does not stack)."
   }
   "kings cast"
   {
-    "en"      "You cast Blessing of Kings and increase your base stats."
+    "en"     "You cast Blessing of Kings and increase your base stats."
   }
   "kings cast all"
   {
-    "en"      "You cast Blessing of Kings at @lightgreeneveryone @defaultin your team."
+    "en"     "You cast Blessing of Kings at @lightgreeneveryone @defaultin your team."
   }
   "kings aff"
   {
-    "en"      "You are affected by @lightgreenBlessing of Kings @defaultyour stats are increased."
+    "en"     "You are affected by @lightgreenBlessing of Kings @defaultyour stats are increased."
   }
   "Divine Shield info"
   {
-    "en"      "Makes you immortal for 8 sec but also you can not\nhurt others with weapons, but spells can."
+    "en"     "Makes you immortal for 8 sec but also you can not\nhurt others with weapons, but spells can."
   }
   "shield expired"
   {
@@ -153,7 +153,7 @@
   "unable to attack"
   {
     "#format" "{1:s}"
-    "en"      "@lightgreen{1} @greencan not be hurt at this moment."
+    "en"     "@lightgreen{1} @greencan not be hurt at this moment."
   }
   "no split"
   {
@@ -170,43 +170,43 @@
   "req skill"
   {
     "#format" "{1:i}"
-    "en"      "Skill required: {1}"
+    "en"     "Skill required: {1}"
   }
   "req prof level"
   {
     "#format" "{1:s}"
-    "en"      "Profession Level required: {1}"
+    "en"     "Profession Level required: {1}"
   }
 
   "new prof"
   {
     "#format" "{1:s}"
-    "en"      "You have learned new profession: {1}"
+    "en"     "You have learned new profession: {1}"
   }
   "increased prof skill"
   {
     "#format" "{1:s}"
-    "en"      "@lightgreenYou have increased skill of profession @green{1}!"
+    "en"     "@lightgreenYou have increased skill of profession @green{1}!"
   }
   "increased prof skill2"
   {
     "#format" "{1:s},{2:d}"
-    "en"      "@lightgreenYou have increased skill of profession @green{1} by {2}!"
+    "en"     "@lightgreenYou have increased skill of profession @green{1} by {2}!"
   }
   "learned book"
   {
     "#format" "{1:s}"
-    "en"      "@lightgreenYou have learned book @green{1}."
+    "en"     "@lightgreenYou have learned book @green{1}."
   }
   "profession change to"
   {
     "#format" "{1:s}"
-    "en"      "UNlearn profession{1} and learn new:"
+    "en"     "UNlearn profession{1} and learn new:"
   }
   "profession select sort"
   {
     "#format" "{1:s}"
-    "en"      "Select skills range for {1}"
+    "en"     "Select skills range for {1}"
   }
   "too low skill"
   {
@@ -227,7 +227,7 @@
   }
   "wc make item"
   {
-    "en"      "Creating item menu"
+    "en"     "Creating item menu"
   }
   "no free/no reagents"
   {
@@ -1124,105 +1124,105 @@
   }
   "wc playerstats menu"
   {
-    "en"      "Character Stats"
+    "en"     "Character Stats"
   }
   "player stats"
   {
     "#format" "{1:i}"
-    "en"      "Your Character Stats (ID = {1})"
+    "en"     "Your Character Stats (ID = {1})"
   }
   "Tell player no points"
   {
-    "en"      "You have no points left to spend"
+    "en"     "You have no points left to spend"
   }
   "no money"
   {
-    "en"      "You don't have enough Silver"
+    "en"     "You don't have enough Silver"
   }
   "no honor"
   {
-    "en"      "You don't enough Honor"
+    "en"     "You don't enough Honor"
   }
   "no justice"
   {
-    "en"      "You don't enough Justice Badges"
+    "en"     "You don't enough Justice Badges"
   }
   "no valor"
   {
-    "en"      "You don't enough Valor Badges"
+    "en"     "You don't enough Valor Badges"
   }
 
   "weapons"
   {
-    "en"      "Weapons"
+    "en"     "Weapons"
   }
   "shields"
   {
-    "en"      "Shields & Off-hand"
+    "en"     "Shields & Off-hand"
   }
   "chests"
   {
-    "en"      "Chests"
+    "en"     "Chests"
   }
   "backs"
   {
-    "en"      "Backs"
+    "en"     "Backs"
   }
   "feet"
   {
-    "en"      "Feet"
+    "en"     "Feet"
   }
   "hands"
   {
-    "en"      "Hands"
+    "en"     "Hands"
   }
   "helmets"
   {
-    "en"      "Helmets"
+    "en"     "Helmets"
   }
   "legs"
   {
-    "en"      "Legs"
+    "en"     "Legs"
   }
   "necks"
   {
-    "en"      "Necks"
+    "en"     "Necks"
   }
   "rings"
   {
-    "en"      "Rings"
+    "en"     "Rings"
   }
   "shoulders"
   {
-    "en"      "Shoulders"
+    "en"     "Shoulders"
   }
   "trinkets"
   {
-    "en"      "Trinkets"
+    "en"     "Trinkets"
   }
   "waists"
   {
-    "en"      "Waists"
+    "en"     "Waists"
   }
   "wrists"
   {
-    "en"      "Wrists"
+    "en"     "Wrists"
   }
   "reagents"
   {
-    "en"      "Reagents"
+    "en"     "Reagents"
   }
   "scroll"
   {
-    "en"      "Scroll"
+    "en"     "Scroll"
   }
   "no category"
   {
-    "en"      "Unknown"
+    "en"     "Unknown"
   }
   "wc character menu"
   {
-    "en"      "Character Equipment"
+    "en"     "Character Equipment"
   }
   "insert new char"
   {
@@ -1239,56 +1239,56 @@
   }
   "change character"
   {
-    "en"      "Change/Create Character"
+    "en"     "Change/Create Character"
   }
   "put into inventory"
   {
-    "en"      "Put Item into Inventory"
+    "en"     "Put Item into Inventory"
   }
   "charitem menu"
   {
     "#format"   "{1:s},{2:s}"
-    "en"      "Item: {1} Slot: {2}"
+    "en"     "Item: {1} Slot: {2}"
   }
   "wc Tinventory menu"
   {
-    "en"      "Inventory Menu"
+    "en"     "Inventory Menu"
   }
   "wc shop menu"
   {
-    "en"      "Shop Menu"
+    "en"     "Shop Menu"
   }
   "wc help menu"
   {
-    "en"      "Help"
+    "en"     "Help"
   }
   "wc main menu"
   {
     "#format"   "{1:d},{2:d}"
-    "en"      "World of Warcraft Menu (PlayerId {1}, CharId {2})"
+    "en"     "World of Warcraft Menu (PlayerId {1}, CharId {2})"
   }
   "Announce levelup"
   {
     "#format"   "{1:s},{2:i}"
-    "en"      "{1} has leveled up to {2} level."
+    "en"     "{1} has leveled up to {2} level."
   }
   "wrong class"
   {
-    "en"      "This item is for ANOTHER class."
+    "en"     "This item is for ANOTHER class."
   }
   "nostats"
   {
-    "en"      "You have not enough stats to use this item."
+    "en"     "You have not enough stats to use this item."
   }
   "purchase"
   {
     "#format"   "{1:s}"
-    "en"      "Confirm buying {1}"
+    "en"     "Confirm buying {1}"
   }
   "purchase stack"
   {
     "#format"   "{1:s},{2:d}"
-    "en"      "Confirm buying {1} x{2}"
+    "en"     "Confirm buying {1} x{2}"
   }
 
   "current money"
@@ -1443,7 +1443,7 @@
   "book spellid"
   {
     "#format" "{1:i}"
-    "en"      "Spell ID: {1}"
+    "en"     "Spell ID: {1}"
   }
   "level"
   {
@@ -1506,7 +1506,7 @@
   "effect"
   {
     "#format"   "{1:s}"
-    "en"      "Effect: {1}"
+    "en"     "Effect: {1}"
   }
   "effect_1"
   {
@@ -1583,43 +1583,43 @@
   }
   "class_0"
   {
-    "en"      "No Class yet"
+    "en"     "No Class yet"
   }
   "class_1"
   {
-    "en"      "Warrior"
+    "en"     "Warrior"
   }
   "class_2"
   {
-    "en"      "Rogue"
+    "en"     "Rogue"
   }
   "class_3"
   {
-    "en"      "Mage"
+    "en"     "Mage"
   }
   "class_4"
   {
-    "en"      "Paladin"
+    "en"     "Paladin"
   }
   "class_5"
   {
-    "en"      "Priest"
+    "en"     "Priest"
   }
   "class_6"
   {
-    "en"      "Shaman"
+    "en"     "Shaman"
   }
   "class_7"
   {
-    "en"      "Warlock"
+    "en"     "Warlock"
   }
   "class_8"
   {
-    "en"      "Death Knight"
+    "en"     "Death Knight"
   }
   "class_9"
   {
-    "en"      "Monk"
+    "en"     "Monk"
   }
   "max amount characters"
   {
@@ -1627,134 +1627,149 @@
   }
   "mclass"
   {
-    "en"      "Character Menu"
+    "en"     "Character Menu"
   }
   "wc class choose"
   {
-    "en"      "Choose the class for this hero (You may have multiple characters.)"
+    "en"     "Choose the class for this hero (You may have multiple characters.)"
   }
   "your class"
   {
     "#format"   "{1:s}"
-    "en"      "@lightgreen Your Class is now: @green{1}"
+    "en"     "@lightgreen Your Class is now: @green{1}"
   }
   "class menu"
   {
     "#format"   "{1:s}"
-    "en"      "Your Class Menu: {1}"
+    "en"     "Your Class Menu: {1}"
   }
   "class"
   {
     "#format"   "{1:s}"
-    "en"      "Class: {1}"
+    "en"     "Class: {1}"
   }
   "wc class spells"
   {
-    "en"      "Your Spell Bar"
+    "en"     "Your Spell Bar"
   }
   "wc manage spells"
   {
-    "en"      "Manage your Spells Bar, Spells Book"
+    "en"     "Manage your Spells Bar, Spells Book"
   }
   "wc buy spells"
   {
-    "en"      "Buy New Spells"
+    "en"     "Buy New Spells"
   }
   "spellbar"
   {
-    "en"      "Spell Bar"
+    "en"     "Spell Bar"
   }
   "no spell"
   {
-    "en"      "No Spell"
+    "en"     "No Spell"
   }
   "manage spells"
   {
-    "en"      "Manage Your Spells Bar"
+    "en"     "Manage Your Spells Bar"
   }
   "spell menu"
   {
     "#format"   "{1:s}"
-    "en"      "Spell {1} Menu"
+    "en"     "Spell {1} Menu"
   }
   "buy spell"
   {
-    "en"      "Buy Spell"
+    "en"     "Buy Spell"
   }
   "low lvl"
   {
-    "en"      "Low Level"
+    "en"     "Low Level"
   }
   "low lvl item"
   {
     "#format"   "{1:i}"
-    "en"      "You need at least {1} level to buy this item."
+    "en"     "You need at least {1} level to buy this item."
   }
   "too low lvl rec"
   {
     "#format"   "{1:i}"
-    "en"      "@lightgreenYou need at least {1} level to learn this recipe."
+    "en"     "@lightgreenYou need at least {1} level to learn this recipe."
   }
   "wc spell inf"
   {
     "#format"   "{1:s}"
-    "en"      "Spell {1} Information"
+    "en"     "Spell {1} Information"
   }
   "spell lvl"
   {
     "#format"   "{1:i},{2:i}"
-    "en"      "Spell Level: {1} (Your: {2})"
+    "en"     "Spell Level: {1} (Your: {2})"
   }
   "confirm spell"
   {
     "#format"   "{1:s}"
-    "en"      "Confirm Buying Spell: {1}"
+    "en"     "Confirm Buying Spell: {1}"
   }
   "press confirm"
   {
-    "en"      "I Confirm!"
+    "en"     "I Confirm!"
   }
   "bought spell"
   {
     "#format"   "{1:s}"
-    "en"      "@lightgreen You have successfully bought Spell: @green{1}"
+    "en"     "@lightgreen You have successfully bought Spell: @green{1}"
   }
   "target full hp"
   {
-    "en"      "The target is on full hp."
+    "en"     "The target is on full hp."
   }
   "wc spellbook2"
   {
     "#format"   "{1:d}"
-    "en"      "SpellBook. (Your Level: {1})"
+    "en"     "SpellBook. (Your Level: {1})"
   }
 
   "wc spellbook"
   {
-    "en"      "SpellBook"
+    "en"     "SpellBook"
   }
   "blocked damage"
   {
-    "en"      "Blocked"
+    "en"     "Blocked"
   }
   "passive"
   {
-    "en"      "Passive"
+    "en"     "Passive"
   }
   "hp mp"
   {
     "#format" "{1:d},{2:d},{3:d},{4:d}"
-    "en" "HP: {1}/{2}\nMP: {3}/{4}"
+    "en" "HP: {1}/{2} | MP: {3}/{4}"
+  }
+  "hp mp dmg taken chi"
+  {
+    "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4} | Chi {8}\nDmg Done: {5} | Dmg Taken: {6}"
+  }
+  "hp mp dmg taken hopo"
+  {
+    "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4} | HPo: {8}\nDmg Done: {5} | Dmg Taken: {6}"
+  }
+  "hp mp dmg taken runes"
+  {
+    "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4} | RS:{8}\nDmg Done: {5} | Dmg Taken: {6}"
   }
   "hp mp dmg taken"
   {
     "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s}"
-    "en" "HP: {1}/{2}\n{7}: {3}/{4}\nDamage Done: {5}\nDamage Taken: {6}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4}\nDmg Done: {5} | Dmg Taken: {6}"
   }
   "hp mp dmg threat"
   {
     "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s}"
-    "en" "HP: {1}/{2}\n{7}: {3}/{4}\nDamage Done: {5}\nThreat: {6}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4}\nDmg Done: {5}\nThreat: {6}"
   }
   "hint healing done"
   {
@@ -1773,117 +1788,117 @@
   }
   "good healing"
   {
-    "en"      "@greenYou @lightgreenhave triggered items to drop for good healing done. @default(It doesn't mean item MUST drop)"
+    "en"     "@greenYou @lightgreenhave triggered items to drop for good healing done. @default(It doesn't mean item MUST drop)"
   }
   "triggered teamdrop"
   {
     "#format"   "{1:0.1f}"
-    "en"      "@greenYou @lightgreenhave triggered items to drop for good winning the round. The rate of drop is @lightgreen{1}"
+    "en"     "@greenYou @lightgreenhave triggered items to drop for good winning the round. The rate of drop is @lightgreen{1}"
   }
   "no mana"
   {
-    "en"      "@greenNot enough mana"
+    "en"     "@greenNot enough mana"
   }
   "no runes"
   {
-    "en"      "@greenYou have no runes left to cast"
+    "en"     "@greenYou have no runes left to cast"
   }
   "no target"
   {
-    "en"      "@greenNo Target"
+    "en"     "@greenNo Target"
   }
   "no target in range"
   {
-    "en"      "@greenNo Targets Within Range."
+    "en"     "@greenNo Targets Within Range."
   }
   "wrong target"
   {
-    "en"      "@greenWrong Target @default(Dead or your teammate)"
+    "en"     "@greenWrong Target @default(Dead or your teammate)"
   }
   "Nobody"
   {
-    "en"      "Nobody"
+    "en"     "Nobody"
   }
   "nobody"
   {
-    "en"      "Nobody"
+    "en"     "Nobody"
   }
   "green item"
   {
-    "en"      "Green item"
+    "en"     "Green item"
   }
   "blue item"
   {
-    "en"      "Rare item"
+    "en"     "Rare item"
   }
   "epic item"
   {
-    "en"      "Epic item"
+    "en"     "Epic item"
   }
   "legendary item"
   {
-    "en"      "LEGENDARY item"
+    "en"     "LEGENDARY item"
   }
   "pvp blue item"
   {
-    "en"      "PVP Rare item"
+    "en"     "PVP Rare item"
   }
   "pvp epic item"
   {
-    "en"      "PVP Epic item"
+    "en"     "PVP Epic item"
   }
   "wc reset confirm"
   {
-    "en"      "Confirm Reseting Points"
+    "en"     "Confirm Reseting Points"
   }
   "reset confirm"
   {
     "#format" "{1:i}"
-    "en"      "Confirm Reseting for {1} Silver"
+    "en"     "Confirm Reseting for {1} Silver"
   }
   "mana usage"
   {
     "#format" "{1:i}"
-    "en"      "Mana Cost: {1}"
+    "en"     "Mana Cost: {1}"
   }
   "reset stats"
   {
     "#format" "{1:i}"
-    "en"      "Reset Stats In Cost of: {1} silver"
+    "en"     "Reset Stats In Cost of: {1} silver"
   }
   "cooldown time"
   {
     "#format" "{1:0.1f}"
-    "en"      "Cooldown: {1} sec"
+    "en"     "Cooldown: {1} sec"
   }
   "cast time"
   {
     "#format" "{1:0.1f}"
-    "en"      "Channeling: {1} sec"
+    "en"     "Channeling: {1} sec"
   }
   "spell distance"
   {
     "#format" "{1:0.1f}"
-    "en"      "Distance: {1}"
+    "en"     "Distance: {1}"
   }
   "spell multi"
   {
     "#format" "{1:i}"
-    "en"      "Multiplier: {1}%"
+    "en"     "Multiplier: {1}%"
   }
   "spell on cd"
   {
     "#format"   "{1:0.1f}"
-    "en"      "@greenThis spell is on a cooldown. @lightgreen{1} @greensec is left."
+    "en"     "@greenThis spell is on a cooldown. @lightgreen{1} @greensec is left."
   }
   "silenced for"
   {
     "#format"   "{1:0.1f}"
-    "en"      "@greenYour spell is on a global cooldown (или). @lightgreen{1} @greensec is left."
+    "en"     "@greenYour spell is on a global cooldown (или). @lightgreen{1} @greensec is left."
   }
   "you are dead"
   {
-    "en"      "@greenYou are dead"
+    "en"     "@greenYou are dead"
   }
   "whirlwind"
   {
@@ -1897,19 +1912,19 @@
   }
   "whirlwind target"
   {
-    "en"      "@green@att's Whirlwind @defaulthits you for @lightgreen@dmg @defaultdamage"
+    "en"     "@green@att's Whirlwind @defaulthits you for @lightgreen@dmg @defaultdamage"
   }
   "improved whirlwind target"
   {
-    "en"      "@green@att's Improved Whirlwind @defaulthits you for @lightgreen@dmg @defaultdamage"
+    "en"     "@green@att's Improved Whirlwind @defaulthits you for @lightgreen@dmg @defaultdamage"
   }
   "adrenaline target glyph"
   {
-    "en"      "You were struck by @att's for @dmg damage."
+    "en"     "You were struck by @att's for @dmg damage."
   }
   "adrenaline attacker glyph"
   {
-    "en"      "You hit @vic for @dmg damage."
+    "en"     "You hit @vic for @dmg damage."
   }
   "Shield Block info"
   {
@@ -1937,12 +1952,12 @@
   "Concussion Blow target"
   {
     "#format"   "{1:s},{2:0.1f}"
-    "en"      "@green{1} @defaultcasts @lightgreenConcussion Blow @defaulton you and freezes you for @lightgreen{2} @defaultsec"
+    "en"     "@green{1} @defaultcasts @lightgreenConcussion Blow @defaulton you and freezes you for @lightgreen{2} @defaultsec"
   }
   "Concussion Blow cast"
   {
     "#format"   "{1:s},{2:0.1f}"
-    "en"      "You cast @lightgreenConcussion Blow @defaulton on @green{1} @defaultand freeze for @lightgreen{2} @defaultsec"
+    "en"     "You cast @lightgreenConcussion Blow @defaulton on @green{1} @defaultand freeze for @lightgreen{2} @defaultsec"
   }
 
   "Bloodthirst info"
@@ -1952,12 +1967,12 @@
   "bloodthirst activated"
   {
     "#format" "{1:0.1f},{2:i},{3:i}"
-    "en"      "Next hits for {1} seconds or {3} times will restore you {2} hp"
+    "en"     "Next hits for {1} seconds or {3} times will restore you {2} hp"
   }
   "bloodthirst used"
   {
     "#format" "{1:i}"
-    "en"      "Bloodthirst restored you @green{1} @defaulthp"
+    "en"     "Bloodthirst restored you @green{1} @defaulthp"
   }
   "Evade info"
   {
@@ -1966,11 +1981,11 @@
   "evade activated"
   {
     "#format" "{1:0.2f}"
-    "en"      "Next hits for @lightgreen{1} @defaultseconds done to you may be evaded."
+    "en"     "Next hits for @lightgreen{1} @defaultseconds done to you may be evaded."
   }
   "evade used"
   {
-    "en"      "Evade"
+    "en"     "Evade"
   }
   "Expose Armor info"
   {
@@ -1979,7 +1994,7 @@
   "expose armor activated"
   {
     "#format" "{1:0.1f},{2:0.1f}"
-    "en"      "Your Armor Penetration for this round is increased by @lightgreen{1} @defaultto @lightgreen {2} @defaultpoints."
+    "en"     "Your Armor Penetration for this round is increased by @lightgreen{1} @defaultto @lightgreen {2} @defaultpoints."
   }
   "Cloak of Shadow info"
   {
@@ -1988,7 +2003,7 @@
   "cloak of shadow activated"
   {
     "#format" "{1:0.1f},{2:0.1f}"
-    "en"      "Cloak of Shadow increased your resistance by @lightgreen{1} @defaultto @lightgreen{2} @defaultpoints."
+    "en"     "Cloak of Shadow increased your resistance by @lightgreen{1} @defaultto @lightgreen{2} @defaultpoints."
   }
   "Stealth info"
   {
@@ -2001,7 +2016,7 @@
   "slice and dice cast"
   {
     "#format" "{1:i},{2:0.1f}"
-    "en"      "@greenYou have activated @lightgreenSlice and Dice @defaultwith accuracy of @green{1}%% @defaultfor @green{2} @defaultsec."
+    "en"     "@greenYou have activated @lightgreenSlice and Dice @defaultwith accuracy of @green{1}%% @defaultfor @green{2} @defaultsec."
   }
   "Sprint info"
   {
@@ -2010,11 +2025,11 @@
   "sprint activated"
   {
     "#format" "{1:.1f},{2:.1f}"
-    "en"      "You have activated @greenSprint @defaultincreasing your speed by @lightgreen{1} @defaultto @lightgreen{2}%%@default."
+    "en"     "You have activated @greenSprint @defaultincreasing your speed by @lightgreen{1} @defaultto @lightgreen{2}%%@default."
   }
   "heroic strike"
   {
-    "en"      "Heroic Strike"
+    "en"     "Heroic Strike"
   }
   "Heroic Strike info"
   {
@@ -2022,17 +2037,17 @@
   }
   "mortal strike ef"
   {
-    "en"      "Mortal Strike"
+    "en"     "Mortal Strike"
   }
   "mortal strike"
   {
     "#format" "{1:i},{2:0.1f}"
-    "en"      "Mortal Strike has increased your damage by @green{1} @defaultand debuffed target for @green{2} @defaultsec which makes him harder to be healed."
+    "en"     "Mortal Strike has increased your damage by @green{1} @defaultand debuffed target for @green{2} @defaultsec which makes him harder to be healed."
   }
   "mortal strike vic"
   {
     "#format" "{1:i},{2:0.1f},{3:s}"
-    "en"      "@lightgreen{3}@default's Mortal Strike has increased damage by @green{1} @defaultand for @green{2} @defaultsec you're healed worse."
+    "en"     "@lightgreen{3}@default's Mortal Strike has increased damage by @green{1} @defaultand for @green{2} @defaultsec you're healed worse."
   }
   "Mortal Strike info"
   {
@@ -2063,7 +2078,7 @@
   "mana shield"
   {
     "#format"   "{1:i}"
-    "en"      "Mana Shield: {1}"
+    "en"     "Mana Shield: {1}"
   }
   "mana shield end"
   {
@@ -2108,7 +2123,7 @@
   }
   "sinister strike"
   {
-    "en"      "Sinister Strike"
+    "en"     "Sinister Strike"
   }
   "Sinister Strike info"
   {
@@ -2116,12 +2131,12 @@
   }
   "hamstring"
   {
-    "en"      "Hamstring"
+    "en"     "Hamstring"
   }
   "hamstring victim"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Hamstring skill by @green{1} @defaultslowed you down and increased damage by @green{2}"
+    "en"     "Hamstring skill by @green{1} @defaultslowed you down and increased damage by @green{2}"
   }
   "Hamstring info"
   {
@@ -2129,421 +2144,428 @@
   }
   "revenge used"
   {
-    "en"      "You used @lightgreen Revenge @defaulton @vic and did @dmg damage"
+    "en"     "You used @lightgreen Revenge @defaulton @vic and did @dmg damage"
   }
   "revenge got"
   {
-    "en"      "@att used @lightgreen Revenge @defaulton You and did @dmg damage"
+    "en"     "@att used @lightgreen Revenge @defaulton You and did @dmg damage"
   }
   "improved revenge used"
   {
-    "en"      "You used @lightgreen Improved Revenge @defaulton @vic and did @dmg damage"
+    "en"     "You used @lightgreen Improved Revenge @defaulton @vic and did @dmg damage"
   }
   "improved revenge got"
   {
-    "en"      "@att used @lightgreen Improved Revenge @defaulton You and did @dmg damage"
+    "en"     "@att used @lightgreen Improved Revenge @defaulton You and did @dmg damage"
   }
   "Revenge info"
   {
-    "en"      "Revenge skill damages person \nwhen you block his attack. \nDamage depends on Stamina and \nslightly on Stregth."
+    "en"     "Revenge skill damages person \nwhen you block his attack. \nDamage depends on Stamina and \nslightly on Stregth."
   }
   "Cheat Death info"
   {
-    "en"      "<Passive> Cheat Death now also heals you for 15% of your health"
+    "en"     "<Passive> Cheat Death now also heals you for 15% of your health"
   }
   "cheated damage"
   {
-    "en"      "Cheat Death"
+    "en"     "Cheat Death"
   }
   "cheated damage victim"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@green{1} @defaultCheated Death and avoided your spell damage @lightgreen{2}"
+    "en"     "@green{1} @defaultCheated Death and avoided your spell damage @lightgreen{2}"
   }
   "spell reflection"
   {
-    "en"      "Spell Reflection"
+    "en"     "Spell Reflection"
   }
   "improved spell reflection"
   {
-    "en"      "Improved Spell Reflection"
+    "en"     "Improved Spell Reflection"
   }
   "Spell Reflection info"
   {
-    "en"      "Gives you 12% percent chance to reflect \nSpell Damage back to caster while using shield."
+    "en"     "Gives you 12% percent chance to reflect \nSpell Damage back to caster while using shield."
   }
   "frostbolt caster"
   {
-    "en"      "You cast @lightgreenFrostbolt @defaultat @vic and deal @dmg damage with a slowdown effect"
+    "en"     "You cast @lightgreenFrostbolt @defaultat @vic and deal @dmg damage with a slowdown effect"
   }
   "frostbolt target"
   {
-    "en"      "@att has cast @lightgreenFrostbolt @defaultat You and has done @dmg damage with a slowdown effect"
+    "en"     "@att has cast @lightgreenFrostbolt @defaultat You and has done @dmg damage with a slowdown effect"
   }
   "Frostbolt info"
   {
-    "en"      "Deals damage to enemy and slows him down\nfor 3 sec. (damage depends on Spell Damage)"
+    "en"     "Deals damage to enemy and slows him down\nfor 3 sec. (damage depends on Spell Damage)"
   }
   "frostnova"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast Frost Nova at @green{1} @default and deal @lightgreen{2} @default dmg."
+    "en"     "You cast Frost Nova at @green{1} @default and deal @lightgreen{2} @default dmg."
   }
   "parasites"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your parasite hit @green{1} @default and dealt @lightgreen{2} @default damage."
+    "en"     "Your parasite hit @green{1} @default and dealt @lightgreen{2} @default damage."
   }
   "frostnova target"
   {
-    "en"      "@att has cast @lightgreenFrost Nova@default freezing you and dealing @dmg damage"
+    "en"     "@att has cast @lightgreenFrost Nova@default freezing you and dealing @dmg damage"
   }
   "blinkwake"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your Blinkwake lashes out at @green{1} @default dealing @lightgreen{2} @default damage."
+    "en"     "Your Blinkwake lashes out at @green{1} @default dealing @lightgreen{2} @default damage."
   }
   "blinkwake target"
   {
-    "en"      "@att's @lightgreenBlinkwake@default lashes out at you dealing @dmg damage"
+    "en"     "@att's @lightgreenBlinkwake@default lashes out at you dealing @dmg damage"
   }
   "Frost Nova info"
   {
-    "en"      "Deals damage to enemies around you and freezes them\nfor 3.5 sec. (damage depends on Spell Damage)"
+    "en"     "Deals damage to enemies around you and freezes them\nfor 3.5 sec. (damage depends on Spell Damage)"
   }
   "totem nova"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Fire Nova Totem exploded at @green{1} @default and dealt @lightgreen{2} @default dmg."
+    "en"     "Fire Nova Totem exploded at @green{1} @default and dealt @lightgreen{2} @default dmg."
   }
   "totem nova cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "You cast @greenFire Nova Totem@default for @lightgreen{1} @default seconds."
+    "en"     "You cast @greenFire Nova Totem@default for @lightgreen{1} @default seconds."
   }
   "lightning nova totem cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "You cast @greenLightning Nova Totem@default for @lightgreen{1} @default seconds."
+    "en"     "You cast @greenLightning Nova Totem@default for @lightgreen{1} @default seconds."
   }
   "totem nova target"
   {
-    "en"      "@att's @lightgreenFire Nova @defaultTotem explodes and deals @dmg damage to You"
+    "en"     "@att's @lightgreenFire Nova @defaultTotem explodes and deals @dmg damage to You"
   }
   "lightning nova totem target"
   {
-    "en"      "@att's @lightgreenLightning Nova @defaultTotem struck at you and dealt @green@dmg@default damage"
+    "en"     "@att's @lightgreenLightning Nova @defaultTotem struck at you and dealt @green@dmg@default damage"
   }
   "Fire Nova Totem info"
   {
-    "en"      "Summons a Totem that explodes when enemies near it. Lasts 30 seconds.\nThe totem can be destroyed by shooting at it."
+    "en"     "Summons a Totem that explodes when enemies near it. Lasts 30 seconds.\nThe totem can be destroyed by shooting at it."
   }
   "reincarnation"
   {
-    "en"      "You have ressurected due to @greenReincarnation"
+    "en"     "You have ressurected due to @greenReincarnation"
   }
   "Reincarnation info"
   {
-    "en"      "Gives you a 40%% chance to to resurrect yourself upon death once a round."
+    "en"     "Gives you a 40%% chance to to resurrect yourself upon death once a round."
   }
   "resurrect"
   {
     "#format" "{1:s}"
-    "en"      "You cast @lightgreenResurrection@default at @green{1}@default."
+    "en"     "You cast @lightgreenResurrection@default at @green{1}@default."
   }
   "resurrect target"
   {
     "#format" "{1:s}"
-    "en"      "@green{1}@default has cast @lightgreenResurrection@default on you, giving you a new body and @lightgreen50@default percent of your health."
+    "en"     "@green{1}@default has cast @lightgreenResurrection@default on you, giving you a new body and @lightgreen50@default percent of your health."
   }
   "improved resurrect"
   {
     "#format" "{1:s}"
-    "en"      "You cast @lightgreenImproved Resurrection@default at @green{1}@default."
+    "en"     "You cast @lightgreenImproved Resurrection@default at @green{1}@default."
   }
   "improved resurrect target"
   {
     "#format" "{1:s}"
-    "en"      "@green{1}@default has cast @lightgreenImproved Resurrection@default on you, giving you a new body and @lightgreen50@default percent of your health."
+    "en"     "@green{1}@default has cast @lightgreenImproved Resurrection@default on you, giving you a new body and @lightgreen50@default percent of your health."
   }
   "Resurrection info"
   {
-    "en"      "Resurrects the nearby corpse of a teammate\nin a maximum range of 400 with 50 percent hp & mp."
+    "en"     "Resurrects the nearby corpse of a teammate\nin a maximum range of 400 with 50 percent hp & mp."
   }
   "metamorph"
   {
     "#format" "{1:i},{2:0.1f}"
-    "en"      "You become a @lightgreenDemon @defaultand increase your armor by @green{1} @defaultfor @green{2} @default sec"
+    "en"     "You become a @lightgreenDemon @defaultand increase your armor by @green{1} @defaultfor @green{2} @default sec"
   }
   "no longer demon"
   {
-    "en"      "You are no longer a @lightgreenDemon @defaultand have low armor again."
+    "en"     "You are no longer a @lightgreenDemon @defaultand have low armor again."
   }
   "Metamorphosis info"
   {
-    "en"      "You become a Demon and increase your armor greatly\nfor a short period of time."
+    "en"     "You become a Demon and increase your armor greatly\nfor a short period of time."
   }
   "arcexpl"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @lightgreenArcane Explosion@default at @green{1}@default dealing @lightgreen{2}@default damage."
+    "en"     "You cast @lightgreenArcane Explosion@default at @green{1}@default dealing @lightgreen{2}@default damage."
   }
   "arcexpl target"
   {
-    "en"      "@green@att@default has cast @lightgreenArcane Explosion@default on you dealing @lightgreen@dmg@default damage"
+    "en"     "@green@att@default has cast @lightgreenArcane Explosion@default on you dealing @lightgreen@dmg@default damage"
   }
   "Arcane Explosion info"
   {
-    "en"      "Deals damage to enemies around on cost of\na huge amount of mana."
+    "en"     "Deals damage to enemies around on cost of\na huge amount of mana."
   }
   "shadow bolt caster"
   {
-    "en"      "You cast @lightgreenShadow Bolt @defaultat @vic and deal @dmg damage"
+    "en"     "You cast @lightgreenShadow Bolt @defaultat @vic and deal @dmg damage"
   }
   "shadow bolt target"
   {
-    "en"      "@att casts a @lightgreenShadow Bolt @defaultat You and deals @dmg damage"
+    "en"     "@att casts a @lightgreenShadow Bolt @defaultat You and deals @dmg damage"
   }
   "Shadow Bolt info"
   {
-    "en"      "Deals instant damage to an enemy. \n(Damage depends on Spell damage)"
+    "en"     "Deals instant damage to an enemy. \n(Damage depends on Spell damage)"
   }
   "fireball caster"
   {
-    "en"      "You cast a @lightgreenFireball @defaultat @vic and deal @dmg damage"
+    "en"     "You cast a @lightgreenFireball @defaultat @vic and deal @dmg damage"
   }
   "fireball target"
   {
-    "en"      "@att has cast @lightgreenFireball @defaultat You and did @dmg damage"
+    "en"     "@att has cast @lightgreenFireball @defaultat You and did @dmg damage"
   }
   "Fireball info"
   {
-    "en"      "Deals damage to an enemy. \n(damage depends on Spell damage)"
+    "en"     "Deals damage to an enemy. \n(damage depends on Spell damage)"
   }
   "windfury cast"
   {
-    "en"      "Windfury"
+    "en"     "Windfury"
   }
   "Windfury info"
   {
-    "en"      "<Passive> Your physical attacks have a 20%% chance to deal 20%% additional damage"
+    "en"     "<Passive> Your physical attacks have a 20%% chance to deal 20%% additional damage"
   }
   "fear caster"
   {
     "#format" "{1:s}"
-    "en"      "@defaultYou cast @lightgreenFear@default at @lightgreen{1} @default"
+    "en"     "@defaultYou cast @lightgreenFear@default at @lightgreen{1} @default"
   }
   "fear target"
   {
     "#format" "{1:s}"
-    "en"      "@green{1}@default casts @lightgreenFear@default leaving you with an intense urge to run away."
+    "en"     "@green{1}@default casts @lightgreenFear@default leaving you with an intense urge to run away."
   }
   "Fear info"
   {
-    "en"      "750 Range\n60 Breakdamage\nCast a shadow spell which has a variety of effects most notably, causing\nyour enemy to run in fear or at least be unable to approach you easily."
+    "en"     "750 Range\n60 Breakdamage\nCast a shadow spell which has a variety of effects most notably, causing\nyour enemy to run in fear or at least be unable to approach you easily."
   }
   "demon skin cast"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@defaultYou cast @lightgreenDemon Skin@default and increase your armor by @lightgreen{1}@default upto @lightgreen{2}@default total."
+    "en"     "@defaultYou cast @lightgreenDemon Skin@default and increase your armor by @lightgreen{1}@default upto @lightgreen{2}@default total."
   }
   "demon skin cast with talent"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenFel Armor@default: You cast @lightgreenDemon Skin@default and increase your armor by @lightgreen{1}@default upto @lightgreen{2}@default total."
+    "en"     "@lightgreenFel Armor@default: You cast @lightgreenDemon Skin@default and increase your armor by @lightgreen{1}@default upto @lightgreen{2}@default total."
   }
   "demon skin cast pet"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenFel Armor@default: Your summoner casts @lightgreenDemon Skin@default and increases your armor by @lightgreen{1}@default upto @lightgreen{2}@default total."
+    "en"     "@lightgreenFel Armor@default: Your summoner casts @lightgreenDemon Skin@default and increases your armor by @lightgreen{1}@default upto @lightgreen{2}@default total."
   }
   "Demon Skin info"
   {
-    "en"      "Casts Demon Skin every round start\nwhich slightly increases your total armor."
+    "en"     "Casts Demon Skin every round start\nwhich slightly increases your total armor."
   }
   "life tap cast"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@defaultYou cast @lightgreenLife tap @defaultand deal @lightgreen{1} @defaultdamage to yourself with restoring @lightgreen{2} @defaultmana"
+    "en"     "@defaultYou cast @lightgreenLife tap @defaultand deal @lightgreen{1} @defaultdamage to yourself with restoring @lightgreen{2} @defaultmana"
   }
   "Life Tap info"
   {
-    "en"      "Cast a Life Tap by converting 10 percent\nof your hp to mana."
+    "en"     "Cast a Life Tap by converting 10 percent\nof your hp to mana."
   }
   "too low hp life tap"
   {
-    "en"      "Too Low hp for casting Life Tap"
+    "en"     "Too Low hp for casting Life Tap"
   }
   "corruption cast"
   {
     "#format" "{1:i},{2:s}"
-    "en"      "@defaultYou cast @lightgreenCorruption @defaultand deal @lightgreen{1} @defaultdamage per tick to @green{2}@default. 5 ticks"
+    "en"     "@defaultYou cast @lightgreenCorruption @defaultand deal @lightgreen{1} @defaultdamage per tick to @green{2}@default. 5 ticks"
   }
   "corruption cast vic"
   {
     "#format" "{1:i},{2:s}"
-    "en"      "@green{2} @defaultcasts @lightgreenCorruption @defaultand deals @lightgreen{1} @defaultdamage per tick. 5 ticks."
+    "en"     "@green{2} @defaultcasts @lightgreenCorruption @defaultand deals @lightgreen{1} @defaultdamage per tick. 5 ticks."
   }
   "Corruption info"
   {
-    "en"      "Cast a great debuff which deals great\namount of damage per 15 seconds,\ndamage depends on spell damage."
+    "en"     "Cast a great debuff which deals great\namount of damage per 15 seconds,\ndamage depends on spell damage."
   }
   "life drain cast"
   {
     "#format" "{1:i},{2:s}"
-    "en"      "@defaultYou cast @lightgreenLife Drain to @green{2} @defaultand deal @lightgreen{1} @defaultdamage + heal yourself per tick. 5 ticks"
+    "en"     "@defaultYou cast @lightgreenLife Drain to @green{2} @defaultand deal @lightgreen{1} @defaultdamage + heal yourself per tick. 5 ticks"
   }
   "life drain cast vic"
   {
     "#format" "{1:i},{2:s}"
-    "en"      "@green{2} @defaultcasts @lightgreenLife Drain @defaultand deals @lightgreen{1} @defaultdamage + heal attacker per tick. 5 ticks."
+    "en"     "@green{2} @defaultcasts @lightgreenLife Drain @defaultand deals @lightgreen{1} @defaultdamage + heal attacker per tick. 5 ticks."
   }
   "Life Drain info"
   {
-    "en"      "Cast a debuff which deals average\namount of damage per 12 seconds,\ndamage depends on spell damage.\nMoreover damage done is returned as health to attacker."
+    "en"     "Cast a debuff which deals average\namount of damage per 12 seconds,\ndamage depends on spell damage.\nMoreover damage done is returned as health to attacker."
   }
   "immolate cast"
   {
     "#format" "{1:i},{2:i},{3:s}"
-    "en"      "@defaultYou cast @lightgreenImmolate @defaultand deal @lightgreen{1} @defaultdamage + @lightgreen{2} @default dmg per tick to @green{3}"
+    "en"     "@defaultYou cast @lightgreenImmolate @defaultand deal @lightgreen{1} @defaultdamage + @lightgreen{2} @default dmg per tick to @green{3}"
   }
   "immolate cast vic"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"      "@green{1} casts @lightgreenImmolate @defaultand deals @lightgreen{2} @defaultdamage + @lightgreen{3} @default dmg per tick"
+    "en"     "@green{1} casts @lightgreenImmolate @defaultand deals @lightgreen{2} @defaultdamage + @lightgreen{3} @default dmg per tick"
   }
   "Immolate info"
   {
-    "en"      "<Active> Cast at a target, deals part of its damage instantly and part of its damage over time."
+    "en"     "<Active> Cast at a target, deals part of its damage instantly and part of its damage over time."
   }
   "flameshock cast"
   {
     "#format" "{1:i}"
-    "en"      "@defaultYou cast @lightgreenFlame Shock @defaultand deal @dmg damage + @lightgreen{1} @default dmg per tick to @vic"
+    "en"     "@defaultYou cast @lightgreenFlame Shock @defaultand deal @dmg damage + @lightgreen{1} @default dmg per tick to @vic"
   }
   "flameshock cast vic"
   {
     "#format" "{1:i}"
-    "en"      "@att casts @lightgreenFlame Shock @defaultand deals @dmg damage + @lightgreen{1} @default dmg per tick"
+    "en"     "@att casts @lightgreenFlame Shock @defaultand deals @dmg damage + @lightgreen{1} @default dmg per tick"
   }
   "Flame Shock info"
   {
-    "en"      "Gives your weapon a chance to cast Flame Shock.\nDeals damage and adds a damage over time effect on the victim.\nScales with spell damage."
+    "en"     "Gives your weapon a chance to cast Flame Shock.\nDeals damage and adds a damage over time effect on the victim.\nScales with spell damage."
   }
   "frostshock cast"
   {
-    "en"      "@defaultYou cast @lightgreenFrost Shock @default to @vic and deal @dmg damage + @lightgreenslow down"
+    "en"     "@defaultYou cast @lightgreenFrost Shock @default to @vic and deal @dmg damage + @lightgreenslow down"
   }
   "frostshock cast vic"
   {
-    "en"      "@att casts @lightgreenFrost Shock @defaultand deals @dmg damage + @lightgreenslow down"
+    "en"     "@att casts @lightgreenFrost Shock @defaultand deals @dmg damage + @lightgreenslow down"
   }
   "Frost Shock info"
   {
-    "en"      "Your attacks have a chance to deal extra damage\nand slow down the enemy.\nDamage scales with spellpower."
+    "en"     "Your attacks have a chance to deal extra damage\nand slow down the enemy.\nDamage scales with spellpower."
   }
   "earthshock cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "You cast @lightgreenEarth Shock @default to @vic and deal @dmg damage + @lightgreen{1} @defaultsec silence"
+    "en"     "You cast @lightgreenEarth Shock @default to @vic and deal @dmg damage + @lightgreen{1} @defaultsec silence"
   }
   "earthshock cast vic"
   {
     "#format" "{1:0.1f}"
-    "en"      "@att casts @lightgreenEarth Shock @defaultand deals @dmg damage + @lightgreen{1} @defaultsec silence"
+    "en"     "@att casts @lightgreenEarth Shock @defaultand deals @dmg damage + @lightgreen{1} @defaultsec silence"
   }
   "Earth Shock info"
   {
-    "en"      "Your attacks have a chance to deal extra damage\nand silence the target for 3 seconds.\nDamage scales with spellpower."
+    "en"     "Your attacks have a chance to deal extra damage\nand silence the target for 3 seconds.\nDamage scales with spellpower."
   }
   "scorch cast att"
   {
-    "en"      "You cast @lightgreenScorch@default on @green@vic@default dealing @lightgreen@dmg@default damage."
+    "en"     "You cast @lightgreenScorch@default on @green@vic@default dealing @lightgreen@dmg@default damage."
   }
   "scorch cast vic"
   {
-    "en"      "@green@att@default cast @lightgreenScorch@default on you dealing @lightgreen@dmg@default damage."
+    "en"     "@green@att@default cast @lightgreenScorch@default on you dealing @lightgreen@dmg@default damage."
   }
   "Scorch info"
   {
-    "en"      "Gives your weapon a chance to deal extra \ndamage depending on your Spell Damage."
+    "en"     "Gives your weapon a chance to deal extra \ndamage depending on your Spell Damage."
   }
   "blink cast"
   {
-    "en"      "@greenYou cast blink."
+    "en"     "@greenYou cast blink."
   }
   "blink failed"
   {
-    "en"      "@greenYour blink has @lightgreenFailed@green because of unsafe destination teleport."
+    "en"     "@greenYour blink has @lightgreenFailed@green because of unsafe destination teleport."
   }
   "Blink info"
   {
-    "en"      "Gives you an unique ability to blink."
+    "en"     "Gives you an unique ability to blink."
   }
   "vanish cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "@greenYou cast vanish. Enemies can hardly see you {1} sec."
+    "en"     "@greenYou cast vanish. Enemies can hardly see you {1} sec."
   }
   "vanish expired"
   {
-    "en"      "@greenYour vanish has expired, you are seen now and can attack again."
+    "en"     "@greenYour vanish has expired, you are seen now and can attack again."
   }
   "Vanish info"
   {
-    "en"      "Gives you invisibility for 6 seconds.\nIf you shoot an enemy while still invisible,\nyou will deal bonus damage.\nIf you get too close to an enemy, they can see you."
+    "en"     "Gives you invisibility for 6 seconds.\nIf you shoot an enemy while still invisible,\nyou will deal bonus damage.\nIf you get too close to an enemy, they can see you."
   }
   "backstab used"
   {
-    "en"      "Backstab"
+    "en"     "Backstab"
   }
   "Backstab info"
   {
-    "en"      "Increases the damage you deal to enemies when shooting from behind.\nAlso removes the weapon speed penalty."
+    "en"     "Increases the damage you deal to enemies when shooting from behind.\nAlso removes the weapon speed penalty."
   }
   "deadly poison activated"
   {
-    "en"      "@greenYou have applied Deadly Poison to your weapons."
+    "en"     "@greenYou have applied Deadly Poison to your weapons."
   }
   "stealth activated"
   {
-    "en"      "@greenStealth is active, stand still to fade away."
+    "en"     "@greenStealth is active, stand still to fade away."
   }
   "deadly poison casted"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@greenYou poisoned @lightgreen{1} @greenwith @lightgreen{2} @greendamage per tick."
+    "en"     "@greenYou poisoned @lightgreen{1} @greenwith @lightgreen{2} @greendamage per tick."
   }
   "deadly poison casted victim"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @greenpoisoned you with @lightgreen{2} @greendamage per tick."
+    "en"     "@lightgreen{1} @greenpoisoned you with @lightgreen{2} @greendamage per tick."
   }
   "Deadly Poison info"
   {
-    "en"      "Gives you a chance to poison the target, dealing damage over time.\nScales with agility."
+    "en"     "Gives you a chance to poison the target, dealing damage over time.\nScales with agility."
   }
   "Arcane Intellect info"
   {
-    "en"      "Increases your intellect based on your level."
+    "en"     "Increases your intellect based on your level."
   }
   "intellect cast"
   {
     "#format" "{1:i}"
-    "en"      "You cast @greenArcane Intellect @defaultand increase your intellect by @lightgreen{1}."
+    "en"     "You cast @greenArcane Intellect @defaultand increase your intellect by @lightgreen{1}."
   }
   "Rockbiter Weapon info"
   {
-    "en"      "Your weapon hits deal 50%% magical damage and 50%% physical.\nGrants additional spell penetration depending on your armor penetration.\nToggleable, costs 2 mana per hit."
+    "en"     "Your weapon hits deal 50%% magical damage and 50%% physical.   \nToggleable, costs 3 mana per hit."
   }
   "rockbiter cast"
   {
-    "#format" "{1:0.1f}"
-    "en"      "You cast @greenRockbiter Weapon @default. Your weapon shots will cost you 3 mana but do half magic damage with spell penetration of @lightgreen{1}"
+    "en"     "You cast @greenRockbiter Weapon@default. Your weapon shots will cost you @lightgreen3 @defaultmana but do @lightgreen50%% @defaultmagic damage"
+  }
+  "rockbiter cast improved"
+  {
+    "en"     "You cast @greenImproved Rockbiter Weapon@default. Your weapon shots will cost you @lightgreen3 @defaultmana but do @lightgreen62.5%% @defaultmagic damage"
+  }
+  "rockbiter cast improved2"
+  {
+    "en"     "You cast @greenImproved Rockbiter Weapon@default. Your weapon shots will cost you @lightgreen3 @defaultmana but do @lightgreen75%% @defaultmagic damage"
   }
   "rockbiter off"
   {
-    "en"      "You have turned your @greenRockbiter Weapon @lightgreenOFF"
+    "en"     "You have turned your @greenRockbiter Weapon @lightgreenOFF"
   }
   "bonus str"
   {
@@ -2572,12 +2594,12 @@
   "flash heal caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenFlash Heal@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "You cast @greenFlash Heal@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "flash heal target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts @greenFlash Heal@default on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts @greenFlash Heal@default on you and restores @lightgreen{2} @defaulthp."
   }
   "Flash Heal info"
   {
@@ -2586,12 +2608,12 @@
   "healing wave caster"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"      "You cast Healing Wave on @lightgreen{1}@default and restore @lightgreen{2} @defaulthp with additional @lightgreen{3} @defaultarmor for 30 sec"
+    "en"     "You cast Healing Wave on @lightgreen{1}@default and restore @lightgreen{2} @defaulthp with additional @lightgreen{3} @defaultarmor for 30 sec"
   }
   "healing wave target"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"      "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp with additional @lightgreen{3} @defaultarmor for 30 sec"
+    "en"     "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp with additional @lightgreen{3} @defaultarmor for 30 sec"
   }
   "Healing Wave info"
   {
@@ -2600,12 +2622,12 @@
   "holy radiance caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenHoly Radiance @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "You cast @greenHoly Radiance @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "holy radiance target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
   }
   "Holy Radiance info"
   {
@@ -2619,12 +2641,12 @@
   "greater heal caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenGreater Heal@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "You cast @greenGreater Heal@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "greater heal target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
   }
   "Greater Heal info"
   {
@@ -2633,40 +2655,40 @@
   "pw shield used caster"
   {
     "#format" "{1:0.1f},{2:i},{3:s},{4:s}"
-    "en"      "{4}@greenYou@default cast @lightgreenPower Word: Shield@default spell on @green{3}@default for the next @lightgreen{1}@default seconds absorbing @lightgreen{2}"
+    "en"     "{4}@greenYou@default cast @lightgreenPower Word: Shield@default spell on @green{3}@default for the next @lightgreen{1}@default seconds absorbing @lightgreen{2}"
   }
   "pw shield used victim"
   {
     "#format" "{1:0.1f},{2:i},{3:s},{4:s}"
-    "en"      "{4}@green{3}@default casts @lightgreenPower Word: Shield@default spell on you for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
+    "en"     "{4}@green{3}@default casts @lightgreenPower Word: Shield@default spell on you for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
   }
   "imp pw shield used caster"
   {
     "#format" "{1:0.1f},{2:i},{3:s},{4:s}"
-    "en"      "{4}You cast @lightgreenImproved Power Word: Shield @defaultspell on @green{3}@default for the next @lightgreen{1}@default seconds absorbing @lightgreen{2}"
+    "en"     "{4}You cast @lightgreenImproved Power Word: Shield @defaultspell on @green{3}@default for the next @lightgreen{1}@default seconds absorbing @lightgreen{2}"
   }
   "imp pw shield used victim"
   {
     "#format" "{1:0.1f},{2:i},{3:s},{4:s}"
-    "en"      "{4}@green{3}@default casts @lightgreenImproved Power Word: Shield@default spell on you for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
+    "en"     "{4}@green{3}@default casts @lightgreenImproved Power Word: Shield@default spell on you for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
   }
   "imp pw shield used self"
   {
     "#format" "{1:0.1f},{2:i},{3:s}"
-    "en"      "{3}@greenYou@default cast @lightgreenImproved Power Word: Shield@default spell on @greenyour self@default, for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
+    "en"     "{3}@greenYou@default cast @lightgreenImproved Power Word: Shield@default spell on @greenyour self@default, for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
   }
   "pw shield used self"
   {
     "#format" "{1:0.1f},{2:i},{3:s}"
-    "en"      "{3}@greenYou@default cast @lightgreenPower Word: Shield@default spell on @greenyour self@default, for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
+    "en"     "{3}@greenYou@default cast @lightgreenPower Word: Shield@default spell on @greenyour self@default, for next @lightgreen{1}@default seconds absorbing @lightgreen{2}@default"
   }
   "shield absorbed"
   {
-    "en"      "Shield Spell"
+    "en"     "Shield Spell"
   }
   "need shield"
   {
-    "en"      "@lightgreenShield is Required!"
+    "en"     "@lightgreenShield is Required!"
   }
   "Power Word: Shield info"
   {
@@ -2674,38 +2696,38 @@
   }
   "mindblast caster"
   {
-    "en"      "You cast @lightgreenMind Blast @defaultat @vic and deal @dmg damage"
+    "en"     "You cast @lightgreenMind Blast @defaultat @vic and deal @dmg damage"
   }
   "mindblast target"
   {
-    "en"      "@att casts @lightgreenMind Blast @defaultat You and deals @dmg damage"
+    "en"     "@att casts @lightgreenMind Blast @defaultat You and deals @dmg damage"
   }
   "Mind Blast info"
   {
-    "en"      "Deals high damage to enemy. \n(damage depends on Spell Damage)"
+    "en"     "Deals high damage to enemy. \n(damage depends on Spell Damage)"
   }
   "manaburn caster"
   {
     "#format" "{1:i}"
-    "en"      "You cast @lightgreenMana Burn@default at @vic dealing @dmg damage and burn @lightgreen{1}@default mana"
+    "en"     "You cast @lightgreenMana Burn@default at @vic dealing @dmg damage and burn @lightgreen{1}@default mana"
   }
   "manaburn target"
   {
     "#format" "{1:i}"
-    "en"      "@att casts @lightgreenMana Burn@default at You dealing @dmg damage and burn @lightgreen{1}@default mana"
+    "en"     "@att casts @lightgreenMana Burn@default at You dealing @dmg damage and burn @lightgreen{1}@default mana"
   }
   "Mana Burn info"
   {
-    "en"      "Burns 100 mana from target.\nThe value increases fast with your spell power.\nDoes not work against classes with no mana."
+    "en"     "Burns 100 mana from target.\nThe value increases fast with your spell power.\nDoes not work against classes with no mana."
   }
   "Power Word: Fortitude info"
   {
-    "en"        "Increases your bonus stamina based on your level. \n Level * 0.31 \n(Level 80 = 25.) \n (Level 40 = 12.)"
+    "en"       "Increases your bonus stamina based on your level. \n Level * 0.31 \n(Level 80 = 25.) \n (Level 40 = 12.)"
   }
   "stamina cast"
   {
     "#format" "{1:i}"
-    "en"        "You cast @greenPower Word: Fortitude @defaultand increase your stamina by @lightgreen{1}."
+    "en"       "You cast @greenPower Word: Fortitude @defaultand increase your stamina by @lightgreen{1}."
   }
   "wc loaddel menu"
   {
@@ -2714,11 +2736,11 @@
   }
   "load character"
   {
-    "en"      "Load this character (you will die)"
+    "en"     "Load this character (you will die)"
   }
   "del character"
   {
-    "en"      "Delete Character (can not be restored)"
+    "en"     "Delete Character (can not be restored)"
   }
   "wc confirmdel menu"
   {
@@ -2727,23 +2749,23 @@
   }
   "del attention1"
   {
-    "en"      "Attention:"
+    "en"     "Attention:"
   }
   "del attention2"
   {
-    "en"      "You will not be able to restore character"
+    "en"     "You will not be able to restore character"
   }
   "del attention3"
   {
-    "en"      "I confirm deleting character."
+    "en"     "I confirm deleting character."
   }
   "character active"
   {
-    "en"      "You can not delete character while playing it."
+    "en"     "You can not delete character while playing it."
   }
   "character removed"
   {
-    "en"      "Character was successfuly removed."
+    "en"     "Character was successfuly removed."
   }
   "mysql warning1"
   {
@@ -2773,7 +2795,7 @@
   "menu is loading"
   {
     "#format" "{1:0.1f}"
-    "en"      "@greenYour requested menu is being loaded, if it's failed then in {1} you will be able to use menus again."
+    "en"     "@greenYour requested menu is being loaded, if it's failed then in {1} you will be able to use menus again."
   }
   "failed loading mail"
   {
@@ -2785,7 +2807,7 @@
   }
   "wrong adresser"
   {
-    "en"      "@greenThis Character Id does NOT exist. @lightgreenIf you are sure it does, try again."
+    "en"     "@greenThis Character Id does NOT exist. @lightgreenIf you are sure it does, try again."
   }
   "Q total won"
   {
@@ -2794,111 +2816,111 @@
   }
   "combustion cast"
   {
-    "en"      "@greenNext Spell Damage will have @lightgreen100 percent @greencritical strike."
+    "en"     "@greenNext Spell Damage will have @lightgreen100 percent @greencritical strike."
   }
   "Combustion info"
   {
-    "en"      "Makes your next Spell Damage from any cast\nhave 100% Critical Strike Chance."
+    "en"     "Makes your next Spell Damage from any cast\nhave 100% Critical Strike Chance."
   }
   "converted xp"
   {
     "#format" "{1:i}"
-    "en"      "Your XP is converted to {1} silver due to being maximum level."
+    "en"     "Your XP is converted to {1} silver due to being maximum level."
   }
   "new arena leader"
   {
     "#format" "{1:s}"
-    "en"      "@lightgreen!!!ARENA Leader now is - @green{1}!!!"
+    "en"     "@lightgreen!!!ARENA Leader now is - @green{1}!!!"
   }
   "wc main arena"
   {
-    "en"      "Arena Menu"
+    "en"     "Arena Menu"
   }
   "transfer to arena"
   {
     "#format" "{1:s}"
-    "en"      "Transfer to Arena Server: {1}"
+    "en"     "Transfer to Arena Server: {1}"
   }
   "transfer to main"
   {
     "#format" "{1:s}"
-    "en"      "Transfer to Main Server: {1}"
+    "en"     "Transfer to Main Server: {1}"
   }
   "disabled redirection"
   {
-    "en"      "Redirection is disabled"
+    "en"     "Redirection is disabled"
   }
   "honor is calculated"
   {
-    "en"      "@lightgreen!Your honor points are calculated! @default(take a rest)"
+    "en"     "@lightgreen!Your honor points are calculated! @default(take a rest)"
   }
   "wc arena stats"
   {
-    "en"      "Arena statistics"
+    "en"     "Arena statistics"
   }
   "wc ranking page"
   {
-    "en"      "Ranking page"
+    "en"     "Ranking page"
   }
   "wc db loading"
   {
     "#format" "{1:i}"
-    "en"      "Server's Database is being loaded: {1}%"
+    "en"     "Server's Database is being loaded: {1}%"
   }
   "wc db loaded"
   {
-    "en"      "Server's Database is Loaded, Enjoy game."
+    "en"     "Server's Database is Loaded, Enjoy game."
   }
   "wc server blocked team"
   {
-    "en"      "@lightgreenServer is being loaded, Please keep waiting. @greenYou are still able to join Spectators."
+    "en"     "@lightgreenServer is being loaded, Please keep waiting. @greenYou are still able to join Spectators."
   }
   "finish viewing slides"
   {
-    "en"      "@lightgreenPlease finish steps required by slides before joining team. @greenIf you are stuck, write in chat 'next' to skip slide."
+    "en"     "@lightgreenPlease finish steps required by slides before joining team. @greenIf you are stuck, write in chat 'next' to skip slide."
   }
 
   "wc sprint is broken"
   {
-    "en"      "Your sprint is broken due to hitting enemy."
+    "en"     "Your sprint is broken due to hitting enemy."
   }
   "wc arena control"
   {
-    "en"      "Arena Settings/Information"
+    "en"     "Arena Settings/Information"
   }
   "arena control"
   {
-    "en"      "Arena Overview"
+    "en"     "Arena Overview"
   }
   "teams size"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "Arena Style: {1} v {2}"
+    "en"     "Arena Style: {1} v {2}"
   }
   "teams size undefined"
   {
-    "en"      "Arena Style: Undefined"
+    "en"     "Arena Style: Undefined"
   }
   "arena leader"
   {
     "#format" "{1:s}"
-    "en"      "Leader: {1}"
+    "en"     "Leader: {1}"
   }
   "arena horde"
   {
-    "en"      "Horde Team"
+    "en"     "Horde Team"
   }
   "arena alliance"
   {
-    "en"      "Alliance Team"
+    "en"     "Alliance Team"
   }
   "arena send confirm"
   {
-    "en"      "Request confirmation of teams"
+    "en"     "Request confirmation of teams"
   }
   "arena not leader"
   {
-    "en"      "@greenOnly leader can access this menu"
+    "en"     "@greenOnly leader can access this menu"
   }
   "wc arena size"
   {
@@ -3045,83 +3067,83 @@
   "thunder clap caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @lightgreenThunder Clap @defaultat @green{1} @default with @lightgreen{2}@default dmg and slowdown Effects."
+    "en"     "You cast @lightgreenThunder Clap @defaultat @green{1} @default with @lightgreen{2}@default dmg and slowdown Effects."
   }
   "thunder clap victim"
   {
-    "en"      "You got hit by @lightgreenThunder Clap @defaultfrom @att for @dmg damage"
+    "en"     "You got hit by @lightgreenThunder Clap @defaultfrom @att for @dmg damage"
   }
   "deafening thunder clap victim"
   {
     "#format" "{1:.1f}"
-    "en"      "You got hit by a @lightgreenDeafening Thunder Clap @defaultfrom @att for @dmg damage and silencing you for {1} seconds"
+    "en"     "You got hit by a @lightgreenDeafening Thunder Clap @defaultfrom @att for @dmg damage and silencing you for {1} seconds"
   }
   "Thunder Clap info"
   {
-    "en"      "Thunder Clap spell is essential in fighting meele classes.\nWhen cast all nearby enemies get slowed down\nin movement and attack speed."
+    "en"     "Thunder Clap spell is essential in fighting meele classes.\nWhen cast all nearby enemies get slowed down\nin movement and attack speed."
   }
   "panel an drop title"
   {
-    "en"      "You must be the lucky one!"
+    "en"     "You must be the lucky one!"
   }
   "panel an drop item"
   {
     "#format" "{1:s}"
-    "en"      "A rare item has dropped: \n    {1}\n\n"
+    "en"     "A rare item has dropped: \n    {1}\n\n"
   }
   "panel global an drop item"
   {
     "#format" "{1:s},{2:s}"
-    "en"      "Player {1} got an EXTREMELY rare item: \n    {2}\n\n"
+    "en"     "Player {1} got an EXTREMELY rare item: \n    {2}\n\n"
   }
   "exit"
   {
-    "en"      "Exit"
+    "en"     "Exit"
   }
   "panel newbie title"
   {
-    "en"      "Welcome to WoW Mod Server!"
+    "en"     "Welcome to WoW Mod Server!"
   }
   "panel newbie text"
   {
-    "en"      "To open main menu write: wcmenu\nTo open help menu write: wchelp\nDo not hesitate to ask people for advice.\nOur Community will do the best to let you enjoy\nthe game and benefits of wow mod.\nTo Disable this pop-up write: !newbie"
+    "en"     "To open main menu write: wcmenu\nTo open help menu write: wchelp\nDo not hesitate to ask people for advice.\nOur Community will do the best to let you enjoy\nthe game and benefits of wow mod.\nTo Disable this pop-up write: !newbie"
   }
   "hymn cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "You start Casting @greenHymn of Hope @defaultwith @lightgreen{1} @defaultpercent per tick."
+    "en"     "You start Casting @greenHymn of Hope @defaultwith @lightgreen{1} @defaultpercent per tick."
   }
   "hymn target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You are affected by @green{1}@default's Hymn of Hope which has restored @lightgreen{2} @defaultof your mana."
+    "en"     "You are affected by @green{1}@default's Hymn of Hope which has restored @lightgreen{2} @defaultof your mana."
   }
   "Hymn of Hope info"
   {
-    "en"      "This spell requires caster to stay during cast period.\nIt restores every friendly player's mana\nby certain percent, which makes extremely useful for whole team."
+    "en"     "This spell requires caster to stay during cast period.\nIt restores every friendly player's mana\nby certain percent, which makes extremely useful for whole team."
   }
   "hellfire cast"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "You start Casting Hellfire with @lightgreen{1} @defaultdmg per tick. It also deals @lightgreen{2} @defaultof damage to yourself."
+    "en"     "You start Casting Hellfire with @lightgreen{1} @defaultdmg per tick. It also deals @lightgreen{2} @defaultof damage to yourself."
   }
   "hellfire target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@green{1} @default has cast Hellfire at you and has done @lightgreen{2} @default dmg."
+    "en"     "@green{1} @default has cast Hellfire at you and has done @lightgreen{2} @default dmg."
   }
   "Hellfire info"
   {
-    "en"      "Extremely powerful Area of Effect spell.\nIt requires caster to stand during casting period\nand also damaging himself for a half of tick dmg."
+    "en"     "Extremely powerful Area of Effect spell.\nIt requires caster to stand during casting period\nand also damaging himself for a half of tick dmg."
   }
   "hud spell cast"
   {
     "#format" "{1:s},{2:0.1f}"
-    "en"      "Casting {1}: {2} sec left"
+    "en"     "Casting {1}: {2} sec left"
   }
   "dead"
   {
-    "en"      "Dead"
+    "en"     "Dead"
   }
   "dmg taken"
   {
@@ -3130,58 +3152,58 @@
   }
   "wc account page"
   {
-    "en"      "Account Menu"
+    "en"     "Account Menu"
   }
   "account menu"
   {
-    "en"      "Account Menu: Here are your personal settings"
+    "en"     "Account Menu: Here are your personal settings"
   }
   "wc load page"
   {
-    "en"      "Open Account Page"
+    "en"     "Open Account Page"
   }
   "gold balance"
   {
     "#format" "{1:0.2f}"
-    "en"      "Gold: {1}"
+    "en"     "Gold: {1}"
   }
   "wc set login"
   {
     "#format" "{1:s}"
-    "en"      "Login: {1}   Press to change."
+    "en"     "Login: {1}   Press to change."
   }
   "wc set pass"
   {
     "#format" "{1:s}"
-    "en"      "Password: {1}   Press to change."
+    "en"     "Password: {1}   Press to change."
   }
   "acc type login"
   {
-    "en"      "@defaultYou have @lightgreen30 @defaultseconds to type new @lightgreenLogin. @greenOnly alphabetic and numbers."
+    "en"     "@defaultYou have @lightgreen30 @defaultseconds to type new @lightgreenLogin. @greenOnly alphabetic and numbers."
   }
   "acc type pass"
   {
-    "en"      "@defaultYou have @lightgreen30 @defaultseconds to type new @lightgreenPassword. @greenOnly alphabetic and numbers."
+    "en"     "@defaultYou have @lightgreen30 @defaultseconds to type new @lightgreenPassword. @greenOnly alphabetic and numbers."
   }
   "too short"
   {
-    "en"      "String you typed is too short - minimum 4 characters."
+    "en"     "String you typed is too short - minimum 4 characters."
   }
   "acc changed login"
   {
-    "en"      "@lightgreenYour Login has successfuly changed."
+    "en"     "@lightgreenYour Login has successfuly changed."
   }
   "acc changed pass"
   {
-    "en"      "@lightgreenYour Password has successfuly changed."
+    "en"     "@lightgreenYour Password has successfuly changed."
   }
   "acc login exist"
   {
-    "en"      "@lightgreenLogin you typed already exists. @greenChoose another one."
+    "en"     "@lightgreenLogin you typed already exists. @greenChoose another one."
   }
   "acc login failed"
   {
-    "en"      "@lightgreenAccured unknown error on changing login. @greenIf repeats, please contact administration."
+    "en"     "@lightgreenAccured unknown error on changing login. @greenIf repeats, please contact administration."
   }
   "selfcast enabled"
   {
@@ -3237,7 +3259,7 @@
   }
   "panel threat1"
   {
-    "en"  "Name                  Threat"
+    "en"  "Name               Threat"
   }
   "threat disable"
   {
@@ -3250,7 +3272,7 @@
   "threat spell"
   {
     "#format" "{1:i}"
-    "en"      "Additional Threat: {1}"
+    "en"     "Additional Threat: {1}"
   }
   "spell inactive"
   {
@@ -3474,7 +3496,7 @@
   }
   "wc debug menu warning"
   {
-    "en"    "please MAKE SURE server is working fine before continuing.\nAsk others if they have same problem before using this menu."
+    "en"    "Please MAKE SURE server is working fine before continuing.\nAsk others if they have same problem before using this menu."
   }
   "wc debug menu mail"
   {
@@ -3486,11 +3508,11 @@
   }
   "wc debug mail1"
   {
-    "en"    "This is the list of ghost mails you have.\nContinue to clean them up."
+    "en"    "This is a list of the ghost mails you have.\nContinue to clean them up."
   }
   "wc debug menu mail2"
   {
-    "en"    "I Agree, Remove those mails."
+    "en"    "I agree, remove the mails."
   }
   "wc debug menu mail3"
   {
@@ -3499,12 +3521,12 @@
   }
   "fixing mails"
   {
-    "en"    "Your mails are attemped to be fixed. Try opening mail menu."
+    "en"    "Attempted to fix your mail menu. Please try again."
   }
   "rating"
   {
     "#format" "{1:0.1f}"
-    "en"      "Rating: {1}"
+    "en"     "Rating: {1}"
   }
 
   "wc chat attacker is on"
@@ -3806,12 +3828,12 @@
   "vampiric embrace target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @default heals you with Vampiric Embrace and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @default heals you with Vampiric Embrace and restores @lightgreen{2} @defaulthp."
   }
   "vampiric embrace caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your @greenVampiric Embrace @defaultheals @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "Your @greenVampiric Embrace @defaultheals @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "spirit tab"
   {
@@ -3825,17 +3847,17 @@
   "divine storm caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenDivine Storm @defaulton @lightgreen{1} @default healing allies and damaging enemies for @lightgreen{2}@default."
+    "en"     "You cast @greenDivine Storm @defaulton @lightgreen{1} @default healing allies and damaging enemies for @lightgreen{2}@default."
   }
   "divine storm healed target"
   {
     "#format" "{1:s},{2:d}"
-    "en"      "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
   }
   "divine storm damaged target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts @lightgreenDivine Storm@default on you and deals @lightgreen{2} @defaultdamage."
+    "en"     "@lightgreen{1} @defaultcasts @lightgreenDivine Storm@default on you and deals @lightgreen{2} @defaultdamage."
   }
   "reset confirmed talents"
   {
@@ -3888,11 +3910,11 @@
   "no gold"
   {
     "#format"   "{1:s},{2:s}"
-    "en"      "You tried to use {2} gold but have only {1}"
+    "en"     "You tried to use {2} gold but have only {1}"
   }
   "no gold2"
   {
-    "en"      "You have not enough gold"
+    "en"     "You have not enough gold"
   }
   "reload progress"
   {
@@ -3938,7 +3960,7 @@
   }
   "reflective shield victim"
   {
-    "en"      "Your @lightgreenReflective Shield@default deals @green@dmg@default to @vic"
+    "en"     "Your @lightgreenReflective Shield@default deals @green@dmg@default to @vic"
   }
   "rest xp give"
   {
@@ -4006,17 +4028,17 @@
   "chain heal caster"
   {
     "#format" "{1:s}"
-    "en"      "You cast @greenChain Heal @default and heal @lightgreen{1} @default"
+    "en"     "You cast @greenChain Heal @default and heal @lightgreen{1} @default"
   }
   "low lvl explanation"
   {
     "#format" "{1:d},{2:d}"
-    "en"      "Your killer had penalties against you. His damage was lowered to @lightgreen{1} @defaultpercent. and Your damage was increased to @lightgreen{2} @defaultpercent."
+    "en"     "Your killer had penalties against you. His damage was lowered to @lightgreen{1} @defaultpercent. and Your damage was increased to @lightgreen{2} @defaultpercent."
   }
   "extra low lvl penalty"
   {
     "#format" "{1:d},{2:d}"
-    "en"      "You had extra penalties due to being too high level compared to the average player. Your damage was lowered to @lightgreen{1} @defaultpercent. and his damage was increased to @lightgreen{2} @defaultpercent."
+    "en"     "You had extra penalties due to being too high level compared to the average player. Your damage was lowered to @lightgreen{1} @defaultpercent. and his damage was increased to @lightgreen{2} @defaultpercent."
   }
   "lvl explanation victim"
   {
@@ -4031,22 +4053,22 @@
   "their kpr lowlvl adj"
   {
     "#format" "{1:s},{2:i},{3:i},{4:i}"
-    "en"      "@green{1}@default dealt @lightgreen{2}@perc@default damage (@lightgreen{3}@perc@default KPR, @lightgreen{4}@perc@default Low LVL)"
+    "en"     "@green{1}@default dealt @lightgreen{2}@perc@default damage (@lightgreen{3}@perc@default KPR, @lightgreen{4}@perc@default Low LVL)"
   }
   "your kpr lowlvl adj"
   {
     "#format" "{1:i},{2:i},{3:i}"
-    "en"      "You dealt @lightgreen{1}@perc@default damage (@lightgreen{2}@perc@default KPR, @lightgreen{3}@perc@default Low LVL)"
+    "en"     "You dealt @lightgreen{1}@perc@default damage (@lightgreen{2}@perc@default KPR, @lightgreen{3}@perc@default Low LVL)"
   }
   "lvl average info"
   {
     "#format" "{1:i},{2:i},{3:s},{4:i}"
-    "en"      "(Your level: @lightgreen{1}@default, Server average: @lightgreen{2}@default, @green{3}@default's level: @lightgreen{4}@default)"
+    "en"     "(Your level: @lightgreen{1}@default, Server average: @lightgreen{2}@default, @green{3}@default's level: @lightgreen{4}@default)"
   }
   "debug kpr info"
   {
     "#format" "{1:i},{2:i},{3:i}"
-    "en"      "(Temporary Debug info). KPR INFO: kills - {1}, rounds - {2}, KPR penalty {3}"
+    "en"     "(Temporary Debug info). KPR INFO: kills - {1}, rounds - {2}, KPR penalty {3}"
   }
   "panel ding title"
   {
@@ -4167,44 +4189,44 @@
   }
   "no gold simple"
   {
-    "en"      "You have not enough gold to buy it"
+    "en"     "You have not enough gold to buy it"
   }
   "item added to ignore"
   {
-    "en"      "@lightgreenThis item will no longer be recommended by /todo menu for you."
+    "en"     "@lightgreenThis item will no longer be recommended by /todo menu for you."
   }
   "wc gold menu"
   {
-    "en"      "Gold Menu"
+    "en"     "Gold Menu"
   }
   "gold balance string"
   {
     "#format" "{1:s}"
-    "en"      "You have {1} Gold"
+    "en"     "You have {1} Gold"
   }
   "wc spend gold menu"
   {
-    "en"      "Spend your gold on fancy candies"
+    "en"     "Spend your gold on fancy candies"
   }
   "wc buy gold menu"
   {
-    "en"      "Buy gold for real money like PayPal."
+    "en"     "Buy gold for real money like PayPal."
   }
   "wc earn gold menu"
   {
-    "en"      "Earning gold"
+    "en"     "Earning gold"
   }
   "shadow form activated"
   {
-    "en"      "@greenShadowform activated"
+    "en"     "@greenShadowform activated"
   }
   "shadow form deactivated"
   {
-    "en"      "@greenShadowform deactivated"
+    "en"     "@greenShadowform deactivated"
   }
   "shadowform hint"
   {
-    "en"      "\nShadowform"
+    "en"     "\nShadowform"
   }
   "wc earn gold menu"
   {
@@ -4269,34 +4291,34 @@
   }
   "might cast all"
   {
-    "en"      "You cast Blessing of Might at @lightgreeneveryone @defaultin your team."
+    "en"     "You cast Blessing of Might at @lightgreeneveryone @defaultin your team."
   }
   "might aff"
   {
-    "en"      "Blessing of Might increases your DPS"
+    "en"     "Blessing of Might increases your DPS"
   }
   "wisdom aff"
   {
-    "en"      "Blessing of Wisdom increases your mana regeneration"
+    "en"     "Blessing of Wisdom increases your mana regeneration"
   }
   "wisdom cast all"
   {
-    "en"      "You cast Blessing of Wisdom at @lightgreeneveryone @defaultin your team."
+    "en"     "You cast Blessing of Wisdom at @lightgreeneveryone @defaultin your team."
   }
   "earth shield activated caster"
   {
     "#format" "{1:0.1f},{2:i},{3:s}"
-    "en"      "You cast @greenEarth Shield @defaultspell at @green{3}@default, for @lightgreen{1} @defaultsec the next {2} hits will heal the target"
+    "en"     "You cast @greenEarth Shield @defaultspell at @green{3}@default, for @lightgreen{1} @defaultsec the next {2} hits will heal the target"
   }
   "earth shield activated vic"
   {
     "#format" "{1:0.1f},{2:i},{3:s}"
-    "en"      "{3} casts @greenEarth Shield @defaultspell at you, for @lightgreen{1} @defaultsec the next {2} hits will heal the target"
+    "en"     "{3} casts @greenEarth Shield @defaultspell at you, for @lightgreen{1} @defaultsec the next {2} hits will heal the target"
   }
   "avengers shield caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast Avengers Shield at @green{1} @default and deal @lightgreen{2} @default dmg + slow down."
+    "en"     "You cast Avengers Shield at @green{1} @default and deal @lightgreen{2} @default dmg + slow down."
   }
   "wc referrer menu"
   {
@@ -4363,15 +4385,15 @@
   }
   "TrSortable_NoSort"
   {
-    "en"      "Do not sort"
+    "en"     "Do not sort"
   }
   "TrSorting"
   {
-    "en"      "Sorting"
+    "en"     "Sorting"
   }
   "legendary item"
   {
-    "en"      "Legendaries"
+    "en"     "Legendaries"
   }
   "epic item"
   {
@@ -4585,11 +4607,11 @@
   }
   "blood strike"
   {
-    "en"      "Blood Strike"
+    "en"     "Blood Strike"
   }
   "obliterate"
   {
-    "en"      "Obliterate"
+    "en"     "Obliterate"
   }
   "Obliterate info"
   {
@@ -4597,17 +4619,17 @@
   }
   "Blood Strike info"
   {
-    "en"    "Increases your melee damage by 15% and generates 15 Runic Power.\n15% chance to cast on hit."
+    "en"    "Increases your melee damage by 15%% and generates 15 Runic Power.\n15%% chance to cast on hit."
   }
   "death grip caster"
   {
     "#format" "{1:s}"
-    "en"      "You cast @lightgreenDeath Grip@default at @green{1} @default and push him towards you."
+    "en"     "You cast @lightgreenDeath Grip@default at @green{1} @default and push him towards you."
   }
   "death grip target"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @default has pushed you towards him with @lightgreenDeath Grip."
+    "en"     "@green{1} @default has pushed you towards him with @lightgreenDeath Grip."
   }
   "Death Grip info"
   {
@@ -4619,7 +4641,7 @@
   }
   "plague strike"
   {
-    "en"      "Plague Strike"
+    "en"     "Plague Strike"
   }
   "Plague Strike info"
   {
@@ -4628,12 +4650,12 @@
   "icy touch caster"
   {
     "#format" "{1:s},{2:d}"
-    "en"      "You cast @lightgreenIcy Touch@default at @green{1} @default slowing down and poisoning him for @lightgreen{2}@default dmg per tick"
+    "en"     "You cast @lightgreenIcy Touch@default at @green{1} @default slowing down and poisoning him for @lightgreen{2}@default dmg per tick"
   }
   "icy touch target"
   {
     "#format" "{1:s}"
-    "en"      "@green{1}@default has slowed you down and poisoned with @lightgreenIcy Touch."
+    "en"     "@green{1}@default has slowed you down and poisoned with @lightgreenIcy Touch."
   }
   "Icy Touch info"
   {
@@ -4641,53 +4663,53 @@
   }
   "death strike"
   {
-    "en"      "Death Strike"
+    "en"     "Death Strike"
   }
   "Death Strike info"
   {
-    "en"    "A moderate chance on hit to increase your melee damage by 10%, also:\nHeals you for 5%% of your maximum health\nGenerates Runic Power."
+    "en"    "A moderate chance on hit to increase your melee damage by 10%%, also:\nHeals you for 10%% of your maximum health\nGenerates Runic Power."
   }
   "death coil caster"
   {
-    "en"      "You cast @lightgreenDeath Coil @defaultat @vic and deal @dmg damage"
+    "en"     "You cast @lightgreenDeath Coil @defaultat @vic and deal @dmg damage"
   }
   "death coil target"
   {
-    "en"      "@att casts @lightgreenDeath Coil @defaultat You and deals @dmg damage"
+    "en"     "@att casts @lightgreenDeath Coil @defaultat You and deals @dmg damage"
   }
   "Death Coil info"
   {
-    "en"      "Deals instant damage to enemy. \n(damage depends on Attack Power)"
+    "en"     "Deals instant damage to enemy. \n(damage depends on Attack Power)"
   }
   "mind freeze caster"
   {
     "#format" "{1:s},{2:0.2f}"
-    "en"      "You cast @lightgreenMind Freeze  @defaultat {1} and silence for {2} sec"
+    "en"     "You cast @lightgreenMind Freeze  @defaultat {1} and silence for {2} sec"
   }
   "mind freeze target"
   {
     "#format" "{1:s},{2:0.2f}"
-    "en"      "{1} casts @lightgreenMind Freeze @defaultat You and silence for {2} sec"
+    "en"     "{1} casts @lightgreenMind Freeze @defaultat You and silence for {2} sec"
   }
   "Mind Freeze info"
   {
 
-    "en"      "Cast long duration silence on your target.\nRequires Runic Power. The best option to get caster down ;-)"
+    "en"     "Cast long duration silence on your target.\nRequires Runic Power. The best option to get caster down ;-)"
   }
   "raise ally caster"
   {
     "#format" "{1:s}"
-    "en"      "You cast @lightgreenRaise Ally  @defaulton {1} and revive him as a @greenGhoul"
+    "en"     "You cast @lightgreenRaise Ally  @defaulton {1} and revive him as a @greenGhoul"
   }
   "raise ally target"
   {
     "#format" "{1:s}"
-    "en"      "{1} has cast @lightgreenRaise Ally @defaulton you and revived you as a @greenGhoul"
+    "en"     "{1} has cast @lightgreenRaise Ally @defaulton you and revived you as a @greenGhoul"
   }
   "Raise Ally info"
   {
 
-    "en"      "Respawns a dead ally as a ghoul.\nGhouls can only equip knives and have increased movement speed and damage."
+    "en"     "Respawns a dead ally as a ghoul.\nGhouls can only equip knives and have increased movement speed and damage."
   }
   "dks tomes"
   {
@@ -4724,12 +4746,12 @@
   "hungeringcold cast"
   {
     "#format" "{1:s}"
-    "en"      "You cast @lightgreenHungering Cold@default at @green{1}"
+    "en"     "You cast @lightgreenHungering Cold@default at @green{1}"
   }
   "hungeringcold target"
   {
     "#format" "{1:s}"
-    "en"      "{1:s} has cast @lightgreenHungering Cold@default freezing you."
+    "en"     "{1:s} has cast @lightgreenHungering Cold@default freezing you."
   }
   "bone shield"
   {
@@ -4737,25 +4759,25 @@
   }
   "activated presence_1"
   {
-    "en"      "You have activated @lightgreenBlood Presence, @defaultgiving you +8%% additional health, +20%% armor and you take 8% less damage"
+    "en"     "You have activated @lightgreenBlood Presence, @defaultgiving you +8%% additional health, +20%% armor and you take 8% less damage"
   }
   "activated presence_2"
   {
-    "en"      "You have activated @lightgreenFrost Presence, @defaultgiving you +10%% physical damage and +20%% @greenRunic Power@default generation"
+    "en"     "You have activated @lightgreenFrost Presence, @defaultgiving you +10%% physical damage and +20%% @greenRunic Power@default generation"
   }
   "activated presence_3"
   {
-    "en"      "You have activated @lightgreenUnholy Presence, @defaultgiving you +10%% attack speed, +10%% movement speed and +15%% haste"
+    "en"     "You have activated @lightgreenUnholy Presence, @defaultgiving you +10%% attack speed, +10%% movement speed and +15%% haste"
   }
   "butchery cast"
   {
     "#format" "{1:d}"
-    "en"      "You restored @lightgreen{1} @defaulthp due to using @greenButchery"
+    "en"     "You restored @lightgreen{1} @defaulthp due to using @greenButchery"
   }
   "jab heal cast"
   {
     "#format" "{1:d}"
-    "en"      "You restored @lightgreen{1} @defaulthp due to using @greenJab"
+    "en"     "You restored @lightgreen{1} @defaulthp due to using @greenJab"
   }
   "Jab Healing name"
   {
@@ -4767,11 +4789,11 @@
   }
   "froststrike caster"
   {
-    "en"      "You cast @lightgreenFrost Strike @defaultat @vic and deal @dmg damage"
+    "en"     "You cast @lightgreenFrost Strike @defaultat @vic and deal @dmg damage"
   }
   "froststrike target"
   {
-    "en"      "@att has cast @lightgreenFrost Strike @defaultat You and dealt @dmg damage"
+    "en"     "@att has cast @lightgreenFrost Strike @defaultat You and dealt @dmg damage"
   }
   "Announce Heroic"
   {
@@ -4792,40 +4814,40 @@
   "offhand bonus"
   {
     "#format" "{1:d}"
-    "en"      "Dual Wielding specialization has increased your DPS by {1}"
+    "en"     "Dual Wielding specialization has increased your DPS by {1}"
   }
   "announce enrage"
   {
     "#format" "{1:s}"
-    "en"      "@lightgreen!!! Boss @green{1} @default is Enraging @lightgreen!!!"
+    "en"     "@lightgreen!!! Boss @green{1} @default is Enraging @lightgreen!!!"
   }
   "Polymorph info"
   {
-    "en"      "Casts a polymorph spell on your enemy for the next 6 seconds.\nWhile polymorphed, the enemy regenerates hp fast but cannot control his character.\nAny damage done breaks the effect."
+    "en"     "Casts a polymorph spell on your enemy for the next 6 seconds.\nWhile polymorphed, the enemy regenerates hp fast but cannot control his character.\nAny damage done breaks the effect."
   }
   "polymorph caster"
   {
     "#format"   "{1:0.2f},{2:s}"
-    "en"      "You cast @lightgreenPolymorph @defaultat @green{2} @defaultfor the next @lightgreen{1} sec"
+    "en"     "You cast @lightgreenPolymorph @defaultat @green{2} @defaultfor the next @lightgreen{1} sec"
   }
   "polymorph target"
   {
     "#format"   "{1:0.2f},{2:s}"
-    "en"      "@green{2} @defaultcasts @lightgreenPolymorph at you @defaultfor next @lightgreen{1} sec"
+    "en"     "@green{2} @defaultcasts @lightgreenPolymorph at you @defaultfor next @lightgreen{1} sec"
   }
   "rend casted"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You used @greenRend @defaulton {1} @defaultfor @green{2} @defaultdamage per tick."
+    "en"     "You used @greenRend @defaulton {1} @defaultfor @green{2} @defaultdamage per tick."
   }
   "rend casted victim"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "{1} used @greenRend @defaulton you for @green{2} @defaultdamage per tick."
+    "en"     "{1} used @greenRend @defaulton you for @green{2} @defaultdamage per tick."
   }
   "Rend info"
   {
-    "en"      "Gives you a slight chance to activate Rend on the target when you shoot him.\nRend deals a fair amount of damage over a long time.\nEquipping a 2-handed weapon increases Rend's chance to proc."
+    "en"     "Your attacks have a chance to leave a DoT effect on the target dealing physical damage.\nEquipping a 2-handed weapon increases Rend's chance to proc."
   }
   "character name w id"
   {
@@ -4835,7 +4857,7 @@
   "iceblock cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "@greenYou auto-cast Ice Block on yourself which will last for @lightgreen{1} @greensec."
+    "en"     "@greenYou auto-cast Ice Block on yourself which will last for @lightgreen{1} @greensec."
   }
   "iceblock expired"
   {
@@ -4844,7 +4866,7 @@
   "iceblock to attacker"
   {
     "#format" "{1:s}"
-    "en"      "@lightgreen{1}'s @greenIce Block chips away a little."
+    "en"     "@lightgreen{1}'s @greenIce Block chips away a little."
   }
   "ice block"
   {
@@ -4856,7 +4878,7 @@
   }
   "flameorb target"
   {
-    "en"      "@att has cast @lightgreenFlame Orb @defaultto You and did @dmg damage. Run away dude!"
+    "en"     "@att has cast @lightgreenFlame Orb @defaultto You and did @dmg damage. Run away dude!"
   }
   "flame orb"
   {
@@ -4870,66 +4892,66 @@
   "blind caster"
   {
     "#format" "{1:s}"
-    "en"      "@defaultYou cast @lightgreenBlind @defaultand at @lightgreen{1} @default"
+    "en"     "@defaultYou cast @lightgreenBlind @defaultand at @lightgreen{1} @default"
   }
   "blind target"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenBlinded @defaultyou."
+    "en"     "@green{1} @lightgreenBlinded @defaultyou."
   }
   "Blind info"
   {
-    "en"      "Blinds the enemy target, causing them to be disoriented and blinded."
+    "en"     "Blinds the enemy target, causing them to be disoriented and blinded."
   }
   "fanofknives"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast Fan of Knives at @green{1} @default and deal @lightgreen{2} @default dmg."
+    "en"     "You cast Fan of Knives at @green{1} @default and deal @lightgreen{2} @default dmg."
   }
   "fanofknives target"
   {
-    "en"      "@att has cast @lightgreenFan of Knives @defaultto You and did @dmg damage"
+    "en"     "@att has cast @lightgreenFan of Knives @defaultto You and did @dmg damage"
   }
   "Fan of Knives info"
   {
-    "en"      "Deals damage to enemies around you.\nScales with attack power."
+    "en"     "Deals damage to enemies around you.\nScales with attack power."
   }
   "heroic leap caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast Heroic Leap at @green{1} @default with @lightgreen{2}@default dmg."
+    "en"     "You cast Heroic Leap at @green{1} @default with @lightgreen{2}@default dmg."
   }
   "heroic leap victim"
   {
-    "en"      "You got hit by @lightgreenHeroic Leap @defaultof @att for @dmg damage"
+    "en"     "You got hit by @lightgreenHeroic Leap @defaultof @att for @dmg damage"
   }
   "Heroic Leap info"
   {
-    "en"      "You literally make a huge leap towards place you are looking \nand deal AOE damage on touching ground."
+    "en"     "You literally make a huge leap towards place you are looking \nand deal AOE damage on touching ground."
   }
   "Word of Glory info"
   {
-    "en"      "Word of Glory is passive spell.\nIt automatically heals you for small mount of health\neach time you generate Holy Power.\nStill happens if you have maximum Holy Power."
+    "en"     "Word of Glory is passive spell.\nIt automatically heals you for small mount of health\neach time you generate Holy Power.\nStill happens if you have maximum Holy Power."
   }
   "Word of Glory Cast"
   {
     "#format"   "{1:i}"
-    "en"      "Your @greenWord of Glory @defaulthas healed you for @green{1} @defaulthp."
+    "en"     "Your @greenWord of Glory @defaulthas healed you for @green{1} @defaulthp."
   }
   "prayer of healing caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenPrayer Of Healing @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "You cast @greenPrayer Of Healing @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "prayer of healing target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
   }
   "parasite heal"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1}@default's parasites bursted on you and restored @lightgreen{2} @defaulthealth."
+    "en"     "@lightgreen{1}@default's parasites bursted on you and restored @lightgreen{2} @defaulthealth."
   }
   "Prayer Of Healing info"
   {
@@ -4938,11 +4960,11 @@
   "finalstrike client"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You use Final Strike at @green{1} @default dealing @lightgreen{2} @default dmg."
+    "en"     "You use Final Strike at @green{1} @default dealing @lightgreen{2} @default dmg."
   }
   "finalstrike target"
   {
-    "en"      "@att has hit you with @lightgreenFinal Strike @defaulton You and did @dmg damage"
+    "en"     "@att has hit you with @lightgreenFinal Strike @defaulton You and did @dmg damage"
   }
   "blade storm"
   {
@@ -4974,52 +4996,52 @@
   }
   "Fade info"
   {
-    "en"      "Cast invisibility for few seconds onto yourself\nHelps to distract enemy attacking you"
+    "en"     "Cast invisibility for few seconds onto yourself\nHelps to distract enemy attacking you"
   }
   "arcane missile att"
   {
-    "en"      "You cast @lightgreenArcane Missile@default on @green@vic@default dealing @lightgreen@dmg@default damage."
+    "en"     "You cast @lightgreenArcane Missile@default on @green@vic@default dealing @lightgreen@dmg@default damage."
   }
   "arcane missile vic"
   {
-    "en"      "@green@att@default's @lightgreenArcane Missile@default hits you for @lightgreen@dmg@default damage."
+    "en"     "@green@att@default's @lightgreenArcane Missile@default hits you for @lightgreen@dmg@default damage."
   }
   "beacon of light"
   {
-    "en"      "Your presence increases all healing done by 15 percent"
+    "en"     "Your presence increases all healing done by 15 percent"
   }
   "divine intervention"
   {
-    "en"      "Divine Intervention"
+    "en"     "Divine Intervention"
   }
   "seal of command aoe"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast Seal of Command at @green{1} @default and deal @lightgreen{2} @default dmg."
+    "en"     "You cast Seal of Command at @green{1} @default and deal @lightgreen{2} @default dmg."
   }
   "divine guardian"
   {
-    "en"      "Your presence decreases all damage taken by your team"
+    "en"     "Your presence decreases all damage taken by your team"
   }
   "pw barrier"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast Power Word:Barrier at @green{1} @default and shield them for @lightgreen{2} @default dmg."
+    "en"     "You cast Power Word:Barrier at @green{1} @default and shield them for @lightgreen{2} @default dmg."
   }
   "pw barrier vic"
   {
     "#format" "{1:0.1f},{2:i},{3:s}"
-    "en"      "{3} casts @greenPower Word: Barrier @defaultspell on you, for next @lightgreen{1} @defaultsec and will absorb @lightgreen{2}"
+    "en"     "{3} casts @greenPower Word: Barrier @defaultspell on you, for next @lightgreen{1} @defaultsec and will absorb @lightgreen{2}"
   }
   "blizzard cast"
   {
     "#format" "{1:i}"
-    "en"      "You cast Blizzard dealing {1} damage ever tick to nearby enemies"
+    "en"     "You cast Blizzard dealing {1} damage ever tick to nearby enemies"
   }
   "light well cast"
   {
     "#format" "{1:i}"
-    "en"      "You cast Light Wеll healing all nearby allies for {1} every tick"
+    "en"     "You cast Light Wеll healing all nearby allies for {1} every tick"
   }
   "mind flay cast"
   {
@@ -5038,36 +5060,36 @@
   "desperate prayer"
   {
     "#format" "{1:i}"
-    "en"      "@lightgreenDesperate Prayer @default heals you for @lightgreen{1} @defaulthp."
+    "en"     "@lightgreenDesperate Prayer @default heals you for @lightgreen{1} @defaulthp."
   }
   "totem earthbind"
   {
     "#format" "{1:s}"
-    "en"      "Earthbind Totem triggers at @green{1} @default and slows them down"
+    "en"     "Earthbind Totem triggers at @green{1} @default and slows them down"
   }
   "totem earthbind cast"
   {
     "#format" "{1:0.1f}"
-    "en"      "You cast @greenEarthbind Totem@default for @lightgreen{1} @default seconds."
+    "en"     "You cast @greenEarthbind Totem@default for @lightgreen{1} @default seconds."
   }
   "totem earthbind target"
   {
     "#format"   "{1:s}"
-    "en"      "You were slowed down by @greenEarthbind Totem @default owned by @lightgreen{1}"
+    "en"     "You were slowed down by @greenEarthbind Totem @default owned by @lightgreen{1}"
   }
   "Earthbind Totem info"
   {
-    "en"      "Summons a Totem that periodically slows down nearby enemies. Lasts 15 seconds.\nThe totem can be broken by shooting it."
+    "en"     "Summons a Totem that periodically slows down nearby enemies. Lasts 15 seconds.\nThe totem can be broken by shooting it."
   }
   "healing rain caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenHealing Rain @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "You cast @greenHealing Rain @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "healing rain target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
   }
   "Healing Rain info"
   {
@@ -5113,16 +5135,16 @@
   "infernal caster"
   {
     "#format" "{1:s}"
-    "en"      "You cast @lightgreenSummon Infernal  @defaultat {1} and revive him as a @greenInfernal"
+    "en"     "You cast @lightgreenSummon Infernal  @defaultat {1} and revive him as a @greenInfernal"
   }
   "infernal target"
   {
     "#format" "{1:s}"
-    "en"      "{1} casts @lightgreenSummon Infernal @defaultat You and revives you as @greenInfernal!"
+    "en"     "{1} casts @lightgreenSummon Infernal @defaultat You and revives you as @greenInfernal!"
   }
   "Summon Infernal info"
   {
-    "en"      "Summons Infernal from the Twisting Nether.\nRequires 1 teammate soul nearby to give a breath for your Infernal!"
+    "en"     "Summons Infernal from the Twisting Nether.\nRequires 1 teammate soul nearby to give a breath for your Infernal!"
   }
   "counter strike"
   {
@@ -5135,84 +5157,84 @@
   "cursed soul cast"
   {
     "#format" "{1:s}"
-    "en"      "@defaultYou cast @lightgreenCursed Soul at @green{1}@default."
+    "en"     "@defaultYou cast @lightgreenCursed Soul at @green{1}@default."
   }
   "cursed soul cast vic"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @defaultcasts @lightgreenCursed Soul @defaulton you."
+    "en"     "@green{1} @defaultcasts @lightgreenCursed Soul @defaulton you."
   }
   "spirit link caster"
   {
     "#format" "{1:s},{2:0.1f}"
-    "en"      "You cast @lightgreenSpirit Link@default at @lightgreen{1}@default, sharing any damage you take with him for {2} seconds"
+    "en"     "You cast @lightgreenSpirit Link@default at @lightgreen{1}@default, sharing any damage you take with him for {2} seconds"
   }
   "spirit link target"
   {
     "#format" "{1:s},{2:0.1f}"
-    "en"      "@lightgreen{1}@default cast @lightgreenSpirit Link@default at you, sharing any damage they take with you for {2} seconds"
+    "en"     "@lightgreen{1}@default cast @lightgreenSpirit Link@default at you, sharing any damage they take with you for {2} seconds"
   }
   "spirit link victim"
   {
-    "en"      "@att @lightgreenSpirit Link @default deals @dmg damage to you"
+    "en"     "@att @lightgreenSpirit Link @default deals @dmg damage to you"
   }
   "shadow touch"
   {
-    "en"      "You auto-cast @lightgreenShadow Touch @defaultto @vic and deal @dmg damage"
+    "en"     "You auto-cast @lightgreenShadow Touch @defaultto @vic and deal @dmg damage"
   }
  // "shadow well cast"
   //{
- //   "en"      "You cast @lightgreenShadow Well@default upon your current location, slowing and reducing healing taken to all nearby enemies"
+ //   "en"     "You cast @lightgreenShadow Well@default upon your current location, slowing and reducing healing taken to all nearby enemies"
  // }
   "heartfire cast"
   {
-    "en"      "You cast @lightgreenHeartfire@default any damage taken will also be taken by the attacker"
+    "en"     "You cast @lightgreenHeartfire@default any damage taken will also be taken by the attacker"
   }
   "heartfire victim"
   {
     "#format" "{1:i}"
-    "en"      "You take {1} damage from @lightgreenHeartfire@default"
+    "en"     "You take {1} damage from @lightgreenHeartfire@default"
   }
   "necrotic strike ef"
   {
-    "en"      "Necrotic Strike"
+    "en"     "Necrotic Strike"
   }
   "Necrotic Strike info"
   {
-    "en"      "Necrotic Strike gives your weapons 8 percent chance to\ndecrease victim's healing received by 30%% for 8 seconds."
+    "en"     "Necrotic Strike gives your weapons 8 percent chance to\ndecrease victim's healing received by 30%% for 8 seconds."
   }
   "Death and Decay info"
   {
-    "en"      "Curses the land under cursor which will deal\ndamage to all enemies on this land during 8 seconds.\nDamage depends on your DPS\nCosts 1 Rune and generates 10 Runic Power"
+    "en"     "Curses the land under cursor which will deal\ndamage to all enemies on this land during 8 seconds.\nDamage depends on your DPS\nCosts 1 Rune and generates 10 Runic Power"
   }
   "death and decay caster"
   {
     "#format"   "{1:i}"
-    "en"      "You cast @lightgreenDeath and Decay @defaultspell which will periodically deal @green{1} @defaultdamage."
+    "en"     "You cast @lightgreenDeath and Decay @defaultspell which will periodically deal @green{1} @defaultdamage."
   }
   "hypothermia caster"
   {
-    "en"      "You cast @lightgreenHypothermia @defaultat @vic and deals @dmg damage"
+    "en"     "You cast @lightgreenHypothermia @defaultat @vic and deals @dmg damage"
   }
   "hypothermia target"
   {
-    "en"      "@att has cast @lightgreenHypothermia @defaultat you and deals @dmg damage"
+    "en"     "@att has cast @lightgreenHypothermia @defaultat you and deals @dmg damage"
   }
   "anti magic zone cast"
   {
-    "en"      "You cast @lightgreenAnti-Magic Zone @default reducing all spell damage nearby allies take"
+    "en"     "You cast @lightgreenAnti-Magic Zone @default reducing all spell damage nearby allies take"
   }
   "target no mana"
   {
-    "en"      "@greenThe target does not have Mana attribute"
+    "en"     "@greenThe target does not have Mana attribute"
   }
   "airshock cast"
   {
-    "en"      "@defaultYou cast @lightgreenAir Shock @defaultand deal @dmg damage and destroys some ammo"
+    "en"     "@defaultYou cast @lightgreenAir Shock @defaultand deal @dmg damage and destroys some ammo"
   }
   "airshock cast vic"
   {
-    "en"      "@att casts @lightgreenAir Shock @defaultand deals @dmg damage and destroys some ammo"
+    "en"     "@att casts @lightgreenAir Shock @defaultand deals @dmg damage and destroys some ammo"
   }
   "full mana"
   {
@@ -5221,21 +5243,21 @@
   "sor caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenSpirit of Redemption @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "You cast @greenSpirit of Redemption @defaultto @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "sor target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts heal on you and restores @lightgreen{2} @defaulthp."
   }
   "already active"
   {
-    "en"      "This spell is already in effect"
+    "en"     "This spell is already in effect"
   }
   "change char id title"
   {
     "#format"   "{1:d}"
-    "en"      "Change Character ID of your current character ({1})"
+    "en"     "Change Character ID of your current character ({1})"
   }
   "type in new id"
   {
@@ -5247,21 +5269,21 @@
   }
   "change char id title2"
   {
-    "en"      "Confirmation of changing Character Id!"
+    "en"     "Confirmation of changing Character Id!"
   }
   "changing char id from to"
   {
     "#format"   "{1:d},{2:d},{3:s}"
-    "en"      "Warning! You are changing your current Character Id.\nCurrent: {1}\nNew: {2}\nCosts Gold: {3}"
+    "en"     "Warning! You are changing your current Character Id.\nCurrent: {1}\nNew: {2}\nCosts Gold: {3}"
   }
   "success changing char id"
   {
     "#format"    "{1:d},{2:d}"
-    "en"        "@lightgreenYou have successfuly changed character id from @green{1} @default to @green{2}@default!!"
+    "en"       "@lightgreenYou have successfuly changed character id from @green{1} @default to @green{2}@default!!"
   }
   "change id costs"
   {
-    "en"        "Changing Character Id prices: \n1-9 35 gold\n10-99 15 gold\n100-999 8 gold"
+    "en"       "Changing Character Id prices: \n1-9 35 gold\n10-99 15 gold\n100-999 8 gold"
   }
   "haste"
   {
@@ -5275,31 +5297,31 @@
   }
   "shadowgate loc"
   {
-    "en"        "@green Your current location will now be the target of your Shadow Gate spell"
+    "en"       "@green Your current location will now be the target of your Shadow Gate spell"
   }
   "shadowstep"
   {
-    "en"        "@greenPoof@lightgreen!!@default"
+    "en"       "@greenPoof@lightgreen!!@default"
   }
   "shadowstep failed"
   {
-    "en"      "@greenYour shadowstep has @lightgreenFailed@green because of unsafe destination."
+    "en"     "@greenYour shadowstep has @lightgreenFailed@green because of unsafe destination."
   }
   "shadowstep name"
   {
-    "en"      "Shadowstep"
+    "en"     "Shadowstep"
   }
   "shadowstep info"
   {
-    "en"      "<Activated> A quick and stealthy step through the shadows, movement speed increases distance."
+    "en"     "<Activated> A quick and stealthy step through the shadows, movement speed increases distance."
   }
   "Garrote info"
   {
-    "en"    "<Passive> Ambush now also silences the enemy and leaves a DoT effect on the target.\n    Rank 1: Silences for 0.75 seconds and 20% of damage done as DoT\n    Rank 2: Silences for 1.5 seconds and 40% of damage done as DoT"
+    "en"    "<Passive> Ambush now also silences the enemy and leaves a DoT effect on the target.\n    Rank 1: Silences for 0.75 seconds and 20%% of damage done as DoT\n    Rank 2: Silences for 1.5 seconds and 40%% of damage done as DoT"
   }
   "grand crussade"
   {
-    "en"        "Templar's Verdict"
+    "en"       "Templar's Verdict"
   }
   "unbreakable bastion target"
   {
@@ -5378,31 +5400,31 @@
   }
   "Seal of Truth info"
   {
-    "en"      "Gives 8 percent chance that magic damage will be consumed into your mana"
+    "en"     "Gives 8 percent chance that magic damage will be consumed into your mana"
   }
   "Seal of Insight info"
   {
-    "en"      "Increases your Critical Strike healing by 25%%"
+    "en"     "Increases your Critical Strike healing by 25%%"
   }
   "Seal of Blood info"
   {
-    "en"      "Increases your Critical Strike damage by 13%%"
+    "en"     "Increases your Critical Strike damage by 13%%"
   }
   "ultimate or ability"
   {
-    "en"      "Here on WoWmod we use Talents & Spells, your <Activated> spells can be used from your spellbar or with a keybind like: <bind key @'spell #@' and <bind key @'bind talent #@'."
+    "en"     "Here on WoWmod we use Talents & Spells, your <Activated> spells can be used from your spellbar or with a keybind like: <bind key @'spell #@' and <bind key @'bind talent #@'."
   }
   "changerace"
   {
-    "en"      "We don't use change race on this server, you do have multiple character slots but to change between them press 'wcmenu' then '3' then '1' and then select from there."
+    "en"     "We don't use change race on this server, you do have multiple character slots but to change between them press 'wcmenu' then '3' then '1' and then select from there."
   }
   "goldshop"
   {
-    "en"      "We don't have a donator shop here, Gold is an ingame currency which is earned by playing or referring people to play here."
+    "en"     "We don't have a donator shop here, Gold is an ingame currency which is earned by playing or referring people to play here."
   }
   "cp stage 1"
   {
-    "en"      "@lightgreenPreparing to connect to cp.wowmod.eu"
+    "en"     "@lightgreenPreparing to connect to cp.wowmod.eu"
   }
   "cp stage 2 loaded"
   {
@@ -5416,12 +5438,12 @@
   }
   "cp stage 3"
   {
-    "en"      "@lightgreenSuccessfuly loaded all neccessery date, auto-logging and loading @greenhttp://cp.wowmod.eu"
+    "en"     "@lightgreenSuccessfuly loaded all neccessery date, auto-logging and loading @greenhttp://cp.wowmod.eu"
   }
   "stamina casttoyou"
   {
     "#format" "{1:i},{2:s}"
-    "en"        "{2} has cast @greenPower Word: Fortitude @defaultand increased your stamina by @lightgreen{1}."
+    "en"       "{2} has cast @greenPower Word: Fortitude @defaultand increased your stamina by @lightgreen{1}."
   }
   "bot misses"
   {
@@ -5431,27 +5453,27 @@
   "item_shop"
   {
     "#format" "{1:d}"
-    "en"    "Starter gear for Silver                     ({1} Silver)"
+    "en"    "Starter gear for Silver                  ({1} Silver)"
   }
   "item_honor"
   {
     "#format" "{1:d}"
-    "en"    "PVP gear                                   ({1} Honor)"
+    "en"    "PVP gear                              ({1} Honor)"
   }
   "item_gold"
   {
     "#format" "{1:s}"
-    "en"    "Epic gear everyone dreams of            ({1} Gold)"
+    "en"    "Epic gear everyone dreams of          ({1} Gold)"
   }
   "item_justice"
   {
     "#format" "{1:d}"
-    "en"    "Rare gear rewards                        ({1} Justice)"
+    "en"    "Rare gear rewards                    ({1} Justice)"
   }
   "item_valor"
   {
     "#format" "{1:d}"
-    "en"    "Epic gear rewards                         ({1} Valor)"
+    "en"    "Epic gear rewards                     ({1} Valor)"
   }
   "low lvl server ad"
   {
@@ -5846,6 +5868,10 @@
   {
     "en"  	"Hack and Slash"
   }
+  "Energetic Recovery name"
+  {
+    "en"  	"Energetic Recovery"
+  }
   "Improved Sinister Strike name"
   {
     "en"  	"Improved Sinister Strike"
@@ -6166,9 +6192,9 @@
   {
     "en"  	"Divine Intervention"
   }
-  "Divine Guardian name"
+  "Shield of the Righteous name"
   {
-    "en"  	"Divine Guardian"
+    "en"  	"Shield of the Righteous"
   }
   "Great Blessing of Kings name"
   {
@@ -6224,7 +6250,7 @@
   }
   "Retribution Judgement name"
   {
-    "en"   "Retribution Judgement"
+    "en"   "Retributive Judgement"
   }
   "Inner Fire name"
   {
@@ -6360,7 +6386,7 @@
   }
   "Mana Manipulaation name"
   {
-    "en"  	"Mana Manipulaation"
+    "en"  	"Mana Manipulation"
   }
   "Shadowform name"
   {
@@ -6480,7 +6506,7 @@
   }
   "Ancestor's Protection name"
   {
-    "en"      "Ancestor's Protection"
+    "en"     "Ancestor's Protection"
   }
   "Shamanistic Focus name"
   {
@@ -7010,7 +7036,7 @@
   }
   "Colossus Smash info"
   {
-    "en"		"<Passive> Your attacks have a chance to reduce the enemy's armor and deal extra damage.\n    Rank 1: 10%% chance, 30% reduction\n    Rank 2: 20%% chance, 30% reduction"
+    "en"		"<Passive> Your attacks have a chance to reduce the enemy's armor and deal extra damage.\n    Rank 1: 10%% chance, 30%% reduction\n    Rank 2: 20%% chance, 30%% reduction"
   }
   "Master of Deception info"
   {
@@ -7030,7 +7056,7 @@
   }
   "Fleet Footed info"
   {
-    "en"		"<Passive> Increases you movement speed and decreases your gravity.\n    Rank 1: +3%% movement speed, -10% gravity\n    Rank 2: +6%% movement speed, -20% gravity\n    Rank 3: +10%% movement speed, -30% gravity"
+    "en"		"<Passive> Increases you movement speed and decreases your gravity.\n    Rank 1: +3%% movement speed, -10%% gravity\n    Rank 2: +6%% movement speed, -20%% gravity\n    Rank 3: +10%% movement speed, -30%% gravity"
   }
   "Improved Cheat Death info"
   {
@@ -7086,7 +7112,11 @@
   }
   "Hack and Slash info"
   {
-    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50% of its damage.\n    Rank 1: 15%% chance"
+    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50%% of its damage.\n    Rank 1: 15%% chance"
+  }
+  "Energetic Recovery info"
+  {
+    "en"		"<Passive> While Slice and Dice is active, your attacks have a chance equal to your accuracy to restore 1%% of your health"
   }
   "Improved Sinister Strike info"
   {
@@ -7094,7 +7124,7 @@
   }
   "Ambidexterity info"
   {
-    "en" "<Passive> Increases your attack power scaling on your agility\n    Rank 1: +25%% attack power scaling\n    Rank 2: +50%% attack power scaling"
+    "en" "<Passive> Increases the amount of attack power you gain from agility\n    Rank 1: +25%% attack power\n    Rank 2: +50%% attack power"
   }
   "Adrenaline Rush info"
   {
@@ -7174,7 +7204,7 @@
   }
   "Dispatch info"
   {
-    "en"		"<Passive> You deal increased damage to enemies that are below 35% health.\n    Rank 1: +10%% damage\n    Rank 2: +20%% damage"
+    "en"		"<Passive> You deal increased damage to enemies that are below 35%% health.\n    Rank 1: +10%% damage\n    Rank 2: +20%% damage"
   }
   "dispatch msg"
   {
@@ -7386,7 +7416,7 @@
   }
   "Healing Light info"
   {
-    "en"		"<Passive> Increases the multiplier of Flash & Greater Heal.\n    Rank 1: +3%% healing\n    Rank 2: +6%% healing\n    Rank 3: +10%% healing"
+    "en"		"<Passive> Increases the healing of Flash & Greater Heal.\n    Rank 1: +10%% to Flash Heal, +5%% to Greater Heal\n    Rank 2: +20%% to Flash Heal, +10%% to Greater Heal\n    Rank 3: +30%% to Flash Heal, +15%% to Greater Heal"
   }
   "Beacon of Light info"
   {
@@ -7406,11 +7436,11 @@
   }
   "Devotion Aura info"
   {
-    "en"		"<Passive> Increases your armor. Requires a shield.\n    Rank 1: +7%% armor\n    Rank 2: +13%% armor\n    Rank 3: +20%% armor"
+    "en"		"<Passive> Increases your armor. Requires a shield.\n    Rank 1: +10%% armor\n    Rank 2: +20%% armor"
   }
   "Divine Body info"
   {
-    "en"		"<Passive> You gain increased healing from others.\n    Rank 1: +5%% healing\n    Rank 2: +10%% healing"
+    "en"		"<Passive> You gain increased healing from others.\n    Rank 1: +7.5%% healing\n    Rank 2: +15%% healing"
   }
   "Reckoning info"
   {
@@ -7434,15 +7464,15 @@
   }
   "Sanctuary info"
   {
-    "en"		"<Passive> Blocking returns mana.\n    Rank 1: 1%% max mana returned\n    Rank 2: 2%% max mana returned"
+    "en"		"<Passive> Blocking returns mana.\n    Rank 1: 2%% max mana returned\n    Rank 2: 5%% max mana returned"
   }
   "Divine Intervention info"
   {
     "en"		"<Passive> Any hit that would kill you has a small chance to heal you instead.\n    Rank 1: 8%% chance\n    Rank 2: 16%% chance\n    Rank 3: 25%% chance"
   }
-  "Divine Guardian info"
+  "Shield of the Righteous info"
   {
-    "en"		"<Passive> Reduces the damage your entire team takes.\n    Rank 1: -5%% team damage"
+    "en"		"<Active> Cause your next shot to deal increased damage, and to reduce the physical damage dealt to you for 5 seconds by 20%%.\n    Each use increases your next Greater Heal's strength by 50%%.\n    Costs 3 holy power."
   }
   "Great Blessing of Kings info"
   {
@@ -7474,7 +7504,7 @@
   }
   "Righteous Warrior info"
   {
-    "en"		"<Passive> Every Holy Power spend restores a portion of your health and mana.\n    Rank 1: +1.5% health and mana\n    Rank 2: +3% health and mana"
+    "en"		"<Passive> Every Holy Power spend restores a portion of your health and mana.\n    Rank 1: +1.5%% health and mana\n    Rank 2: +3%% health and mana"
   }
   "Divine Blood info"
   {
@@ -7554,11 +7584,11 @@
   }
   "Soul Warding info"
   {
-    "en"		"<Passive> Your Shield spells grant temporary damage reduction.\n    Rank 1: -5% damage\n    Rank 2: -10% damage"
+    "en"		"<Passive> Your Shield spells grant temporary damage reduction.\n    Rank 1: -5%% damage\n    Rank 2: -10%% damage"
   }
   "Focused Will info"
   {
-    "en"		"<Passive> When you take more than 10%% of your maximum health damage in a single hit there is a chance your next spell will cost 0 mana.\n    Rank 1: 10%% chance\n    Rank 2: 20%% chance\n    Rank 3: 30%% chance"
+    "en"		"<Passive> When you take more than 10%% of your maximum health damage in a single hit there is a chance your next spell will cost 0 mana.\n    Rank 1: 15%% chance\n    Rank 2: 30%% chance\n    Rank 3: 45%% chance"
   }
   "Divine Aegis info"
   {
@@ -7566,7 +7596,7 @@
   }
   "Power Word:Barrier info"
   {
-    "en"		"<Activated> Casts PW:Shield on every nerby ally, with a duration of 20 seconds."
+    "en"		"<Activated> Casts PW:Shield on every nearby ally, with a duration of 20 seconds."
   }
   "Grace info"
   {
@@ -7630,7 +7660,7 @@
   }
   "Improved Mind Blast info"
   {
-    "en"		"<Passive> Increases the damage done by Mind Blast and decreases it's cooldown.\n    Rank 1; +3%% damage, -0.5 second cooldown\n    Rank 2: +6%% damage, -1.0 second cooldown\n    Rank 3: +10%% damage, -1.5 second cooldown"
+    "en"		"<Passive> Increases the damage done by Mind Blast and decreases it's cooldown.\n    Rank 1; +10%% damage, -0.5 second cooldown\n    Rank 2: +20%% damage, -1.0 second cooldown\n    Rank 3: +30%% damage, -1.5 second cooldown"
   }
   "Focused Mind priest info"
   {
@@ -7726,7 +7756,7 @@
   }
   "Air Shock info"
   {
-    "en"		"<Passive> A shock that destroys some of the victims ammo plus damage.\n      Rank 1: Remove 1 ammo, 6%% chance to proc\n      Rank 2: Remove 2 ammo, 11%% chance to proc"
+    "en"		"<Passive> A shock that destroys some of the victims ammo plus damage.\n     Rank 1: Remove 1 ammo, 6%% chance to proc\n     Rank 2: Remove 2 ammo, 11%% chance to proc"
   }
   "Lightning Nova Totem info"
   {
@@ -7738,7 +7768,7 @@
   }
   "Elemental Weapons info"
   {
-    "en"		"<Passive> Increases Windfury's bonus damage\n    Rank 1: +7.5%% damage\n    Rank 2: +15%% damage"
+    "en"		"<Passive> Increases Windfury's bonus damage\n    Rank 1: +37.5%% damage\n    Rank 2: +75%% damage"
   }
   "Weapon Mastery info"
   {
@@ -7746,7 +7776,7 @@
   }
   "Feral Form info"
   {
-    "en"		"<Passive> Increases your movement speed.\n     Rank 1: +3%%\n      Rank 2: +6%%\n      Rank 3: 10%%"
+    "en"		"<Passive> Increases your movement speed.\n     Rank 1: +3%%\n     Rank 2: +6%%\n     Rank 3: 10%%"
   }
   "Flurry info"
   {
@@ -7762,7 +7792,7 @@
   }
   "Improved Rockbiter info"
   {
-    "en"		"Increases the amount of your attack that counts as magic\n    Rank One: +15%%\n    Rank Two: +25%%"
+    "en"		"Increases the amount of your attack that counts as magic\n    Rank One: +12.5%%\n    Rank Two: +25%%"
   }
   "Shamanistic Rage info"
   {
@@ -7874,7 +7904,7 @@
   }
   "Shadow Grip info"
   {
-    "en"		"<Passive> Slows the main target of your DoT spells.\n      Rank 1: 5%%\n      Rank 2: 10%%\n     Rank 3: 15%%"
+    "en"		"<Passive> Slows the main target of your DoT spells.\n     Rank 1: 5%%\n     Rank 2: 10%%\n     Rank 3: 15%%"
   }
   "Cursed Soul info"
   {
@@ -7882,7 +7912,7 @@
   }
   "Life Leech info"
   {
-    "en"    "<Passive> The higher maximum health the target has, the more damage Life Drain deals.\n      Rank 1: (Maximum health/60)*0.8\n      Rank 2: (Maximum health/60)*1.2"
+    "en"    "<Passive> The higher maximum health the target has, the more damage Life Drain deals.\n     Rank 1: (Maximum health/60)*0.8\n     Rank 2: (Maximum health/60)*1.2"
   }
   "Fel Vitality info"
   {
@@ -7918,7 +7948,7 @@
   }
   "Healthstone info"
   {
-    "en"		"<Active> Create a healthstone for 20%% of your current health that will heal you or another target for 30%% of your maximum health."
+    "en"		"<Active> Create a healthstone for 20%% of your current health that will heal you or another target for 20%% of your maximum health."
   }
   "Mana Feed info"
   {
@@ -7994,7 +8024,7 @@
   }
   "Death-Knight Toughness info"
   {
-    "en"	  "Increases your armor.\n    Rank 1: +5%% armor\n    Rank 2: +10%% armor\n    Rank 3: +15%% armor"
+    "en"	  "Increases your armor.\n    Rank 1: +7%% armor\n    Rank 2: +13%% armor\n    Rank 3: +20%% armor"
   }
   "Mark of Blood info"
   {
@@ -8026,7 +8056,7 @@
   }
   "Blood Parasites info"
   {
-    "en" "Your attacks cause bloodworms that deal magic damage every half a second for 3 seconds\nThey then explode and heal all allies for the damage they dealt\n   15% chance\n    Rank 1: Normal damage, normal range\n    Rank 2: High damage, high range"
+    "en" "Your attacks cause bloodworms that deal magic damage every half a second for 3 seconds\n   They then explode and heal all allies for the damage they dealt\n   15%% chance\n    Rank 1: Normal damage, normal range\n    Rank 2: High damage, high range"
   }
   "Rune Warding info"
   {
@@ -8086,7 +8116,7 @@
   }
   "Hypothermia info"
   {
-    "en"		"Direct damage spell, uses all your power and damage depends on the power spend. Cost 1 Rune"
+    "en"		"Deal a massive amount of spell damage upon a target enemy, consuming all runic power. Costs 1 rune."
   }
   "Virulance info"
   {
@@ -8862,12 +8892,12 @@
   "wc prof full title"
   {
     "#format" "{1:s},{2:s}"
-    "en"      "{1} ({2})"
+    "en"     "{1} ({2})"
   }
   "level up profession to"
   {
     "#format" "{1:s}"
-    "en"      "Learn {1} Level for:"
+    "en"     "Learn {1} Level for:"
   }
   "not enough reagents"
   {
@@ -8876,22 +8906,22 @@
   "profession level increased"
   {
     "#format" "{1:s},{2:s}"
-    "en"      "You have learned @green{1} @default- @lightgreen{2}"
+    "en"     "You have learned @green{1} @default- @lightgreen{2}"
   }
   "show recipes of level"
   {
     "#format" "{1:s}"
-    "en"      "{1} Level"
+    "en"     "{1} Level"
   }
   "money reqhave"
   {
     "#format" "{1:d},{2:d}"
-    "en"      "Silver: {1}    (Have {2})"
+    "en"     "Silver: {1}    (Have {2})"
   }
   "sprint alacrity"
   {
     "#format" "{1:.1f},{2:.1f}"
-    "en"      "Your @greenGlyph of Alacrity @defaultincreases your attack speed by @lightgreen{1} @defaultto @lightgreen{2}%%@default."
+    "en"     "Your @greenGlyph of Alacrity @defaultincreases your attack speed by @lightgreen{1} @defaultto @lightgreen{2}%%@default."
   }
   "wc casting manager"
   {
@@ -8908,29 +8938,29 @@
   "corpseparty"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You exploded on @green{1} @defaultand dealt a maximum of @lightgreen{2} @defaultdamage."
+    "en"     "You exploded on @green{1} @defaultand dealt a maximum of @lightgreen{2} @defaultdamage."
   }
   "corpseparty target"
   {
-    "en"      "@green@att@default's ghoul exploded near you dealing @lightgreen@dmg@default damage."
+    "en"     "@green@att@default's ghoul exploded near you dealing @lightgreen@dmg@default damage."
   }
   "feral glyph"
   {
     "#format" "{1:i},{2:s},{3:s}"
-    "en"      "Your @greenGlyph of Feral Form@default increases your movement speed by @lightgreen{1} @defaultfor @lightgreen{2} @defaultseconds."
+    "en"     "Your @greenGlyph of Feral Form@default increases your movement speed by @lightgreen{1} @defaultfor @lightgreen{2} @defaultseconds."
   }
   "pwshaste glyph"
   {
-    "en"      "Your @greenPower Word: Shield@default has increased your haste by @lightgreen25@default for @lightgreen 8@default seconds."
+    "en"     "Your @greenPower Word: Shield@default has increased your haste by @lightgreen25@default for @lightgreen 8@default seconds."
   }
   "divine intervention glyph"
   {
-    "en"      "@greenDivine Intervention @defaultwill absorb the next attack received."
+    "en"     "@greenDivine Intervention @defaultwill absorb the next attack received."
   }
   "swift doom glyph"
   {
     "#format" "{1:f}"
-    "en"      "@greenGlyph of Swift Doom @defaultincreased your movement speed to @lightgreen{1}@default for @lightgreen5@default seconds."
+    "en"     "@greenGlyph of Swift Doom @defaultincreased your movement speed to @lightgreen{1}@default for @lightgreen5@default seconds."
   }
   "heavy repercussions used glyph"
   {
@@ -8939,52 +8969,56 @@
   }
   "pet owner killed"
   {
-    "en"      "Your @greenMaster@default has died, without them you are weakened."
+    "en"     "Your @greenMaster@default has died, without them you are weakened."
   }
   "arcaneint cast all"
   {
-    "en"      "You cast Arcane Intellect at @lightgreeneveryone @defaultin your team for half of its effect."
+    "en"     "You cast Arcane Intellect at @lightgreeneveryone @defaultin your team for half of its effect."
   }
   "arcaneint aff"
   {
-    "en"      "You are affected by @lightgreenArcane Intellect @defaultyour intellect is increased."
+    "en"     "You are affected by @lightgreenArcane Intellect @defaultyour intellect is increased."
   }
   "searingaoe"
   {
     "#format" "{1:s},{2:f}"
-    "en"      "@green{1}@default hit you with @lightgreenSearing Flames@default and reduced your health by {2}%%."
+    "en"     "@green{1}@default hit you with @lightgreenSearing Flames@default and reduced your health by {2}%%."
   }
   "riptide target"
   {
     "#format" "{1:s},{2:i},{3:i},{4:.1f}"
-    "en"      "@green{1} @defaultcasts @greenRiptide @defaulton you for @lightgreen{2} @defaulthealing and @lightgreen{3} @defaulthealth over @lightgreen{4}@default seconds."
+    "en"     "@green{1} @defaultcasts @greenRiptide @defaulton you for @lightgreen{2} @defaulthealing and @lightgreen{3} @defaulthealth over @lightgreen{4}@default seconds."
   }
   "riptide caster"
   {
     "#format" "{1:s},{2:i},{3:i},{4:.1f}"
-    "en"      "You cast @greenRiptide @defaulton @green{1}@default for @lightgreen{2}@default healing and @lightgreen{3}@default health over @lightgreen{4}@default seconds."
+    "en"     "You cast @greenRiptide @defaulton @green{1}@default for @lightgreen{2}@default healing and @lightgreen{3}@default health over @lightgreen{4}@default seconds."
   }
   "riptide self"
   {
     "#format" "{1:i},{2:i},{3:.1f}"
-    "en"      "You cast @greenRiptide@default on your self for @lightgreen{1}@default healing and @lightgreen{2}@default health over @lightgreen{3}@default seconds."
+    "en"     "You cast @greenRiptide@default on your self for @lightgreen{1}@default healing and @lightgreen{2}@default health over @lightgreen{3}@default seconds."
   }
   "innateresistanceact"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@greenInnate Resistance@default increases your resistance by @lightgreen{1} @defaultto @lightgreen{2}.@default"
+    "en"     "@greenInnate Resistance@default increases your resistance by @lightgreen{1} @defaultto @lightgreen{2}.@default"
   }
   "no energy"
   {
-    "en"      "@greenNot enough energy"
+    "en"     "@greenNot enough energy"
+  }
+  "no holy"
+  {
+    "en"     "@greenNot enough holy power"
   }
   "no runic"
   {
-    "en"      "@greenNot enough runic power"
+    "en"     "@greenNot enough runic power"
   }
   "no rage"
   {
-    "en"      "@greenNot enough rage"
+    "en"     "@greenNot enough rage"
   }
   "roll cooldown"
   {
@@ -9199,11 +9233,11 @@
   }
   "Wc Tips Msg 13"
   {
-    "en"  "Remember there are menu shortcuts for many things, why not try typing one of these into chat? @lightgreen'professions' | 'mail' | 'inventory' | 'spells' | 'changerace' | 'talents'" //??
+    "en"  "If you discover a bug, please report it on the forums at @lightgreenwowmod.eu! @defaultWe'll be delighted!"
   }
   "Wc Tips Msg 14"
   {
-    "en"  "Don't forget that you can donate for gold with @lightgreen$1 = 1gold. defaultDonate by typing in chat 'donate' and follow steps. (Supports only paypal at the moment)"
+    "en"  "Don't forget that you can donate for gold with @lightgreen$1 = 1gold. @defaultDonate by typing in chat 'donate' and follow steps. (Supports only paypal at the moment)"
   }
   "Wc Tips Msg 15"
   {
@@ -9211,11 +9245,43 @@
   }
   "Wc Tips Msg 16"
   {
-    "en"  "Please respect all of your fellow members, do not forget to read our rules at @lightgreenhttp://wiki.wowmod.eu/index.php/Rules!"
+    "en"  "Please respect all of your fellow members, and do not forget to read our rules at @lightgreenhttp://wiki.wowmod.eu/index.php/Rules!"
   }
   "Wc Tips Msg 17"
   {
-    "en"  "Not sure what to do? type:  @lightgreen'/todo' @defaultin chat to see a list of your available tasks." //really?!
+    "en"  "Spamming AoE spells through the walls is usually NOT the definition of fun!"
+  }
+  "Wc Tips Msg 18"
+  {
+    "en"  "You can earn @lightgreengold @defaultby playing! Every 10 minutes one random player gets 0.1g!"
+  }
+  "Wc Tips Msg 19"
+  {
+    "en"  "If you're a @lightgreenNo-Steam @defaultplayer and purchase Cs:S at a later date, you can get your characters transferred!"
+  }
+  "Wc Tips Msg 20"
+  {
+    "en"  "Did you know @lightgreenScout @defaulthas increased damage? It's pretty deadly with Rogue's @lightgreenShadow Blades!"
+  }
+  "Wc Tips Msg 21"
+  {
+    "en"  "It's not everyday you see a @lightgreenDeath Knight. @defaultYou usually get to see them once a month!"
+  }
+  "Wc Tips Msg 22"
+  {
+    "en"  "Did you know we used to have a @lightgreenUSA server? @defaultWell, we don't anymore! So donate!"
+  }
+  "Wc Tips Msg 23"
+  {
+    "en"  "There's two kinds of people in this world: Those who like @lightgreenWoWmod, @defaultand those who don't matter."
+  }
+  "Wc Tips Msg 24"
+  {
+    "en"  "The @lightgreenPriest @defaultclaimed to not have had any sexual relations with the young @lightgreenPaladin @defaultapprentice, but we all know better."
+  }
+  "Wc Tips Msg 25"
+  {
+    "en"  "@greenHave you noticed our sounds don't work? We have a lot of them! Write snd_rebuildaudiocache into your console in order to hear them! They help a lot!"
   }
   //Referrer
   "Say Refferrer ID"
@@ -9301,24 +9367,24 @@
   "heal tide totem cast"
   {
     "#format" "{1:i}"
-    "en"      "@lightgreenYou@default cast @greenHealing Tide@default Totem for @lightgreen{1} @default seconds."
+    "en"     "@lightgreenYou@default cast @greenHealing Tide@default Totem for @lightgreen{1} @default seconds."
   }
   "heal tide totem vict"
   {
     "#format" "{1:d}"
-    "en"      "@lightgreen@att's @greenHealing Tide @defaultTotem restored @green{1}@default health."
+    "en"     "@lightgreen@att's @greenHealing Tide @defaultTotem restored @green{1}@default health."
   }
   "already have ghoul"
   {
-    "en"      "@lightgreenYou@default have an active @greenGhoul @defaultalready."
+    "en"     "@lightgreenYou@default have an active @greenGhoul @defaultalready."
   }
   "already have infernal"
   {
-    "en"      "@lightgreenYou@default have an active @greenInfernal @defaultalready."
+    "en"     "@lightgreenYou@default have an active @greenInfernal @defaultalready."
   }
   "jab"
   {
-    "en"      "Jab"
+    "en"     "Jab"
   }
   "Jab info"
   {
@@ -9330,7 +9396,7 @@
   }
   "Breath of Fire name"
   {
-    "en"      "Breath of Fire"
+    "en"     "Breath of Fire"
   }
   "Breath of Fire info"
   {
@@ -9339,15 +9405,15 @@
   "firebreath caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast Breath of Fire at @green{1} @default and deal @lightgreen{2} @default dmg."
+    "en"     "You cast Breath of Fire at @green{1} @default and deal @lightgreen{2} @default dmg."
   }
   "firebreath target"
   {
-    "en"      "@att casts @lightgreenBreath of Fire @defaultat You and deals @dmg damage"
+    "en"     "@att casts @lightgreenBreath of Fire @defaultat You and deals @dmg damage"
   }
   "firebreath miss"
   {
-    "en"      "Your @lightgreenBreath of Fire @defaulthit @greennobody"
+    "en"     "Your @lightgreenBreath of Fire @defaulthit @greennobody"
   }
   "agile armor effect"
   {
@@ -9360,11 +9426,15 @@
   }
   "Agile Armor info"
   {
-    "en"  "Increases your armor depending your agility.\n    Rank 1: 33%% of your agility turned into armor\n    Rank 2: 66%% of your agility turned into armor\n    Rank 3: 100%% of your agility turned into armor"
+    "en"  "Increases your armor depending your agility.\n    Rank 1: 22%% of your agility turned into armor\n    Rank 2: 44%% of your agility turned into armor\n    Rank 3: 66%% of your agility turned into armor"
   }
   "tiger palm"
   {
-    "en"      "Tiger Palm"
+    "en"     "Tiger Palm"
+  }
+  "tigery palm"
+  {
+    "en"     "Tigery Palm"
   }
   "Tiger Palm info"
   {
@@ -9382,12 +9452,12 @@
   "expel harm caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenExpel Harm@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
+    "en"     "You cast @greenExpel Harm@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthp."
   }
   "expel harm target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultcasts @greenExpel Harm@default on you and restores @lightgreen{2} @defaulthp."
+    "en"     "@lightgreen{1} @defaultcasts @greenExpel Harm@default on you and restores @lightgreen{2} @defaulthp."
   }
   "Expel Harm info"
   {
@@ -9408,12 +9478,12 @@
   "revival healed"
   {
     "#format" "{1:s}{2:i}"
-    "en"      "You healed @green{1} @defaultfor @lightgreen{2} @defaulthealth, using all of your @lightgreenChi."
+    "en"     "You healed @green{1} @defaultfor @lightgreen{2} @defaulthealth, using all of your @lightgreenChi."
   }
   "revival heal"
   {
     "#format" "{1:s}{2:i}"
-    "en"      "@green{1} @defaulthealed you for @lightgreen{2} health."
+    "en"     "@green{1} @defaulthealed you for @lightgreen{2} health."
   }
   "Dark Transformation info"
   {
@@ -9441,7 +9511,7 @@
   }
   "missed"
   {
-    "en"      "Miss"
+    "en"     "Miss"
   }
   "Soul Harvest name"
   {
@@ -9482,12 +9552,12 @@
   "healthstone caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You use your @greenHealthstone@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthealth."
+    "en"     "You use your @greenHealthstone@default on @lightgreen{1} @default and restore @lightgreen{2} @defaulthealth."
   }
   "healthstone target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1} @defaultused their @greenHealthstone@default on you and restores @lightgreen{2} @defaulthealth."
+    "en"     "@lightgreen{1} @defaultused their @greenHealthstone@default on you and restores @lightgreen{2} @defaulthealth."
   }
   "healthstone created"
   {
@@ -9504,7 +9574,7 @@
   "pact cast"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "You cast @greenSacrifical Pact @default, losing @lightgreen{1} @defaulthealth and gaining a shield for @lightgreen{2}@default."
+    "en"     "You cast @greenSacrifical Pact @default, losing @lightgreen{1} @defaulthealth and gaining a shield for @lightgreen{2}@default."
   }
   "knife"
   {
@@ -9529,17 +9599,17 @@
   "ToK cast"
   {
     "#format" "{1:0.1f},{2:s}"
-    "en"      "You cast @greenTouch of Karma@default on @lightgreen{2} @defaultwhich will last for @lightgreen{1} @defaultseconds."
+    "en"     "You cast @greenTouch of Karma@default on @lightgreen{2} @defaultwhich will last for @lightgreen{1} @defaultseconds."
   }
   "ToK target"
   {
     "#format" "{1:0.1f},{2:s}"
-    "en"      "@lightgreen{2} @defaultcasts @greenTouch of Karma@default on you, which lasts for @lightgreen{1} seconds."
+    "en"     "@lightgreen{2} @defaultcasts @greenTouch of Karma@default on you, which lasts for @lightgreen{1} seconds."
   }
   "ToK victim"
   {
     "#format" "{1:i}"
-    "en"      "You take {1} damage from @lightgreenTouch of Karma@default"
+    "en"     "You take {1} damage from @lightgreenTouch of Karma@default"
   }
   "Spinning Crane Kick name"
   {
@@ -9556,7 +9626,7 @@
   }
   "spinning crane kick target"
   {
-    "en"      "@green@att's Spinning Crane Kick @defaulthits you for @lightgreen@dmg @defaultdamage"
+    "en"     "@green@att's Spinning Crane Kick @defaulthits you for @lightgreen@dmg @defaultdamage"
   }
   "spinning crane kick miss"
   {
@@ -9609,7 +9679,7 @@
   }
   "Enhanced Parry info"
   {
-    "en" "Increases your Parry chance and its damage reduction by 20%% each. Requires Ox or Tiger stance."
+    "en" "Increases your Parry chance and its damage reduction by 10%% each. Requires Ox or Tiger stance."
   }
   "chi hint"
   {
@@ -9618,15 +9688,15 @@
   }
   "activated stance_1"
   {
-    "en"      "You have activated @greenStance of the Ox"
+    "en"     "You have activated @greenStance of the Ox"
   }
   "activated stance_2"
   {
-    "en"      "You have activated @greenStance of the Tiger"
+    "en"     "You have activated @greenStance of the Tiger"
   }
   "activated stance_3"
   {
-    "en"      "You have activated @greenStance of the Serpent"
+    "en"     "You have activated @greenStance of the Serpent"
   }
   "mistweaver stance client"
   {
@@ -9640,11 +9710,11 @@
   }
   "Test talent for stance name"
   {
-    "en"      "Test talent for stance"
+    "en"     "Test talent for stance"
   }
   "Test talent for stance info"
   {
-    "en"      "Test talent for stance"
+    "en"     "Test talent for stance"
   }
   "brewmaster stance client"
   {
@@ -9654,58 +9724,58 @@
   "fists of fury client"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You channel @greenFists of Fury @defaultat @green{1} @default and deal @lightgreen{2} @default dmg."
+    "en"     "You channel @greenFists of Fury @defaultat @green{1} @default and deal @lightgreen{2} @default dmg."
   }
   "fists of fury target"
   {
-    "en"      "@att channels @greenFists of Fury @defaultat you and deals @dmg damage"
+    "en"     "@att channels @greenFists of Fury @defaultat you and deals @dmg damage"
   }
   "fists of fury miss"
   {
-    "en"      "Your @greenFists of Fury @defaulthit @greennobody"
+    "en"     "Your @greenFists of Fury @defaulthit @greennobody"
   }
   "purifying brew"
   {
     "#format" "{1:i}"
-    "en"      "Your @greenPurifying Brew @defaulthealed you for @lightgreen{1} health."
+    "en"     "Your @greenPurifying Brew @defaulthealed you for @lightgreen{1} health."
   }
   "no chi"
   {
-    "en"      "@greenYou don't have enough of Chi to do that!"
+    "en"     "@greenYou don't have enough of Chi to do that!"
   }
   "Improved Expel Harm name"
   {
-    "en"      "Improved Expel Harm"
+    "en"     "Improved Expel Harm"
   }
   "Improved Expel Harm info"
   {
-    "en"      "<Passive> Increases the secondary heal of your Expel Harm\n    Rank 1: +50%% secondary heal\n    Rank 2: +100%% secondary heal"
+    "en"     "<Passive> Increases the secondary heal of your Expel Harm\n    Rank 1: +50%% secondary heal\n    Rank 2: +100%% secondary heal"
   }
   "Renewing Mist name"
   {
-    "en"      "Renewing Mist"
+    "en"     "Renewing Mist"
   }
   "Renewing Mist info"
   {
-    "en"      "<Active> Puts a HoT effect on a target that lasts 4 seconds.\n    At the end of the spell, it finds a new target to heal."
+    "en"     "<Active> Puts a HoT effect on a target that lasts 4 seconds.\n    At the end of the spell, it finds a new target to heal."
   }
   "Wild Experience name"
   {
-    "en"      "Monastery Teachings"
+    "en"     "Monastery Teachings"
   }
   "Wild Experience info"
   {
-    "en"      "<Passive> Your spelldamage scales from your agility instead of your intellect."
+    "en"     "<Passive> Your spelldamage scales from your agility instead of your intellect."
   }
   "renewing mist client"
   {
     "#format" "{1:i},{2:s}"
-    "en"      "You cast @greenRenewing Mist @defaulton  @green{2} @defaultand heal them for @lightgreen{1} @defaulteach second"
+    "en"     "You cast @greenRenewing Mist @defaulton  @green{2} @defaultand heal them for @lightgreen{1} @defaulteach second"
   }
   "renewing mist target"
   {
     "#format" "{1:i},{2:s}"
-    "en"      "@green{2} @defaultcasts @greenRenewing Mist @defaulton you, healing you for @lightgreen{1} @defaulteach second"
+    "en"     "@green{2} @defaultcasts @greenRenewing Mist @defaulton you, healing you for @lightgreen{1} @defaulteach second"
   }
   "Strengthened Palm info"
   {
@@ -9802,11 +9872,11 @@
   "flying serpent kick caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenFlying Serpent Kick @defaultat @green{1} @default and deal @lightgreen{2}@default damage"
+    "en"     "You cast @greenFlying Serpent Kick @defaultat @green{1} @default and deal @lightgreen{2}@default damage"
   }
   "flying serpent kick victim"
   {
-    "en"      "You got hit by @att's @greenFlying Serpent Kick @default for @dmg damage"
+    "en"     "You got hit by @att's @greenFlying Serpent Kick @default for @dmg damage"
   }
   "Combat Conditioning info"
   {
@@ -9827,7 +9897,7 @@
   "mana thistle tea restore"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@greenMana Thistle Tea @defaultrestored @lightgreen{1} energy, @defaultrestoring it to @lightgreen{2} energy."
+    "en"     "@greenMana Thistle Tea @defaultrestored @lightgreen{1} energy, @defaultrestoring it to @lightgreen{2} energy."
   }
   "Expel Chi info"
   {
@@ -9864,7 +9934,7 @@
   "combat healing target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@green{1} @defaultheals you with @greenRushing Jade Wind @defaultand restores @lightgreen{2} @defaulthealth."
+    "en"     "@green{1} @defaultheals you with @greenRushing Jade Wind @defaultand restores @lightgreen{2} @defaulthealth."
   }
   "Life Cocoon info"
   {
@@ -9877,12 +9947,12 @@
   "lifecocoon target"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"      "@green{1} @defaultcasts @greenLife Cocoon @defaulton you, shielding you for @lightgreen{2} @defaulthealth and increasing healing received by @lightgreen{3}%% @defaultfor @lightgreen6.0 seconds"
+    "en"     "@green{1} @defaultcasts @greenLife Cocoon @defaulton you, shielding you for @lightgreen{2} @defaulthealth and increasing healing received by @lightgreen{3}%% @defaultfor @lightgreen6.0 seconds"
   }
   "lifecocoon caster"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"      "You cast @greenLife Cocoon @defaulton @green{1}, @defaultshielding them for @lightgreen{2} @defaulthealth and increasing their healing taken by @lightgreen{3}%%"
+    "en"     "You cast @greenLife Cocoon @defaulton @green{1}, @defaultshielding them for @lightgreen{2} @defaulthealth and increasing their healing taken by @lightgreen{3}%%"
   }
   "Resusciate info"
   {
@@ -9895,12 +9965,12 @@
   "resusciate"
   {
     "#format" "{1:s}"
-    "en"      "You cast @greenResuscitate@default at @green{1}@default."
+    "en"     "You cast @greenResuscitate@default at @green{1}@default."
   }
   "resusciate target"
   {
     "#format" "{1:s}"
-    "en"      "@green{1}@default has cast @greenResuscitate@default on you, giving you a new body and @lightgreen50%% @defaultof your health."
+    "en"     "@green{1}@default has cast @greenResuscitate@default on you, giving you a new body and @lightgreen50%% @defaultof your health."
   }
   "Critical Parry info"
   {
@@ -9912,56 +9982,56 @@
   }
   "Dampened Harm info"
   {
-    "en"        "<Passive> If you take damage for more than 20/10%% of your maximum health, it's reduced by 20%%"
+    "en"       "<Passive> If you take damage for more than 20/10%% of your maximum health, it's reduced by 20%%"
   }
   "Dampened Harm name"
   {
-    "en"        "Dampened Harm"
+    "en"       "Dampened Harm"
   }
   "dampened harm msg"
   {
-    "en"        "Dampened Harm"
+    "en"       "Dampened Harm"
   }
   "Filler Talent name"
   {
-    "en"        "Filler Talent"
+    "en"       "Filler Talent"
   }
   "Filler Talent info"
   {
-    "en"        "Hi"
+    "en"       "Hi"
   }
   "Parry Kick info"
   {
-    "en"        "<Passive> Spinning Crane Kick increases your parry chance for the duration.\n    Rank 1: +25%% parry chance for the duration\n    Rank 2: +50%% parry chance for the duration"
+    "en"       "<Passive> Spinning Crane Kick increases your parry chance for the duration.\n    Rank 1: +25%% parry chance for the duration\n    Rank 2: +50%% parry chance for the duration"
   }
   "Parry Kick name"
   {
-    "en"        "Spinning Cyclone"
+    "en"       "Spinning Cyclone"
   }
   "afterlife msg"
   {
     "#format" "{1:d}"
-    "en"      "You restored @lightgreen{1} @defaulthp by picking up an @greenAfterlife orb."
+    "en"     "You restored @lightgreen{1} @defaulthp by picking up an @greenAfterlife orb."
   }
   "afterlife caster msg"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your @greenAfterlife orb@default healed @green{1} @defaultfor @lightgreen{2} @defaulthp."
+    "en"     "Your @greenAfterlife orb@default healed @green{1} @defaultfor @lightgreen{2} @defaulthp."
   }
   "afterlife target msg"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Picking up @green{1}'s @greenAfterlife orb @defaulthealed you for @lightgreen{2}@default hp."
+    "en"     "Picking up @green{1}'s @greenAfterlife orb @defaulthealed you for @lightgreen{2}@default hp."
   }
   "chain lightning victim"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@green{1} @defaultcasts @greenChain Lightning @defaultat you, damaging you for @lightgreen{2} damage."
+    "en"     "@green{1} @defaultcasts @greenChain Lightning @defaultat you, damaging you for @lightgreen{2} damage."
   }
   "chain lightning caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You cast @greenChain Lightning @defaultat @green{1}@default, dealing @lightgreen{2} damage."
+    "en"     "You cast @greenChain Lightning @defaultat @green{1}@default, dealing @lightgreen{2} damage."
   }
   "Keg Smash info"
   {
@@ -9977,7 +10047,7 @@
   }
   "Serene Mists info"
   {
-    "en"		"<Passive> Your Expel Harm now casts Renewing Mist on the target with a reduced jump amount.\n    Must have the Renewing Mist talent.\n    Rank 1: Jumps one time\n    Rank 2: Jumps two times"
+    "en"		"<Passive> Your Expel Harm now casts Renewing Mist on the target with a reduced jump amount.\n    Must have the Renewing Mist talent.\n    Rank 1: Doesn't jump\n    Rank 2: Jumps one time"
   }
   "Serene Mists name"
   {
@@ -10026,20 +10096,20 @@
   "uplift client"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your @greenUplift @defaulthealed @green{1} @defaultfor @lightgreen{2} health."
+    "en"     "Your @greenUplift @defaulthealed @green{1} @defaultfor @lightgreen{2} health."
   }
   "uplift target"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1}@default's @greenUplift @defaulthealed you for @lightgreen{2} @defaulthealth."
+    "en"     "@lightgreen{1}@default's @greenUplift @defaulthealed you for @lightgreen{2} @defaulthealth."
   }
   "legacy cast all"
   {
-    "en"      "You cast @lightgreenLegacy of the White Tiger @defaultat @greeneveryone @defaultin your team."
+    "en"     "You cast @lightgreenLegacy of the White Tiger @defaultat @greeneveryone @defaultin your team."
   }
   "legacy aff"
   {
-    "en"      "You are affected by @lightgreenLegacy of the White Tiger@default, which increases your critical strike chance."
+    "en"     "You are affected by @lightgreenLegacy of the White Tiger@default, which increases your critical strike chance."
   }
   "Legacy of the White Tiger name"
   {
@@ -10076,7 +10146,7 @@
   "healing brew"
   {
     "#format" "{1:i}"
-    "en"      "Your @greenHealing Brew @defaulthealed you for @lightgreen{1} health."
+    "en"     "Your @greenHealing Brew @defaulthealed you for @lightgreen{1} health."
   }
   "Chi Serenity name"
   {
@@ -10157,22 +10227,22 @@
   "chi burst ally"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1}@default's Chi Burst went past you and healed you for @lightgreen{2} health."
+    "en"     "@lightgreen{1}@default's Chi Burst went past you and healed you for @lightgreen{2} health."
   }
   "chi burst enemy"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "@lightgreen{1}@default's Chi Burst went past you and hit you for @lightgreen{2} damage."
+    "en"     "@lightgreen{1}@default's Chi Burst went past you and hit you for @lightgreen{2} damage."
   }
   "chi burst caster ally"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your @greenChi Burst @defaulthealed @lightgreen{1} @defaultfor @lightgreen{2} health."
+    "en"     "Your @greenChi Burst @defaulthealed @lightgreen{1} @defaultfor @lightgreen{2} health."
   }
   "chi burst caster enemy"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your @greenChi Burst @defaulthit @green{1} @defaultfor @lightgreen{2} damage."
+    "en"     "Your @greenChi Burst @defaulthit @green{1} @defaultfor @lightgreen{2} damage."
   }
   "Ardent Defender info"
   {
@@ -10197,12 +10267,12 @@
   "lava burst vic"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You got hit by @green{1}@default's @greenLava Burst @defaultfor @lightgreen{2} damage."
+    "en"     "You got hit by @green{1}@default's @greenLava Burst @defaultfor @lightgreen{2} damage."
   }
   "lava burst caster"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your @greenLava Burst @defaulthit @lightgreen{1} @defaultfor @lightgreen{2} damage."
+    "en"     "Your @greenLava Burst @defaulthit @lightgreen{1} @defaultfor @lightgreen{2} damage."
   }
   "Dual Wielding Shaman name"
   {
@@ -10226,51 +10296,51 @@
   }
   "Dizzying Haze name"
   {
-    "en"        "Dizzying Haze"
+    "en"       "Dizzying Haze"
   }
   "Dizzying Haze info"
   {
-    "en"        "<Active> Throw a keg at the targeted location, dealing damage to enemies caught up in it.\n    Hit enemies have their vision blurred for 3 seconds, and 2 of their next attacks will miss.\n    Also adds two keg effects on the targets."
+    "en"       "<Active> Throw a keg at the targeted location, dealing damage to enemies caught up in it.\n    Hit enemies have their vision blurred for 3 seconds, and 2 of their next attacks will miss.\n    Also adds two keg effects on the targets."
   }
   "dizzying haze cast"
   {
-    "en"        "@greenKeg is thrown"
+    "en"       "@greenKeg is thrown"
   }
   "dizzying haze target"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"        "@green{1} @defaultthrew his keg at you, dealing @lightgreen{2} @defaultdamage, and causing you to stagger around drunk for @lightgreen{3} seconds"
+    "en"       "@green{1} @defaultthrew his keg at you, dealing @lightgreen{2} @defaultdamage, and causing you to stagger around drunk for @lightgreen{3} seconds"
   }
   "dizzying haze caster"
   {
     "#format" "{1:s},{2:i},{3:i}"
-    "en"        "Your @lightgreenDizzying Haze @defaultkeg exploded on @green{1} @defaultand did @lightgreen{2} @default damage and caused them to stagger around drunkenly for @lightgreen{3} @default seconds."
+    "en"       "Your @lightgreenDizzying Haze @defaultkeg exploded on @green{1} @defaultand did @lightgreen{2} @default damage and caused them to stagger around drunkenly for @lightgreen{3} @default seconds."
   }
   "uncommon treasure chest"
   {
-    "en"        "@greenYou opened an uncommon treasure chest and obtained: "
+    "en"       "@greenYou opened an uncommon treasure chest and obtained: "
   }
   "rare treasure chest"
   {
-   "en"        "@greenYou opened a rare treasure chest and obtained: "
+   "en"       "@greenYou opened a rare treasure chest and obtained: "
   }
    "epic treasure chest"
   {
-    "en"        "@greenYou opened an epic treasure chest and obtained: "
+    "en"       "@greenYou opened an epic treasure chest and obtained: "
   }
   "exrare treasure chest"
   {
-    "en"        "@greenYou opened an extremely rare treasure chest and obtained: "
+    "en"       "@greenYou opened an extremely rare treasure chest and obtained: "
   }
   "silver chest"
   {
     "#format" "{1:i}"
-    "en"      "@lightgreenYou got {1} silver from opening the treasure chest!"
+    "en"     "@lightgreenYou got {1} silver from opening the treasure chest!"
   }
   "chest drop item"
   {
     "#format" "{1:s}"
-    "en"      "A rare item has dropped: \n    {1}\n\n"
+    "en"     "A rare item has dropped: \n    {1}\n\n"
   }
   "targetonly disabled"
   {
@@ -10305,116 +10375,225 @@
   "gold chest"
   {
     "#format" "{1:i}"
-    "en"      "@lightgreenYou got {1} gold from opening the treasure chest!"
+    "en"     "@lightgreenYou got {1} gold from opening the treasure chest!"
   }
   "experience chest"
   {
     "#format" "{1:i}"
-    "en"      "@lightgreenYou got {1} experience from opening the treasure chest!"
+    "en"     "@lightgreenYou got {1} experience from opening the treasure chest!"
   }
   "Alliance End Victory"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Alliance won for good with a score of {1}-{2}!"
+    "en"     "@lightgreenThe Alliance won for good with a score of {1}-{2}!"
   }
   "Horde End Victory"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Horde won for good with a score of {1}-{2}!"
+    "en"     "@lightgreenThe Horde won for good with a score of {1}-{2}!"
   }
   "Alliance Victory"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Alliance won the round with a score of {1}-{2}!"
+    "en"     "@lightgreenThe Alliance won the round with a score of {1}-{2}!"
   }
   "Horde Victory"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Horde won the round with a score of {1}-{2}!"
+    "en"     "@lightgreenThe Horde won the round with a score of {1}-{2}!"
   }
   "Alliance Score Equal"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Alliance is even with the horde with a score of {1}-{2}!" //Few easter eggs here ^_^
+    "en"     "@lightgreenThe Alliance is even with the horde with a score of {1}-{2}!" //Few easter eggs here ^_^
   }
   "Alliance Score Winning"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Alliance is winning against the horde with a score of {1}-{2}!" //Few easter eggs here ^_^
+    "en"     "@lightgreenThe Alliance is winning against the horde with a score of {1}-{2}!" //Few easter eggs here ^_^
   }
   "Alliance Score Losing"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Alliance is losing against the horde with a score of {1}-{2}!" //Few easter eggs here ^_^
+    "en"     "@lightgreenThe Alliance is losing against the horde with a score of {1}-{2}!" //Few easter eggs here ^_^
   }
   "Horde Score Equal"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Horde is even with the alliance with a score of {1}-{2}!" //Few easter eggs here ^_^
+    "en"     "@lightgreenThe Horde is even with the alliance with a score of {1}-{2}!" //Few easter eggs here ^_^
   }
   "Horde Score Winning"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Horde is winning against the alliance with a score of {1}-{2}!" //Few easter eggs here ^_^
+    "en"     "@lightgreenThe Horde is winning against the alliance with a score of {1}-{2}!" //Few easter eggs here ^_^
   }
   "Horde Score Losing"
   {
     "#format" "{1:i},{2:i}"
-    "en"      "@lightgreenThe Horde is losing against the alliance with a score of {1}-{2}!" //Few easter eggs here ^_^
+    "en"     "@lightgreenThe Horde is losing against the alliance with a score of {1}-{2}!" //Few easter eggs here ^_^
   }
   "CTF Return Horde Flag"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas returned the Horde's flag back to the Horde base!"
+    "en"     "@green{1} @lightgreenhas returned the Horde's flag back to the Horde base!"
   }
   "CTF Return Alliance Flag"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas returned the Alliance's flag back to the Alliance base!"
+    "en"     "@green{1} @lightgreenhas returned the Alliance's flag back to the Alliance base!"
   }
   "CTF Carry Alliance Flag"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas picked up the Alliance's flag!"
+    "en"     "@green{1} @lightgreenhas picked up the Alliance's flag!"
   }
   "CTF Carry Horde Flag"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas picked up the Horde's flag!"
+    "en"     "@green{1} @lightgreenhas picked up the Horde's flag!"
   }
   "Horde Flag Drop"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas dropped the Horde's flag!"
+    "en"     "@green{1} @lightgreenhas dropped the Horde's flag!"
   }
   "Alliance Flag Drop"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas dropped the Alliance's flag!"
+    "en"     "@green{1} @lightgreenhas dropped the Alliance's flag!"
   }
   "CTF Picked Alliance"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas taken the Alliance's flag from its base!"
+    "en"     "@green{1} @lightgreenhas taken the Alliance's flag from its base!"
   }
   "CTF Picked Horde"
   {
     "#format" "{1:s}"
-    "en"      "@green{1} @lightgreenhas taken the Horde's flag from its base!"
+    "en"     "@green{1} @lightgreenhas taken the Horde's flag from its base!"
   }
   "earth grip client"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "Your @greenEarth Grip @defaultslowed @green{1} @defaultfor @lightgreen{2} seconds."
+    "en"     "Your @greenEarth Grip @defaultslowed @green{1} @defaultfor @lightgreen{2} seconds."
   }
   "earth grip attacker"
   {
     "#format" "{1:s},{2:i}"
-    "en"      "You were slowed by @green{1}'s @greenEarth Grip @defaultfor @lightgreen{2} seconds."
+    "en"     "You were slowed by @green{1}'s @greenEarth Grip @defaultfor @lightgreen{2} seconds."
   }
   "unchaining end"
   {
-    "en"      "@greenUnchaining Wrath @lightgreenhas ended"
+    "en"     "@greenUnchaining Wrath @lightgreenhas ended"
+  }
+  "shadowgate reset"
+  {
+    "en"     "Your @greenShadowgate's @defaultlocation has been reset"
+  }
+  "fanofswords"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "You cast Fan of Swords at @green{1} @default and deal @lightgreen{2} @default dmg."
+  }
+  "fanofswords target"
+  {
+    "en"     "@att has cast @lightgreenFan of Swords @defaultto You and did @dmg damage"
+  }
+  "already active"
+  {
+    "en"     "@greenThat ability is already active"
+  }
+  "righteous shield on" //
+  {
+    "en"     "@greenRighteous Shield @defaulthas been activated"
+  }
+  "split"
+  {
+    "en"		"Gorehowl"
+  }
+  "bladefist"
+  {
+    "en"		"Bladefist"
+  }
+  "blinkstrike"
+  {
+    "en"		"Blinkstrike"
+  }
+  "fortishal"
+  {
+    "en"		"Fortishal"
+  }
+  "fear greymane"
+  {
+    "#format" "{1:s}"
+    "en"     "@defaultYou @greenhowl @defaultat @lightgreen{1} @default"
+  }
+  "gauntlets of vancleef"
+  {
+    "en"     "@greenVanish's cooldown has been reset"
+  }
+  "lights vengeance"
+  {
+    "en"     "Light's Vengeance"
+  }
+  "truesilver champion"
+  {
+    "en"     "Well Met"
+  }
+  "sun caster"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "The @greensun of Helios @defaulthealed @lightgreen{1} @default and restored @lightgreen{2} @defaulthealth."
+  }
+  "sun target"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "@lightgreen{1}'s @greensun of Helios @defaultheals you for @lightgreen{2} @defaulthealth."
+  }
+  "sun cast"
+  {
+    "en"     "@lightgreenYour prayers @defaulthave been answered and a @greensun of Helios @defaulthas been summoned."
+  }
+  "atiesh cast all"
+  {
+    "en"     "Your @greenPrayer of Fortitude @defaultincreases your entire teams stamina"
+  }
+  "lightning bolt"
+  {
+    "en"     "Lightning Bolt"
+  }
+  "senjin poison"
+  {
+    "en"     "Sen'Jin's Poison"
+  }
+  "senjin casted"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "Your @greenSen'Jin's Poison struck @defaulton {1} @defaultfor @lightgreen{2} @defaultdamage per tick."
+  }
+  "senjin casted victim"
+  {
+    "#format" "{1:s},{2:i}"
+    "en"     "{1}'s @greenSen'Jin's Poison @defaultstruck you for @lightgreen{2} @defaultdamage per tick."
+  }
+  "doomrel"
+  {
+    "#format" "{1:0.2f}"
+    "en"    "@greenDoomrel's Ghostshroud @defaulthas protected you, granting you invisibility for @lightgreen1.5 @defaultseconds."
+  }
+  "fiery spinning crane kick"
+  {
+    "#format" "{1:i},{2:s}"
+    "en" "Your @lightgreenFiery Spinning Crane Kick @defaultdoes @lightgreen{1} @defaultdamage to @green{2}"
+  }
+  "fiery spinning crane kick target"
+  {
+    "en"     "@green@att's Fiery Spinning Crane Kick @defaulthits you for @lightgreen@dmg @defaultdamage"
+  }
+  "fiery spinning crane kick miss"
+  {
+    "#format" "{1:i}"
+    "en" "Your @lightgreenFiery Spinning Crane Kick @defaultdoes @lightgreen{1} @defaultdamage to @greennobody"
   }
 }
 

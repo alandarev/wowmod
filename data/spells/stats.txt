@@ -60,7 +60,7 @@
   {
     "str" "10"
     "agi" "42"
-    "sta" "48"
+    "sta" "24"
     "int" "0"
   }
   "bots"
@@ -229,7 +229,7 @@
     "armor"  "150"
     "sta"    "60"
     "str"    "10"
-    "agi"    "180"
+    "agi"    "90"
     "res"    "20"   //resistance
   }
   "bot_11" //Bot Death Knight
@@ -423,7 +423,7 @@
     "armor"  "275"
     "sta"    "160"
     "str"    "30"
-    "agi"    "260"
+    "agi"    "130"
     "res"    "30"   //resistance
   }
 

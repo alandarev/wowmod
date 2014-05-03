@@ -351,6 +351,10 @@ public wcGiveXp(client,amount,bool:display)
      )  {
       new convertMoney=RoundToNearest(float(amount)*EXP_MONEY_RATIO);
       WCMessage(client,"converted xp",client,convertMoney);
+      if(convertMoney>1000)
+      {
+         LogAction(client,-1,"\"%L\" [WC] Received an unnaturally high amount of silver: %i",convertMoney);
+      }
       wcSetMoney(client,GetMoney(client)+convertMoney);
       oldmoney=GetMoney(client);
       amount=1;
@@ -1818,7 +1822,6 @@ stock TriggerDrop(client,victim, bool:self=false, Float:custom_rate=1.0)
 TriggerBossDrop() {
   if(!IsBoss() &&  !IsHNS())
   return;
-
   //HNS Integration
   if(IsHNS()) {
     new bool:hns_won=true;
@@ -1875,11 +1878,12 @@ TriggerBossDrop() {
         KvGetString(wcbossdrop,"sets",Ssets,sizeof(Ssets),"0");
         if((!StrEqual(Ssets,"0",false)) && (setchance>0.0)&&(Camount>0))
         {
-          new sets[51];
+          new sets[128];
           decl String:Stemp[255];
           new StringID=BreakString(Ssets, Stemp, sizeof(Stemp));
           new amount=1;
           sets[1]=StringToInt(Stemp);
+          
           while(StringID>=0)
           {
             amount++;
@@ -1891,6 +1895,7 @@ TriggerBossDrop() {
           }
           new setitems[1501];
           new Iamount=0;
+          
           for(new x=1;x<=amount;x++)
           {
             KvRewind(wcsets);
@@ -1916,10 +1921,13 @@ TriggerBossDrop() {
             new targets[65];
             new pamount=FindMatchingPlayers("@ct",targets);
             new winner=RollBetween(targets,pamount);
-            new bool:foundwinner=false;
+            
+            //This breaks bossmod, DO NOT UNCOMMENT WITHOUT FIXING
+            /*new bool:foundwinner=false;
             while(!foundwinner)
             {
               winner=RollBetween(targets,pamount);
+
               if(wcDamageDone[winner]<g_iBossDropDmgMin && wcHealingDone[winner]<g_iBossDropHealMin)
               {
                 PrintToChat(winner,"Ineligible for boss drops.");
@@ -1927,7 +1935,8 @@ TriggerBossDrop() {
               }
               else
                 foundwinner=true;
-            }
+            }*/
+
             if(winner==0)
             LogError("[WC] Could not roll for item");
             new String:winnername[50];

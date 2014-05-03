@@ -117,13 +117,18 @@ Author(s): Stinkyfax
 
 #define SERVER_LEVEL_POLICY FindSettingInt("general", "SERVER_LEVEL_POLICY")
 
+#define FFADE_IN			0x0001		// Just here so we don't pass 0 into the function
+#define FFADE_OUT			0x0002		// Fade out (not in)
+#define FFADE_MODULATE			0x0004		// Modulate (don't blend)
+#define FFADE_STAYOUT			0x0008		// ignores the duration, stays faded out until new ScreenFade message received
+#define FFADE_PURGE			0x0010		// Purges all other fades, replacing them with this one
 //professions related
 #define PROFESSION_BONUSES_AMOUNT 13
 #define CRAFT_PROFS_AMOUNT 6
 #define CLASSES 7
 
 //Glyphs
-#define MAX_GLYPHS 2
+#define MAX_GLYPHS 3
 #define GLYPH_MAGE_INVIS 13774
 #define GLYPH_MAGE_MISSLES 13776
 #define GLYPH_MAGE_MOLTEN 13778
@@ -133,6 +138,9 @@ Author(s): Stinkyfax
 #define GLYPH_MAGE_ARCANEINT 20144
 #define GLYPH_MAGE_FROSTBITE 20146
 #define GLYPH_MAGE_SEARINGF 20148
+#define GLYPH_MAGE_ICEBARRIER 25187
+#define GLYPH_MAGE_IGNITE 25188
+#define GLYPH_MAGE_POLYMORPH 25189
 
 #define GLYPH_PALADIN_RECKONING 13786
 #define GLYPH_PALADIN_AVENGER 13788
@@ -143,6 +151,9 @@ Author(s): Stinkyfax
 #define GLYPH_PALADIN_SOC 20126
 #define GLYPH_PALADIN_JUDGEMENT 20128
 #define GLYPH_PALADIN_DIVINT 20130
+#define GLYPH_PALADIN_SHOCK 25208
+#define GLYPH_PALADIN_SHIELD 25209
+#define GLYPH_PALADIN_CONVICTION 25210
 
 #define GLYPH_WARLOCK_DRAIN 13798
 #define GLYPH_WARLOCK_CORRUPTION 13800
@@ -153,6 +164,9 @@ Author(s): Stinkyfax
 #define GLYPH_WARLOCK_SDOOM 20132
 #define GLYPH_WARLOCK_SHADOWBOLT 20134
 #define GLYPH_WARLOCK_DEMBRACE 20136
+#define GLYPH_WARLOCK_CURSEDSOUL 25205
+#define GLYPH_WARLOCK_CHAOSWAVE 25206
+#define GLYPH_WARLOCK_HELLFIRE 25207
 
 #define GLYPH_WARRIOR_WALL 13810
 #define GLYPH_WARRIOR_REGEN 13812
@@ -163,6 +177,9 @@ Author(s): Stinkyfax
 #define GLYPH_WARRIOR_WHIRLWIND 20138
 #define GLYPH_WARRIOR_TWOHWEP 20140
 #define GLYPH_WARRIOR_HEAVYREP 20142
+#define GLYPH_WARRIOR_DEAFENING 25202
+#define GLYPH_WARRIOR_RAGING 25203
+#define GLYPH_WARRIOR_DEEPWOUNDS 25204
 
 
 #define GLYPH_SHAMAN_WAVE 13822
@@ -174,6 +191,9 @@ Author(s): Stinkyfax
 #define GLYPH_SHAMAN_NPOWER 20114
 #define GLYPH_SHAMAN_EARTHS 20116
 #define GLYPH_SHAMAN_WINDFURY 20118
+#define GLYPH_SHAMAN_LAVALASH 25190
+#define GLYPH_SHAMAN_LAVABURST 25191
+#define GLYPH_SHAMAN_HTD 25192
 
 #define GLYPH_PRIEST_HYMN 13834
 #define GLYPH_PRIEST_HEALS 13836
@@ -184,6 +204,9 @@ Author(s): Stinkyfax
 #define GLYPH_PRIEST_LIGHTWELL 20122
 #define GLYPH_PRIEST_MINDBLAST 20120
 #define GLYPH_PRIEST_PWSHIELD 20124
+#define GLYPH_PRIEST_MENTAL 25196
+#define GLYPH_PRIEST_LIGHTW 25197
+#define GLYPH_PRIEST_SHADOWF 25198
 
 #define GLYPH_DK_HEARTFIRE 13846
 #define GLYPH_DK_RUNETAP 13848
@@ -194,6 +217,9 @@ Author(s): Stinkyfax
 #define GLYPH_DK_AOF 20108
 #define GLYPH_DK_VAMBLOOD 20110
 #define GLYPH_DK_CORPSEPARTY 20112
+#define GLYPH_DK_PARASITES 25199
+#define GLYPH_DK_OBLITERATE 25200
+#define GLYPH_DK_NECROTICSTRIKE 25201
 
 #define GLYPH_ROGUE_RUSH 13858
 #define GLYPH_ROGUE_SINISTER 13860
@@ -205,6 +231,9 @@ Author(s): Stinkyfax
 #define GLYPH_ROGUE_SSTEP 20102
 #define GLYPH_ROGUE_MINTENT 20104
 #define GLYPH_ROGUE_MASTEROS 20106
+#define GLYPH_ROGUE_SHADOWGATE 25193
+#define GLYPH_ROGUE_DISPATCH 25194
+#define GLYPH_ROGUE_SLICENDICE 25195
 
 #define GLYPH_MONK_CHI 25162
 #define GLYPH_MONK_CHIBURST 25163
@@ -310,7 +339,10 @@ new g_bloodModel,g_bloodsprayModel,g_ef_ocean,g_ef_airlock_laser,g_ef_lgtning,g_
 //Totems
 new ClientTracer;
 new g_mdl_totem_h, g_mdl_totem_a, g_ef_flatflame;
+new g_chest1, g_chest2, g_chest3, g_chest4, g_chest5;
+new g_keg;
 new g_iTotems[65][10];
+new g_iRighteousShield[65];
 //Effects since 1.06
 new g_ef_bluecore;
 //shaman effects
@@ -319,6 +351,7 @@ new g_redglow1,g_blueglow1,g_plasmaember;
 new g_ef_tpbeam001, g_ef_playerredsmall, g_ef_shellchrome, g_ef_overlay;
 new g_ef_striderbulgedudvdx60, g_ef_fire01, g_ef_rollerglow;
 new g_ef_blueblackflash, g_ef_xbeam2, g_ef_striderdarkflare;
+//new g_ef_redflare;
 
 
 
@@ -398,8 +431,8 @@ new playerids[65],playerloaded[65],characterids[65][20];
 //end of vectors
 new wcHealingDone[65],wcDamageDone[65],wcDamageTaken[65],wcTotalHealing[65];
 // Boss dmg/healing done min for drops
-new g_iBossDropDmgMin=2000;
-new g_iBossDropHealMin=500;
+//new g_iBossDropDmgMin=2000;
+//new g_iBossDropHealMin=500;
 // absorb shields
 new wcClientAbsorb[65],wcManaShield[65];
 // seal store
@@ -418,6 +451,8 @@ new Float:g_fParryReduce[65]=0.0;
 new Float:g_iSpar[65][65];
 new bool:g_bSpar[65]=false;
 
+new g_iDispatch[65];
+new g_iNecrotic[65];
 
 new Handle:g_BossMod;
 new Handle:g_Heroic;

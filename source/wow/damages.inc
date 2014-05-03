@@ -157,7 +157,7 @@ stock PushHealed(const client, const amount)  {
 }
 
 //Percentage heals should not crit as they heal a set percent.
-wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
+wcHeal(client,target,heal, spellid=0, bool:cancrit=true) //Healing
 {
   //heal = HealControl(target, heal);
   SetFocusedWill(client,false);
@@ -264,6 +264,19 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
     heal = RoundToNearest(float(heal)*1.15);
   if(g_iCarry[target]>0)
     heal = RoundToNearest(float(heal)*CTF_NERF);
+  if(g_iNecrotic[client]>0)
+  {
+    if(heal>=g_iNecrotic[client])
+    {
+      heal-=g_iNecrotic[client];
+      g_iNecrotic[client]=0;
+    }
+    else
+    {
+      g_iNecrotic[client]-=heal;
+      heal=0;
+    }
+  }
   hp+=heal;
   if(maxhp<hp)
     hp=maxhp;
@@ -303,8 +316,47 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
     }
   }
   //PrintToServer("Healing done: %d target = %d, client = %d", heal, target, client);
-
+  new item[UniqueItem];
+  GetCharItem(item, client, 20);
+  if(item[Item_defId]==25246 && 80>GetLevel(client))
+    if(25 >= GetRandomInt(1,100))
+    {
+      decl Float:loc2[3];
+      GetClientAbsOrigin(client,loc2);
+      new damagetarget;
+      if(GetClientTeam(client)==2)
+        damagetarget = GetNearestClient("@ct",loc2,200.0);
+      if(GetClientTeam(client)==3)
+        damagetarget = GetNearestClient("@t",loc2,200.0);
+      if(damagetarget!=0)
+        wcSpellDamage(damagetarget,client,RoundToNearest(float(heal)*0.30), "", "",line);
+    }
   //Get heal percentage and push it to stack
+  
+  
+  new random=GetRandomInt(1,100);
+  GetCharItem(item, client, 20);
+  if(item[Item_defId]==25248 && 80>GetLevel(client))
+    if(15>=random)
+    {
+      if(GetMana(client)+20>GetMaxMana(client))
+        wcSetMana(client,GetMaxMana(client));
+      else
+        wcSetMana(client,GetMana(client)+20);
+      
+    }
+  GetCharItem(item, client, 20);
+  if(item[Item_defId]==25260 && 80>GetLevel(client))
+    if(20 >= GetRandomInt(1,100))
+      if(client==target)
+      {
+        new energyrestore = RoundToNearest(float(heal)*0.15)+2;
+        if(GetMana(client)+energyrestore>GetMaxMana(client))
+          wcSetMana(client,GetMaxMana(client));
+        else
+          wcSetMana(client,GetMana(client)+energyrestore);
+      }
+  
   new perc = RoundToNearest(float(heal) / float(GetMaxHealth(client)) * 100.0);
   PushHealed(client, perc);
   if(target!=client)
@@ -349,15 +401,19 @@ public Action:TimerDmg(Handle:timer, Handle:pack)  {
 
 //(War3_DealDamage(i,KnivesTFDamage,victim,DMG_BULLET,"knives",W3DMGORIGIN_SKILL,W3DMGTYPE_MAGIC))
 stock wcFatalDamage(attacker, victim, String:weapon[], damage=500, bool:headshot=false)  {
-  if(CSGO)  wcFatalDamageGO(attacker, victim, weapon, damage, headshot);
-  else  wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
+  if(CSGO)
+  {
+    wcFatalDamageGO(attacker,victim,weapon,damage,headshot);
+    return;
+  }
+  else
+    wcFatalDamageCS(attacker, victim, weapon, damage, headshot);
 }
 
 stock wcFatalDamageCS(attacker, victim, String:weapon[], damage=100, bool:headshot=false)
 {
   //Checks are done fbefore, so we just go straight into damage
   //type: DMG_BULLET
-
   wcKillHeadshot=headshot;
   wcKillHandled=true;
   wcKillHandled2=true;
@@ -411,15 +467,15 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   IntToString(damage,dmg_str,16);
   new String:dmg_type_str[32];
 
-  /*PrintToServer("Calling sdkhook take damage. victim %d attacker %d damage %d",victim, attacker, damage);*/
+  /*PrintToServer("Calling sdkhook take damage. victim %d attacker %d damage %d",victim, attacker, damage);
   new Handle:pack = CreateDataPack();
   WritePackCell(pack, victim);
   WritePackCell(pack, attacker);
   WritePackCell(pack, damage);
-  PushArrayCell(g_dmgArray, _:pack);
+  PushArrayCell(g_dmgArray, _:pack);*/
   /*CreateTimer(0.0, TimerDmg, pack, TIMER_HNDL_CLOSE);*/
 
-  /*SDKHooks_TakeDamage(victim, attacker, attacker, float(damage));*/
+  SDKHooks_TakeDamage(victim, attacker, attacker, float(damage), DMG_GENERIC, GetPlayerWeaponSlot(attacker, 1));
   IntToString(dmg_bullet,dmg_type_str,32);
   /*new pointHurt=CreateEntityByName("point_hurt");*/
   /*if(pointHurt)*/
@@ -440,6 +496,7 @@ stock wcFatalDamageGO(attacker, victim, String:weapon[], damage=500, bool:headsh
   /*}*/
   new String:vName[50];
   GetClientName(victim, vName, 50);
+  //PrintToChatAll("Ran wcFatalDamageGO. Victim: %d, Attacker: %d, Damage: %d", victim, attacker, damage);
   return true;
 }
 
@@ -520,18 +577,19 @@ stock wcSpellAoeDamageLocation(userid,attacker, Float:location[3],dmg,iDistance,
 }
 
 
-stock wcPhysicalDamage(userid,attacker,amount, String:amsg[]="", String:vmsg[]="", bool:reduction=false, String:source[]="")
+stock wcPhysicalDamage(userid,attacker,amount, String:amsg[]="", String:vmsg[]="", bool:reduction=false, String:source[]="", String:weapon[]="Physical",  bool:headshot=false)
 {
   /*return;*/
   new Handle:event=CreateEvent("player_hurt");
   SetEventInt(event,"userid",GetClientUserId(userid));
   SetEventInt(event,"attacker",GetClientUserId(attacker));
   SetEventInt(event,"dmg_health",amount);
-  SetEventString(event,"weapon","Physical");
+  SetEventString(event,"weapon",weapon);
   SetEventInt(event,"hitgroup",2);
   SetEventString(event,"amsg",amsg);
   SetEventString(event,"vmsg",vmsg);
   SetEventBool(event, "reduction", reduction);
+  SetEventBool(event, "headshot", headshot);
   SetEventString(event,"source",source);
   FireEvent(event);
 }

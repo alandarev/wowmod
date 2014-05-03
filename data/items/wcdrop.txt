@@ -1541,7 +1541,7 @@
     "maximum" "0.00016"
     "incriment" "0.000064"
     "set"   "101 102 103 104"
-    "announce" "1"
+    "announce" "0"
     //60/80 epic wep, 74/80 rare wep, no shields
   }
 
@@ -1588,8 +1588,8 @@
    "skillup" "390"
     "profession"  "10"
     "minlevel"  "66"
-    "minimum" "0.002"
-    "maximum" "0.006"
+    "minimum" "0.004"
+    "maximum" "0.008"
     "incriment" "0.00075"
     "id"  "20017"
   }
@@ -1599,8 +1599,8 @@
    "skillup" "410"
     "profession"  "10"
     "minlevel"  "66"
-    "minimum" "0.001"
-    "maximum" "0.003"
+    "minimum" "0.002"
+    "maximum" "0.006"
     "incriment" "0.00075"
     "id"  "20018"
   }
@@ -1610,9 +1610,23 @@
    "skillup" "425"
     "profession"  "10"
     "minlevel"  "66"
-    "minimum" "0.0005"
-    "maximum" "0.001"
+    "minimum" "0.001"
+    "maximum" "0.002"
     "incriment" "0.00075"
     "id"  "20019"
   }
+  "154"
+  {
+    "minskill"  "0"
+    "skillup" "0"
+    "profession"  "0"
+    "minlevel"  "1"
+    "minimum" "0.00003"
+    "maximum" "0.00006"
+    "incriment" "0.00005"
+    "set"   "381 382"
+    "announce" "1"
+    "autoauction" "1"
+    //40-80 legendaries
+	}
 }

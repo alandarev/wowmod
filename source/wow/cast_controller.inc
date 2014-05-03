@@ -525,7 +525,7 @@ stock GetManaName(client, String:name[])  {
     case 2: Format(name, 9, "Energy");
     case 8: Format(name, 9, "Power");
     case 9: Format(name, 9, "Energy");
-    default: Format(name, 9, "Mana");
+    default: Format(name, 9, "MP");
   }
 }
 

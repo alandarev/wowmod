@@ -14,6 +14,8 @@ new precache_laser;
 
 new const String:g_sTotemHorde[] = "models/props/wow/h_totem/totem.mdl";
 new const String:g_sTotemAlliance[] = "models/props/wow/a_totem/totem.mdl";
+
+
 public PrecacheModels()
 {
    //end of quake sounds
@@ -125,6 +127,7 @@ public PrecacheModels()
   PrecacheSound("wc/spells/corpseexplosionnew.wav");
   PrecacheSound("wc/spells/soulharvest.wav");
   PrecacheSound("wc/spells/taunt.wav");
+  PrecacheSound("wc/spells/Shield_of_the_Righteous.wav");
 
   //Monk sounds
   PrecacheSound("wc/spells/expelharm1.wav");
@@ -183,7 +186,7 @@ PrecacheHP()  {
 PrecacheCSS()	{
 
   PrecacheModel("particle/fire.vmt");
-  SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
+  //SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
   ShieldSprite=PrecacheModel("sprites/strider_blackball.vmt"); //PowerWordShield Priest
   ChaosSprite=PrecacheModel("models/manhack/blur01.vmt"); // Chaos Bolt Sprite
   g_ef_playerredsmall = PrecacheModel("sprites/player_red_small.vmt");
@@ -207,6 +210,7 @@ PrecacheCSS()	{
   g_plasmaember = PrecacheModel("sprites/plasmaember.vmt");
   g_purplelaser1 = PrecacheModel("sprites/purplelaser1.vmt");
   g_ef_yellowflare = PrecacheModel("effects/yellowflare.vmt");
+  
   g_ef_physring1 = PrecacheModel("sprites/physring1.vmt");
   g_ef_flatflame = PrecacheModel("sprites/flatflame.vmt");
   g_mdl_totem_h = PrecacheModel("models/props/wow/h_totem/totem.mdl");
@@ -237,7 +241,7 @@ PrecacheCSS()	{
   g_ef_striderdarkflare = PrecacheModel("effects/strider_dark_flare.vmt");
   g_ef_particle_noisesphere = PrecacheModel ("materials/particle/particle_noisesphere.vmt");
   g_ef_trail_blue = PrecacheModel("materials/sprites/combineball_trail_blue_1.vmt");
-  g_ef_combineball = PrecacheModel("models/Effects/combineball.mdl");
+  //g_ef_combineball = PrecacheModel("models/Effects/combineball.mdl");
   g_ef_yellowflare1 = PrecacheModel("materials/sprites/yelflare1.vmt");
   g_ef_orangeflare1 = PrecacheModel("materials/sprites/orangeflare1.vmt");
   g_ef_orangelight1 = PrecacheModel("materials/sprites/orangelight1.vmt");
@@ -261,70 +265,90 @@ PrecacheCSS()	{
 }
 
 PrecacheCSGO()	{
-  g_ef_physring1 = PrecacheModel("TODO");
-  PrecacheModel("particle/star_ob_noz.vmt.vmt");
-  SWD_sprite=PrecacheModel("models/effects/splodeglass.mdl"); //ShadowWord Death Priest
-  ShieldSprite=PrecacheModel("particle/muzzleflash/noisecloud1.vmt"); //PowerWordShield Priest
-  ChaosSprite=PrecacheModel("particle/muzzleflash/noisecloud1.vmt"); // Chaos Bolt Sprite
-  g_ef_bluecore = PrecacheModel("effects/energyball.vmt");
-  g_ef_hydragutbeam = PrecacheModel("effects/blueblacklargebeam.vmt");
+  g_ef_physring1 = PrecacheModel("sprites/physring1.vmt");
+  PrecacheModel("particle/star_ob_noz.vmt");
+  //SWD_sprite=PrecacheModel("effects/bluespark.vmt"); //ShadowWord Death Priest
+  ShieldSprite=PrecacheModel("sprites/strider_blackball.vmt"); //PowerWordShield Priest
+  ChaosSprite=PrecacheModel("sprites/crystal_beam1.vmt"); // Chaos Bolt Sprite
+  g_ef_playerredsmall = PrecacheModel("sprites/player_red_small.vmt");
+  g_ef_tpbeam001 = PrecacheModel("sprites/tp_beam001.vmt");
+  g_ef_bluecore = PrecacheModel("sprites/physcannon_bluecore1b.vmt");
+  g_ef_hydragutbeampoison = PrecacheModel("sprites/hydragutbeam.vmt");
   g_ef_smoke = PrecacheModel("sprites/smoke.vmt");
-  g_ef_tp_beam001 = PrecacheModel("sprites/physbeam.vmt");
+  g_ef_tp_beam001 = PrecacheModel("sprites/tp_beam001.vmt");
   g_ef_old_xfire = PrecacheModel("sprites/xfireball3.vmt");
-  g_ef_glow1 = PrecacheModel("particle/star_noz.vmt");
+  g_ef_glow1 = PrecacheModel("sprites/glow.vmt");
   g_ef_glow01 = PrecacheModel("sprites/glow01.vmt");
-  g_ef_lgtning = PrecacheModel("particle/bendibeam.vmt");
+  g_ef_lgtning = PrecacheModel("sprites/lgtning.vmt");
   g_ef_airlock_laser = PrecacheModel("sprites/laserbeam.vmt");
-  g_ef_ocean = PrecacheModel("effect/splash3.vmt");
+  g_ef_ocean = PrecacheModel("effects/splash4.vmt");
   g_bloodModel = PrecacheModel("sprites/zerogxplode.vmt");
+  g_ef_shellchrome = PrecacheModel("sprites/shellchrome.vmt");
   g_bloodsprayModel = PrecacheModel("sprites/bloodspray.vmt");
   //g_ar2_altfire1 = PrecacheModel("effects/ar2_altfire1.vmt"); - bugged in orange box
   g_redglow1 = PrecacheModel("sprites/ledglow.vmt");
   g_blueglow1 = PrecacheModel("sprites/blueglow1.vmt");
-  g_plasmaember = PrecacheModel("particle/particle_flares/aircraft_green.vmt");
+  g_plasmaember = PrecacheModel("sprites/plasmaember.vmt");
   g_purplelaser1 = PrecacheModel("sprites/purplelaser1.vmt");
   g_ef_yellowflare = PrecacheModel("effects/yellowflare.vmt");
 
-  g_ef_flatflame = PrecacheModel("particle/fire_particle_2/fire_particle_2.vmt");
+  g_ef_flatflame = PrecacheModel("sprites/flatflame.vmt");
   g_mdl_totem_h = PrecacheModel("models/props/wow/h_totem/totem.mdl");
   g_mdl_totem_a = PrecacheModel("models/props/wow/a_totem/totem.mdl");
-  g_plasmabeam = PrecacheModel ("particle/beam_smoke_01_addself.vmt");
-  g_bluelight1 = PrecacheModel ("particle/beam_taser.vmt");
+  g_plasmabeam = PrecacheModel ("sprites/plasma1.vmt");
+  g_bluelight1 = PrecacheModel ("sprites/bluelight1.vmt");
   precache_laser=PrecacheModel("sprites/laserbeam.vmt");
+  g_ef_laserbeam=PrecacheModel("materials/sprites/laserbeam.vmt");
 
-  g_ef_splodesprite = PrecacheModel("particle/particle_flares/particle_flare_004.vmt");
+  g_ef_splodesprite = PrecacheModel("sprites/glow04.vmt");
   g_ef_bluelight = PrecacheModel ("particle/beam_taser.vmt");
   g_ef_muzzleflashX = PrecacheModel ("effects/muzzleflashX.vmt");
-  g_ef_animglow = PrecacheModel ("spritres/glow04.vmt");
-  g_ef_scanner = PrecacheModel ("decals/88.vmt");
-  g_ef_fire1 = PrecacheModel ("particle/fire_particle_2/fire_particle_2_ob.vmt");
-  g_ef_fire2 = PrecacheModel ("particle/fire_particle_2/fire_particle_2.vmt");
+  g_ef_animglow = PrecacheModel ("sprites/glow04.vmt");
+  g_ef_scanner = PrecacheModel ("sprites/scanner_bottom.vmt");
+  g_ef_fire1 = PrecacheModel ("sprites/fire.vmt");
+  g_ef_fire2 = PrecacheModel ("sprites/fire1.vmt");
   g_ef_train = PrecacheModel ("vgui/hud/icons_arrow_plain.vmt");
   //g_ef_glow = PrecacheModel ("materials/sprites/glow");
   g_ef_rollermine = PrecacheModel ("particle/particle_glow_03.vmt");
   g_ef_hydraspinalcord = PrecacheModel ("sprites/cbbl_smoke.vmt");
+  g_ef_overlay = PrecacheModel ("sun/overlay.vmt");
+  g_ef_striderbulgedudvdx60 = PrecacheModel("effects/strider_bulge_dudv_dx60.vmt");
+  g_ef_rollerglow = PrecacheModel("effects/rollerglow.vmt");
+  g_ef_hydragutbeam = PrecacheModel("effects/blueblacklargebeam.vmt");
+  g_ef_blueblackflash = PrecacheModel("sprites/blueflare1.vmt");
+  g_ef_fire01 = PrecacheModel("sprites/fire1.vmt");
+  g_ef_xbeam2 = PrecacheModel("particle/beam_taser.vmt");
+  g_ef_striderdarkflare = PrecacheModel("sprites/fire1.vmt");
   g_ef_particle_noisesphere = PrecacheModel ("particle/particle_noisesphere.vmt");
   g_ef_trail_blue = PrecacheModel("effects/bluespark.vmt");
   g_ef_yellowflare1 = PrecacheModel("materials/sprites/yelflare1.vmt");
-  g_ef_combineball = PrecacheModel("models/Effects/combineball.mdl");
-  g_ef_orangeflare1 = PrecacheModel("particle/particle_flares_aircraft_red.vmt");
-  g_ef_orangelight1 = PrecacheModel("particle/bendibeam_cheap.vmt");
+  //g_ef_combineball = PrecacheModel("sprites/strider_blackball");
+  g_ef_orangeflare1 = PrecacheModel("sprites/yelflare1.vmt");
+  g_ef_orangelight1 = PrecacheModel("sprites/orangelight1.vmt");
   g_ef_yellowglow1 = PrecacheModel("sprites/glow03.vmt");
   g_ef_WXplo1 = PrecacheModel("prites/zerogxplode.vmt");
   g_ef_greenglow1 = PrecacheModel("particle/particle_flares/aircraft_green.vmt");
   //g_ef_firecloud2 = PrecacheModel("materials/effects/fire_cloud2.vmt");
   PrecacheModel("effects/bluespark.vmt");
+  //g_ef_energyball = PrecacheModel("models/effects/energyball.mdl"); //Bad, do not use
+  //g_ef_redflare = PrecacheModel("particle/particle_flares/aircraft_red.vmt"); //Bad, do not use
 
   //ctf
   g_ctf_horde    = PrecacheModel("models/cf_models_src/ctf_80rd3.mdl");
   g_ctf_alliance = PrecacheModel("models/cf_models_src/ctf_41114nc3.mdl");
 
+  g_chest1 = PrecacheModel("models/cf_models_src/treasurechest01.mdl");
+  g_chest2 = PrecacheModel("models/cf_models_src/treasurechest02.mdl");
+  g_chest3 = PrecacheModel("models/cf_models_src/treasurechest03.mdl");
+  g_chest4 = PrecacheModel("models/cf_models_src/treasurechest04.mdl");
+  g_chest5 = PrecacheModel("models/cf_models_src/treasurechest05.mdl");
+  g_keg = PrecacheModel("models/cf_models_src/beerfest_keg_pony01.mdl");
   //CS:GO Chicken
 
 
   //DK
-  AMSSprite=PrecacheModel("particle/particle_flares/aircraft_green.vmt");
-
+  AMSSprite=PrecacheModel("sprites/plasmaember.vmt");
+  g_HaloSprite = PrecacheModel("sprites/halo01.vmt");
 }
 
 
@@ -505,7 +529,7 @@ stock SetSilence(client,Float:silence,bool:trueSilence=false)
   if(!trueSilence)
     switch(GetClass(client))  {
       case 1: return;
-      case 2: return;
+      //case 2: return;
   }
   new bool:avoid=true;
   if(!trueSilence && GetClass(client)==3)
@@ -558,19 +582,36 @@ public bool:FadeEffect(client,type,time,duration,const color[4])
 {
   if(client)
   {
-    new Handle:hBf=StartMessageOne("Fade",client);
-    if(hBf!=INVALID_HANDLE)
+    if(CSGO)
     {
-      BfWriteShort(hBf,duration);
-      BfWriteShort(hBf,time);
-      BfWriteShort(hBf,type);
-      BfWriteByte(hBf,color[0]);
-      BfWriteByte(hBf,color[1]);
-      BfWriteByte(hBf,color[2]);
-      BfWriteByte(hBf,color[3]);
-      EndMessage();
-      return true;
+      new Handle:hBf=StartMessageOne("Fade",client);
+      //new Handle:hBf=StartMessageEx("Fade", client, 1);
+      if(hBf!=INVALID_HANDLE)
+      {
+        PbSetInt(hBf, "duration", duration); //Time it takes to fade 
+        PbSetInt(hBf, "hold_time", time); //How long it stays
+        PbSetInt(hBf, "flags", (FFADE_PURGE|FFADE_IN));
+        PbSetColor(hBf, "clr", color);
+      }
+      else
+        return false;
     }
+    else
+    {
+      new Handle:hBf=StartMessageOne("Fade",client);
+      if(hBf!=INVALID_HANDLE)
+      {
+        BfWriteShort(hBf,duration);
+        BfWriteShort(hBf,time);
+        BfWriteShort(hBf,type);
+        BfWriteByte(hBf,color[0]);
+        BfWriteByte(hBf,color[1]);
+        BfWriteByte(hBf,color[2]);
+        BfWriteByte(hBf,color[3]);
+      }
+    }
+    EndMessage();
+    return true;
   }
   return false;
 }
@@ -1097,7 +1138,13 @@ public Action:EffectAoeDamage(Handle:timer, any:effid)
     }
   }
   else if(effectsdata[effid][8]==803)
+  {
     line="Plague Strike";
+    new item[UniqueItem];
+    GetCharItem(item, effectsdata[effid][2], 13);
+    if(item[Item_defId]==25258 && 80>GetLevel(effectsdata[effid][2]))
+      g_iNecrotic[effectsdata[effid][1]]+=damage;
+  }
   else if(effectsdata[effid][8]==804)
     line="Icy Touch";
   new is_immolate = effectsdata[effid][7];
@@ -1582,6 +1629,25 @@ public Action:EffectLightWellAction(Handle:timer, any:effid)
       }
     }
     wcHeal(client,targets[x],heal,0,true);
+    if(HasGlyph(client, GLYPH_PRIEST_LIGHTW))
+    {
+      new Float:bonus=1.15;
+      new Float:duration=2.0;
+
+      new Float:oldspeed=GetNormalSpeed(targets[x]);
+      new Float:newspeed=oldspeed * bonus;
+      if(newspeed>oldspeed)
+      {
+        WCMessage(client,"Battle Rush Used",client);
+        new Float:time=duration;
+        SetClientSpeed(client,newspeed);
+        new Handle:datapack=CreateDataPack();
+        WritePackCell(datapack,client); // Write the client index of owner
+        WritePackFloat(datapack,newspeed);
+        WritePackFloat(datapack,bonus);
+        CreateTimer(time,RemoveSpeedEffect2,datapack,TIMER_HNDL_CLOSE);
+      }
+    }
   }
   EmitAmbientSound("wc/spells/lightwell.wav",location);
   return Plugin_Continue;
@@ -1621,6 +1687,11 @@ public Action:Effect4Action(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   effectsdata[effid][3]--;
+  if((g_iDispatch[effectsdata[effid][1]]>0) && GetClass(effectsdata[effid][2])==2)
+  {
+    effectsdata[effid][3]=3;
+    g_iDispatch[effectsdata[effid][1]]-=1;
+  }
   decl Float:vec[3],Float:rightVec[3],Float:upVec[3];
   GetClientAbsOrigin(effectsdata[effid][1], vec);
   vec[0] -= 30;
@@ -1644,7 +1715,14 @@ public Action:Effect4Action(Handle:timer, any:effid)
         wcSpellDamage(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][4], "", "",line);
       }
     }
-
+  new item[UniqueItem];
+  GetCharItem(item, effectsdata[effid][2], 13);
+  if(item[Item_defId]==25240 && 80>GetLevel(effectsdata[effid][2]))
+    if(4 >= GetRandomInt(1,100))
+    {
+      SetCdSpell(effectsdata[effid][2], 3, 0.0, 3);
+      WCMessage(effectsdata[effid][2],"gauntlets of vancleef",effectsdata[effid][2]);
+    }
   if(wcGetTalentLevel(effectsdata[effid][2],3,1,4)>0)
   {
 
@@ -1885,6 +1963,22 @@ public Action:PWSHaste(Handle:timer, Handle:datapack)
     return Plugin_Stop;
   }
   AddHaste(client, -25.0);
+  wcRecalculateStats(client);
+  return Plugin_Stop;
+}
+public Action:Bladefist(Handle:timer, Handle:datapack)
+{
+  ResetPack(datapack); // Set the reading position to the first cell
+  new client=ReadPackCell(datapack);  // Get the client index of owner
+  if (!IsClientInGame(client))
+  {
+    return Plugin_Stop;
+  }
+  if (!IsPlayerAlive(client))
+  {
+    return Plugin_Stop;
+  }
+  AddHaste(client, -35.0);
   wcRecalculateStats(client);
   return Plugin_Stop;
 }
@@ -2213,13 +2307,23 @@ bool:Effect12(&damage, client) //Berserker Stance
    return true;
 }
 
-bool:Effect13(&damage)
+bool:Effect13(client, &damage)
 {
    decl String:line[255];
-   wcGetSpellInfo(1,12,"multi",line);
-   new Float:multi = StringToFloat(line);
-   damage = RoundToNearest (float(damage) * multi);
-   return true;
+   if(GetClass(client)==1)
+   {
+     wcGetSpellInfo(1,12,"multi",line);
+     new Float:multi = StringToFloat(line);
+     damage = RoundToNearest (float(damage) * multi);
+     return true;
+   }
+   else
+   {
+     wcGetTalentInfo(4,2,4,1,client,"reduction",line);
+     new Float:multi = StringToFloat(line);
+     damage = RoundToNearest (float(damage) * multi);
+     return true;
+   }
 }
 
 bool:Effect11(client, &damage)
@@ -2397,15 +2501,17 @@ stock SpawnTotem(Float:location[3], bool:horde, hp, type=1) {
   }
   if(horde)   {
     SetEntProp( ent, Prop_Data, "m_nModelIndex", g_mdl_totem_h );
-    if(!CSGO) {
+    if(!CSGO)
+      SetEntityModel( ent ,"models/chicken/chicken.mdl");
+    else
       SetEntityModel( ent, g_sTotemHorde );
-    }
   }
   else  {
     SetEntProp( ent, Prop_Data, "m_nModelIndex", g_mdl_totem_a );
-    if(!CSGO) {
+    if(!CSGO)
+      SetEntityModel( ent ,"models/chicken/chicken.mdl");
+    else
       SetEntityModel( ent, g_sTotemAlliance );
-    }
   }
 
   switch(type) {
@@ -2829,8 +2935,6 @@ stock Effect_m2(effid, client)
   }
 }
 
-
-
 //public Effect24(client, &damage)                                                //Death Wish
 //{
 //   decl String:line[255];
@@ -2855,6 +2959,15 @@ public Effect25(client,attacker,&damage)                                        
 
     if(absorb<damage)
     {
+      if(HasGlyph(client, GLYPH_MAGE_ICEBARRIER))
+      {
+        new hp = wcGetHealth(client);
+        new maxhp = GetMaxHealth(client);
+        hp+=RoundToNearest(maxhp*0.03);
+        if(hp>maxhp)
+          hp = maxhp;
+        wcSetHealth(client,hp);
+      }
       wcClientAbsorb[client]=0;
       /*decl String:buffer[30];*/
       /*Format(buffer,sizeof(buffer),"%T", "ice barrier absorb", client);*/
@@ -2941,6 +3054,8 @@ public Effect27(target, &damage)                                                
    decl String:line[255];
    wcGetTalentInfo(5,3,3,1,target,"multi",line);
    new Float:multi = StringToFloat(line);
+   if(HasGlyph(target, GLYPH_PRIEST_SHADOWF))
+      multi*=1.50;
    damage = RoundToNearest (float(damage) * (1+multi));
    return true;
 }
@@ -2950,6 +3065,8 @@ public Effect28(victim, &damage)                                                
    decl String:line[255];
    wcGetTalentInfo(5,3,3,1,victim,"multi",line);
    new Float:multi = StringToFloat(line)*0.5;
+   if(HasGlyph(victim, GLYPH_PRIEST_SHADOWF))
+    multi*=1.50;
    damage = RoundToNearest (float(damage) * (1-multi));
    return true;
 }
@@ -3197,11 +3314,20 @@ stock sendshakemsg(client, all:shakeflag, Float:amplitude, Float:frequency, Floa
 		
 	}
 
-	BfWriteByte(shakemsg, shakeflag);
-	BfWriteFloat(shakemsg, amplitude);
-	BfWriteFloat(shakemsg, frequency);
-	BfWriteFloat(shakemsg, duration);
-	EndMessage();
+	if(CSGO){
+    PbSetInt(shakemsg, "command", shakeflag);
+    PbSetFloat(shakemsg, "local_amplitude", amplitude);
+    PbSetFloat(shakemsg, "frequency", frequency);
+    PbSetFloat(shakemsg, "duration", duration);
+    EndMessage();
+  }
+  else{
+    BfWriteByte(shakemsg, shakeflag);
+    BfWriteFloat(shakemsg, amplitude);
+    BfWriteFloat(shakemsg, frequency);
+    BfWriteFloat(shakemsg, duration);
+    EndMessage();
+  }
 	
 }
 
@@ -3254,19 +3380,19 @@ Effect43(client,&damage)
   damage=RoundToNearest(damage*(1+StringToFloat(line)));
 }
 
-Effect44(client,&damage)
+/*Effect44(client,&damage)
 {
   decl String:line[255];
   wcGetTalentInfo(4,2,4,1,client,"multi",line);
   damage=RoundToNearest(damage*(1+StringToFloat(line)));
-}
+}*/
 
 Effect45(client,&damage)
 {
   damage=RoundToNearest(damage*(1-GetNBlessing(client)));
 }
 
-public Action:EffectCursedSoulDamage(Handle:timer, any:effid)
+public Action:EffectCursedSoulDamage(Handle:timer, any:effid) //Cursed Soul effect
 {
   if (effectsdata[effid][0]==0)
     return Plugin_Stop;
@@ -3308,13 +3434,28 @@ public Action:EffectCursedSoulDamage(Handle:timer, any:effid)
     multi = (1.10 - float(wcGetHealth(victim)) / float(GetMaxHealth(victim))) * multi;
   if(healthp < 15)
     multi = (1.30 - float(wcGetHealth(victim)) / float(GetMaxHealth(victim))) * multi;
+  if(HasGlyph(client, GLYPH_WARLOCK_CURSEDSOUL))
+  {
+    new Float:percentage = (1.5 - float(wcGetHealth(client)) / float(GetMaxHealth(victim)));
+    if(1.0>percentage || percentage > 1.5)
+      percentage=1.0;
+    multi*=percentage;
+  
+  }
   new damage=effectsdata[effid][4] + GetSpellDmg(client,multi);
   new aoe = effectsdata[effid][5];
 
   wcSpellAoeDamage(effectsdata[effid][1],effectsdata[effid][2],damage,aoe,effectsdata[effid][6],line);
   new Float:distance=float(aoe);
   new Float:location[3];
-  GetClientAbsOrigin(effectsdata[effid][2], location);
+  GetClientAbsOrigin(effectsdata[effid][1], location);
+  location[2]+=40;
+  VS_BeamRingPoint(location, 90.00, 60.00, g_ef_glow1, g_ef_lgtning, 10, 10, 3.00, 50.00, 0.00, {43, 87, 111, 255}, 60, 0);
+  location[2]-=40;
+  VS_GlowSprite(location, g_blueglow1, 3.00, 1.00, 255);
+  VS_BeamRingPoint(location, 20.00, 99.00, g_blueglow1, g_blueglow1, 100, 300, 1.00, 10.00, 0.80, {255, 255, 255, 255}, 20, 0);
+  VS_BeamRingPoint(location, 25.00, 5.00, g_blueglow1, g_blueglow1, 100, 300, 0.5, 99.00, 0.00, {255, 255, 255, 255}, 20, 0);
+  
   new targets[MAXPLAYERS];
   new amount;
   new team = effectsdata[effid][6];
@@ -3752,4 +3893,169 @@ public Action:EffectUnchaining(Handle:timer, Handle:datapack)
     g_fUnchaining[client]=0.0;
     WCMessage(client,"Unchaining end",client);
   }
+}
+public Effect59(client) //Energetic Recovery
+{
+  decl String:line[255];
+  new Float:accuracy = GetBonusAccuracy(client)+GetAccuracy(client);
+  new Float:random = GetRandomFloat(0.0,1.0);
+  if(accuracy>random)
+  {
+    wcGetTalentInfo(2,2,2,2,client,"restore",line);
+    new heal = RoundToNearest(StringToFloat(line)*float(GetMaxHealth(client)));
+    wcHeal(client,client,heal,0,true);
+  }
+}
+
+public EffectSun(client)
+{
+  new Float:location2[3];
+  GetClientAbsOrigin(client,location2);
+  location2[2]+=600;
+  VS_GlowSprite(location2, g_ef_orangeflare1, 8.0, 2.00, 255);
+  new Float:location[3];
+  new amount = 12;
+  for (new x=0;x<=(amount-1);x++)
+  {
+    location[2]=location2[2]-GetRandomFloat(50.0, 75.0);
+    location[1]=location2[1]-GetRandomFloat(50.0, 85.0);
+    location[0]=location2[0]-GetRandomFloat(50.0, 85.0);
+    VS_BeamPoints(location2, location, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 1, 5, 8.00, 1.25, 1.75, 1, 0.00, {253, 187, 66, 120}, 20);
+  }
+
+  GetClientAbsOrigin(client,location);
+  new ticks = 8;
+  new effid=CreateEffectData(0,client,ticks,0,_:location[0],0,_:location[1],_:location[2],g_RoundCount,0);
+  if(effid!=0)
+  {
+    CreateTimer(0.1, EffectSunCreate, effid, TIMER_REPEAT);
+  }
+  WCMessage(client,"sun cast",client);
+}
+
+
+public Action:EffectSunCreate(Handle:timer, any:effid)
+{
+  if (effectsdata[effid][0]==0) //empty effectdata
+    return Plugin_Stop;
+  if (!IsClientInGame(effectsdata[effid][2]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (effectsdata[effid][3]<=0) //ticks
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (effectsdata[effid][9]!=g_RoundCount)
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  effectsdata[effid][3]--; //expend one tick and continue
+
+  new Float:location[3];
+  location[0] = Float:effectsdata[effid][5];
+  location[1] = Float:effectsdata[effid][7];
+  location[2] = Float:effectsdata[effid][8];
+
+  new client=effectsdata[effid][2];
+  new targets[MAXPLAYERS];
+  new team=GetClientTeam(client);
+  new amount;
+  if(team==3)
+    amount=GetNearClients("@ct",location,targets,300.0);
+  if(team==2)
+    amount=GetNearClients("@t",location,targets,300.0);
+  decl String:name[255],String:name2[255];
+  GetClientName(client,name,sizeof(name));
+  new String:stargets[255];
+  new heal=GetSpellDmg(client,0.03);
+  heal+=2;
+  for (new x=0;x<=(amount-1);x++)
+  {
+    GetClientName(targets[x],name2,sizeof(name2));
+    if(x>0)
+    Format(stargets,sizeof(stargets),"%s, %s",stargets,name2);
+    else
+    Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
+    new healed=wcHeal(client,targets[x],heal,0,true);
+    if(targets[x]!=client)
+    {
+      WCMessage(targets[x],"sun target",targets[x],name,healed);
+    }
+  }
+  if(amount==0)
+  Format(stargets,sizeof(stargets),"%T","nobody",client);
+  WCMessage(client,"sun caster",client,stargets,heal);
+  
+  
+  
+  
+  
+  
+  return Plugin_Continue;
+}
+
+
+public Action:CastAtiesh(Handle:timer, any:client)
+{
+  if(!IsClientInGame(client) || !IsPlayerAlive(client))  return;
+  WCMessage(client,"atiesh cast all",client);
+  new clients[MAXPLAYERS];
+  new team=GetClientTeam(client);
+  new amount;
+  if(team==2)
+    amount=FindMatchingPlayers("@t",clients);
+  if(team==3)
+    amount=FindMatchingPlayers("@ct",clients);
+  for(new i=0;i<amount;i++)
+  {
+    if(IsClientInGame(clients[i]))
+      if(GetClass(clients[i])!= 1 || GetClass(clients[i])!= 2 || GetClass(clients[i])!= 8 || GetClass(clients[i])!= 9)
+      {
+        CastWisdom(clients[i],6);
+      }
+  }
+}
+
+public SenJin(userid,attacker)
+{
+  decl String:name[50],String:victimname[50];
+  GetClientName(attacker,name,sizeof(name));
+  GetClientName(userid,victimname,sizeof(victimname));
+  new tickdelay=KvGetNum(effectsdb,"tickdelay",0);
+  new ticks=3;
+  new tickdamage=4;
+  new Float:multi=0.08;
+  tickdamage+=RoundToNearest(float(GetDamage(attacker))*multi);
+  WCMessage(attacker,"senjin casted",attacker,victimname,tickdamage);
+  WCMessage(userid,"senjin casted victim",userid,name,tickdamage);
+  //creating visual effect
+  decl Float:location[3];
+  GetClientAbsOrigin(attacker,location);
+  VS_BeamRingPoint(location, 15.00, 20.00, g_ef_glow01, g_ef_glow01, 0, 0, 0.50, 1.50, 0.00, {5, 154, 99, 130}, 5, 0);
+  // end of visual effect
+  new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid],GetClientDeaths(userid));
+  if(effid!=0)
+  {
+    CreateTimer(float(tickdelay), Effect4Action, effid, TIMER_REPEAT);
+  }
+}
+public Action:Guldan(Handle:timer, Handle:datapack)
+{
+  ResetPack(datapack); // Set the reading position to the first cell
+  new client=ReadPackCell(datapack);  // Get the client index of owner
+  if (!IsClientInGame(client))
+  {
+    return Plugin_Stop;
+  }
+  if (!IsPlayerAlive(client))
+  {
+    return Plugin_Stop;
+  }
+  AddHaste(client, -10.0);
+  wcRecalculateStats(client);
+  return Plugin_Stop;
 }
