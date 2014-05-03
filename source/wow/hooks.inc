@@ -1801,6 +1801,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(g_iRenewingGlyph[victim]>0)
     damagemulti*=1.00-(((g_iRenewingGlyph[victim]*0.025+0.025)*0.66)+0.017);
 
+    
+
+    
   new hpRestoreTo = victim;
   if((attacker > 0) && (victim > 0) && (redirection > 0) && (redirectTo > 0) )
   {
@@ -2007,6 +2010,16 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     }
     else if(StrEqual(weaponname,"Physical",false)) //physical damage
     {
+      if(CSGO) //CS:GO Weapon balancing
+      {
+        new wepp = GetEntDataEnt2(victim, ACTIVEWEAPON);
+        decl String:A_weapon[50];
+        GetEdictClassname(wepp, A_weapon, sizeof(A_weapon));
+        if(StrEqual("weapon_m4a1",A_weapon))
+          damagemulti*1.10;
+        if(StrEqual("weapon_m4a1-S",A_weapon))
+          damagemulti*1.10;
+      }
       new bool:red = GetEventBool(event, "reduction");
       if(GetStance(attacker)==2)
         damagemulti *= 1.1;
