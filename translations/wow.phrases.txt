@@ -239,7 +239,7 @@
   }
   "prof warning"
   {
-    "en"  "YOU WILL LOOSE SKILLS AND KNOWLEDGE OF CURRENT"
+    "en"  "YOU WILL LOSE SKILLS AND KNOWLEDGE OF CURRENT"
   }
   "prof_0"
   {
@@ -335,11 +335,11 @@
 
   "change prof1"
   {
-    "en"  "Change Profession !1!, YOU WILL LOOSE SKILL"
+    "en"  "Change Profession !1!, YOU WILL LOSE SKILL"
   }
   "change prof2"
   {
-    "en"  "Change Profession !2!, YOU WILL LOOSE SKILL"
+    "en"  "Change Profession !2!, YOU WILL LOSE SKILL"
   }
   "failed drop"
   {
@@ -5792,9 +5792,9 @@
   {
     "en"  	"Colossus Smash"
   }
-  "Master of Deception name"
+  "Bandit's Guile name"
   {
-    "en"  	"Master of Deception"
+    "en"  	"Bandit's Guile"
   }
   "Filthy Tricks name"
   {
@@ -5816,13 +5816,13 @@
   {
     "en"  	"Improved Cheat Death"
   }
-  "Master of Subtlety name"
+  "Cut to the Chase name"
   {
-    "en"  	"Master of Subtlety"
+    "en"  	"Cut to the Chase"
   }
-  "Nightstalker name"
+  "Vitality name"
   {
-    "en"   "Nightstalker"
+    "en"   "Redbull"
   }
   "Preparation name"
   {
@@ -7038,9 +7038,9 @@
   {
     "en"		"<Passive> Your attacks have a chance to reduce the enemy's armor and deal extra damage.\n    Rank 1: 10%% chance, 30%% reduction\n    Rank 2: 20%% chance, 30%% reduction"
   }
-  "Master of Deception info"
+  "Elusiveness info"
   {
-    "en"		"<Passive> Increases your maximum stealth. Also increases your stealth in Master of Subtlety.\n    Rank 1: +1%% maximum stealth\n    Rank 2: +2%% maximum stealth\n    Rank 3: +3%% maximum stealth"
+    "en"		"<Passive> You take less damage while Vanished.\n    Rank 1: -25%% damage taken\n    Rank 2: -50%% damage taken\n    Rank 3: -75%% damage taken"
   }
   "Filthy Tricks info"
   {
@@ -7062,13 +7062,13 @@
   {
     "en"		"<Passive> Cheat Deathing heals you for 15%% of your maximum health"
   }
-  "Master of Subtlety info"
+  "Cut to the Chase info"
   {
-    "en"		"<Passive> Makes you partially stealthed while moving with your knife out and increases your knife damage.\n    Rank 1: 57%% invisibility, +7.5%% knife damage\n    Rank 2: 65%% invisibility, +15%% knife damage"
+    "en"		"<Passive> Your Ambush deals more damage the higher the target's health %% is.\n    Rank 1: +50%% damage at maximum health\n    Rank 2: +100%% damage at maximum health"
   }
-  "Nightstalker info"
+  "Vitality info"
   {
-    "en" "<Passive> Reduces the time it takes to become invisible.\n    Rank 1: -15%% stealth time\n    Rank 2: -30%% stealth time"
+    "en" "<Passive> Increases your maximum energy and energy regeneration.\n    Rank 1: +10 energy, +1 energy/second\n    Rank 2: +20 energy, +2 energy/second\n    Rank 3: +30 energy, +3 energy/second"
   }
   "Preparation info"
   {
@@ -7078,9 +7078,9 @@
   {
     "en" "<Passive> Increases the agility multiplier of your Sinister Strike\n    Rank 1: +15%% increase\n    Rank 2: +30%% increase"
   }
-  "Elusiveness info"
+  "Bandit's Guile info"
   {
-    "en" "<Passive> Removes you from the radar while invisible.\n    Rank 1: Stealth Only"
+    "en" "<Passive> You deal more damage the closer you are to the target.\n    Rank 1: Maximum: +30%% damage"
   }
   "Slaughter from the Dark info"
   {
@@ -9261,7 +9261,7 @@
   }
   "Wc Tips Msg 20"
   {
-    "en"  "Did you know @lightgreenScout @defaulthas increased damage? It's pretty deadly with Rogue's @lightgreenShadow Blades!"
+    "en"  "I'm just really glad you can't get @greenOverkill @defaultwith @greenShadow Dance! @defaultFor now at least..."
   }
   "Wc Tips Msg 21"
   {
@@ -9273,7 +9273,7 @@
   }
   "Wc Tips Msg 23"
   {
-    "en"  "There's two kinds of people in this world: Those who like @lightgreenWoWmod, @defaultand those who don't matter."
+    "en"  "@greenTreasurechests @defaultare sometimes hidden out of plain sight. Try climbing on top of crates to find them!"
   }
   "Wc Tips Msg 24"
   {
@@ -10160,13 +10160,13 @@
   {
     "en"  "@lightgreenYour next active spell will have no cooldown."
   }
-  "Shadow Blades name"
+  "Shadow Dance name"
   {
-    "en" "Shadow Blades"
+    "en" "Shadow Dance"
   }
-  "Shadow Blades info"
+  "Shadow Dance info"
   {
-    "en" "<Passive> Your first attack from stealth will do increased damage. The higher stealth, the higher damage"
+    "en" "<Active> For the next 2 seconds, your backstabs will also proc Ambush"
   }
   "shadow blade"
   {
@@ -10594,6 +10594,16 @@
   {
     "#format" "{1:i}"
     "en" "Your @lightgreenFiery Spinning Crane Kick @defaultdoes @lightgreen{1} @defaultdamage to @greennobody"
+  }
+  "shadowdance cast"
+  {
+    "#format" "{1:f}"
+    "en" "Your @greenBackstabs @defaultwill also proc @greenAmbush @defaultfor the next @lightgreen{1} @defaultseconds."
+  }
+  "shadowdance end"
+  {
+    "#format" "{1:i}"
+    "en" "@greenShadow Dance @defaultends. @greenYou @defaultdealt @lightgreen{1} @defaultdamage during the duration."
   }
 }
 

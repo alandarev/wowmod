@@ -1801,8 +1801,24 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(g_iRenewingGlyph[victim]>0)
     damagemulti*=1.00-(((g_iRenewingGlyph[victim]*0.025+0.025)*0.66)+0.017);
 
-    
-
+  if(CheckRequirements(attacker,2,1,3,3))
+  {
+    decl Float:vicloct[3];
+    decl Float:attloct[3];
+    GetClientAbsOrigin(attacker,attloct);
+    GetClientAbsOrigin(victim,vicloct);
+    new Float:locdis=GetDistanceBetween(location,loc2);
+    new Float:damageincrease=1.0 + (15.0 / locdis)
+    if(damageincrease>1.30)
+      damageincrease=1.30;
+    damagemulti*=damageincrease
+  }
+  if(bVanish[victim])
+    if(CheckRequirements(victim,2,1,1,1))
+    {
+      wcGetTalentInfo(2,1,1,1,owner,"multi",line);
+      damagemulti*=StringToFloat(line);
+    }
     
   new hpRestoreTo = victim;
   if((attacker > 0) && (victim > 0) && (redirection > 0) && (redirectTo > 0) )
@@ -1838,7 +1854,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     {
       AddEMsgAff("taunt",true);
     }
-    if(CheckRequirements(victim,2,1,2,3) && HasGlyph(victim, GLYPH_ROGUE_MASTEROS))
+    /*if(CheckRequirements(victim,2,1,2,3) && HasGlyph(victim, GLYPH_ROGUE_MASTEROS))
     {
       new weap = GetEntDataEnt2(victim, ACTIVEWEAPON);
       decl String:S_weapon[50];
@@ -1848,7 +1864,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         wcGetTalentInfo(2,1,2,3,victim,"glyph",line);
         damagemulti*=1.0-StringToFloat(line);
       }
-    }
+    }*/
     if (StrEqual(weaponname,"Spell",false)) //spell damage
     {
       if(IsMageInvis(attacker))
@@ -2169,7 +2185,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       if(hasCurse(attacker))
       damagemulti*=(1.0-getCursePower(attacker));
       damagemulti*=getDamageBuff(attacker);
-      if(CheckRequirements(attacker,2,1,4,1))
+      /*if(CheckRequirements(attacker,2,1,4,1))
       {
         new stealth = GetStealth(attacker);
         if((stealth<=240) && (bVanish[attacker]==false) && (stealth>1)) {
@@ -2180,7 +2196,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           GetClientAbsOrigin(attacker,location);
           EmitAmbientSound("wc/spells/strike.wav",location);
         }
-      }
+      }*/
       if(CheckRequirements(attacker,2,3,3,2))
       {
         new Float:currenthealth = float(wcGetHealth(victim)) / float(GetMaxHealth(victim));
@@ -2216,19 +2232,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
 
 
       }
-      if(GetClientTeam(victim)!=GetClientTeam(attacker))
+      
+      if(bVanish[attacker] || g_iShadowDance[attacker]>0)
       {
-        new bool:pass=true;
-        if((StrEqual(weaponname,"m3")) || (StrEqual(weaponname,"xm1014")))
-        if(GetRandomInt(1,2)==1)
-        pass=false;
-        wcRunEffects(attacker,victim,damage,false,pass,1,olddmg,weaponname,bonushit,bCS);
-        new tmp1=damage;
-        wcRunEffects(attacker,victim,damage,false,pass,2,olddmg,weaponname,bonushit,bCS);
-
-        damage=RoundToNearest(damagemulti*damage);
-        if(bVanish[attacker])
-        {
           decl Float:clienta[3],Float:targeta[3];
           GetClientEyeAngles(attacker, clienta);
           GetClientEyeAngles(victim, targeta);
@@ -2247,7 +2253,17 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           {
             wcGetTalentInfo(2,3,2,1,attacker,"increment",line);
             new Float:talentbonus=StringToFloat(line);
-            damagemulti*=(1.30+talentbonus);
+            
+            new hp = wcGetHealth(attacker);
+            new maxhp = GetMaxHealth(attacker);
+            
+            wcGetTalentInfo(2,1,2,3,attacker,"multi",line);
+            new Float:cttc=StringToFloat(line);
+            cttc*=float(hp)/float(maxhp);
+            if(CheckRequirements(attacker,2,1,2,3))
+              damagemulti*=(1.30+talentbonus)*cttc;
+            else
+              damagemulti*=(1.30+talentbonus);
             //damagemulti*=(1.5+talentbonus)*GetWeaponSpeed(attacker, true);
 
             /*decl String:buffer[30];*/
@@ -2280,7 +2296,20 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           color[x]=255;
           SetClientColor(attacker,color);
           bVanish[attacker]=false;
-        }
+      }
+      
+      if(GetClientTeam(victim)!=GetClientTeam(attacker))
+      {
+        new bool:pass=true;
+        if((StrEqual(weaponname,"m3")) || (StrEqual(weaponname,"xm1014")))
+        if(GetRandomInt(1,2)==1)
+        pass=false;
+        wcRunEffects(attacker,victim,damage,false,pass,1,olddmg,weaponname,bonushit,bCS);
+        new tmp1=damage;
+        wcRunEffects(attacker,victim,damage,false,pass,2,olddmg,weaponname,bonushit,bCS);
+
+        damage=RoundToNearest(damagemulti*damage);
+        
         LowLvlDmg(victim,attacker,damage,false);
         new vlevel = GetLevel(victim);
         new alevel = GetLevel(attacker);
@@ -2343,6 +2372,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     SetEventInt(event,"dmg_health",damage);
     wcDamageDone[attacker]+=damage;
     wcDamageTaken[victim]+=damage;
+    if(g_iShadowDance[attacker]>0)
+      g_iShadowDamageDealt[attacker]+=damage;
     if(IsPlayerAlive(victim))
       wcDealDamage(victim,attacker,damage,weaponname,headshot);
 
@@ -2355,7 +2386,6 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       new heal = RoundToCeil(talentBonus * float(damage));
       wcHeal(victim, owner, heal,0,false);
     }
-
     SpendFreeze(victim,damage);
   }
   return Plugin_Continue;

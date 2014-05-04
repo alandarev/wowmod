@@ -480,9 +480,15 @@ public wcRecalculateStats(client) { //Stats
   wcClientsStats[id][MAXHP] *= 1.08;
 
   if(GetClass(client)!= 1 && GetClass(client)!= 2 && GetClass(client)!= 8 && GetClass(client) != 9)
-  wcClientsStats[id][MAXMP]=30.0+float(GetLevel(client))*1.3+float(GetInt(client)+GetBonusInt(client))*5.0+wcClientsBonusStats[id][MAXMP];
+    wcClientsStats[id][MAXMP]=30.0+float(GetLevel(client))*1.3+float(GetInt(client)+GetBonusInt(client))*5.0+wcClientsBonusStats[id][MAXMP];
   else
-  wcClientsStats[id][MAXMP]=100.0+wcClientsBonusStats[id][MAXMP];
+    wcClientsStats[id][MAXMP]=100.0+wcClientsBonusStats[id][MAXMP];
+  if(CheckRequirements(client,2,1,3,2))
+  {
+    decl String:line[255];
+    wcGetTalentInfo(2,1,3,2,client,"energy",line);
+    wcClientsStats[id][MAXMP]=100.0+wcClientsBonusStats[id][MAXMP]+StringToFloat(line);
+  }
 
 
   wcClientsStats[id][MPREGEN]=1.0+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN];

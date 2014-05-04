@@ -25,7 +25,9 @@ new iPDModules = 8; //should be 9 to include player models
 new g_iFlameShock[65];
 new g_iCarry[65]; //To mark a target as the carry
 new gPDModules[PDModule]  = { 900, 300, 400, 200, 400, 300, 1000, 1000, 900 };
-new g_iShieldStack[65]=0;
+new g_iShieldStack[65];
+new g_iShadowDance[65];
+new g_iShadowDamageDealt[65];
 
 new String:sPDModules[PDModule][] = { "Basic, is required to have premium account",
   "Reserved Slot for ALL servers",

@@ -1099,33 +1099,30 @@
             {
               "0"
               {
-              "name"  "Master of Deception"
+              "name"  "Elusiveness"
                 "max"  "3"
                 "saveid"  "1"
               }
               "1"
               {
-              "increment"  "1"
-              "alphai"  "5"
-                "name"  "Master of Deception"
+                "name"  "Elusiveness"
                 "max"  "3"
                 "saveid"  "1"
+                "multi" "0.75"
               }
               "2"
               {
-              "increment"  "2"
-              "alphai"  "10"
-                "name"  "Master of Deception"
+                "name"  "Elusiveness"
                 "max"  "3"
                 "saveid"  "1"
+                "multi" "0.50"
               }
               "3"
               {
-              "increment"  "3"
-              "alphai"  "15"
-                "name"  "Master of Deception"
+                "name"  "Elusiveness"
                 "max"  "3"
                 "saveid"  "1"
+                "multi" "0.25"
               }
             }
           "2"
@@ -1188,23 +1185,25 @@
           {
             "0"
             {
-              "name"  "Nightstalker"
+              "name"  "Improved Blind"
                 "max" "2"
-                "saveid"  "m"
+                "saveid"  "l"
             }
             "1"
             {
-              "name"  "Nightstalker"
+              "name"  "Improved Blind"
                 "max" "2"
-                "saveid"  "m"
-                "multi" "0.15"
+                "saveid"  "l"
+                "cdreduction" "2.5"
+                "manared" "15"
             }
             "2"
             {
-              "name"  "Nightstalker"
+              "name"  "Improved Blind"
                 "max" "2"
-                "saveid"  "m"
-                "multi" "0.3"
+                "saveid"  "l"
+                "cdreduction" "5.0"
+                "manared" "30"
             }
           }
         }
@@ -1264,26 +1263,22 @@
         {
           "0"
           {
-            "name"  "Master of Subtlety"
+            "name"  "Cut to the Chase"
               "max"  "2"
               "saveid"  "6"
           }
           "1"
           {
-            "multi"  "0.07"
-              "glyph" "0.03"
-              "alpha" "110"
-              "name"  "Master of Subtlety"
+              "multi"  "1.50"
+              "name"  "Cut to the Chase"
               "max"  "2"
               "saveid"  "6"
 
           }
           "2"
           {
-            "multi"  "0.15"
-              "glyph" "0.05"
-              "alpha" "90"
-              "name"  "Master of Subtlety"
+              "multi"  "2.00"
+              "name"  "Cut to the Chase"
               "max"  "2"
               "saveid"  "6"
           }
@@ -1348,46 +1343,48 @@
         {
           "0"
           {
-            "name"  "Improved Blind"
+            "name"  "Vitality"
               "max" "3"
               "saveid"  "l"
+              "energy"  "0.0"
+              "regen" "0"
           }
           "1"
           {
-            "name"  "Improved Blind"
+            "name"  "Vitality"
               "max" "3"
               "saveid"  "l"
-              "cdreduction" "2.0"
-              "manared" "10"
+              "energy"  "10.0"
+              "regen" "1"
           }
           "2"
           {
-            "name"  "Improved Blind"
+            "name"  "Vitality"
               "max" "3"
               "saveid"  "l"
-              "cdreduction" "4.0"
-              "manared" "20"
+              "energy"  "20.0"
+              "regen" "2"
           }
           "3"
           {
-            "name"  "Improved Blind"
+            "name"  "Vitality"
               "max" "3"
               "saveid"  "l"
-              "cdreduction" "6.0"
-              "manared" "30"
+              "energy"  "30.0"
+              "regen" "3"
           }
         }
         "3"
         {
           "0"
           {
-            "name"  "Elusiveness"
+            "name"  "Bandit's Guile"
             "max" "1"
             "saveid"  "o"
           }
           "1"
           {
-            "name"  "Elusiveness"
+            "name"  "Bandit's Guile"
             "max" "1"
             "saveid"  "o"
           }
@@ -1400,16 +1397,22 @@
         {
           "0"
           {
-            "name"  "Shadow Blades"
+            "name"  "Shadow Dance"
             "max"  "1"
             "saveid"  "7"
           }
           "1"
           {
-            "name"  "Shadow Blades"
+            "name"  "Shadow Dance"
             "max"  "1"
             "saveid"  "7"
-            "multi" "25" //1 + Stealth(alpha) / multi = bonus damage
+            "cooldowntype" "12"
+            "cooldown"  "20.0"
+            "duration"  "2.0"
+            "event"  "player_cast"
+            "active"  "1"
+            "talentid"  "6"
+            "cost"  "40"
           }
         }
         "2"

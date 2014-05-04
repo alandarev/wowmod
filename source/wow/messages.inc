@@ -309,6 +309,10 @@ public Action:ManaTimer(Handle:timer, any:temp)
           
           if(GetMonkStance(x)==2)
             mana+=1;
+          decl String:lainu[255];
+          wcGetTalentInfo(2,1,3,2,x,"regen",lainu);
+          mana+=StringToInt(lainu);
+            
           mana+=5;
           if(mana>maxmana)
             mana=maxmana;

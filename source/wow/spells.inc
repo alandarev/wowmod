@@ -6233,10 +6233,10 @@ public wcRunSpell_2_12(spellid,race,client) //Blind
   new cdtype=StringToInt(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line);
-  wcGetTalentInfo(2,1,3,2,client,"cdreduction",line);
+  wcGetTalentInfo(2,1,1,4,client,"cdreduction",line);
   cd-=StringToFloat(line);
   new manareq = GetSpellCost(client, spellid);
-  wcGetTalentInfo(2,1,3,2,client,"redmana",line);
+  wcGetTalentInfo(2,1,1,4,client,"redmana",line);
   manareq-=StringToInt(line);
   wcSetMana(client,GetMana(client)-manareq);
   SetCdSpell(client, cdtype, cd, spellid);

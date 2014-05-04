@@ -7912,10 +7912,35 @@ public Action:RemoveRighteous(Handle:timer, any:client)
 }
 
 
+public wcRunTalent_2_Shadowdance(client) //Shadow Dance
+{
+  decl String:line[255];
+  wcGetTalentInfo(2,1,4,1,client,"cost",line);
+  if(GetMana(client)>=StringToInt(line))
+  {
+    wcSetMana(client,GetMana(client)-cost);
+    g_iShadowDance[client]=1;
+    wcGetTalentInfo(2,1,4,1,client,"cooldowntype",line);
+    new cdtype=StringToInt(line);
+    wcGetTalentInfo(2,1,4,1,client,"cooldown",line);
+    new Float:cd=StringToFloat(line);
+    SetCdSpell(client,cdtype,cd, 0, "Shadow Dance");
+    wcGetTalentInfo(2,1,4,1,client,"duration",line);
+    new Float:duration=StringToFloat(line);
+    CreateTimer(duration,RemoveShadowDance,client);
+    WCMessage(client,"shadowdance cast",client,duration);
+  }
+  else
+    WCMessage(client,"no energy",client);
+}
 
 
-
-
+public Action:RemoveShadowDance(Handle:timer, any:client)
+{
+  g_iShadowDance[client]=0;
+  WCMessage(client,"shadowdance end",client,g_iShadowDamageDealt[client]);
+  g_iShadowDamageDealt[client]=0;
+}
 
 
 
