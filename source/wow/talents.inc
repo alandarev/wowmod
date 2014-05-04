@@ -7918,7 +7918,7 @@ public wcRunTalent_2_Shadowdance(client) //Shadow Dance
   wcGetTalentInfo(2,1,4,1,client,"cost",line);
   if(GetMana(client)>=StringToInt(line))
   {
-    wcSetMana(client,GetMana(client)-cost);
+    wcSetMana(client,GetMana(client)-StringToInt(line));
     g_iShadowDance[client]=1;
     wcGetTalentInfo(2,1,4,1,client,"cooldowntype",line);
     new cdtype=StringToInt(line);

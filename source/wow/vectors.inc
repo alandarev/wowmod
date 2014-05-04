@@ -1672,8 +1672,8 @@ public wcRunSpell(spellid,race,&tmp1,&tmp2,&tmp3,&any:tmp4,&tmp5,&tmp6,&tmp7,&tm
             wcRunSpell_2_9(spellid,race,tmp1); //Cloak of Shadow
           case 10:
             wcRunSpell_2_10(spellid,race,tmp1); //Slice & Dice
-          case 11:
-            wcRunSpell_2_11(spellid,race,tmp1); //Stealth
+          //case 11:
+            //wcRunSpell_2_11(spellid,race,tmp1); //Stealth
           case 12:
             wcRunSpell_2_12(spellid,race,tmp1); //Blind
           case 13:

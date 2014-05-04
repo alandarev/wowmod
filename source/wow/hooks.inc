@@ -1807,16 +1807,16 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     decl Float:attloct[3];
     GetClientAbsOrigin(attacker,attloct);
     GetClientAbsOrigin(victim,vicloct);
-    new Float:locdis=GetDistanceBetween(location,loc2);
-    new Float:damageincrease=1.0 + (15.0 / locdis)
+    new Float:locdis=GetDistanceBetween(vicloct,attloct);
+    new Float:damageincrease=1.0 + (15.0 / locdis);
     if(damageincrease>1.30)
       damageincrease=1.30;
-    damagemulti*=damageincrease
+    damagemulti*=damageincrease;
   }
   if(bVanish[victim])
     if(CheckRequirements(victim,2,1,1,1))
     {
-      wcGetTalentInfo(2,1,1,1,owner,"multi",line);
+      wcGetTalentInfo(2,1,1,1,attacker,"multi",line);
       damagemulti*=StringToFloat(line);
     }
     
