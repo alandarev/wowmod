@@ -1102,6 +1102,7 @@
               "name"  "Elusiveness"
                 "max"  "3"
                 "saveid"  "1"
+                "multi" "1.00"
               }
               "1"
               {

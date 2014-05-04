@@ -2827,8 +2827,8 @@ stock bool:IsClearPath(Float:loc[3],Float:loc2[3],target=-1)
 
 stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false, Float:MAXDIST=0.0)
 {
-  if(CSGO)
-    value*=2.0;
+  //if(CSGO)
+    //value*=1.25;
   decl Float:loc[3],Float:view[3];
   GetClientEyePosition(client,loc);
   GetClientEyeAngles(client, view);

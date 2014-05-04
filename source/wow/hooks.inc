@@ -1816,7 +1816,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(bVanish[victim])
     if(CheckRequirements(victim,2,1,1,1))
     {
-      wcGetTalentInfo(2,1,1,1,attacker,"multi",line);
+      wcGetTalentInfo(2,1,1,1,victim,"multi",line);
       damagemulti*=StringToFloat(line);
     }
     
