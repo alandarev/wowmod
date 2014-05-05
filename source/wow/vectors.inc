@@ -2887,11 +2887,12 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
     if(smartHeal) {
       if(targetPriority > GetHealPriority(x, ignoreHP))
       continue;
+      PrintToChatAll("7.5: %i",target);
     }
-    PrintToChatAll("8: %i",target);
     else  {
       if((dif[0]>angelrec[0]) && (dif[1]>angelrec[1]))
-      continue; //if not smart heal, choose the one who is closer to center
+        continue; //if not smart heal, choose the one who is closer to center
+      PrintToChatAll("8: %i",target);
     }
     PrintToChatAll("9: %i",target);
 

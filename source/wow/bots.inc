@@ -153,7 +153,7 @@ stock BotThinkWarrior(client) {
   if(team==3)
     amount=GetNearClients("@t",location,targets,300.0);
 
-    new aoetarget=GetAimTarget(client,110.0);
+  new aoetarget=GetAimTarget(client,110.0);
     
   if(amount > 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 2); //Whirlwind
