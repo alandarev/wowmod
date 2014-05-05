@@ -351,10 +351,6 @@ public wcGiveXp(client,amount,bool:display)
      )  {
       new convertMoney=RoundToNearest(float(amount)*EXP_MONEY_RATIO);
       WCMessage(client,"converted xp",client,convertMoney);
-      if(convertMoney>1000)
-      {
-         LogAction(client,-1,"\"%L\" [WC] Received an unnaturally high amount of silver: %i",convertMoney);
-      }
       wcSetMoney(client,GetMoney(client)+convertMoney);
       oldmoney=GetMoney(client);
       amount=1;
