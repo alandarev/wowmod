@@ -224,8 +224,7 @@ public GameStartEvent(Handle:event,const String:name[],bool:dontBroadcast)
 {
   g_RoundCount=-2;
 }
-new g_iRoundsBalance = 0;
-new HaniBalance = 0;
+
 
 public RoundEndEvent(Handle:event,const String:name[],bool:dontBroadcast)
 {
@@ -238,24 +237,7 @@ public RoundEndEvent(Handle:event,const String:name[],bool:dontBroadcast)
   CreateTimer(0.3,RoundStats,0);
   CreateTimer(0.5,DamageDoneXP,0);
   CreateTimer(0.5,HealingDoneXP,0);
-  if(HaniBalance>0)
-  {
-    if(!IsBoss() || !IsHNS())
-    {
-      if(g_iRoundsBalance>=1) {
-        TeamBalance();
-        g_iRoundsBalance = 0;
-        PrintToChatAll("\x04Teams have been balanced");
-      }
-      else {
-        if(g_iRoundsBalance==2)
-          PrintToChatAll("\x04Teams will be balanced in %i round",3-g_iRoundsBalance);
-        else
-          PrintToChatAll("\x04Teams will be balanced in %i rounds",3-g_iRoundsBalance);
-        g_iRoundsBalance+=1;
-      }
-    }
-  }
+  CreateTimer(0.6,RemoveDone,0);
   g_iRoundEnded =1;
   g_iTaken= 0;
   g_iTakenb= 0;
@@ -291,7 +273,15 @@ public RoundEndEvent(Handle:event,const String:name[],bool:dontBroadcast)
     }
   }
 }
-
+public Action:RemoveDone(Handle:timer)
+{
+  for (new x=0;x<=64;x++)
+  {
+    wcHealingDone[x]=0;
+    wcDamageDone[x]=0;
+    wcDamageTaken[x]=0;
+  }
+}
 public PlayerMoveEvent(Handle:event,const String:name[],bool:dontBroadcast)
 {
   new client=GetClientOfUserId(GetEventInt(event,"userid"));

@@ -432,7 +432,8 @@ public Action:ManaTimer(Handle:timer, any:temp)
       }
       else
       {
-        Format(buffer,sizeof(buffer),"%T", "dead", x);
+        if(GetClientTeam(x)!=1)
+          Format(buffer,sizeof(buffer),"%T", "dead", x);
         Format(buffer,sizeof(buffer),"%s%T", buffer, "dmg taken", x, wcDamageDone[x], wcDamageTaken[x]);
         if(wcHealingDone[x]>0)
         {
