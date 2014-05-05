@@ -2510,7 +2510,7 @@ wcRunTalent_2_ShadowStep(client)
 {
   decl String:line[255];
 
-  wcGetTalentInfo(2,3,4,1,client,"distance",line);
+  wcGetTalentInfo(2,1,3,1,client,"distance",line);
   new Float:distance = StringToFloat(line);
 
   new Float:speed = GetClientSpeed(client);
@@ -2530,14 +2530,14 @@ wcRunTalent_2_ShadowStep(client)
     if(TeleportPlayerView(client,distance,endpos))
     {
       wcSetMana(client,mana);
-      wcGetTalentInfo(2,3,4,1,client,"duration",line);
+      wcGetTalentInfo(2,1,3,1,client,"duration",line);
       new Float:duration = StringToFloat(line);
-      wcGetTalentInfo(2,3,4,1,client,"vanishid",line);
+      wcGetTalentInfo(2,1,3,1,client,"vanishid",line);
       new vanishid = StringToInt(line);
       new race = GetClass(client);
-      wcGetTalentInfo(2,3,4,1,client,"cooldown",line);
+      wcGetTalentInfo(2,1,3,1,client,"cooldown",line);
       new Float:cd=StringToFloat(line);
-      wcGetTalentInfo(2,3,4,1,client,"cooldowntype",line);
+      wcGetTalentInfo(2,1,3,1,client,"cooldowntype",line);
       new cdt = StringToInt(line);
       SetCdSpell(client,cdt,cd,0, "Shadowstep");
 
@@ -2593,7 +2593,7 @@ wcRunTalent_2_ShadowGate(client)
       SetShadowGateLocation(client,1,location[1]);
       SetShadowGateLocation(client,2,location[2]);
       WCMessage(client,"shadowgate loc",client);
-      wcGetTalentInfo(2,1,3,1,client,"cooldowntype",line);
+      wcGetTalentInfo(2,3,4,1,client,"cooldowntype",line);
       SetCdSpell(client, StringToInt(line), 2.0, 0,"Shadow Gate");
     }
     else
@@ -2614,9 +2614,9 @@ wcRunTalent_2_ShadowGate(client)
       location[2]=GetShadowGateLocation(client,2);
       TeleportEntity(client, location, NULL_VECTOR, NULL_VECTOR);
       EmitAmbientSound("wc/spells/shadowgate2.wav",location);
-      wcGetTalentInfo(2,1,3,1,client,"cooldown",line);
+      wcGetTalentInfo(2,3,4,1,client,"cooldown",line);
       new Float:cd=StringToFloat(line);
-      wcGetTalentInfo(2,1,3,1,client,"cooldowntype",line);
+      wcGetTalentInfo(2,3,4,1,client,"cooldowntype",line);
       SetCdSpell(client, StringToInt(line), cd, 0,"Shadow Gate");
       if(HasGlyph(client, GLYPH_ROGUE_SHADOWGATE))
       {

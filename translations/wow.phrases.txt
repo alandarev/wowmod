@@ -5822,7 +5822,7 @@
   }
   "Vitality name"
   {
-    "en"   "Redbull"
+    "en"   "Vitality"
   }
   "Preparation name"
   {
@@ -7080,7 +7080,7 @@
   }
   "Bandit's Guile info"
   {
-    "en" "<Passive> You deal more damage the closer you are to the target.\n    Rank 1: Maximum: +30%% damage"
+    "en" "<Passive> You deal more damage the closer you are to the target.\n    Rank 1: Maximum: +15%% damage\n    Rank 1: Maximum: +30%% damage"
   }
   "Slaughter from the Dark info"
   {

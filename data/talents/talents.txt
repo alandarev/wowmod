@@ -1313,31 +1313,28 @@
         "tier"  "Tier 3"
           "1"
           {
-           "0"
+            "0"
             {
-              "name"  "Shadowgate"
-              "max"  "2"
-              "saveid"  "z"
+              "name"         "shadowstep"
+              "name_ru"      "TODO"
+              "max"          "1"
+              "saveid"       "p"
+              "talentid"     "4"
             }
             "1"
             {
-              "name"  "Shadowgate"
-              "max"  "2"
-              "saveid"  "z"
-              "cooldown"  "60.0"
-              "active"  "1"
-              "talentid"  "4"
-              "cooldowntype"  "14"
-            }
-            "2"
-            {
-              "name"  "Shadowgate"
-              "max"  "2"
-              "saveid"  "z"
-              "cooldown"  "30.0"
-              "active"  "1"
-              "talentid"  "4"
-              "cooldowntype"  "14"
+              "name"         "shadowstep"
+              "name_ru"      "TODO"
+              "max"          "1"
+              "event"        "player_cast"
+              "active"       "1"
+              "cooldowntype" "11"
+              "cooldown"     "25.0"
+              "duration"      "1.75"
+              "distance"     "450.0"
+              "vanishid"     "3" //keep same as vanish spell ID
+              "saveid"       "p"
+              "talentid"     "4"
             }
           }
         "2"
@@ -1380,14 +1377,22 @@
           "0"
           {
             "name"  "Bandit's Guile"
-            "max" "1"
+            "max" "2"
             "saveid"  "o"
           }
           "1"
           {
             "name"  "Bandit's Guile"
-            "max" "1"
+            "max" "2"
             "saveid"  "o"
+            "multi" "0.50"
+          }
+          "2"
+          {
+            "name"  "Bandit's Guile"
+            "max" "2"
+            "saveid"  "o"
+            "multi" "1.00"
           }
         }
       }
@@ -2092,32 +2097,25 @@
       "4"
       {
         "tier"  "Tier 4"
-        "1"
-        {
-          "0"
-          {
-            "name"         "shadowstep"
-            "name_ru"      "TODO"
-            "max"          "1"
-            "saveid"       "p"
-            "talentid"     "5"
-          }
           "1"
           {
-            "name"         "shadowstep"
-            "name_ru"      "TODO"
-            "max"          "1"
-            "event"        "player_cast"
-            "active"       "1"
-            "cooldowntype" "11"
-            "cooldown"     "25.0"
-            "duration"      "1.75"
-            "distance"     "450.0"
-            "vanishid"     "3" //keep same as vanish spell ID
-            "saveid"       "p"
-            "talentid"     "5"
+           "0"
+            {
+              "name"  "Shadowgate"
+              "max"  "1"
+              "saveid"  "z"
+            }
+            "1"
+            {
+              "name"  "Shadowgate"
+              "max"  "1"
+              "saveid"  "z"
+              "cooldown"  "30.0"
+              "active"  "1"
+              "talentid"  "5"
+              "cooldowntype"  "14"
+            }
           }
-        }
         "2"
         {
           "0"
