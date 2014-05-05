@@ -7164,7 +7164,7 @@
   }
   "Improved Blind info"
   {
-    "en" "<Passive> Reduces the cooldown and energy cost of Blind\n    Rank 1: -2.5s cooldown, -10 energy\n    Rank 2: -5s cooldown, -20 energy"
+    "en" "<Passive> Reduces the cooldown and energy cost of Blind\n    Rank 1: -2.5s cooldown, -15 energy\n    Rank 2: -5s cooldown, -30 energy"
   }
   "Lethality info"
   {

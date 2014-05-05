@@ -1188,13 +1188,13 @@
             {
               "name"  "Improved Blind"
                 "max" "2"
-                "saveid"  "l"
+                "saveid"  "m"
             }
             "1"
             {
               "name"  "Improved Blind"
                 "max" "2"
-                "saveid"  "l"
+                "saveid"  "m"
                 "cdreduction" "2.5"
                 "manared" "15"
             }
@@ -1202,7 +1202,7 @@
             {
               "name"  "Improved Blind"
                 "max" "2"
-                "saveid"  "l"
+                "saveid"  "m"
                 "cdreduction" "5.0"
                 "manared" "30"
             }

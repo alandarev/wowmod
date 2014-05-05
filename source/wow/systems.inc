@@ -1713,7 +1713,6 @@ stock TriggerDisEnch(client, item[UniqueItem], slot)
   }
   while(KvGotoNextKey(wcdrop));
 }
-new g_iWasitchecked[65];
 stock TriggerDrop(client,victim, bool:self=false, Float:custom_rate=1.0)
 {
   new team1=GetClientTeam(client);
@@ -1761,17 +1760,8 @@ stock TriggerDrop(client,victim, bool:self=false, Float:custom_rate=1.0)
             case 2: chance *= BOT_NORMAL_RATE;
           }
         }
-        if(g_iWasitchecked[0]==0)
-        {
-          PrintToChatAll("Chance is %f",chance);
-          g_iWasitchecked[0]=1;
-        }
         chance *= custom_rate*GLOBAL_DROP*GetTempVar(client, Temp_DropRate)*(PlayerHasBonusFast(client, Profession:Prof_ExtraDrop)?1.1:1.0);
-        if(g_iWasitchecked[1]==0)
-        {
-          PrintToChatAll("Chance is now %f",chance);
-          g_iWasitchecked[1]=1;
-        }
+        max *=GLOBAL_DROP;
         if(isClientPDModule(client, PDModule:PDM_drop))
           chance *= 1.25;
         if(!self)
@@ -1780,9 +1770,6 @@ stock TriggerDrop(client,victim, bool:self=false, Float:custom_rate=1.0)
           chance=max;
         if(chance>=GetRandomFloat(0.0,1.0))
         {
-          PrintToChatAll("Got past the chance, chance was %f",chance);
-          g_iWasitchecked[0]=0;
-          g_iWasitchecked[1]=0;
           if(prof!=0)
           {
             if(skill<=skillup)
