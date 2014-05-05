@@ -2830,6 +2830,7 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
   //if(CSGO)
     //value*=1.25;
   decl Float:loc[3],Float:view[3];
+  PrintToChatAll("1");
   GetClientEyePosition(client,loc);
   GetClientEyeAngles(client, view);
   ClientTracer=client;
@@ -2838,18 +2839,22 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
   new target=TR_GetEntityIndex(INVALID_HANDLE);
   new targetPriority=0;
   if(smartHeal)
-  target=0;
+    target=0;
+  PrintToChatAll("2: %i",target);
   if((target>0)&&(target<=GetMaxClients()))
-  if(IsClientConnected(target))
-  if(IsClientInGame(target) && IsPlayerAlive(target) && (! (IsMageInvis(target) || IsInvisible(target))))
-  if(!HasStealth(target) || GetStealth(target) > 50 || smartHeal)
-  return target;
+    if(IsClientConnected(target))
+      if(IsClientInGame(target) && IsPlayerAlive(target) && (! (IsMageInvis(target) || IsInvisible(target))))
+        if(!HasStealth(target) || GetStealth(target) > 50 || smartHeal)
+          return target;
+  PrintToChatAll("3: %i",target);
   new Float:angelrec[2],Closest;
   angelrec[0]=181.0;
   angelrec[1]=181.0;
+  PrintToChatAll("4: %i",target);
   for(new x=1;x<=GetMaxClients();x++)
   if(IsClientConnected(x) && IsClientInGame(x) && IsPlayerAlive(x)) if(x!=client)
   {
+    PrintToChatAll("5: %i",target);
     //check for same teams for smartheal only
     if(smartHeal && (GetClientTeam(x)!=team))
     continue;
@@ -2874,18 +2879,21 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
     dif[0]=360.0-dif[0];
     if(dif[1]>180)
     dif[1]=360.0-dif[1];
+    PrintToChatAll("6: %i",target);
 
     if( (dif[0]>value) || (dif[1]>value) )
     continue;
+    PrintToChatAll("7: %i",target);
     if(smartHeal) {
       if(targetPriority > GetHealPriority(x, ignoreHP))
       continue;
     }
+    PrintToChatAll("8: %i",target);
     else  {
       if((dif[0]>angelrec[0]) && (dif[1]>angelrec[1]))
       continue; //if not smart heal, choose the one who is closer to center
     }
-
+    PrintToChatAll("9: %i",target);
 
     TR_TraceRayFilter(loc, angles, MASK_SOLID, RayType_Infinite,AimTargetFilter);
     //new target2=TR_GetEntityIndex(INVALID_HANDLE);  - no longer used
@@ -2901,7 +2909,7 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
 
     if(MAXDIST > 0.0 && MAXDIST < targetDistance)
     continue; //Target too far
-
+    PrintToChatAll("10: %i",target);
     if(smartHeal) {
       targetPriority = GetHealPriority(x, ignoreHP);
       angelrec[0]=dif[0];
@@ -2915,7 +2923,7 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
     }
   }
 
-
+  PrintToChatAll("11: %i",target);
   return Closest;
 }
 
