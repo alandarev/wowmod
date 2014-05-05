@@ -65,7 +65,8 @@
   }
   "bots"
   {
-    "profiles"  "10" //Amount of bot profiles. If you add one more bot_X increase this by 1
+    "profiles"  "11" //Amount of bot profiles. If you add one more bot_X increase this by 1
+    "start_id"  "1"
     //bot_X should start from 1 and increment by 1
   }
   "bots_high"
@@ -127,7 +128,7 @@
     "2hand"    "0"
     "shield"   "0"
 
-    "ws"       "1.15"   //Weapon speed
+    "ws"       "1.10"   //Weapon speed
     "damage"   "15"
     "spelldmg" "10"
     "cs"       "0.10"
@@ -151,7 +152,7 @@
 
     "armor"    "100"
     "sta"      "40"
-    "int"      "120"
+    "int"      "60"
     "regen"    "20"
   }
   "bot_6" //Bot Mage
@@ -166,8 +167,8 @@
     "cs"       "0.10"
 
     "armor"    "100"
-    "sta"      "40"
-    "int"      "120"
+    "sta"      "20"
+    "int"      "80"
     "regen"    "20"
   }
   "bot_7" //Bot Warlock
@@ -196,8 +197,8 @@
     "damage" "15"
     "cs"     "0.05"
 
-    "armor"  "180"
-    "sta"    "120"
+    "armor"  "120"
+    "sta"    "20"
     "agi"    "30"
     "res"    "20"   //resistance
   }
@@ -223,13 +224,13 @@
     "2hand"  "1"
 
     "ws"     "1.0"   //Weapon speed
-    "damage" "35"
+    "damage" "15"
     "cs"     "0.05"
-    "parry"  "0.35"
-    "armor"  "150"
-    "sta"    "60"
+    "parry"  "0.10"
+    "armor"  "80"
+    "sta"    "10"
     "str"    "10"
-    "agi"    "90"
+    "agi"    "40"
     "res"    "20"   //resistance
   }
   "bot_11" //Bot Death Knight

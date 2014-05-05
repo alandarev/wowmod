@@ -153,9 +153,11 @@ stock BotThinkWarrior(client) {
   if(team==3)
     amount=GetNearClients("@t",location,targets,300.0);
 
-  if(amount > 1)
+    new aoetarget=GetAimTarget(client,110.0);
+    
+  if(amount > 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 2); //Whirlwind
-  if(amount > 2)
+  if(amount > 2 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 10);  //Thunder Clap
 
   new Float:hp = GetFloatHealth(client);
@@ -178,8 +180,10 @@ stock BotThinkRogue(client) {
     amount=GetNearClients("@ct",location,targets,300.0);
   if(team==3)
     amount=GetNearClients("@t",location,targets,300.0);
-
-  if(amount > 2)
+    
+  new aoetarget=GetAimTarget(client,110.0);
+  
+  if(amount >= 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 13); //Fan of knives
 
   new Float:hp = GetFloatHealth(client);
@@ -187,6 +191,24 @@ stock BotThinkRogue(client) {
     TryCast(client, 12); //Blind
   if(hp < 0.3 && InCombat(client))
     TryCast(client, 3);  //Vanish
+    
+  new vanishtarget=GetAimTarget(client,60.0);
+  if(!InCombat(client) && vanishtarget!=0 && GetClientTeam(vanishtarget)!=GetClientTeam(client))
+  {
+    decl Float:clienta[3],Float:targeta[3];
+    GetClientEyeAngles(client, clienta);
+    GetClientEyeAngles(vanishtarget, targeta);
+    new Float:angle=clienta[1]-targeta[1];
+    if(angle<0.0)
+    angle*=-1.0;
+    if(angle>180.0)
+    angle = 360.0-angle;
+    if(angle<=90.0)
+    {
+      TryCast(client, 3);  //Vanish
+      TryCast(client, 12); //Blind
+    }
+  }
   if(hp < 0.9 && !InCombat(client))
     TryCast(client, 7); //Sprint
   if(hp < 0.8 && InCombat(client))
@@ -206,11 +228,13 @@ stock BotThinkMage(client) {
   if(team==3)
     amount=GetNearClients("@t",location,targets,380.0);
 
-  if(amount > 1)
+  new aoetarget=GetAimTarget(client,110.0);
+    
+  if(amount >= 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 2); //Frost nova
-  if(amount > 2)
+  if(amount >= 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 7);  //Arcane Explosion
-  if(amount > 3)
+  if(amount >= 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 12);  //Flame Orb
 
   new Float:hp = GetFloatHealth(client);
@@ -359,10 +383,10 @@ stock BotThinkShaman(client) {
     amount=GetNearClients("@ct",location,targets,380.0);
   if(team==3)
     amount=GetNearClients("@t",location,targets,380.0);
-
-  if(amount > 2)
+  new aoetarget=GetAimTarget(client,110.0);
+  if(amount >= 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 9); //nova totem
-  if(amount > 3)
+  if(amount >= 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 10);  //earthbind totem
 
   new Float:hp = GetFloatHealth(client);
@@ -384,8 +408,8 @@ stock BotThinkWarlock(client) {
     amount=GetNearClients("@ct",location,targets,500.0);
   if(team==3)
     amount=GetNearClients("@t",location,targets,500.0);
-
-  if(amount > 2)
+  new aoetarget=GetAimTarget(client,110.0);
+  if(amount >= 2 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client))
     TryCast(client, 4); //Fear
 
 
@@ -449,6 +473,7 @@ stock BotThinkMonk(client) {
     decl String:name[50];
     GetClientName(client,name,50);
   }
+  new aoetarget=GetAimTarget(client,110.0);
   //AOE damage spells
   new targets[MAXPLAYERS];
   new Float:location[3];
@@ -460,7 +485,7 @@ stock BotThinkMonk(client) {
   if(team==3)
     amount=GetNearClients("@t",location,targets,250.0);
 
-  if(amount >= 1) {
+  if(amount >= 1 && aoetarget!=0 && GetClientTeam(aoetarget)!=GetClientTeam(client)) {
     TryCast(client, 6); //Path of Blossoms
     TryCast(client, 5); //Spinning Crane Kick
   }

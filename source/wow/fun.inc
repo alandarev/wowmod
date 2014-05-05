@@ -843,1494 +843,1724 @@ stock TreasureChestMap(chance, times=1)
       decl Float:location[3];
       spawnedChests++;
       GetCurrentMap(sMap,sizeof(sMap));
-      if((CSGO) && !StrEqual(sMap,"de_dust2",false))
-        if((CSGO) && !StrEqual(sMap,"de_inferno",false))
-          return 0;
-      if(StrEqual(sMap,"de_dust2",false))  {
-        new random=GetRandomInt(1,11);
-        if(random==1 && g_iTaken==0) {
-          location[0]=-873.02;
-          location[1]=1352.03;
-          location[2]=47.91;
-          TreasureChestName = 55; //Lower Tunnel
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=-1296.91;
-          location[1]=1239.98;
-          location[2]=133.08;
-          TreasureChestName = 56; //Upper Tunnel
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=-1820.69;
-          location[1]=1827.09;
-          location[2]=212.07;
-          TreasureChestName = 4; //Bombsite B
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=-2199.97;
-          location[1]=2097.03;
-          location[2]=89.37;
-          TreasureChestName = 4; //Bombsite B
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=-272.03;
-          location[1]=1428.81;
-          location[2]=36.18;
-          TreasureChestName = 57; //T Ramp
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=718.33;
-          location[1]=653.26;
-          location[2]=138.09;
-          TreasureChestName = 58; //Long Doors
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=1296.00;
-          location[1]=672.06;
-          location[2]=44.65;
-          TreasureChestName = 59; //Pit
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=-1200.00;
-          location[1]=1441.04;
-          location[2]=-47.91;
-          TreasureChestName = 55; //Lower Tunnel
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=487.97;
-          location[1]=1360.03;
-          location[2]=144.09;
-          TreasureChestName = 60; //Short stairs
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=-580.01;
-          location[1]=682.52;
-          location[2]=176.09;
-          TreasureChestName = 61;
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=447.20;
-          location[1]=1775.98;
-          location[2]=64.09;
-          TreasureChestName = 60; //Short Stairs
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"cs_compound",false))  {
-        new random=GetRandomInt(1,15);
-        if(random==1 && g_iTaken==0) {
-          location[0]=452.2;
-          location[1]=1103.3;
-          location[2]=0.0;
-          TreasureChestName = 10; //Far side
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=2378.6;
-          location[1]=-1820.6;
-          location[2]=56.6;
-          TreasureChestName = 11; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=1681.1;
-          location[1]=-1520.4;
-          location[2]=16.0;
-          TreasureChestName = 12; //Storage Room
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=3504.7;
-          location[1]=-479.4;
-          location[2]=16.1;
-          TreasureChestName = 7; //Side
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=2568.0;
-          location[1]=632.9;
-          location[2]=4.0;
-          TreasureChestName = 14; //Gate house
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=1648.5;
-          location[1]=671.8;
-          location[2]=408.3;
-          TreasureChestName = 13; //Inside
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=1771.9;
-          location[1]=865.5;
-          location[2]=128.8;
-          TreasureChestName = 15; //Front
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=1726.9;
-          location[1]=-1482.2;
-          location[2]=168.9;
-          TreasureChestName = 12;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=336.1;
-          location[1]=41.8;
-          location[2]=0.0;
-          TreasureChestName = 10;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=-3247.8;
-          location[1]=109.3;
-          location[2]=1.9;
-          TreasureChestName = 16; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=3599.8;
-          location[1]=1507.6;
-          location[2]=1.8;
-          TreasureChestName = 17; //Outside
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=1130.5;
-          location[1]=1024.4;
-          location[2]=49.9;
-          TreasureChestName = 15;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==13 && g_iTakenm==0) {
-          location[0]=2161.3;
-          location[1]=-952.0;
-          location[2]=0.0;
-          TreasureChestName = 11;
-          g_iTakenm=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==14 && g_iTakenn==0) {
-          location[0]=2487.5;
-          location[1]=708.5;
-          location[2]=2.6;
-          TreasureChestName = 15;
-          g_iTakenn=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==15 && g_iTakeno==0) {
-          location[0]=2536.6;
-          location[1]=-548.4;
-          location[2]=-0.3;
-          TreasureChestName = 7;
-          g_iTakeno=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"de_nuke",false))  {
-        new random=GetRandomInt(1,12);
-        if(random==1 && g_iTaken==0) {
-          location[0]=1507.7;
-          location[1]=-1481.1;
-          location[2]=-103.9;
-          TreasureChestName = 18; //Roof
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=320.5;
-          location[1]=-1484.9;
-          location[2]=-127.8;
-          TreasureChestName = 19; //Loft
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=905.0;
-          location[1]=-1420.4;
-          location[2]=-415.9;
-          TreasureChestName = 9;
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=42.1;
-          location[1]=-947.2;
-          location[2]=-767.9;
-          TreasureChestName = 20; //Back Way
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=1324.6;
-          location[1]=-377.6;
-          location[2]=-639.9;
-          TreasureChestName = 21; //Underground
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=566.7;
-          location[1]=854.0;
-          location[2]=-479.9;
-          TreasureChestName = 22; //Ramp
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=975.9;
-          location[1]=-203.0;
-          location[2]=-415.9;
-          TreasureChestName = 23; //Side Hall
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=208.7;
-          location[1]=-1118.8;
-          location[2]=-383.9;
-          TreasureChestName = 24; //Inside
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=91.0;
-          location[1]=-1669.7;
-          location[2]=-46.4;
-          TreasureChestName = 20;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=1551.4;
-          location[1]=-2256.0;
-          location[2]=-415.9;
-          TreasureChestName = 25; //Garage
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=2082.5;
-          location[1]=-1930.6;
-          location[2]=-415.9;
-          TreasureChestName = 25; //Garage
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=2421.8;
-          location[1]=-1793.9;
-          location[2]=-415.9;
-          TreasureChestName = 26; //CT Spawn
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"de_inferno",false))  {
-        new random=GetRandomInt(1,13);
-        if(random==1 && g_iTaken==0) {
-          location[0]=272.03;
-          location[1]=-271.94;
-          location[2]=160.09;
-          TreasureChestName = 62; //Second Mid
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=272.03;
-          location[1]=-271.97;
-          location[2]=380.09;
-          TreasureChestName = 62;
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=865.10;
-          location[1]=-791.97;
-          location[2]=161.21;
-          TreasureChestName = 34;
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=932.00;
-          location[1]=-118.11;
-          location[2]=320.09;
-          TreasureChestName = 31;
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=198.23;
-          location[1]=444.74;
-          location[2]=144.09;
-          TreasureChestName = 6;
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=888.49;
-          location[1]=138.29;
-          location[2]=149.67;
-          TreasureChestName = 63;
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=352.83;
-          location[1]=2128.00;
-          location[2]=198.71;
-          TreasureChestName = 64;
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=879.97;
-          location[1]=1901.03;
-          location[2]=200.08;
-          TreasureChestName = 64;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=106.27;
-          location[1]=1572.47;
-          location[2]=173.29;
-          TreasureChestName = 64;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=285.32;
-          location[1]=558.30;
-          location[2]=60.25;
-          TreasureChestName = 33;
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=902.36;
-          location[1]=135.17;
-          location[2]=276.35;
-          TreasureChestName = 63;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=936.77;
-          location[1]=-376.12;
-          location[2]=320.09;
-
-          TreasureChestName = 34;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==13 && g_iTakenm==0) {
-          location[0]=759.72;
-          location[1]=721.25;
-          location[2]=176.51;
-
-          TreasureChestName = 6;
-          g_iTakenm=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"de_train",false))  {
-        new random=GetRandomInt(1,12);
-        if(random==1 && g_iTaken==0) {
-          location[0]=-887.5;
-          location[1]=-87.9;
-          location[2]=16.0;
-          TreasureChestName = 35; //Bathroom
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=-1047.9;
-          location[1]=-504.0;
-          location[2]=-95.9;
-          TreasureChestName = 36; //Stairs
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=-966.1;
-          location[1]=-452.3;
-          location[2]=16.0;
-          TreasureChestName = 37; //Long Hall
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=-336.0;
-          location[1]=-334.3;
-          location[2]=-217.9;
-          TreasureChestName = 38; //Ladder
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=257.8;
-          location[1]=751.9;
-          location[2]=40.0;
-
-          TreasureChestName = 9;
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=-48.0;
-          location[1]=776.9;
-          location[2]=-217.4;
-          TreasureChestName = 34; //Back Alley
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=1174.1;
-          location[1]=221.9;
-          location[2]=-66.7;
-          TreasureChestName = 9;
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=991.9;
-          location[1]=-156.4;
-          location[2]=-150.9;
-          TreasureChestName = 9;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=1437.9;
-          location[1]=735.9;
-          location[2]=-215.9;
-
-          TreasureChestName = 9;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=506.2;
-          location[1]=-1533.2;
-          location[2]=-359.9;
-          TreasureChestName = 4;
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=270.6;
-          location[1]=642.0;
-          location[2]=40.0;
-          TreasureChestName = 4;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=-369.0;
-          location[1]=1232.0;
-          location[2]=-140.9;
-
-          TreasureChestName = 34;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if((StrEqual(sMap,"de_dust",false)) && ((strlen(sMap)==7)))
+      if(!CSGO) //CSS Coordinates go here
       {
-        new random=GetRandomInt(1,12);
-        if(random==1 && g_iTaken==0) {
-          location[0]=-304.6;
-          location[1]=3041.6;
-          location[2]=17.0;
-          TreasureChestName = 1;
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+        if(StrEqual(sMap,"de_dust2",false))  
+        {
+          new random=GetRandomInt(1,11);
+          if(random==1 && g_iTaken==0) {
+            location[0]=-2072.9;
+            location[1]=1301.2;
+            location[2]=159.2;
+            TreasureChestName = 2; //999
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=-1195.5;
+            location[1]=1263.9;
+            location[2]=48.9;
+            TreasureChestName = 2; //Tunnel
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=-272.0;
+            location[1]=1429.3;
+            location[2]=-31.9;
+            TreasureChestName = 3; //Double Doors
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=-860.1;
+            location[1]=2572.4;
+            location[2]=-46.8;
+            TreasureChestName = 4; //Bombsite B
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=-2063.5;
+            location[1]=3119.9;
+            location[2]=160.0;
+            TreasureChestName = 4; //Bombsite B
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=495.9;
+            location[1]=1368.0;
+            location[2]=96.0;
+            TreasureChestName = 6; //Middle
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=1438.5;
+            location[1]=188.8;
+            location[2]=-190.5;
+            TreasureChestName = 7; //Side
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=733.5;
+            location[1]=680.0;
+            location[2]=96.0;
+            TreasureChestName = 8; //Side Door
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=-572.7;
+            location[1]=649.6;
+            location[2]=160.0;
+            TreasureChestName = 6;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=-828.4;
+            location[1]=1362.2;
+            location[2]=16.0;
+            TreasureChestName = 2;
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=690.9;
+            location[1]=2763.8;
+            location[2]=224.0;
+            TreasureChestName = 9; //Bombsite A
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=-1730.8;
-          location[1]=2077.3;
-          location[2]=128.0;
-          TreasureChestName = 39; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+        if(StrEqual(sMap,"cs_compound",false))  {
+          new random=GetRandomInt(1,15);
+          if(random==1 && g_iTaken==0) {
+            location[0]=452.2;
+            location[1]=1103.3;
+            location[2]=0.0;
+            TreasureChestName = 10; //Far side
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=2378.6;
+            location[1]=-1820.6;
+            location[2]=56.6;
+            TreasureChestName = 11; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=1681.1;
+            location[1]=-1520.4;
+            location[2]=16.0;
+            TreasureChestName = 12; //Storage Room
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=3504.7;
+            location[1]=-479.4;
+            location[2]=16.1;
+            TreasureChestName = 7; //Side
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=2568.0;
+            location[1]=632.9;
+            location[2]=4.0;
+            TreasureChestName = 14; //Gate house
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=1648.5;
+            location[1]=671.8;
+            location[2]=408.3;
+            TreasureChestName = 13; //Inside
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=1771.9;
+            location[1]=865.5;
+            location[2]=128.8;
+            TreasureChestName = 15; //Front
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=1726.9;
+            location[1]=-1482.2;
+            location[2]=168.9;
+            TreasureChestName = 12;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=336.1;
+            location[1]=41.8;
+            location[2]=0.0;
+            TreasureChestName = 10;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=-3247.8;
+            location[1]=109.3;
+            location[2]=1.9;
+            TreasureChestName = 16; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=3599.8;
+            location[1]=1507.6;
+            location[2]=1.8;
+            TreasureChestName = 17; //Outside
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=1130.5;
+            location[1]=1024.4;
+            location[2]=49.9;
+            TreasureChestName = 15;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==13 && g_iTakenm==0) {
+            location[0]=2161.3;
+            location[1]=-952.0;
+            location[2]=0.0;
+            TreasureChestName = 11;
+            g_iTakenm=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==14 && g_iTakenn==0) {
+            location[0]=2487.5;
+            location[1]=708.5;
+            location[2]=2.6;
+            TreasureChestName = 15;
+            g_iTakenn=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==15 && g_iTakeno==0) {
+            location[0]=2536.6;
+            location[1]=-548.4;
+            location[2]=-0.3;
+            TreasureChestName = 7;
+            g_iTakeno=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=-1975.6;
-          location[1]=2881.2;
-          location[2]=32.0;
-          TreasureChestName = 39;
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+        if(StrEqual(sMap,"de_nuke",false))  {
+          new random=GetRandomInt(1,12);
+          if(random==1 && g_iTaken==0) {
+            location[0]=1507.7;
+            location[1]=-1481.1;
+            location[2]=-103.9;
+            TreasureChestName = 18; //Roof
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=320.5;
+            location[1]=-1484.9;
+            location[2]=-127.8;
+            TreasureChestName = 19; //Loft
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=905.0;
+            location[1]=-1420.4;
+            location[2]=-415.9;
+            TreasureChestName = 9;
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=42.1;
+            location[1]=-947.2;
+            location[2]=-767.9;
+            TreasureChestName = 20; //Back Way
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=1324.6;
+            location[1]=-377.6;
+            location[2]=-639.9;
+            TreasureChestName = 21; //Underground
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=566.7;
+            location[1]=854.0;
+            location[2]=-479.9;
+            TreasureChestName = 22; //Ramp
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=975.9;
+            location[1]=-203.0;
+            location[2]=-415.9;
+            TreasureChestName = 23; //Side Hall
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=208.7;
+            location[1]=-1118.8;
+            location[2]=-383.9;
+            TreasureChestName = 24; //Inside
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=91.0;
+            location[1]=-1669.7;
+            location[2]=-46.4;
+            TreasureChestName = 20;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=1551.4;
+            location[1]=-2256.0;
+            location[2]=-415.9;
+            TreasureChestName = 25; //Garage
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=2082.5;
+            location[1]=-1930.6;
+            location[2]=-415.9;
+            TreasureChestName = 25; //Garage
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=2421.8;
+            location[1]=-1793.9;
+            location[2]=-415.9;
+            TreasureChestName = 26; //CT Spawn
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
-        if(random==4 && g_iTakend==0) {
-          location[0]=-1232.7;
-          location[1]=1936.0;
-          location[2]=-127.9;
-          TreasureChestName = 40; //Bridge
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=462.8;
-          location[1]=852.4;
-          location[2]=128.0;
+        if(StrEqual(sMap,"de_inferno",false))  {
+          new random=GetRandomInt(1,13);
+          if(random==1 && g_iTaken==0) {
+            location[0]=690.9;
+            location[1]=2763.8;
+            location[2]=224.0;
+            TreasureChestName = 27; //Window
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=-178.7;
+            location[1]=-696.6;
+            location[2]=64.0;
+            TreasureChestName = 27;
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=-214.3;
+            location[1]=96.5;
+            location[2]=182.0;
+            TreasureChestName = 28; //Upstairs
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=75.7;
+            location[1]=181.0;
+            location[2]=182.0;
+            TreasureChestName = 29; //Deck
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=-480.0;
+            location[1]=-564.4;
+            location[2]=192.0;
 
-          TreasureChestName = 15;
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=717.7;
-          location[1]=437.0;
-          location[2]=128.0;
-          TreasureChestName = 3;
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=1110.1;
-          location[1]=879.9;
-          location[2]=120.0;
-          TreasureChestName = 9;
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=-224.6;
-          location[1]=1184.4;
-          location[2]=128.0;
-          TreasureChestName = 6;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=216.3;
-          location[1]=1539.2;
-          location[2]=128.0;
+            TreasureChestName = 28; //Upstairs
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=1059.8;
+            location[1]=-517.5;
+            location[2]=256.0;
+            TreasureChestName = 30; //Bedroom
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=1131.8;
+            location[1]=-245.4;
+            location[2]=256.0;
+            TreasureChestName = 31; //Balcony
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=2465.7;
+            location[1]=-39.4;
+            location[2]=80.0;
+            TreasureChestName = 4;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=-76.4;
+            location[1]=1412.2;
+            location[2]=106.0;
 
-          TreasureChestName = 6;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+            TreasureChestName = 32; //Alley
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=863.9;
+            location[1]=1895.3;
+            location[2]=134.5;
+            TreasureChestName = 32; //Garage
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=292.3;
+            location[1]=521.3;
+            location[2]=21.9;
+            TreasureChestName = 33; //Crawlspace
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=653.9;
+            location[1]=3077.6;
+            location[2]=160.0;
+
+            TreasureChestName = 9;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==13 && g_iTakenm==0) {
+            location[0]=943.8;
+            location[1]=136.3;
+            location[2]=256.0;
+
+            TreasureChestName = 34; //Back Alley
+            g_iTakenm=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=26.1;
-          location[1]=1335.9;
-          location[2]=32.0;
-          TreasureChestName = 6;
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+        if(StrEqual(sMap,"de_train",false))  {
+          new random=GetRandomInt(1,12);
+          if(random==1 && g_iTaken==0) {
+            location[0]=-887.5;
+            location[1]=-87.9;
+            location[2]=16.0;
+            TreasureChestName = 35; //Bathroom
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=-1047.9;
+            location[1]=-504.0;
+            location[2]=-95.9;
+            TreasureChestName = 36; //Stairs
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=-966.1;
+            location[1]=-452.3;
+            location[2]=16.0;
+            TreasureChestName = 37; //Long Hall
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=-336.0;
+            location[1]=-334.3;
+            location[2]=-217.9;
+            TreasureChestName = 38; //Ladder
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=257.8;
+            location[1]=751.9;
+            location[2]=40.0;
+
+            TreasureChestName = 9;
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=-48.0;
+            location[1]=776.9;
+            location[2]=-217.4;
+            TreasureChestName = 34; //Back Alley
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=1174.1;
+            location[1]=221.9;
+            location[2]=-66.7;
+            TreasureChestName = 9;
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=991.9;
+            location[1]=-156.4;
+            location[2]=-150.9;
+            TreasureChestName = 9;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=1437.9;
+            location[1]=735.9;
+            location[2]=-215.9;
+
+            TreasureChestName = 9;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=506.2;
+            location[1]=-1533.2;
+            location[2]=-359.9;
+            TreasureChestName = 4;
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=270.6;
+            location[1]=642.0;
+            location[2]=40.0;
+            TreasureChestName = 4;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=-369.0;
+            location[1]=1232.0;
+            location[2]=-140.9;
+
+            TreasureChestName = 34;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=-1068.8;
-          location[1]=1284.7;
-          location[2]=32.0;
-          TreasureChestName = 7;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+        if((StrEqual(sMap,"de_dust",false)) && ((strlen(sMap)==7)))
+        {
+          new random=GetRandomInt(1,12);
+          if(random==1 && g_iTaken==0) {
+            location[0]=-304.6;
+            location[1]=3041.6;
+            location[2]=17.0;
+            TreasureChestName = 1;
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=-1730.8;
+            location[1]=2077.3;
+            location[2]=128.0;
+            TreasureChestName = 39; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=-1975.6;
+            location[1]=2881.2;
+            location[2]=32.0;
+            TreasureChestName = 39;
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=-1232.7;
+            location[1]=1936.0;
+            location[2]=-127.9;
+            TreasureChestName = 40; //Bridge
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=462.8;
+            location[1]=852.4;
+            location[2]=128.0;
+
+            TreasureChestName = 15;
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=717.7;
+            location[1]=437.0;
+            location[2]=128.0;
+            TreasureChestName = 3;
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=1110.1;
+            location[1]=879.9;
+            location[2]=120.0;
+            TreasureChestName = 9;
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=-224.6;
+            location[1]=1184.4;
+            location[2]=128.0;
+            TreasureChestName = 6;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=216.3;
+            location[1]=1539.2;
+            location[2]=128.0;
+
+            TreasureChestName = 6;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=26.1;
+            location[1]=1335.9;
+            location[2]=32.0;
+            TreasureChestName = 6;
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=-1068.8;
+            location[1]=1284.7;
+            location[2]=32.0;
+            TreasureChestName = 7;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=-1215.9;
+            location[1]=768.7;
+            location[2]=-63.9;
+            TreasureChestName = 40;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=-1215.9;
-          location[1]=768.7;
-          location[2]=-63.9;
-          TreasureChestName = 40;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+        if(StrEqual(sMap,"aim_ag_texture_mix",false))  {
+          new random=GetRandomInt(1,15);
+          if(random==1 && g_iTaken==0) {
+            location[0]=-445.6;
+            location[1]=283.4;
+            location[2]=128.0;
+            TreasureChestName = 5; //Far side
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=515.8;
+            location[1]=281.5;
+            location[2]=128.0;
+            TreasureChestName = 5; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=6.1;
+            location[1]=-815.9;
+            location[2]=128.0;
+            TreasureChestName = 5; //Storage Room
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=-661.5;
+            location[1]=-430.9;
+            location[2]=384.0;
+            TreasureChestName = 5; //Side
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=1775.9;
+            location[1]=-313.3;
+            location[2]=640.0;
+            TreasureChestName = 5; //Gate house
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=61.6;
+            location[1]=-726.2;
+            location[2]=512.0;
+            TreasureChestName = 5; //Inside
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=-648.1;
+            location[1]=282.6;
+            location[2]=640.0;
+            TreasureChestName = 5; //Front
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=103.3;
+            location[1]=244.9;
+            location[2]=640.0;
+            TreasureChestName = 5;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=-667.6;
+            location[1]=559.9;
+            location[2]=448.0;
+            TreasureChestName = 5;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=1553.0;
+            location[1]=166.8;
+            location[2]=768.0;
+            TreasureChestName = 5; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=1906.3;
+            location[1]=-317.2;
+            location[2]=960.0;
+            TreasureChestName = 5;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=845.3;
+            location[1]=-199.2;
+            location[2]=512.0;
+            TreasureChestName = 5;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==13 && g_iTakenm==0) {
+            location[0]=463.0;
+            location[1]=-168.6;
+            location[2]=128.0;
+            TreasureChestName = 5;
+            g_iTakenm=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==14 && g_iTakenn==0) {
+            location[0]=1314.1;
+            location[1]=-164.7;
+            location[2]=128.0;
+            TreasureChestName = 5;
+            g_iTakenn=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==15 && g_iTakeno==0) {
+            location[0]=791.8;
+            location[1]=-879.9;
+            location[2]=128.0;
+            TreasureChestName = 5;
+            g_iTakeno=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+        }
+        if(StrEqual(sMap,"de_cpl_mill",false))  {
+          new random=GetRandomInt(1,10);
+          if(random==1 && g_iTaken==0) {
+            location[0]=2031.9;
+            location[1]=2082.4;
+            location[2]=208.0;
+            TreasureChestName = 4;
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=1375.6;
+            location[1]=2127.8;
+            location[2]=184.0;
+            TreasureChestName = 41; //Courtyard
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=420.1;
+            location[1]=2008.8;
+            location[2]=68.0;
+            TreasureChestName = 16;
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=574.6;
+            location[1]=1163.0;
+            location[2]=-43.9;
+            TreasureChestName = 42; //Side
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=-9.2;
+            location[1]=1607.1;
+            location[2]=-111.9;
+            TreasureChestName = 6; //Gate house
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=-1519.9;
+            location[1]=1551.1;
+            location[2]=-111.9;
+            TreasureChestName = 9; //Inside
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=-671.0;
+            location[1]=2271.9;
+            location[2]=207.1;
+            TreasureChestName = 9; //Front
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=-1092.0;
+            location[1]=2218.7;
+            location[2]=-287.9;
+            TreasureChestName = 43;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=-72.3;
+            location[1]=2371.8;
+            location[2]=-159.9;
+            TreasureChestName = 43;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=-375.4;
+            location[1]=1647.9;
+            location[2]=-111.9;
+            TreasureChestName = 6; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+        }
+        if(StrEqual(sMap,"de_cpl_strike",false))  {
+          new random=GetRandomInt(1,13);
+          if(random==1 && g_iTaken==0) {
+            location[0]=338.1;
+            location[1]=-691.8;
+            location[2]=-103.9;
+            TreasureChestName = 6; //Far side
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=173.7;
+            location[1]=98.0;
+            location[2]=-159.9;
+            TreasureChestName = 11; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=-774.2;
+            location[1]=-484.4;
+            location[2]=-167.9;
+            TreasureChestName = 6; //Storage Room
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=-1148.4;
+            location[1]=-1493.9;
+            location[2]=-81.5;
+            TreasureChestName = 44; //Front Yard
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=-23.9;
+            location[1]=-1920.0;
+            location[2]=-39.9;
+            TreasureChestName = 9; //Gate house
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=-446.6;
+            location[1]=-2248.3;
+            location[2]=8.0;
+            TreasureChestName = 9; //Inside
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=-448.8;
+            location[1]=-1591.8;
+            location[2]=-39.9;
+            TreasureChestName = 9; //Front
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=-446.6;
+            location[1]=-2248.3;
+            location[2]=8.0;
+            TreasureChestName = 9;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=-756.9;
+            location[1]=-991.2;
+            location[2]=-167.9;
+            TreasureChestName = 6;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=472.0;
+            location[1]=-1453.9;
+            location[2]=-167.9;
+            TreasureChestName = 20; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=363.3;
+            location[1]=-2086.0;
+            location[2]=-39.9;
+            TreasureChestName = 45;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=-1047.9;
+            location[1]=81.3;
+            location[2]=-367.9;
+            TreasureChestName = 21;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==13 && g_iTakenm==0) {
+            location[0]=-1105.3;
+            location[1]=352.0;
+            location[2]=-79.9;
+            TreasureChestName = 41;
+            g_iTakenm=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+        }
+        if(StrEqual(sMap,"de_season",false))  {
+          new random=GetRandomInt(1,11);
+          if(random==1 && g_iTaken==0) {
+            location[0]=3439.9;
+            location[1]=290.6;
+            location[2]=-79.9;
+            TreasureChestName = 46; //Far side
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=3507.1;
+            location[1]=704.4;
+            location[2]=48.1;
+            TreasureChestName = 34; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=3507.4;
+            location[1]=1450.5;
+            location[2]=-53.1;
+            TreasureChestName = 34; //Storage Room
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=1868.9;
+            location[1]=159.9;
+            location[2]=68.0;
+            TreasureChestName = 47; //Front Yard
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=2106.5;
+            location[1]=728.0;
+            location[2]=0.0;
+            TreasureChestName = 48; //Gate house
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=969.0;
+            location[1]=249.7;
+            location[2]=-42.2;
+            TreasureChestName = 6; //Inside
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=179.8;
+            location[1]=220.5;
+            location[2]=-43.5;
+            TreasureChestName = 9; //Bombsite A
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=-765.1;
+            location[1]=-1085.8;
+            location[2]=-15.9;
+            TreasureChestName = 37;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=146.2;
+            location[1]=-828.6;
+            location[2]=48.0;
+            TreasureChestName = 2;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=-445.0;
+            location[1]=215.8;
+            location[2]=128.0;
+            TreasureChestName = 9; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=-397.5;
+            location[1]=-1276.2;
+            location[2]=-167.9;
+            TreasureChestName = 37;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+        }
+        if(StrEqual(sMap,"cs_italy_tactik2",false))  {
+          new random=GetRandomInt(1,13);
+          if(random==1 && g_iTaken==0) {
+            location[0]=-37.4;
+            location[1]=-152.0;
+            location[2]=-151.9;
+            TreasureChestName = 5; //Far side
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=-364.5;
+            location[1]=2191.9;
+            location[2]=-82.0;
+            TreasureChestName = 5; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=-1073.8;
+            location[1]=2124.3;
+            location[2]=-151.9;
+            TreasureChestName = 5; //Storage Room
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=-988.1;
+            location[1]=1247.7;
+            location[2]=-7.9;
+            TreasureChestName = 5; //Front Yard
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=-1417.5;
+            location[1]=56.4;
+            location[2]=8.0;
+            TreasureChestName = 5; //Gate house
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=-1327.9;
+            location[1]=1300.8;
+            location[2]=-143.6;
+            TreasureChestName = 5; //Inside
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=-777.7;
+            location[1]=189.0;
+            location[2]=8.0;
+            TreasureChestName = 5; //Front
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=-822.6;
+            location[1]=805.9;
+            location[2]=160.0;
+            TreasureChestName = 5;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=34.9;
+            location[1]=425.9;
+            location[2]=152.0;
+            TreasureChestName = 5;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=-410.7;
+            location[1]=506.9;
+            location[2]=32.0;
+            TreasureChestName = 5; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=-172.4;
+            location[1]=501.3;
+            location[2]=-31.9;
+            TreasureChestName = 5;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=1181.9;
+            location[1]=768.6;
+            location[2]=-194.9;
+            TreasureChestName = 5;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==13 && g_iTakenm==0) {
+            location[0]=556.0;
+            location[1]=-391.6;
+            location[2]=-41.9;
+            TreasureChestName = 5;
+            g_iTakenm=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+        }
+        if(StrEqual(sMap,"knas_sandland_css",false))  {
+          new random=GetRandomInt(1,11);
+          if(random==1 && g_iTaken==0) {
+            location[0]=384.0;
+            location[1]=-1832.0;
+            location[2]=-263.9;
+            TreasureChestName = 5; //Far side
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=-78.1;
+            location[1]=-343.0;
+            location[2]=-191.9;
+            TreasureChestName = 5; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=608.0;
+            location[1]=-547.9;
+            location[2]=32.0;
+            TreasureChestName = 5; //Storage Room
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=336.0;
+            location[1]=231.9;
+            location[2]=128.0;
+            TreasureChestName = 5; //Front Yard
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=-332.6;
+            location[1]=199.4;
+            location[2]=-175.9;
+            TreasureChestName = 5; //Gate house
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=-785.1;
+            location[1]=78.0;
+            location[2]=-415.9;
+            TreasureChestName = 5; //Inside
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=-1295.9;
+            location[1]=537.4;
+            location[2]=-399.9;
+            TreasureChestName = 5; //Front
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=-815.7;
+            location[1]=368.0;
+            location[2]=-191.9;
+            TreasureChestName = 5;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=-911.9;
+            location[1]=519.2;
+            location[2]=-127.9;
+            TreasureChestName = 5;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=48.0;
+            location[1]=-512.0;
+            location[2]=32.0;
+            TreasureChestName = 5; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=920.0;
+            location[1]=-79.9;
+            location[2]=32.0;
+            TreasureChestName = 5;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+        }
+        if(StrEqual(sMap,"de_losttemple_pro",false))  {
+          new random=GetRandomInt(1,12);
+          if(random==1 && g_iTaken==0) {
+            location[0]=1890.0;
+            location[1]=420.0;
+            location[2]=200.0;
+            TreasureChestName = 37; //Far side
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=1875.1;
+            location[1]=-465.6;
+            location[2]=232.0;
+            TreasureChestName = 37; //Back
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=1048.0;
+            location[1]=-434.2;
+            location[2]=184.0;
+            TreasureChestName = 50; //Water
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=392.1;
+            location[1]=-478.2;
+            location[2]=238.4;
+            TreasureChestName = 54; //Main Hall
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=1328.6;
+            location[1]=-350.9;
+            location[2]=102.0;
+            TreasureChestName = 50; //Water
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=-590.2;
+            location[1]=-510.2;
+            location[2]=195.8;
+            TreasureChestName = 51; //Overpass
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=-711.3;
+            location[1]=-646.2;
+            location[2]=64.0;
+            TreasureChestName = 52; //Underpass
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=383.9;
+            location[1]=-1003.6;
+            location[2]=184.0;
+            TreasureChestName = 6;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=75.5;
+            location[1]=-1580.5;
+            location[2]=240.0;
+            TreasureChestName = 53;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=-99.9;
+            location[1]=587.4;
+            location[2]=2.3;
+            TreasureChestName = 36; //Gate
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=788.9;
+            location[1]=-424.9;
+            location[2]=6.5;
+            TreasureChestName = 50;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=-246.8;
+            location[1]=-751.9;
+            location[2]=0.0;
+            TreasureChestName = 52;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
       }
-      if(StrEqual(sMap,"aim_ag_texture_mix",false))  {
-        new random=GetRandomInt(1,15);
-        if(random==1 && g_iTaken==0) {
-          location[0]=-445.6;
-          location[1]=283.4;
-          location[2]=128.0;
-          TreasureChestName = 5; //Far side
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=515.8;
-          location[1]=281.5;
-          location[2]=128.0;
-          TreasureChestName = 5; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=6.1;
-          location[1]=-815.9;
-          location[2]=128.0;
-          TreasureChestName = 5; //Storage Room
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=-661.5;
-          location[1]=-430.9;
-          location[2]=384.0;
-          TreasureChestName = 5; //Side
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=1775.9;
-          location[1]=-313.3;
-          location[2]=640.0;
-          TreasureChestName = 5; //Gate house
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=61.6;
-          location[1]=-726.2;
-          location[2]=512.0;
-          TreasureChestName = 5; //Inside
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=-648.1;
-          location[1]=282.6;
-          location[2]=640.0;
-          TreasureChestName = 5; //Front
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=103.3;
-          location[1]=244.9;
-          location[2]=640.0;
-          TreasureChestName = 5;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=-667.6;
-          location[1]=559.9;
-          location[2]=448.0;
-          TreasureChestName = 5;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=1553.0;
-          location[1]=166.8;
-          location[2]=768.0;
-          TreasureChestName = 5; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=1906.3;
-          location[1]=-317.2;
-          location[2]=960.0;
-          TreasureChestName = 5;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=845.3;
-          location[1]=-199.2;
-          location[2]=512.0;
-          TreasureChestName = 5;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==13 && g_iTakenm==0) {
-          location[0]=463.0;
-          location[1]=-168.6;
-          location[2]=128.0;
-          TreasureChestName = 5;
-          g_iTakenm=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==14 && g_iTakenn==0) {
-          location[0]=1314.1;
-          location[1]=-164.7;
-          location[2]=128.0;
-          TreasureChestName = 5;
-          g_iTakenn=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==15 && g_iTakeno==0) {
-          location[0]=791.8;
-          location[1]=-879.9;
-          location[2]=128.0;
-          TreasureChestName = 5;
-          g_iTakeno=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"de_cpl_mill",false))  {
-        new random=GetRandomInt(1,10);
-        if(random==1 && g_iTaken==0) {
-          location[0]=2031.9;
-          location[1]=2082.4;
-          location[2]=208.0;
-          TreasureChestName = 4;
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=1375.6;
-          location[1]=2127.8;
-          location[2]=184.0;
-          TreasureChestName = 41; //Courtyard
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=420.1;
-          location[1]=2008.8;
-          location[2]=68.0;
-          TreasureChestName = 16;
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=574.6;
-          location[1]=1163.0;
-          location[2]=-43.9;
-          TreasureChestName = 42; //Side
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=-9.2;
-          location[1]=1607.1;
-          location[2]=-111.9;
-          TreasureChestName = 6; //Gate house
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=-1519.9;
-          location[1]=1551.1;
-          location[2]=-111.9;
-          TreasureChestName = 9; //Inside
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=-671.0;
-          location[1]=2271.9;
-          location[2]=207.1;
-          TreasureChestName = 9; //Front
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=-1092.0;
-          location[1]=2218.7;
-          location[2]=-287.9;
-          TreasureChestName = 43;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=-72.3;
-          location[1]=2371.8;
-          location[2]=-159.9;
-          TreasureChestName = 43;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=-375.4;
-          location[1]=1647.9;
-          location[2]=-111.9;
-          TreasureChestName = 6; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"de_cpl_strike",false))  {
-        new random=GetRandomInt(1,13);
-        if(random==1 && g_iTaken==0) {
-          location[0]=338.1;
-          location[1]=-691.8;
-          location[2]=-103.9;
-          TreasureChestName = 6; //Far side
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=173.7;
-          location[1]=98.0;
-          location[2]=-159.9;
-          TreasureChestName = 11; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=-774.2;
-          location[1]=-484.4;
-          location[2]=-167.9;
-          TreasureChestName = 6; //Storage Room
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=-1148.4;
-          location[1]=-1493.9;
-          location[2]=-81.5;
-          TreasureChestName = 44; //Front Yard
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=-23.9;
-          location[1]=-1920.0;
-          location[2]=-39.9;
-          TreasureChestName = 9; //Gate house
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=-446.6;
-          location[1]=-2248.3;
-          location[2]=8.0;
-          TreasureChestName = 9; //Inside
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=-448.8;
-          location[1]=-1591.8;
-          location[2]=-39.9;
-          TreasureChestName = 9; //Front
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=-446.6;
-          location[1]=-2248.3;
-          location[2]=8.0;
-          TreasureChestName = 9;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=-756.9;
-          location[1]=-991.2;
-          location[2]=-167.9;
-          TreasureChestName = 6;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=472.0;
-          location[1]=-1453.9;
-          location[2]=-167.9;
-          TreasureChestName = 20; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=363.3;
-          location[1]=-2086.0;
-          location[2]=-39.9;
-          TreasureChestName = 45;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=-1047.9;
-          location[1]=81.3;
-          location[2]=-367.9;
-          TreasureChestName = 21;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==13 && g_iTakenm==0) {
-          location[0]=-1105.3;
-          location[1]=352.0;
-          location[2]=-79.9;
-          TreasureChestName = 41;
-          g_iTakenm=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"de_season",false))  {
-        new random=GetRandomInt(1,11);
-        if(random==1 && g_iTaken==0) {
-          location[0]=3439.9;
-          location[1]=290.6;
-          location[2]=-79.9;
-          TreasureChestName = 46; //Far side
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=3507.1;
-          location[1]=704.4;
-          location[2]=48.1;
-          TreasureChestName = 34; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=3507.4;
-          location[1]=1450.5;
-          location[2]=-53.1;
-          TreasureChestName = 34; //Storage Room
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=1868.9;
-          location[1]=159.9;
-          location[2]=68.0;
-          TreasureChestName = 47; //Front Yard
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=2106.5;
-          location[1]=728.0;
-          location[2]=0.0;
-          TreasureChestName = 48; //Gate house
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=969.0;
-          location[1]=249.7;
-          location[2]=-42.2;
-          TreasureChestName = 6; //Inside
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=179.8;
-          location[1]=220.5;
-          location[2]=-43.5;
-          TreasureChestName = 9; //Bombsite A
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=-765.1;
-          location[1]=-1085.8;
-          location[2]=-15.9;
-          TreasureChestName = 37;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=146.2;
-          location[1]=-828.6;
-          location[2]=48.0;
-          TreasureChestName = 2;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=-445.0;
-          location[1]=215.8;
-          location[2]=128.0;
-          TreasureChestName = 9; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=-397.5;
-          location[1]=-1276.2;
-          location[2]=-167.9;
-          TreasureChestName = 37;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"cs_italy_tactik2",false))  {
-        new random=GetRandomInt(1,13);
-        if(random==1 && g_iTaken==0) {
-          location[0]=-37.4;
-          location[1]=-152.0;
-          location[2]=-151.9;
-          TreasureChestName = 5; //Far side
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=-364.5;
-          location[1]=2191.9;
-          location[2]=-82.0;
-          TreasureChestName = 5; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=-1073.8;
-          location[1]=2124.3;
-          location[2]=-151.9;
-          TreasureChestName = 5; //Storage Room
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=-988.1;
-          location[1]=1247.7;
-          location[2]=-7.9;
-          TreasureChestName = 5; //Front Yard
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=-1417.5;
-          location[1]=56.4;
-          location[2]=8.0;
-          TreasureChestName = 5; //Gate house
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=-1327.9;
-          location[1]=1300.8;
-          location[2]=-143.6;
-          TreasureChestName = 5; //Inside
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=-777.7;
-          location[1]=189.0;
-          location[2]=8.0;
-          TreasureChestName = 5; //Front
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=-822.6;
-          location[1]=805.9;
-          location[2]=160.0;
-          TreasureChestName = 5;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=34.9;
-          location[1]=425.9;
-          location[2]=152.0;
-          TreasureChestName = 5;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=-410.7;
-          location[1]=506.9;
-          location[2]=32.0;
-          TreasureChestName = 5; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=-172.4;
-          location[1]=501.3;
-          location[2]=-31.9;
-          TreasureChestName = 5;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=1181.9;
-          location[1]=768.6;
-          location[2]=-194.9;
-          TreasureChestName = 5;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==13 && g_iTakenm==0) {
-          location[0]=556.0;
-          location[1]=-391.6;
-          location[2]=-41.9;
-          TreasureChestName = 5;
-          g_iTakenm=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"knas_sandland_css",false))  {
-        new random=GetRandomInt(1,11);
-        if(random==1 && g_iTaken==0) {
-          location[0]=384.0;
-          location[1]=-1832.0;
-          location[2]=-263.9;
-          TreasureChestName = 5; //Far side
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=-78.1;
-          location[1]=-343.0;
-          location[2]=-191.9;
-          TreasureChestName = 5; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=608.0;
-          location[1]=-547.9;
-          location[2]=32.0;
-          TreasureChestName = 5; //Storage Room
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=336.0;
-          location[1]=231.9;
-          location[2]=128.0;
-          TreasureChestName = 5; //Front Yard
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=-332.6;
-          location[1]=199.4;
-          location[2]=-175.9;
-          TreasureChestName = 5; //Gate house
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=-785.1;
-          location[1]=78.0;
-          location[2]=-415.9;
-          TreasureChestName = 5; //Inside
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=-1295.9;
-          location[1]=537.4;
-          location[2]=-399.9;
-          TreasureChestName = 5; //Front
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=-815.7;
-          location[1]=368.0;
-          location[2]=-191.9;
-          TreasureChestName = 5;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=-911.9;
-          location[1]=519.2;
-          location[2]=-127.9;
-          TreasureChestName = 5;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=48.0;
-          location[1]=-512.0;
-          location[2]=32.0;
-          TreasureChestName = 5; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=920.0;
-          location[1]=-79.9;
-          location[2]=32.0;
-          TreasureChestName = 5;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-      }
-      if(StrEqual(sMap,"de_losttemple_pro",false))  {
-        new random=GetRandomInt(1,12);
-        if(random==1 && g_iTaken==0) {
-          location[0]=1890.0;
-          location[1]=420.0;
-          location[2]=200.0;
-          TreasureChestName = 37; //Far side
-          g_iTaken=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==2 && g_iTakenb==0) {
-          location[0]=1875.1;
-          location[1]=-465.6;
-          location[2]=232.0;
-          TreasureChestName = 37; //Back
-          g_iTakenb=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==3 && g_iTakenc==0) {
-          location[0]=1048.0;
-          location[1]=-434.2;
-          location[2]=184.0;
-          TreasureChestName = 50; //Water
-          g_iTakenc=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==4 && g_iTakend==0) {
-          location[0]=392.1;
-          location[1]=-478.2;
-          location[2]=238.4;
-          TreasureChestName = 54; //Main Hall
-          g_iTakend=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==5 && g_iTakene==0) {
-          location[0]=1328.6;
-          location[1]=-350.9;
-          location[2]=102.0;
-          TreasureChestName = 50; //Water
-          g_iTakene=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==6 && g_iTakenf==0) {
-          location[0]=-590.2;
-          location[1]=-510.2;
-          location[2]=195.8;
-          TreasureChestName = 51; //Overpass
-          g_iTakenf=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==7 && g_iTakeng==0) {
-          location[0]=-711.3;
-          location[1]=-646.2;
-          location[2]=64.0;
-          TreasureChestName = 52; //Underpass
-          g_iTakeng=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==8 && g_iTakenh==0) {
-          location[0]=383.9;
-          location[1]=-1003.6;
-          location[2]=184.0;
-          TreasureChestName = 6;
-          g_iTakenh=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==9 && g_iTakeni==0) {
-          location[0]=75.5;
-          location[1]=-1580.5;
-          location[2]=240.0;
-          TreasureChestName = 53;
-          g_iTakeni=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==10 && g_iTakenj==0) {
-          location[0]=-99.9;
-          location[1]=587.4;
-          location[2]=2.3;
-          TreasureChestName = 36; //Gate
-          g_iTakenj=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==11 && g_iTakenk==0) {
-          location[0]=788.9;
-          location[1]=-424.9;
-          location[2]=6.5;
-          TreasureChestName = 50;
-          g_iTakenk=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
-        }
-        if(random==12 && g_iTakenl==0) {
-          location[0]=-246.8;
-          location[1]=-751.9;
-          location[2]=0.0;
-          TreasureChestName = 52;
-          g_iTakenl=1;
-          TreasureChest(location,TreasureChestName);
-          g_iTreasureChestNumber++;
+      else //CSGO goes here
+      {
+        if(StrEqual(sMap,"de_dust2",false))  {
+          new random=GetRandomInt(1,11);
+          if(random==1 && g_iTaken==0) {
+            location[0]=-873.02;
+            location[1]=1352.03;
+            location[2]=47.91;
+            TreasureChestName = 55; //Lower Tunnel
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=-1296.91;
+            location[1]=1239.98;
+            location[2]=133.08;
+            TreasureChestName = 56; //Upper Tunnel
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=-1820.69;
+            location[1]=1827.09;
+            location[2]=212.07;
+            TreasureChestName = 4; //Bombsite B
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=-2199.97;
+            location[1]=2097.03;
+            location[2]=89.37;
+            TreasureChestName = 4; //Bombsite B
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=-272.03;
+            location[1]=1428.81;
+            location[2]=36.18;
+            TreasureChestName = 57; //T Ramp
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=718.33;
+            location[1]=653.26;
+            location[2]=138.09;
+            TreasureChestName = 58; //Long Doors
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=1296.00;
+            location[1]=672.06;
+            location[2]=44.65;
+            TreasureChestName = 59; //Pit
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=-1200.00;
+            location[1]=1441.04;
+            location[2]=-47.91;
+            TreasureChestName = 55; //Lower Tunnel
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=487.97;
+            location[1]=1360.03;
+            location[2]=144.09;
+            TreasureChestName = 60; //Short stairs
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=-580.01;
+            location[1]=682.52;
+            location[2]=176.09;
+            TreasureChestName = 61;
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=447.20;
+            location[1]=1775.98;
+            location[2]=64.09;
+            TreasureChestName = 60; //Short Stairs
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+        }
+        if(StrEqual(sMap,"de_inferno",false))  {
+          new random=GetRandomInt(1,13);
+          if(random==1 && g_iTaken==0) {
+            location[0]=272.03;
+            location[1]=-271.94;
+            location[2]=160.09;
+            TreasureChestName = 62; //Second Mid
+            g_iTaken=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==2 && g_iTakenb==0) {
+            location[0]=272.03;
+            location[1]=-271.97;
+            location[2]=380.09;
+            TreasureChestName = 62;
+            g_iTakenb=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==3 && g_iTakenc==0) {
+            location[0]=865.10;
+            location[1]=-791.97;
+            location[2]=161.21;
+            TreasureChestName = 34;
+            g_iTakenc=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==4 && g_iTakend==0) {
+            location[0]=932.00;
+            location[1]=-118.11;
+            location[2]=320.09;
+            TreasureChestName = 31;
+            g_iTakend=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==5 && g_iTakene==0) {
+            location[0]=198.23;
+            location[1]=444.74;
+            location[2]=144.09;
+            TreasureChestName = 6;
+            g_iTakene=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==6 && g_iTakenf==0) {
+            location[0]=888.49;
+            location[1]=138.29;
+            location[2]=149.67;
+            TreasureChestName = 63;
+            g_iTakenf=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==7 && g_iTakeng==0) {
+            location[0]=352.83;
+            location[1]=2128.00;
+            location[2]=198.71;
+            TreasureChestName = 64;
+            g_iTakeng=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==8 && g_iTakenh==0) {
+            location[0]=879.97;
+            location[1]=1901.03;
+            location[2]=200.08;
+            TreasureChestName = 64;
+            g_iTakenh=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==9 && g_iTakeni==0) {
+            location[0]=106.27;
+            location[1]=1572.47;
+            location[2]=173.29;
+            TreasureChestName = 64;
+            g_iTakeni=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==10 && g_iTakenj==0) {
+            location[0]=285.32;
+            location[1]=558.30;
+            location[2]=60.25;
+            TreasureChestName = 33;
+            g_iTakenj=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==11 && g_iTakenk==0) {
+            location[0]=902.36;
+            location[1]=135.17;
+            location[2]=276.35;
+            TreasureChestName = 63;
+            g_iTakenk=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==12 && g_iTakenl==0) {
+            location[0]=936.77;
+            location[1]=-376.12;
+            location[2]=320.09;
+
+            TreasureChestName = 34;
+            g_iTakenl=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
+          if(random==13 && g_iTakenm==0) {
+            location[0]=759.72;
+            location[1]=721.25;
+            location[2]=176.51;
+
+            TreasureChestName = 6;
+            g_iTakenm=1;
+            TreasureChest(location,TreasureChestName);
+            g_iTreasureChestNumber++;
+          }
         }
       }
     }
