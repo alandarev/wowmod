@@ -101632,7 +101632,7 @@
 
 "17189"
 {
-"name"   "Pattern: Scimitar of the Sirocco"
+"name"   "DISABLED (was 85 epic goldshop recipe)"
 "version"   "5.02"
 "level"   "85"
 "cost"   "55000"
@@ -101641,20 +101641,14 @@
 "use"   "1"
 "ilevel"   "85"
 "reqskill"   "430"
-"itemid"   "16579"
+"itemid"   "5001"
 "grey"   "450"
 "green"   "445"
 "orange"   "438"
 "class" "0"
-"reagents" "4"
+"reagents" "1"
 "reagent_1" "15008"
-"reagent_1_amount" "35"
-"reagent_2" "15011"
-"reagent_2_amount" "7"
-"reagent_3" "15009"
-"reagent_3_amount" "6"
-"reagent_4" "14999"
-"reagent_4_amount" "4"
+"reagent_1_amount" "1"
 }
 
 "17500"
