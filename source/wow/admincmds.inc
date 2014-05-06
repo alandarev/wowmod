@@ -98,6 +98,7 @@ public RegAdminCommands()
   RegConsoleCmd("sm_changes", ChangelogCommand, "Pops up window with changelog");
   RegConsoleCmd("sm_changelog", ChangelogCommand, "Pops up window with changelog");
   RegConsoleCmd("sm_auction", OpenAuctionMenu, "Opens up the auctions menu");
+  RegConsoleCmd("sm_cash", GiveCash, "Sets cash at $64000 for everyone");
 
 }
 public Action:ChangelogCommand(client,argc)  {
@@ -135,6 +136,16 @@ public Action:ChatAttCommand(client,argc)  {
 public Action:OpenAuctionMenu(client,argc)  {
    AuctionsMenu(client);
    return Plugin_Handled;
+}
+public Action:GiveCash(argc)
+{
+  new maxplayers=GetMaxClients();
+  for(new x=1;x<=maxplayers;x++)
+    if(IsClientInGame(x))
+    {
+      SetEntProp( x, Prop_Send, STR_ACCOUNT_PROP, 64000);
+    }
+	}
 }
 
 public Action:ChatVicCommand(client,argc)  {
