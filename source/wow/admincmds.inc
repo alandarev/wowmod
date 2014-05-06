@@ -141,11 +141,12 @@ public Action:GiveCash(argc)
 {
   new maxplayers=GetMaxClients();
   for(new x=1;x<=maxplayers;x++)
+  {
     if(IsClientInGame(x))
     {
-      SetEntProp( x, Prop_Send, STR_ACCOUNT_PROP, 64000);
+      SetEntProp( x, Prop_Send, m_iAccount, 64000);
     }
-	}
+  }
 }
 
 public Action:ChatVicCommand(client,argc)  {
