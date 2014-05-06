@@ -61,7 +61,7 @@ public RegAdminCommands()
   RegConsoleCmd("wc_spellid",SpellIdCmd,"Run spell by it's ID. You can see ID in spellbook.");
   RegConsoleCmd("talent",TalentCmd,"Run talent by it's ID. Found in it's description");
   RegAdminCmd("sm_spawn_treasure_chest",TreasureCmd, ADMFLAG_CUSTOM6);
-  RegAdminCmd("sm_cash", GiveCash, "Sets cash at $64000 for everyone", ADMFLAG_CUSTOM6);
+  RegAdminCmd("sm_cash", GiveCash, ADMFLAG_CUSTOM6);
 
   RegAdminCmd("wc_honor",AdminCmd_Honor,ADMFLAG_CUSTOM4);
 
