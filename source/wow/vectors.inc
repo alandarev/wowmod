@@ -2847,7 +2847,8 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
     GetClientEyePosition(client,startpos);
     new Float:dir[3];
     GetAngleVectors(angle, dir, NULL_VECTOR, NULL_VECTOR);
-    ScaleVector(dir, 5000.0);
+    new Float:distance=5000.0;
+    ScaleVector(dir, distance);
     AddVectors(startpos, dir, endpos);
     //TR_TraceRayFilter(startpos,endpos,MASK_PLAYERSOLID,RayType_EndPoint,AimTargetFilter);
     TR_TraceRayFilter(startpos,endpos,MASK_ALL,RayType_EndPoint,AimTargetFilter);
