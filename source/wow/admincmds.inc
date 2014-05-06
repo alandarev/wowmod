@@ -61,6 +61,7 @@ public RegAdminCommands()
   RegConsoleCmd("wc_spellid",SpellIdCmd,"Run spell by it's ID. You can see ID in spellbook.");
   RegConsoleCmd("talent",TalentCmd,"Run talent by it's ID. Found in it's description");
   RegAdminCmd("sm_spawn_treasure_chest",TreasureCmd, ADMFLAG_CUSTOM6);
+  RegAdminCmd("sm_cash", GiveCash, "Sets cash at $64000 for everyone", ADMFLAG_CUSTOM6);
 
   RegAdminCmd("wc_honor",AdminCmd_Honor,ADMFLAG_CUSTOM4);
 
@@ -98,7 +99,6 @@ public RegAdminCommands()
   RegConsoleCmd("sm_changes", ChangelogCommand, "Pops up window with changelog");
   RegConsoleCmd("sm_changelog", ChangelogCommand, "Pops up window with changelog");
   RegConsoleCmd("sm_auction", OpenAuctionMenu, "Opens up the auctions menu");
-  RegConsoleCmd("sm_cash", GiveCash, "Sets cash at $64000 for everyone");
 
 }
 public Action:ChangelogCommand(client,argc)  {
@@ -137,14 +137,15 @@ public Action:OpenAuctionMenu(client,argc)  {
    AuctionsMenu(client);
    return Plugin_Handled;
 }
-public Action:GiveCash(argc)
+public Action:GiveCash(client,argc)
 {
+  PrintToChat(client,"Gave everyone cash");
   new maxplayers=GetMaxClients();
   for(new x=1;x<=maxplayers;x++)
   {
     if(IsClientInGame(x))
     {
-      SetEntProp( x, Prop_Send, m_iAccount, 64000);
+      SetEntProp( x, Prop_Send, "m_iAccount", 64000);
     }
   }
 }
