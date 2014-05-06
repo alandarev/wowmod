@@ -3905,24 +3905,24 @@ public EffectSun(client)
 {
   new Float:location2[3];
   GetClientAbsOrigin(client,location2);
-  location2[2]+=600;
+  location2[2]+=300;
   VS_GlowSprite(location2, g_ef_orangeflare1, 8.0, 2.00, 255);
   new Float:location[3];
-  new amount = 12;
+  /*new amount = 12;
   for (new x=0;x<=(amount-1);x++)
   {
     location[2]=location2[2]-GetRandomFloat(50.0, 75.0);
     location[1]=location2[1]-GetRandomFloat(50.0, 85.0);
     location[0]=location2[0]-GetRandomFloat(50.0, 85.0);
     VS_BeamPoints(location2, location, g_ef_hydraspinalcord, g_ef_hydraspinalcord, 1, 5, 8.00, 1.25, 1.75, 1, 0.00, {253, 187, 66, 120}, 20);
-  }
+  }*/
 
   GetClientAbsOrigin(client,location);
   new ticks = 8;
   new effid=CreateEffectData(0,client,ticks,0,_:location[0],0,_:location[1],_:location[2],g_RoundCount,0);
   if(effid!=0)
   {
-    CreateTimer(0.1, EffectSunCreate, effid, TIMER_REPEAT);
+    CreateTimer(1.0, EffectSunCreate, effid, TIMER_REPEAT);
   }
   WCMessage(client,"sun cast",client);
 }

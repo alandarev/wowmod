@@ -2839,11 +2839,34 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
   new targetPriority=0;
   if(smartHeal)
     target=0;
+  if(value==45.0)  {
+    new Float:angle[3];
+    GetClientEyeAngles(client,angle);
+    new Float:endpos[3];
+    new Float:startpos[3];
+    GetClientEyePosition(client,startpos);
+    new Float:dir[3];
+    GetAngleVectors(angle, dir, NULL_VECTOR, NULL_VECTOR);
+    ScaleVector(dir, 5000.0);
+    AddVectors(startpos, dir, endpos);
+    //TR_TraceRayFilter(startpos,endpos,MASK_PLAYERSOLID,RayType_EndPoint,AimTargetFilter);
+    TR_TraceRayFilter(startpos,endpos,MASK_ALL,RayType_EndPoint,AimTargetFilter);
+    TR_GetEndPosition(endpos);
+    distance = (GetVectorDistance(startpos, endpos) - 55.0);
+    endpos[1] = (startpos[1] + (distance * Sine(DegToRad(angle[1]))));
+    endpos[0] = (startpos[0] + (distance * Cosine(DegToRad(angle[1]))));
+    if(GetClientTeam(client)==2)
+      target = GetNearestClient("t",endpos,30.0);
+    if(GetClientTeam(client)==3)
+      target = GetNearestClient("ct",endpos,30.0);
+    return target;
+  }
   if((target>0)&&(target<=GetMaxClients()))
     if(IsClientConnected(target))
       if(IsClientInGame(target) && IsPlayerAlive(target) && (! (IsMageInvis(target) || IsInvisible(target))))
         if(!HasStealth(target) || GetStealth(target) > 50 || smartHeal)
           return target;
+          
   new Float:angelrec[2],Closest;
   angelrec[0]=181.0;
   angelrec[1]=181.0;
@@ -2915,6 +2938,8 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
 
   return Closest;
 }
+
+
 
 public bool:AimTargetFilter(entity,mask)
 {
