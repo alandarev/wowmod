@@ -155,7 +155,7 @@ public Action:SetHp(client, args)
 {
   if (args < 2)
   {
-    ReplyToCommand(client, "[WC] Usage: sm_hp <target name> <health percentage to set health>
+    ReplyToCommand(client, "[WC] Usage: sm_hp <target name> <health percentage to set health>");
     return Plugin_Handled;
   }
 
@@ -164,7 +164,7 @@ public Action:SetHp(client, args)
   GetCmdArgString(name, sizeof(name));
 	for (new i=1; i<=MaxClients; i++)
 	{
-		if (!IsClientConnected(i))
+    if (!IsClientConnected(i))
 		{
 			continue;
 		}
@@ -187,7 +187,7 @@ public Action:SetHp(client, args)
     new hp = wcGetHealth(target);
     decl String:health[20];
     GetCmdArgString(health, sizeof(health));
-    new sethp = StringToFloat(health) * float(maxhp);
+    new sethp = RoundToNearest(StringToFloat(health) * float(maxhp));
     wcSetHealth(target,sethp);
   }
   return Plugin_Handled;
