@@ -162,7 +162,6 @@ public Action:SetHp(client, args)
     ReplyToCommand(client, "[WC] Usage: sm_hp <target name> <health percentage to set health>");
     return Plugin_Handled;
   }
-
   decl String:name[32], String:temp[20];
   new target = -1;
   GetCmdArg(1, name, 20);
@@ -190,7 +189,7 @@ public Action:SetHp(client, args)
     GetCmdArg(2, temp, 20);
     new health = StringToInt(temp);
     PrintToChatAll("Argument is: %i",health);
-    new sethp = RoundToNearest(float(health) * float(maxhp));
+    new sethp = RoundToNearest(float(health) * float(maxhp) * 0.01);
     PrintToChatAll("Sethp is: %i",sethp);
     wcSetHealth(target,sethp);
   }
