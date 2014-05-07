@@ -2828,6 +2828,9 @@ stock bool:IsClearPath(Float:loc[3],Float:loc2[3],target=-1)
 stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false, Float:MAXDIST=0.0)
 {
   decl Float:loc[3],Float:view[3];
+  //For testing
+  if(smartHeal)
+    smartHeal=false;
   if(22.5>value && CSGO)
     value*=1.25;
   if(1.0>=MAXDIST)
