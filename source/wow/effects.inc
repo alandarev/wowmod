@@ -3920,7 +3920,7 @@ public EffectSun(client)
   GetClientAbsOrigin(client,location);
   new ticks = 8;
   ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
-  new tickdelay = 1.0*(1.0-GetHasteEffect(client));
+  new Float:tickdelay = 1.0*(1.0-GetHasteEffect(client));
   new effid=CreateEffectData(0,client,ticks,0,_:location[0],0,_:location[1],_:location[2],g_RoundCount,0);
   if(effid!=0)
   {
@@ -4025,7 +4025,6 @@ public SenJin(userid,attacker)
   new ticks=3;
   new tickdamage=4;
   ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
-  tickdelay = tickdelay*(1.0-GetHasteEffect(client));
   new Float:multi=0.08;
   tickdamage+=RoundToNearest(float(GetDamage(attacker))*multi);
   WCMessage(attacker,"senjin casted",attacker,victimname,tickdamage);
@@ -4038,7 +4037,7 @@ public SenJin(userid,attacker)
   new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid],GetClientDeaths(userid));
   if(effid!=0)
   {
-    CreateTimer(float(tickdelay), Effect4Action, effid, TIMER_REPEAT);
+    CreateTimer(float(tickdelay)*(1.0-GetHasteEffect(client)), Effect4Action, effid, TIMER_REPEAT);
   }
 }
 public Action:Guldan(Handle:timer, Handle:datapack)

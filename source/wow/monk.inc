@@ -275,9 +275,9 @@ public wcRunSpell_9_2(spellid,race,victim,attacker,&totaldmg) //Tiger Palm
   {
     new dmgef = RoundToNearest(dmg*0.50);
     new ticks = 3;
-    new tickdelay = 2.0;
-    ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
-    tickdelay = tickdelay*(1.0-GetHasteEffect(client));
+    new Float:tickdelay = 2.0;
+    ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(attacker)));
+    tickdelay = tickdelay*(1.0-GetHasteEffect(attacker));
     new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_respawns[victim],0);
     if(effid!=0)
     {
