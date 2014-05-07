@@ -61,8 +61,6 @@ public RegAdminCommands()
   RegConsoleCmd("wc_spellid",SpellIdCmd,"Run spell by it's ID. You can see ID in spellbook.");
   RegConsoleCmd("talent",TalentCmd,"Run talent by it's ID. Found in it's description");
   RegAdminCmd("sm_spawn_treasure_chest",TreasureCmd, ADMFLAG_CUSTOM6);
-  RegAdminCmd("sm_cash", GiveCash, ADMFLAG_CUSTOM6);
-  RegAdminCmd("sm_hp", SetHp, ADMFLAG_CUSTOM6);
 
   RegAdminCmd("wc_honor",AdminCmd_Honor,ADMFLAG_CUSTOM4);
 
@@ -101,6 +99,12 @@ public RegAdminCommands()
   RegConsoleCmd("sm_changelog", ChangelogCommand, "Pops up window with changelog");
   RegConsoleCmd("sm_auction", OpenAuctionMenu, "Opens up the auctions menu");
 
+  //CSGO Specific commands
+  if(CSGO)
+  {
+    RegAdminCmd("sm_cash", GiveCash, ADMFLAG_CUSTOM6);
+    RegAdminCmd("sm_hp", SetHp, ADMFLAG_CUSTOM6);
+  }
 }
 public Action:ChangelogCommand(client,argc)  {
   if(client<1 || client > GetMaxClients())  {
@@ -173,21 +177,21 @@ public Action:SetHp(client, args)
     if (StrEqual(name, other))
     {
       target = i;
-      break;
     }
   }
+  PrintToChatAll("target is %i",target);
   if (target == -1)
   {
     PrintToConsole(client, "Could not find any player with the name: \"%s\"", name);
-    return Plugin_Handled;
   }
   else
   {
     new maxhp = GetMaxHealth(target);
-    new hp = wcGetHealth(target);
-    decl String:health[20];
+    decl String:health[3];
     GetCmdArgString(health, sizeof(health));
+    PrintToChatAll("Argument is: \"%s\"",health);
     new sethp = RoundToNearest(StringToFloat(health) * float(maxhp));
+    PrintToChatAll("Sethp is: %i",sethp);
     wcSetHealth(target,sethp);
   }
   return Plugin_Handled;
