@@ -2831,7 +2831,7 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
   if(22.5>value && CSGO)
     value*=1.25;
   if(1.0>=MAXDIST)
-    MAXDIST=5000.0
+    MAXDIST=5000.0;
   GetClientEyePosition(client,loc);
   GetClientEyeAngles(client, view);
   ClientTracer=client;
