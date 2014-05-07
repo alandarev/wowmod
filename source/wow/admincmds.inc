@@ -62,6 +62,7 @@ public RegAdminCommands()
   RegConsoleCmd("talent",TalentCmd,"Run talent by it's ID. Found in it's description");
   RegAdminCmd("sm_spawn_treasure_chest",TreasureCmd, ADMFLAG_CUSTOM6);
   RegAdminCmd("sm_cash", GiveCash, ADMFLAG_CUSTOM6);
+  RegAdminCmd("sm_hp", SetHp, ADMFLAG_CUSTOM6);
 
   RegAdminCmd("wc_honor",AdminCmd_Honor,ADMFLAG_CUSTOM4);
 
@@ -147,6 +148,49 @@ public Action:GiveCash(client,argc)
       SetEntProp( x, Prop_Send, "m_iAccount", 64000);
     }
   }
+}
+
+
+public Action:SetHp(client, args)
+{
+  if (args < 2)
+  {
+    ReplyToCommand(client, "[WC] Usage: sm_hp <target name> <health percentage to set health>
+    return Plugin_Handled;
+  }
+
+  decl String:name[32];
+  new target = -1;
+  GetCmdArgString(name, sizeof(name));
+	for (new i=1; i<=MaxClients; i++)
+	{
+		if (!IsClientConnected(i))
+		{
+			continue;
+		}
+		decl String:other[32];
+		GetClientName(i, other, sizeof(other));
+		if (StrEqual(name, other))
+		{
+			target = i;
+      break;
+		}
+	}
+	if (target == -1)
+	{
+		PrintToConsole(client, "Could not find any player with the name: \"%s\"", name);
+		return Plugin_Handled;
+	}
+  else
+  {
+    new maxhp = GetMaxHealth(target);
+    new hp = wcGetHealth(target);
+    decl String:health[20];
+    GetCmdArgString(health, sizeof(health));
+    new sethp = StringToFloat(health) * float(maxhp);
+    wcSetHealth(target,sethp);
+  }
+  return Plugin_Handled;
 }
 
 public Action:ChatVicCommand(client,argc)  {
