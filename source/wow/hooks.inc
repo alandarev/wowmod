@@ -1811,17 +1811,23 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(g_iRenewingGlyph[victim]>0)
     damagemulti*=1.00-(((g_iRenewingGlyph[victim]*0.025+0.025)*0.66)+0.017);
 
-  if(CheckRequirements(attacker,2,1,3,3))
+  if(IsClientInGame(attacker) && IsClientInGame(victim))
   {
-    decl Float:vicloct[3];
-    decl Float:attloct[3];
-    GetClientAbsOrigin(attacker,attloct);
-    GetClientAbsOrigin(victim,vicloct);
-    new Float:locdis=GetDistanceBetween(vicloct,attloct);
-    new Float:damageincrease=1.0 + (15.0 / locdis);
-    if(damageincrease>1.30)
-      damageincrease=1.30;
-    damagemulti*=damageincrease;
+    if(GetClass(attacker)==2)
+    {
+      if(CheckRequirements(attacker,2,1,3,3))
+      {
+        decl Float:vicloct[3];
+        decl Float:attloct[3];
+        GetClientAbsOrigin(attacker,attloct);
+        GetClientAbsOrigin(victim,vicloct);
+        new Float:locdis=GetDistanceBetween(vicloct,attloct);
+        new Float:damageincrease=1.0 + (15.0 / locdis);
+        if(damageincrease>1.30)
+          damageincrease=1.30;
+        damagemulti*=damageincrease;
+      }
+    }
   }
   if(bVanish[victim])
     if(CheckRequirements(victim,2,1,1,1))
