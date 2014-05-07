@@ -883,7 +883,7 @@ public wcRunSpell_6_5(spellid,race,victim,attacker) //Earth Shock
 
 public wcRunSpell_6_6(spellid,race,client) //Healing Wave
 {
-  new target=GetAimTarget(client,45.0,true);
+  new target=GetAimTarget(client,50.0, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))
@@ -2691,7 +2691,7 @@ wcRunSpell_2_10(spellid, race, client) {
 
 public wcRunSpell_5_1(spellid,race,client) //Flash Heal
 {
-  new target=GetAimTarget(client,45.0, true);
+  new target=GetAimTarget(client,50.0, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))
@@ -2820,7 +2820,7 @@ public wcRunSpell_5_2(spellid,race,client) //Prayer of Healing
 
 public wcRunSpell_5_3(spellid,race,client) //Greater Heal
 {
-  new target=GetAimTarget(client,45.0, true);
+  new target=GetAimTarget(client,50.0, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))
@@ -4416,7 +4416,7 @@ AntiDefuse(client)  {
 
 public wcRunSpell_4_5(spellid,race,client)
 {
-  new target=GetAimTarget(client,45.0, true);
+  new target=GetAimTarget(client,50.0, true, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))

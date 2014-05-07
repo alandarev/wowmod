@@ -5407,7 +5407,7 @@ public wcRunTalent_6_3(client)                                                  
 
 public wcRunTalent_6_4(client) //Chain Heal
 {
-  new target=GetAimTarget(client,45.0, true);
+  new target=GetAimTarget(client,50.0, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))
@@ -5759,7 +5759,7 @@ wcRunTalent_6_MaelstromWeapon(client,victim,damage, String:source[])
 /*
 public wcRunTalent_6_15(client) //Riptide
 {
-  new target=GetAimTarget(client,45.0, true);
+  new target=GetAimTarget(client,50.0, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))
@@ -7269,7 +7269,7 @@ public wcRunTalent_7_Healthstone(client)
   decl String:line[255];
   if(GetHealthstone(client)>0)
   {
-    new target=GetAimTarget(client,45.0, true);
+    new target=GetAimTarget(client,50.0, true);
     if(target>0)
     {
       if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))

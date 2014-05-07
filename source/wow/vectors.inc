@@ -2827,12 +2827,12 @@ stock bool:IsClearPath(Float:loc[3],Float:loc2[3],target=-1)
 
 stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false, Float:MAXDIST=0.0)
 {
-  if(CSGO && value!=45.0)
-    value*=1.25;
   decl Float:loc[3],Float:view[3];
+  if(22.5>value && CSGO)
+    value*=1.25;
+  if(1.0>=MAXDIST)
+    MAXDIST=5000.0
   GetClientEyePosition(client,loc);
-  if(CSGO && value==45.0)
-    loc[2]+=2200.0;
   GetClientEyeAngles(client, view);
   ClientTracer=client;
   new team = GetClientTeam(client);
@@ -2898,9 +2898,8 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
     //That's because of the bug on linux servers :(
     new Float:rayDistance = GetDistanceBetween(loc, endvec);
     new Float:targetDistance = GetDistanceBetween(loc, loc2);
-    if(value!=45.0 && !CSGO)
-      if(rayDistance < (targetDistance-13.0))
-        continue; //Then there is a solid object between
+    if(rayDistance < (targetDistance-13.0))
+      continue; //Then there is a solid object between
 
     if(MAXDIST > 0.0 && MAXDIST < targetDistance)
     continue; //Target too far

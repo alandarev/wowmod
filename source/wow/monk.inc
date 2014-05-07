@@ -303,7 +303,7 @@ public Action:RemoveTigerPalmBonus(Handle:timer, any:pack)
 public wcRunSpell_9_3(spellid,race,client) // Expel Harm
 {
   decl String:line[255];
-  new target=GetAimTarget(client,45.0, true);
+  new target=GetAimTarget(client,50.0, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))
@@ -1908,7 +1908,7 @@ public wcRunTalent_9_RenewingMist(client) //Renewing Mist
   wcGetTalentInfo(9,3,2,1,client,"cost",line);
   new cost = StringToInt(line);
   if(target<=0)
-    target=GetAimTarget(client,45.0, true);
+    target=GetAimTarget(client,50.0, true);
   if(g_iSereneMistsTarget[client]>0)
     target = g_iSereneMistsTarget[client];
   if(g_iSereneMists[client]>0)
@@ -2532,7 +2532,7 @@ public SetCocoon(client, amount)
 public wcRunTalent_9_LifeCocoon(client) //Life Cocoon
 {
   decl String:line[255];
-  new target=GetAimTarget(client,45.0, true);
+  new target=GetAimTarget(client,50.0, true, true);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target)) || (!IsPlayerAlive(target)))
