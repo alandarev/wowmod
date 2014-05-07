@@ -2832,7 +2832,7 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
   decl Float:loc[3],Float:view[3];
   GetClientEyePosition(client,loc);
   if(CSGO && value==45.0)
-    loc[2]+=900.0;
+    loc[2]+=2200.0;
   GetClientEyeAngles(client, view);
   ClientTracer=client;
   new team = GetClientTeam(client);
@@ -2898,7 +2898,7 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
     //That's because of the bug on linux servers :(
     new Float:rayDistance = GetDistanceBetween(loc, endvec);
     new Float:targetDistance = GetDistanceBetween(loc, loc2);
-    if(value!=45.0)
+    if(value!=45.0 && !CSGO)
       if(rayDistance < (targetDistance-13.0))
         continue; //Then there is a solid object between
 
