@@ -163,10 +163,9 @@ public Action:SetHp(client, args)
     return Plugin_Handled;
   }
 
-  decl String:name[32], String:temp[20];
+  decl String:name[32];
   new target = -1;
-  GetCmdArg(1, temp, 20);
-  target = StringToInt(temp);
+  GetCmdArg(1, name, 20);
   for (new i=1;i<=MaxClients;i++)
   {
     if (!IsClientConnected(i))
