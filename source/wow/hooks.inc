@@ -612,7 +612,17 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
 {
   if(ENABLE)
   {
-    
+    if(PlayersInTeams(true) >= 1)
+    {
+      new Handle:bots=FindConVar("bot_quota");
+      if(GetConVarInt(bots)>0)
+        CloseHandle(bots);
+      else
+      {
+        SetConVarInt(bots, 8);
+        CloseHandle(bots);
+      }
+    }
     new client=GetClientOfUserId(GetEventInt(event,"userid"));
     g_respawns[client]++;
     flushTempItems(client);
