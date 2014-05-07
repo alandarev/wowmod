@@ -121,7 +121,6 @@ public Action:ChangelogCommand(client,argc)  {
 
   return Plugin_Handled;
 }
-
 public Action:ChatAttCommand(client,argc)  {
    decl String:temp[100];
    if(TriggerChat(client, Chat:Chat_Attacker))   {
