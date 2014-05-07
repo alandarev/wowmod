@@ -162,25 +162,25 @@ public Action:SetHp(client, args)
   decl String:name[32];
   new target = -1;
   GetCmdArgString(name, sizeof(name));
-	for (new i=1; i<=MaxClients; i++)
-	{
+  for (new i=1;i<=MaxClients;i++)
+  {
     if (!IsClientConnected(i))
-		{
-			continue;
-		}
-		decl String:other[32];
-		GetClientName(i, other, sizeof(other));
-		if (StrEqual(name, other))
-		{
-			target = i;
+    {
+      continue;
+    }
+    decl String:other[32];
+    GetClientName(i, other, sizeof(other));
+    if (StrEqual(name, other))
+    {
+      target = i;
       break;
-		}
-	}
-	if (target == -1)
-	{
-		PrintToConsole(client, "Could not find any player with the name: \"%s\"", name);
-		return Plugin_Handled;
-	}
+    }
+  }
+  if (target == -1)
+  {
+    PrintToConsole(client, "Could not find any player with the name: \"%s\"", name);
+    return Plugin_Handled;
+  }
   else
   {
     new maxhp = GetMaxHealth(target);
