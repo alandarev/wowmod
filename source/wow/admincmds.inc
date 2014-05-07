@@ -163,9 +163,10 @@ public Action:SetHp(client, args)
     return Plugin_Handled;
   }
 
-  decl String:name[32];
+  decl String:name[32], String:temp[20];
   new target = -1;
-  GetCmdArgString(name, sizeof(name));
+  GetCmdArg(1, temp, 20);
+  target = StringToInt(temp);
   for (new i=1;i<=MaxClients;i++)
   {
     if (!IsClientConnected(i))
@@ -187,10 +188,10 @@ public Action:SetHp(client, args)
   else
   {
     new maxhp = GetMaxHealth(target);
-    decl String:health[3];
-    GetCmdArgString(health, sizeof(health));
-    PrintToChatAll("Argument is: \"%s\"",health);
-    new sethp = RoundToNearest(StringToFloat(health) * float(maxhp));
+    GetCmdArg(2, temp, 20);
+    new health = StringToInt(temp);
+    PrintToChatAll("Argument is: %i",health);
+    new sethp = RoundToNearest(float(health) * float(maxhp));
     PrintToChatAll("Sethp is: %i",sethp);
     wcSetHealth(target,sethp);
   }
