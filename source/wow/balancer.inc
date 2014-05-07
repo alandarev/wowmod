@@ -386,8 +386,12 @@ stock ItemDropBalancer(client)  {
 
   //Chance
   //The higher level the lower chance
-  new dice = level / 2;
-  if(dice < 3)  dice = 3;
+  new dice;
+  if(78>level)
+    dice = level / 5;
+  else
+    dice = level / 2;
+  if(dice < 1)  dice = 1;
   if(GetRandomInt(1,dice) != 1)  return;
   /*new dropped = GetDroppedItems(client);*/   //No more needed to limit total amount
   /*if(RoundToCeil(1.0*level) < dropped)  return; //Got enough items by now*/

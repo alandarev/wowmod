@@ -3919,10 +3919,12 @@ public EffectSun(client)
 
   GetClientAbsOrigin(client,location);
   new ticks = 8;
+  ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
+  new tickdelay = 1.0*(1.0-GetHasteEffect(client));
   new effid=CreateEffectData(0,client,ticks,0,_:location[0],0,_:location[1],_:location[2],g_RoundCount,0);
   if(effid!=0)
   {
-    CreateTimer(1.0, EffectSunCreate, effid, TIMER_REPEAT);
+    CreateTimer(tickdelay, EffectSunCreate, effid, TIMER_REPEAT);
   }
   WCMessage(client,"sun cast",client);
 }
@@ -4022,6 +4024,8 @@ public SenJin(userid,attacker)
   new tickdelay=KvGetNum(effectsdb,"tickdelay",0);
   new ticks=3;
   new tickdamage=4;
+  ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
+  tickdelay = tickdelay*(1.0-GetHasteEffect(client));
   new Float:multi=0.08;
   tickdamage+=RoundToNearest(float(GetDamage(attacker))*multi);
   WCMessage(attacker,"senjin casted",attacker,victimname,tickdamage);

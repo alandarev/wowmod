@@ -1625,6 +1625,8 @@ public bool:TGivePlayerRandomItem(id, Handle:pack) {
     WCMessage(client, "failed drop", client, "Random");
     return false;
   }
+  if(1 > GetLevel(client))
+    return false;
 
 
 
@@ -1648,7 +1650,7 @@ public bool:TGivePlayerRandomItem(id, Handle:pack) {
   }
   //Quality?
   new quality = GetRandomInt(1,100);
-  if(quality > 99 && isClientPDModule(client))  quality = 4; //7% epic
+  if(quality > 99 && isClientPDModule(client))  quality = 4; //Legendaries, 1% with premium, 0% otherwise
   else if(quality > 93)  quality = 3; //7% epic
   else if(quality > 70)  quality = 2; //23% rare
   else quality = 1; //Common
@@ -1674,8 +1676,9 @@ public bool:TGivePlayerRandomItem(id, Handle:pack) {
   if(level > 85) level = 85;
 
   // If legendary, set level 80-85
-  if (quality == 4) {
-    level = GetRandomInt(80,85);
+  if (quality == 4)
+  {
+    level = GetRandomInt(81,85);
   }
 
   //ilevel

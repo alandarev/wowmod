@@ -265,7 +265,7 @@ public wcRunSpell_9_2(spellid,race,victim,attacker,&totaldmg) //Tiger Palm
   decl Float:location[3];
   GetClientAbsOrigin(victim,location);
   MonkTigerPalmEffect(location);
-  //EmitAmbientSound("wc/spells/tigerpalm.wav",location);
+  EmitAmbientSound("wc/spells/tigerpalm.wav",location);
 
 
   
@@ -274,10 +274,14 @@ public wcRunSpell_9_2(spellid,race,victim,attacker,&totaldmg) //Tiger Palm
   if(item[Item_defId]==25261 && 80>GetLevel(attacker))
   {
     new dmgef = RoundToNearest(dmg*0.50);
-    new effid=CreateEffectData(victim,attacker,3,dmgef,0,0,0,2,g_respawns[victim],0);
+    new ticks = 3;
+    new tickdelay = 2.0;
+    ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
+    tickdelay = tickdelay*(1.0-GetHasteEffect(client));
+    new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_respawns[victim],0);
     if(effid!=0)
     {
-      CreateTimer(2.0, Effect4Action, effid, TIMER_REPEAT);
+      CreateTimer(tickdelay, Effect4Action, effid, TIMER_REPEAT);
     }
     AddEMsgAff("tigery palm", true);
   }
@@ -3856,5 +3860,6 @@ stock DoKegSpell(client, Float:location[3])  {
     SetEffectAttacker(targets[x],54); // Miss effect
   }
   WCMessage(client,"dizzying haze caster",client,stargets,dmg,RoundToNearest(float(duration)/100));
-  //MonkKegEffect(location, radius);
+  if(!CSGO)
+    MonkKegEffect(location, radius);
 }
