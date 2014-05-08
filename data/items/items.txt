@@ -41899,7 +41899,7 @@
 
 "6504"
 {
-"name"   "SoulStealer"
+"name"   "Soulstealer"
 "descr"   "Canadian combat knife"
 "version"   "5.02"
 "level"   "80"
@@ -41937,8 +41937,8 @@
 "descr"   "On using activates Cataclysm Expansion"
 "version"   "5.02"
 "level"   "4"
-"cost"   "1" //Used to be 10000
-"gold"   "1" //Used to be 800
+"cost"   "10000" //Used to be 10000
+"gold"   "800" //Used to be 800
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
@@ -41956,8 +41956,8 @@
 "descr"   "On using activates Death Knight Expansion"
 "version"   "5.02"
 "level"   "4"
-"cost"   "1" //Was 50000
-"gold"   "1" //Was 2000
+"cost"   "50000" //Was 50000
+"gold"   "2000" //Was 2000
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
@@ -41975,8 +41975,8 @@
 "descr"   "Gives access to Monk Class (not tradeable)"
 "version"   "5.02"
 "level"   "80"
-"cost"   "1" //Was 50000
-"gold"   "1" //Was 500
+"cost"   "50000" //Was 50000
+"gold"   "500" //Was 500
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
@@ -41996,7 +41996,7 @@
 "version"   "5.02"
 "level"   "4"
 "cost"   "1000"
-"gold"   "160"
+"gold"   "160000" //Remove 3 zeros
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
@@ -42015,7 +42015,7 @@
 "version"   "5.02"
 "level"   "4"
 "cost"   "1000"
-"gold"   "85"
+"gold"   "850000" //4 from here
 "noshop"   "2"
 "category"   "27"
 "use"   "1"
