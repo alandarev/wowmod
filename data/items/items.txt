@@ -149077,4 +149077,20 @@
 "reagent_1" "20019"
 "reagent_1_amount" "10"
 }
+"25263"
+{
+"name"   "Legendary quiz box!"
+"descr"   "CS:GO Opening box!"
+"version"   "5.02"
+"level"   "1"
+"cost"   "1000"
+"noshop"   "3"
+"category"   "24"
+"amount"   "1"
+"use"   "1"
+"ilevel"   "40"
+"message"   "mParty"
+"class" "0"
+"sets" "381 382 60 26 27"
+}
 }
