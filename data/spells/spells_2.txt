@@ -127,7 +127,7 @@
     "name_ru"   "TODO"
     "event" "player_spawn"
     "active" "0"
-    "level" "1"
+    "level" "99"
     "cost" "400"
   }
   "12"
@@ -139,7 +139,7 @@
     "cooldowntype"  "12"
     "cooldown"      "25.0"
     "mana"          "40"
-    "level"         "66"
+    "level"         "30"
     "duration"      "2.0"
     "noboss"        "1"
     "ticks"  "10"
