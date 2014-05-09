@@ -2344,7 +2344,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=-873.02;
             location[1]=1352.03;
             location[2]=47.91;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 55; //Lower Tunnel
             g_iTaken=1;
             TreasureChest(location,TreasureChestName);
@@ -2354,7 +2354,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=-1296.91;
             location[1]=1239.98;
             location[2]=133.08;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 56; //Upper Tunnel
             g_iTakenb=1;
             TreasureChest(location,TreasureChestName);
@@ -2364,7 +2364,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=-1820.69;
             location[1]=1827.09;
             location[2]=212.07;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 4; //Bombsite B
             g_iTakenc=1;
             TreasureChest(location,TreasureChestName);
@@ -2374,7 +2374,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=-2199.97;
             location[1]=2097.03;
             location[2]=89.37;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 4; //Bombsite B
             g_iTakend=1;
             TreasureChest(location,TreasureChestName);
@@ -2384,7 +2384,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=-272.03;
             location[1]=1428.81;
             location[2]=36.18;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 57; //T Ramp
             g_iTakene=1;
             TreasureChest(location,TreasureChestName);
@@ -2394,7 +2394,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=718.33;
             location[1]=653.26;
             location[2]=138.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 58; //Long Doors
             g_iTakenf=1;
             TreasureChest(location,TreasureChestName);
@@ -2404,7 +2404,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=1296.00;
             location[1]=672.06;
             location[2]=44.65;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 59; //Pit
             g_iTakeng=1;
             TreasureChest(location,TreasureChestName);
@@ -2414,7 +2414,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=-1200.00;
             location[1]=1441.04;
             location[2]=-47.91;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 55; //Lower Tunnel
             g_iTakenh=1;
             TreasureChest(location,TreasureChestName);
@@ -2424,7 +2424,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=487.97;
             location[1]=1360.03;
             location[2]=144.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 60; //Short stairs
             g_iTakeni=1;
             TreasureChest(location,TreasureChestName);
@@ -2434,7 +2434,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=-580.01;
             location[1]=682.52;
             location[2]=176.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 61;
             g_iTakenj=1;
             TreasureChest(location,TreasureChestName);
@@ -2444,7 +2444,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=447.20;
             location[1]=1775.98;
             location[2]=64.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 60; //Short Stairs
             g_iTakenk=1;
             TreasureChest(location,TreasureChestName);
@@ -2457,7 +2457,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=272.03;
             location[1]=-271.94;
             location[2]=160.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 62; //Second Mid
             g_iTaken=1;
             TreasureChest(location,TreasureChestName);
@@ -2467,7 +2467,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=272.03;
             location[1]=-271.97;
             location[2]=380.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 62;
             g_iTakenb=1;
             TreasureChest(location,TreasureChestName);
@@ -2477,7 +2477,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=865.10;
             location[1]=-791.97;
             location[2]=161.21;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 34;
             g_iTakenc=1;
             TreasureChest(location,TreasureChestName);
@@ -2487,7 +2487,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=932.00;
             location[1]=-118.11;
             location[2]=320.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 31;
             g_iTakend=1;
             TreasureChest(location,TreasureChestName);
@@ -2497,7 +2497,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=198.23;
             location[1]=444.74;
             location[2]=144.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 6;
             g_iTakene=1;
             TreasureChest(location,TreasureChestName);
@@ -2507,7 +2507,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=888.49;
             location[1]=138.29;
             location[2]=149.67;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 63;
             g_iTakenf=1;
             TreasureChest(location,TreasureChestName);
@@ -2517,7 +2517,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=352.83;
             location[1]=2128.00;
             location[2]=198.71;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 64;
             g_iTakeng=1;
             TreasureChest(location,TreasureChestName);
@@ -2527,7 +2527,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=879.97;
             location[1]=1901.03;
             location[2]=200.08;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 64;
             g_iTakenh=1;
             TreasureChest(location,TreasureChestName);
@@ -2537,7 +2537,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=106.27;
             location[1]=1572.47;
             location[2]=173.29;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 64;
             g_iTakeni=1;
             TreasureChest(location,TreasureChestName);
@@ -2547,7 +2547,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=285.32;
             location[1]=558.30;
             location[2]=60.25;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 33;
             g_iTakenj=1;
             TreasureChest(location,TreasureChestName);
@@ -2557,7 +2557,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=902.36;
             location[1]=135.17;
             location[2]=276.35;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 63;
             g_iTakenk=1;
             TreasureChest(location,TreasureChestName);
@@ -2567,7 +2567,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=936.77;
             location[1]=-376.12;
             location[2]=320.09;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 34;
             g_iTakenl=1;
             TreasureChest(location,TreasureChestName);
@@ -2577,7 +2577,7 @@ stock TreasureChestMap(chance, times=1)
             location[0]=759.72;
             location[1]=721.25;
             location[2]=176.51;
-            location[2]-=73.00;
+            location[2]-=58.00;
             TreasureChestName = 6;
             g_iTakenm=1;
             TreasureChest(location,TreasureChestName);
@@ -3185,6 +3185,8 @@ stock TreasureChestOpen(client,chestrarity)
       }
     }
     experience+=GetRandomInt(50000,10000);
+    if(CSGO)
+      experience = experience/1000;
   }
   if(silver>0) {
     wcSetMoney(client,(GetMoney(client)+silver));
