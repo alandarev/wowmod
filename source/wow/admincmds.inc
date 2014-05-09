@@ -178,7 +178,6 @@ public Action:SetHp(client, args)
       target = i;
     }
   }
-  PrintToChatAll("target is %i",target);
   if (target == -1)
   {
     PrintToConsole(client, "Could not find any player with the name: \"%s\"", name);
@@ -188,9 +187,7 @@ public Action:SetHp(client, args)
     new maxhp = GetMaxHealth(target);
     GetCmdArg(2, temp, 20);
     new health = StringToInt(temp);
-    PrintToChatAll("Argument is: %i",health);
     new sethp = RoundToNearest(float(health) * float(maxhp) * 0.01);
-    PrintToChatAll("Sethp is: %i",sethp);
     wcSetHealth(target,sethp);
   }
   return Plugin_Handled;

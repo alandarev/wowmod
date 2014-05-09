@@ -41994,9 +41994,9 @@
 "name"   "Tome of Experience +100,000"
 "descr"   "gives XP"
 "version"   "5.02"
-"level"   "4"
+"level"   "99"
 "cost"   "1000"
-"gold"   "160000" //Remove 3 zeros
+"gold"   "160"
 "noshop"   "3"
 "category"   "27"
 "use"   "1"
@@ -42013,9 +42013,9 @@
 "name"   "Tome of Experience +50,000"
 "descr"   "gives XP"
 "version"   "5.02"
-"level"   "4"
+"level"   "99"
 "cost"   "1000"
-"gold"   "850000" //4 from here
+"gold"   "85"
 "noshop"   "2"
 "category"   "27"
 "use"   "1"
