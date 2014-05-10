@@ -1481,7 +1481,7 @@ public wcRunSpell_1_10(spellid,race,client)
 
 public wcRunSpell_3_1(spellid,race,target, client)
 {
-  //new target=GetAimTarget(client,15.0);
+  //new target=GetAimTarget(client,25.0);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target))&&IsPlayerAlive(target))
@@ -1737,7 +1737,7 @@ public Action:FrostNovaVisualEffect(Handle:timer, any:dp)
 
 public wcRunSpell_3_3(spellid,race, target,client)
 {
-  //new target=GetAimTarget(client,15.0);
+  //new target=GetAimTarget(client,25.0);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target))&&IsPlayerAlive(target))
@@ -2234,7 +2234,7 @@ stock bool:IsManaShieldOn(client) {
 
 public wcRunSpell_3_10(spellid,race, client)
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(!( (IsBoss() || IsHNS()) && (GetBoss(target) > 0) && (UnableToAttack[target]) ) )
   {
     if(target>0)
@@ -3083,7 +3083,7 @@ public wcRunSpell_5_4(spellid,race,client) //Power Word: Shield
 
 public wcRunSpell_5_5(spellid,race, target,client)
 {
-  //new target=GetAimTarget(client,15.0);
+  //new target=GetAimTarget(client,25.0);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target))&&IsPlayerAlive(target))
@@ -3137,7 +3137,7 @@ public wcRunSpell_5_5(spellid,race, target,client)
 
 public wcRunSpell_5_6(spellid,race,client) //Mana Burn
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(!IsBoss())
   {
     if(target>0)
@@ -3557,7 +3557,7 @@ public Action:HaniGlyphFearThing(Handle:timer, any:effid)
 
 /*public wcRunSpell_7_2(spellid,race,client)
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -3651,7 +3651,7 @@ public Action:HaniGlyphFearThing(Handle:timer, any:effid)
 
 public wcRunSpell_7_3(spellid,race, target,client)
 {
-  //new target=GetAimTarget(client,15.0);
+  //new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -4057,7 +4057,7 @@ public wcRunSpell_7_6(spellid,race,client)
 
 public wcRunSpell_7_7(spellid,race,client) //Drain Life, Life Drain
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -6211,7 +6211,7 @@ public Action:TimedOrb(Handle:timer,Handle:pack) {
 
 public wcRunSpell_2_12(spellid,race,client) //Blind
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target<=0) {
     if(IsChat(client,Chat:Chat_Target))
     WCMessage(client,"no target",client);

@@ -1279,7 +1279,7 @@ wcRunTalent_9_AgileArmor(client)
     cost = 2;
   if(checkChi(client,cost))
   {
-    new target=GetAimTarget(client,15.0);
+    new target=GetAimTarget(client,25.0);
     if(target>0)
     {
       if(GetClientTeam(client)!=GetClientTeam(target)&&IsPlayerAlive(target))

@@ -297,7 +297,7 @@ wcRunSpell_8_1(spellid,race,victim,client,&totaldmg) //Blood Strike
 wcRunSpell_8_2(spellid,race,client) //Death Grip
 {
   //Standard Targetting
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target<=0) {
     if(IsChat(client,Chat:Chat_Target))
       WCMessage(client,"no target",client);
@@ -490,7 +490,7 @@ public Action:EndPlaguebringer(Handle:timer, Handle:datapack)
 
 wcRunSpell_8_4(spellid,race,client,victim,bool:endbringer=false)  { //Icy Touch
   //Standard Targetting
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target<=0) {
     if(IsChat(client,Chat:Chat_Target))
       WCMessage(client,"no target",client);
@@ -666,7 +666,7 @@ wcRunSpell_8_5(spellid,race,victim,client,&totaldmg) //Death Strike
 
 wcRunSpell_8_6(spellid,race,client)  {
   //Standard Targetting
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target<=0) {
     if(IsChat(client,Chat:Chat_Target))
       WCMessage(client,"no target",client);
@@ -754,7 +754,7 @@ wcRunSpell_8_7(victim,&totaldmg)
 
 wcRunSpell_8_8(spellid,race,client)  {
   //Standard Targetting
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target<=0) {
     if(IsChat(client,Chat:Chat_Target))
       WCMessage(client,"no target",client);
@@ -1605,7 +1605,7 @@ wcRunTalent_8_PowerOfFrost(client,&mana)
 
 wcRunTalent_8_Hypothermia(client)
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
 
   if(target>0)
   {

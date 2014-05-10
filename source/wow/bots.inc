@@ -246,7 +246,7 @@ stock BotThinkMage(client) {
   if(hp < 0.5 && wcManaShield[client] < 10 && GetMana(client) > 300)
     TryCast(client, 9); //Mana Shield
 
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   new Float:targetHp = 0.0;
   if(target > 0)
     targetHp = GetFloatHealth(target);
@@ -292,7 +292,7 @@ stock BotThinkPaladin(client) {
     TryCast(client, 2);
 
 
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   new Float:targetHp = 0.0;
   if(target > 0)
     targetHp = GetFloatHealth(target);
@@ -342,7 +342,7 @@ stock BotThinkPriest(client) {
     TryCast(client, 4);
 
 
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   new Float:targetHp = 0.0;
   if(target > 0)
     targetHp = GetFloatHealth(target);
@@ -418,7 +418,7 @@ stock BotThinkWarlock(client) {
     TryCast(client, 4); //Fear
 
 
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   new Float:targetHp = 0.0;
   if(target > 0)
     targetHp = GetFloatHealth(target);
@@ -446,7 +446,7 @@ stock BotThinkWarlock(client) {
 stock BotThinkDK(client) {
   new Float:hp = GetFloatHealth(client);
 
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   new Float:targetHp = 0.0;
   if(target > 0)
     targetHp = GetFloatHealth(target);
@@ -499,7 +499,7 @@ stock BotThinkMonk(client) {
     TryCast(client, 4);
   if(GetMonkStance(client)==1 && 0.50 > hp)
     TryCast(client, 4);
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl Float:locationt[3];
   if(target > 0)
   {

@@ -1390,7 +1390,7 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
 
 public wcRunTalent_1_stun(client) //Concussion Blow
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target<=0) {
     if(IsChat(client,Chat:Chat_Target))
       WCMessage(client,"no target",client);
@@ -2675,7 +2675,7 @@ public wcRunTalent_3_1(client)                                                  
 
 public wcRunTalent_3_2(client)                                                  //Living Bomb
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -3539,7 +3539,7 @@ public wcRunTalent_4_1_2(client)
 
 public wcRunTalent_4_2(client)                                                  //Avengers Shield
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target>0)
   {
   if((GetClientTeam(client)!=GetClientTeam(target))&&IsPlayerAlive(target))
@@ -4527,7 +4527,7 @@ public Action:EndBlessedRessilience(Handle:timer, Handle:datapack)
 
 public wcRunTalent_5_10(client) //Shadow Word:Death
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target>0)
   {
     if((GetClientTeam(client)!=GetClientTeam(target))&&IsPlayerAlive(target))
@@ -5204,7 +5204,7 @@ wcRunTalent_5_Silence(attacker,victim)
 
 wcRunTalent_5_MindFlay(client)
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -6282,7 +6282,7 @@ stock TE_SetupBubbles(const Float:vecOrigin[3], const Float:vecFinish[3],modelIn
 
 public wcRunTalent_7_3(client)                                                  //Chaos Bolt
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target>0)
   {
   if((GetClientTeam(client)!=GetClientTeam(target))&&IsPlayerAlive(target))
@@ -6452,7 +6452,7 @@ wcRunTalent_7_ShadowGrip(client,target)
 
 wcRunTalent_7_CursedSoul(client) //Cursed Soul
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -6682,7 +6682,7 @@ wcRunTalent_7_Flameburst(client,victim,&damage)
 
 /*wcRunTalent_7_ShadowWell(client)
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -6747,7 +6747,7 @@ public Action:EndShadowWellAction(Handle:timer, any:effid)
 
 public wcRunTalent_7_Immolate(client)
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   decl String:line[255];
   if(target>0)
   {
@@ -7374,7 +7374,7 @@ public wcRunTalent_7_SacrificalPact(client) //Sacrifical Pact
 
 public wcRunTalent_6_ChainLightning(client)
 {
-  new target=GetAimTarget(client,15.0);
+  new target=GetAimTarget(client,25.0);
   if(target>0)
   {
     if((GetClientTeam(client)==GetClientTeam(target)) || (!IsPlayerAlive(target)))
@@ -7484,7 +7484,7 @@ ChainLightningEffect(caster, target, target1, target2) {
 wcRunTalent_6_ChainLightning(client,bool:echo=false)
 {
   new targets[3];
-  targets[0]=GetAimTarget(client,15.0);
+  targets[0]=GetAimTarget(client,25.0);
   new team=GetClientTeam(client);
   if(targets[0]<=0)
     return 0;
