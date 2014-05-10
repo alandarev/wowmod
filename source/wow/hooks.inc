@@ -1732,10 +1732,13 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     new wepp = GetEntDataEnt2(attacker, ACTIVEWEAPON);
     decl String:A_weapon[50];
     GetEdictClassname(wepp, A_weapon, sizeof(A_weapon));
-    if(StrEqual("weapon_scar20",A_weapon))
-      damagemulti*=0.65;
-    if(StrEqual("weapon_g3sg1",A_weapon))
-      damagemulti*=0.65;
+    if(wepp>0)
+    {
+      if(StrEqual("weapon_scar20",A_weapon))
+        damagemulti*=0.65;
+      if(StrEqual("weapon_g3sg1",A_weapon))
+        damagemulti*=0.65;
+    }
   }
   
   new item[UniqueItem];
