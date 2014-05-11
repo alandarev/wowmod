@@ -1950,7 +1950,7 @@ public wcRunSpell_3_5(spellid,race,client)
   decl String:line[255];
   wcGetSpellInfo(race,spellid,"cooldowntype",line);
   new cdtype=StringToInt(line);
-  wcGetTalentInfo(3,3,2,2,client,"blinkcd",line);
+  wcGetTalentInfo(3,3,1,2,client,"blinkcd",line);
   new Float:talentbonus = StringToFloat(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line)-talentbonus;
@@ -1981,7 +1981,9 @@ public wcRunSpell_3_5(spellid,race,client)
     if( (GetCDSpell(client, 4) - GetTickedTime() ) < 3.0)
     SetCdSpell(client, 4, 3.0, 2);  //Cd for frost nova
     WCMessage(client,"blink cast",client);
-
+    wcGetTalentInfo(3,3,1,3,client,"chance",line);
+    if(StringToInt(line)>=GetRandomInt(1,100))
+      GiveArcaneCharge(client, 1);
     if (blinkw==1)
     {
       wcGetTalentInfo(3,2,3,3,client,"BWradius",line);
@@ -2116,10 +2118,8 @@ public wcRunSpell_3_7(spellid,race,client) //Arcane Explosion
     decl String:line[255];
     wcGetSpellInfo(race,spellid,"cooldowntype",line);
     new cdtype=StringToInt(line);
-    wcGetTalentInfo(3,3,2,2,client,"aecd",line);
-    new Float:talentbonus=StringToFloat(line);
     wcGetSpellInfo(race,spellid,"cooldown",line);
-    new Float:cd=StringToFloat(line)-talentbonus;
+    new Float:cd=StringToFloat(line);
     new manareq=GetSpellCost(client, spellid);
     wcSetMana(client,GetMana(client)-manareq);
 
@@ -2159,6 +2159,12 @@ public wcRunSpell_3_7(spellid,race,client) //Arcane Explosion
     CreateTimer(0.0,ArcaneEffect,client);
     CreateTimer(0.1,ArcaneEffect,client);
     wcGetSpellInfo(race,spellid,"name",line);
+    if(amount>=1 && CheckRequirements(client,3,3,1,2))
+    {
+      wcGetTalentInfo(3,3,1,2,client,"chance",line);
+      if(StringToInt(line)>=GetRandomInt(1,100))
+        GiveArcaneCharge(client, 1);
+    }
     for (new x=0;x<=(amount-1);x++)
     {
       decl String:vicMsg[300];
@@ -5705,6 +5711,21 @@ SetHolyPower(client, amount)
   if(amount>=0)
     g_iHolyPower[client]=amount;
 }
+
+GetArcaneCharge(client)
+{
+  return g_iArcaneCharge[client];
+}
+
+GiveArcaneCharge(client, amount)
+{
+  g_iArcaneCharge[client]+=GetArcaneCharge(client)+amount;
+  if(GetArcaneCharge(client)>99)
+    g_iArcaneCharge[client]=99;
+  if(0>GetArcaneCharge(client))
+    g_iArcaneCharge[client]=0;
+}
+
 
 FindRandomSeal(client)
 {

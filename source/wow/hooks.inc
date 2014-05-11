@@ -1747,7 +1747,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       if(StrEqual("weapon_awp",A_weapon))
         if(GetEventInt(event,"hitgroup")!=1)
           damagemulti*=1.30;
-      PrintToChatAll("Weapon is %s",A_weapon);
+      //PrintToChatAll("Weapon is %s",A_weapon);
     }
   }
   
@@ -1907,6 +1907,11 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     }*/
     if (StrEqual(weaponname,"Spell",false)) //spell damage
     {
+      if(CheckRequirements(victim,3,3,1,4))
+      {
+        wcGetTalentInfo(3,3,1,4,victim,"multi",line);
+        damagemulti*=StringToFloat(line);
+      }
       if(IsMageInvis(attacker))
       SetMageInvis(attacker, false, true);
       new bool:isAoe=GetEventBool(event,"aoe");
@@ -2066,6 +2071,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     }
     else if(StrEqual(weaponname,"Physical",false)) //physical damage
     {
+      if(CheckRequirements(attacker,3,1,2,1) && GetArcaneCharge(attacker)>=3)
+        wcRunTalent_3_ArcaneBarrage(attacker, victim);
       new bool:red = GetEventBool(event, "reduction");
       if(GetStance(attacker)==2)
         damagemulti *= 1.1;

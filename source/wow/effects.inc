@@ -326,7 +326,7 @@ PrecacheCSGO()	{
   g_ef_orangeflare1 = PrecacheModel("sprites/yelflare1.vmt");
   g_ef_orangelight1 = PrecacheModel("sprites/orangelight1.vmt");
   g_ef_yellowglow1 = PrecacheModel("sprites/glow03.vmt");
-  g_ef_WXplo1 = PrecacheModel("prites/zerogxplode.vmt");
+  g_ef_WXplo1 = PrecacheModel("sprites/zerogxplode.vmt");
   g_ef_greenglow1 = PrecacheModel("particle/particle_flares/aircraft_green.vmt");
   //g_ef_firecloud2 = PrecacheModel("materials/effects/fire_cloud2.vmt");
   PrecacheModel("effects/bluespark.vmt");
@@ -3370,7 +3370,7 @@ Effect42(victim,&damage)
 Effect43(client,&damage)
 {
   decl String:line[255];
-  wcGetTalentInfo(3,3,3,2,client,"multi",line);
+  wcGetTalentInfo(3,3,2,3,client,"multi",line);
   damage=RoundToNearest(damage*(1+StringToFloat(line)));
 }
 

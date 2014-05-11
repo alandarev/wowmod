@@ -886,21 +886,21 @@ public wcRunPassiveTalents(client)
     case 3:
     {
       //Haste
-      if(CheckRequirements(client,3,3,2,3))
-        wcRunTalent_3_FocusedMind(client,noisy); //Focused Mind
+      //if(CheckRequirements(client,3,3,2,3))
+        //wcRunTalent_3_FocusedMind(client,noisy); //Focused Mind
 
       //Crit
       if(CheckRequirements(client,3,2,2,2))
         wcRunTalent_3_6(client); //Pyromanic
 
       //Armor
-      if(CheckRequirements(client,3,3,1,1))
-        wcRunTalent_3_7(client); //Arcane Fortitude
+      //if(CheckRequirements(client,3,3,1,1))
+        //wcRunTalent_3_7(client); //Arcane Fortitude
 
       //Effects
       if(CheckRequirements(client,3,3,2,4))
         wcRunTalent_3_MasterOfMagic(client);
-      if(CheckRequirements(client,3,3,3,2))
+      if(CheckRequirements(client,3,3,2,3))
         wcRunTalent_3_ArcanePower(client);
     }
     case 4:
@@ -2752,10 +2752,8 @@ public wcRunTalent_3_3(client)    //Invisibility
   decl String:line[255];
   wcGetTalentInfo(3,3,3,1,client,"cooldowntype",line);
   new cdtype=StringToInt(line);
-  wcGetTalentInfo(3,3,2,2,client,"inviscd",line);
-  new Float:talentbonus=StringToFloat(line);
   wcGetTalentInfo(3,3,3,1,client,"cooldown",line);
-  new Float:cd=StringToFloat(line)-talentbonus;
+  new Float:cd=StringToFloat(line);
   new manareq = GetTalentCost(client, 3, 3, 1);
   wcGetTalentInfo(3,3,1,2,client,"multi",line);
   new Float:manabonus=StringToFloat(line);
@@ -2890,7 +2888,7 @@ public wcRunTalent_3_6(client)                                                  
   wcRecalculateStats(client);
 }
 
-public wcRunTalent_3_7(client)                                                  //Arcane Fortitude
+stock wcRunTalent_3_7(client)                                                  //Arcane Fortitude
 {
     decl String:line[255];
     wcGetTalentInfo(3,3,1,1,client,"multi",line);
@@ -3321,7 +3319,7 @@ wcRunTalent_3_BlazingSpeed(client)
 //  return multi;
 //}
 
-wcRunTalent_3_FocusedMind(client,bool:noisy)
+stock wcRunTalent_3_FocusedMind(client,bool:noisy)
 {
   decl String:line[255];
   new Float:haste;
@@ -3348,7 +3346,7 @@ wcRunTalent_3_ArcanePower(client)
 wcRunTalent_3_ArcanePower2(client,mana)
 {
   decl String:line[255];
-  wcGetTalentInfo(3,3,3,2,client,"mana",line);
+  wcGetTalentInfo(3,3,2,3,client,"mana",line);
   return RoundToNearest(mana*(1+StringToFloat(line)));
 }
 
@@ -7942,6 +7940,34 @@ public Action:RemoveShadowDance(Handle:timer, any:client)
   g_iShadowDamageDealt[client]=0;
 }
 
-
+public wcRunTalent_3_ArcaneBarrage(client, victim)
+{
+  decl String:line[255];
+  wcGetTalentInfo(3,3,2,1,client,"cost",line);
+  GiveArcaneCharge(client, -StringToInt(line));
+  wcGetTalentInfo(3,3,2,1,attacker,"multi",line);
+  new Float:multi=StringToFloat(line);
+  new dmg=GetSpellDmg(attacker,multi);
+  wcGetTalentInfo(3,3,2,1,attacker,"base",line);
+  dmg+=StringToInt(line);
+  wcSpellDamage(victim,attacker,dmg, "", "",line);
+  AddEMsgAff("arcane barrage", true);
+  
+  GetClientAbsOrigin(victim,location);
+  GetClientAbsOrigin(client,locationatt);
+  new color[4]={255,255,255,255};
+  location[2]+=35;
+  locationatt[2]+=30;
+  //EmitAmbientSound("wc/spells/arcanebarrage.wav",locationatt);
+  BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
+  locationatt[2]+=10;
+  VS_GlowSprite(locationatt, g_ef_WXplo1, 1.00, 1.00, 255);
+  locationatt[0]-=8;
+  BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
+  locationatt[0]+=16;
+  BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
+  
+  
+}
 
 

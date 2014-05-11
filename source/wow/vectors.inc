@@ -455,7 +455,7 @@ public wcRecalculateStats(client) { //Stats
     RecalculatePetStats(client);
     return;
   }
-
+  decl String:line[255];
   wcClientsStats[id][ARMORIGNORE]=(float(GetBonusAgi(client))+float(GetAgi(client)))/4.5+wcClientsBonusStats[id][ARMORIGNORE];
   wcClientsStats[id][ATTACKSPEED]=GetWeaponSpeed(client, false)-1+(float(1)+(float(GetAgi(client)+GetBonusAgi(client)))/(30.0 * float(GetLevel(client)) + 22.0)+wcClientsBonusStats[id][ATTACKSPEED]);
   if(GetStance(client)==3) //Unholy DK
@@ -463,7 +463,6 @@ public wcRecalculateStats(client) { //Stats
 
   if((CheckRequirements(client,2,2,2,4)) && (GetMonkStance(client)!=3))
   {
-    decl String:line[255];
     wcGetTalentInfo(2,2,2,4,client,"increase",line);
     new Float:multi =1.0 + StringToFloat(line);
     wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335*multi));
@@ -485,13 +484,18 @@ public wcRecalculateStats(client) { //Stats
     wcClientsStats[id][MAXMP]=100.0+wcClientsBonusStats[id][MAXMP];
   if(CheckRequirements(client,2,1,3,2))
   {
-    decl String:line[255];
     wcGetTalentInfo(2,1,3,2,client,"energy",line);
     wcClientsStats[id][MAXMP]=100.0+wcClientsBonusStats[id][MAXMP]+StringToFloat(line);
   }
 
+  if(CheckRequirements(client,3,3,1,1))
+  {
+    wcGetTalentInfo(3,3,1,1,client,"multi",line);
+    wcClientsStats[id][MPREGEN]=1.0+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN]*StringToFloat(line);
+  }
+  else
+    wcClientsStats[id][MPREGEN]=1.0+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN];
 
-  wcClientsStats[id][MPREGEN]=1.0+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN];
   wcClientsStats[id][ARMOR]=float(GetAgi(client)+GetBonusAgi(client))/3+wcClientsBonusStats[id][ARMOR];
   if(GetStance(client) == 1) //Blood DK
   wcClientsStats[id][ARMOR] *= 1.2;
@@ -3211,8 +3215,8 @@ Float:GetHasteEffect(client)
   if (GetClass(client) == 3)
   {
     decl String:line[255];
-    wcGetTalentInfo(3,3,2,3,client,"cap",line); //Mage Focused Mind
-    cap   += StringToFloat(line);
+    wcGetTalentInfo(3,3,2,2,client,"multi",line);
+    haste+=wcClientsStats[client][MPREGEN]*StringToFloat(line);
   }
 
   new Float:reduction = haste/(haste + 198);

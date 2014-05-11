@@ -1756,6 +1756,11 @@
     "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
     "en" "HP: {1}/{2} | {7}: {3}/{4} | HPo: {8}\nDmg Done: {5} | Dmg Taken: {6}"
   }
+  "hp mp dmg taken arcane"
+  {
+    "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
+    "en" "HP: {1}/{2} | {7}: {3}/{4} | AC: {8}\nDmg Done: {5} | Dmg Taken: {6}"
+  }
   "hp mp dmg taken runes"
   {
     "#format" "{1:d},{2:d},{3:d},{4:d},{5:d},{6:d},{7:s},{8:d}"
@@ -6048,29 +6053,13 @@
   {
     "en"  	"Combustion"
   }
-  "Arcane Fortitude name"
+  "Evocation name"
   {
-    "en"  	"Arcane Fortitude"
+    "en"  	"Evocation"
   }
-  "Arcane student name"
+  "Arcane Focus name"
   {
-    "en"  	"Arcane student"
-  }
-  "Arcane Stability name"
-  {
-    "en"  	"Arcane Stability"
-  }
-  "Powerful Spells name"
-  {
-    "en"  	"Powerful Spells"
-  }
-  "Arcane Shielding name"
-  {
-    "en"  	"Arcane Shielding"
-  }
-  "Arcane Flows name"
-  {
-    "en"  	"Arcane Flows"
+    "en"  	"Arcane Focus"
   }
   "Focused Mind name"
   {
@@ -6079,6 +6068,22 @@
   "Master of Magic name"
   {
     "en"  	"Master of Magic"
+  }
+  "Arcane Barrage name"
+  {
+    "en"  	"Arcane Barrage"
+  }
+  "Nether Attunement name"
+  {
+    "en"  	"Nether Attunement"
+  }
+  "Focused Mind name"
+  {
+    "en"  	"Focused Mind"
+  }
+  "Arcane Discharge name"
+  {
+    "en"  	"Arcane Discharge (Does not currently work)"
   }
   "Invisibility name"
   {
@@ -7326,29 +7331,33 @@
   {
     "en"		"<Activated> When activated the next spell and every spell within 0.5 seconds will automaticly crit."
   }
-  "Arcane Fortitude info"
+  "Evocation info"
   {
-    "en"		"<Passive> Increases your armor by a percentage of your intellect.\n    Rank 1: 25%% Intellect\n    Rank 2: 50%% Intellect"
+    "en"		"<Passive> Increases your mana regeneration\n    Rank 1: 33%% higher mp5\n    Rank 2: 66%% higher mp5\n    Rank 3: 100%% higher mp5"
   }
-  "Arcane student info"
+  "Arcane Focus info"
   {
-    "en"		"<Passive> Decreases the mana cost of all spells.\n    Rank 1: -5%% mana cost\n    Rank 2: -10%% mana cost"
+    "en"		"<Passive> Arcane Explosion has a chance to generate an Arcane Charge.\n    Rank 1: 50%% chance for an Arcane Charge\n    Rank 2: 100%% chance for an Arcane Charge"
   }
-  "Arcane Stability info"
+  "Focused Mind info"
   {
-    "en"		"<Passive> Gives you a chance to avoid being silenced.\n    Rank 1: 25%% chance\n    Rank 2: 50%% chance\n    Rank 3: 75%% chance"
+    "en"		"<Passive> Reduces the cooldown of Blink and gives it a chance to generate an Arcane Charge.\n    Rank 1: 33%% chance, -3s cooldown\n    Rank 2: 66%% chance, -6s cooldown\n    Rank 3: 100%% chance, -10s cooldown"
   }
-  "Powerful Spells info"
+  "Arcane Discharge info"
   {
-    "en"		"<Passive> Reduces enemy resistance by a percentage.\n    Rank 1: -10%% resistance\n    Rank 2: -20%% resistance\n    Rank 3: -30%% resistance"
+    "en"		"<Passive> Releasing Arcane Charges increases your spelldamage for 4 seconds.\n    Rank 1: Spelldamage increased by 7%%\n    Rank 2: Spelldamage increased by 13%% \n    Rank 3: Spelldamage increased by 20%%"
   }
-  "Arcane Shielding info"
+  "Arcane Barrage info"
   {
-    "en"		"<Passive> Decreases the mana lost from damage absorbed by mana shield by 30%%"
+    "en"		"<Passive> Once above or at 3 Arcane Charges, your next attack will unleash an Arcane Barrage.\n    Costs 3 Arcane Charges."
   }
-  "Arcane Flows info"
+  "arcane barrage"
   {
-    "en"		"<Passive> Reduces the cooldown of [B]link, [I]nvisibility and [A]rcane Explosion.\n    Rank 1: [B] -3 seconds, [I] -6 seconds, [A.E] -0.1 seconds\n    Rank 2: [B] -6 seconds, [I] -13 seconds, [A.E] -0.2 seconds\n    Rank 3: [B] -10 seconds, [I] -20 seconds, [A.E] -0.3 seconds"
+    "en"    "Arcane Barrage"
+  }
+  "Nether Attunement info"
+  {
+    "en"		"<Passive> Turns a part of your mana regeneration into haste\n    Rank 1: 50%% of mana regeneration turned into haste\n    Rank 2: 100%% of mana regeneration turned into haste"
   }
   "Focused Mind info"
   {
@@ -7364,7 +7373,7 @@
   }
   "Arcane Power info"
   {
-    "en"		"<Passive> Increases mana cost and damage of your spells.\n    Rank 1: +10%% mana cost, +5%% spell damage\n    Rank 2: +10%% mana cost, +10%% spell damage"
+    "en"		"<Passive> Increases the mana cost and damage of your spells.\n    Rank 1: +10%% mana cost, +10%% spell damage\n    Rank 2: +20%% mana cost, +20%% spell damage"
   }
   "Arcane Potency info"
   {

@@ -392,14 +392,20 @@ public Action:ManaTimer(Handle:timer, any:temp)
         if(!boss || IsHNS())
         {
           if(GetClass(x)!=4 && GetClass(x)!=8 && GetClass(x)!=9)
-            Format(buffer,sizeof(buffer),"%T","hp mp dmg taken",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype);
+          {
+            if(CheckRequirements(x,3,3,1,2) || CheckRequirements(x,3,3,1,3) || CheckRequirements(x,3,3,2,1) || CheckRequirements(x,3,3,2,4) || CheckRequirements(x,3,3,3,2))
+              Format(buffer,sizeof(buffer),"%T","hp mp dmg taken arcane",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype,GetArcaneCharge(x));
+            else
+              Format(buffer,sizeof(buffer),"%T","hp mp dmg taken",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype);
+            
+          }
           if(GetClass(x)==9)
             Format(buffer,sizeof(buffer),"%T","hp mp dmg taken chi",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype,getChi(x));
           if(GetClass(x)==4)
             Format(buffer,sizeof(buffer),"%T","hp mp dmg taken hopo",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype,GetHolyPower(x));
           if(GetClass(x)==8)
             Format(buffer,sizeof(buffer),"%T","hp mp dmg taken runes",x,hp,maxhp,mana,maxmana,wcDamageDone[x],wcDamageTaken[x],restype,GetRunes(x));
-        }
+            }
         else
           Format(buffer,sizeof(buffer),"%T","hp mp dmg threat",x,hp,maxhp,mana,maxmana,wcDamageDone[x],GetThreat(x),restype);
 
