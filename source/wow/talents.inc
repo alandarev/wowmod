@@ -7945,14 +7945,15 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   decl String:line[255];
   wcGetTalentInfo(3,3,2,1,client,"cost",line);
   GiveArcaneCharge(client, -StringToInt(line));
-  wcGetTalentInfo(3,3,2,1,attacker,"multi",line);
+  wcGetTalentInfo(3,3,2,1,client,"multi",line);
   new Float:multi=StringToFloat(line);
-  new dmg=GetSpellDmg(attacker,multi);
-  wcGetTalentInfo(3,3,2,1,attacker,"base",line);
+  new dmg=GetSpellDmg(client,multi);
+  wcGetTalentInfo(3,3,2,1,client,"base",line);
   dmg+=StringToInt(line);
-  wcSpellDamage(victim,attacker,dmg, "", "",line);
+  wcSpellDamage(victim,client,dmg, "", "",line);
   AddEMsgAff("arcane barrage", true);
   
+  decl Float:location[3],locationatt[3];
   GetClientAbsOrigin(victim,location);
   GetClientAbsOrigin(client,locationatt);
   new color[4]={255,255,255,255};
