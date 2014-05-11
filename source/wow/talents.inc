@@ -7953,7 +7953,7 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   wcSpellDamage(victim,client,dmg, "", "",line);
   AddEMsgAff("arcane barrage", true);
   
-  decl Float:location[3],locationatt[3];
+  decl Float:location[3],Float:locationatt[3];
   GetClientAbsOrigin(victim,location);
   GetClientAbsOrigin(client,locationatt);
   new color[4]={255,255,255,255};
