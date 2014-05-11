@@ -3131,55 +3131,67 @@
         {
           "0"
           {
-            "name"  "Arcane Power"
+            "name"  "Arcane Missiles"
               "max"  "2"
               "saveid"  "x"
           }
           "1"
           {
-            "name"  "Arcane Power"
-              "max"  "2"
-              "saveid"  "x"
-              "mana"  "0.1"
-              "multi" "0.05"
+            "name"  "Arcane Missiles"
+            "max"  "2"
+            "saveid"  "x"
+            "multi" "0.15"
+            "base"  "3"
+            "mana"  "30"
+            "manainc" "0.50"
+            "cooldown"  "0.5"
+            "cooldowntype"  "12"
+            "chance"  "25"
+            "active"  "2"
           }
           "2"
           {
-            "name"  "Arcane Power"
-              "max"  "2"
-              "saveid"  "x"
-              "mana"  "0.15"
-              "multi" "0.1"
+            "name"  "Arcane Missiles"
+            "max"  "2"
+            "saveid"  "x"
+            "multi" "0.15"
+            "base"  "3"
+            "mana"  "15"
+            "manainc" "0.25"
+            "cooldown"  "0.5"
+            "cooldowntype"  "12"
+            "chance"  "25"
+            "active"  "2"
           }
         }
         "3"
         {
           "0"
           {
-            "name"  "Arcane Potency"
+            "name"  "Arcane Shielding"
               "max"  "3"
               "saveid"  "y"
           }
           "1"
           {
-            "name"  "Arcane Potency"
+            "name"  "Arcane Shielding"
               "max"  "3"
               "saveid"  "y"
-              "increment" "0.01"
+              "multi" "0.10"
           }
           "2"
           {
-            "name"  "Arcane Potency"
+            "name"  "Arcane Shielding"
               "max"  "3"
               "saveid"  "y"
-              "increment" "0.03"
+              "multi" "0.20"
           }
           "3"
           {
-            "name"  "Arcane Potency"
+            "name"  "Arcane Shielding"
               "max"  "3"
               "saveid"  "y"
-              "increment" "0.05"
+              "multi" "0.30"
           }
         }
       }
@@ -3190,13 +3202,13 @@
         {
           "0"
           {
-            "name"  "Arcane Missiles"
+            "name"  "Rune of Power"
             "max"  "1"
             "saveid"  "z"
           }
           "1"
           {
-            "name"  "Arcane Missiles"
+            "name"  "Rune of Power"
             "max"  "1"
             "saveid"  "z"
             "multi" "0.15"

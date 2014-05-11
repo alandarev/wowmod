@@ -2404,6 +2404,21 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       if(GetVanishBreakDmg(victim)<1)
         bVanish[victim]=false;
     }
+    if(CheckRequirements(victim,3,3,3,4))
+    {
+      new tenperc = RoundToNearest(float(GetMaxHealth(victim))*0.10);
+      if(damage>=tenperc)
+      {
+        wcGetTalentInfo(3,3,3,4,victim,"multi",line);
+        new Float:manamulti=StringToFloat(line);
+        new newmana=GetMana(victim)-(tenperc);
+        if(newmana>=0)
+        {
+          wcSetMana(victim,newmana);
+          damage=RoundToNearest(float(damage)*(1.0-manamulti));
+        }
+      }
+    }
     new String:vicName[20];
     GetClientName(victim,vicName,sizeof(vicName));
     AddEMsgDetails(msgId, vicName,damage);

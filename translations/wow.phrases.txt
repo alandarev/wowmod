@@ -6077,10 +6077,6 @@
   {
     "en"  	"Nether Attunement"
   }
-  "Focused Mind name"
-  {
-    "en"  	"Focused Mind"
-  }
   "Arcane Discharge name"
   {
     "en"  	"Arcane Discharge (Does not currently work)"
@@ -6093,9 +6089,9 @@
   {
     "en"  	"Arcane Power"
   }
-  "Arcane Potency name"
+  "Arcane Shielding name"
   {
-    "en"  	"Arcane Potency"
+    "en"  	"Arcane Shielding"
   }
   "Arcane Missiles name"
   {
@@ -7359,10 +7355,6 @@
   {
     "en"		"<Passive> Turns a part of your mana regeneration into haste\n    Rank 1: 50%% of mana regeneration turned into haste\n    Rank 2: 100%% of mana regeneration turned into haste"
   }
-  "Focused Mind info"
-  {
-    "en"		"<Passive> Grants bonus Haste stat.\n    Rank 1: Grants 10.0 + 3%% Intellect as haste.\n    Rank 2: Grants 15.0 + 6%% Intellect as haste, Increases max cooldown reduction from 35%% to 40%%."
-  }
   "Master of Magic info"
   {
     "en"		"<Passive> Reduces all spell damage taken.\n    Rank 1: -10%% spell damage\n    Rank 2: -20%% spell damage"
@@ -7375,13 +7367,21 @@
   {
     "en"		"<Passive> Increases the mana cost and damage of your spells.\n    Rank 1: +10%% mana cost, +10%% spell damage\n    Rank 2: +20%% mana cost, +20%% spell damage"
   }
-  "Arcane Potency info"
+  "Arcane Shielding info"
   {
-    "en"		"<Passive> Your non-critical spells increases the damage of your next critical spell.\n    Rank 1: +3%% next crit. damage\n    Rank 2: +6%% next crit. damage\n    Rank 3: +10%% next crit. damage"
+    "en"		"<Passive> Taking more than 10% of your health in damage\n    causes a part of it to be taken in mana instead.\n    Rank 1: 10%% of the damage taken in mana\n    Rank 2: 20%% of the damage taken in mana\n    Rank 3: 30%% of the damage taken in mana"
   }
   "Arcane Missiles info"
   {
-    "en"		"<Passive> Gives your attacks a chance to cast Arcane Missiles dealing medium damage for a high mana cost."
+    "en"		"<Passive> Gives your attacks a chance to cast Arcane Missiles dealing medium damage for a high mana cost.\n    Rank 2: Half the mana cost"
+  }
+  "Rune of Power name"
+  {
+    "en"    "Rune of Power"
+  }
+  "Rune of Power info"
+  {
+    "en"    "<Active> Place down a Rune of Power below you, \n    that increases your damage and mana regeneration while in it"
   }
   "Gifted Soul info"
   {

@@ -1225,7 +1225,7 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
         wcRunTalent_3_ColdSnap(attacker);
       if(CheckRequirements(attacker,3,3,3,3) && prio ==1 && spell && !crit)
         wcRunTalent_3_ArcanePotency2(attacker);
-      if(CheckRequirements(attacker,3,3,4,1) && prio ==1 && !spell)
+      if(CheckRequirements(attacker,3,3,3,2) && prio ==1 && !spell)
         wcRunTalent_3_ArcaneMissile(attacker,victim);
       if(CheckRequirements(attacker,3,1,4,2) && prio ==2 && spell)
         wcRunTalent_3_BrittleFlesh(attacker,damage);
@@ -3371,9 +3371,9 @@ wcRunTalent_3_ArcaneMissile(attacker,victim)
   {
     new random=GetRandomInt(1,100);
     decl String:line[255];
-    wcGetTalentInfo(3,3,4,1,attacker,"cooldowntype",line);
+    wcGetTalentInfo(3,3,3,2,attacker,"cooldowntype",line);
     new cdtype = StringToInt(line);
-    wcGetTalentInfo(3,3,4,1,attacker,"chance",line);
+    wcGetTalentInfo(3,3,3,2,attacker,"chance",line);
     new chance=StringToInt(line);
     new Float:cool=GetCDSpell(attacker,cdtype)-GetTickedTime();
     if(chance>=random && !(cool>0.0))
@@ -3388,21 +3388,21 @@ wcRunTalent_3_ArcaneMissile(attacker,victim)
         return false;
       }
       wcSetMana(attacker,newmana);
-      wcGetTalentInfo(3,3,4,1,attacker,"cooldown",line);
+      wcGetTalentInfo(3,3,3,2,attacker,"cooldown",line);
       new Float:cd=StringToFloat(line);
       SetCdSpell(attacker,cdtype,cd,0);
-      wcGetTalentInfo(3,3,4,1,attacker,"multi",line);
+      wcGetTalentInfo(3,3,3,2,attacker,"multi",line);
       new Float:multi=StringToFloat(line);
       new dmg=GetSpellDmg(attacker,multi);
       dmg = RoundToNearest(1.05 * float(dmg));
-      wcGetTalentInfo(3,3,4,1,attacker,"base",line);
+      wcGetTalentInfo(3,3,3,2,attacker,"base",line);
       dmg+=StringToInt(line);
       decl String:attMsg[300],String:vicMsg[300];
       Format(attMsg,sizeof(attMsg),"%T","arcane missile att", attacker);
       Format(vicMsg,sizeof(vicMsg),"%T","arcane missile vic", victim);
-      wcGetTalentInfo(3,3,4,1,attacker,"name",line);
+      wcGetTalentInfo(3,3,3,2,attacker,"name",line);
       wcSpellDamage(victim,attacker,dmg, attMsg, vicMsg,line);
-
+      GiveArcaneCharge(client, 1);
       decl Float:start[3],Float:end[3];
       GetClientAbsOrigin(attacker, start);
       start[2]+=50;
