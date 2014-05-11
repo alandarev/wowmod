@@ -147,7 +147,7 @@ public Action:SpawnAmmo(Handle:timer, any:client)
       GetEdictClassname(weapon, Sweapon, sizeof(Sweapon));
       //weapon = weapon_xm1014
       //weapon = weapon_m3
-      if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon)))
+      if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon))&&(!StrEqual("weapon_sawedoff",Sweapon))&&(!StrEqual("weapon_nova",Sweapon))&&(!StrEqual("weapon_mag7",Sweapon))&&(!StrEqual("weapon_hegrenade",Sweapon)))
       {
         new Float:speed=GetAttackSpeed(client);
         if(GetDualWieldSpecc(client)>0.0)

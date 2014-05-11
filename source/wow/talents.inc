@@ -5662,7 +5662,7 @@ public wcRunTalent_6_10(client)                                                 
       GetEdictClassname(weapon, Sweapon, sizeof(Sweapon));
       //weapon = weapon_xm1014
       //weapon = weapon_m3
-      if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon))&&(!StrEqual("weapon_hegrenade",Sweapon)))
+      if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon))&&(!StrEqual("weapon_sawedoff",Sweapon))&&(!StrEqual("weapon_nova",Sweapon))&&(!StrEqual("weapon_mag7",Sweapon))&&(!StrEqual("weapon_hegrenade",Sweapon)))
       {
         wcGetTalentInfo(6,2,2,2,client,"restore",line);
         ammo += StringToInt(line);
@@ -5898,7 +5898,7 @@ wcRunTalent_6_AirShock(attacker,victim)
         GetEdictClassname(weapon, Sweapon, sizeof(Sweapon));
         //weapon = weapon_xm1014
         //weapon = weapon_m3
-        if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon)))
+        if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon))&&(!StrEqual("weapon_sawedoff",Sweapon))&&(!StrEqual("weapon_nova",Sweapon))&&(!StrEqual("weapon_mag7",Sweapon))&&(!StrEqual("weapon_hegrenade",Sweapon)))
         {
           wcGetTalentInfo(6,1,4,1,attacker,"ammo",line);
           ammo -= StringToInt(line);

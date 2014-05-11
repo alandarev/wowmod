@@ -1263,7 +1263,7 @@ public OnGameFrame()
             GetEdictClassname(zomg, weapon, sizeof(weapon));
             //weapon = weapon_xm1014
             //weapon = weapon_m3
-            if((!StrEqual("weapon_xm1014",weapon))&&(!StrEqual("weapon_m3",weapon))&&(!StrEqual("weapon_c4",weapon)))
+            if((!StrEqual("weapon_xm1014",weapon))&&(!StrEqual("weapon_m3",weapon))&&(!StrEqual("weapon_c4",weapon))&&(!StrEqual("weapon_sawedoff",weapon))&&(!StrEqual("weapon_nova",weapon))&&(!StrEqual("weapon_mag7",weapon)))
             if((ammo!=ClientClip[i][1]) && (ammo>6))
             {
               if(GetDualWieldSpecc(i)>0.0)

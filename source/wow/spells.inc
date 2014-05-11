@@ -5864,7 +5864,7 @@ RunSealsHit(attacker,victim,&damage,prio,Float:weaponmodifier,bool:crit, bool:sp
           decl String:Sweapon[50];
           GetEdictClassname(weapon, Sweapon, sizeof(Sweapon));
 
-          if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon)))
+          if((!StrEqual("weapon_xm1014",Sweapon))&&(!StrEqual("weapon_m3",Sweapon))&&(!StrEqual("weapon_c4",Sweapon))&&(!StrEqual("weapon_sawedoff",Sweapon))&&(!StrEqual("weapon_nova",Sweapon))&&(!StrEqual("weapon_mag7",Sweapon)))
           {
             ammo += 1;
             SetEntData(weapon, CLIPOFFSET, ammo, 4, true);
