@@ -29,6 +29,7 @@ new g_iShieldStack[65];
 new g_iShadowDance[65];
 new g_iShadowDamageDealt[65];
 new g_iArcaneCharge[65];
+new g_iArcaneDischarge[65];
 
 new String:sPDModules[PDModule][] = { "Basic, is required to have premium account",
   "Reserved Slot for ALL servers",

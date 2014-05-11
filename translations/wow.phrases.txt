@@ -6079,7 +6079,7 @@
   }
   "Arcane Discharge name"
   {
-    "en"  	"Arcane Discharge (Does not currently work)"
+    "en"  	"Arcane Discharge"
   }
   "Invisibility name"
   {
@@ -6870,13 +6870,13 @@
   {
     "en"  "Seared Flesh"
   }
-  "Unstable Magic name"
+  "Mana Adept name"
   {
-    "en"  "Unstable Magic"
+    "en"  "Mana Adept"
   }
-  "Unstable Magic info"
+  "Mana Adept info"
   {
-    "en"  "<Passive> Your Arcane Missiles will increase your spelldamage, however if it crits it will lower it.\n Rank 1: +1 on hit, -2 on crit.\n Rank 2: +2 on hit, -2 on crit."
+    "en"  "<Passive> Your spelldamage is increased the lower mana you're at.    \n Rank 1: At 0%% mana, deal +17.5%% spelldamage    \n Rank 2: At 0%% mana, deal +35%% spelldamage"
   }
   "Improved Block info"
   {
@@ -7341,7 +7341,7 @@
   }
   "Arcane Discharge info"
   {
-    "en"		"<Passive> Releasing Arcane Charges increases your spelldamage for 4 seconds.\n    Rank 1: Spelldamage increased by 7%%\n    Rank 2: Spelldamage increased by 13%% \n    Rank 3: Spelldamage increased by 20%%"
+    "en"		"<Passive> Releasing Arcane Charges increases your spelldamage\n    for the rest of the round's duration.\n    Rank 1: Spelldamage increased by 1%%\n    Rank 2: Spelldamage increased by 2%% \n    Rank 3: Spelldamage increased by 3%%"
   }
   "Arcane Barrage info"
   {

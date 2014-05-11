@@ -633,7 +633,8 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
     UnhookLand(client);
     removeCurse(client);
     removeDamageBuff(client);
-
+    g_iArcaneCharge[client]=0;
+    g_iArcaneDischarge[client]=0;
     setPolymorph(client, 0.0);
     _setZombie(client, _getZombie(client), _getZombieType(client));
     __setZombie(client,0);
@@ -934,6 +935,8 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   SetMageInvis(userid, false);
   g_bShadowform[userid]=false;
   g_iNecrotic[userid]=0;
+  g_iArcaneCharge[userid]=0;
+  g_iArcaneDischarge[userid]=0;
   new attacker=GetClientOfUserId(GetEventInt(event,"attacker"));
   GetClientAbsOrigin(userid,vClientCorpse[userid]);
   CheckClientHpBar(userid);
@@ -1698,7 +1701,7 @@ stock bool:IsClientConnectedIngameAlive(client) {
 }
 
 
-public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcast)
+public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcast) //Ondamage, onhit, on-hit, damage
 {
   /*return Plugin_Continue;*/
   if(wcKillHandled2)  {
@@ -1912,6 +1915,19 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         wcGetTalentInfo(3,3,1,4,victim,"multi",line);
         damagemulti*=StringToFloat(line);
       }
+      if(CheckRequirements(attacker,3,3,2,4))
+      {
+        wcGetTalentInfo(3,3,2,4,attacker,"multi",line);
+        damagemulti*=(1.0+(g_iArcaneDischarge[attacker]*StringToFloat(line)));
+      }
+      if(CheckRequirements(attacker,3,3,4,2))
+      {
+        new Float:manaperc = float(GetMana(attacker)) / float(GetMaxMana(attacker));
+        wcGetTalentInfo(3,3,4,2,attacker,"multi",line);
+        manaperc = (1.00 - manaperc) * StringToFloat(line);
+        damagemulti*=manaperc;
+      }
+      g_iArcaneDischarge[userid]=0;
       if(IsMageInvis(attacker))
       SetMageInvis(attacker, false, true);
       new bool:isAoe=GetEventBool(event,"aoe");

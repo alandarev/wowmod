@@ -7944,7 +7944,7 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
 {
   decl String:line[255];
   wcGetTalentInfo(3,3,2,1,client,"cost",line);
-  GiveArcaneCharge(client, -StringToInt(line));
+  SpendArcaneCharge(client, cost);
   wcGetTalentInfo(3,3,2,1,client,"multi",line);
   new Float:multi=StringToFloat(line);
   new dmg=GetSpellDmg(client,multi);

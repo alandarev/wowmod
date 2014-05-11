@@ -5725,6 +5725,15 @@ GiveArcaneCharge(client, amount)
   if(0>GetArcaneCharge(client))
     g_iArcaneCharge[client]=0;
 }
+SpendArcaneCharge(client, amount)
+{
+  g_iArcaneCharge[client]-=amount;
+  if(GetArcaneCharge(client)>99)
+    g_iArcaneCharge[client]=99;
+  if(0>GetArcaneCharge(client))
+    g_iArcaneCharge[client]=0;
+  g_iArcaneDischarge[client]+=amount;
+}
 
 
 FindRandomSeal(client)

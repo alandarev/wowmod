@@ -3081,21 +3081,21 @@
               "name"  "Arcane Discharge"
               "max"  "3"
               "saveid"  "w"
-              "multi" "0.07"
+              "multi" "0.01"
           }
           "2"
           {
               "name"  "Arcane Discharge"
               "max"  "3"
               "saveid"  "w"
-              "multi" "0.14"
+              "multi" "0.02"
           }
           "3"
           {
               "name"  "Arcane Discharge"
               "max"  "3"
               "saveid"  "w"
-              "multi" "0.20"
+              "multi" "0.03"
           }
         }
       }
@@ -3225,25 +3225,23 @@
         {
           "0"
           {
-            "name"  "Unstable Magic"
+            "name"  "Mana Adept"
             "max" "2"
             "saveid"  "C"
           }
           "1"
           {
-            "name"  "Unstable Magic"
+            "name"  "Mana Adept"
             "max" "2"
             "saveid"  "C"
-            "increase"  "1.0"
-            "decrease"  "2.0"
+            "multi" "1.175"
           }
           "2"
           {
-            "name"  "Unstable Magic"
+            "name"  "Mana Adept"
             "max" "2"
             "saveid"  "C"
-            "increase"  "2.0"
-            "decrease"  "4.0"
+            "multi" "1.35"
           }
         }
       }
