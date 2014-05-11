@@ -1747,7 +1747,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       if(StrEqual("weapon_awp",A_weapon))
         if(GetEventInt(event,"hitgroup")!=1)
           damagemulti*=1.30;
-          
+      PrintToChatAll("Weapon is %s",A_weapon);
     }
   }
   
