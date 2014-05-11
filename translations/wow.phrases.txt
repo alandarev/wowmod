@@ -2506,7 +2506,7 @@
   }
   "Vanish info"
   {
-    "en"     "Gives you invisibility for 6 seconds.\nIf you shoot an enemy while still invisible,\nyou will deal bonus damage.\nIf you get too close to an enemy, they can see you."
+    "en"     "Gives you invisibility for 6 seconds.\nShooting an enemy from the back causes you to deal increased damage, and\nshooting an enemy from the front causes you to deal reduced damage while Vanish is active"
   }
   "backstab used"
   {
@@ -7176,7 +7176,7 @@
   }
   "Improved Backstab info"
   {
-    "en"		"<Passive> Increases your Backstab bonus damage.\n    Rank 1: +5%% damage\n    Rank 2: +10%% damage\n    Rank 3: +15%% damage"
+    "en"		"<Passive> Increases your Backstab bonus damage.\n    Rank 1: +50%% damage\n    Rank 2: +100%% damage\n    Rank 3: +150%% damage"
   }
   "Virulent Poisons info"
   {
@@ -7184,7 +7184,7 @@
   }
   "Overkill info"
   {
-    "en"		"<Passive> Increases the bonus damage of your Ambush.\n    Rank 1: +15%% Ambush damage\n    Rank 2: +30%% Ambush damage\n    Rank 3: +50%% Ambush damage"
+    "en"		"<Passive> Increases the bonus damage of your Ambush.\n    Rank 1: +33%% Ambush damage\n    Rank 2: +66%% Ambush damage\n    Rank 3: +100%% Ambush damage"
   }
   "Crippling Poisons info"
   {

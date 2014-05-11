@@ -137,7 +137,7 @@
     "cooldown"  "5.0"
     "duration"  "30.0"
     "mana"  "5"
-    "manainc" "0.5294117647058824"
+    "manainc" "1.0"
     "absorb" "50"
     "multi"  "1.75"
   }

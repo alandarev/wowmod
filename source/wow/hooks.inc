@@ -1738,6 +1738,16 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         damagemulti*=0.65;
       if(StrEqual("weapon_g3sg1",A_weapon))
         damagemulti*=0.65;
+      if(StrEqual("weapon_nova",A_weapon))
+        damagemulti*=0.90;
+      if(StrEqual("weapon_mag7",A_weapon))
+        damagemulti*=0.60;
+      if(StrEqual("weapon_xm1014",A_weapon))
+        damagemulti*=0.85;
+      if(StrEqual("weapon_awp",A_weapon))
+        if(GetEventInt(event,"hitgroup")!=1)
+          damagemulti*=1.30;
+          
     }
   }
   
@@ -2281,9 +2291,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
             new Float:cttc=StringToFloat(line);
             cttc*=float(hp)/float(maxhp);
             if(CheckRequirements(attacker,2,1,2,3))
-              damagemulti*=(1.30+talentbonus)*cttc;
+              damagemulti*=(1.15+talentbonus)*cttc;
             else
-              damagemulti*=(1.30+talentbonus);
+              damagemulti*=(1.15+talentbonus);
             //damagemulti*=(1.5+talentbonus)*GetWeaponSpeed(attacker, true);
 
             /*decl String:buffer[30];*/
@@ -2311,6 +2321,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
             SetSilence(victim,silence);
             wcRunTalent_2_GarroteDamage(attacker,victim,damage);
           }
+          else
+            damagemulti*=0.7;
           decl color[4];
           for (new x=0;x<=3;x++)
           color[x]=255;

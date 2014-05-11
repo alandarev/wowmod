@@ -2592,7 +2592,7 @@ stock TreasureChestMap(chance, times=1)
 
 stock TreasureChest(Float:location[3],TreasureChestName)
 {
-  new Float:eventmulti = 1.0;
+  new Float:eventmulti = 1.2;
   if(IsTreasureHunt())
     eventmulti+= float(PlayersInTeams(true))* 0.005;
   new rarity=GetRandomInt(1,3750);

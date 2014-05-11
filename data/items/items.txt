@@ -125263,7 +125263,7 @@
 "13814"
 {
 "name"   "Glyph of Heroic Strike"
-"descr"   "Reduces the rage cost of Heroic Strike by 2"
+"descr"   "Reduces the rage cost of Heroic Strike by 3"
 "version"   "5.02"
 "level"   "60"
 "cost"   "400"

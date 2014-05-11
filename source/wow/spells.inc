@@ -407,7 +407,7 @@ public wcRunSpell_1_4(spellid,race,victim,attacker,&totaldmg)
   wcGetSpellInfo(race,spellid,"mana",line);
   new mana = StringToInt(line);
   if(HasGlyph(attacker, GLYPH_WARRIOR_HEROIC))
-  mana-=2;
+  mana-=3;
   if(mana<=GetMana(attacker))
   {
     wcGetSpellInfo(race,spellid,"chance",line);

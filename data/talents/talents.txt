@@ -1926,21 +1926,21 @@
             }
             "1"
             {
-              "increment"  "0.15"
+              "increment"  "0.05"
               "name"  "Overkill"
               "max"  "3"
               "saveid"  "h"
             }
             "2"
             {
-              "increment"  "0.30"
+              "increment"  "0.10"
               "name"  "Overkill"
               "max"  "3"
               "saveid"  "h"
             }
             "3"
             {
-              "increment"  "0.45"
+              "increment"  "0.15"
               "name"  "Overkill"
               "max"  "3"
               "saveid"  "h"

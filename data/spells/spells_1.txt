@@ -46,9 +46,9 @@
     "controlled"  "1"
     "level" "1"
     "cost" "18"
-    "mana" "12"
+    "mana" "20"
     "chance"  "20" // max 100%
-    "multi" "0.30"
+    "multi" "0.35"
   }
   "5"
   {
