@@ -2888,14 +2888,14 @@ public wcRunTalent_3_6(client)                                                  
   wcRecalculateStats(client);
 }
 
-stock wcRunTalent_3_7(client)                                                  //Arcane Fortitude
+/*stock wcRunTalent_3_7(client)                                                  //Arcane Fortitude
 {
     decl String:line[255];
     wcGetTalentInfo(3,3,1,1,client,"multi",line);
     new Float:bonus = float(GetInt(client)+GetBonusInt(client)) *StringToFloat(line);
     SetBonusArmor(client, float(GetBonusArmor(client)) + bonus);
     wcRecalculateStats(client);
-}
+}*/
 
 
 public wcRunTalent_3_9(client, mana)                                            //Arcane Student
