@@ -3402,7 +3402,7 @@ wcRunTalent_3_ArcaneMissile(attacker,victim)
       Format(vicMsg,sizeof(vicMsg),"%T","arcane missile vic", victim);
       wcGetTalentInfo(3,3,3,2,attacker,"name",line);
       wcSpellDamage(victim,attacker,dmg, attMsg, vicMsg,line);
-      GiveArcaneCharge(client, 1);
+      GiveArcaneCharge(attacker, 1);
       decl Float:start[3],Float:end[3];
       GetClientAbsOrigin(attacker, start);
       start[2]+=50;
@@ -7944,7 +7944,7 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
 {
   decl String:line[255];
   wcGetTalentInfo(3,3,2,1,client,"cost",line);
-  SpendArcaneCharge(client, cost);
+  SpendArcaneCharge(client, StringToInt(line));
   wcGetTalentInfo(3,3,2,1,client,"multi",line);
   new Float:multi=StringToFloat(line);
   new dmg=GetSpellDmg(client,multi);
@@ -8036,16 +8036,16 @@ public Action:RuneofPowerEffect(Handle:timer, any:effid)
   if(team==2)
     amount=GetNearClients("@t",location,targets,aoe);
   
-    for (new x=0;x<=(amount-1);x++)
+  for (new x=0;x<=(amount-1);x++)
+  {
+    if(targets[x]==effectsdata[effid][2])
     {
-      if(targets[x]==effectsdata[effid][2])
-      {
-        g_iRuneBuff[effectsdata[effid][2]]+=1;
-        new Handle:datapack4=CreateDataPack();
-        WritePackCell(datapack4,effectsdata[effid][2]);
-        CreateTimer(0.5,EndRuneofPower,datapack4,TIMER_HNDL_CLOSE);
-      }
+      g_iRuneBuff[effectsdata[effid][2]]+=1;
+      new Handle:datapack4=CreateDataPack();
+      WritePackCell(datapack4,effectsdata[effid][2]);
+      CreateTimer(0.5,EndRuneofPower,datapack4,TIMER_HNDL_CLOSE);
     }
+  }
   return Plugin_Continue;
 }
 

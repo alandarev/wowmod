@@ -1851,7 +1851,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         new Float:locdis=GetDistanceBetween(vicloct,attloct);
         new Float:damageincrease=1.0 + (15.0 / locdis);
         wcGetTalentInfo(2,1,3,3,attacker,"multi",line);
-        new limit = 1.0 + StringToFloat(line);
+        new Float:limit = 1.0 + StringToFloat(line);
         if(damageincrease>limit)
           damageincrease=limit;
         damagemulti*=damageincrease;
@@ -1929,7 +1929,6 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         manaperc = (1.00 - manaperc) * StringToFloat(line);
         damagemulti*=manaperc;
       }
-      g_iArcaneDischarge[userid]=0;
       if(IsMageInvis(attacker))
       SetMageInvis(attacker, false, true);
       new bool:isAoe=GetEventBool(event,"aoe");
