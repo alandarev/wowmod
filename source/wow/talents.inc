@@ -7952,7 +7952,7 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   dmg+=StringToInt(line);
   decl String:vicMsg[300], String:attMsg[300];
   Format(vicMsg,sizeof(vicMsg),"%T","arcaneb target", victim);
-  Format(attMsg,sizeof(attMsg),"%T","arcaneb cast", attacker);
+  Format(attMsg,sizeof(attMsg),"%T","arcaneb cast", client);
   wcSpellDamage(victim,client,dmg, attMsg, vicMsg,line);
 
   decl Float:location[3],Float:locationatt[3];
