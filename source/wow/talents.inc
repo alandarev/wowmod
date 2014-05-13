@@ -7992,9 +7992,9 @@ wcRunTalent_3_RuneOfPower(client)
   {
     CreateTimer(0.5, RuneofPowerEffect, effid, TIMER_REPEAT);
   }
-  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+  VS_BeamRingPoint(location, 249.99, 250.00, g_purplelaser1, g_purplelaser1, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
   location[2]+=6;
-  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+  VS_BeamRingPoint(location, 249.99, 250.00, g_purplelaser1, g_purplelaser1, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
 }
 public Action:RuneofPowerEffect(Handle:timer, any:effid)
 {
