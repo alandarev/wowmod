@@ -1107,7 +1107,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
 public ArePlayersAlive()
 {
   new targets=65;
-  for (new x=0;x<=(targets-1);x++)
+  for (new x=1;x<=(targets-1);x++)
   {
     if (!IsFakeClient(x) && (IsPlayerAlive(x)))
       return true;
