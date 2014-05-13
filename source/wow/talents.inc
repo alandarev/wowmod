@@ -7950,8 +7950,10 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   new dmg=GetSpellDmg(client,multi);
   wcGetTalentInfo(3,3,2,1,client,"base",line);
   dmg+=StringToInt(line);
-  wcSpellDamage(victim,client,dmg, "", "",line);
-  AddEMsgAff("arcane barrage", true);
+  decl String:vicMsg[300], String:attMsg[300];
+  Format(vicMsg,sizeof(vicMsg),"%T","arcaneb target", victim);
+  Format(attMsg,sizeof(attMsg),"%T","arcaneb cast", attacker);
+  wcSpellDamage(victim,client,dmg, attMsg, vicMsg,line);
 
   decl Float:location[3],Float:locationatt[3];
   GetClientAbsOrigin(victim,location);
@@ -7992,9 +7994,9 @@ wcRunTalent_3_RuneOfPower(client)
   {
     CreateTimer(0.5, RuneofPowerEffect, effid, TIMER_REPEAT);
   }
-  VS_BeamRingPoint(location, 249.99, 250.00, g_purplelaser1, g_purplelaser1, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
   location[2]+=6;
-  VS_BeamRingPoint(location, 249.99, 250.00, g_purplelaser1, g_purplelaser1, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
 }
 public Action:RuneofPowerEffect(Handle:timer, any:effid)
 {

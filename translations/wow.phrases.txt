@@ -10614,5 +10614,13 @@
     "#format" "{1:i}"
     "en" "@greenShadow Dance @defaultends. @greenYou @defaultdealt @lightgreen{1} @defaultdamage during the duration."
   }
+  "arcaneb caster"
+  {
+    "en"     "You cast @lightgreenArcane Barrage @defaultat @vic and deal @dmg damage with a slowdown effect"
+  }
+  "arcaneb target"
+  {
+    "en"     "@att has cast @lightgreenArcane Barrage @defaultat You and has done @dmg damage with a slowdown effect"
+  }
 }
 

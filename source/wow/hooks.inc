@@ -1840,23 +1840,26 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(g_iRenewingGlyph[victim]>0)
     damagemulti*=1.00-(((g_iRenewingGlyph[victim]*0.025+0.025)*0.66)+0.017);
 
-  if(IsClientInGame(attacker) && IsClientInGame(victim))
+  if(attacker>0 && victim>0)
   {
-    if(GetClass(attacker)==2)
+    if(IsClientInGame(attacker) && IsClientInGame(victim))
     {
-      if(CheckRequirements(attacker,2,1,3,3))
+      if(GetClass(attacker)==2)
       {
-        decl Float:vicloct[3];
-        decl Float:attloct[3];
-        GetClientAbsOrigin(attacker,attloct);
-        GetClientAbsOrigin(victim,vicloct);
-        new Float:locdis=GetDistanceBetween(vicloct,attloct);
-        new Float:damageincrease=1.0 + (15.0 / locdis);
-        wcGetTalentInfo(2,1,3,3,attacker,"multi",line);
-        new Float:limit = 1.0 + StringToFloat(line);
-        if(damageincrease>limit)
-          damageincrease=limit;
-        damagemulti*=damageincrease;
+        if(CheckRequirements(attacker,2,1,3,3))
+        {
+          decl Float:vicloct[3];
+          decl Float:attloct[3];
+          GetClientAbsOrigin(attacker,attloct);
+          GetClientAbsOrigin(victim,vicloct);
+          new Float:locdis=GetDistanceBetween(vicloct,attloct);
+          new Float:damageincrease=1.0 + (15.0 / locdis);
+          wcGetTalentInfo(2,1,3,3,attacker,"multi",line);
+          new Float:limit = 1.0 + StringToFloat(line);
+          if(damageincrease>limit)
+            damageincrease=limit;
+          damagemulti*=damageincrease;
+        }
       }
     }
   }
@@ -1896,7 +1899,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     GetClientName(attacker, attName,sizeof(attName));
     AddEMsgCaster(msgId, attName);
     new bool:bCS=false;
-
+    if(CheckRequirements(attacker,3,3,2,1) && GetArcaneCharge(attacker)>=3)
+      wcRunTalent_3_ArcaneBarrage(attacker, victim);
     if(redirected)
     {
       AddEMsgAff("taunt",true);
@@ -2090,8 +2094,6 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     }
     else if(StrEqual(weaponname,"Physical",false)) //physical damage
     {
-      if(CheckRequirements(attacker,3,3,2,1) && GetArcaneCharge(attacker)>=3)
-        wcRunTalent_3_ArcaneBarrage(attacker, victim);
       new bool:red = GetEventBool(event, "reduction");
       if(GetStance(attacker)==2)
         damagemulti *= 1.1;
