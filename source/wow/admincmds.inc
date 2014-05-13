@@ -648,6 +648,11 @@ public Action:TalentCmd(client,args)
           if(CheckRequirements(client, 3, 2, 4, 1))
             wcRunSpell_3_8(8,3,client);
         }
+      case 6:
+        {
+          if(CheckRequirements(client, 3, 3, 4, 1))
+            wcRunTalent_3_RuneOfPower(client); //Rune of Power
+        }
       default:
         {
           WCMessage(client,"no talent",client);

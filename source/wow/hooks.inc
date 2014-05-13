@@ -1850,8 +1850,10 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         GetClientAbsOrigin(victim,vicloct);
         new Float:locdis=GetDistanceBetween(vicloct,attloct);
         new Float:damageincrease=1.0 + (15.0 / locdis);
-        if(damageincrease>1.30)
-          damageincrease=1.30;
+        wcGetTalentInfo(2,1,3,3,attacker,"multi",line);
+        new limit = 1.0 + StringToFloat(line);
+        if(damageincrease>limit)
+          damageincrease=limit;
         damagemulti*=damageincrease;
       }
     }

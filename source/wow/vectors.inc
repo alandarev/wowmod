@@ -495,7 +495,6 @@ public wcRecalculateStats(client) { //Stats
   }
   else
     wcClientsStats[id][MPREGEN]=1.0+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN];
-
   wcClientsStats[id][ARMOR]=float(GetAgi(client)+GetBonusAgi(client))/3+wcClientsBonusStats[id][ARMOR];
   if(GetStance(client) == 1) //Blood DK
   wcClientsStats[id][ARMOR] *= 1.2;
@@ -522,6 +521,14 @@ public wcRecalculateStats(client) { //Stats
   wcClientsStats[id][MINUSCRITCHANCE] = (wcClientsStats[id][RESILIENCE] / 14.2857) * 0.06 + MinusCritChanceBonus(id);
   // -crit damage
   wcClientsStats[id][MINUSCRITDAMAGE] = (wcClientsStats[id][RESILIENCE] / 25.0) * 0.06 + MinusCritDamageBonus(id);
+  
+  if(g_iRuneBuff[client]>0)
+  {
+    wcGetTalentInfo(3,3,4,1,client,"regen",line);
+    wcClientsStats[id][MPREGEN]*=StringToFloat(line);
+    wcGetTalentInfo(3,3,4,1,client,"spell",line);
+    wcClientsStats[id][SPELLDAMAGE]*=StringToFloat(line);
+  }
 }
 
 RecalculatePetStats(id) {

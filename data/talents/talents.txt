@@ -1385,14 +1385,14 @@
             "name"  "Bandit's Guile"
             "max" "2"
             "saveid"  "o"
-            "multi" "0.50"
+            "multi" "0.15"
           }
           "2"
           {
             "name"  "Bandit's Guile"
             "max" "2"
             "saveid"  "o"
-            "multi" "1.00"
+            "multi" "0.30"
           }
         }
       }
@@ -3205,21 +3205,26 @@
             "name"  "Rune of Power"
             "max"  "1"
             "saveid"  "z"
+            "spell" "1.00"
+            "regen" "1.50"
           }
-          "1"
-          {
-            "name"  "Rune of Power"
-            "max"  "1"
-            "saveid"  "z"
-            "multi" "0.15"
-            "base"  "3"
-            "mana"  "15"
-            "manainc" "0.25"
-            "cooldown"  "0.5"
-            "cooldowntype"  "12"
-            "chance"  "25"
-            "active"  "2"
-          }
+            "1"
+            {
+              "event"  "player_cast"
+              "active"  "1"
+              "cooldown"  "35.000000"
+              "cooldowntype"  "9"
+              "duration"  "20.000000"
+              "distance"  "250.0"
+              "spell" "1.30" //How much should it increase your spellpower by
+              "regen" "1.50" //How much should it increase your mana regeneration by
+              "mana"  "80"
+              "manainc"  "1.0"
+              "name"  "Rune of Power"
+              "max"  "1"
+              "saveid"  "z"
+              "talentid" "6"
+            }
         }
         "2"
         {

@@ -56,10 +56,12 @@ public InitOffsets()
   if(g_CollisionGroup==-1)
     SetFailState("[WC] Error: Couldn't find collision group offset, aborting");
 
-  g_MyWeaponsOffset=FindSendPropOffs("CBaseCombatCharacter","m_hMyWeapons");
-  if(g_MyWeaponsOffset==-1)
-    SetFailState("[WC] Error: Couldn't find m_hMyWeapons offset group offset, aborting");
-
+  if(!CSGO)
+  {
+    g_MyWeaponsOffset=FindSendPropOffs("CBaseCombatCharacter","m_hMyWeapons");
+    if(g_MyWeaponsOffset==-1)
+      SetFailState("[WC] Error: Couldn't find m_hMyWeapons offset group offset, aborting");
+  }
   ACTIVEWEAPON=FindSendPropOffs("CAI_BaseNPC", "m_hActiveWeapon");
   CLIPOFFSET=FindSendPropOffs("CBaseCombatWeapon", "m_iClip1");
   if(ACTIVEWEAPON==-1 || CLIPOFFSET==-1)

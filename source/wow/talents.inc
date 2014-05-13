@@ -1204,8 +1204,8 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
     {
       if(CheckRequirements(attacker,2,1,1,2) && prio ==1 && !spell)
         wcRunTalent_2_4(attacker);
-      if(CheckRequirements(attacker,2,1,2,3) && prio ==2 && !spell)
-        wcRunTalent_2_7(attacker,damage);
+      /*if(CheckRequirements(attacker,2,1,2,3) && prio ==2 && !spell)
+        wcRunTalent_2_7(attacker,damage);*/
       //if(CheckRequirements(attacker,2,2,2,2) && prio ==1 && !spell)
         //wcRunTalent_2_8(attacker,victim,olddmg,source);
       /*if(CheckRequirements(attacker,2,2,3,2) && prio ==1 && !spell)
@@ -2284,7 +2284,7 @@ public wcRunTalent_2_LightFooted(client) //used to keep lowgrav on rogue for tal
   SetEntityGravity(client,StringToFloat(line));
 }
 
-wcRunTalent_2_7(client, &damage)                                 //Master of Subtlety
+/*wcRunTalent_2_7(client, &damage)                                 //Master of Subtlety
 {
   new weap = GetEntDataEnt2(client, ACTIVEWEAPON);
   if(weap>=0)
@@ -2298,7 +2298,7 @@ wcRunTalent_2_7(client, &damage)                                 //Master of Sub
       damage = RoundToNearest(damage*(1+StringToFloat(line)));
     }
   }
-}
+}*/
 /*public wcRunTalent_2_10(client)                                                  //Find Weakness
 {
   decl String:line[255];
@@ -7971,4 +7971,88 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   
 }
 
+wcRunTalent_3_RuneOfPower(client)
+{
+  decl String:line[255];
+  
+  wcGetTalentInfo(3,3,4,1,client,"cooldowntype",line);
+  new cdtype=StringToInt(line);
+  wcGetTalentInfo(3,3,4,1,client,"cooldown",line);
+  new Float:cd=StringToFloat(line);
+  SetCdSpell(client,cdtype,cd, 0, "Rune of Power");
+  new manareq = GetTalentCost(client, 3,4,1);
 
+  wcSetMana(client,GetMana(client)-manareq);
+  wcGetTalentInfo(3,3,4,1,client,"duration",line); //How many times the parasites attack
+  new ticks=RoundToNearest(StringToFloat(line)/0.5);
+  decl Float:location[3];
+  GetClientAbsOrigin(client,location);
+  new effid=CreateEffectData(0,client,ticks,0,_:location[0],0,_:location[1],_:location[2],g_RoundCount,0);
+  if(effid!=0)
+  {
+    CreateTimer(0.5, RuneofPowerEffect, effid, TIMER_REPEAT);
+  }
+  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+  location[2]+=6;
+  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+}
+public Action:RuneofPowerEffect(Handle:timer, any:effid)
+{
+  if (effectsdata[effid][0]==0) //empty effectdata
+    return Plugin_Stop;
+  if (!IsClientInGame(effectsdata[effid][2]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (!IsPlayerAlive(effectsdata[effid][2])) 
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (effectsdata[effid][3]<=0) //ticks
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if (effectsdata[effid][9]!=g_RoundCount)
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  decl String:line[255];
+  wcGetTalentInfo(3,3,4,1,effectsdata[effid][2],"distance",line);
+  new Float:aoe=StringToFloat(line);
+  new Float:location[3];
+  location[0] = Float:effectsdata[effid][5];
+  location[1] = Float:effectsdata[effid][7];
+  location[2] = Float:effectsdata[effid][8];
+  
+  new targets[MAXPLAYERS];
+  new team=GetClientTeam(effectsdata[effid][2]);
+  new amount;
+  if(team==3)
+    amount=GetNearClients("@ct",location,targets,aoe);
+  if(team==2)
+    amount=GetNearClients("@t",location,targets,aoe);
+  
+    for (new x=0;x<=(amount-1);x++)
+    {
+      if(targets[x]==effectsdata[effid][2])
+      {
+        g_iRuneBuff[effectsdata[effid][2]]+=1;
+        new Handle:datapack4=CreateDataPack();
+        WritePackCell(datapack4,effectsdata[effid][2]);
+        CreateTimer(0.5,EndRuneofPower,datapack4,TIMER_HNDL_CLOSE);
+      }
+    }
+  return Plugin_Continue;
+}
+
+public Action:EndRuneofPower(Handle:timer, Handle:datapack)
+{
+  ResetPack(datapack);
+  new client=ReadPackCell(datapack);
+  if(g_iRuneBuff[client]!=0)
+    g_iRuneBuff[client]-=1;
+}
