@@ -1742,11 +1742,13 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       if(StrEqual("weapon_g3sg1",A_weapon))
         damagemulti*=0.65;
       if(StrEqual("weapon_nova",A_weapon))
-        damagemulti*=0.90;
-      if(StrEqual("weapon_mag7",A_weapon))
         damagemulti*=0.60;
+      if(StrEqual("weapon_sawedoff",A_weapon))
+        damagemulti*=0.60;
+      if(StrEqual("weapon_mag7",A_weapon))
+        damagemulti*=0.50;
       if(StrEqual("weapon_xm1014",A_weapon))
-        damagemulti*=0.85;
+        damagemulti*=0.70;
       if(StrEqual("weapon_awp",A_weapon))
         if(GetEventInt(event,"hitgroup")!=1)
           damagemulti*=1.30;
