@@ -2090,7 +2090,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     }
     else if(StrEqual(weaponname,"Physical",false)) //physical damage
     {
-      if(CheckRequirements(attacker,3,1,2,1) && GetArcaneCharge(attacker)>=3)
+      if(CheckRequirements(attacker,3,3,2,1) && GetArcaneCharge(attacker)>=3)
         wcRunTalent_3_ArcaneBarrage(attacker, victim);
       new bool:red = GetEventBool(event, "reduction");
       if(GetStance(attacker)==2)

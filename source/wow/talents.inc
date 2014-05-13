@@ -7952,7 +7952,7 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   dmg+=StringToInt(line);
   wcSpellDamage(victim,client,dmg, "", "",line);
   AddEMsgAff("arcane barrage", true);
-  
+
   decl Float:location[3],Float:locationatt[3];
   GetClientAbsOrigin(victim,location);
   GetClientAbsOrigin(client,locationatt);
@@ -8044,6 +8044,7 @@ public Action:RuneofPowerEffect(Handle:timer, any:effid)
       new Handle:datapack4=CreateDataPack();
       WritePackCell(datapack4,effectsdata[effid][2]);
       CreateTimer(0.5,EndRuneofPower,datapack4,TIMER_HNDL_CLOSE);
+      wcRecalculateStats(effectsdata[effid][2]);
     }
   }
   return Plugin_Continue;
@@ -8055,4 +8056,5 @@ public Action:EndRuneofPower(Handle:timer, Handle:datapack)
   new client=ReadPackCell(datapack);
   if(g_iRuneBuff[client]!=0)
     g_iRuneBuff[client]-=1;
+  wcRecalculateStats(client);
 }

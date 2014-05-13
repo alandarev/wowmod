@@ -1950,7 +1950,7 @@ public wcRunSpell_3_5(spellid,race,client)
   decl String:line[255];
   wcGetSpellInfo(race,spellid,"cooldowntype",line);
   new cdtype=StringToInt(line);
-  wcGetTalentInfo(3,3,1,2,client,"blinkcd",line);
+  wcGetTalentInfo(3,3,1,3,client,"blinkcd",line);
   new Float:talentbonus = StringToFloat(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line)-talentbonus;
@@ -5719,7 +5719,7 @@ GetArcaneCharge(client)
 
 GiveArcaneCharge(client, amount)
 {
-  g_iArcaneCharge[client]+=GetArcaneCharge(client)+amount;
+  g_iArcaneCharge[client]+=amount;
   if(GetArcaneCharge(client)>99)
     g_iArcaneCharge[client]=99;
   if(0>GetArcaneCharge(client))
@@ -5728,8 +5728,6 @@ GiveArcaneCharge(client, amount)
 SpendArcaneCharge(client, amount)
 {
   g_iArcaneCharge[client]-=amount;
-  if(GetArcaneCharge(client)>99)
-    g_iArcaneCharge[client]=99;
   if(0>GetArcaneCharge(client))
     g_iArcaneCharge[client]=0;
   g_iArcaneDischarge[client]+=amount;
