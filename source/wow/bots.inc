@@ -47,8 +47,8 @@ BotPreloaded(client)  {
     if(CSGO)
     {
       new avrglvl = GetAverageLevel();
-      if(10 > avrglvl)
-        avrglvl = 10;
+      if(55 > avrglvl)
+        avrglvl = 55;
       wcSetStaticLevel(client, GetRandomInt(avrglvl-5,avrglvl+5));
     }
     else

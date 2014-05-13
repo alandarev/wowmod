@@ -7221,7 +7221,7 @@
   }
   "Improved Frost Bolt info"
   {
-    "en"		"<Passive> Increases the damage multiplier of Frostbolt and reduces cooldown its cooldown.\n    Rank 1: +6%% multiplier, -0.1 seconds cooldown\n    Rank 2: +13%% multiplier, -0.3 seconds cooldown\n    Rank 3: +20%% multiplier, -0.5 seconds cooldown"
+    "en"		"<Passive> Increases the damage multiplier of Frostbolt and reduces cooldown its cooldown.\n    Rank 1: +10%% multiplier, -0.1 seconds cooldown\n    Rank 2: +20%% multiplier, -0.3 seconds cooldown\n    Rank 3: +30%% multiplier, -0.5 seconds cooldown"
   }
   "Permafrost info"
   {
@@ -7281,7 +7281,7 @@
   }
   "Improved Fireball info"
   {
-    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +12.5%% damage, -0.25 seconds cooldown\n    Rank 2: +25%% damage, -0.5 seconds cooldown"
+    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +17.5%% damage, -0.25 seconds cooldown\n    Rank 2: +35%% damage, -0.5 seconds cooldown"
   }
   "Burning Soul info"
   {
@@ -7513,11 +7513,11 @@
   }
   "Righteous Warrior info"
   {
-    "en"		"<Passive> Every Holy Power spend restores a portion of your health and mana.\n    Rank 1: +1.5%% health and mana\n    Rank 2: +3%% health and mana"
+    "en"		"<Passive> Every Holy Power spend restores a portion of your health and mana.\n    Rank 1: +2%% health and mana\n    Rank 2: +4%% health and mana"
   }
   "Divine Blood info"
   {
-    "en"		"<Passive> Your critical Seal of Command hits have a chance to generate 1 Holy Power\n    Rank 1: 25%% chance\n    Rank 2: 50%% chance"
+    "en"		"<Passive> Your critical Seal of Command hits have a chance to generate 1 Holy Power\n    Rank 1: 50%% chance\n    Rank 2: 100%% chance"
   }
   "Divine Storm info"
   {

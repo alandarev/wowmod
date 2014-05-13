@@ -3185,8 +3185,6 @@ stock TreasureChestOpen(client,chestrarity)
       }
     }
     experience+=GetRandomInt(50000,10000);
-    if(CSGO)
-      experience = experience/1000;
   }
   if(silver>0) {
     wcSetMoney(client,(GetMoney(client)+silver));

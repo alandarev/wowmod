@@ -1380,7 +1380,7 @@ public ChangeProfessionMenu(client,which)
     decl String:Sx[20];
     Format(Sx,sizeof(Sx),"%i %i",which,x);
     ProfToName(x,buffer,sizeof(buffer),client);
-    if((x == 9 || x == 10) && !HasExpansion(client, Expansion:E_CATA)) {
+    if((x == 9) && !HasExpansion(client, Expansion:E_CATA)) {
       Format(buffer, sizeof(buffer), "%s (%T)", buffer, "cata expansion required", client);
       AddMenuItem(menu_prof, Sx, buffer, ITEMDRAW_DISABLED);
     }
