@@ -1032,6 +1032,10 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   decl String:line[255];
   new targets[MAXPLAYERS];
   new amount;
+
+  if(!ArePlayersAlive())
+    ServerCommand("bot_kill");
+  
   new Float:location[3];
   GetClientAbsOrigin(userid,location);
   new Float:distance=750.0;
@@ -1099,6 +1103,16 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   SetHarvest(userid, 0);
   g_PlayerIsDead[userid]=true;
   return Plugin_Continue;
+}
+public ArePlayersAlive()
+{
+  new targets[MAXPLAYERS];
+  for (new x=0;x<=(targets-1);x++)
+  {
+    if (!IsFakeClient(x) && (IsPlayerAlive(x)))
+      return true;
+  }
+  return false;
 }
 public PetDied(pet,owner) {
   g_ff_ownsPet[owner]= -1;

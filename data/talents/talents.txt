@@ -2955,6 +2955,7 @@
             "1"
             {
               "chance"  "33"
+              "blinkcd" "3.0"
               "name"  "Focused Mind"
               "max"  "3"
               "saveid"  "g"
@@ -2962,6 +2963,7 @@
             "2"
             {
               "chance"  "66"
+              "blinkcd" "6.0"
               "name"  "Focused Mind"
               "max"  "3"
               "saveid"  "g"
@@ -2969,6 +2971,7 @@
             "3"
             {
               "chance"  "100"
+              "blinkcd" "10.0"
               "name"  "Focused Mind"
               "max"  "3"
               "saveid"  "g"
