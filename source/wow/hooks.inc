@@ -1033,7 +1033,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   new targets[MAXPLAYERS];
   new amount;
 
-  if(!ArePlayersAlive())
+  if(!ArePlayersAlive() && (PlayersInTeams(true) >= 1))
     ServerCommand("bot_kill");
   
   new Float:location[3];
@@ -1106,7 +1106,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
 }
 public ArePlayersAlive()
 {
-  new targets[MAXPLAYERS];
+  new targets=65;
   for (new x=0;x<=(targets-1);x++)
   {
     if (!IsFakeClient(x) && (IsPlayerAlive(x)))
