@@ -99779,6 +99779,7 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
+"damage"	"23"
 "spelldmg"	"28"
 }
 "25243"
@@ -99875,7 +99876,7 @@
 "ws"	"0.9"
 "damage"	"29"
 "2hand"	"1"
-"spelldmg"	"0"
+"spelldmg"	"23"
 }
 "25246"
 {
@@ -100000,6 +100001,7 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
+"damage"	"23"
 "spelldmg"	"28"
 }
 "25250"
@@ -100032,7 +100034,7 @@
 "resilence"	"0"
 "ws"	"1.1"
 "damage"	"15"
-"spelldmg"	"0"
+"spelldmg"	"18"
 }
 "25251"
 {
@@ -100189,6 +100191,7 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
+"damage"	"23"
 "spelldmg"	"28"
 }
 "25256"
@@ -100317,7 +100320,7 @@
 "ws"	"0.95"
 "damage"	"29"
 "2hand"	"1"
-"spelldmg"	"0"
+"spelldmg"	"23"
 }
 "25260"
 {
