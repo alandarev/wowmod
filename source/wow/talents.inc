@@ -4829,6 +4829,10 @@ wcRunTalent_5_PWBarrier(client) //Power Word: Barrier
       }
     }*/
     wcClientAbsorb[targets[x]]=absorb;
+    new item[UniqueItem];
+    GetCharItem(item, client, 20);
+    if(item[Item_defId]==25264)
+      wcHeal(client,targets[x],absorb/2,0,true);
     //wcClientAbsorb[targets[x]]=absorb+absorb2;
     g_iShieldStack[targets[x]]+=1;
     SetEffectVictim(targets[x],5);
