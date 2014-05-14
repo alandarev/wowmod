@@ -1214,7 +1214,7 @@
   }
   "boxes"
   {
-    "en"     "Boxes"
+    "en"     "Random Boxes"
   }
   "scroll"
   {

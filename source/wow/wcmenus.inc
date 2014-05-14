@@ -5429,6 +5429,8 @@ public CategoryMenu(client)
    AddMenuItem(menu_category,"5",buffer);
    Format(buffer,sizeof(buffer),"%T","inscription books",client);
    AddMenuItem(menu_category,"9",buffer);
+   Format(buffer,sizeof(buffer),"%T","boxes",client);
+   AddMenuItem(menu_category,"24",buffer);
 
    DisplayMenu(menu_category,client,MENU_TIME_FOREVER);
 }
