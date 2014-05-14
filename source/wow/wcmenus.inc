@@ -2037,6 +2037,8 @@ public AuctionsMenu(client)
    Format(buffer,sizeof(buffer),"%T","wrists",client);
    AddMenuItem(menu_category,"23",buffer);
    Format(buffer,sizeof(buffer),"%T","reagents",client);
+   AddMenuItem(menu_category,"24",buffer);
+   Format(buffer,sizeof(buffer),"%T","boxes",client);
    AddMenuItem(menu_category,"8",buffer);
    Format(buffer,sizeof(buffer),"%T","patterns for blacksmith",client);
    AddMenuItem(menu_category,"1",buffer);

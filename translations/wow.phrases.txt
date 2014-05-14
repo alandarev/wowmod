@@ -1212,6 +1212,10 @@
   {
     "en"     "Reagents"
   }
+  "boxes"
+  {
+    "en"     "Boxes"
+  }
   "scroll"
   {
     "en"     "Scroll"
