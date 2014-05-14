@@ -1732,8 +1732,8 @@ public TGetPlayerData2(Handle:db,Handle:query,String:error[],any:client)
         new hours = GetSQLDataInt(query,"timediff");
         new rested = GetSQLDataInt(query, "rested");
         rested += hours * RESTED_RATE;
-        if(rested > 20000)
-          rested = 20000;
+        if(rested > 27500)
+          rested = 27500;
         setRestXp(client, rested);
         UpdateLastConnect(playerids[client], GetHonor(client));
         GetCharactersData(client,true);

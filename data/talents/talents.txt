@@ -5622,7 +5622,7 @@
               "name"  "Lava Burst"
               "max"  "1"
               "saveid"  "7"
-              "multi"   "0.18"
+              "multi"   "0.35"
               "basedmg" "6"
               "mana"  "20"
               "manainc" "0.3"

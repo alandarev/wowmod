@@ -491,10 +491,10 @@ public wcRecalculateStats(client) { //Stats
   if(CheckRequirements(client,3,3,1,1))
   {
     wcGetTalentInfo(3,3,1,1,client,"multi",line);
-    wcClientsStats[id][MPREGEN]=1.0+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN]*StringToFloat(line);
+    wcClientsStats[id][MPREGEN]=(1.0+GetLevel(client)*0.125)+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN]*StringToFloat(line);
   }
   else
-    wcClientsStats[id][MPREGEN]=1.0+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN];
+    wcClientsStats[id][MPREGEN]=(1.0+GetLevel(client)*0.125)+float(GetInt(client)+GetBonusInt(client))/15.0+wcClientsBonusStats[id][MPREGEN];
   wcClientsStats[id][ARMOR]=float(GetAgi(client)+GetBonusAgi(client))/3+wcClientsBonusStats[id][ARMOR];
   if(GetStance(client) == 1) //Blood DK
   wcClientsStats[id][ARMOR] *= 1.2;
