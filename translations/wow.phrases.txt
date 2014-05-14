@@ -7717,7 +7717,7 @@
   }
   "Convection info"
   {
-    "en"		"Reduces the mana cost of shocks by 12.5/25%% per point"
+    "en"		"Reduces the mana cost of shocks.\n    Rank 1: -25%% mana cost\n    Rank 2: -50%% mana cost"
   }
   "Reverberation info"
   {
@@ -7765,7 +7765,7 @@
   }
   "Air Shock info"
   {
-    "en"		"<Passive> A shock that destroys some of the victims ammo plus damage.\n     Rank 1: Remove 1 ammo, 6%% chance to proc\n     Rank 2: Remove 2 ammo, 11%% chance to proc"
+    "en"		"<Passive> A shock that destroys some of the victims ammo plus damage.\n     Rank 1: Remove 1 ammo, 8%% chance to proc\n     Rank 2: Remove 2 ammo, 16%% chance to proc"
   }
   "Lightning Nova Totem info"
   {

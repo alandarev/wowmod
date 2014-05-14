@@ -5842,7 +5842,7 @@ wcRunTalent_6_AirShock(attacker,victim)
   new chance=StringToInt(line)+GetThunder(attacker,4);
 
   if(IsDoubleHand(attacker))
-      chance=RoundToNearest(float(chance)/2.0);
+      chance=RoundToNearest(float(chance)/2.5);
   if(chance>=random)
   {
     if(CheckRequirements(attacker,6,1,2,2))
@@ -5860,14 +5860,13 @@ wcRunTalent_6_AirShock(attacker,victim)
       CreateTimer(duration,EndThunder,datapack,TIMER_HNDL_CLOSE);
     }
 
-    /*if(GetElementalFury(attacker)!=1)
-    {
-      wcGetTalentInfo(6,1,4,2,attacker,"cooldowntype",line);
-      new cdtype=StringToInt(line);
-      wcGetTalentInfo(6,1,4,2,attacker,"cooldown",line);
-      new Float:cd=StringToFloat(line);
-      SetCdSpell(attacker,cdtype,cd, 0, "Air Shock");
-    }*/
+    wcGetTalentInfo(6,1,4,2,attacker,"cooldowntype",line);
+    new cdtype=StringToInt(line);
+    wcGetTalentInfo(6,1,4,2,attacker,"cooldown",line);
+    new Float:cd=StringToFloat(line);
+    if(IsDoubleHand(attacker))
+      cd=cd/2.0;
+    SetCdSpell(attacker,cdtype,cd, 0, "Air Shock");
 
     new manareq = GetTalentCost(attacker, 1,4,2);
     new newmana=GetMana(attacker)-manareq;
@@ -7393,6 +7392,8 @@ public wcRunTalent_6_ChainLightning(client)
   new Float:cd=StringToFloat(line);
   wcGetTalentInfo(6,1,2,3,client,"mana",line);
   new manareq=StringToInt(line);
+  wcGetTalentInfo(6,1,2,3,client,"manainc",line);
+  manareq+=RoundToNearest(float(GetLevel(client))*StringToFloat(line));
   if(g_iEcho[client]>0)
   {
     manareq=0;
@@ -7700,6 +7701,8 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
   new Float:timeleft=GetCDSpell(client,cdtype)-GetTickedTime();
   wcGetTalentInfo(6,1,3,1,client,"mana",line);
   new mana = StringToInt(line);
+  wcGetTalentInfo(6,1,3,1,client,"manainc",line);
+  mana+=RoundToNearest(float(GetLevel(client))*StringToFloat(line));
   wcGetTalentInfo(6,1,3,1,client,"chance",line);
   if((StringToInt(line)>=GetRandomInt(1,100)) && (0.0 >= timeleft) && (GetMana(client)-mana>0))
   {

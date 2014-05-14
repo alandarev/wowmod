@@ -1033,8 +1033,6 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   new targets[MAXPLAYERS];
   new amount;
 
-  if(!ArePlayersAlive() && (PlayersInTeams(true) >= 1))
-    ServerCommand("bot_kill");
   
   new Float:location[3];
   GetClientAbsOrigin(userid,location);
@@ -1103,16 +1101,6 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   SetHarvest(userid, 0);
   g_PlayerIsDead[userid]=true;
   return Plugin_Continue;
-}
-public ArePlayersAlive()
-{
-  new targets=65;
-  for (new x=1;x<=(targets-1);x++)
-  {
-    if (!IsFakeClient(x) && (IsPlayerAlive(x)))
-      return true;
-  }
-  return false;
 }
 public PetDied(pet,owner) {
   g_ff_ownsPet[owner]= -1;
@@ -2188,7 +2176,10 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       new Float:wspeed = GetWeaponSpeed(attacker, true);
       if(wspeed < 1.0)
       wspeed = 1.0;
-      damage=RoundToNearest((float(damage)/2.1+float(damage)/200*GetDamage(attacker)) / wspeed);   //Converting to mod damage from console damage.
+      if(CSGO)
+        damage=RoundToNearest((float(damage)/1.8+float(damage)/150*GetDamage(attacker)) / wspeed);   //Converting to mod damage from console damage.
+      else
+        damage=RoundToNearest((float(damage)/2.1+float(damage)/200*GetDamage(attacker)) / wspeed);   //Converting to mod damage from console damage.
       if(GetEventInt(event,"hitgroup")==1)
       {
         AddEMsgAff("headshot",true); //show Headshot damage!

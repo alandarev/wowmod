@@ -29,7 +29,7 @@
     "autocast"    "1"
     "active"      "1"
     "event" "player_cast"
-    "chance"  "11"
+    "chance"  "26"
     "level" "24"
     "cost" "75"
     "mana"  "13"
@@ -39,7 +39,7 @@
     "tickdelay" "2.0"
     "ticks"  "3"
     "multief"   "0.08"
-    "cooldown"  "0.5"
+    "cooldown"  "1.0"
     "cooldowntype"  "14"
   }
   "4"
@@ -49,7 +49,7 @@
     "autocast"    "1"
     "active"      "1"
     "event" "player_cast"
-    "chance"  "11"
+    "chance"  "21"
     "level" "38"
     "cost" "120"
     "mana"  "11"
@@ -58,7 +58,7 @@
     "base" "2"
     "slowmulti"   "0.90"
     "slowtime"  "2.5"
-    "cooldown"  "0.5"
+    "cooldown"  "1.0"
     "cooldowntype"  "13"
   }
   "5"
@@ -68,7 +68,7 @@
     "autocast"    "1"
     "active"      "1"
     "event" "player_cast"
-    "chance"  "11"
+    "chance"  "16"
     "level" "60"
     "cost" "240"
     "mana"  "11"
@@ -76,7 +76,7 @@
     "multi" "0.16"
     "base" "2"
     "silence"   "1.5"
-    "cooldown"  "0.5"
+    "cooldown"  "1.0"
     "cooldowntype"  "16"
   }
   "6"
@@ -90,8 +90,8 @@
     "cooldowntype"  "1"
     "cooldown"  "8.0"
     "mana"  "25"
-    "manainc" "0.55"
-    "multi" "0.65"
+    "manainc" "0.45"
+    "multi" "0.75"
     "multiar"   "0.5"
   }
   "7"
@@ -123,8 +123,8 @@
     "cost"   "10000"
 
     "active" "1"
-    "mana"   "90"
-    "manainc"   "0.0"
+    "mana"   "10"
+    "manainc"   "0.75"
 
     "cooldowntype" "2"
     "cooldown"  "22"
@@ -145,8 +145,8 @@
     "level"  "70"
 
     "active" "1"
-    "mana"   "55"
-    "manainc"   "0.0"
+    "mana"   "10"
+    "manainc"   "0.45"
 
     "cooldowntype" "10"
     "cooldown"  "22"

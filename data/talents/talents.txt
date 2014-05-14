@@ -5402,14 +5402,14 @@
               }
               "1"
               {
-              "multi"  "0.01250000"
+              "multi"  "0.025"
                 "name"  "Convection"
                 "max"  "2"
                 "saveid"  "1"
               }
               "2"
               {
-              "multi"  "0.250000"
+              "multi"  "0.50"
                 "name"  "Convection"
                 "max"  "2"
                 "saveid"  "1"
@@ -5574,7 +5574,8 @@
               "name"  "Chain Lightning"
               "cooldowntype"  "18"
               "cooldown"  "8.0"
-              "mana"  "85"
+              "mana"  "25"
+              "manainc" "0.20"
               "max"  "1"
               "saveid"  "6"
               "active"  "1"
@@ -5623,7 +5624,8 @@
               "saveid"  "7"
               "multi"   "0.18"
               "basedmg" "6"
-              "mana"  "70"
+              "mana"  "20"
+              "manainc" "0.3"
               "chance"  "50"
               "cooldown"  "2.0"
               "cooldowntype"  "18"
@@ -5734,10 +5736,10 @@
               "mana"  "20"
               "manainc" "0.30"
               "multi" "0.25"
-              "chance"  "6"
+              "chance"  "8"
               "ammo"  "1"
               "cooldowntype"  "15"
-              "cooldown"  "0.5"
+              "cooldown"  "1.0"
             }
             "2"
             {
@@ -5747,10 +5749,10 @@
               "mana"  "20"
               "manainc" "0.30"
               "multi" "0.25"
-              "chance"  "11"
+              "chance"  "16"
               "ammo"  "2"
               "cooldowntype"  "15"
-              "cooldown"  "0.5"
+              "cooldown"  "1.0"
             }
           }
       }

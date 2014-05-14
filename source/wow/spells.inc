@@ -591,7 +591,7 @@ public wcRunSpell_6_3(spellid,race,victim,attacker) //Flame Shock
     new chance=StringToInt(line)+GetThunder(attacker,1);
 
     if(IsDoubleHand(attacker))
-    chance=RoundToNearest(float(chance)/2.0);
+    chance=RoundToNearest(float(chance)/2.5);
     if(chance>=random)
     {
 
@@ -617,6 +617,8 @@ public wcRunSpell_6_3(spellid,race,victim,attacker) //Flame Shock
       new cdtype=StringToInt(line);
       wcGetSpellInfo(race,spellid,"cooldown",line);
       new Float:cd=StringToFloat(line);
+      if(IsDoubleHand(attacker))
+        cd=cd/2.0;
       if(echochance>=echorandom)
       {
         g_iEcho[attacker]=0;
@@ -704,7 +706,7 @@ public wcRunSpell_6_4(spellid,race,victim,attacker) //Frost Shock
     new chance=StringToInt(line)+GetThunder(attacker,2);
 
     if(IsDoubleHand(attacker))
-    chance=RoundToNearest(float(chance)/2.0);
+    chance=RoundToNearest(float(chance)/2.5);
     if(chance>=random)
     {
       if(CheckRequirements(attacker,6,1,2,2))
@@ -728,6 +730,8 @@ public wcRunSpell_6_4(spellid,race,victim,attacker) //Frost Shock
       new cdtype=StringToInt(line);
       wcGetSpellInfo(race,spellid,"cooldown",line);
       new Float:cd=StringToFloat(line);
+      if(IsDoubleHand(attacker))
+        cd=cd/2.0;
       if(echochance>=echorandom)
         {
           WCMessage(attacker,"Echo of the Elements activate",attacker);
@@ -806,7 +810,7 @@ public wcRunSpell_6_5(spellid,race,victim,attacker) //Earth Shock
     new chance=StringToInt(line)+GetThunder(attacker,3);
 
     if(IsDoubleHand(attacker))
-    chance=RoundToNearest(float(chance)/2.0);
+    chance=RoundToNearest(float(chance)/2.5);
     if(chance>=random)
     {
       if(CheckRequirements(attacker,6,1,2,2))
@@ -831,6 +835,8 @@ public wcRunSpell_6_5(spellid,race,victim,attacker) //Earth Shock
       new cdtype=StringToInt(line);
       wcGetSpellInfo(race,spellid,"cooldown",line);
       new Float:cd=StringToFloat(line);
+      if(IsDoubleHand(attacker))
+        cd=cd/2.0;
       if(echochance>=echorandom)
         {
           WCMessage(attacker,"Echo of the Elements activate",attacker);
