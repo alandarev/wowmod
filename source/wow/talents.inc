@@ -7714,6 +7714,8 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
     SetCdSpell(client, cdtype, cd, 0, "Lava Burst");
     new Float:location[3];
     GetClientAbsOrigin(victim,location);
+    new Float:locationatt[3];
+    GetClientAbsOrigin(client,locationatt);
     wcGetTalentInfo(6,1,3,1,client,"multi",line);
     new Float:multi=StringToFloat(line);
     new dmg=GetSpellDmg(client,multi)+basedmg;
@@ -7729,8 +7731,13 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
     wcSpellDamage(victim,client,dmg, "", "",line);
     location[2]+=40;
     EmitAmbientSound("wc/spells/fireball.wav",location);
-    VS_Explosion(location, g_ef_fire1, 2.0, 1, 1, 75, 0, {0.0, 0.0, 1.0}, 0, 0.0);
-
+    //VS_Explosion(location, g_ef_fire1, 2.0, 1, 1, 75, 0, {0.0, 0.0, 1.0}, 0, 0.0);
+    locationatt[2]+=40;
+    VS_BeamPoints(location, locationatt, g_ef_scanner,g_ef_scanner, 1, 5, 3.00, 15.00, 15.00, 1, 0.00, {222, 30, 30, 255}, 20);
+    VS_BeamPoints(location, locationatt, g_ef_scanner, g_ef_scanner, 1, 5, 3.00, 15.00, 15.00, 1, 0.00, {222, 30, 30, 255}, 20);
+    VS_BeamPoints(locationatt, location, g_ef_glow1, g_ef_glow1, 1, 5, 3.00, 20.00, 10.00, 10, 0.00, {222, 30, 30, 255}, 160);
+    VS_BeamPoints(locationatt, location, g_ef_lgtning, g_ef_glow1, 1, 5, 3.00, 20.00, 10.00, 0, 0.00, {222, 30, 30, 255}, 160);
+    VS_BeamRingPoint(location, 90.00, 60.00, g_ef_glow1, g_ef_lgtning, 10, 10, 3.00, 50.00, 0.00, {222, 30, 30, 255}, 60, 0);
   }
 }
 
