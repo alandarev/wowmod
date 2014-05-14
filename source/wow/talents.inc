@@ -7729,6 +7729,8 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
     wcSpellDamage(victim,client,dmg, "", "",line);
     location[2]+=40;
     EmitAmbientSound("wc/spells/fireball.wav",location);
+    VS_Explosion(location, g_ef_fire1, 2.0, 1, 1, 75, 0, {0.0, 0.0, 1.0}, C, 0.0);
+
   }
 }
 
@@ -7955,7 +7957,7 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   dmg+=StringToInt(line);
   decl String:vicMsg[300], String:attMsg[300];
   Format(vicMsg,sizeof(vicMsg),"%T","arcaneb target", victim);
-  Format(attMsg,sizeof(attMsg),"%T","arcaneb cast", client);
+  Format(attMsg,sizeof(attMsg),"%T","arcaneb caster", client);
   wcSpellDamage(victim,client,dmg, attMsg, vicMsg,line);
 
   decl Float:location[3],Float:locationatt[3];
@@ -7988,7 +7990,7 @@ wcRunTalent_3_RuneOfPower(client)
   new manareq = GetTalentCost(client, 3,4,1);
 
   wcSetMana(client,GetMana(client)-manareq);
-  wcGetTalentInfo(3,3,4,1,client,"duration",line); //How many times the parasites attack
+  wcGetTalentInfo(3,3,4,1,client,"duration",line);
   new ticks=RoundToNearest(StringToFloat(line)/0.5);
   decl Float:location[3];
   GetClientAbsOrigin(client,location);
@@ -7997,9 +7999,9 @@ wcRunTalent_3_RuneOfPower(client)
   {
     CreateTimer(0.5, RuneofPowerEffect, effid, TIMER_REPEAT);
   }
-  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+  VS_BeamRingPoint(location, 230.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 12.00, 2.00, {0, 32, 255, 255}, 1, 0);
   location[2]+=6;
-  VS_BeamRingPoint(location, 249.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 8.00, 2.00, {0, 32, 255, 255}, 1, 0);
+  VS_BeamRingPoint(location, 230.99, 250.00, g_ef_lgtning, g_ef_lgtning, 1, 15, 20.0, 12.00, 2.00, {0, 32, 255, 255}, 1, 0);
 }
 public Action:RuneofPowerEffect(Handle:timer, any:effid)
 {

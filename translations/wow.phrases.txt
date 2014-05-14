@@ -7721,7 +7721,7 @@
   }
   "Reverberation info"
   {
-    "en"		"Increases the procc chance of shocks by 1%%"
+    "en"		"Increases the procc chance of shocks by 2%%"
   }
   "Ancestor's Embrace info"
   {

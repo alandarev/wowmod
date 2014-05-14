@@ -5425,21 +5425,21 @@
             }
             "1"
             {
-              "increment"  "1"
+              "increment"  "2"
               "name"  "Reverberation"
               "max"  "3"
               "saveid"  "2"
             }
             "2"
             {
-              "increment"  "2"
+              "increment"  "4"
               "name"  "Reverberation"
               "max"  "3"
               "saveid"  "2"
             }
             "3"
             {
-              "increment"  "3"
+              "increment"  "6"
               "name"  "Reverberation"
               "max"  "3"
               "saveid"  "2"
