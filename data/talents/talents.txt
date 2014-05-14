@@ -3015,9 +3015,9 @@
             }
             "1"
             {
-              "cost"  "3"
+              "cost"  "1"
               "base"  "9"
-              "multi" "0.3500"
+              "multi" "0.35"
               "name"  "Arcane Barrage"
               "max"  "1"
               "saveid"  "h"
@@ -3221,8 +3221,8 @@
               "distance"  "250.0"
               "spell" "1.30" //How much should it increase your spellpower by
               "regen" "1.50" //How much should it increase your mana regeneration by
-              "mana"  "80"
-              "manainc"  "1.0"
+              "mana"  "0"
+              "manainc"  "0.0"
               "name"  "Rune of Power"
               "max"  "1"
               "saveid"  "z"

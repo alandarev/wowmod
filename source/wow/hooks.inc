@@ -1901,8 +1901,6 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     GetClientName(attacker, attName,sizeof(attName));
     AddEMsgCaster(msgId, attName);
     new bool:bCS=false;
-    if(CheckRequirements(attacker,3,3,2,1) && GetArcaneCharge(attacker)>=3)
-      wcRunTalent_3_ArcaneBarrage(attacker, victim);
     if(redirected)
     {
       AddEMsgAff("taunt",true);
@@ -2099,6 +2097,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       new bool:red = GetEventBool(event, "reduction");
       if(GetStance(attacker)==2)
         damagemulti *= 1.1;
+      if(CheckRequirements(attacker,3,3,2,1) && GetArcaneCharge(attacker)>=1)
+        wcRunTalent_3_ArcaneBarrage(attacker, victim);
       //Curse?
       if(hasCurse(attacker))
       damagemulti*=(1.0-getCursePower(attacker));

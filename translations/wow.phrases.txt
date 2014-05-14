@@ -7345,7 +7345,7 @@
   }
   "Arcane Barrage info"
   {
-    "en"		"<Passive> Once above or at 3 Arcane Charges, your next attack will unleash an Arcane Barrage.\n    Costs 3 Arcane Charges."
+    "en"		"<Passive> Once above or at 1 Arcane Charge, your next attack will unleash an Arcane Barrage.\n    Costs 1 Arcane Charge."
   }
   "arcane barrage"
   {
