@@ -7729,7 +7729,7 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
     wcSpellDamage(victim,client,dmg, "", "",line);
     location[2]+=40;
     EmitAmbientSound("wc/spells/fireball.wav",location);
-    VS_Explosion(location, g_ef_fire1, 2.0, 1, 1, 75, 0, {0.0, 0.0, 1.0}, 0, 0.0);
+    VS_Explosion(location, g_ef_fire1, 2.0, 1, 1, 75, 0, {0.0, 0.0, 1.0});
 
   }
 }
