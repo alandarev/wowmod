@@ -3015,7 +3015,7 @@
             }
             "1"
             {
-              "cost"  "1"
+              "cost"  "2"
               "base"  "9"
               "multi" "0.35"
               "name"  "Arcane Barrage"
@@ -3209,7 +3209,7 @@
             "max"  "1"
             "saveid"  "z"
             "spell" "1.00"
-            "regen" "1.50"
+            "regen" "1.00"
           }
             "1"
             {

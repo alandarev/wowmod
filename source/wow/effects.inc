@@ -107,6 +107,7 @@ public PrecacheModels()
   PrecacheSound("wc/spells/deathanddecay.wav");
   PrecacheSound("wc/spells/blizzard.wav");
   PrecacheSound("wc/spells/arcanemissile.wav");
+  PrecacheSound("wc/spells/arcanebarrage.wav");
   PrecacheSound("wc/spells/clearcast.wav");
   //PrecacheSound("wc/spells/aoeshield.wav");
   PrecacheSound("wc/spells/lightwell.wav");

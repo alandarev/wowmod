@@ -1166,7 +1166,7 @@ public wcRunTalentPhysicalCrit(attacker,victim,&Float:damagemulti, &damage)
   }
 }
 
-public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,olddmg, bool:crit, bool:pass) //onhit
+public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,olddmg, bool:crit, bool:pass) //onhit, onphysical, physical, ondamage
 {
   new aclass = GetClass(attacker);
   new vclass = GetClass(victim);
@@ -1229,6 +1229,8 @@ public wcRunTalentHit(attacker,victim,String:source[],bool:spell,&damage,prio,ol
         wcRunTalent_3_ArcaneMissile(attacker,victim);
       if(CheckRequirements(attacker,3,1,4,2) && prio ==2 && spell)
         wcRunTalent_3_BrittleFlesh(attacker,damage);
+      if(CheckRequirements(attacker,3,3,2,1) && prio ==1 && !spell)
+        wcRunTalent_3_ArcaneBarrage(attacker, victim);
     }
     case 4:
     {
@@ -7960,33 +7962,35 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
 {
   decl String:line[255];
   wcGetTalentInfo(3,3,2,1,client,"cost",line);
-  SpendArcaneCharge(client, StringToInt(line));
-  wcGetTalentInfo(3,3,2,1,client,"multi",line);
-  new Float:multi=StringToFloat(line);
-  new dmg=GetSpellDmg(client,multi);
-  wcGetTalentInfo(3,3,2,1,client,"base",line);
-  dmg+=StringToInt(line);
-  decl String:vicMsg[300], String:attMsg[300];
-  Format(vicMsg,sizeof(vicMsg),"%T","arcaneb target", victim);
-  Format(attMsg,sizeof(attMsg),"%T","arcaneb caster", client);
-  wcSpellDamage(victim,client,dmg, attMsg, vicMsg,line);
+  new cost = StringToInt(line);
+  if(GetArcaneCharge(attacker)>=cost)
+  {
+    SpendArcaneCharge(client, cost);
+    wcGetTalentInfo(3,3,2,1,client,"multi",line);
+    new Float:multi=StringToFloat(line);
+    new dmg=GetSpellDmg(client,multi);
+    wcGetTalentInfo(3,3,2,1,client,"base",line);
+    dmg+=StringToInt(line);
+    decl String:vicMsg[300], String:attMsg[300];
+    Format(vicMsg,sizeof(vicMsg),"%T","arcaneb target", victim);
+    Format(attMsg,sizeof(attMsg),"%T","arcaneb caster", client);
+    wcSpellDamage(victim,client,dmg, attMsg, vicMsg,line);
 
-  decl Float:location[3],Float:locationatt[3];
-  GetClientAbsOrigin(victim,location);
-  GetClientAbsOrigin(client,locationatt);
-  new color[4]={255,255,255,255};
-  location[2]+=35;
-  locationatt[2]+=30;
-  //EmitAmbientSound("wc/spells/arcanebarrage.wav",locationatt);
-  BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
-  locationatt[2]+=10;
-  VS_GlowSprite(locationatt, g_ef_WXplo1, 1.00, 1.00, 255);
-  locationatt[0]-=8;
-  BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
-  locationatt[0]+=16;
-  BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
-  
-  
+    decl Float:location[3],Float:locationatt[3];
+    GetClientAbsOrigin(victim,location);
+    GetClientAbsOrigin(client,locationatt);
+    new color[4]={255,255,255,255};
+    location[2]+=35;
+    locationatt[2]+=30;
+    EmitAmbientSound("wc/spells/arcanebarrage.wav",location);
+    BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
+    locationatt[2]+=10;
+    VS_GlowSprite(locationatt, g_ef_WXplo1, 1.00, 1.00, 255);
+    locationatt[0]-=8;
+    BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
+    locationatt[0]+=16;
+    BeamEffect("@all",locationatt,location,g_ef_tp_beam001,5,1.5,3.0,4.0,color,0.0,25);
+  }
 }
 
 wcRunTalent_3_RuneOfPower(client)

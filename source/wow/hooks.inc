@@ -1830,8 +1830,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
     if(7 >= GetRandomInt(1,100))
       wcRunSpell_8_4(4,8,attacker,victim,true);
     
-  if(CheckRequirements(attacker,3,3,2,1) && GetArcaneCharge(attacker)>=1)
-    wcRunTalent_3_ArcaneBarrage(attacker, victim);
+
   if(PlayerHasBonusFast(attacker, Profession:Prof_ExtraDamage))
   damagemulti*=1.05;
   if(PlayerHasBonusFast(victim, Profession:Prof_ExtraDef))

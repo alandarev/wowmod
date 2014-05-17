@@ -2182,6 +2182,7 @@ public InstallDownloads()
     AddFileToDownloadsTable("sound/wc/spells/deathanddecay.wav");
     AddFileToDownloadsTable("sound/wc/spells/blizzard.wav");
     AddFileToDownloadsTable("sound/wc/spells/arcanemissile.wav");
+    AddFileToDownloadsTable("sound/wc/spells/arcanebarrage.wav");
     AddFileToDownloadsTable("sound/wc/spells/clearcast.wav");
     //AddFileToDownloadsTable("sound/wc/spells/aoeshield.wav");
     AddFileToDownloadsTable("sound/wc/spells/lightwell.wav");
