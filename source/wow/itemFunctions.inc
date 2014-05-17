@@ -99,7 +99,7 @@ RandomBoxUsed(client, slot)
 }
 
 GetItemsFromItem(item, Setitems[], size) {
-  decl sets[20];
+  decl sets[64];
   new setsAmount = GetSets(item,sets, sizeof(sets));
   new itemsAmount=0;
   while ( (setsAmount >= 1) && (itemsAmount < size) ) {
