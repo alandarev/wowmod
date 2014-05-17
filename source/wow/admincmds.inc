@@ -601,13 +601,13 @@ public Action:TalentCmd(client,args)
         }
       case 4:
         {
-          if(CheckRequirements(client,2,3,4,1))
-            wcRunTalent_2_ShadowGate(client); //shadowgate
+          if(CheckRequirements(client,2,1,3,1))
+            wcRunTalent_2_ShadowStep(client); //shadowstep
         }
       case 5:
         {
-          if(CheckRequirements(client,2,1,3,1))
-            wcRunTalent_2_ShadowStep(client); //shadowstep
+          if(CheckRequirements(client,2,3,4,1))
+            wcRunTalent_2_ShadowGate(client); //shadowgate
         }
       case 6:
       {

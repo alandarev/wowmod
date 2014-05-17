@@ -1374,6 +1374,10 @@
   {
     "en"			"Ambush"
   }
+  "ambush wrong"
+  {
+    "en"			"Ambush (Front)"
+  }
   "ai"
   {
     "#format"	"{1:i}"
@@ -7189,7 +7193,7 @@
   }
   "Overkill info"
   {
-    "en"		"<Passive> Increases the bonus damage of your Ambush.\n    Rank 1: +33%% Ambush damage\n    Rank 2: +66%% Ambush damage\n    Rank 3: +100%% Ambush damage"
+    "en"		"<Passive> Increases the bonus damage of your Ambush.\n    Rank 1: +16%% Ambush damage\n    Rank 2: +33%% Ambush damage\n    Rank 3: +50%% Ambush damage"
   }
   "Crippling Poisons info"
   {
