@@ -2364,6 +2364,7 @@ public InstallDownloads()
 
   if(CSGO) //CSGO Sprites
   {
+    /*
     AddFileToDownloadsTable("materials/sprites/bluelaser1.vmt");
     AddFileToDownloadsTable("materials/sprites/bluelaser1.vtf");
     AddFileToDownloadsTable("materials/sprites/bluelight1.vmt");
@@ -2418,6 +2419,7 @@ public InstallDownloads()
     AddFileToDownloadsTable("materials/sprites/tp_beam001.vmt");
     AddFileToDownloadsTable("materials/sprites/yellowflare.vmt");
     AddFileToDownloadsTable("materials/sprites/yellowflare.vtf");
+    */
   }
 
   RankDownloads();
