@@ -7963,7 +7963,7 @@ public wcRunTalent_3_ArcaneBarrage(client, victim)
   decl String:line[255];
   wcGetTalentInfo(3,3,2,1,client,"cost",line);
   new cost = StringToInt(line);
-  if(GetArcaneCharge(attacker)>=cost)
+  if(GetArcaneCharge(client)>=cost)
   {
     SpendArcaneCharge(client, cost);
     wcGetTalentInfo(3,3,2,1,client,"multi",line);
