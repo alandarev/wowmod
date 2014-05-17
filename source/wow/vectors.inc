@@ -2361,7 +2361,63 @@ public InstallDownloads()
   /*AddFileToDownloadsTable("materials/overlays/wow/intro2_ru.vmt");*/
   /*AddFileToDownloadsTable("materials/overlays/wow/intro2_ru.vtf");*/
 
-
+  if(CSGO) //CSGO Sprites
+  {
+    AddFileToDownloadsTable("materials/sprites/bluelaser1.vmt");
+    AddFileToDownloadsTable("materials/sprites/bluelaser1.vtf");
+    AddFileToDownloadsTable("materials/sprites/bluelight1.vmt");
+    AddFileToDownloadsTable("materials/sprites/bluelight1.vtf");
+    AddFileToDownloadsTable("materials/sprites/combineball_glow_black_1.vmt");
+    AddFileToDownloadsTable("materials/sprites/combineball_glow_black_1.vtf");
+    AddFileToDownloadsTable("materials/sprites/crystal_beam1.vmt");
+    AddFileToDownloadsTable("materials/sprites/crystal_beam1.vtf");
+    AddFileToDownloadsTable("materials/sprites/fire.vmt");
+    AddFileToDownloadsTable("materials/sprites/fire.vtf");
+    AddFileToDownloadsTable("materials/sprites/flatflame.vmt");
+    AddFileToDownloadsTable("materials/sprites/flatflame.vtf");
+    AddFileToDownloadsTable("materials/sprites/greenglow1.vmt");
+    AddFileToDownloadsTable("materials/sprites/greenglow1.vtf");
+    AddFileToDownloadsTable("materials/sprites/greenspit1.vmt");
+    AddFileToDownloadsTable("materials/sprites/greenspit1.vtf");
+    AddFileToDownloadsTable("materials/sprites/halo01.vmt");
+    AddFileToDownloadsTable("materials/sprites/halo01.vtf");
+    AddFileToDownloadsTable("materials/sprites/hydragutbeam.vmt");
+    AddFileToDownloadsTable("materials/sprites/hydragutbeam.vtf");
+    AddFileToDownloadsTable("materials/sprites/laser.vmt");
+    AddFileToDownloadsTable("materials/sprites/laser.vtf");
+    AddFileToDownloadsTable("materials/sprites/lgtning.vmt");
+    AddFileToDownloadsTable("materials/sprites/lgtning.vtf");
+    AddFileToDownloadsTable("materials/sprites/lgtning_noz.vmt");
+    AddFileToDownloadsTable("materials/sprites/orangecore1.vmt");
+    AddFileToDownloadsTable("materials/sprites/orangecore1.vtf");
+    AddFileToDownloadsTable("materials/sprites/orangelight1.vmt");
+    AddFileToDownloadsTable("materials/sprites/orangelight1.vtf");
+    AddFileToDownloadsTable("materials/sprites/particle_smokegrenade_thick.vtf");
+    AddFileToDownloadsTable("materials/sprites/physcannon_bluecore1b.vmt");
+    AddFileToDownloadsTable("materials/sprites/physcannon_bluecore1b.vtf");
+    AddFileToDownloadsTable("materials/sprites/physring1.vmt");
+    AddFileToDownloadsTable("materials/sprites/physring1-.vtf");
+    AddFileToDownloadsTable("materials/sprites/plasma.vmt");
+    AddFileToDownloadsTable("materials/sprites/plasma.vtf");
+    AddFileToDownloadsTable("materials/sprites/plasma1.vmt");
+    AddFileToDownloadsTable("materials/sprites/plasmaember.vmt");
+    AddFileToDownloadsTable("materials/sprites/plasmaember.vtf");
+    AddFileToDownloadsTable("materials/sprites/redglow1.vmt");
+    AddFileToDownloadsTable("materials/sprites/redglow1.vtf");
+    AddFileToDownloadsTable("materials/sprites/rollermine_shock.vmt");
+    AddFileToDownloadsTable("materials/sprites/scanner.vmt");
+    AddFileToDownloadsTable("materials/sprites/scanner.vtf");
+    AddFileToDownloadsTable("materials/sprites/scanner_bottom.vmt");
+    AddFileToDownloadsTable("materials/sprites/scanner_bottom.vtf");
+    AddFileToDownloadsTable("materials/sprites/shellchrome.vmt");
+    AddFileToDownloadsTable("materials/sprites/shellchrome.vtf");
+    AddFileToDownloadsTable("materials/sprites/smoke.vtf");
+    AddFileToDownloadsTable("materials/sprites/strider_blackball.vmt");
+    AddFileToDownloadsTable("materials/sprites/strider_blackball.vtf");
+    AddFileToDownloadsTable("materials/sprites/tp_beam001.vmt");
+    AddFileToDownloadsTable("materials/sprites/yellowflare.vmt");
+    AddFileToDownloadsTable("materials/sprites/yellowflare.vtf");
+  }
 
   RankDownloads();
 }
