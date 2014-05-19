@@ -100191,7 +100191,7 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
-"damage"	"23"
+"damage"	"29"
 "spelldmg"	"28"
 }
 "25256"
@@ -100225,6 +100225,7 @@
 "ws"	"0.95"
 "2hand"	"1"
 "spelldmg"	"28"
+"damage"  "29"
 }
 "25257"
 {

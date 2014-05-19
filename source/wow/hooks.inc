@@ -2097,6 +2097,12 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       new bool:red = GetEventBool(event, "reduction");
       if(GetStance(attacker)==2)
         damagemulti *= 1.1;
+      if(IsFakeClient(victim))
+      {
+        new botc = GetClass(victim);
+        if(botc==2 || botc==3 || botc==4 || botc==8)
+          damagemulti*=1.2;
+      }
       //Curse?
       if(hasCurse(attacker))
       damagemulti*=(1.0-getCursePower(attacker));

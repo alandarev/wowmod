@@ -5326,7 +5326,7 @@
   }
   "shadowstep info"
   {
-    "en"     "<Activated> A quick and stealthy step through the shadows, movement speed increases distance."
+    "en"     "<Active> Teleport to the targeted location, stealthing yourself.\n    Bonus movement speed increases distance."
   }
   "Garrote info"
   {
