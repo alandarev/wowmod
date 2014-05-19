@@ -2517,7 +2517,7 @@ wcRunTalent_2_ShadowStep(client)
 
   new Float:speed = GetClientSpeed(client);
   if (speed>1.0)
-    distance *= speed;
+    distance *= ((speed - 1.0) * 3.0) + 1.0;
 
   // setting up for the visual effect
   decl Float:location[3];
