@@ -10624,11 +10624,11 @@
   }
   "arcaneb caster"
   {
-    "en"     "You cast @lightgreenArcane Barrage @defaultat @vic and deal @dmg damage with a slowdown effect"
+    "en"     "You cast @lightgreenArcane Barrage @defaultat @vic and deal @dmg damage"
   }
   "arcaneb target"
   {
-    "en"     "@att has cast @lightgreenArcane Barrage @defaultat You and has done @dmg damage with a slowdown effect"
+    "en"     "@att has cast @lightgreenArcane Barrage @defaultat You and has done @dmg damage"
   }
 }
 
