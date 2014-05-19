@@ -177,6 +177,19 @@ public PlayerKillXp(client,victim,bool:head)
   }
 }
 
+public PlayerAssistXp(client,victim)
+{
+  if(GetClientTeam(client)!=GetClientTeam(victim))
+  {
+   if((GetBoss(client)) == 0 || (!IsBoss() && !IsHNS()))  {
+      new xp = GetTargetXPWorth(victim,client,false);
+      GiveRestXp(client, RoundToNearest(float(xp)*0.5));
+      wcGiveXp(client,xp/2,true);
+      LowLevelInfo(victim, client);
+      }
+  }
+}
+
 /*
 LowLevelInfo(client, attacker)  {
   new lowered=100;

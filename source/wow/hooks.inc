@@ -938,6 +938,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
   g_iArcaneCharge[userid]=0;
   g_iArcaneDischarge[userid]=0;
   new attacker=GetClientOfUserId(GetEventInt(event,"attacker"));
+  new assister=GetClientOfUserId(GetEventInt(event,"assister"));
   GetClientAbsOrigin(userid,vClientCorpse[userid]);
   CheckClientHpBar(userid);
   if(attacker!=0)
@@ -1021,6 +1022,7 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
     }
 
     PlayerKillXp(attacker,userid,headshot);
+    PlayerAssistXp(assister,userid);
     if(attacker!=userid)
     {
       g_Deaths[userid]++; //for bonus drops
