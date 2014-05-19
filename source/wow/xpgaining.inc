@@ -185,9 +185,6 @@ public PlayerAssistXp(client,victim)
       new xp = GetTargetXPWorth(victim,client,false)/2;
       GiveRestXp(client, RoundToNearest(float(xp)*0.5));
       wcGiveXp(client,xp,true);
-      new String:name[64];
-      GetClientName(victim,name,sizeof(name));
-      PrintToChat(client, "You got %d for killing %s",xp,name);
       }
   }
 }
