@@ -1022,7 +1022,8 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
     }
 
     PlayerKillXp(attacker,userid,headshot);
-    PlayerAssistXp(assister,userid);
+    if(assister>0)
+      PlayerAssistXp(assister,userid);
     if(attacker!=userid)
     {
       g_Deaths[userid]++; //for bonus drops
