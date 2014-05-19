@@ -2275,7 +2275,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "3 5 7"
 }
 
@@ -2483,7 +2483,7 @@
 "spelldmg"   "0"
 "armor_type"   "0"
 "as"   "0.01"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -2533,7 +2533,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -2558,7 +2558,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -2583,7 +2583,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.01"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -2608,7 +2608,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -2633,7 +2633,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -2658,7 +2658,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -3055,7 +3055,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4 8"
 }
 
@@ -3330,7 +3330,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -3485,7 +3485,7 @@
 "spelldmg"   "0"
 "armor_type"   "0"
 "as"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "class" "6"
 }
 
@@ -4245,7 +4245,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "6"
 }
 
@@ -4323,7 +4323,7 @@
 "spelldmg"   "0"
 "armor_type"   "0"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 2 3 4 5 6 7 8"
 }
 
@@ -4349,7 +4349,7 @@
 "spelldmg"   "0"
 "armor_type"   "0"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 2 3 4 5 6 7 8"
 }
 
@@ -6896,7 +6896,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "0"
 }
 
@@ -8014,7 +8014,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "3 5"
 }
 
@@ -8478,7 +8478,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "7"
 }
 
@@ -10482,7 +10482,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -10533,7 +10533,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -11003,7 +11003,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -11054,7 +11054,7 @@
 "spelldmg"   "1"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -11379,7 +11379,7 @@
 "spelldmg"   "0"
 "armor_type"   "0"
 "as"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "class" "0"
 }
 
@@ -11858,7 +11858,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -12329,7 +12329,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -12382,7 +12382,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -13354,7 +13354,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "6"
 }
 
@@ -13960,7 +13960,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "3 5"
 }
 
@@ -14493,7 +14493,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "7"
 }
 
@@ -15026,7 +15026,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -15079,7 +15079,7 @@
 "spelldmg"   "1"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -15549,7 +15549,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -16050,7 +16050,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -16076,7 +16076,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -16321,7 +16321,7 @@
 "spelldmg"   "0"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "6"
 }
 
@@ -16619,7 +16619,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "3"
 }
 
@@ -16887,7 +16887,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "5"
 }
 
@@ -17155,7 +17155,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "7"
 }
 
@@ -17423,7 +17423,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -17449,7 +17449,7 @@
 "spelldmg"   "1"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -18252,7 +18252,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "1 4"
 }
 
@@ -18796,7 +18796,7 @@
 "spelldmg"   "1"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -18851,7 +18851,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "4"
 }
 
@@ -20105,7 +20105,7 @@
 "spelldmg"   "1"
 "armor_type"   "2"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "6"
 }
 
@@ -20753,7 +20753,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "class" "3"
 }
 
@@ -21220,7 +21220,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "class" "5"
 }
 
@@ -21687,7 +21687,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "7"
 }
 
@@ -24509,7 +24509,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "6"
 }
@@ -24933,7 +24933,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -25360,7 +25360,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "acc"   "0.0"
 "class" "5"
 }
@@ -26178,7 +26178,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "acc"   "0.0"
 "class" "3"
 }
@@ -28230,7 +28230,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "acc"   "0.0"
 "class" "2"
 }
@@ -28636,7 +28636,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "acc"   "0.0"
 "class" "5"
 }
@@ -29478,7 +29478,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "3"
 }
@@ -30192,7 +30192,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "6"
 }
 
@@ -30308,7 +30308,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -30366,7 +30366,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.01"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "2"
 }
 
@@ -31486,7 +31486,7 @@
 "spelldmg"   "1"
 "armor_type"   "0"
 "as"   "0.01"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "0"
 }
 
@@ -31564,7 +31564,7 @@
 "spelldmg"   "0"
 "armor_type"   "1"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "0"
 }
 
@@ -31774,7 +31774,7 @@
 "spelldmg"   "0"
 "armor_type"   "0"
 "as"   "0.0"
-"speed"   "0.03"
+"speed"   "0.06"
 "class" "2"
 }
 
@@ -39151,7 +39151,7 @@
 "armor_type"   "0"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "0"
 }
@@ -39333,7 +39333,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "0"
 }
@@ -39924,7 +39924,7 @@
 "armor_type"   "0"
 "as"   "0.02"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "0"
 }
 
@@ -40955,7 +40955,7 @@
 "category"   "26"
 "use"   "0"
 "ilevel"   "48"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "0"
 }
 
@@ -55549,7 +55549,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -56734,7 +56734,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "7"
 }
@@ -56827,7 +56827,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.01"
 "class" "2"
 }
@@ -58167,7 +58167,7 @@
 "armor_type"   "3"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "8"
 }
@@ -58257,7 +58257,7 @@
 "armor_type"   "3"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "8"
 }
@@ -58924,7 +58924,7 @@
 "armor_type"   "3"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "8"
 }
@@ -59323,7 +59323,7 @@
 "armor_type"   "3"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "8"
 }
@@ -59900,7 +59900,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "8"
 }
@@ -59930,7 +59930,7 @@
 "armor_type"   "3"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "8"
 }
@@ -61149,7 +61149,7 @@
 "spelldmg"   "0"
 "armor_type"   "3"
 "as"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "class" "8"
 }
 
@@ -62345,7 +62345,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -63534,7 +63534,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "6"
 }
@@ -70970,7 +70970,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -71063,7 +71063,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -75129,7 +75129,7 @@
 "armor_type"   "3"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "1 4"
 }
@@ -75973,7 +75973,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -76816,7 +76816,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "6"
 }
@@ -81122,7 +81122,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -87855,7 +87855,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -89927,7 +89927,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -90333,7 +90333,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "6"
 }
@@ -100061,7 +100061,7 @@
 "regen"	"0"
 "as"	"0"
 "cs"	"0"
-"speed"	"0.03"
+"speed"   "0.03"
 "acc"	"0"
 "resilence"	"0"
 "armor"	"0"
@@ -100284,7 +100284,7 @@
 "regen"	"0"
 "as"	"0"
 "cs"	"0"
-"speed"	"0.03"
+"speed"   "0.06"
 "acc"	"0"
 "resilence"	"0"
 "armor"	"46"
@@ -102819,7 +102819,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "5"
 }
@@ -105695,7 +105695,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "5"
 }
@@ -110043,7 +110043,7 @@
 "armor_type"   "1"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "5"
 }
@@ -115211,7 +115211,7 @@
 "ilevel"   "84"
 "int"   "0"
 "res"   "0"
-"speed"   "0.03"
+"speed"   "0.06"
 "class" "0"
 }
 
@@ -115430,7 +115430,7 @@
 "armor_type"   "0"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.02"
+"speed"   "0.04"
 "acc"   "0.0"
 "class" "0"
 }
@@ -117670,7 +117670,7 @@
 "armor_type"   "0"
 "as"   "0.0"
 "cs"   "0.01"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -118931,7 +118931,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -123545,7 +123545,7 @@
 "category"   "26"
 "use"   "0"
 "ilevel"   "24"
-"speed"   "0.04"
+"speed"   "0.08"
 "class" "0"
 }
 
@@ -123576,7 +123576,7 @@
 "use"   "0"
 "ilevel"   "24"
 "agi"   "7"
-"speed"   "0.02"
+"speed"   "0.04"
 "class" "0"
 }
 
@@ -133473,7 +133473,7 @@
 "armor_type"   "3"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "1 4 8"
 }
@@ -135415,7 +135415,7 @@
 "armor_type"   "0"
 "as"   "0.02"
 "cs"   "0.02"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "2"
 }
@@ -142846,7 +142846,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "9"
 }
@@ -144204,7 +144204,7 @@
 "armor_type"   "2"
 "as"   "0.0"
 "cs"   "0.0"
-"speed"   "0.01"
+"speed"   "0.02"
 "acc"   "0.0"
 "class" "9"
 }

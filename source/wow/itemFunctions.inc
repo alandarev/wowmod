@@ -2193,7 +2193,7 @@ stock SetRandomValues(item[UniqueItem]) {
         case 1:
         {
           item[Item_speed] += 0.01;
-          secPoints -= 0.01 * 0.25 * 32.0 * (10.0 + level);
+          secPoints -= 0.01 * 0.25 * 16.0 * (10.0 + level);
         }
         case 2:
         {
