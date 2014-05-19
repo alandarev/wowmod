@@ -265,7 +265,7 @@ public wcRunSpell_9_2(spellid,race,victim,attacker,&totaldmg) //Tiger Palm
   decl Float:location[3];
   GetClientAbsOrigin(victim,location);
   MonkTigerPalmEffect(location);
-  EmitAmbientSound("wc/spells/tigerpalm.wav",location);
+  //EmitAmbientSound("wc/spells/tigerpalm.wav",location);
 
 
   
