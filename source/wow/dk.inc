@@ -342,9 +342,9 @@ wcRunSpell_8_2(spellid,race,client) //Death Grip
   GetCharItem(itemz, client, 22);
   if(itemz[Item_defId]==25256 && 80>GetLevel(client))
   {
-    power+=500;
+    power+=300;
     if(CSGO)
-      power*=2.0;
+      power*=1.2;
     new targett;
     new Float:locationz[3];
     GetClientAbsOrigin(target,locationz);
@@ -355,10 +355,10 @@ wcRunSpell_8_2(spellid,race,client) //Death Grip
       if(GetBoss(targett)<=0 || (!IsBoss()) )
         PushPlayerTowardsPlayer(targett, client, power, zPower);
     if(CSGO)
-      power*=0.5;
+      power = power / 1.2;
   }
   if(CSGO)
-    power*=2.0;
+    power*=1.2;
   //Spell code
   //if not boss
   if(GetBoss(target)<=0 || (!IsBoss()) )
