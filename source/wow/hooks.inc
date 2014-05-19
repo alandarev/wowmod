@@ -1023,7 +1023,10 @@ public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadca
 
     PlayerKillXp(attacker,userid,headshot);
     if(assister>0)
+    {
       PlayerAssistXp(assister,userid);
+      TriggerDrop(assister,userid,false,0.35);
+    }
     if(attacker!=userid)
     {
       g_Deaths[userid]++; //for bonus drops
@@ -1754,17 +1757,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         damagemulti*=0.50;
       if(StrEqual("weapon_xm1014",A_weapon))
         damagemulti*=0.70;
-      if(StrEqual("weapon_scout",A_weapon))
-        damagemulti*=1.25;
-      if(StrEqual("weapon_xm1014",A_weapon))
-        damagemulti*=0.70;
-      if(StrEqual("weapon_bizon",A_weapon))
-        damagemulti*=0.60;
-      if(StrEqual("weapon_p90",A_weapon))
-        damagemulti*=0.85;
       if(StrEqual("weapon_awp",A_weapon))
         if(GetEventInt(event,"hitgroup")!=1)
-          damagemulti*=1.20;
+          damagemulti*=1.30;
       //PrintToChatAll("Weapon is %s",A_weapon);
     }
   }
@@ -2492,33 +2487,30 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
 Float:GetWeaponModifier(String:weaponname[],attacker)
 {
   new Float:wmulti=1.0;
-  if(!CSGO)
+  if (!strcmp(weaponname,"hegrenade"))
   {
-    if (!strcmp(weaponname,"hegrenade"))
-    {
-      wmulti*=1.5;
-    }
-    else if(StrEqual(weaponname,"p90"))
-    wmulti*=0.75;
-    else if(StrEqual(weaponname,"sg550")) //CT auto sniper
-    wmulti*=0.70;
-    else if(StrEqual(weaponname,"g3sg1")) //T auto sniper
-    wmulti*=0.70;
-    else if(StrEqual(weaponname,"scout")) //scout
-    wmulti*=1.2;
-    else if(StrEqual(weaponname,"awp")) //awp
-    wmulti*=1.0;
-    else if(StrEqual(weaponname,"m249"))  wmulti *= 0.6;
-    else if(StrEqual(weaponname,"knife")) //knife
-    {
-      wmulti *= 1.30;
-      if(!IsBoss() && !IsHNS())
-      wmulti*=MaxFloat(1.0, GetWeaponSpeed(attacker, true));
-    }
-    if(IsBoss())
-      if(StrEqual(weaponname,"awp"))
-        wmulti*=6.00;
+    wmulti*=1.5;
   }
+  else if(StrEqual(weaponname,"p90"))
+  wmulti*=0.75;
+  else if(StrEqual(weaponname,"sg550")) //CT auto sniper
+  wmulti*=0.70;
+  else if(StrEqual(weaponname,"g3sg1")) //T auto sniper
+  wmulti*=0.70;
+  else if(StrEqual(weaponname,"scout")) //scout
+  wmulti*=1.2;
+  else if(StrEqual(weaponname,"awp")) //awp
+  wmulti*=1.0;
+  else if(StrEqual(weaponname,"m249"))  wmulti *= 0.6;
+  else if(StrEqual(weaponname,"knife")) //knife
+  {
+    wmulti *= 1.30;
+    if(!IsBoss() && !IsHNS())
+    wmulti*=MaxFloat(1.0, GetWeaponSpeed(attacker, true));
+  }
+  if(IsBoss())
+    if(StrEqual(weaponname,"awp"))
+      wmulti*=6.00;
   //new weap = GetEntDataEnt2(victim, ACTIVEWEAPON);
   //if(weap>=0)
   //	{
