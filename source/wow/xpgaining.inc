@@ -182,10 +182,12 @@ public PlayerAssistXp(client,victim)
   if(GetClientTeam(client)!=GetClientTeam(victim))
   {
    if((GetBoss(client)) == 0 || (!IsBoss() && !IsHNS()))  {
-      new xp = GetTargetXPWorth(victim,client,false);
+      new xp = GetTargetXPWorth(victim,client,false)/2;
       GiveRestXp(client, RoundToNearest(float(xp)*0.5));
-      wcGiveXp(client,xp/2,true);
-      LowLevelInfo(victim, client);
+      wcGiveXp(client,xp,true);
+      new String:name[64];
+      GetClientName(victim,name,sizeof(name));
+      PrintToChat(client, "You got %d for killing %s",xp,name);
       }
   }
 }
