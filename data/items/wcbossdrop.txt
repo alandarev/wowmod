@@ -3436,6 +3436,28 @@
   "dropall_amount" "0"
 }
 
-
+   "70" //Lich King
+  {
+  "armor" "1600"
+  "sta"   "25000"
+  "str"   "125"
+  "agi"   "50"
+  "int" "1000" //Affects spell damage e.g Defile
+  "speed" "0.2"
+  "dmg" "20"
+  "multi" "0"
+  "targets" "1"
+  "enrage_level" "0.35"
+  "enrage_dmg" "35"
+  "enrage_multi" "0"
+  "enrage_targets" "2"
+  "xp"  "1500"
+  "totalxp" "5000"
+  "sets"  "381 382 26 27 60"
+  "amount"  "4"
+  "chance"  "0.70"
+  "dropall" "0"
+  "dropall_amount" "0"
+}
 
 } //bosses before this bracket

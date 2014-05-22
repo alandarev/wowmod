@@ -13,12 +13,12 @@
       "cost" "20"
       "cooldowntype"  "3"
       "cooldown"  "4.9"
-      "basedmg" "18"
+      "basedmg" "12"
       "mana"  "10"
       "manainc" "0.32"
       "slowtime"  "3.0"
       "slowmulti" "0.85"
-      "multi" "0.20"
+      "multi" "0.16"
   }
   "2"
   {
@@ -52,10 +52,10 @@
     "cost" "50"
     "cooldowntype"  "5"
     "cooldown"  "5.5"
-    "basedmg" "22"
+    "basedmg" "16"
     "mana"  "10"
     "manainc" "0.32"
-    "multi" "0.28"
+    "multi" "0.24"
   }
   "4"
   {
@@ -69,7 +69,7 @@
     "cost" "39"
     "mana"  "10"
     "manainc" "0.13"
-    "multi" "0.155"
+    "multi" "0.10"
   }
   "5"
   {

@@ -4620,8 +4620,8 @@ public wcRunSpell_4_8(spellid,race,client) //Judgement(Judgment)
 
         new bool:taunt = HasSeal(client,Seal:SEAL_Righteousness);
 
-        SetSealT(client,0.0);
-        SetSeal(client,0);
+        //SetSealT(client,0.0);
+        //SetSeal(client,0);
 
         new threatBonus = wcGetSpellInfoInt(race, spellid, "threat");
         //Threat

@@ -5963,7 +5963,7 @@
   }
   "Improved Frost Bolt name"
   {
-    "en"  	"Improved Frost Bolt"
+    "en"  	"Improved Frostbolt"
   }
   "Permafrost name"
   {
@@ -7229,7 +7229,7 @@
   }
   "Improved Frost Bolt info"
   {
-    "en"		"<Passive> Increases the damage multiplier of Frostbolt and reduces cooldown its cooldown.\n    Rank 1: +10%% multiplier, -0.1 seconds cooldown\n    Rank 2: +20%% multiplier, -0.3 seconds cooldown\n    Rank 3: +30%% multiplier, -0.5 seconds cooldown"
+    "en"		"<Passive> Increases the damage multiplier of Frostbolt and reduces cooldown its cooldown.\n    Rank 1: +15%% multiplier, -0.1 seconds cooldown\n    Rank 2: +30%% multiplier, -0.3 seconds cooldown\n    Rank 3: +45%% multiplier, -0.5 seconds cooldown"
   }
   "Permafrost info"
   {
@@ -7249,7 +7249,7 @@
   }
   "Shatter info"
   {
-    "en"		"<Passive> Increases your crit chance against frozen targets.\n     Rank 1: +5%% crit chance\n    Rank 2: +10%% crit chance"
+    "en"		"<Passive> Increases your crit chance against frozen targets.\n     Rank 1: +10%% crit chance\n    Rank 2: +20%% crit chance"
   }
   "Improved Frost Nova info"
   {
@@ -7277,7 +7277,7 @@
   }
   "Blizzard info"
   {
-    "en"		"<Activated> Targeted Area of Effect spell that deals damage and slows all nearby enemies in the area for 4 seconds"
+    "en"		"<Activated> Targeted Area of Effect spell that deals damage and\n    slows all nearby enemies in the area for 4 seconds"
   }
   "Ignite info"
   {
@@ -7289,7 +7289,7 @@
   }
   "Improved Fireball info"
   {
-    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +17.5%% damage, -0.25 seconds cooldown\n    Rank 2: +35%% damage, -0.5 seconds cooldown"
+    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +25%% damage, -0.25 seconds cooldown\n    Rank 2: +50%% damage, -0.5 seconds cooldown"
   }
   "Burning Soul info"
   {
@@ -7309,7 +7309,7 @@
   }
   "Improved Scorch info"
   {
-    "en"		"<Passive> Increases the damage multiplier of Scorch.\n    Rank 1: +6%% damage multiplier\n    Rank 2: +13%% damage multiplier\n    Rank 3: +20%% damage multiplier"
+    "en"		"<Passive> Increases the damage multiplier of Scorch.\n    Rank 1: +12%% damage multiplier\n    Rank 2: +24%% damage multiplier\n    Rank 3: +36%% damage multiplier"
   }
   "Searing Flames info"
   {
@@ -7381,7 +7381,7 @@
   }
   "Arcane Missiles info"
   {
-    "en"		"<Passive> Gives your attacks a chance to cast Arcane Missiles dealing medium damage for a high mana cost.\n    Rank 2: Half the mana cost"
+    "en"		"<Passive> Gives your attacks a chance to cast Arcane Missiles,\n    dealing medium damage for a high mana cost.\n    Rank 2: Half the mana cost"
   }
   "Rune of Power name"
   {

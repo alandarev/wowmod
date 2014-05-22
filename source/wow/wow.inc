@@ -583,8 +583,10 @@ new tmsql=0;  //queue
 #include "wow/wsg"
 #include "wow/bots"
 
+
 #include "wow/natives"
 #include "wow/ctf"
+#include "wow/bosses"
 
 public SetCurrentVersion(const String:version[])
 {

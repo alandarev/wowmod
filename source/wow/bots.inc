@@ -46,7 +46,9 @@ BotPreloaded(client)  {
   else
     if(CSGO)
     {
-      new avrglvl = GetAverageLevel();
+      new avrglvl = 30 + GetAverageLevel();
+      if(avrglvl > 80)
+        avrglvl = 80;
       if(55 > avrglvl)
         avrglvl = 55;
       wcSetStaticLevel(client, GetRandomInt(avrglvl-5,avrglvl+5));
@@ -131,19 +133,23 @@ BotTimer() {
 BotThink(client)  {
   if(!IsClientInGame(client) || !IsPlayerAlive(client) || !IsFakeClient(client))
     return;
-  switch(GetClass(client))  {
-    case 1: BotThinkWarrior(client);
-    case 2: BotThinkRogue(client);
-    case 3: BotThinkMage(client);
-    case 4: BotThinkPaladin(client);
-    case 5: BotThinkPriest(client);
-    case 6: BotThinkShaman(client);
-    case 7: BotThinkWarlock(client);
-    case 8: BotThinkDK(client);
-    case 9: BotThinkMonk(client);
+  if(g_boss[client]>=1)
+  {
+    BossThink(client);
   }
+  else
+    switch(GetClass(client))  {
+      case 1: BotThinkWarrior(client);
+      case 2: BotThinkRogue(client);
+      case 3: BotThinkMage(client);
+      case 4: BotThinkPaladin(client);
+      case 5: BotThinkPriest(client);
+      case 6: BotThinkShaman(client);
+      case 7: BotThinkWarlock(client);
+      case 8: BotThinkDK(client);
+      case 9: BotThinkMonk(client);
+    }
 }
-
 
 stock BotThinkWarrior(client) {
 

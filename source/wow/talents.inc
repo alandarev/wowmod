@@ -2543,16 +2543,22 @@ wcRunTalent_2_ShadowStep(client)
       new cdt = StringToInt(line);
       SetCdSpell(client,cdt,cd,0, "Shadowstep");
 
-
-      // invisibility
-      wcGetSpellInfo(race, vanishid, "alpha", line);
-      new alpha=StringToInt(line);
-      decl color[4];
-      for (new x=0;x<=2;x++)
-      color[x]=255;
-      color[3]=alpha;
-      SetClientColor(client,color);
-
+      if(CSGO)
+      {
+        SetMageInvis(client,true,false,false,false);
+        CreateTimer(duration,DestroyMageInvis,client);
+      }
+      else
+      {
+        // invisibility
+        wcGetSpellInfo(race, vanishid, "alpha", line);
+        new alpha=StringToInt(line);
+        decl color[4];
+        for (new x=0;x<=2;x++)
+        color[x]=255;
+        color[3]=alpha;
+        SetClientColor(client,color);
+      }
       //visual effect & sound
       SmokeEffect("@all", location, g_ef_smoke, 100.0, 10);
       EmitAmbientSound("wc/spells/shadowstep.wav", location);
@@ -6155,7 +6161,7 @@ wcRunTalent_6_Earthgrip(client,attacker)
   GetClientName(client,name,sizeof(name));
   GetClientName(attacker,name2,sizeof(name2));
   WCMessage(client,"earth grip client",client,name2,RoundToNearest(duration));
-  WCMessage(attacker,"earth grip attacer",attacker,name,RoundToNearest(duration));
+  WCMessage(attacker,"earth grip attacker",attacker,name,RoundToNearest(duration));
 }
 
 wcRunTalent_6_NaturesAvatar(client)

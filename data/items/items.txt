@@ -99556,7 +99556,7 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"0.85"
-"damage"	"29"
+"damage"	"22"
 "2hand"	"1"
 "spelldmg"	"0"
 }
@@ -99589,7 +99589,7 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"1.15"
-"damage"	"15"
+"damage"	"11"
 "spelldmg"	"0"
 }
 "25237"
@@ -99652,7 +99652,7 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"1.1"
-"damage"	"15"
+"damage"	"11"
 "spelldmg"	"0"
 }
 "25239"
@@ -99684,7 +99684,7 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"1.3"
-"damage"	"15"
+"damage"	"11"
 "spelldmg"	"0"
 }
 "25240"
@@ -99779,8 +99779,8 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
-"damage"	"23"
-"spelldmg"	"28"
+"damage"	"18"
+"spelldmg"	"22"
 }
 "25243"
 {
@@ -99842,7 +99842,7 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"1.05"
-"damage"	"15"
+"damage"	"11"
 "spelldmg"	"0"
 }
 "25245"
@@ -99874,9 +99874,9 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"0.9"
-"damage"	"29"
+"damage"	"22"
 "2hand"	"1"
-"spelldmg"	"23"
+"spelldmg"	"18"
 }
 "25246"
 {
@@ -100001,8 +100001,8 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
-"damage"	"23"
-"spelldmg"	"28"
+"damage"	"18"
+"spelldmg"	"22"
 }
 "25250"
 {
@@ -100033,8 +100033,8 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"1.1"
-"damage"	"15"
-"spelldmg"	"18"
+"damage"	"11"
+"spelldmg"	"13"
 }
 "25251"
 {
@@ -100191,8 +100191,8 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
-"damage"	"29"
-"spelldmg"	"28"
+"damage"	"18"
+"spelldmg"	"22"
 }
 "25256"
 {
@@ -100224,8 +100224,8 @@
 "resilence"	"0"
 "ws"	"0.95"
 "2hand"	"1"
-"spelldmg"	"28"
-"damage"  "29"
+"spelldmg"	"18"
+"damage"  "22"
 }
 "25257"
 {
@@ -100256,7 +100256,7 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"1.1"
-"damage"	"15"
+"damage"	"11"
 "spelldmg"	"0"
 }
 "25258"
@@ -100319,9 +100319,9 @@
 "acc"	"0"
 "resilence"	"0"
 "ws"	"0.95"
-"damage"	"29"
+"damage"	"22"
 "2hand"	"1"
-"spelldmg"	"23"
+"spelldmg"	"18"
 }
 "25260"
 {

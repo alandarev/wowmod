@@ -3365,5 +3365,17 @@ GetTargetFOV(client, target, Float:value=180.0, bool:HorozontalOnly=false)
   return false; //Then there is a solid object between
   return true; //must be able to see target
 }
-
+FaceTarget(client,target)
+{
+  decl Float:targeta[3],Float:location[3],Float:angle[3];
+  GetClientEyeAngles(client, angle);
+  GetClientEyeAngles(target, targeta);
+  angle[1]=angle[1]-targeta[1];
+  if(angle[1]<0.0)
+    angle[1]*=-1.0;
+  if(angle[1]>180.0)
+    angle[1] = 360.0-angle[1];
+  GetClientAbsOrigin(client,location);
+  TeleportEntity(client, location, angle, NULL_VECTOR);
+}
 

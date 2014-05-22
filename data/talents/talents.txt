@@ -2281,14 +2281,14 @@
           }
           "1"
           {
-            "increment"  "0.0750000"
+            "increment"  "0.10000"
             "name"  "Shatter"
             "max"  "2"
             "saveid"  "4"
           }
           "2"
           {
-            "increment"  "0.150000"
+            "increment"  "0.20000"
             "name"  "Shatter"
             "max"  "2"
             "saveid"  "4"
@@ -2304,7 +2304,7 @@
               }
               "1"
               {
-              "increment"  "0.10"
+              "increment"  "0.15"
                 "cooldown" "0.1"
                 "name"  "Improved Frost Bolt"
                 "max"  "3"
@@ -2312,7 +2312,7 @@
               }
               "2"
               {
-              "increment"  "0.20"
+              "increment"  "0.30"
                 "cooldown" "0.3"
                 "name"  "Improved Frost Bolt"
                 "max"  "3"
@@ -2320,7 +2320,7 @@
               }
               "3"
               {
-              "increment"  "0.30"
+              "increment"  "0.45"
                 "cooldown" "0.50"
                 "name"  "Improved Frost Bolt"
                 "max"  "3"
@@ -2387,14 +2387,14 @@
             {
               "event"  "player_cast"
               "active"  "1"
-              "cooldown"  "30.000000"
+              "cooldown"  "20.000000"
               "cooldowntype"  "8"
               "duration"  "15.000000"
               "mana"  "40"
               "manainc"  "2.000000"
               "slowmulti"  "0.800000"
               "slowtime"   "1.0"
-              "multi"  "0.750000"
+              "multi"  "1.250000"
               "name"  "Ice Barrier"
               "max"  "1"
               "saveid"  "7"
@@ -2483,12 +2483,12 @@
             "cooldown"  "25.000000"
             "cooldowntype"  "14"
             "duration"  "4.000000"
-            "mana"  "125"
-            "manainc"  "1.250000"
-            "slowmulti"  "0.800000"
-            "slowtime"   "3.0"
-            "multi" "0.10"
-            "base"  "5"
+            "mana"  "60"
+            "manainc"  "0.750000"
+            "slowmulti"  "0.6500000"
+            "slowtime"   "1.0"
+            "multi" "0.15"
+            "base"  "7"
             "period" "0.5"
             "distance"  "1500"
           }
@@ -2699,7 +2699,7 @@
             }
             "1"
             {
-              "increment"  "0.175"
+              "increment"  "0.25"
               "cooldown"  "0.250000"
               "name"  "Improved Fireball"
               "max"  "2"
@@ -2707,7 +2707,7 @@
             }
             "2"
             {
-              "increment"  "0.350"
+              "increment"  "0.50"
               "cooldown"  "0.500000"
               "name"  "Improved Fireball"
               "max"  "2"
@@ -2780,21 +2780,21 @@
           }
           "1"
           {
-            "increment"  "0.080000"
+            "increment"  "0.120000"
               "name"  "Improved Scorch"
               "max"  "3"
               "saveid"  "c"
           }
           "2"
           {
-            "increment"  "0.170000"
+            "increment"  "0.240000"
               "name"  "Improved Scorch"
               "max"  "3"
               "saveid"  "c"
           }
           "3"
           {
-            "increment"  "0.25000"
+            "increment"  "0.36000"
               "name"  "Improved Scorch"
               "max"  "3"
               "saveid"  "c"
@@ -3017,7 +3017,7 @@
             {
               "cost"  "2"
               "base"  "9"
-              "multi" "0.35"
+              "multi" "0.28"
               "name"  "Arcane Barrage"
               "max"  "1"
               "saveid"  "h"
