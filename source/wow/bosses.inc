@@ -23,7 +23,7 @@ BossThink(client)
   SetConVarInt(bot_zombie, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
   SetClientSpeed(client,0.0); //Freezing it in place to allow free shooting, bot_zombie isn't enough as the bot moves around
   
-  switch(g_boss[client]) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
+  switch(GetBoss(client)) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
   {
     case 70: BotThink70(client); //Lich King
   }

@@ -133,7 +133,7 @@ BotTimer() {
 BotThink(client)  {
   if(!IsClientInGame(client) || !IsPlayerAlive(client) || !IsFakeClient(client))
     return;
-  if(g_boss[client]>=1)
+  if(GetBoss(client)>=1)
   {
     BossThink(client);
   }
