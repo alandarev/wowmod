@@ -144,9 +144,9 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   new targets[MAXPLAYERS];
   new amount;
   if(team==2)
-    amount=GetNearClients("@ct",location,targets,distance);
+    amount=GetNearClients("@ct",location,targets,float(aoe));
   if(team==3)
-    amount=GetNearClients("@t",location,targets,distance);
+    amount=GetNearClients("@t",location,targets,float(aoe));
   
   new Float:hit = 1.0 + (float(amount) * 0.05);
   
