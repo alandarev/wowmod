@@ -3378,4 +3378,17 @@ FaceTarget(client,target)
   GetClientAbsOrigin(client,location);
   TeleportEntity(client, location, angle, NULL_VECTOR);
 }
-
+DisplayCenterTextToAll(client, String:message[])
+{
+	new String:nameBuf[MAX_NAME_LENGTH];
+	
+	for (new i = 1; i <= MaxClients; i++)
+	{
+		if (!IsClientInGame(i) || IsFakeClient(i))
+		{
+			continue;
+		}
+		FormatActivitySource(client, i, nameBuf, sizeof(nameBuf));
+		PrintCenterText(i, "%s: %s", nameBuf, message);
+	}
+}

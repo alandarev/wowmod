@@ -147,6 +147,8 @@ new Handle:T2SQL; // for secondary threaded queries
 new Handle:SSQL; // for service threaded queries
 new Handle:siteSQL; //access to site database
 new Handle:publicSQL; //Access to public databases
+new Handle:bot_knives_only;
+new Handle:bot_zombie;
 
 new g_iTargetOnly[64]; // For !target
 
