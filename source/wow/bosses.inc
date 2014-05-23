@@ -141,7 +141,7 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   
   team=GetClientTeam(client);
 
-
+  new targets[MAXPLAYERS];
   new amount;
   if(team==2)
     amount=GetNearClients("@ct",location,targets,distance);
