@@ -72,8 +72,8 @@ public Action:BossDefile(Handle:timer, any:client)
 
   new dmg = RoundToNearest(1.0 + GetSpellDmg(client,0.1) * GlobalDifficulty);
   new aoe = 250;
-  //Create the hellfire like (different) effect
-  new effid=CreateEffectData(client,aoe,dmg,g_iDefileTicks,team,_:location[0],_:location[1],_:location[2],g_RoundCount);
+  
+  new effid=CreateEffectData(client,aoe,dmg,g_iDefileTicks,team,_:location[0],_:location[1],_:location[2],g_RoundCount,0);
   CreateTimer(g_fDefileDelay, BossDefileAction, effid, TIMER_REPEAT);
 
 
