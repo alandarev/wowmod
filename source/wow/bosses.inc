@@ -5,8 +5,8 @@
 
 //Any and all global variables within this file should be set here for easy cleanings
 new Float:GlobalDifficulty; //General difficulty
-new g_iStartSize[65]; //The starting size for Defile's effect, necessary to know how large Defile should be.
-new g_iEndSize[65]; //The ending size for Defile's effect, necessary to know how large Defile should be.
+//new g_iStartSize[65]; //The starting size for Defile's effect, necessary to know how large Defile should be.
+//new g_iEndSize[65]; //The ending size for Defile's effect, necessary to know how large Defile should be.
 new g_iBaseSpread[65];
 
 //Boss spell settings for easier modifying, no config file yet.
@@ -147,22 +147,24 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   if(team==3)
     amount=GetNearClients("@t",location,targets,float(aoe));
   
-  new Float:hit = 2.0 + (float(amount) * 0.05);
+  new Float:hit = 1.0 + (float(amount) * 0.05);
   
-  if(1 > g_iStartSize[client])
+  /*if(1 > g_iStartSize[client])
     g_iStartSize[client]=15;
   if(1 > g_iEndSize[client])
-    g_iEndSize[client]=10;
+    g_iEndSize[client]=10;*/
+  if(1 > g_iBaseSpread[client])
+    g_iBaseSpread[client]=105;
     
-  g_iEndSize[client]=RoundToNearest(float(g_iEndSize[client])*hit);
-  g_iStartSize[client]=RoundToNearest(float(g_iStartSize[client])*hit);
+  //g_iEndSize[client]=RoundToNearest(float(g_iEndSize[client])*hit);
+  //g_iStartSize[client]=RoundToNearest(float(g_iStartSize[client])*hit);
   g_iBaseSpread[client]=RoundToNearest(float(g_iBaseSpread[client])*hit);
   
-  new String:startsize[255];
+  /*new String:startsize[255];
   IntToString(g_iStartSize[client],startsize,sizeof(startsize));
   
   new String:endsize[255];
-  IntToString(g_iEndSize[client],endsize,sizeof(endsize));
+  IntToString(g_iEndSize[client],endsize,sizeof(endsize));*/
   
   new String:basespread[255];
   IntToString(g_iBaseSpread[client],basespread,sizeof(basespread));
