@@ -214,7 +214,8 @@ public Float:wcCalculateStats(client)
     AddItemBonuses(client, item, effect, rating);
   }
   if(IsFakeClient(client))
-  BotCalculateStats(client);
+    if(0>=GetBoss(client))
+      BotCalculateStats(client);
   //now add rating from base stats of person
   rating+= float(GetStr(client)) * RATING_STR;
   rating+= float(GetAgi(client)) * RATING_AGI;
@@ -3367,14 +3368,12 @@ GetTargetFOV(client, target, Float:value=180.0, bool:HorozontalOnly=false)
 }
 FaceTarget(client,target)
 {
-  decl Float:targeta[3],Float:location[3],Float:angle[3];
-  GetClientEyeAngles(client, angle);
-  GetClientEyeAngles(target, targeta);
-  angle[1]=angle[1]-targeta[1];
-  if(angle[1]<0.0)
-    angle[1]*=-1.0;
-  if(angle[1]>180.0)
-    angle[1] = 360.0-angle[1];
+  decl Float:location[3],Float:angle[3];
+  GetClientEyeAngles(target, angle);
+  if(angle[1]>0.0)
+    angle[1]-=180.0;
+  if(0.0>=angle[1])
+    angle[1]+=180.0;
   GetClientAbsOrigin(client,location);
   TeleportEntity(client, location, angle, NULL_VECTOR);
 }
@@ -3391,4 +3390,9 @@ DisplayCenterTextToAll(client, String:message[])
 		FormatActivitySource(client, i, nameBuf, sizeof(nameBuf));
 		PrintCenterText(i, "%s: %s", nameBuf, message);
 	}
+}
+ReverseTeam(team)
+{
+  team = (team-1) % 2 + 2;
+  return team;
 }

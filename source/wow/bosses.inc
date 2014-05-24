@@ -131,16 +131,9 @@ public Action:BossDefileAction(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
-  
-
-
-
   wcSpellAoeDamageLocation(client, client, location, dmg, aoe, team, "Defile");
-
-  
   
   team=GetClientTeam(client);
-
   new targets[MAXPLAYERS];
   new amount;
   if(team==2)
@@ -167,10 +160,7 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   dmg = RoundToNearest(float(dmg)*hit);
   aoe = RoundToNearest(float(aoe)*hit);
 
-
-  team = (team-1) % 2 + 2;
-  
-  
+  team = ReverseTeam(team);
 
   location[2]+=15.0;
   new sprite = CreateEntityByName("env_smokestack");
