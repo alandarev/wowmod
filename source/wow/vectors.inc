@@ -3375,6 +3375,7 @@ FaceTarget(client,target)
     anglec[1]-=180.0;
   if(0.0>=angle[1])
     anglec[1]+=180.0;
+  anglec*=-1.0;
   GetClientAbsOrigin(client,location);
   TeleportEntity(client, location, anglec, NULL_VECTOR);
 }
