@@ -21,37 +21,21 @@ BossThink(client)
     wcSetClass(client, 4); //Bot's class set to Paladin to avoid any passive spells from being cast
   if(GetLevel(client)!=85)
     wcSetStaticLevel(client, 85);
-  new Handle:botstop=FindConVar("bot_freeze"); //
-  SetConVarInt(botstop, 1); //Set to stop to avoid bots from turning around so people who need to stand behind can stand behind
+  new Handle:botstop=FindConVar("bot_freeze");
+  SetConVarInt(botstop, 1);
   CloseHandle(botstop);
+  new Handle:botzombie=FindConVar("bot_zombie");
+  SetConVarInt(botzombie, 1);
+  CloseHandle(botzombie);
   switch(GetBoss(client)) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
   {
     case 70: BotThink70(client); //Lich King
-  }
-  if(g_iTopThreat[0]>0) //Checks if there's a #1 on threat list
-  {
-    new target = GetAimTarget(g_iTopThreat[0],25.0, false, false, 0.0, true); //Checks if #1 threat list is looking at the boss
-    PrintToChatAll("topthreat is %i",g_iTopThreat[0]);
-    PrintToChatAll("target is %i",target);
-    if(target==client)
-    {
-      decl Float:location[3],Float:angle[3],Float:anglec[3];
-      GetClientEyeAngles(target, angle);
-      GetClientEyeAngles(client, anglec);
-      if(angle[1]>0.0)
-        angle[1]-=180.0;
-      else
-        angle[1]+=180.0;
-      anglec[1]=angle[1];
-      GetClientAbsOrigin(client,location);
-      TeleportEntity(client, location, anglec, NULL_VECTOR); //Sets the boss's eyeangles so that it's facing towards the #1 threat target
-    }
   }
 }
 
 stock BotThink70(client) 
 {
-  
+  PrintToChatAll("Got to botthink70");
   new targets[MAXPLAYERS];
   new Float:location[3];
   GetClientAbsOrigin(client,location);
