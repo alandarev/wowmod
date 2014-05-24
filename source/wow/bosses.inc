@@ -132,8 +132,9 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   }
   if(ticks <= 0)
   {
-    g_iEndSize[client]=0;
-    g_iStartSize[client]=0;
+    //g_iEndSize[client]=0;
+    //g_iStartSize[client]=0;
+    g_iBaseSpread[client]=0;
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
