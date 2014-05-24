@@ -15,13 +15,17 @@ new g_iDefileTicks = 8; //How many times Defile ticks, duration of defile is del
 BossThink(client)
 {
   GlobalDifficulty = float(PlayersInTeams(true)) * 0.05;
-  if(0.0>GlobalDifficulty)
+  if(0.0>=GlobalDifficulty)
     GlobalDifficulty = 0.1;
   if(GetClass(client)!=4)
     wcSetClass(client, 4); //Bot's class set to Paladin to avoid any passive spells from being cast
-  SetConVarInt(bot_knives_only, 1); //Bots only use knives to avoid the gun from blocking view of their face
-  SetConVarInt(bot_zombie, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
-  SetClientSpeed(client,0.0); //Freezing it in place to allow free shooting, bot_zombie isn't enough as the bot moves around
+  if(GetLevel(client)!=85)
+    wcSetStaticLevel(client, 85);
+  new Handle:knivesonly=FindConVar("bot_knives_only");
+  new Handle:botzombie=FindConVar("bot_zombie");
+  SetConVarInt(knivesonly, 1); //Bots only use knives to avoid the gun from blocking view of their face
+  SetConVarInt(botzombie, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
+  SetClientSpeed(client,0.0); //Freezing it in place to allow free shooting, bot_zombie isn't enough as the bot moves around when it collides with an entity
   
   switch(GetBoss(client)) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
   {
