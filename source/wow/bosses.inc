@@ -21,13 +21,9 @@ BossThink(client)
     wcSetClass(client, 4); //Bot's class set to Paladin to avoid any passive spells from being cast
   if(GetLevel(client)!=85)
     wcSetStaticLevel(client, 85);
-  //new Handle:knivesonly=FindConVar("bot_knives_only");
-  new Handle:botzombie=FindConVar("bot_zombie");
-  //SetConVarInt(knivesonly, 1); //Bots only use knives to avoid the gun from blocking view of their face
-  SetConVarInt(botzombie, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
-  //CloseHandle(knivesonly);
-  CloseHandle(botzombie);
-  //ServerCommand("bot_zombie 1;bot_knives_only 1");
+  new Handle:botstop=FindConVar("bot_stop");
+  SetConVarInt(botstop, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
+  CloseHandle(botstop);
   SetClientSpeed(client,0.0); //Freezing it in place to allow free shooting, bot_zombie isn't enough as the bot moves around when it collides with an entity
   switch(GetBoss(client)) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
   {
@@ -36,6 +32,8 @@ BossThink(client)
   if(g_iTopThreat[0]>0) //Checks if there's a #1 on threat list
   {
     new target = GetAimTarget(g_iTopThreat[0],25.0, false, false, 0.0, true); //Checks if #1 threat list is looking at the boss
+    PrintToChatAll("topthreat is %i",g_iTopThreat[0]);
+    PrintToChatAll("target is %i",target);
     if(target==client)
     {
       decl Float:location[3],Float:angle[3],Float:anglec[3];
@@ -43,7 +41,7 @@ BossThink(client)
       GetClientEyeAngles(client, anglec);
       if(angle[1]>0.0)
         angle[1]-=180.0;
-      if(0.0>=angle[1])
+      else
         angle[1]+=180.0;
       anglec[1]=angle[1];
       GetClientAbsOrigin(client,location);
