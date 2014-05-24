@@ -3368,14 +3368,15 @@ GetTargetFOV(client, target, Float:value=180.0, bool:HorozontalOnly=false)
 }
 FaceTarget(client,target)
 {
-  decl Float:location[3],Float:angle[3];
+  decl Float:location[3],Float:angle[3],Float:anglec[3];
   GetClientEyeAngles(target, angle);
+  GetClientEyeAngles(client, anglec);
   if(angle[1]>0.0)
-    angle[1]-=180.0;
+    anglec[1]-=180.0;
   if(0.0>=angle[1])
-    angle[1]+=180.0;
+    anglec[1]+=180.0;
   GetClientAbsOrigin(client,location);
-  TeleportEntity(client, location, angle, NULL_VECTOR);
+  TeleportEntity(client, location, anglec, NULL_VECTOR);
 }
 DisplayCenterTextToAll(client, String:message[])
 {
