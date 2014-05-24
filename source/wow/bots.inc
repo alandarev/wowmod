@@ -49,8 +49,8 @@ BotPreloaded(client)  {
       new avrglvl = 30 + GetAverageLevel();
       if(avrglvl > 80)
         avrglvl = 80;
-      if(55 > avrglvl)
-        avrglvl = 55;
+      if(65 > avrglvl)
+        avrglvl = 65;
       wcSetStaticLevel(client, GetRandomInt(avrglvl-5,avrglvl+5));
     }
     else

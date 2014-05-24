@@ -23,16 +23,18 @@ BossThink(client)
     wcSetStaticLevel(client, 85);
   new Handle:knivesonly=FindConVar("bot_knives_only");
   new Handle:botzombie=FindConVar("bot_zombie");
-  SetConVarBool(knivesonly, true); //Bots only use knives to avoid the gun from blocking view of their face
-  SetConVarBool(botzombie, true); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
+  SetConVarInt(knivesonly, 1); //Bots only use knives to avoid the gun from blocking view of their face
+  SetConVarInt(botzombie, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
+  CloseHandle(knivesonly);
+  CloseHandle(botzombie);
   SetClientSpeed(client,0.0); //Freezing it in place to allow free shooting, bot_zombie isn't enough as the bot moves around when it collides with an entity
   switch(GetBoss(client)) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
   {
     case 70: BotThink70(client); //Lich King
   }
-  if(g_iTopThreat[0]>0)
+  if(g_iTopThreat[0]>0) //Checks if there's a #1 on threat list
   {
-    new target = GetAimTarget(g_iTopThreat[0],25.0, false, false, 0.0, true);
+    new target = GetAimTarget(g_iTopThreat[0],25.0, false, false, 0.0, true); //Checks if #1 threat list is looking at the boss
     if(target==client)
     {
       decl Float:location[3],Float:angle[3],Float:anglec[3];
@@ -44,7 +46,7 @@ BossThink(client)
         angle[1]+=180.0;
       anglec[1]=angle[1];
       GetClientAbsOrigin(client,location);
-      TeleportEntity(client, location, anglec, NULL_VECTOR);
+      TeleportEntity(client, location, anglec, NULL_VECTOR); //Sets the boss's eyeangles so that it's facing towards the #1 threat target
     }
   }
 }
