@@ -667,6 +667,8 @@ wcResetTalents(client, spec, bool:careful=false)
 
 public CheckRequirements(client, race, tree, tier, talent)
 {
+  if(client==0)
+    return false;
   if(!IsClientInGame(client))
     return false;
   if(IsZombie(client))
