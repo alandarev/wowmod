@@ -7,6 +7,7 @@
 new Float:GlobalDifficulty; //General difficulty
 new g_iStartSize[65]; //The starting size for Defile's effect, necessary to know how large Defile should be.
 new g_iEndSize[65]; //The ending size for Defile's effect, necessary to know how large Defile should be.
+new g_iBaseSpread[65];
 
 //Boss spell settings for easier modifying, no config file yet.
 new Float:g_fDefileDelay = 1.25; //The time between each Defile tick
@@ -74,6 +75,8 @@ public Action:BossDefile(Handle:timer, any:client)
   GetClientAbsOrigin(client,location);
 
   new dmg = RoundToNearest(1.0 + GetSpellDmg(client,0.1) * GlobalDifficulty);
+  if(5>dmg)
+    dmg = 5;
   new aoe = 250;
   
   new effid=CreateEffectData(client,aoe,dmg,g_iDefileTicks,team,_:location[0],_:location[1],_:location[2],g_RoundCount,0);
@@ -153,12 +156,16 @@ public Action:BossDefileAction(Handle:timer, any:effid)
     
   g_iEndSize[client]=RoundToNearest(float(g_iEndSize[client])*hit);
   g_iStartSize[client]=RoundToNearest(float(g_iStartSize[client])*hit);
+  g_iBaseSpread[client]=RoundToNearest(float(g_iBaseSpread[client])*hit);
   
   new String:startsize[255];
   IntToString(g_iStartSize[client],startsize,sizeof(startsize));
   
   new String:endsize[255];
   IntToString(g_iEndSize[client],endsize,sizeof(endsize));
+  
+  new String:basespread[255];
+  IntToString(g_iBaseSpread[client],basespread,sizeof(basespread));
   
   dmg = RoundToNearest(float(dmg)*hit);
   aoe = RoundToNearest(float(aoe)*hit);
@@ -168,7 +175,7 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   location[2]+=15.0;
   new sprite = CreateEntityByName("env_smokestack");
   if (IsValidEntity(sprite)) {
-    DispatchKeyValue(sprite, "basespread", "105");
+    DispatchKeyValue(sprite, "basespread", "basespread");
     DispatchKeyValue(sprite, "spreadspeed", "12");
     DispatchKeyValue(sprite, "speed", "1");
     DispatchKeyValue(sprite, "startsize", startsize);
