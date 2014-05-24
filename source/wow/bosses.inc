@@ -27,6 +27,23 @@ BossThink(client)
   {
     case 70: BotThink70(client); //Lich King
   }
+  if(g_iTopThreat[0]>0)
+  {
+    new target = GetAimTarget(g_iTopThreat[0],25.0, false, false, 0.0, true);
+    if(target==client)
+    {
+      decl Float:location[3],Float:angle[3],Float:anglec[3];
+      GetClientEyeAngles(target, angle);
+      GetClientEyeAngles(client, anglec);
+      if(angle[1]>0.0)
+        angle[1]-=180.0;
+      if(0.0>=angle[1])
+        angle[1]+=180.0;
+      anglec[1]=angle[1];
+      GetClientAbsOrigin(client,location);
+      TeleportEntity(client, location, anglec, NULL_VECTOR);
+    }
+  }
 }
 
 stock BotThink70(client) 

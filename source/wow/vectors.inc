@@ -2894,7 +2894,7 @@ stock bool:IsClearPath(Float:loc[3],Float:loc2[3],target=-1)
   return true;
 }
 
-stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false, Float:MAXDIST=0.0)
+stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false, Float:MAXDIST=0.0, bool:bossPriority=false)
 {
   decl Float:loc[3],Float:view[3];
   if(smartHeal && CSGO)
@@ -2983,6 +2983,9 @@ stock GetAimTarget(client,Float:value, bool:smartHeal=false, bool:ignoreHP=false
       angelrec[1]=dif[1];
       Closest=x;
     }
+    if(bossPriority)
+      if(GetBoss(x)>0)
+        Closest=x;
   }
 
   return Closest;
@@ -3064,7 +3067,6 @@ GetHealPriority(client, bool:ignoreHP=false) {
   }
   return prio;
 }
-
 
 ResetFloatArrays(client)  {
   for(new i=0; i<USERS_FLOAT_0; i++)
@@ -3365,19 +3367,6 @@ GetTargetFOV(client, target, Float:value=180.0, bool:HorozontalOnly=false)
   if(rayDistance < (targetDistance-5.0))
   return false; //Then there is a solid object between
   return true; //must be able to see target
-}
-FaceTarget(client,target)
-{
-  decl Float:location[3],Float:angle[3],Float:anglec[3];
-  GetClientEyeAngles(target, angle);
-  GetClientEyeAngles(client, anglec);
-  if(angle[1]>0.0)
-    anglec[1]-=180.0;
-  if(0.0>=angle[1])
-    anglec[1]+=180.0;
-  anglec[1]*=-1.0;
-  GetClientAbsOrigin(client,location);
-  TeleportEntity(client, location, anglec, NULL_VECTOR);
 }
 DisplayCenterTextToAll(client, String:message[])
 {
