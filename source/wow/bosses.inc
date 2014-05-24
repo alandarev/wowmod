@@ -148,7 +148,7 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   if(team==3)
     amount=GetNearClients("@t",location,targets,float(aoe));
   
-  new Float:hit = 1.0 + (float(amount) * 0.05);
+  new Float:hit = 1.3 + (float(amount) * 0.05);
   
   /*if(1 > g_iStartSize[client])
     g_iStartSize[client]=15;
@@ -181,8 +181,8 @@ public Action:BossDefileAction(Handle:timer, any:effid)
     DispatchKeyValue(sprite, "basespread", "basespread");
     DispatchKeyValue(sprite, "spreadspeed", "12");
     DispatchKeyValue(sprite, "speed", "1");
-    DispatchKeyValue(sprite, "startsize", startsize);
-    DispatchKeyValue(sprite, "endsize", endsize);
+    DispatchKeyValue(sprite, "15", startsize);
+    DispatchKeyValue(sprite, "10", endsize);
     DispatchKeyValue(sprite, "rate", "75");
     DispatchKeyValue(sprite, "jetlength", "20");
     DispatchKeyValue(sprite, "rendercolor", "255 40 6");
