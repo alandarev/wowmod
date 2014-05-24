@@ -170,15 +170,15 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   new String:basespread[255];
   IntToString(g_iBaseSpread[client],basespread,sizeof(basespread));
   
-  dmg = RoundToNearest(float(dmg)*hit);
-  aoe = RoundToNearest(float(aoe)*hit);
-
+  effectsdata[effid][3] = RoundToNearest(float(dmg)*hit);
+  effectsdata[effid][2] = RoundToNearest(float(aoe)*hit);
+  
   team = ReverseTeam(team);
 
   location[2]+=15.0;
   new sprite = CreateEntityByName("env_smokestack");
   if (IsValidEntity(sprite)) {
-    DispatchKeyValue(sprite, "basespread", "basespread");
+    DispatchKeyValue(sprite, "basespread", basespread);
     DispatchKeyValue(sprite, "spreadspeed", "12");
     DispatchKeyValue(sprite, "speed", "1");
     DispatchKeyValue(sprite, "startsize", "15");
