@@ -35,7 +35,6 @@ BossThink(client)
 
 stock BotThink70(client) 
 {
-  PrintToChatAll("Got to botthink70");
   new targets[MAXPLAYERS];
   new Float:location[3];
   GetClientAbsOrigin(client,location);
@@ -145,7 +144,7 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   if(team==3)
     amount=GetNearClients("@t",location,targets,float(aoe));
   
-  new Float:hit = 1.0 + (float(amount) * 0.05);
+  new Float:hit = 2.0 + (float(amount) * 0.05);
   
   if(1 > g_iStartSize[client])
     g_iStartSize[client]=15;
