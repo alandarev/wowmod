@@ -148,7 +148,7 @@ public Action:BossDefileAction(Handle:timer, any:effid)
   if(team==3)
     amount=GetNearClients("@t",location,targets,float(aoe));
   
-  new Float:hit = 1.3 + (float(amount) * 0.05);
+  new Float:hit = 1.1 + (float(amount) * 0.05);
   
   /*if(1 > g_iStartSize[client])
     g_iStartSize[client]=15;

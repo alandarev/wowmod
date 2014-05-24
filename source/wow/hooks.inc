@@ -2195,7 +2195,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       if(wspeed < 1.0)
       wspeed = 1.0;
       if(CSGO)
-        damage=RoundToNearest((float(damage)/1.8+float(damage)/150*GetDamage(attacker)) / wspeed);   //Converting to mod damage from console damage.
+        damage=RoundToNearest((float(damage)/1.8+float(damage)/100*GetDamage(attacker)) / wspeed);   //Converting to mod damage from console damage.
       else
         damage=RoundToNearest((float(damage)/2.1+float(damage)/200*GetDamage(attacker)) / wspeed);   //Converting to mod damage from console damage.
       if(GetEventInt(event,"hitgroup")==1)

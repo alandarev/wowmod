@@ -37,9 +37,9 @@ new bool:g_AreWeSpawningTreasure = false;
 new g_TreasureMenuOccupiedByClient=0;
 new Handle:hTreasureSpawnMenu=INVALID_HANDLE;
 #define DB_VERSION 30
-#define VERSION 5.21
-#define STR_VERSION "5.21"
-#define WIKI_VERSION "5.21" //should not contain spaces or any special characters
+#define VERSION 5.22
+#define STR_VERSION "5.22"
+#define WIKI_VERSION "5.22" //should not contain spaces or any special characters
 
 
 #include <sourcemod>
