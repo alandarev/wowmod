@@ -27,7 +27,7 @@ BossThink(client)
   SetConVarInt(botzombie, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
   //CloseHandle(knivesonly);
   CloseHandle(botzombie);
-  ServerCommand("bot_zombie 1;bot_knives_only 1");
+  //ServerCommand("bot_zombie 1;bot_knives_only 1");
   SetClientSpeed(client,0.0); //Freezing it in place to allow free shooting, bot_zombie isn't enough as the bot moves around when it collides with an entity
   switch(GetBoss(client)) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
   {
