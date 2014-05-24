@@ -181,8 +181,8 @@ public Action:BossDefileAction(Handle:timer, any:effid)
     DispatchKeyValue(sprite, "basespread", "basespread");
     DispatchKeyValue(sprite, "spreadspeed", "12");
     DispatchKeyValue(sprite, "speed", "1");
-    DispatchKeyValue(sprite, "startsize", 15);
-    DispatchKeyValue(sprite, "endsize", 10);
+    DispatchKeyValue(sprite, "startsize", "15");
+    DispatchKeyValue(sprite, "endsize", "10");
     DispatchKeyValue(sprite, "rate", "75");
     DispatchKeyValue(sprite, "jetlength", "20");
     DispatchKeyValue(sprite, "rendercolor", "255 40 6");
