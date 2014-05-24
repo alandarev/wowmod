@@ -66,7 +66,6 @@ public RegAdminCommands()
 
   RegConsoleCmd("sm_threat", ThreatCommand, "Triggers Threat Settings");
   RegAdminCmd("wc_setthreat",AdminCmd_Threat, ADMFLAG_CUSTOM6);
-  RegAdminCmd("wc_facetarget",AdminCmd_FaceTarget, ADMFLAG_CUSTOM6);
   
   RegAdminCmd("sm_totem",AdminCmd_Totem, ADMFLAG_CUSTOM5);  //For testing
   RegAdminCmd("wc_generate_items", AdminCmd_GenerateItems, ADMFLAG_CUSTOM5, "Generates items to mysql");
@@ -1847,29 +1846,6 @@ public Action:AdminCmd_Threat(client,argc)   //Is used for experiments
   }
   else
     ReplyToCommand(client,"wc_setthreat <target> <amount>");
-  return Plugin_Handled;
-}
-
-public Action:AdminCmd_FaceTarget(client,argc)   //Testing
-{
-  if(argc==1)
-  {
-    new String:target[64];
-    GetCmdArg(1,target,64);
-    new clients[MAXPLAYERS];
-    new count=FindMatchingPlayers(target,clients);
-    for(new x=0;x<count;x++)
-    {
-      if(IsClientInGame(clients[x]))
-      {
-        FaceTarget(client,clients[x]);
-      }
-    }
-    if(count==0)
-      ReplyToCommand(client,"No targets match");
-  }
-  else
-    ReplyToCommand(client,"Syntax: wc_facetarget <target>");
   return Plugin_Handled;
 }
 
