@@ -3260,15 +3260,15 @@
   }
   "wc threat is on"
   {
-    "en"  "Threat Metter is ON"
+    "en"  "Threat meter is ON"
   }
   "wc threat is off"
   {
-    "en"  "Threat Metter is OFF"
+    "en"  "Threat meter is OFF"
   }
   "panel threat"
   {
-    "en"  "Threat Metter"
+    "en"  "Threat Meter"
   }
   "panel threat1"
   {
@@ -3276,11 +3276,11 @@
   }
   "threat disable"
   {
-    "en"  "Disable Threat Metter"
+    "en"  "Disable Threat meter"
   }
   "threat going off"
   {
-    "en"  "You have pressed to @lightgreendisable Threat Metter@default. To enable, go Account Page or type !threat"
+    "en"  "You have pressed to @lightgreendisable Threat meter@default. To enable, go Account Page or type !threat"
   }
   "threat spell"
   {

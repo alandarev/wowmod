@@ -21,10 +21,9 @@ BossThink(client)
     wcSetClass(client, 4); //Bot's class set to Paladin to avoid any passive spells from being cast
   if(GetLevel(client)!=85)
     wcSetStaticLevel(client, 85);
-  new Handle:botstop=FindConVar("bot_stop");
-  SetConVarInt(botstop, 1); //Set to zombie to avoid bots from turning around so people who need to stand behind can stand behind
+  new Handle:botstop=FindConVar("bot_freeze"); //
+  SetConVarInt(botstop, 1); //Set to stop to avoid bots from turning around so people who need to stand behind can stand behind
   CloseHandle(botstop);
-  SetClientSpeed(client,0.0); //Freezing it in place to allow free shooting, bot_zombie isn't enough as the bot moves around when it collides with an entity
   switch(GetBoss(client)) //The ID of the boss as shown in wcbossdrop.txt. If the client is boss 70, boss 70's code is ran etc.
   {
     case 70: BotThink70(client); //Lich King
