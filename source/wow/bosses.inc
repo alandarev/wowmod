@@ -72,11 +72,11 @@ stock BotThink71(client)
   new Float:gcd=GetCDSpell(client,1)-GetTickedTime();
   
   new Float:time1=GetCDSpell(client,2)-GetTickedTime();
-  if(0.0 >= time1 && 0.0 >= gcd && amount >= 3) //Blade Dance, casts any time it is available and there are 3 or more targets nearby
+  if(0.0 >= time1 && 0.0 >= gcd && amount >= 1) //Blade Dance, casts any time it is available and there are 3 or more targets nearby
     CastBladeDance(client,2);
     
   new Float:time2=GetCDSpell(client,3)-GetTickedTime();
-  if(4.5 >= time1 && 0.0 >= gcd && time2 >= 0.0 && (GetThreat(g_iAggroTable[0])>=MIN_THREAT)) //Skewer, casts only if Blade Dance's cooldown is under 4.5 seconds to make sure the tank has to run away before the warning or they die
+  if(3.5 >= time1 && time1 >= 0.0 && 0.0 >= gcd && time2 >= 0.0 && (GetThreat(g_iAggroTable[0])>=MIN_THREAT)) //Skewer, casts only if Blade Dance's cooldown is under 3.5 seconds to make sure the tank has to run away before the warning or they die
     CastSkewer(client,3);
   
   new Float:time3=GetCDSpell(client,4)-GetTickedTime();
