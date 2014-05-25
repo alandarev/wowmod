@@ -838,6 +838,9 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
         SetEntData(client, g_CollisionGroup, 2, 1, true);
         if(boss>0)
         {
+          GlobalDifficulty = float(PlayersInTeams(true)) * 0.05;
+          if(0.5 > GlobalDifficulty)
+            GlobalDifficulty = 0.5;
           decl String:key[6];
           IntToString(boss,key,sizeof(key));
           KvRewind(wcbossdrop);
