@@ -164,6 +164,7 @@ new g_ef_hydraspinalcord;
 new g_ef_particle_noisesphere;
 new g_ef_laserbeam;
 new g_HaloSprite;
+new Float:GlobalDifficulty = 0.5;
 
 //Shadow Word Death
 //new SWD_sprite;

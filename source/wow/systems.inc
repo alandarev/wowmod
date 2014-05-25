@@ -68,7 +68,7 @@ public Action:SaveWorld(Handle:timer, any:trash)
         if(IsClientInGame(x)) if(playerloaded[x]==1)
         {
           wcSavePlayerData(x);
-          WCMessage(x,"saving world",x);
+          //WCMessage(x,"saving world",x);
         }
     LogMessage("Saving World");
 

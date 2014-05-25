@@ -76,7 +76,7 @@ stock BotThink71(client)
     CastBladeDance(client,2);
     
   new Float:time2=GetCDSpell(client,3)-GetTickedTime();
-  if(4.5 >= time1 && 0.0 >= gcd && time2 >= 0.0 && (GetThreat(g_iAggroTable[0])>=MIN_THREAT || ignoreLimit)) //Skewer, casts only if Blade Dance's cooldown is under 4.5 seconds to make sure the tank has to run away before the warning or they die
+  if(4.5 >= time1 && 0.0 >= gcd && time2 >= 0.0 && (GetThreat(g_iAggroTable[0])>=MIN_THREAT)) //Skewer, casts only if Blade Dance's cooldown is under 4.5 seconds to make sure the tank has to run away before the warning or they die
     CastSkewer(client,3);
   
   new Float:time3=GetCDSpell(client,4)-GetTickedTime();
@@ -104,7 +104,8 @@ CastSeethingHate(client,spellid)
 {
   SetCdSpell(client, spellid, 6.0, spellid);
   SetCdSpell(client, 1, 1.0, 1);
-  CreateTimer(0.1, SeethingHate, client); //Displaycentertexttoall is within the SeethingHate code so it can tell the target's name
+  DisplayCenterTextToAll(client, "Seething Hate");
+  CreateTimer(0.1, SeethingHate, client);
 }
 
 
@@ -148,11 +149,8 @@ public Action:SeethingHate(Handle:timer, any:client)
   WCMessage(target,"seething hate target",target);
   new color[4]={255,0,0,120};
   FadeEffect(target,2,300,50,color);
-  color[4] = { 255, 0, 0, 255 };
+  color = {255, 0, 0, 255 };
   SetClientColor(target,color);
-  decl String:name[255];
-  GetClientName(target,name,sizeof(name));
-  DisplayCenterTextToAll(client, "Seething Hate on %s",name);
 }
 
 public Action:SeethingHateAction(Handle:timer, any:effid)
@@ -161,6 +159,7 @@ public Action:SeethingHateAction(Handle:timer, any:effid)
     return Plugin_Stop;
   new client = effectsdata[effid][1];
   new target = effectsdata[effid][2];
+  new round = effectsdata[effid][9];
   new color[4] = { 255, 255, 255, 255 };
   if(target>0)
     SetClientColor(target,color);
@@ -194,6 +193,7 @@ public Action:SeethingHateAction(Handle:timer, any:effid)
   location[2]+=40;
   VS_BeamRingPoint(location, 19.00, 20.00, g_ef_splodesprite, g_ef_splodesprite, 100, 300, 0.50, 60.00, 1.00, {255, 255, 255, 255}, 300, 0);
   VS_BeamRingPoint(location, 19.00, 50.00, g_ef_splodesprite, g_ef_splodesprite, 100, 300, 0.50, 60.00, 1.00, {255, 255, 255, 255}, 300, 0);
+  return Plugin_Stop;
 }
 
 public Action:Skewer(Handle:timer, any:client)
@@ -216,7 +216,8 @@ public Action:SkewerAction(Handle:timer, any:effid)
   new client = effectsdata[effid][1];
   new target = effectsdata[effid][2];
   new dmg = effectsdata[effid][3];
-
+  effectsdata[effid][4]-=1;
+  new round = effectsdata[effid][9];
   if (!IsClientInGame(client) || !IsClientInGame(target))
   {
     DeleteEffectData(effid);
@@ -229,7 +230,7 @@ public Action:SkewerAction(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
-  if(ticks <= 0)
+  if(effectsdata[effid][4] <= 0)
   {
     g_iSkewered[target]=0;
     SetClientSpeed(target,GetNormalSpeed(target));
