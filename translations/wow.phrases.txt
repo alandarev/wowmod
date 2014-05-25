@@ -10630,5 +10630,13 @@
   {
     "en"     "@att has cast @lightgreenArcane Barrage @defaultat You and has done @dmg damage"
   }
+  "blade dance victim"
+  {
+    "en"     "@greenAlizabal's Blade Dance @defaulthit you for @lightgreen@dmg @defaultdamage"
+  }
+  "seething hate target"
+  {
+    "en"  "@greenYou've been targeted by Alizabal's Seething Hate!"
+  }
 }
 

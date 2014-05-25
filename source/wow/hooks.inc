@@ -13,7 +13,7 @@ new g_vOffs_Punch = -1;
 new g_iOffs_NextPrimaryAttack = -1;
 new g_bShadowform[65];
 new bool:g_PlayerIsDead[MAXPLAYERS];
-
+new g_iSkewered[65];
 new wcClientSeal[65];
 //new wcClientSealP[65];
 //seal duration, heal modifier, heal modifier duration
@@ -843,23 +843,35 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
           KvRewind(wcbossdrop);
           KvJumpToKey(wcbossdrop,key);
           new armor=KvGetNum(wcbossdrop,"armor");
+          if(IsFakeClient(client))
+            armor = RoundToNearest(float(armor)*GlobalDifficulty);
           if(armor>0)
-          SetBonusArmor(client,float(armor));
+            SetBonusArmor(client,float(armor));
           new iTemp=KvGetNum(wcbossdrop,"sta");
+          if(IsFakeClient(client))
+            iTemp = RoundToNearest(float(iTemp)*GlobalDifficulty);
           if(iTemp>0)
-          SetBonusSta(client,iTemp);
+            SetBonusSta(client,iTemp);
           iTemp=KvGetNum(wcbossdrop,"str");
+          if(IsFakeClient(client))
+            iTemp = RoundToNearest(float(iTemp)*GlobalDifficulty);
           if(iTemp>0)
-          SetBonusStr(client,iTemp);
+            SetBonusStr(client,iTemp);
           iTemp=KvGetNum(wcbossdrop,"agi");
+          if(IsFakeClient(client))
+            iTemp = RoundToNearest(float(iTemp)*GlobalDifficulty);
           if(iTemp>0)
-          SetBonusAgi(client,iTemp);
+            SetBonusAgi(client,iTemp);
           iTemp=KvGetNum(wcbossdrop,"int");
+          if(IsFakeClient(client))
+            iTemp = RoundToNearest(float(iTemp)*GlobalDifficulty);
           if(iTemp>0)
-          SetBonusInt(client,iTemp);
+            SetBonusInt(client,iTemp);
           new Float:fTemp=KvGetFloat(wcbossdrop, "speed", 0.0);
-          if(fTemp>0.0)
-          wcClientsBonusStats[client][MOVESPEED]=fTemp;
+          if(IsFakeClient(client))
+            wcClientsBonusStats[client][MOVESPEED]=-1.50;
+          else if(fTemp>0.0)
+            wcClientsBonusStats[client][MOVESPEED]=fTemp;
           wcRecalculateStats(client);
         }
       }
@@ -1738,6 +1750,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   SetCombat(attacker, 8);
   SetCombat(victim,   8);
 
+  if(g_iSkewered[victim]>1)
+    damagemulti*=2.5;
+  
   if(CSGO) //CS:GO Weapon balancing
   {
     new wepp = GetEntDataEnt2(attacker, ACTIVEWEAPON);

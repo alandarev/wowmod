@@ -3436,7 +3436,7 @@
   "dropall_amount" "0"
 }
 
-   "70" //Lich King
+  "70" //Lich King
   {
   "armor" "1600"
   "sta"   "25000"
@@ -3444,7 +3444,7 @@
   "agi"   "50"
   "int" "1000" //Affects spell damage e.g Defile
   "speed" "0.2"
-  "dmg" "20"
+  "dmg" "50"
   "multi" "0"
   "targets" "1"
   "enrage_level" "0.35"
@@ -3458,6 +3458,30 @@
   "chance"  "0.70"
   "dropall" "0"
   "dropall_amount" "0"
-}
+  }
+  
+  "71" //Alizabal
+  {
+  "armor" "1600"
+  "sta"   "25000"
+  "str"   "500"
+  "agi"   "50"
+  "int" "1000"
+  "speed" "0.2"
+  "dmg" "50"
+  "multi" "0"
+  "targets" "1"
+  "enrage_level" "0.35"
+  "enrage_dmg" "65"
+  "enrage_multi" "0"
+  "enrage_targets" "1"
+  "xp"  "1500"
+  "totalxp" "5000"
+  "sets"  "1"
+  "amount"  "0"
+  "chance"  "0.0"
+  "dropall" "0"
+  "dropall_amount" "0"
+  }
 
 } //bosses before this bracket

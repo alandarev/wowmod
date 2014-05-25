@@ -106,7 +106,7 @@ hero class = 240
 
 */
 
-
+new Float:GlobalDifficulty = float(PlayersInTeams(true)) * 0.05;
 
 public GetPlayerID(client)
 {

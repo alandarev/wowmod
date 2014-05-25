@@ -6312,7 +6312,7 @@ public wcRunSpell_2_12(spellid,race,client) //Blind
   VS_BeamRingPoint(location, 5.00, 300.00, g_ef_scanner, g_ef_bluelight, 10, 30, 1.00, 50.00, 0.20, {255, 255, 255, 255}, 3, 0);
 }
 
-public wcRunSpell_2_13(spellid,race,client)
+public wcRunSpell_2_13(spellid,race,client) //Fan of Knives
 {
   {
     decl String:line[255];

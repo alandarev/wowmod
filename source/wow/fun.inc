@@ -572,10 +572,14 @@ BossDamage()   {
       CheckEnrageChange(i, enraged);
 
       new dmg = KvGetNum(wcbossdrop,"dmg", 0);
+      if(IsFakeClient(boss))
+        dmg = RoundToNearest(float(dmg)*GlobalDifficulty);
       new Float:multi = KvGetFloat(wcbossdrop, "multi", 0.0);
       new targets = KvGetNum(wcbossdrop,"targets",1);
       if(enraged)  {
         new tmp = KvGetNum(wcbossdrop,"enrage_dmg", 0);
+        if(IsFakeClient(boss))
+          tmp = RoundToNearest(float(tmp)*GlobalDifficulty);
         if(tmp>dmg)
         dmg=tmp;
         new Float:ftmp = KvGetFloat(wcbossdrop, "enrage_multi", 0.0);
