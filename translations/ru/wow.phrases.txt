@@ -2,7 +2,7 @@
 {
 	"Notify levelup"
 	{
-		"ru"		"Получено серебра: @green{1} @default, всего @green{2}@default, доступно @green{3} @defaultочка(ов) навыков."
+		"ru"		"123321Получено серебра: @green{1} @default, всего @green{2}@default, доступно @green{3} @defaultочка(ов) навыков."
 	}
 	"Give XP"
 	{
