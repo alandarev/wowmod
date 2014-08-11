@@ -1620,7 +1620,11 @@
   {
 	"ru"  "@lightgreenВы мертвы!"
   }
-  //Воин
+  
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ВОИН
+  // ==================================================================
   "whirlwind"
   {
 	"ru"  "Вы нанесли @green{2} @defaultурона игрокам @green{1}@default, использовав навык @lightgreenВихрь@default."
@@ -1737,8 +1741,26 @@
   {
     "ru"  "Вы применили @lightgreenОглушающий Удар @defaultна игрока @green{1} @defaultи заморозили его на @green{2} @defaultсек."
   }
+  "Shield Wall info"
+  {
+	"ru"  "Уменьшает получаемый урон на 50%%\nДлительность - 3 секунд, требуется щит."
+  }
+  "shield wall deac"
+  {
+	"ru"  "Время действия навыка @lightgreenГлухая оборона @defaultистекло."
+  }
+  "shield wall ac"
+  {
+	"ru"  "Навык @lightgreenГлухая оборона @defaultвключен на @green{1}@default сек."
+  }
+  "Spell Reflection info"
+  {
+	"ru"  "Дает вам 12%% шанс отразить заклинание противника, используя щит."
+  }
   
-  //Разбойник
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА РАЗБОЙНИК
+  // ==================================================================
   "Evade info"
   {
 	"ru"  "В течение 2 секунд у Вас будет шанс увернуться от физического урона."
@@ -1787,8 +1809,42 @@
   {
 	"ru"  "Вы активировали @lightgreenСпринт@default. Скорость передвижения увеличена на @green{1}@default%."
   }
+  "sinister strike"
+  {
+	"ru"  "Коварный Удар"
+  }
+  "Sinister Strike info"
+  {
+	"ru"  "Дает 20%% шанс увеличить урон (атакуя с ножа, шанс выше).\nУрон зависит от вашей ловкости.\nШанс зависит от вашей скорости атаки."
+  }
+  "Cheat Death info"
+  {
+	"ru"  "При получении смертельного попадания, вы единожды выживите,\n восстановив себе 15%% от максимального здоровья."
+  }
+  "cheated damage"
+  {
+	"ru"  "Обман Смерти"
+  }
+  "cheated damage victim"
+  {
+	"ru"  "Игрок @green{1} @defaultизбежал @green{2} @defaulурона с помощью @lightgreenОбмана Смерти@default."
+  }
+  "vanish cast"
+  {
+	"ru"  "Вы применили @lightgreenИсчезновение. @defaultВы будете прозрачны следующие @green{1} @defaultсек."
+  }
+  "vanish expired"
+  {
+	"ru"  "Время действия @lightgreenИсчезновения @defaultистекло."
+  }
+  "Vanish info"
+  {
+	"ru"  "Исчезновение делает вас прозрачным.\nПопадание по противнику сделает вас видимым."
+  }
   
-  //Паладин
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ПАЛАДИН
+  // ==================================================================
   "Spiritual Attunement info"
   {
 	"ru"  "Пассивная способность, увеличивающая ману Паладина.\nЗависит от силы и выносливости."
@@ -1797,330 +1853,313 @@
   {
 	"ru"		"@lightgreenДуховное Созвучие @defaultувеличивает Вашу ману на @lgreen{1}@default."
   }
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА МАГ
+  // ==================================================================
   "Mana Shield info"
   {
 	"ru"  "Понижает получаемый урон на 50%, но тратит ману при каждом попадании."
   }
   "mana shield deac"
   {
-	"ru"  "Вы @greenОтключили @lightgreenЩит Маны@default."
+	"ru"  "Вы @greenОтключили @lightgreenЩит заклинателя@default."
   }
   "mana shield ac"
   {
-	"ru"  "Вы @greenАктивировали @lightgreenЩит Маны@default с поглощением @green{1} @defaultурона."
+	"ru"  "Вы @greenАктивировали @lightgreenЩит заклинателя@default с поглощением @green{1} @defaultурона."
   }
   "mana shield"
   {
-	"ru"  "Щит Маны: {1}"
+	"ru"  "Щит заклинателя: {1}"
   }
   "mana shield end"
   {
-	"ru"  "Время действия Вашего @lightgreenЩита Маны @defaultистекло."
+	"ru"  "Время действия Вашего навыка @lightgreenЩит заклинателя @defaultистекло."
   }
-	"Shield Wall info"
+  "frostbolt caster"
   {
-		"ru"		"Уменьшает получаемый урон в 2 раза\nДлительность - 5 секунд, требует щит."
+	"ru"  "Вы применили @lightgreenЛедяную Стрелу @defaultна игрока @green@vic @defaultи нанесли ему @green@dmg @defaultурона с замедлением."
   }
-	"shield wall deac"
+  "frostbolt target"
   {
-		"ru"		"Время действия @lightgreenЩита Стеной @defaultистекло."
+	"ru"  "@green@att @defaultприменил @lightgreenЛедяную Стрелу @defaultна Вас и нанес Вам @green@dmg @defaultурона с замедлением."
   }
-	"shield wall ac"
+  "Frostbolt info"
   {
-		"ru"		"Щит Стена @lightgreenАктивирован @defaultна @lightgreen{1}@green сек!"
+	"ru"  "Наносит противнику урон и замедляет его на 3 секунды.\nУрон зависит от силы магии."
   }
-	"sinister strike"
+  "frostnova"
   {
-		"ru"		"Коварный Удар" //-
+	"ru"  "Вы применили @lightgreenКольцо Льда @defaultк @green{1} @default, нанесли @green{2} @defaultурона и заморозили противника."
   }
-	"Sinister Strike info"
+  "frostnova target"
   {
-		"ru"		"Дает 20% шанс увеличить урон.\nУрон зависит от вашей ловкости."
+	"ru"  "Игрок @green@att @defaultприменил @lightgreenКольцо Льда @default, нанес вам @green@dmg @defaultурона и заморозил вас."
   }
-	"Cheat Death info"
+  "Frost Nova info"
   {
-		"ru"		"Обман Смерти восстанавливает вам 15%% от вашего максимального здоровья"
+	"ru"  "Наносит урон игрокам вокруг и замораживает их на 3.5 секунды.\nУрон зависит от силы магии."
   }
-	"cheated damage"
+  "blinkwake"
   {
-		"ru"		"Обман Смерти" //-
-  }
-	"cheated damage victim"
-  {
-		"ru"		"Игрок @green{1} избежал урона @lightgreen{2}@green Вашего заклинания с помощью @defaultОбмана Смерти"
-  }
-	"reflected damage"
-  {
-		"ru"		"Отражение" //-
-  }
-	"reflected damage victim"
-  {
-		"ru"		"Игрок @green{1} @defaultотразил урон Вашего заклинания (@lightgreen{2}@default)"
-  }
-	"Spell Reflection info"
-  {
-		"ru"		"Дает вам 12% шанс отразить урон заклинания\nназад, используя щит"
-  }
-	"frostbolt caster"
-  {
-		"ru"		"Вы применили @lightgreenЛедяную Стрелу @defaultна игрока @vic и нанесли ему @dmg урона с замедлением"
-  }
-	"frostbolt target"
-  {
-		"ru"		"@att применил @lightgreenЛедяную Стрелу @defaultна Вас и нанес Вам @dmg урона с замедлением"
-  }
-	"Frostbolt info"
-  {
-		"ru"		"Наносит противнику урон и замедляет его\nна 3 сек. (урон зависит от Силы Магии)"
-  }
-	"frostnova"
-  {
-		"ru"		"Вы применили Кольцо Льда к игроку @green{1} @defaultи нанесли @lightgreen{2} @defaultурона."
-  }
-	"frostnova target"
-  {
-		"ru"		"Игрок @att применил @lightgreenКольцо Льда @defaultна Вас и нанес @dmg урона с заморозкой."
-  }
-    "blinkwake"
-  {
-      "ru"        "Выпущенный Вами Мигающий Свет @green{1} @default наносит @lightgreen{2} @default урона."
+    "ru"  "Выпущенный Вами @lightgreenМерцающий Свет @green{1} @defaultнаносит @green{2} @default урона."
   }
   "blinkwake target"
   {
-    "ru"        "Игрок @att выпустил @lightgreenМигающий свет @default на Вас и нанес @dmg урона."
+    "ru" "Игрок @green@att выпустил @lightgreenМерцающий Свет @defaultна Вас и нанес @green@dmg@default урона."
   }
-	"Frost Nova info"
+  "arcexpl"
   {
-		"ru"		"Наносит урон игрокам вокруг и замораживает\nих на 3.5 сек. (урон зависит от силы магии)"
+	"ru"  "Вы применили @lightgreenЧародейский Взрыв @defaultк @green{1}@default, нанеся @green{2} @defaultурона."
   }
-	"totem nova"
+  "arcexpl target"
   {
-		"ru"		"Тотем Кольцо Огня взорвался около @green{1}@default и нанес ему @lightgreen{2} @defaultурона."
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenЧародейский Взрыв@default, нанеся @green@dmg @defaultурона."
   }
-	"totem nova cast"
+  "Arcane Explosion info"
   {
-		"ru"		"Вы применили @greenТотем Кольцо Огня@default на @lightgreen{1} @defaultсекунд."
+	"ru"  "Наносит урон окружающим Вас врагам."
   }
-	"totem nova target"
+  "fireball caster"
   {
-		"ru"		"@lightgreenТотем Кольцо Огня @default игрока @att взорвался и нанес Вам @dmg урона"
+	"ru"  "Вы применили @lightgreenОгненый Шар @defaultк игроку @green@vic@default, нанеся @green@dmg@default урона."
   }
-	"Fire Nova Totem info"
+  "fireball target"
   {
-		"ru"		"Вызывает Тотем Кольцо Огня на 30 секунд.\nТотем взорвется рядом с целью, если не будет разрушен."
+	"ru"  "Игрок @green@att@default применил к Вам @lightgreenОгненный Шар@default, нанеся @green@dmg@default урона."
   }
-	"reincarnation"
+  "Fireball info"
   {
-		"ru"		"Вы были возрождены с помощью заклинания @greenРеинкарнация"
+	"ru"  "Наносит магический урон противнику.\nУрон зависит от силы магии"
   }
-	"Reincarnation info"
+  "scorch cast"
   {
-		"ru"		"Позволяет вам возродиться после смерти 1 раз за раунд.\nВероятность 40%."
+	"ru"  "Вы применили @lightgreenОжог @defaultк @green@vic @default, нанеся @green@dmg @defaultурона."
   }
-	"resurrect"
+  "Scorch info"
   {
-		"ru"		"Вы применили заклинание @lightgreenВоскрешение @greenк игроку @lightgreen{1}"
+	"ru"  "Дает Вашему оружию шанс нанести дополнительный урон.\nзависящий от Силы Магии."
   }
-	"resurrect target"
+  "scorch cast att"
   {
-		"ru"		"Игрок @green{1} @defaultприменил заклинание @lightgreenВоскрешение@default на вас. Вы будете возрождены и восстановлены на 30% Вашего ХП."
+    "ru"  "Вы использовали @lightgreenОжог@default на @green@vic@default, нанеся @green@dmg@default урона."
   }
-	"Resurrection info"
+  "scorch cast vic"
   {
-		"ru"		"Возрождает труп ближайшего игрока Вашей команды на максимальном\nрасстоянии 400 с 30% ХП."
+    "ru"  "@green@att@default использовал @lightgreenОжог@default, нанеся вам @green@dmg@default урона."
   }
-	"metamorph"
+  "blink cast"
   {
-		"ru"		"Вы становитесь @lightgreenДемоном @defaultи увеличиваете броню @green{1} @defaultна @green{2} @default сек"
+	"ru"  "Вы применили навык @lightgreenТелепортация@default."
   }
-	"no longer demon"
+  "blink failed"
   {
-		"ru"		"Вы больше не @lightgreenДемон @default, броня снижена"
+	"ru"  "Невозможно применить навык @lightgreenТелепортация @defaultиз-за риска застрять в объекте."
   }
-	"Metamorphosis info"
+  "Blink info"
   {
-		"ru"		"Вы становитесь Демоном и Ваша броня увеличивается\nна некоторое время"
+	"ru"  "Перемещает вас в то место, куда направлен ваш прицел.\nИмеет максимальную дистанцию перемещения."
   }
-	"arcexpl"
+  
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ШАМАН
+  // ==================================================================
+  "totem nova"
   {
-		"ru"		"Вы применили @lightgreenЧародейский Взрыв @greenк игроку @lightgreen{1} @greenи нанесли @lightgreen{2} @defaultурона"
+	"ru"  "@lightgreenТотем Кольцо Огня @defaultвзорвался около @green{1}@default, нанеся противнику @green{2} @defaultурона."
   }
-	"arcexpl target"
+  "totem nova cast"
   {
-		"ru"		"Игрок @att применил к Вам@lightgreenЧародейский Взрыв @default и нанес @dmg урона"
+	"ru"  "Вы установили @lightgreenТотем Кольцо Огня@default, который будет существовать @green{1} @defaultсек."
   }
-	"Arcane Explosion info"
+  "totem nova target"
   {
-		"ru"		"Наносит урон окружающим Вас врагам за счет\nбольшого количества маны"
+	"ru"  "@lightgreenТотем Кольцо Огня @defaultигрока @green@att@default взорвался, нанеся Вам @green@dmg@default урона."
   }
-	"shadow bolt caster"
+  "Fire Nova Totem info"
   {
-		"ru"		"Вы применили @lightgreenСтрелу Тьмы @defaultк игроку @vic и нанесли @dmg урона"
+	"ru"  "Создает Тотем Кольцо Огня на 30 секунд.\nТотем взорвется рядом с целью, если не будет разрушен."
   }
-	"shadow bolt target"
+  "reincarnation"
   {
-		"ru"		"Игрок @att применил к Вам @lightgreenСтрелу Тьмы @default и нанес @dmg урона"
+	"ru"  "Вы были возрождены с помощью заклинания @lightgreenРеинкарнация."
   }
-	"Shadow Bolt info"
+  "Reincarnation info"
   {
-		"ru"		"Наносит урон противнику.\n(урон зависит от силы магии)"
+	"ru"  "Позволяет вам возродиться после смерти 1 раз за раунд.\nВероятность 40%."
   }
-	"fireball caster"
+  "windfury cast"
   {
-		"ru"		"Вы применили @lightgreenОгненый Шар @defaultк игроку @vic и нанесли @dmg урона"
+	"ru"  "Неистовство Ветра"
   }
-	"fireball target"
+  "Windfury info"
   {
-		"ru"		"Игрок @att применил к Вам @lightgreenОгненный Шар @default и нанес @dmg урона"
+	"ru"  "Ваши физические атаки имеют 20%% шанс повысить урон на 20%%."
   }
-	"Fireball info"
+  "flameshock cast"
   {
-		"ru"		"Наносит урон противнику.\n(урон зависит от силы магии)"
+	"ru"  "@defaultВы применили @lightgreenОгненный Шок@default, нанеся @green@dmg @defaultурона + @green{1} @defaultурона за тик игроку @green@vic@default."
   }
-	"windfury cast"
+  "flameshock cast vic"
   {
-		"ru"		"Неистовство Ветра" //-
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenОгненный Шок@default, нанеся @green@dmg @defaultурона + @green{1} @defaultурона за тик."
   }
-	"Windfury info"
+  "Flame Shock info"
   {
-		"ru"		"Дает 13% шанс нанести дополнительные 75% урона."
+  "ru"  "Дает Вашему оружию шанс применить Огненный Шок.\nОгненный шок наносит урон сразу и через некоторое время.\nУрон зависит от силы магии."
   }
-	"fear caster"
+  "frostshock cast"
   {
-		"ru"		"@defaultВы применили @lightgreenСтрах @defaultк игоку @lightgreen{1} @default"
+	"ru"  "Вы применили @lightgreenЛедяной Шок @defaultк игроку @green@vic@default, нанеся @green@dmg @defaultурона и замедление."
   }
-	"fear target"
+  "frostshock cast vic"
   {
-		"ru"		"Игрок @green{1} @defaultприменил к Вам @lightgreenСтрах"
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenЛедяной Шок@default, нанеся @green@dmg @defaultурона и замедление"
   }
-	"Fear info"
+  "Frost Shock info"
   {
-		"ru"		"Применение темного заклинания заставляет\nигрока летать в страхе некоторое время"
+	"ru"  "Дает Вашему оружию шанс применить Ледяной Шок.\nЛедяной шок наносит урон и замедляет цель.\nУрон зависит от силы магии."
   }
-	"demon armor cast"
+  "earthshock cast"
   {
-		"ru"		"@defaultВы применили @lightgreenДемонический Доспех @defaultи Ваша броня увеличилась на @lightgreen{1}"
+	"ru"  "Вы применили @lightgreenЗемной Шок @defaultк игроку @green@vic@default, нанеся @green@dmg@default урона и @lightgreen{1} @defaultсек молчания."
   }
-	"Demon Skin info"
+  "earthshock cast vic"
   {
-		"ru"		"Шкура Демона применяется в начале каждого раунда\n и увеличивает количество вашей брони."
+	"ru"  "Игрок @green@at@defaultt применил к Вам @lightgreenЗемной Шок@default, нанеся @green@dmg@default урона и @lightgreen{1} @defaultсек молчания."
   }
-	"life tap cast"
+  "Earth Shock info"
   {
-		"ru"		"@defaultВы применили @lightgreenЖизнеотвод @defaultи нанесли @lightgreen{1} @defaultурона себе с восстановлением @lightgreen{2} @defaultманы"
+	"ru"  "Дает Вашему оружию шанс применить Земной Шок.\nЗемной шок наносит урон и накладывает молчание.\nУрон зависит от силы магии."
   }
-	"Life Tap info"
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ЖРЕЦ
+  // ==================================================================
+  "resurrect"
   {
-		"ru"		"Применение Жизнеотвода превращает 10%\nВашего здоровья в ману."
+	"ru"  "Вы применили заклинание @lightgreenВоскрешение @defaultк игроку @green{1}@default."
   }
-	"too low hp life tap"
+  "resurrect target"
   {
-		"ru"		"Недостаточно здоровья для применения Жизнеотвода"
+	"ru"  "Вы были возрождены навыком @lightgreenВоскрешение @defaultигрока @green{1}@default."
   }
-	"corruption cast"
+  "Improved Resurrection info"
   {
-		"ru"		"@defaultВы применили @lightgreenПорчу @defaultи нанесли @lightgreen{1} @defaultурона за тик на игрока @green{2}@default. Длительность 5 тиков."
+    "ru"  "Снижает время восстановления навыка Воскрешение на: 6|13|20 секунд"
   }
-	"corruption cast vic"
+  "improved resurrect"
   {
-		"ru"		"Игрок @green{2} @defaultприменил на Вас @lightgreenПорчу @defaultи нанес @lightgreen{1} @defaultурона за тик. Длительность 5 тиков."
+    "ru" "Вы использовали @lightgreenУлучшенное Воскрешение@default на @green{1}@default."
   }
-	"Corruption info"
+  "improved resurrect target"
   {
-		"ru"		"Применяет к игроку дебафф, наносящий\nнекоторое количество урона в течение 15сек.\nУрон зависит от силы магии."
+    "ru" "@green{1}@default использовал @lightgreenУлучшенное Воскрешение@default на вас."
   }
-	"life drain cast"
+  "Resurrection info"
   {
-		"ru"		"@defaultВы применили @lightgreenПохищение Жизни@default к игроку @green{2} @defaultи нанесли @lightgreen{1} @defaultурона + самолечение за тик. Длительность 5 тиков."
+	"ru"  "Возрождает выбранного вами союзника в радиусе 400 около вас.\nЦели будет восстановлено 50%% от её здоровья и маны."
   }
-	"life drain cast vic"
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ЧЕРНОКНИЖНИК
+  // ==================================================================
+  "metamorph"
   {
-		"ru"		"Игрок @green{2} @defaultприменил на Вас @lightgreenПохищение Жизни @defaultи нанес @lightgreen{1} @defaultурона + лечение врага за тик. Длительность 5 тиков."
+	"ru"  "Вы стали @lightgreenДемоном @defaultна @green{2} @defaultсек. Броня увеличена на @green{1}@default."
   }
-	"Life Drain info"
+  "no longer demon"
   {
-		"ru"		"Применяет дебафф, наносящий среднее\nколичество урона раз в 12 секунд,\nурон зависит от силы магии.\nНанесенный урон возвращается к врагу в виде здоровья."
+	"ru"  "Вы больше не @lightgreenДемон @default, броня снижена"
   }
-	"immolate cast"
+  "Metamorphosis info"
   {
-		"ru"		"@defaultВы применили @lightgreenЖертвенный Огонь @defaultи нанесли @dmg урона + @lightgreen{1} @defaultурона за тик игроку @vic"
+	"ru"  "Вы становитесь Демоном и Ваша броня увеличивается\nна некоторое время"
   }
-	"immolate cast vic"
+  "shadow bolt caster"
   {
-		"ru"		"Игрок @att применил к Вам @lightgreenЖертвенный Огонь @defaultи нанес @dmg урона + @lightgreen{1} @defaultурона за тик."
+	"ru"  "Вы применили @lightgreenСтрелу Тьмы @defaultк игроку @vic и нанесли @dmg урона"
   }
-	"Immolate info"
+  "shadow bolt target"
   {
-		"ru"		"Нанесение урона + урон/тик,\nзависит от силы магии."
+	"ru"  "Игрок @att применил к Вам @lightgreenСтрелу Тьмы @default и нанес @dmg урона"
   }
-	"flameshock cast"
+  "Shadow Bolt info"
   {
-		"ru"		"@defaultВы применили @lightgreenОгненный Шок @defaultи нанесли @dmg урона + @lightgreen{1} @defaultурона за тик игроку @vic."
+	"ru"  "Наносит урон противнику.\n(урон зависит от силы магии)"
   }
-	"flameshock cast vic"
+  "fear caster"
   {
-		"ru"		"Игрок @att применил к Вам @lightgreenОгненный Шок @defaultи нанес @dmg урона + @lightgreen{1} @defaultурона за тик."
+	"ru"  "@defaultВы применили @lightgreenСтрах @defaultк игоку @lightgreen{1} @default"
   }
-	"Flame Shock info"
+  "fear target"
   {
-		"ru"		"Дает Вашему оружию шанс применить Огненный Шок\nк цели. Нанесение урона + урон за тик, зависит от силы магии"
+	"ru"  "Игрок @green{1} @defaultприменил к Вам @lightgreenСтрах"
   }
-	"frostshock cast"
+  "Fear info"
   {
-		"ru"		"@defaultВы применили @lightgreenЛедяной Шок @defaultк игроку @vic и нанесли @dmg урона + @lightgreenзамедление"
+	"ru"  "Применение темного заклинания заставляет\nигрока летать в страхе некоторое время"
   }
-	"frostshock cast vic"
+  "demon armor cast"
   {
-		"ru"		"Игрок @att применил к Вам @lightgreenЛедяной Шок @defaultи нанес @dmg урона + @lightgreenзамедление"
+	"ru"  "@defaultВы применили @lightgreenДемонический Доспех @defaultи Ваша броня увеличилась на @lightgreen{1}"
   }
-	"Frost Shock info"
+  "Demon Skin info"
   {
-		"ru"		"Дает Вашему оружию шанс применить Ледяной Шок\nк цели. Нанесение урона + замедление"
+	"ru"  "Шкура Демона применяется в начале каждого раунда\n и увеличивает количество вашей брони."
   }
-	"earthshock cast"
+  "life tap cast"
   {
-		"ru"		"Вы применили @lightgreenЗемной Шок @default к игроку @vic и нанесли @dmg урона + @lightgreen{1} @defaultсек молчания"
+	"ru"  "@defaultВы применили @lightgreenЖизнеотвод @defaultи нанесли @lightgreen{1} @defaultурона себе с восстановлением @lightgreen{2} @defaultманы"
   }
-	"earthshock cast vic"
+  "Life Tap info"
   {
-		"ru"		"Игрок @att применил к Вам @lightgreenЗемной Шок @defaultи нанес @dmg урона + @lightgreen{1} @defaultсек молчания"
+	"ru"  "Применение Жизнеотвода превращает 10%\nВашего здоровья в ману."
   }
-	"Earth Shock info"
+  "too low hp life tap"
   {
-		"ru"		"Дает Вашему оружию шанс применить Земной Шок\nк цели. Нанесение урона + молчание цели на 3 сек"
+	"ru"  "Недостаточно здоровья для применения Жизнеотвода"
   }
-	"scorch cast"
+  "corruption cast"
   {
-		"ru"		"Вы автоматически применили @lightgreenОжог @defaultк @vic и нанесли @dmg урона."
+	"ru"  "@defaultВы применили @lightgreenПорчу @defaultи нанесли @lightgreen{1} @defaultурона за тик на игрока @green{2}@default. Длительность 5 тиков."
   }
-	"Scorch info"
+  "corruption cast vic"
   {
-		"ru"		"Дает Вашему оружию шанс нанести дополнительный урон,\nзависящий от Силы Магии."
+	"ru"  "Игрок @green{2} @defaultприменил на Вас @lightgreenПорчу @defaultи нанес @lightgreen{1} @defaultурона за тик. Длительность 5 тиков."
   }
-	"blink cast"
+  "Corruption info"
   {
-		"ru"		"@greenВы телепортировались"
+	"ru"  "Применяет к игроку дебафф, наносящий\nнекоторое количество урона в течение 15сек.\nУрон зависит от силы магии."
   }
-	"blink failed"
+  "life drain cast"
   {
-		"ru"		"@greenПрименение телепортации @lightgreenне удалось@green из-за небезопасного местоназначения"
+	"ru"  "@defaultВы применили @lightgreenПохищение Жизни@default к игроку @green{2} @defaultи нанесли @lightgreen{1} @defaultурона + самолечение за тик. Длительность 5 тиков."
   }
-	"Blink info"
+  "life drain cast vic"
   {
-		"ru"		"Возможность телепортироваться"
+	"ru"  "Игрок @green{2} @defaultприменил на Вас @lightgreenПохищение Жизни @defaultи нанес @lightgreen{1} @defaultурона + лечение врага за тик. Длительность 5 тиков."
   }
-	"vanish cast"
+  "Life Drain info"
   {
-		"ru"		"Вы применили @greenИсчезновение. @defaultВы будете находиться в режиме @greenневидимости @defaultв течение @green{1} сек"
+	"ru"  "Применяет дебафф, наносящий среднее\nколичество урона раз в 12 секунд,\nурон зависит от силы магии.\nНанесенный урон возвращается к врагу в виде здоровья."
   }
-	"vanish expired"
+  "immolate cast"
   {
-		"ru"		"@greenВремя действия Исчезновения истекло, теперь Вы видимы и можете атаковать."
+	"ru"		"@defaultВы применили @lightgreenЖертвенный Огонь @defaultи нанесли @dmg урона + @lightgreen{1} @defaultурона за тик игроку @vic"
   }
-	"Vanish info"
+  "immolate cast vic"
   {
-		"ru"		"Исчезновение делает вас незаметным.\nК сожалению, вы не можете атаковать, когда используете этот навык."
+	"ru"  "Игрок @att применил к Вам @lightgreenЖертвенный Огонь @defaultи нанес @dmg урона + @lightgreen{1} @defaultурона за тик."
   }
+  "Immolate info"
+  {
+	"ru"  "Нанесение урона + урон/тик,\nзависит от силы магии."
+  }
+  
+  
 	"backstab used"
   {
 		"ru"		"Удар в Спину" //-
@@ -2149,6 +2188,8 @@
   {
 		"ru"		"Дает возможность отравить цель,\nкоторая будет терять здоровье в течение некоторого времени.\nУрон зависит от ловкости."
   }
+  
+  
 	"Arcane Intellect info"
   {
 		"ru"		"Увеличивает Ваш интеллект в зависимости от уровня"
@@ -2157,6 +2198,8 @@
   {
 		"ru"		"Вы применили @greenЧародейский Интеллект @defaultи увеличили свой интеллект на @lightgreen{1}"
   }
+  
+  
 	"Rockbiter Weapon info"
   {
 		"ru"		"Делает атаку вашего оружия на 50% магической и на 50% физической.\nСтоит 2 маны за удар, переключаемо"
@@ -2169,6 +2212,8 @@
   {
     "ru"        "Вы @lightgreenвыключили @greenОружие Камнедробителя."
   }
+  
+  
 	"bonus str"
   {
 		"ru"		"Бонус к силе: {1}"
@@ -2185,10 +2230,14 @@
   {
 		"ru"		"Бонус к интеллекту: {1}"
   }
+  
+  
 	"Announce server new ver"
   {
 		"ru"		"Новая версия мода доступна на сайте http://wowmod.eu"
   }
+  
+  
 	"flash heal caster"
   {
 		"ru"		"Вы применили Быстрое Исцеление к игроку @lightgreen{1} @defaultи восстановили @lightgreen{2} @defaultздоровья"
@@ -5083,7 +5132,7 @@
 }
 "Blinkwake name"
 {
-  "ru"   "Телепорт"
+  "ru"   "Мерцающий свет"
 }
 "Combustion name"
 {
@@ -7341,7 +7390,7 @@
 }
 "Mana Shield name"
 {
-  "ru" "Щит Маны"
+  "ru" "Щит заклинателя"
 }
 "Polymorph name"
 {
@@ -7449,7 +7498,7 @@
 }
 "Shield Wall name"
 {
-  "ru" "Щит Стеной"
+  "ru" "Глухая оборона"
 }
 "Taunt name"
 {
@@ -7944,10 +7993,6 @@
   {
     "ru"		"<Пассивно> Снижает затраты маны на атакующие заклинания на: 5|13|20 %% от стоимости"
   }
-  "Improved Resurrection info"
-  {
-    "ru"		"<Пассивно> Снижает время восстановления Воскрешение на: 6|13|20 секунд"
-  }
     "mental strength used"
   {
     "ru" "Сила мысли: Увеличивает ваш интеллект на {1} до {2} общего."
@@ -7984,14 +8029,6 @@
   {
     "ru"      "Увеличивает отражение заклинаний"
   }
-    "improved resurrect"
-  {
-    "ru"      "Вы использовали @lightgreenУлучшенное Воскрешение@default на @green{1}@default."
-  }
-  "improved resurrect target"
-  {
-    "ru"      "@green{1}@default использовал @lightgreenУлучшенное Воскрешение@default на вас, дал вам новое тело и @lightgreen50%%@default от вашего здоровья."
-  }
     "demon skin cast"
   {
     "ru"      "@defaultВы использовали @lightgreenШкура Демона@default и увеличили вашу броню на @lightgreen{1}@default до @lightgreen{2}@default."
@@ -7999,14 +8036,6 @@
   "demon skin cast with talent"
   {
     "ru"      "@lightgreenДоспех Скверны@default: Вы использовали @lightgreenШкура Демона@default и увеличили вашу броню на@lightgreen{1}@default до @lightgreen{2}@default."
-  }
-    "scorch cast att"
-  {
-    "ru"      "Вы использовали @lightgreenОжог@default на @green@vic@default нанеся @lightgreen@dmg@default урона."
-  }
-  "scorch cast vic"
-  {
-    "ru"      "@green@att@default использовал @lightgreenОжог@default и нанес вам @lightgreen@dmg@default урона."
   }
     "body and soul used"
   {
