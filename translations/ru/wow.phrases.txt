@@ -1534,7 +1534,11 @@
   }
   "no runes"
   {
-    "ru"  "@lightgreenУ Вас недостаточно рун"
+    "ru"  "@lightgreenУ Вас недостаточно рун!"
+  }
+  "no rage"
+  {
+    "ru"  "@lightgreenНедостаточно ярости!"
   }
   "no target"
   {
