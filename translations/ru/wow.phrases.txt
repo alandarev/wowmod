@@ -750,11 +750,11 @@
   }
   "Announce Boss"
   {
-	"ru"  "@lightgreenМероприятие @greenУбийства Босса @lightgreenактивировано!"
+	"ru"  "@lightgreenМероприятие @greenУбийство Босса @lightgreenактивировано!"
   }
   "Announce Boss0"
   {
-	"ru"  "@lightgreenМероприятие @greenУбийства Босса @lightgreenзакончилось!"
+	"ru"  "@lightgreenМероприятие @greenУбийство Босса @lightgreenзакончилось!"
   }
   "Admin took item"
   {
@@ -1500,295 +1500,318 @@
   {
 	"ru"  "Пассивное"
   }
-	"hp mp dmg taken"
+  "hp mp dmg taken"
   {
 	"ru"  "Здоровье: {1}/{2}\nМана: {3}/{4}\nНанесено: {5}\nПолучено: {6}"
   }
-    "hp mp dmg threat"
+  "hp mp dmg threat"
   {
-      "ru" "ХП: {1}/{2}\n{7}: {3}/{4}\nНанесено: {5}\nУгроза: {6}"
+    "ru"  "Здоровье: {1}/{2}\n{7}: {3}/{4}\nНанесено: {5}\nУгроза: {6}"
   }
-	"hint healing done"
+  "hint healing done"
   {
-		"ru"		"\nЛеч.: {1}"
+	"ru"  "\nЛечение: {1}"
   }
-	"hint stealth"
+  "hint stealth"
   {
-		"ru"		"\nСтелс: {1}%%" //-
+	"ru"  "\nСтелс: {1}%%" //-
   }
-	"boss hp"
+  "boss hp"
   {
-		"ru"		"\n{3} ХП: {1}/{2}" //-
+	"ru"  "\n{3} ХП: {1}/{2}" //-
   }
-	"good healing"
+  "good healing"
   {
-		"ru"		"@greenВы @lightgreenвызвали падение предметов из-за лечения. @default(Это не значит, что предмет упадет)"
+	"ru"  "@lightgreenЗа лечение вашей команды, вы получаете повышенный шанс выпадения предмет!"
   }
-	"triggered teamdrop"
+  "triggered teamdrop"
   {
-		"ru"		"@greenВы @lightgreenвызвали падение предметов за выйгрышный раунд. Уровень падения - @lightgreen{1}"
+	"ru"  "@lightgreenЗа победу в этом раунде, вы получаете @green{1} @lightgreenуровень падения предметов!"
   }
-	"no mana"
+  "no mana"
   {
-		"ru"		"@greenНедостаточно маны"
+	"ru"  "@lightgreenНедостаточно маны!"
   }
-    "no runes"
+  "no runes"
   {
-    "ru"        "@greenУ Вас недостаточно рун"
+    "ru"  "@lightgreenУ Вас недостаточно рун"
   }
-	"no target"
+  "no target"
   {
-		"ru"		"@greenНет цели"
+	"ru"  "@lightgreenНе удалось определить цель!"
   }
-	"wrong target"
+  "wrong target"
   {
-		"ru"		"@greenНеверная цель @default(Цель мертва/из вашей команды)"
+	"ru"  "@lightgreenНекорректная цель. (@greenцель мертва@lightgreen или @lightgreenиз вашей команды)"
   }
-	"nobody"
+  "nobody"
   {
-		"ru"		"Никто"
+	"ru"  "Никто"
   }
-	"green item"
+  "green item"
   {
-		"ru"		"Зеленый предмет"
+	"ru"  "Зеленый предмет"
   }
-	"blue item"
+  "blue item"
   {
-		"ru"		"Редкий предмет"
+	"ru"  "Редкий предмет"
   }
-	"epic item"
+  "epic item"
   {
-		"ru"		"Эпический предмет"
+	"ru"  "Эпический предмет"
   }
 	"legendary item"
   {
-		"ru"		"Легендарный предмет"
+	"ru"  "Легендарный предмет"
   }
-	"pvp blue item"
+  "pvp blue item"
   {
-		"ru"		"Редкий предмет ПВП"
+    "ru"  "Редкий предмет ПВП"
   }
-	"pvp epic item"
+  "pvp epic item"
   {
-		"ru"		"Эпический предмет ПВП"
+    "ru"  "Эпический предмет ПВП"
   }
-	"wc reset confirm"
+  "wc reset confirm"
   {
-		"ru"		"Подтверждение сброса очков"
+	"ru"  "Подтверждение сброса талантов"
   }
-	"reset confirm"
+  "reset confirm"
   {
-		"ru"		"Подтвердить сброс за {1} серебра"
+	"ru"  "Подтвердить сброс. ({1} серебра)"
   }
-	"mana usage"
+  "mana usage"
   {
-		"ru"		"Требуется маны: {1}"
+	"ru"  "Требуется маны: {1}"
   }
-	"reset stats"
+  "reset stats"
   {
-		"ru"		"Сбросить характеристики за {1} серебра"
+	"ru"  "Сбросить характеристики за {1} серебра"
   }
-	"cooldown time"
+  "cooldown time"
   {
-		"ru"		"Перезарядка: {1} сек."
+	"ru"  "Перезарядка: {1} сек."
   }
-	"cast time"
+  "cast time"
   {
-		"ru"		"Применение: {1} сек."
+	"ru"  "Применение: {1} сек."
   }
-	"spell distance"
+  "spell distance"
   {
-		"ru"		"Дистанция: {1}"
+	"ru"  "Дистанция: {1}"
   }
-	"spell multi"
+  "spell multi"
   {
-		"ru"		"Коэффициент: {1}%"
+    "ru"  "Коэффициент: {1}%"
   }
-	"spell on cd"
+  "spell on cd"
   {
-		"ru"		"@greenИдет перезарядка заклинания. Осталось @lightgreen{1} @greenсек."
+	"ru"  "@lightgreenИдет перезарядка заклинания! Осталось @green{1} @lightgreenсек."
   }
-	"silenced for"
+  "silenced for"
   {
-		"ru"		"@greenИдет глобальная перезарядка заклинания @lightgreen(или к Вам пременили молчание). @greenОсталось @lightgreen{1} @greenсек."
+	"ru"  "@lightgreenНа вас наложено молчание! @lightgreenОсталось @green{1} @lightgreenсек."
   }
-	"you are dead"
+  "you are dead"
   {
-		"ru"		"@greenВы мертвы"
+	"ru"  "@lightgreenВы мертвы!"
   }
-	"whirlwind"
+  //Воин
+  "whirlwind"
   {
-		"ru"		"Вы нанесли @green{2} @lightgreenурона игроку @green{1} @defaultс помощью навыка вихрь"
+	"ru"  "Вы нанесли @green{2} @defaultурона игрокам @green{1}@default, использовав навык @lightgreenВихрь@default."
   }
-	"whirlwind target"
+  "whirlwind target"
   {
-		"ru"		"Игрок @att нанес Вам @dmg урона с помощью навыка вихрь"
+	"ru"  "Игрок #green@att @defaultнанес Вам @green@dmg @efaultурона, использовав навык @lightgreenВихрь@default."
   }
-    "adrenaline target"
+  "Shield Block info"
   {
-    "ru"        "Игрок @att нанес Вам @dmg урона с помощью выброса адреналина АОЕ"
+	"ru"  "Дает 10% шанс заблокировать атаку.\nТребуется экипированный щит."
   }
-	"Shield Block info"
+  "Whirlwind info"
   {
-		"ru"		"Дает 10% шанс заблокировать атаку,\nиспользуя щит."
+	"ru"  "Наносит урон, равный вашему бонусному урону,\nвсем игрокам около вас.\nИгнорирует броню противника."
   }
-	"Whirlwind info"
+  "Enrage Regeneration info"
   {
-		"ru"		"Атакует врагов вокруг вас,\nурон равен вашему бонусному урону.\nИгнорирует броню противника!"
-  }
-    "Enrage Regeneration info"
-  {
-    "ru"      "Восстановить 30% от Вашего\nобщего числа здоровья за 10 сек"
+    "ru"  "Восстанавливает 15%% от вашего максимального здоровья\nЗа 10 секунд."
   }
   "enrage regeneration cast"
   {
-      "ru"      "Вы применили @greenЯростное Восстановление @defaultи здоровья восстановится @lightgreen{1} @defaultза @lightgreen10 @defaultсек"
+    "ru"  "Вы применили @lightgreenБезудержное Восстановление@default. За 10 секунд вам восстановится @green{1} @defaultздоровья."
   }
-
+  "enrage regeneration cast with glyph"
+  {
+    "ru"    "*** Символ Безудержное Восстановление *** Вы исцелили дополнительно {1}%% от вашего максимального здоровья ({2})."
+  }
+  "heroic strike"
+  {
+	"ru"  "Героичесий удар"
+  }
+  "Heroic Strike info"
+  {
+	"ru"  "Дает вам 20%% шанс увеличить урон.\nУрон зависит от вашей силы атаки.\nШанс повышается с ношением двуручного оружия."
+  }
+  "mortal strike ef"
+  {
+	"ru"  "Смертельный удар"
+  }
+  "mortal strike"
+  {
+	"ru"		"@lightgreenСмертельный удар @defaultувеличил ваш урон на @green{1} @defaultи оставил метку на цели на @green{2} @defaultсек, понижая её исцеление на 50%."
+  }
+  "mortal strike vic"
+  {
+	"ru"  "@lightgreenСмертельный удар @defaultигрока @green{3} @defaultувеличил урон на @green{1}@default. Любое исцеление будет слабее на @green50% @defaultв течение @green{2} @defaultсек."
+  }
+  "Mortal Strike info"
+  {
+	"ru"  "Дает вам 15%% шанс увеличить ваш урон\nи оставить метку на цели на 5 сек,\nкоторая понижает исцеление цели на 50%%.\nНеобходимо двуручное оружие!"
+  }
+  "Defensive Stance info"
+  {
+    "en"    "Понижает физический и магический урон на 20/30%% (нанесенный и полученный).\nМожет быть отключено в любой момент.\nВозможна единожная активация."
+  }
+  "def stance deac"
+  {
+	"ru"  "@lightgreenОборонительная стойка @greenотключена@lightgreen."
+  }
+  "def stance ac"
+  {
+	"ru"  "@lightgreenОборонительная стойка @greenвключена@lightgreen."
+  }
+  "Berserker Stance info"
+  {
+	"ru"  "Увеличивает получаемый урон на 10%%,\nно увеличивает шанс критического удара на 6%%."
+  }
+  "ber stance deac"
+  {
+	"ru"  " @lightgreenСтойка берсерка @greenотключена@lightgreen."
+  }
+  "ber stance ac"
+  {
+	"ru"  " @lightgreenСтойка берсерка @greenвключена@lightgreen."
+  }
+  "hamstring"
+  {
+    "ru"  "Поколечить" //-
+  }
+  "hamstring victim"
+  {
+	"ru"  "Игрок @green{1} @lightgreenПоколечил @defaultи замедлил Вас, нанеся @green{2} @defaultурона."
+  }
+  "Hamstring info"
+  {
+	"ru"  "Дает 8%% шанс замедлить\nпротивника на 25%% и нанести 8 урона."
+  }
+  "revenge used"
+  {
+	"ru"  "Вы применили@lightgreenМесть @defaultк @vic и нанесли ему @dmg урона."
+  }
+  "revenge got"
+  {
+	"ru"  "@att применил @lightgreenМесть @defaultк Вам и нанес Вам @dmg урона"
+  }
+  "Revenge info"
+  {
+	"ru"  "Отражает некоторый урон при блокировании атаки.\nУрон зависит от выносливости и немного от силы."
+  }
+  "improved revenge used"
+  {
+    "ru" "Вы использовали @lightgreenКровную месть @defaultна @green@vic @defaultи нанесли @green@dmg@default урона."
+  }
+  "improved revenge got"
+  {
+    "ru" "@green@att @defaultиспользовал @lightgreenКровную месть @defaultи нанес вам @green@dmg@default урона."
+  }
   "Concussion Blow target"
   {
-      "ru"        "Игрок @green{1} @defaultприменяет к Вам @lightgreenОглушающий Удар @defaultи замораживает Вас на @lightgreen{2} @defaultsсек"
+    "ru"  "Игрок @green{1} @defaultприменил к Вам @lightgreenОглушающий Удар @defaultи заморозил Вас на @green{2} @defaultsсек."
   }
   "Concussion Blow cast"
   {
-      "ru"        "Вы применяете @lightgreenОглушающий Удар @defaultна игрока @green{1} @defaultи замораживаете его на @lightgreen{2} @defaultсек"
+    "ru"  "Вы применили @lightgreenОглушающий Удар @defaultна игрока @green{1} @defaultи заморозили его на @green{2} @defaultсек."
   }
-
-	"Bloodthirst info"
+  
+  //Разбойник
+  "Evade info"
   {
-		"ru"		"Во время перезагрузки Вы восстановите свой ХП, зависящий от силы следующих 8 ударов."
+	"ru"  "В течение 2 секунд у Вас будет шанс увернуться от физического урона."
   }
-	"bloodthirst activated"
+  "evade activated"
   {
-		"ru"		"Следующие 8 ударов в течение {1} секунд или {3} раза будут восстанавливать Вам по {2} ХП"
+	"ru"  "В течение следующих @green{1} @defaultсек у Вас есть шанс увернуться от физического урона."
   }
-	"bloodthirst used"
+  "evade used"
   {
-		"ru"		"Кровожадность восстановила Вам @green{1} @defaultХП"
+	"ru"  "Уворот"
   }
-	"Evade info"
+  "Expose Armor info"
   {
-		"ru"		"В течение 2 секунд у Вас будет шанс увернуться от попаданий"
+	"ru"  "Повышает игнорирование брони на 30%%"
   }
-	"evade activated"
+  "expose armor activated"
   {
-		"ru"		"В течение следующих @lightgreen{1} @defaultсек у Вас есть шанс увернуться от попаданий."
+	"ru"  "Игнорирование брони было увеличено на @green{1} @defaultдо @green{2}@default."
   }
-	"evade used"
+  "Cloak of Shadow info"
   {
-		"ru"		"Увернуться" //-
+	"ru"  "Повышает ваше сопротивление на 30%%"
   }
-	"Expose Armor info"
+  "cloak of shadow activated"
   {
-		"ru"		"Увеличивает ваш навык\nИгнорирования Брони на 100% в следующем раунде"
+	"ru"  "Плащ Теней увеличивает Ваше сопротивление на @green{1} @defaultдо @green{2}@default."
   }
-	"expose armor activated"
+  "Stealth info"
   {
-		"ru"		"Игнорирование Брони для этого раунда увеличено на @lightgreen{1}@default."
+	"ru"		"Вы становитесь прозрачнее, пока стоите на месте.\nСтрельба из оружия, прыжок, попадания по вам, движение\nСделают вас видимым."
   }
-	"Cloak of Shadow info"
+  "Slice and Dice info"
   {
-		"ru"		"Увеличивает на 100% Ваше сопротивление"
+	"ru"  "Повышает Вашу точность на 20%% на 6 секунд."
   }
-	"cloak of shadow activated"
+  "slice and dice cast"
   {
-		"ru"		"Плащ Теней увеличивает Ваше сопротивление на @lightgreen{1} @default."
+	"ru"  "Вы применили @lightgreenМясорубку @defaultи Ваша точность увеличилась на @green{1}% @defaultна @green{2} @defaultсек."
   }
-	"Stealth info"
+  "Sprint info"
   {
-		"ru"		"Процент вашей невидимости увеличивается, когда\nвы не двигаетесь/стреляете.\nНапример: Стрельба из оружия, попадание в вас, прыжки, движение\nсделают вас видимым."
+	"ru"  "Повышает вашу скорость передвижения на 20%%\nСнимает все эффекты замедления."
   }
-	"Slice and Dice info"
+  "sprint activated"
   {
-		"ru"		"При активации увеличивает точность\nна некоторое время."
+	"ru"  "Вы активировали @lightgreenСпринт@default. Скорость передвижения увеличена на @green{1}@default%."
   }
-	"slice and dice cast"
+  
+  //Паладин
+  "Spiritual Attunement info"
   {
-		"ru"		"@greenВы применили @lightgreenМясорубку @defaultи Ваша точность увеличилась на @green{1}% @defaultна @green{2} @defaultсек."
+	"ru"  "Пассивная способность, увеличивающая ману Паладина.\nЗависит от силы и выносливости."
   }
-	"Sprint info"
+  "attunement cast"
   {
-		"ru"		"Увеличивает вашу скорость передвижения\nна 20%, также отменяет эффекты замедления."
+	"ru"		"@lightgreenДуховное Созвучие @defaultувеличивает Вашу ману на @lgreen{1}@default."
   }
-	"sprint activated"
+  "Mana Shield info"
   {
-		"ru"		"@greenВы активировали @lightgreenБыстрый бег."
+	"ru"  "Понижает получаемый урон на 50%, но тратит ману при каждом попадании."
   }
-	"heroic strike"
+  "mana shield deac"
   {
-		"ru"		"Героичесий удар" //-
+	"ru"  "Вы @greenОтключили @lightgreenЩит Маны@default."
   }
-	"Heroic Strike info"
+  "mana shield ac"
   {
-		"ru"		"Дает вам 20% шанс увеличить урон.\nУрон зависит от вашей силы атаки. Шанс повышается с ношением двуручного оружия"
+	"ru"  "Вы @greenАктивировали @lightgreenЩит Маны@default с поглощением @green{1} @defaultурона."
   }
-	"mortal strike ef"
+  "mana shield"
   {
-		"ru"		"Смертельный удар" //-
+	"ru"  "Щит Маны: {1}"
   }
-	"mortal strike"
+  "mana shield end"
   {
-		"ru"		"Смертельный удар увеличил ваш урон на @green{1} @defaultи оставлят дебафф на цели на @green{2} @defaultсек, что делает цель трудно излечимой."
-  }
-	"mortal strike vic"
-  {
-		"ru"		"Смертельный удар игрока @lightgreen{3}@default увеличил урон на @green{1} @default. Вас будет труднее вылечить в течение @green{2} @defaultсек."
-  }
-	"Mortal Strike info"
-  {
-		"ru"		"Дает вам 15% шанс увеличить ваш урон\nи делает дебафф цели на 5 сек,\nчто ухудшает любое лечение в 2 раза.\nДля осуществления необходимо двуручное оружие!"
-  }
-	"Spiritual Attunement info"
-  {
-		"ru"		"Пассивная способность, увеличивающая ману Паладина.\nЗависит от силы и выносливости."
-  }
-	"attunement cast"
-  {
-		"ru"		"@greenДуховное Созвучие @defaultувеличивает Вашу ману на @lightgreen{1}"
-  }
-	"Mana Shield info"
-  {
-		"ru"		"Поглощает половину урона, но тратит ману при каждом попадании."
-  }
-	"mana shield deac"
-  {
-		"ru"		"Вы @greenДеактивировали @lightgreenЩит Маны@default."
-  }
-	"mana shield ac"
-  {
-		"ru"		"Вы @greenАктивировали @lightgreenЩит Маны@default с поглощением @green{1} @defaultХП."
-  }
-	"mana shield"
-  {
-		"ru"		"Щит Маной: {1}" //-
-  }
-	"mana shield end"
-  {
-		"ru"		"Время действия Вашего @lightgreenЩита Маны @defaultистекло."
-  }
-	"Defensive Stance info"
-  {
-		"ru"		"Уменьшает физический и магический полученный/нанесенный урон на 20|30%\nМожет быть включено/выключено в любое время.\nСильно увеличивает Угрозу, получаемую при нанесении урона.\nВозможна только одна активация одновременно."
-  }
-	"def stance deac"
-  {
-		"ru"		"Защитная позиция @lightgreenДеактивирована"
-  }
-	"def stance ac"
-  {
-		"ru"		"Защитная позиция @lightgreenАктивирована"
-  }
-	"Berserker Stance info"
-  {
-		"ru"		"Увеличивает получаемый урон на 10%,\nно увеличивает шанс критического удара на 6%.\nВозможна только одна активация одновременно."
-  }
-	"ber stance deac"
-  {
-		"ru"		"Стойка берсерка @lightgreenДеактивирована"
-  }
-	"ber stance ac"
-  {
-		"ru"		"Стойка берсерка @lightgreenАктивирована"
+	"ru"  "Время действия Вашего @lightgreenЩита Маны @defaultистекло."
   }
 	"Shield Wall info"
   {
@@ -1809,30 +1832,6 @@
 	"Sinister Strike info"
   {
 		"ru"		"Дает 20% шанс увеличить урон.\nУрон зависит от вашей ловкости."
-  }
-	"hamstring"
-  {
-		"ru"		"Поколечить" //-
-  }
-	"hamstring victim"
-  {
-		"ru"		"Игрок @green{1} Поколечил и @defaultзамедлил Вас, увеличил урон на @green{2}"
-  }
-	"Hamstring info"
-  {
-		"ru"		"Дает 8% шанс замедлить\nпротивника на 25% и нанести 8 урона."
-  }
-	"revenge used"
-  {
-		"ru"		"Вы применили@lightgreen Месть @defaultк @vic и нанесли ему @dmg урона."
-  }
-	"revenge got"
-  {
-		"ru"		"@att применил @lightgreenМесть @defaultк Вам и нанес Вам @dmg урона"
-  }
-	"Revenge info"
-  {
-		"ru"		"Месть отражает некоторый урон\nпри блокировании атаки.\nУрон зависит от выносливости и немного от силы."
   }
 	"Cheat Death info"
   {
@@ -7840,18 +7839,6 @@
   "adrenaline attacker glyph"
   {
     "ru"      "*** Символ Выброс Адреналина *** Вы нанесли игроку @vic @dmg урона."
-  }
-    "enrage regeneration cast with glyph"
-  {
-    "ru"    "*** Символ Безудержное Восстановление *** Вы исцелили дополнительно {1}%% от вашего максимального здоровья ({2})."
-  }
-    "improved revenge used"
-  {
-    "ru"      "Вы использовали @lightgreenУлучшенный реванш @defaultна @vic и нанесли @dmg урона"
-  }
-  "improved revenge got"
-  {
-    "ru"      "@att использовал @lightgreenУлучшенный реванш @defaultи нанес вам @dmg урона"
   }
   "corpseparty"
   {
