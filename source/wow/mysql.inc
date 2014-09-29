@@ -2869,15 +2869,15 @@ public TGetCharacterData1(Handle:db,Handle:query,String:error[],any:client)
     new String:talents[100];
     GetSQLDataStr(query,"talents",talents,sizeof(talents));
 
-    setTPoints(client, 0, GetSQLDataInt(query,"talentpoints"));
     setClientTalents_stirng(client, GetSQLDataInt(query,"class"), talents, 0);
+    setTPoints(client, 0, GetSQLDataInt(query,"talentpoints"));
 
 
     //spec 1
     GetSQLDataStr(query,"talents2",talents,sizeof(talents));
 
-    setTPoints(client, 1, GetSQLDataInt(query,"talentpoints2"));
     setClientTalents_stirng(client, GetSQLDataInt(query,"class"), talents, 1);
+    setTPoints(client, 1, GetSQLDataInt(query,"talentpoints2"));
 
 
     //validate talents

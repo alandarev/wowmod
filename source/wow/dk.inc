@@ -439,7 +439,7 @@ wcRunSpell_8_3(spellid,race,victim,client,&totaldmg) //Plague Strike
     dmgef += RoundToNearest(wcGetSpellInfoFloat(race,spellid,"multief")*GetDamage(client));
 
     new team=GetClientTeam(victim);
-    new effid=CreateEffectData(victim,client,ticks,dmgef,aoe,team,0,803,g_RoundCount);
+    new effid=CreateEffectData(victim,client,ticks,dmgef,aoe,team,0,803,g_RoundCount,GetClientDeaths(victim));
     if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
     {
       LogError("ERROR: plague strike spell corrupted.");
@@ -558,7 +558,7 @@ wcRunSpell_8_4(spellid,race,client)  { //Icy Touch
   }
 
   new team=GetClientTeam(target);
-  new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,804,g_RoundCount);
+  new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,804,g_RoundCount,GetClientDeaths(target));
   if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
   {
     LogError("ERROR: icy touch spell corrupted.");
@@ -1429,8 +1429,7 @@ wcRunSpell_8_11(spellid,race,client) //Death and decay
   dmg += RoundToNearest(GetDamage(client) * multi);
 
   //Create the hellfire like (different) effect
-  new effid=CreateEffectData(client,spellid,
-    dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount);
+  new effid=CreateEffectData(client,spellid,dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount,0);
   if (multi==0.0 || tick == 0.0 || duration == 0.0) {
     LogError("ERROR: death and decay spell corrupted.");
     DeleteEffectData(effid);

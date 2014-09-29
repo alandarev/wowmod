@@ -1898,7 +1898,7 @@ TriggerBossDrop() {
         KvJumpToKey(wcbossdrop,temp);
         new xp=KvGetNum(wcbossdrop,"xp");
         if(xp>0)
-          ServerCommand("wc_xp @all %i",xp);
+          g_BossEndXP+=xp;
         new Float:setchance=KvGetFloat(wcbossdrop,"chance");
         new Camount=KvGetNum(wcbossdrop,"amount");
 

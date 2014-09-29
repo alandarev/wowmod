@@ -750,7 +750,7 @@ public Effect1(userid,attacker)
       new tickdelay=KvGetNum(effectsdb,"tickdelay",0);
       new ticks=KvGetNum(effectsdb,"ticks",0);
       new tickdamage=KvGetNum(effectsdb,"tickdamage",0);
-      new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,0);
+      new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,0,0);
       if (tickdelay==0.0 || ticks == 0 || tickdamage == 0)
         LogError("ERROR: effects database corrupted.");
       else
@@ -876,7 +876,7 @@ public Effect4(userid,attacker, bool:fok)
     location2[2]+=40;
     new color[4]= {155,155,155,255};
     BeamEffect("@all",location,location2,g_ef_hydragutbeampoison,5,3.0,5.0,9.0,color,0.0,5);
-    new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid]);
+    new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid],GetClientDeaths(userid));
     if (tickdelay==0.0 || ticks == 0 || tickdamage == 0)
     {
       LogError("ERROR: effects database corrupted.");
@@ -912,6 +912,11 @@ public Action:EffectFlameShockAction(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   if (!IsPlayerAlive(effectsdata[effid][1]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if(effectsdata[effid][10]<GetClientDeaths(effectsdata[effid][1]))
   {
     DeleteEffectData(effid);
     return Plugin_Stop;
@@ -956,6 +961,11 @@ public Action:EffectAoeDamage(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   if (!IsPlayerAlive(effectsdata[effid][1])) //victim
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if(effectsdata[effid][10]<GetClientDeaths(effectsdata[effid][1]))
   {
     DeleteEffectData(effid);
     return Plugin_Stop;
@@ -1173,6 +1183,11 @@ public Action:EffectRenewAction(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
+  if(effectsdata[effid][10]<GetClientDeaths(effectsdata[effid][1]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
   if (ticks<=0)
   {
     DeleteEffectData(effid);
@@ -1200,6 +1215,11 @@ public Action:EffectLifeDrainAction(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   if (!IsPlayerAlive(effectsdata[effid][1]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
+  if(effectsdata[effid][10]<GetClientDeaths(effectsdata[effid][1]))
   {
     DeleteEffectData(effid);
     return Plugin_Stop;
@@ -1583,6 +1603,11 @@ public Action:Effect4Action(Handle:timer, any:effid)
     DeleteEffectData(effid);
     return Plugin_Stop;
   }
+  if(effectsdata[effid][10]<GetClientDeaths(effectsdata[effid][1]))
+  {
+    DeleteEffectData(effid);
+    return Plugin_Stop;
+  }
   if (effectsdata[effid][3]<=0)
   {
     SetPoisoned(effectsdata[effid][1],0);
@@ -1637,7 +1662,7 @@ public Action:Effect4Action(Handle:timer, any:effid)
 }
 
 
-public CreateEffectData(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9)
+public CreateEffectData(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9,tmp10)
 {
   for (new i=1;i<=299;i++)
   {
@@ -1654,6 +1679,7 @@ public CreateEffectData(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9)
       effectsdata[i][7]=tmp7;
       effectsdata[i][8]=tmp8;
       effectsdata[i][9]=tmp9;
+      effectsdata[i][10]=tmp10;
       return i;
     }
   }
@@ -3084,7 +3110,7 @@ public Effect38(client, &damage)                                                
   wcGetTalentInfo(6,2,3,1,client,"chance",line);
   new chance = StringToInt(line);
   new random = GetRandomInt(1,100);
-  if (chance >= random)
+  if (chance >= random && SpendShamanisticProc(client))
   {
     wcGetTalentInfo(6,2,3,1,client,"multi",line);
     new Float:mana=StringToFloat(line);
@@ -3142,7 +3168,7 @@ public Effect40(userid,attacker)
     new color[4]= {196,16,6,95};
     BeamEffect("@all",location,location2,g_ef_hydragutbeam,5,3.0,5.0,9.0,color,5.0,0);
     // end of visual effect
-    new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid]);
+    new effid=CreateEffectData(userid,attacker,ticks,tickdamage,0,0,0,0,g_respawns[userid],GetClientDeaths(userid));
     if (tickdelay==0.0 || ticks == 0 || tickdamage == 0)
     {
       LogError("ERROR: effects database corrupted.");
@@ -3563,7 +3589,7 @@ public Effect51(client,damage,victim,bonushit) //Adrenaline Strike with Glyph
   if(bonushit==0)
   {
     new Float:range = 225.0;
-    damage = RoundToNearest(damage*0.30);
+    damage = RoundToNearest(damage*0.20);
     new Float:location[3];
     GetClientAbsOrigin(victim,location);
     new target[2];

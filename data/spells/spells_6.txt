@@ -32,8 +32,8 @@
     "chance"  "11"
     "level" "24"
     "cost" "75"
-    "mana"  "22"
-    "manainc" "0.38"
+    "mana"  "13"
+    "manainc" "0.25"
     "multi" "0.18"
     "base" "5"
     "tickdelay" "2.0"
@@ -90,7 +90,7 @@
     "cooldowntype"  "1"
     "cooldown"  "8.0"
     "mana"  "25"
-    "manainc" "0.75"
+    "manainc" "0.55"
     "multi" "0.65"
     "multiar"   "0.5"
   }
@@ -170,17 +170,17 @@
     "cooldown"  "15.0"
     "mana"  "47"
     "manainc" "1"
-    "multi" "0.66"
+    "multi" "0.62"
     "base"  "15"
     "distance"  "850"
   }
-  "12"              //increases armor by 1 per agi
-  {
-    "name"    "Agile Defence"
-    "name_ru" "TODO"
-    "event"   "player_spawn"
-    "level"   "12"
-  }
+//  "12"              //increases armor by 1 per agi
+//  {
+//    "name"    "Agile Defence"
+//    "name_ru" "TODO"
+//    "event"   "player_spawn"
+//    "level"   "12"
+//  }
   "13"
   {
     "name"    "Dual Wielding Shaman"

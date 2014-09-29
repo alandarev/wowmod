@@ -325,6 +325,10 @@ KpdRule(client, damage, type=1, level=0) {
   if(IsBoss() || IsHNS() || IsDmEnabled()) // not supposed to be active during DM right?
     return damage;
 
+  if(IsZombie(client))  {
+    return damage;
+  }
+
   if(playerloaded[client]!=1)
     return damage;
   //if(PlayersInTeams(true) >= 24)
@@ -344,25 +348,25 @@ KpdRule(client, damage, type=1, level=0) {
   switch(type)  {
     case 1: //physical dmg
     {
-      multi = 1.0 - kpd * 0.33; //reduce
-      if(multi < 0.3)
-        multi = 0.3;
+      multi = 1.0 - kpd * 0.15; //reduce
+      if(multi < 0.6)
+        multi = 0.6;
     }
     case 2: //damage taken
     {
-      multi = 1.0 + kpd * 0.33; //increase
+      multi = 1.0 + kpd * 0.35; //increase
     }
     case 3: //magic damage
     {
-      multi = 1.0 - kpd * 0.33; //reduce
-      if(multi < 0.3)
-        multi = 0.3;
+      multi = 1.0 - kpd * 0.12; //reduce
+      if(multi < 0.65)
+        multi = 0.65;
     }
     case 4: //healing taken
     {
-      multi = 1.0 - kpd * 0.25; //reduce
-      if(multi < 0.25)
-        multi = 0.25;
+      multi = 1.0 - kpd * 0.15; //reduce
+      if(multi < 0.5)
+        multi = 0.5;
     }
   }
   return RoundToNearest(float(damage)*multi);

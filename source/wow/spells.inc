@@ -661,7 +661,7 @@ public wcRunSpell_6_3(spellid,race,victim,attacker) //Flame Shock
       new ticks=StringToInt(line);
       ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(attacker)));
       tickdelay = tickdelay*(1.0-GetHasteEffect(attacker));
-      new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,1,g_RoundCount);
+      new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,1,g_RoundCount,GetClientDeaths(victim));
       g_iFlameShock[victim]+=1;
       new Handle:datapack=CreateDataPack();
       WritePackCell(datapack,victim);
@@ -981,17 +981,17 @@ public Action:RemoveArmorTimer(Handle:timer, Handle:pack) {
 public wcRunSpell_6_7(spellid,race,client)
 {
 
-  //if(IsBoss())  
-  //{ //Has mana cost now, it's k
-  //  WCMessage(client, "boss spell blocked", client);
-  //  return;
-  //}
+  if(IsBoss())
+  {
+    WCMessage(client, "boss spell blocked", client);
+    return;
+  }
 
   if(!bMagicDamage[client])
   {
     new manareq = GetSpellCost(client, spellid);
     wcSetMana(client,GetMana(client)-manareq);
-    new Float:pen = float(GetIgnoreArmor(client)) / 4.5;
+    new Float:pen = float(GetBonusAgi(client)+GetAgi(client)) / 11.0;
     WCMessage(client,"rockbiter cast",client,pen);
     bMagicDamage[client]=true;
   }
@@ -1096,13 +1096,13 @@ public wcRunSpell_1_6(spellid,race,victim,attacker,totaldmg) //Revenge
   new Float:multi=StringToFloat(line);
   wcGetSpellInfo(race,spellid,"base",line);
   new Float:base=StringToFloat(line);
-  
+
   if (GetBoss(attacker)>0)
   {
     wcGetSpellInfo(race,spellid,"threat",line);
     AddThreat(victim,StringToInt(line));
   }
-  
+
   decl String:vicMsg[300], String:attMsg[300];
   if (wcGetTalentLevel(victim,1,1,3)>0)
   {
@@ -1118,11 +1118,11 @@ public wcRunSpell_1_6(spellid,race,victim,attacker,totaldmg) //Revenge
     Format(vicMsg,sizeof(vicMsg),"%T","revenge got", attacker);
     Format(attMsg,sizeof(attMsg),"%T","revenge used", victim);
   }
-  
+
   new dmg = RoundToNearest(
     base +
     ( float(GetDamage(victim)) * 0.12 +
-      float(GetSta(victim)+GetBonusSta(victim)) * 0.13   ) * 
+      float(GetSta(victim)+GetBonusSta(victim)) * 0.13   ) *
     multi);
   wcPhysicalDamage(attacker,victim,dmg,attMsg,vicMsg, true);
 }
@@ -1254,7 +1254,7 @@ public wcRunSpell_1_12(spellid,race,client)
 
   SetEffectVictim(client,13);
   SetEffectSpellVic(client,13);
-  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     effectsdata[effid][7]=WallEffect(client);
@@ -1603,7 +1603,7 @@ public wcRunSpell_3_2(spellid,race,client) //Frost Nova
       newspeed*=slowmulti;
       if(newspeed<oldspeed)
       {
-        new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100));
+        new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100),0);
         SetClientSpeed(targets[x],newspeed);
         SetFrostNovaFreezeDmg(targets[x],breakdmg);
         SetFrostNovaFreeze(targets[x],effid2);
@@ -1835,7 +1835,10 @@ public Action:ResurrectionEffect(Handle:timer, any:client)
   new hp = GetMaxHealth(client);
   hp = RoundToNearest(float(hp) * 0.5);
   new mn = GetMaxMana(client);
-  mn = RoundToNearest(float(mn) * 0.5);
+  if(!IsBoss())
+    mn = RoundToNearest(float(mn) * 0.5);
+  if(IsBoss())
+    mn = RoundToNearest(float(mn) * 0.15);
   wcSetHealth(client,hp);
   wcSetMana(client,mn);
   SetEntProp(client, Prop_Send, "m_ArmorValue", 100, 1);
@@ -3354,7 +3357,7 @@ public wcRunSpell_5_9(spellid,race,client)
 
   //Setting up effect
   new team=GetClientTeam(client);
-  new effid=CreateEffectData(client,spellid,RoundToNearest(perc*10.0),0,aoe,team,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,RoundToNearest(perc*10.0),0,aoe,team,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     effectsdata[effid][7]=SpawnHymn(client);
@@ -3389,7 +3392,7 @@ public wcRunSpell_7_1(spellid,race, target,client,bool:nightfall)
         new Float:duration = StringToFloat(line);
         SetHMT(target,duration);
       }
-      
+
       wcGetSpellInfo(race,spellid,"basedmg",line);
       new basedmg=StringToInt(line);
       wcSetMana(client,GetMana(client)-manareq);
@@ -3417,7 +3420,7 @@ public wcRunSpell_7_1(spellid,race, target,client,bool:nightfall)
         new breakdmg = RoundToNearest(2000.0);
         new Float:tickdelay=0.50;
         new ticks = RoundToNearest(6.0);
-        new effid=CreateEffectData(target,client,ticks,0,breakdmg,0,0,race,g_RoundCount);
+        new effid=CreateEffectData(target,client,ticks,0,breakdmg,0,0,race,g_RoundCount,0);
         if(effid!=0)
         {
           SetFearDmg(target,breakdmg);
@@ -3557,7 +3560,7 @@ public Action:HaniGlyphFearThing(Handle:timer, any:effid)
       new talentbonusrange=StringToInt(line);
       wcGetSpellInfo(race,spellid,"aoe",line);
       aoe=StringToInt(line)+talentbonusrange;
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount,GetClientDeaths(target));
       if(effid!=0)
         {
           CreateTimer(tickdelay, EffectAoeDamage, effid, TIMER_REPEAT);
@@ -3621,7 +3624,7 @@ public wcRunSpell_7_3(spellid,race, target,client)
       wcGetSpellInfo(race,spellid,"aoe",line);
       new aoe=StringToInt(line)+talentbonusrange;
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,3,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,3,g_RoundCount,GetClientDeaths(target));
       if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
       {
         LogError("ERROR: immolate spell corrupted.");
@@ -3740,7 +3743,7 @@ public wcRunSpell_7_4(spellid,race,client) //Fear Spell
     if(UnableToAttack[targets[x]])
     continue;
 
-    new effid=CreateEffectData(targets[x],client,ticks,power,breakdmg,0,RoundToNearest(ticks*0.5),race,g_RoundCount);
+    new effid=CreateEffectData(targets[x],client,ticks,power,breakdmg,0,RoundToNearest(ticks*0.5),race,g_RoundCount,0);
     if (tickdelay==0.0 || ticks == 0)
     {
       LogError("ERROR: fear spell corrupted.");
@@ -4015,7 +4018,7 @@ public wcRunSpell_7_7(spellid,race,client)
       wcGetSpellInfo(race,spellid,"aoe",line);
       new aoe=StringToInt(line)+talentbonusrange;
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,0,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,0,g_RoundCount,GetClientDeaths(target));
       if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
       {
         LogError("ERROR: immolate spell corrupted.");
@@ -4115,7 +4118,7 @@ public wcRunSpell_7_8(spellid,race,client) //metamorphosis
       new Float:power = StringToFloat(line);
       power = power * (400.0 / (150.0 + GetDistanceBetween(locationb,loc2)));
       if(GetBoss(targets[x])<=0 || (!IsBoss()) )
-        PushPlayerTowardsPlayer(targets[x], client, power, zPower);
+        PushPlayerAwayPlayer(targets[x], client, power, zPower);
     }
   }
   if(wcGetTalentLevel(client,2,2,2)>0) {
@@ -4174,7 +4177,7 @@ public wcRunSpell_7_9(spellid,race,client)
   //Setting up effect
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,spellid,dmg,selfDmg,aoe,team,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,dmg,selfDmg,aoe,team,0,0,g_RoundCount,0);
   if (multi==0.0 || period == 0.0 || castTime == 0.0) {
     LogError("ERROR: hellfire spell corrupted.");
     DeleteEffectData(effid);
@@ -4265,7 +4268,7 @@ public wcRunSpell_4_2(spellid,race,client)
   UnableToAttack[client]=true;
   UnableToVictim[client]=true;
 
-  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,16,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     effectsdata[effid][7]=BubbleEffect(client);
@@ -4463,7 +4466,7 @@ public wcRunSpell_4_8(spellid,race,client) //Judgement(Judgment)
           new heal = RoundToNearest(dmg*StringToFloat(line));
           heal=wcHeal(client,client,heal,0,true);
         }
-          
+
         decl String:vicMsg[300], String:attMsg[300];
         Format(vicMsg,sizeof(vicMsg),"%T","judge command target", target);
         Format(attMsg,sizeof(attMsg),"%T","judge command caster", client);
@@ -5189,7 +5192,7 @@ wcRunSpell_6_9(spellid,race,client) {
   //Setting up effect
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,spellid,dmg,0,aoe,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,dmg,0,aoe,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new iTotem = -1;
@@ -5394,7 +5397,17 @@ bool:TryCast(client, spellid, bool:auto=false, victim=0)  {
   new manareq = GetSpellCost(client, spellid);
   if(mana < manareq)  {
     if(!auto)
-    WCMessage(client,"no mana",client);
+    {
+      new class = GetClass(client);
+      if(class==1)
+        WCMessage(client,"no rage",client);
+      if(class==2 || class==9)
+        WCMessage(client,"no energy",client);
+      if(class==3 || class==4 || class==5 || class==6 || class==7)
+        WCMessage(client,"no mana",client);
+      if(class==8)
+        WCMessage(client,"no runic",client);
+    }
     return false;
   }
 
@@ -5757,11 +5770,18 @@ RunSealsHit(attacker,victim,&damage,prio,Float:weaponmodifier,bool:crit, bool:sp
     new random = GetRandomInt(1,100);
     if(chance>=random)
     {
-      new mana = damage+GetMana(attacker);
-      if(mana>GetMaxMana(victim))
-      mana=GetMaxMana(victim);
-      wcSetMana(attacker,mana);
-      damage=0;
+      new oldmana = GetMana(victim);
+      new mana = GetMana(victim)-damage;
+      if(mana>0)
+      {
+        wcSetMana(victim,mana);
+        damage=0;
+      }
+      else
+      {
+        wcSetMana(victim,0);
+        damage=damage-oldmana;
+      }
       AddEMsgAff("seal of truth", true);
     }
   }
@@ -5775,7 +5795,7 @@ RunSealsHit(attacker,victim,&damage,prio,Float:weaponmodifier,bool:crit, bool:sp
 
 
 stock Renew(caster, target, heal, ticks, cancrit, Float:delay) {
-  new effid = CreateEffectData(caster, target, ticks, heal, cancrit, 0, 0, 0, g_RoundCount);
+  new effid = CreateEffectData(caster, target, ticks, heal, cancrit, 0, 0, 0, g_RoundCount,GetClientDeaths(target));
   if(effid!=0)
   {
     CreateTimer(delay, EffectRenewAction, effid, TIMER_REPEAT);
@@ -5924,7 +5944,7 @@ public wcRunSpell_3_11(spellid,race,client,attacker, &totaldmg)
   SetIceBlocks(client, 3);
 
   // removing anti victim
-  new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
     CreateTimer(duration/3.0, EffectIceBlock, effid, TIMER_REPEAT);
@@ -6126,7 +6146,7 @@ public wcRunSpell_2_12(spellid,race,client) //Blind
   if(!UnableToAttack[target]) {
 
 
-    new effid=CreateEffectData(target,client,ticks,power,0,0,0,race,g_RoundCount);
+    new effid=CreateEffectData(target,client,ticks,power,0,0,0,race,g_RoundCount,0);
     new color2[4]={203,55,149,255};
     FadeEffect(target,2,300,50,color2);
     new Float:dur=tickdelay*float(ticks);
@@ -6245,24 +6265,23 @@ public wcRunSpell_1_15(spellid,race,client)
   new cdtype=StringToInt(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line);
-  new manareq = GetSpellCost(client, spellid);
-  wcSetMana(client,GetMana(client)-manareq);
-  SetCdSpell(client, cdtype, cd, spellid);
+  new manareq = 15;
+  if(HasGlyph(client, GLYPH_WARRIOR_LEAP))
+    manareq = 0;
+  if(GetMana(client)>=manareq)
+  {
+    wcSetMana(client,GetMana(client)-manareq);
+    SetCdSpell(client, cdtype, cd, spellid);
 
-  new Float:power = wcGetSpellInfoFloat(race, spellid, "power");
-  new Float:zPower = wcGetSpellInfoFloat(race, spellid, "zpower");
+    new Float:power = wcGetSpellInfoFloat(race, spellid, "power");
+    new Float:zPower = wcGetSpellInfoFloat(race, spellid, "zpower");
 
-  HookLand(client);
+    HookLand(client);
 
-  PushPlayerView(client, power, zPower);
-  if(HasGlyph(client, GLYPH_WARRIOR_LEAP))  {
-
-    wcGetSpellInfo(race,1,"cooldown",line);
-    cd = StringToFloat(line);
-    wcGetSpellInfo(race,spellid,"glyph",line);
-    cd *= (1.0-StringToFloat(line));
-    SetCdSpell(client, 1, GetCDSpell(client, 1) - GetTickedTime() -cd, 2); //Whirlwind cd reduced
+    PushPlayerView(client, power, zPower);
   }
+  else
+    WCMessage(client,"no rage",client);
 }
 
 new bool:g_ff_hookland[65];
@@ -6497,7 +6516,7 @@ wcRunSpell_6_10(spellid,race,client) {
   //Setting up effect
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,spellid,any:multi,0,aoe,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,spellid,any:multi,0,aoe,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new iTotem = -1;
@@ -6535,11 +6554,11 @@ wcRunSpell_6_11(spellid,race,client,bool:echo=false) //Healing Rain
     new manareq = GetSpellCost(client, spellid);
     wcSetMana(client,GetMana(client)-manareq);
     SetCdSpell(client, cdtype, cd, spellid);
-    
+
   }
   wcGetTalentInfo(6,2,3,2,client,"chance",line);
   new echochance = StringToInt(line);
-  if(echochance>=GetRandomInt(1,100)) 
+  if(echochance>=GetRandomInt(1,100))
   {
     wcRunSpell_6_11(spellid,race,client,true);
     WCMessage(client,"Echo of the Elements activate",client);
@@ -6664,14 +6683,36 @@ wcRunSpell_7_10(spellid,race,victim,client,&totaldmg)
     {
       decl String:line[255];
       wcGetTalentInfo(7,2,1,4,client,"miss",line);
-      SetMiss(victim,StringToInt(line));
+      new missA=StringToInt(line);
+      wcGetTalentInfo(7,2,1,4,client,"duration",line);
+      new Float:time=StringToFloat(line);
+      SetMiss(victim,missA);
       SetEffectAttacker(victim,54); // Miss effect
+      new Handle:datapack2=CreateDataPack();
+      WritePackCell(datapack2,victim); // Write the client index of owner
+      WritePackCell(datapack2,missA);
+      CreateTimer(time,RemoveMiss,datapack2,TIMER_HNDL_CLOSE);
     }
     AddEMsgAff("curse", true);
 
 
   }
   return totaldmg;
+}
+public Action:RemoveMiss(Handle:timer, Handle:datapack)
+{
+  ResetPack(datapack); // Set the reading position to the first cell
+  new client=ReadPackCell(datapack);  // Get the client index of owner
+  new amount =ReadPackCell(datapack);
+  if (!IsClientInGame(client))
+  {
+    return Plugin_Stop;
+  }
+  if(GetMiss(client)>amount)
+    SetMiss(client,(GetMiss(client)-amount));
+  else
+    SetMiss(client,0);
+  return Plugin_Stop;
 }
 
 new Float:g_fDamageBuff[65][2];
@@ -6791,7 +6832,7 @@ public wcRunSpell_7_2(spellid,race,client) //Soul Harvest
     return;
   else
     wcSetMana(client,GetMana(client)-mana);
-  
+
   //Cooldown
   new cdtype=wcGetSpellInfoInt(race,spellid,"cooldowntype");
   new Float:cd=wcGetSpellInfoFloat(race,spellid,"cooldown");
@@ -6809,7 +6850,7 @@ public wcRunSpell_7_2(spellid,race,client) //Soul Harvest
     WCMessage(pet,"soul harvest pet",pet,multi*100.0);
     RestoreHealthP(pet,multi);
   }
-  else 
+  else
   {
     WCMessage(client,"soul harvest caster",client,multi*100.0);
   }
@@ -6846,15 +6887,6 @@ wcRunSpell_6_12(client)
   SetBonusArmor(client, float(GetBonusArmor(client)+bonus));
   wcRecalculateStats(client);
   WCMessage(client,"agile defence effect",client,bonus,GetArmor(client));
-  if(CheckRequirements(client,6,2,4,2))
-  {
-    decl String:line[255];
-    wcGetTalentInfo(6,2,4,2,client,"multi",line);
-    new Float:multi=StringToFloat(line);
-    new resbonus=RoundToNearest(float(bonus)*multi);
-    wcClientsBonusStats[client][RESISTANCE]+=resbonus;
-    wcRecalculateStats(client);
-  }
 }
 
 stock SoulHarvestEffect(client)

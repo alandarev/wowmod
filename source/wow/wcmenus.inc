@@ -2332,7 +2332,7 @@ public MenuAuctionReadHandle(Handle:menu_auction,MenuAction:action,client,slot)
 public ClearMailMenu(client)
 {
   ClientMailQueue[client]=0;
-  for(new x=1;x<=50;x++)
+  for(new x=0;x<=50;x++)
   {
     ClientMailDataId[client][x]=0;
     ClientMailTime[client][x]=0;
@@ -2467,7 +2467,7 @@ MailMenuDisplay(client)
    Format(buffer,sizeof(buffer),"%T","send message",client);
    AddMenuItem(menu_mail,"0",buffer);
    new String:id[20];
-   for(new x=0;x<50;x++)  if(ClientMailDataId[client][x]>0)
+   for(new x=0;x<=50;x++)  if(ClientMailDataId[client][x]>0)
    {
     //LogMessage("mail id = %i",mailIds[x]);
     IntToString(ClientMailDataId[client][x],id,sizeof(id));
@@ -2872,6 +2872,7 @@ public MenuSendMail(client)
   SetMenuExitBackButton(menu_mail,false);
   decl String:title[255];
   new String:buffer[255];
+  new String:buffer2[255]; //bb
   Format(title,sizeof(title),"%T","wc mail send mod",client);
   SetMenuTitle(menu_mail,title);
   switch(x)
@@ -2907,6 +2908,8 @@ public MenuSendMail(client)
       Format(buffer,sizeof(buffer),"%T","mail topic name",client,topic);
       AddMenuItem(menu_mail,"0",buffer,ITEMDRAW_DISABLED);
       Format(buffer,sizeof(buffer),"%T","type gold",client);
+      Format(buffer2, sizeof(buffer2), "\nYour silver: %d.", GetMoney(client)); //bb
+      StrCat(buffer, sizeof(buffer), buffer2);
       AddMenuItem(menu_mail,"gold",buffer);
     }
     case 3:
@@ -2925,6 +2928,10 @@ public MenuSendMail(client)
       Format(buffer,sizeof(buffer),"%T","mail gold",client,gold);
       AddMenuItem(menu_mail,"0",buffer,ITEMDRAW_DISABLED);
       Format(buffer,sizeof(buffer),"%T","type real",client);
+      decl String:sReal[20];
+      IntToStringfloat(GetGold(client), sReal, sizeof(sReal));
+      Format(buffer2, sizeof(buffer2), "\nYour gold: %s.", sReal); //bb
+      StrCat(buffer, sizeof(buffer), buffer2);
       AddMenuItem(menu_mail,"real",buffer);
     }
     case 4:

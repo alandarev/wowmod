@@ -582,7 +582,6 @@ getTPoints(client, spec)
 checkTalentPoints(client) {
   new shouldHave = getMaxTalents(GetLevel(client));
   for(new spec=0;spec<2;spec++) {
-
     new ttpoints=getTPoints(client, spec);
     ttpoints+=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
 
@@ -590,17 +589,9 @@ checkTalentPoints(client) {
       new diff = ttpoints - shouldHave;
       if(getTPoints(client, spec) < diff) {
         wcResetTalents(client, spec, true); //true to prevent weapon loss since it's on loading
-        LogMessage("fixed talent points for character %d spec %d. Too few", characterids[client][0], spec);
+        LogMessage("fixed talent points for character %d spec %d. With reset of talents", characterids[client][0], spec);
       }
 
-      if(getTPoints(client, spec) >= diff)  {
-        setTPoints(client, spec, getTPoints(client, spec)-diff);
-        LogMessage("fixed talent points for character %d spec %d. Too many", characterids[client][0], spec);
-        return;
-      }
-
-      else
-        LogError("Error #368 in talents logics");
     }
     if(ttpoints < shouldHave)
     {
@@ -608,18 +599,34 @@ checkTalentPoints(client) {
       setTPoints(client,spec,shouldHave);
       LogMessage("fixed talent points for character %d spec %d. Too few", characterids[client][0], spec);
     }
+    setTPoints(client, spec, getTPoints(client, spec));
   }
 }
 
 setTPoints(client, spec, points)
 {
-  g_ff_tpoints[client][spec]=points;
+  new shouldHave = getMaxTalents(GetLevel(client));
+  new ttpoints=wcGetTreeTotal(client, spec, 1)+wcGetTreeTotal(client, spec, 2)+wcGetTreeTotal(client, spec, 3);
+
+  new apply = shouldHave - ttpoints;
+  if (apply < 0)  {
+    apply = 0;
+  }
+
+  if (points+ttpoints != shouldHave && !IsFakeClient(client)) {
+    LogError("[WC] Trying to set wrong amount of points. Client %d, characterId %d, spec = %d. Must %d, setting %d. Correcting to %d",
+            client, characterids[client][0], spec, shouldHave, points + ttpoints, apply);
+  }
+  g_ff_tpoints[client][spec] = apply;
 }
 
 
 
 stock wcGetTreeTotal(client, spec, tree)
 {
+  decl String:buffer[255];
+
+  getClientTalents_string(client, spec, buffer, 255);
   new treetotal = 0;
   for(new i=0; i<10; i++)
   {
@@ -788,8 +795,8 @@ wcRunOnDeathTalents(victim,attacker)
       }
       case 2:
       {
-        if(CheckRequirements(attacker,2,2,4,1))
-          wcRunTalent_2_KillingSpree(attacker);
+        //if(CheckRequirements(attacker,2,2,4,1))
+          //wcRunTalent_2_KillingSpree(attacker);
         //if(CheckRequirements(attacker,2,3,3,2))
           //wcRunTalent_2_MurderousIntent(attacker);
         if(HasGlyph(attacker, GLYPH_ROGUE_SSTEP))
@@ -948,6 +955,8 @@ public wcRunPassiveTalents(client)
         wcRunTalent_6_NaturesPower(client);
       if(CheckRequirements(client,6,2,1,4))
         wcRunTalent_6_FeralForm(client);
+      if(CheckRequirements(client,6,2,4,2))
+        wcRunTalent_6_AncestorsProtection(client); //Natures Protection
     }
     case 7:
     {
@@ -986,7 +995,7 @@ public wcRunPassiveTalents(client)
         SetHealingBonus(client, GetHealingBonus(client)+0.25);
       if(CheckRequirements(client,9,1,1,4))
         wcRunTalent_9_1_1_4(client); //Parry Control
-      
+
     }
   }
 }
@@ -1451,7 +1460,8 @@ public Action:EndLastStand(Handle:timer, Handle:datapack)
     {
       SetBonusMaxHealth(client, oldhp);
       wcRecalculateStats(client);
-      WCMessage(client,"Deactivate Last Stand",client);
+      if(GetClass(client)==1)
+        WCMessage(client,"Deactivate Last Stand",client);
       multi*=-1;
       RestoreHealthP(client,multi);
     }
@@ -1961,7 +1971,7 @@ wcRunTalent_1_DeepWounds(attacker,victim,damage)
     new Float:tickdelay=StringToFloat(line);
     if (dmgef==0)
       dmgef = 1;
-    new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_respawns[victim]);
+    new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_respawns[victim],0);
     if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
     {
       LogError("ERROR: deepwounds talent corrupted.");
@@ -2132,7 +2142,7 @@ public wcRunTalent_2_2(client)                                                  
   new Handle:datapack4=CreateDataPack();
   WritePackCell(datapack4,client);
   CreateTimer(duration,EndAdrenalineRush,datapack4,TIMER_HNDL_CLOSE);
-  new effid=CreateEffectData(client,ticks,mana,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,ticks,mana,0,0,0,0,0,g_RoundCount,0);
   CreateTimer(delay, AdrenalineMana, effid, TIMER_REPEAT);
   SetCdSpell(client,cdtype,cd, 0, "Adrenaline Rush");
   if(HasGlyph(client, GLYPH_ROGUE_RUSH))  {
@@ -2373,7 +2383,7 @@ wcRunTalent_2_ReinforcedLeather(client)
   }
 }*/
 
-wcRunTalent_2_KillingSpree(client)
+/*wcRunTalent_2_KillingSpree(client)
 {
   new rweapon = GetEntDataEnt2(client, ACTIVEWEAPON);
   if(!IsValidEntity(rweapon))
@@ -2438,7 +2448,7 @@ wcRunTalent_2_KillingSpree(client)
     ammo+=clip;
     SetEntData(rweapon, CLIPOFFSET, ammo, 4, true);
   }
-}
+}*/
 
 /*wcRunTalent_2_MurderousIntent(client)
 {
@@ -2684,7 +2694,7 @@ public wcRunTalent_3_2(client)                                                  
       wcGetTalentInfo(3,2,3,1,client,"range",line);
       new aoe=StringToInt(line);
 
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,1,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,0,1,g_RoundCount,GetClientDeaths(target));
       if(effid!=0)
       {
         CreateTimer(tickdelay, EffectAoeDamage, effid, TIMER_REPEAT);
@@ -2879,7 +2889,7 @@ public wcRunTalent_3_11(attacker,victim,damage,Float:damagemulti)
   new Float:tickdelay=StringToFloat(line);
   ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(attacker)));
   tickdelay = tickdelay*(1.0-GetHasteEffect(attacker));
-  new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_RoundCount);
+  new effid=CreateEffectData(victim,attacker,ticks,dmgef,0,0,0,2,g_RoundCount,0);
   if (dmgef==0)
     dmgef = 1;
   if (tickdelay==0.0 || ticks == 0 || dmgef == 0)
@@ -2997,7 +3007,7 @@ wcRunTalent_3_ShatteredBarrier(client)
     newspeed*=slowmulti;
     if(newspeed<oldspeed)
     {
-      new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100));
+      new effid2=CreateEffectData(targets[x],RoundToNearest(slowtime/ticktime),0,0,0,0,0,0,RoundToNearest(oldspeed*100),0);
       SetClientSpeed(targets[x],newspeed);
       SetFrostNovaFreezeDmg(targets[x],breakdmg);
       SetFrostNovaFreeze(targets[x],effid2);
@@ -3132,10 +3142,9 @@ wcRunTalent_3_Blizzard(client)  {
   GetViewPoint(client, distance, location);
 
   new dmg = base + GetSpellDmg(client, multi);
-  PrintToServer("ticks: %d", RoundToNearest(duration / tick) );
 
   //Create the hellfire like (different) effect
-  new effid=CreateEffectData(client,_:slow,dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount);
+  new effid=CreateEffectData(client,_:slow,dmg,RoundToNearest(duration / tick),team,_:location[0],_:location[1],_:location[2],g_RoundCount,0);
   if (multi==0.0 || tick == 0.0 || duration == 0.0) {
     LogError("ERROR: blizzard talent corrupted.");
     DeleteEffectData(effid);
@@ -3938,7 +3947,7 @@ wcRunTalent_4_DivineInt(client, &damage)
       {
         new Float:duration = 30.0;
         SetIceBlocks(client, 1);
-        new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount);
+        new effid=CreateEffectData(client,2,2,0,0,0,0,0,g_RoundCount,0);
         if(effid!=0)
         {
           CreateTimer(duration/1.0, EffectIceBlock, effid, TIMER_REPEAT);
@@ -4074,7 +4083,7 @@ public wcRunTalent_5_1(client)                                                  
 
 
 
-  new effid=CreateEffectData(client,26,10,0,0,0,0,0,g_RoundCount);
+  new effid=CreateEffectData(client,26,10,0,0,0,0,0,g_RoundCount,0);
   if(effid!=0)
   {
       effectsdata[effid][7]=PainEffect(client);
@@ -4977,7 +4986,7 @@ wcRunTalent_5_LightWell(client)
   GetClientAbsOrigin(client,location);
   //Setting up effect
   new team=GetClientTeam(client);
-  new effid=CreateEffectData(client,cdtype,heal,RoundToNearest(location[0]),aoe,team,RoundToNearest(location[1]),RoundToNearest(location[2]),g_RoundCount);
+  new effid=CreateEffectData(client,cdtype,heal,RoundToNearest(location[0]),aoe,team,RoundToNearest(location[1]),RoundToNearest(location[2]),g_RoundCount,0);
   new Float:center[3];
   GetClientAbsOrigin(client, center);
   center[2]+=25.0;
@@ -5160,7 +5169,7 @@ wcRunTalent_5_MindFlay(client)
       ticks = ticks+RoundToFloor(float(ticks)*(GetHasteEffect(client)));
       tickdelay = tickdelay*(1.0-GetHasteEffect(client));
 
-      new effid=CreateEffectData(target,client,ticks,dmgef,0,0,0,0,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,0,0,0,0,g_RoundCount,0);
       if(effid!=0)
       {
         CreateTimer(tickdelay, EffectMindFlayAction, effid, TIMER_REPEAT);
@@ -5248,9 +5257,15 @@ public Action:EndElementalFury(Handle:timer, Handle:datapack)
 */
 
 new Float:g_fShamanisticRage[65];
-stock SetShamanisticRage(client, Float:duration)  {
+new g_iShamanisticRageProcs[65];
+stock SetShamanisticRage(client, Float:duration, procs)  {
   g_fShamanisticRage[client] = GetTickedTime() + duration;
+  g_iShamanisticRageProcs[client] = procs;
 }
+stock bool:SpendShamanisticProc(client) {
+  return (g_iShamanisticRageProcs[client]-- > 0);
+}
+
 stock bool:HasShamanisticRage(client)  {
   return (GetTickedTime() < g_fShamanisticRage[client]);
 }
@@ -5264,6 +5279,9 @@ public wcRunTalent_6_3(client)                                                  
   new Float:cd=StringToFloat(line);
   wcGetTalentInfo(6,2,3,1,client,"duration",line);
   new Float:duration=StringToFloat(line);
+  wcGetTalentInfo(6,2,3,1,client,"procs",line);
+  new procs=StringToInt(line);
+
   new manareq = GetTalentCost(client, 2, 3, 1);
   wcSetMana(client,GetMana(client)-manareq);
   SetCdSpell(client,cdtype,cd, 0, "Shamanistic Rage");
@@ -5287,7 +5305,7 @@ public wcRunTalent_6_3(client)                                                  
   new Float:location[3];
   GetClientAbsOrigin(client, location);
   EmitAmbientSound("wc/spells/shamanisticrage.wav",location);
-  SetShamanisticRage(client, duration);
+  SetShamanisticRage(client, duration, procs);
   if(HasGlyph(client, GLYPH_SHAMAN_RAGE) && HasShamanisticRage(client))
   {
     new Float:oldspeed=GetClientSpeed(client);
@@ -5871,7 +5889,7 @@ wcRunTalent_6_LightningNovaTotem(client)  {
 
   new team=GetClientTeam(client);
   team = (team-1) % 2 + 2;
-  new effid=CreateEffectData(client,0,dmg,0,aoe,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,0,dmg,0,aoe,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new iTotem = -1;
@@ -6191,7 +6209,7 @@ public wcRunTalent_7_3(client)                                                  
     new Float:reduction = GetSpellReduction(target,0.0);
     if(HasGlyph(client, GLYPH_WARLOCK_CHAOS))
     {
-      
+
       new resred = RoundToNearest(reduction*0.35); //20% Reduction
       if(10 > resred)
         resred = 10;
@@ -6383,7 +6401,7 @@ wcRunTalent_7_CursedSoul(client)
       wcGetTalentInfo(7,1,4,1,client,"base",line);
       new base=StringToInt(line);
       new team=GetClientTeam(target);
-      new effid=CreateEffectData(target,client,ticks,base,aoe,team,0,0,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,base,aoe,team,0,0,g_RoundCount,0);
       if (tickdelay==0.0 || ticks == 0)
       {
         LogError("ERROR: cursed soul spell corrupted.");
@@ -6714,7 +6732,7 @@ public wcRunTalent_7_Immolate(client)
       talentbonusrange=StringToInt(line);
       wcGetTalentInfo(7,3,3,1,client,"aoe",line);
       aoe=StringToInt(line)+talentbonusrange;
-      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount);
+      new effid=CreateEffectData(target,client,ticks,dmgef,aoe,team,IMMOLATE_UNIQUE,2,g_RoundCount,GetClientDeaths(target));
       if(effid!=0)
         {
           CreateTimer(tickdelay, EffectAoeDamage, effid, TIMER_REPEAT);
@@ -6790,7 +6808,7 @@ wcRunTalent_6_HealingTideTotem(client)  {
   WCMessage(client,"heal tide totem cast",client,RoundToNearest(tickdur*float(ticks)));
 
   new team=GetClientTeam(client);
-  new effid=CreateEffectData(client,add,heal,0,radius,team,ticks,0,g_RoundCount);
+  new effid=CreateEffectData(client,add,heal,0,radius,team,ticks,0,g_RoundCount,0);
   if(effid!=0)
   {
     new hp=RoundToNearest(float(GetMaxHealth(client))*0.05);
@@ -6914,7 +6932,7 @@ wcRunTalent_8_BloodParasites(client,victim)
     new dmg = RoundToNearest(float(base) + RoundToNearest(float(GetDamage(client))*multi));
     decl Float:location[3];
     GetClientAbsOrigin(victim,location);
-    new effid=CreateEffectData(victim,client,ticks,dmg,_:location[0],heal,_:location[1],_:location[2],g_RoundCount);
+    new effid=CreateEffectData(victim,client,ticks,dmg,_:location[0],heal,_:location[1],_:location[2],g_RoundCount,0);
     if(effid!=0)
     {
       CreateTimer(delay, EffectParasites, effid, TIMER_REPEAT);
@@ -6992,7 +7010,7 @@ public Action:EffectParasites(Handle:timer, any:effid)
   location[1] = Float:effectsdata[effid][7];
   location[2] = Float:effectsdata[effid][8];
   wcSpellAoeDamageLocation(effectsdata[effid][2], effectsdata[effid][2], location, damage, aoe, team, line);
-  VS_BeamRingPoint(location,50.00,150.00,g_ef_glow01,g_ef_glow01, 10, 10, 0.50, float(aoe), 0.00, {196, 3, 35, 255}, 10, 0);     
+  VS_BeamRingPoint(location,50.00,150.00,g_ef_glow01,g_ef_glow01, 10, 10, 0.50, float(aoe), 0.00, {196, 3, 35, 255}, 10, 0);
   wcGetTalentInfo(8,1,4,2,effectsdata[effid][2],"heal",line); //Base heal the parasites do
   new baseheal = StringToInt(line);
   new targets[MAXPLAYERS];
@@ -7199,7 +7217,7 @@ public wcRunTalent_7_SacrificalPact(client) //Sacrifical Pact
   if(timeleft > 0.0)
     return 0;
   SetCdSpell(client, cdtype, cooldown, 0, "Sacrifical Pact");
-  
+
   wcGetTalentInfo(7,2,4,1,client,"duration",line);
   new Float:duration=StringToFloat(line);
   wcGetTalentInfo(7,2,4,1,client,"multi",line);
@@ -7215,7 +7233,7 @@ public wcRunTalent_7_SacrificalPact(client) //Sacrifical Pact
   SetEffectVictim(client,5); // absorb shield
   SetEffectSpellVic(client,5); //Absorb magic dmg
   g_iShieldStack[client]+=1;
-  
+
   new Handle:datapack2=CreateDataPack();
   WritePackCell(datapack2,client); // Write the client index of owner
   WritePackCell(datapack2,5);
@@ -7369,13 +7387,13 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
     wcRunTalent_6_ChainLightning(client,true);
     WCMessage(client,"Echo of the Elements activate",client);
   }
-  
+
   wcGetTalentInfo(6,1,2,3,client,"multi",line);
   new Float:multi=StringToFloat(line);
   wcGetTalentInfo(6,1,2,3,client,"base",line);
   new base=StringToInt(line);
   new dmg = RoundToNearest(GetSpellDmg(client,multi)+float(base));
-  
+
 
   decl String:name[255],String:name2[255];
   GetClientName(client,name,sizeof(name));
@@ -7389,7 +7407,7 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
   wcGetTalentInfo(6,1,2,3,client,"distance",line);
   new Float:distance=StringToFloat(line);
   wcGetTalentInfo(6,2,3,2,client,"name",line); //line must contain talentname after this line
-  
+
   new amount;
   new people[3];
   new Float:coords[3][3];
@@ -7411,7 +7429,7 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
     WCMessage(client,"testmessageF",client,"coord A-0",coords[0][0]);
     WCMessage(client,"testmessageF",client,"coord A-1",coords[0][1]);
     WCMessage(client,"testmessageF",client,"coord A-2",coords[0][0]);
-    
+
     for (new i=1;i<amount;i++)
     {
       WCMessage(client,"testmessageF",client,"coord A-0",coords[i][0]);
@@ -7425,7 +7443,7 @@ wcRunTalent_6_ChainLightning(client,bool:echo=false)
   }
   else
     return 0;
-  
+
   return 1;
 }
 
@@ -7507,7 +7525,7 @@ stock GetPlayerChain(client, team, Float:loc[3], Float:distance, length, people[
         }
       }
     }
-    
+
     if(found)
     {
       chain[i]=index;
@@ -7582,6 +7600,25 @@ public wcRunTalent_6_LavaBurst(client,victim) //Lava Burst
     EmitAmbientSound("wc/spells/fireball.wav",location);
   }
 }
+
+public wcRunTalent_6_AncestorsProtection(client)  {
+  decl String:line[255];
+  wcGetTalentInfo(6,2,4,2,client,"multi",line);
+  new Float:multi=StringToFloat(line);
+  wcGetTalentInfo(6,2,4,2,client,"multi_armor",line);
+  new Float:multi_armor=StringToFloat(line);
+
+  new agility = GetAgi(client)+GetBonusAgi(client);
+
+  new resbonus=RoundToNearest(float(agility)*multi);
+  wcClientsBonusStats[client][RESISTANCE]+=resbonus;
+
+  new bonus = RoundToNearest(float(agility)*multi_armor);
+  SetBonusArmor(client, float(GetBonusArmor(client)+bonus));
+
+  wcRecalculateStats(client);
+}
+
 public wcRunTalent_2_GarroteDamage(client,victim,&damage)
 {
   decl String:line[255];
@@ -7592,7 +7629,7 @@ public wcRunTalent_2_GarroteDamage(client,victim,&damage)
   wcGetTalentInfo(2,3,4,2,client,"ticks",line);
   new ticks = StringToInt(line);
   bleed = RoundToNearest(float(bleed)/float(ticks));
-  new effid=CreateEffectData(victim,client,ticks,bleed,0,0,0,0,g_respawns[victim]);
+  new effid=CreateEffectData(victim,client,ticks,bleed,0,0,0,0,g_respawns[victim],0);
   CreateTimer(tickdelay, Garrote, effid, TIMER_REPEAT);
 }
 public Action:Garrote(Handle:timer, any:effid)
@@ -7647,7 +7684,7 @@ RemoveReadiness(client)
   g_iCombatReady[client]=0;
   g_iCombatReadyB[client]=0;
 }
-wcRunTalent_2_BasicMaster(client,victim,&totaldmg)
+wcRunTalent_2_BasicMaster(client,victim,&totaldmg) //Master of Basics
 {
   decl String:line[255];
   new random=GetRandomInt(1,100);

@@ -551,46 +551,49 @@ public Action:ThreatTimer(Handle:timer, any:temp)
    return Plugin_Continue;
 }
 
+// Threat damage shall not stop if it has started
+new g_iThreatOngoing = -1;
+
 BossDamage()   {
-   new online = PlayersOnline();
-   new boss;
-   for(new i=1;i<=GetMaxClients();i++)  {
-      if(IsClientInGame(i) && IsPlayerAlive(i) && (playerloaded[i]==1))
-        if((boss = GetBoss(i)) > 0)  {
-         KvRewind(wcbossdrop);
-         decl String:temp[9];
-         IntToString(boss,temp,sizeof(temp));
-         KvJumpToKey(wcbossdrop,temp);
-         new bool:enraged=false;
-         new Float:perc = float(wcGetHealth(i)) / GetMaxHealth(i);
-         if(perc < KvGetFloat(wcbossdrop, "enrage_level", 0.0))
-          enraged = true;
+  new online = PlayersOnline();
+  new boss;
+  for(new i=1;i<=GetMaxClients();i++)  {
+    if(IsClientInGame(i) && IsPlayerAlive(i) && (playerloaded[i]==1))
+    if((boss = GetBoss(i)) > 0)  {
+      KvRewind(wcbossdrop);
+      decl String:temp[9];
+      IntToString(boss,temp,sizeof(temp));
+      KvJumpToKey(wcbossdrop,temp);
+      new bool:enraged=false;
+      new Float:perc = float(wcGetHealth(i)) / GetMaxHealth(i);
+      if(perc < KvGetFloat(wcbossdrop, "enrage_level", 0.0))
+      enraged = true;
 
-         CheckEnrageChange(i, enraged);
+      CheckEnrageChange(i, enraged);
 
-         new dmg = KvGetNum(wcbossdrop,"dmg", 0);
-         new Float:multi = KvGetFloat(wcbossdrop, "multi", 0.0);
-         new targets = KvGetNum(wcbossdrop,"targets",1);
-         if(enraged)  {
-           new tmp = KvGetNum(wcbossdrop,"enrage_dmg", 0);
-           if(tmp>dmg)
-            dmg=tmp;
-           new Float:ftmp = KvGetFloat(wcbossdrop, "enrage_multi", 0.0);
-           if(ftmp > multi)
-            multi = ftmp;
-           tmp = KvGetNum(wcbossdrop, "enrage_targets", 1);
-           if(tmp > targets)
-            targets = tmp;
-         }
-         dmg += RoundToNearest(multi * online);
-         if(dmg<=0)
-          continue;
-         //BossTryHit(i,dmg, g_iAggroTable[0]);
-         for(new target=0; target < targets; target ++) {
-          BossTryHit(i, dmg, g_iAggroTable[target]);
-         }
+      new dmg = KvGetNum(wcbossdrop,"dmg", 0);
+      new Float:multi = KvGetFloat(wcbossdrop, "multi", 0.0);
+      new targets = KvGetNum(wcbossdrop,"targets",1);
+      if(enraged)  {
+        new tmp = KvGetNum(wcbossdrop,"enrage_dmg", 0);
+        if(tmp>dmg)
+        dmg=tmp;
+        new Float:ftmp = KvGetFloat(wcbossdrop, "enrage_multi", 0.0);
+        if(ftmp > multi)
+        multi = ftmp;
+        tmp = KvGetNum(wcbossdrop, "enrage_targets", 1);
+        if(tmp > targets)
+        targets = tmp;
       }
-   }
+      dmg += RoundToNearest(multi * online);
+      if(dmg<=0)
+      continue;
+      //BossTryHit(i,dmg, g_iAggroTable[0]);
+      for(new target=0; target < targets; target ++) {
+        BossTryHit(i, dmg, g_iAggroTable[target]);
+      }
+    }
+  }
 }
 
 new bool:g_ff_checkEnrage[65];
@@ -614,15 +617,17 @@ AnnounceEnrage(client)  {
 
 
 BossTryHit(boss, dmg, target)   {
-   if((target > 0) && IsClientInGame(target) && IsPlayerAlive(target) && (GetThreat(target)>=MIN_THREAT))   {
-      BossShoot(boss,target,dmg);
-      decl Float:loc1[3],Float:loc2[3];
-      GetClientAbsOrigin(boss,loc1);
-      GetClientAbsOrigin(target,loc2);
-      loc1[2]+=25.0;
-      loc2[2]+=25.0;
-      BeamEffect("@all",loc1,loc2,g_ef_tp_beam001,5,1.0,7.0,10.0,{100, 100, 100, 255},0.0,5);
-   }
+  new bool:ignoreLimit = (g_iThreatOngoing == g_RoundCount);
+  if((target > 0) && IsClientInGame(target) && IsPlayerAlive(target) && (GetThreat(target)>=MIN_THREAT || ignoreLimit))   {
+    g_iThreatOngoing = g_RoundCount;
+    BossShoot(boss,target,dmg);
+    decl Float:loc1[3],Float:loc2[3];
+    GetClientAbsOrigin(boss,loc1);
+    GetClientAbsOrigin(target,loc2);
+    loc1[2]+=25.0;
+    loc2[2]+=25.0;
+    BeamEffect("@all",loc1,loc2,g_ef_tp_beam001,5,1.0,7.0,10.0,{100, 100, 100, 255},0.0,5);
+  }
 }
 
 BossShoot(boss, target, dmg)  {
@@ -2629,7 +2634,7 @@ public Action:TreasureChestTick(Handle: timer, Handle:datapack)
     CreateTimer(0.10,TreasureChestCheck,datapack2,TIMER_REPEAT);
     return Plugin_Stop;
   }
-  
+
   new targets[MAXPLAYERS];
   new amount;
   amount=GetNearClients("@all",location,targets,225.0);
@@ -2795,7 +2800,7 @@ stock TreasureChestOpen(client,chestrarity)
         }
       }
       case 2: GivePlayerRandomItem(client, "treasure chest", 1, 2);
-      case 3: 
+      case 3:
       {
         new gold = GetRandomInt(10,30);
         AddGold(client, gold, "mod", "treasure chest");
@@ -2847,7 +2852,7 @@ stock TreasureChestOpen(client,chestrarity)
           case 31: itemd=GetSetsRandomItem("376");
         }
       }
-      case 2: 
+      case 2:
       {
         new gold = GetRandomInt(25,90);
         AddGold(client, gold, "mod", "treasure chest");
@@ -2892,7 +2897,7 @@ stock TreasureChestOpen(client,chestrarity)
           case 22: itemd=GetSetsRandomItem("312");
         }
       }
-      case 2: 
+      case 2:
       {
         new gold = GetRandomInt(225,500);
         AddGold(client, gold, "mod", "treasure chest");

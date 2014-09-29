@@ -8157,7 +8157,7 @@
   }
     "2h weap spec used"
   {
-    "ru" "Специализация на двуручном оружии: Вы увиличили ваш крит шанс с {1}@perc до {2}@perc"
+    "ru" "Специализация на двуручном оружии: Вы увеличили ваш крит шанс с {1}@perc до {2}@perc"
   }
   "2h weap spec glyph used"
   {
@@ -8165,7 +8165,7 @@
   }
     "juggernaut used"
   {
-    "ru" "Джаггернаут: Вы увиличили вашу силу с {1} до {2}"
+    "ru" "Джаггернаут: Вы увеличили вашу силу с {1} до {2}"
   }
     "Bladestorm Ends"
   {
@@ -8757,7 +8757,7 @@
   }
     "Ancestor's Protection info"
   {
-    "ru"		"Ваша Габкая Броня повышает ваше сопротивление. \n     Ранк 1: 10%% от вашей ловкости\n     Ранк 2: 20%% от вашей ловкости"
+    "ru"		"Ваша Габкая Броня повышает ваше сопротивление и защиту. \n     Ранк 1: 20%% брони, 7.5%% сопротивления от вашей ловкости\n     Ранк 2: 40%% брони, 15%% сопротивления от вашей ловкости"
   }
     "Blood Parasites name"
   {
@@ -9182,7 +9182,7 @@
   }
   "Afterlife info"
   {
-    "ru"		"<пассивное> При убийстве врага, на месте трупа появляется душа, подобрав которую вы восстановите себе 20%% здоровья.\n    Через 3 секунды союзники тоже смогут подобрать душу."
+    "ru"		"<пассивное> При убийстве врага, на месте трупа появляется душа, подобрав которую вы восстановите себе 15%% здоровья.\n    Через 3 секунды союзники тоже смогут подобрать душу."
   }
   "Afterlife name"
   {
@@ -9446,7 +9446,7 @@
   }
   "Uplift info"
   {
-    "ru" "<пассивно> Ваш Заживляющий туман на последнем тике создаст АОЕ исцеление.\n    Ранк 1: 75%% от настоящего лечения\n    Ранк 2: 150%% от настоящего лечения"
+    "ru" "<пассивно> Ваш Заживляющий туман на последнем тике создаст АОЕ исцеление.\n    Ранк 1: 50%% от настоящего лечения\n    Ранк 2: 100%% от настоящего лечения"
   }
   "uplift client"
   {
@@ -9711,6 +9711,94 @@
   "gold chest"
   {
     "ru"      "@lightgreenВы получили {1} золота за открытие сундука с сокровищами!"
+  }
+  "experience chest"
+  {
+    "ru"      "@lightgreenВы получили {1} опыта за открытие сундука с сокровищами!"
+  }
+  "Alliance End Victory"
+  {
+    "ru"      "@lightgreenАльянс выиграл со счетом {1}-{2}!"
+  }
+  "Horde End Victory"
+  {
+    "ru"      "@lightgreenОрда выиграла со счетом {1}-{2}!"
+  }
+  "Alliance Victory"
+  {
+    "ru"      "@lightgreenАльянс выиграл этот раунд со счетом {1}-{2}!"
+  }
+  "Horde Victory"
+  {
+    "ru"      "@lightgreenОрда выиграла этот раунд со счетом {1}-{2}!"
+  }
+  "Alliance Score Equal"
+  {
+    "ru"      "@lightgreenАльянс даже с ордой со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Alliance Score Winning"
+  {
+    "ru"      "@lightgreenАльянс выигрывает у орды со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Alliance Score Losing"
+  {
+    "ru"      "@lightgreenАльянс проигрывает орде со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Horde Score Equal"
+  {
+    "ru"      "@lightgreenОрда даже с альянсом со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Horde Score Winning"
+  {
+    "ru"      "@lightgreenОрда выигрывает у альянса со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "Horde Score Losing"
+  {
+    "ru"      "@lightgreenОрда проигрывает альянсу со счетом {1}-{2}!" //Few easter eggs here ^_^
+  }
+  "CTF Return Horde Flag"
+  {
+    "ru"      "@green{1} @lightgreenвернул флаг орды на свою базу!"
+  }
+  "CTF Return Alliance Flag"
+  {
+    "ru"      "@green{1} @lightgreenвернул флаг альянса на свою базу!"
+  }
+  "CTF Carry Alliance Flag"
+  {
+    "ru"      "@green{1} @lightgreenподобрал флаг альянса!"
+  }
+  "CTF Carry Horde Flag"
+  {
+    "ru"      "@green{1} @lightgreenподобрал флаг орды!"
+  }
+  "Horde Flag Drop"
+  {
+    "ru"      "@green{1} @lightgreenпотерял флаг орды!"
+  }
+  "Alliance Flag Drop"
+  {
+    "ru"      "@green{1} @lightgreenпотерял флаг альянса!"
+  }
+  "CTF Picked Alliance"
+  {
+    "ru"      "@green{1} @lightgreenпринял флаг альянса на своей базе!"
+  }
+  "CTF Picked Horde"
+  {
+    "ru"      "@green{1} @lightgreenпринял флаг орды на своей базе!"
+  }
+  "earth grip client"
+  {
+    "ru"      "Ваша @greenВласть Земли @defaultзамедлила @green{1} @defaultна @lightgreen{2} секунд."
+  }
+  "earth grip attacker"
+  {
+    "ru"      "Вы были замедлены навыков @greenВласть земли @lightgreenигрока @green{1} @defaultна @lightgreen{2} секунд."
+  }
+  "unchaining end"
+  {
+    "ru"      "@greenНеконтролируемая ярость @lightgreenзакончилась"
   }
 }
 

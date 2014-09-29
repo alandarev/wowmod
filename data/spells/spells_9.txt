@@ -7,7 +7,7 @@
     "level" "1"
     "chance"  "15"
     "mana" "20"
-    "multi" "0.10" //Scales off of agility
+    "multi" "0.092" //Scales off of agility
   }
   "2"
   {
@@ -32,7 +32,7 @@
     "level" "1"
     "cooldowntype"  "3"
     "cooldown"  "3.0"
-    "mana"  "40"
+    "mana"  "50"
     "base"  "7"
     "multi" "0.18"
     "distance"  "375.0" //Distance for the second heal
@@ -48,9 +48,9 @@
     //Revival from here till
     "cooldown"  "15.0"
     "base"  "10"
-    "multi" "0.45"
+    "multi" "0.30"
     "distance"  "750.0"
-    "chimulti" "0.60" //How much each chi increases the healing by
+    "chimulti" "0.40" //How much each chi increases the healing by
     //Revival till here
     //Fists of Fury
     "fistbase"    "5"
@@ -131,7 +131,7 @@
     "base"      "5"
     "multi"     "0.25" //Heal multi, spelldamage
     "agimulti"     "0.11" //Damage multi, agility
-    "chi"       "1"
+    "chi"       "2"
     "distance"  "175.0"
   }
   "12"
