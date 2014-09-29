@@ -206,6 +206,21 @@ Author(s): Stinkyfax
 #define GLYPH_ROGUE_MINTENT 20104
 #define GLYPH_ROGUE_MASTEROS 20106
 
+#define GLYPH_MONK_CHI 25162
+#define GLYPH_MONK_CHIBURST 25163
+#define GLYPH_MONK_JAB 25164
+#define GLYPH_MONK_BLOSSOMS 25165
+#define GLYPH_MONK_REVIVAL 25166
+#define GLYPH_MONK_RENEWING 25167
+#define GLYPH_MONK_FISTS 25168
+#define GLYPH_MONK_AFTERLIFE 25169
+#define GLYPH_MONK_FLYING 25170
+#define GLYPH_MONK_PBREW 25171
+#define GLYPH_MONK_HBREW 25172
+#define GLYPH_MONK_TBREW 25173
+
+
+
 
 new ACTIVEWEAPON=1896;
 new CLIPOFFSET=1204;
@@ -326,7 +341,7 @@ new Float:wcUsersFloat0[65][USERS_FLOAT_0];
 new Float:wcUsersFloat1[65][USERS_FLOAT_1];
 
 // effects data
-new effectsdata[300][10];
+new effectsdata[300][11];
 
 //values for reboot
 new G_RebootTotal,G_RebootQueue;

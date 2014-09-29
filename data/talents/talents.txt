@@ -1595,7 +1595,7 @@
             }
             "1"
             {
-              "chance"  "20"
+              "chance"  "15"
               "name"  "Hack and Slash"
               "max"  "1"
               "saveid"  "b"
@@ -1753,8 +1753,8 @@
               "name"  "Master of Basics"
               "max" "1"
               "saveid"  "u"
-              "multi" "0.25"
-              "chance"  "25"
+              "multi" "0.20"
+              "chance"  "20"
               "mana"  "5"
             }
           }
@@ -5814,7 +5814,7 @@
             "2"
             {
               "base"  "5"
-              "multi"  "0.010000"
+              "multi"  "0.100000"
               "name"  "Weapon Mastery"
               "max"  "2"
               "saveid"  "0"
@@ -5974,15 +5974,16 @@
             "1"
             {
               "increment"  "0.200000"
-              "multi"  "0.100000"
+              "multi"  "0.050000"
+              "procs"   "6"
               "chance"  "25"
               "event"  "player_cast"
               "active"  "1"
               "cooldown"  "25.000000"
               "cooldowntype"  "5"
               "duration"  "5.000000"
-              "mana"  "40"
-              "manainc"  "0.250000"
+              "mana"  "0"
+              "manainc"  "0"
               "name"  "Shamanistic Rage"
               "max"  "1"
               "saveid"  "d"
@@ -6079,14 +6080,16 @@
               "name"  "Ancestor's Protection"
               "max"  "2"
               "saveid"  "P"
-              "multi" "0.125"
+              "multi" "0.075"
+              "multi_armor" "0.20"
             }
             "2"
             {
               "name"  "Ancestor's Protection"
               "max"  "2"
               "saveid"  "P"
-              "multi" "0.25"
+              "multi" "0.15"
+              "multi_armor" "0.40"
             }
           }
       }
@@ -6916,20 +6919,23 @@
               "name"  "Demonic Curse"
               "max"  "3"
               "miss"  "1"
+              "duration"  "6.0"
               "saveid"  "q"
             }
             "2"
             {
               "name"  "Demonic Curse"
               "max"  "3"
-              "miss"  "3"
+              "miss"  "2"
+              "duration"  "6.0"
               "saveid"  "q"
             }
             "3"
             {
               "name"  "Demonic Curse"
               "max"  "3"
-              "miss"  "5"
+              "miss"  "3"
+              "duration"  "6.0"
               "saveid"  "q"
             }
           }
@@ -7110,7 +7116,7 @@
               "base"  "15"
               "smulti" "0.2"
               "distance" "200.0"
-              "push"  "-700"
+              "push"  "140"
           }
           "2"
           {
@@ -7120,7 +7126,7 @@
               "base"  "15"
               "smulti" "0.2"
               "distance"  "350.0"
-              "push"  "-1200"
+              "push"  "240"
           }
           "3"
           {
@@ -7130,7 +7136,7 @@
               "base"  "30"
               "smulti" "0.3"
               "distance"  "350.0"
-              "push"  "-1200"
+              "push"  "240"
           }
         }
       }
@@ -7155,7 +7161,7 @@
             "multi" "0.50"
             "cost"  "0.70" //25% cost
             "talentid"  "5"
-            "duration"  "15.00"
+            "duration"  "8.00"
             "cooldown"     "25.000000"
             "cooldowntype"  "11"
           }
@@ -7897,13 +7903,13 @@
           {
             "name"   "Blood Parasites"
             "max"    "2"
-            "saveid" "4"
+            "saveid" "R"
           }
           "1"
           {
             "name"         "Blood Parasites"
             "max"          "2"
-            "saveid"       "4"
+            "saveid"       "R"
             "multi"        "0.04" //Damage multi of parasites
             "base"        "1" //Base damage of parasites
             "chance"      "15"
@@ -7916,7 +7922,7 @@
           {
             "name"         "Blood Parasites"
             "max"          "2"
-            "saveid"       "4"
+            "saveid"       "R"
             "multi"        "0.08" //Damage multi of parasites
             "base"        "2" //Base damage of parasites
             "chance"      "15"
@@ -9141,7 +9147,7 @@
             "name"  "Afterlife"
             "max"  "1"
             "saveid"  "u"
-            "multi" "0.2"
+            "multi" "0.15"
             "duration"  "10.0"
             "selfduration"  "3.0"
             "distance"  "100.0"
@@ -9158,9 +9164,9 @@
           "1"
           {
             "name"  "Seven Sided Strikes"
-            "multi"  "0.020000"
+            "multi"  "0.01"
             "chance"  "100"
-            "stacks" "10"
+            "stacks" "8"
             "duration" "5.0"
             "max"  "3"
             "saveid"  "v"
@@ -9168,9 +9174,9 @@
           "2"
           {
             "name"  "Seven Sided Strikes"
-            "multi"  "0.040000"
+            "multi"  "0.02"
             "chance"  "100"
-            "stacks" "10"
+            "stacks" "8"
             "duration" "5.0"
             "max"  "3"
             "saveid"  "v"
@@ -9178,9 +9184,9 @@
           "3"
           {
             "name"  "Seven Sided Strikes"
-            "multi"  "0.060000"
+            "multi"  "0.03"
             "chance"  "100"
-            "stacks" "10"
+            "stacks" "8"
             "duration" "5.0"
             "max"  "3"
             "saveid"  "v"
@@ -9365,7 +9371,7 @@
             "name"  "Chi Explosion"
             "max" "2"
             "saveid"  "G"
-            "multi" "0.10" //Scales with agi
+            "multi" "0.08" //Scales with agi
             "chimulti"  "0.125" //How much damage is increased per chi
             "duration"  "6.0"
             "base"      "8" //Base explosion damage
@@ -9379,7 +9385,7 @@
             "name"  "Chi Explosion"
             "max" "2"
             "saveid"  "G"
-            "multi" "0.10" //Scales with agi
+            "multi" "0.08" //Scales with agi
             "chimulti"  "0.25" //How much damage is increased per chi
             "duration"  "6.0"
             "base"      "8" //Base explosion damage
@@ -9463,21 +9469,21 @@
             "name"  "ECH"
             "max" "3"
             "saveid"  "J"
-            "multi" "0.15"
+            "multi" "0.10"
           }
           "2"
           {
             "name"  "ECH"
             "max" "3"
             "saveid"  "J"
-            "multi" "0.30"
+            "multi" "0.20"
           }
           "3"
           {
             "name"  "ECH"
             "max" "3"
             "saveid"  "J"
-            "multi" "0.45"
+            "multi" "0.30"
           }
         }
         "4"
@@ -9690,14 +9696,14 @@
             "name"  "Uplift"
             "max" "2"
             "saveid"  "R"
-            "heal"  "0.60"
+            "heal"  "0.50"
           }
           "2"
           {
             "name"  "Uplift"
             "max" "2"
             "saveid"  "R"
-            "heal"  "1.20"
+            "heal"  "1.00"
           }
         }
       }

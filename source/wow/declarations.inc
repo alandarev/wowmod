@@ -342,7 +342,7 @@ new g_hns_xp=0;
 new g_hns_itemId=0;
 new g_hns_itemAmount=0;
 
-//new g_BossEndXP=0;
+new g_BossEndXP=0;
 
 new g_alpha[65];
 

@@ -1285,7 +1285,7 @@
     "minimum" "0.000008"
     "maximum" "0.000016"
     "incriment" "0.00010"
-    "set"   "368 369 370 371 372 373 309 310 311 312 313"
+    "set"   "380 369 370 371 372 373 309 310 311 312 313"
     "announce" "2"
     //85 epic recipes
   }
@@ -1545,7 +1545,7 @@
     //60/80 epic wep, 74/80 rare wep, no shields
   }
 
-   "147" //Raid items
+   "150" //Raid items
    {
     "minskill"  "0"
     "skillup" "0"
@@ -1581,5 +1581,38 @@
     "set"   "113"
     "announce" "1"
     //85 rare monk
+  }
+    "151" //Tiger Lily
+  {
+    "minskill"  "360"
+   "skillup" "390"
+    "profession"  "10"
+    "minlevel"  "66"
+    "minimum" "0.002"
+    "maximum" "0.006"
+    "incriment" "0.00075"
+    "id"  "20017"
+  }
+  "152" //Talandra's Rose
+  {
+    "minskill"  "385"
+   "skillup" "410"
+    "profession"  "10"
+    "minlevel"  "66"
+    "minimum" "0.001"
+    "maximum" "0.003"
+    "incriment" "0.00075"
+    "id"  "20018"
+  }
+  "153" //Frozen Herb
+  {
+    "minskill"  "400"
+   "skillup" "425"
+    "profession"  "10"
+    "minlevel"  "66"
+    "minimum" "0.0005"
+    "maximum" "0.001"
+    "incriment" "0.00075"
+    "id"  "20019"
   }
 }

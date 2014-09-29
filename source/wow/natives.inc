@@ -17,6 +17,8 @@ public InitNatives()	{
   CreateNative("wow_getXP", Native_getXP);
   CreateNative("wow_setXP", Native_setXP);
 
+  CreateNative("wow_getClass", Native_getClass);
+  CreateNative("wow_getTalentTrees", Native_getTalentTrees);
 }
 
 public Native_premiumModule(Handle:plugin, numParams) {
@@ -27,6 +29,28 @@ public Native_premiumModule(Handle:plugin, numParams) {
     return 0;
   new PDModule:module = PDModule:GetNativeCell(2);
   return _:isClientPDModule(client, module);
+}
+
+public Native_getClass(Handle:plugin, numParams)  {
+  new client = GetNativeCell(1);
+  if(!IsClientInGame(client)) return 0;
+  if(playerloaded[client]!=1) return 0;
+  return GetClass(client);
+}
+
+public Native_getTalentTrees(Handle:plugin, numParams)  {
+  new client = GetNativeCell(1);
+  if(!IsClientInGame(client)) return 0;
+  if(playerloaded[client]!=1) return 0;
+  new spec = getActiveSpec(client);
+  new bool:trees[3];
+  for (new i=1; i<4; i++)
+    trees[i-1] = wcGetTreeTotal(client, spec,i) >= 6;
+  new sum;
+  for (new i=0; i<3; i++) {
+    if(trees[i])  sum += 1 << i;
+  }
+  return sum;
 }
 
 

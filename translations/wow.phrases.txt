@@ -1782,7 +1782,7 @@
   }
   "no mana"
   {
-    "en"      "@greenYour Mana is too low"
+    "en"      "@greenNot enough mana"
   }
   "no runes"
   {
@@ -1913,7 +1913,7 @@
   }
   "Shield Block info"
   {
-    "en"    "Gives a 10%% chance to block an attack while using a shield."
+    "en"    "Gives a 10%% chance to block an attack while using a shield. Equipping a shield reduces your damage dealt by 20%%"
   }
   "Whirlwind info"
   {
@@ -3474,7 +3474,7 @@
   }
   "wc debug menu warning"
   {
-    "en"    "please MAKE SURE server is working fine.\nMAKE SURE Database is working\nAsk others if they have same problem before using this menu.\nIf you screw this, we can't help you."
+    "en"    "please MAKE SURE server is working fine before continuing.\nAsk others if they have same problem before using this menu."
   }
   "wc debug menu mail"
   {
@@ -3486,7 +3486,7 @@
   }
   "wc debug mail1"
   {
-    "en"    "This is the list of bugged mails you have.\nEnsure database is working fine\nBy clicking Agree you will remove those mails from your mailbox to fix it."
+    "en"    "This is the list of ghost mails you have.\nContinue to clean them up."
   }
   "wc debug menu mail2"
   {
@@ -7086,7 +7086,7 @@
   }
   "Hack and Slash info"
   {
-    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50% of its damage.\n    Rank 1: 20%% chance"
+    "en"		"<Passive> Gives you a chance to generate an extra hit while using swords for 50% of its damage.\n    Rank 1: 15%% chance"
   }
   "Improved Sinister Strike info"
   {
@@ -7110,7 +7110,7 @@
   }
   "Expose Weakness info"
   {
-    "en" "<Passive> Your attacks ignore some of the target's armor. Goes before armor penetration.\n    Rank 1: 10%% of armor ignored\n    Rank 2: 20%% of armor ignored\n    Rank 3: 30%% of armor ignored"
+    "en" "<Passive> Your attacks ignore some of the target's armor. Goes before armor penetration.\n    Rank 1: 8%% of armor ignored\n    Rank 2: 16%% of armor ignored\n    Rank 3: 25%% of armor ignored"
   }
   "Combat Readiness info"
   {
@@ -7122,7 +7122,7 @@
   }
   "Master of Basics info"
   {
-    "en" "<Passive> Your attacks have a 25%% chance to deal 25%% bonus damage and restore 5 energy."
+    "en" "<Passive> Your attacks have a 12%% chance to deal 20%% bonus damage and restore 5 energy."
   }
   "Fan of Swords info"
   {
@@ -7138,7 +7138,7 @@
   }
   "Lethality info"
   {
-    "en"		"<Passive> Increases your critical damage bonus by a percentage.\n    Rank 1: +12.5%% critical damage\n    Rank 2: +25%% critical damage"
+    "en"		"<Passive> Increases your critical damage bonus by a percentage.\n    Rank 1: +10%% critical damage\n    Rank 2: +20%% critical damage"
   }
   "Improved Poisons info"
   {
@@ -7250,7 +7250,7 @@
   }
   "Improved Fireball info"
   {
-    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +6%% damage, -0.1 seconds cooldown\n    Rank 2: +13%% damage, -0.3 seconds cooldown\n    Rank 3: +20%% damage, -0.5 seconds cooldown"
+    "en"		"<Passive> Increases the damage of Fireball and reduces its cooldown.\n    Rank 1: +12.5%% damage, -0.25 seconds cooldown\n    Rank 2: +25%% damage, -0.5 seconds cooldown"
   }
   "Burning Soul info"
   {
@@ -7322,7 +7322,7 @@
   }
   "Focused Mind info"
   {
-    "en"		"<Passive> Grants bonus Haste stat.\n    Rank 1: Grants 10.0 + 7%% Intellect as haste.\n    Rank 2: Grants 20.0 + 7%% Intellect as haste, Increases max cooldown reduction from 35%% to 40%%."
+    "en"		"<Passive> Grants bonus Haste stat.\n    Rank 1: Grants 10.0 + 3%% Intellect as haste.\n    Rank 2: Grants 15.0 + 6%% Intellect as haste, Increases max cooldown reduction from 35%% to 40%%."
   }
   "Master of Magic info"
   {
@@ -7766,7 +7766,7 @@
   }
   "Shamanistic Rage info"
   {
-    "en"		"For 5 seconds, reduces damage taken by 20%% and your attacks have a 25%% chance of restoring 10%% of your mana"
+    "en"		"For 5 seconds, reduces damage taken by 20%% and your attacks \nhave a 25%% chance of restoring 5%% of your mana up to 6 times."
   }
   "Counter Strike info"
   {
@@ -7782,7 +7782,7 @@
   }
   "Ancestor's Protection info"
   {
-    "en"		"Your Agile Defence also increases your resistance. \n     Rank 1: 12.5%% of your agility turned into resistance\n     Rank 2: 25%% of your agility turned into resistance"
+    "en"		"Increase your armor and resistance based on agility. \n     Rank 1: 20%% into armor, 7.5%% into resistance.\n     Rank 2: 40%% into armor, 15%% into resistance."
   }
   "Shamanistic Focus info"
   {
@@ -7898,7 +7898,7 @@
   }
   "Demonic Curse info"
   {
-    "en"		"<Passive> Your curse also makes the target's next attacks miss.\n    Rank 1: Make 1 attack miss\n    Rank 2: Make 3 attacks miss\n    Rank 3: Make 5 attacks miss"
+    "en"		"<Passive> Your curse also causes the target's next attacks to miss. Lasts for 6 seconds.\n    Rank 1: Make 1 attack miss\n    Rank 2: Make 2 attacks miss\n    Rank 3: Make 3 attacks miss"
   }
   "Soul Gathering info"
   {
@@ -7930,7 +7930,7 @@
   }
   "Sacrifical Pact info"
   {
-    "en"		"<Active> Sacrifice 30%% of your current health to shield yourself for 50%% of your maximum health. Lasts for 15 seconds."
+    "en"		"<Active> Sacrifice 30%% of your current health to shield yourself for 50%% of your maximum health. Lasts for 8 seconds."
   }
   "Infernal Hellfire Aura name"
   {
@@ -8976,7 +8976,15 @@
   }
   "no energy"
   {
-    "en"      "@greenYour energy is too low"
+    "en"      "@greenNot enough energy"
+  }
+  "no runic"
+  {
+    "en"      "@greenNot enough runic power"
+  }
+  "no rage"
+  {
+    "en"      "@greenNot enough rage"
   }
   "roll cooldown"
   {
@@ -9405,7 +9413,7 @@
   "revival heal"
   {
     "#format" "{1:s}{2:i}"
-    "en"      "@green{1} @defaulthealed you for @lightgreen{1} health."
+    "en"      "@green{1} @defaulthealed you for @lightgreen{2} health."
   }
   "Dark Transformation info"
   {
@@ -9442,7 +9450,7 @@
   "soul harvest pet"
   {
     "#format" "{1:0.1f}"
-    "en" "Your @lightgreenMaster@default casts @greenSoul Harvest@default restoring you for @greeen{1}@perc@default of your max health."
+    "en" "Your @lightgreenMaster@default casts @greenSoul Harvest@default restoring you for @green{1}@perc@default of your max health."
   }
   "soul harvest caster"
   {
@@ -9464,7 +9472,7 @@
   }
   "full health"
   {
-    "en"    "@lightgreenYou@ have full health."
+    "en"    "@lightgreenYou have full health."
   }
   "free soul"
   {
@@ -9512,7 +9520,7 @@
   }
   "Spinning Fire Blossom info"
   {
-    "en"  "<Passive> Your Chi Burst deals 50%% bonus damage and snares the target for 0.75 seconds if the target is at least 300 radius away from the Chi Burst's original location"
+    "en"  "<Passive> Your Chi Burst deals 50%% bonus damage and snares the target for 0.75 seconds\n    if the target is at least 300 radius away from the Chi Burst's original location"
   }
   "Touch of Karma"
   {
@@ -9733,7 +9741,7 @@
   }
   "Seven Sided Strikes info"
   {
-    "en"		"<Passive> Your critical hits increase your damage for 5 seconds. Stacks up to 10 times.\n    Rank 1: +2%% damage\n    Rank 2: +4%% damage\n    Rank 3: +6%% damage"
+    "en"		"<Passive> Your critical hits increase your damage for 5 seconds. Stacks up to 10 times.\n    Rank 1: +1%% damage\n    Rank 2: +2%% damage\n    Rank 3: +3%% damage"
   }
   "Seven Sided Strikes name"
   {
@@ -9749,7 +9757,7 @@
   }
   "Muscle Memory info"
   {
-    "en"		"<Passive> Each one of your Jabs increases your next Tiger Palm's damage. No limit.\n    Rank 1: +8%% damage per Jab\n    Rank 2: +16%% damage per Jab\n    Rank 3: +25%% damage per Jab"
+    "en"		"<Passive> Each one of your Jabs increases your next Tiger Palm's damage. No limit.\n    Rank 1: +7%% damage per Jab\n    Rank 2: +13%% damage per Jab\n    Rank 3: +20%% damage per Jab"
   }
   "Muscle Memory name"
   {
@@ -9757,7 +9765,7 @@
   }
   "Afterlife info"
   {
-    "en"		"<Passive> Upon killing an enemy, they spawn a small soul above their body that you can pick up for 20%% of your health.\n    After 3 seconds, your allies can also pick it up."
+    "en"		"<Passive> Upon killing an enemy, they spawn a small soul above their body that you can pick up for 15%% of your health.\n    After 3 seconds, your allies can also pick it up."
   }
   "Afterlife name"
   {
@@ -9765,7 +9773,7 @@
   }
   "Chi Explosion info"
   {
-    "en"		"<Passive> Your attacks have a chance to cause the target be tagged with a Chi Bomb.\n    The bomb blows up after 6 seconds, dealing magic damage to nearby enemies. \n    How much Chi you had at the time of tagging the target increases its damage."
+    "en"		"<Passive> Your attacks have a chance to cause the target be tagged with a Chi Explosion.\n    The chi explosion blows up after 6 seconds, dealing magic damage to nearby enemies. \n    How much Chi you had at the time of tagging the target increases its damage."
   }
   "Chi Explosion name"
   {
@@ -9785,7 +9793,7 @@
   }
   "Flying Serpent Kick info"
   {
-    "en"		"<Active> Heroic Leap v2"
+    "en"		"<Active> Soar through the air forward at an increased speed, landing near your aimed location"
   }
   "Flying Serpent Kick name"
   {
@@ -9810,7 +9818,7 @@
   }
   "Mana Thistle Tea info"
   {
-    "en"		"<Passive> Spending Chi gives you back energy depending on the amount of chi spent.\n    Rank 1: +3 energy per Chi\n    Rank 2: +6 energy per Chi\n    Rank 3: +10 energy per Chi"
+    "en"		"<Passive> Spending Chi gives you back energy depending on the amount of chi spent.\n    Rank 1: +1 energy per Chi\n    Rank 2: +3 energy per Chi\n    Rank 3: +5 energy per Chi"
   }
   "Mana Thistle Tea name"
   {
@@ -9831,7 +9839,7 @@
   }
   "ECH info"
   {
-    "en"		"<Passive> Increases the healing on Chi Burst.\n    Rank 1: +15%% healing\n    Rank 2: +30%% healing\n    Rank 3: +45%% healing"
+    "en"		"<Passive> Increases the healing on Chi Burst.\n    Rank 1: +10%% healing\n    Rank 2: +20%% healing\n    Rank 3: +30%% healing"
   }
   "ECH name"
   {
@@ -10013,7 +10021,7 @@
   }
   "Uplift info"
   {
-    "en" "<Passive> Your Renewing Mist's last tick will also create an AoE heal.\n    Rank 1: 60%% of the original heal\n    Rank 2: 120%% of the original heal"
+    "en" "<Passive> Your Renewing Mist's last tick will also create an AoE heal.\n    Rank 1: 50%% of the original heal\n    Rank 2: 100%% of the original heal"
   }
   "uplift client"
   {
@@ -10047,7 +10055,7 @@
   }
   "Thunder Focus Tea info"
   {
-    "en" "<Passive> Your Expel Harms increase the strength of your next Revival.\n    Rank 1: +6%% stronger Revival per cast\n    Rank 2: +13%% stronger Revival per cast\n    Rank 3: +20%% stronger Revival per cast"
+    "en" "<Passive> Your Expel Harms increase the strength of your next Revival.\n    Rank 1: +3%% stronger Revival per cast\n    Rank 2: +6%% stronger Revival per cast\n    Rank 3: +10%% stronger Revival per cast"
   }
   "Tigereye Brew name"
   {
@@ -10100,7 +10108,7 @@
   }
   "Chi Burst info"
   {
-    "en" "Throw a flying purple-ass chicken which heals and damanges enemies."
+    "en" "Shoot a ball of Chi that travels forward in front of you, healing allies and damaging enemies. Costs 2 chi."
   }
   "chi burst cast"
   {
@@ -10120,7 +10128,7 @@
   }
   "Stance of the Serpent info"
   {
-    "en" "Increases healing done by 25%%, and every 6 hits you heal nearby allies depending on your spelldamage and damage you dealt over the 6 hits.\n    Formula: Heal = Damage * (0.0020 * spelldamage) + 6"
+    "en" "Increases healing done by 25%%, and every 6 hits you heal nearby allies depending on your spelldamage and damage you dealt over the 6 hits.\n    Formula: Heal = Damage * (0.01 * spelldamage)"
   }
   "Stance of the Tiger name"
   {
