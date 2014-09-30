@@ -223,14 +223,14 @@
     "2hand"  "1"
 
     "ws"     "1.0"   //Weapon speed
-    "damage" "35"
+    "damage" "5"
     "cs"     "0.05"
-    "parry"  "0.35"
-    "armor"  "150"
-    "sta"    "60"
+    "parry"  "0.05"
+    "armor"  "50"
+    "sta"    "20"
     "str"    "10"
-    "agi"    "180"
-    "res"    "20"   //resistance
+    "agi"    "40"
+    "res"    "10"   //resistance
   }
   "bot_11" //Bot Death Knight
   {
@@ -238,16 +238,16 @@
     "2hand"    "0"
     "shield"   "0"
 
-    "damage"   "20"
+    "damage"   "10"
     "ws"       "0.80"   //Weapon speed
     "cs"       "0.15"
     "spelldmg" "0"
 
-    "armor"    "150"
-    "agi"      "40"
-    "int"      "40"
-    "sta"      "120"
-    "ai"       "55"
+    "armor"    "100"
+    "agi"      "20"
+    "int"      "20"
+    "sta"      "50"
+    "ai"       "25"
   }
 
   "bot_1001" //Bot Warrior
@@ -306,7 +306,7 @@
     "2hand"    "1"
     "shield"   "0"
 
-    "damage"   "30"
+    "damage"   "10"
     "ws"       "0.80"   //Weapon speed
     "cs"       "0.00"
     "spelldmg" "0"
@@ -316,7 +316,7 @@
     "int"      "40"
     "sta"      "200"
     "ai"       "30"
-    "str"      "200"
+    "str"      "100"
   }
   "bot_1005" //Bot Shaman
   {
@@ -417,13 +417,13 @@
     "2hand"  "1"
 
     "ws"     "1.0"   //Weapon speed
-    "damage" "40"
-    "cs"     "0.15"
-    "parry"  "0.45"
+    "damage" "10"
+    "cs"     "0.10"
+    "parry"  "0.25"
     "armor"  "275"
     "sta"    "160"
     "str"    "30"
-    "agi"    "260"
+    "agi"    "160"
     "res"    "30"   //resistance
   }
 
