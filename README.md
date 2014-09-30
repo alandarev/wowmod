@@ -30,7 +30,7 @@ Players are given an opportunity to become one of the nine classes available and
 ## Branches
 * **Master** branch is for CS:S game
 * **csgo** branch is for CS:GO game
-* **development** branch is primarily used to develope future features
+* **development** branch is primarily used to develop future features
 
 ## Installation
 
