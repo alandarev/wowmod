@@ -11,6 +11,7 @@ new bAutoCrit[65];
 new g_iOffs_ActiveWeapon = -1;
 new g_vOffs_Punch = -1;
 new g_iOffs_NextPrimaryAttack = -1;
+new g_bShadowform[65];
 
 new wcClientSeal[65];
 //new wcClientSealP[65];
@@ -764,6 +765,7 @@ public PlayerSpawnEvent(Handle:event,const String:name[],bool:dontBroadcast)
       SetShadowGateLocation(client,0,0.0);
       SetShadowGateLocation(client,1,0.0);
       SetShadowGateLocation(client,2,0.0);
+      SetHealthstone(client,0);
       SetHolyShock(client,true);
       SetPWF(client, 0);
       SetFlurry(client,0);
@@ -890,13 +892,15 @@ public Action:HostageRescueEvent(Handle:event,const String:name[],bool:dontBroad
   wcGiveXp(client,xp,true);
   return Plugin_Continue;
 }
-public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast)
+public Action:PlayerDeathEvent(Handle:event,const String:name[],bool:dontBroadcast) //Deathevent, Death, Death event, Playerdeath, Player death
 {
   //PrintToServer("player death");
   new userid=GetClientOfUserId(GetEventInt(event,"userid"));
   CreateTimer(6.0, DisplayTodoMenu,userid, TIMER_FLAG_NO_MAPCHANGE);
   if(IsMageInvis(userid))
   SetMageInvis(userid, false);
+  g_bShadowform[userid]=false;
+  g_iNecrotic[userid]=0;
   new attacker=GetClientOfUserId(GetEventInt(event,"attacker"));
   GetClientAbsOrigin(userid,vClientCorpse[userid]);
   CheckClientHpBar(userid);
@@ -1688,18 +1692,16 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
   SetCombat(attacker, 8);
   SetCombat(victim,   8);
 
+  //new item[UniqueItem];
+  //GetCharItem(item, attacker, 22);
+  //PrintToChatAll("item is %i",item[Item_defId]);
+  
   if(PlayerHasBonusFast(attacker, Profession:Prof_ExtraDamage))
   damagemulti*=1.05;
   if(PlayerHasBonusFast(victim, Profession:Prof_ExtraDef))
   damagemulti*=0.95;
   if(GetStance(victim)==1)
     damagemulti*=0.92;
-  if(GetMonkStance(attacker)==2)
-    damagemulti*=1.0;
-  if(GetMonkStance(attacker)==3)
-    damagemulti*=0.65;
-  if(GetMonkStance(attacker)==1)
-    damagemulti*=0.85;
   if(GetEventBool(event,"bonushit"))
     bonushit=1;
   if(g_iRenewingGlyph[victim]>0)
@@ -1857,7 +1859,14 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
       damagemulti*=getDamageBuff(attacker);
       if(g_iCarry[attacker]>0)
         damagemulti*CTF_NERF;
-
+      new Float:currenthealth = float(wcGetHealth(victim)) / float(GetMaxHealth(victim));
+      if(CheckRequirements(attacker,2,3,3,2))
+      {
+        if(0.35 >= currenthealth)
+          g_iDispatch[victim]+=1;
+      }
+      if(currenthealth > 0.35)
+        g_iDispatch[victim]=0;
       CalculateCrit(attacker,victim,false,"Physical",bCS);
 
       if(bCS) {
@@ -1965,10 +1974,10 @@ public Action:PlayerHurtEvent(Handle:event,const String:name[],bool:dontBroadcas
         new armor=(RoundToNearest(float(GetArmor(victim))*armorreduce))-GetIgnoreArmor(attacker)-armormodifier;
         damagemulti *= GetDmgRed(armor, victim);
       }
-      else
+      else //Rockbiter "magical" damage
       {
         wcSetMana(attacker, GetMana(attacker) - 3);
-        new Float:penetration = float(GetIgnoreArmor(attacker)) / 3.0;
+        new Float:penetration = 0.0; //Used to be 14.0, before that 11.0
         new armor=GetArmor(victim)-GetIgnoreArmor(attacker);
         new Float:improck=wcRunTalent_6_ImpRock(attacker);
         damagemulti *= (GetSpellReduction(victim,penetration)*(1.0+improck)+GetDmgRed(armor,victim)*(1.0-improck))/2.0;

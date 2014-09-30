@@ -1,2745 +1,2811 @@
-﻿"Phrases"
+"Phrases"
 {
-	"Notify levelup"
-	{
-		"ru"		"Получено серебра: @green{1} @default, всего @green{2}@default, доступно @green{3} @defaultочка(ов) навыков."
-	}
-	"Give XP"
-	{
-		"ru"		"@lightgreenПолучено опыта: @green{1}+@lightgreen, Опыт: @green{2}@lightgreen/@green{3}"
-	}
-	"seal cast"
-	{
-		"ru"		"Вы применили @lightgreenпечати@default (@green{1}@default) на себе, которое будет длиться @lightgreen{2}@default сек или до @lightgreenСуждения"
-	}
-    "Cast Seal info"
+  "dm bomb plant"
   {
-    "ru"        "Примененные печати будут действительны 30 сек. Имеющиеся навыки определяют печати.\nУрон от приговора зависит от: Заклинание сила и Святая сила"
+    "ru" "Невозможно установить бомбу во время действия DeathMatch."
   }
-	"Seal of Command info"
-	{
-		"ru"		"Дает шанс нанесения урона светлой магии, зависящего от\nвашего бонусного урона.\nТребует двуручное оружие!"
-	}
-	"seal of command activated"
-	{
-		"ru"		"@lightgreenПечать повиновения @default игрока @att нанесла @dmg урона игроку @vic"
-	}
-	"no seal for judge"
-	{
-		"ru"		"@lightgreenУ вас нет печати."
-	}
-	"seal expired"
-	{
-		"ru"		"@lightgreenТекущая печать истекла."
-	}
+  "Notify levelup"
+  {
+    "ru"  "Вы получили: @green{1} @default серебра (всего @green{2}@default) и @green{3} @defaultочка(ов) навыков."
+  }
+  "Give XP"
+  {
+    "ru"  "@lightgreenПолучено опыта: @green{1}+@lightgreen. Опыт: @green{2}@lightgreen/@green{3}@default."
+  }
+  "no seal for judge"
+  {
+    "ru"  "@lightgreenУ вас нет печати."
+  }
+  "seal expired"
+  {
+    "ru"  "@lightgreenТекущая печать истекла."
+  }
 	"Judgement info"
-	{
-		"ru"		"Высвобождает энергию печати на цели,\nразная печать дает разный эффект."
-	}
+  {
+    "ru"  "Высвобождает энергию печати на цель,\nУ каждой печати свой эффект."
+  }
 	"seal 6"
-	{
-		"ru"		"Печать Команды" //-
-	}
+  {
+	"ru"  "Печать Команды"
+  }
 	"seal 7"
-	{
-		"ru"		"Печать крестоносца" //-
-	}
+  {
+    "ru"  "Печать крестоносца"
+  }
     "seal 12"
   {
-    "ru" "Печать правосудия" //-
+    "ru" "Печать правосудия"
   }
     "seal 13"
   {
-    "ru"  "Печать Праведности" //-
+    "ru"  "Печать Праведности"
   }
   "seal 14"
   {
-    "ru"  "Печать Света" //-
+    "ru"  "Печать Света"
   }
   "seal 15"
   {
-    "ru"  "Печать Мудрости" //-
+    "ru"  "Печать Мудрости"
   }
-	"Seal of Crusader info"
-	{
-		"ru"		"Дает вероятность 30 процентов, что пуля, ударившая врага, вернется в обойму."
-	}
-	"judge crusader caster"
-	{
-		"ru"		"Вы применили @lightgreenПечать Крестоносца@default к игроку @green{1} @defaultи уменьшили его сопротивление с {2} до {3}."
-	}
-	"judge crusader target"
-	{
-		"ru"		"Игрок @green{1} @defaultприменил @lightgreenПечать Крестоносца@default к вам и уменьшил ваше сопротивление с {2} до {3}."
-	}
-	"judge command caster"
-	{
-		"ru"		"Вы применили @lightgreenПечать Команды@default к игроку @vic и нанесли @dmg урона"
-	}
-	"judge command target"
-	{
-		"ru"		"Игрок @att применил @lightgreenПечать Команды@default к вам и нанес @dmg урона"
-	}
-	"freedom cast"
-	{
-		"ru"		"@greenВы применили Благословение Свободы к игроку {2} длительностью @lightgreen{1} @greenсек."
-	}
-	"freedom cast victim"
-	{
-		"ru"		"Игрок @lightgreen{2} @greenприменил @lightgreenБлагословение Свободы @greenк вам длительностью @lightgreen{1} @greenсек."
-	}
-	"Blessing of Freedom info"
-	{
-		"ru"		"Лишает цель возможности приносить себя в жертву на 7.5 сек."
-	}
-	"freedom expired"
-	{
-		"ru"		"@lightgreenВремя действия Благословения Свободы истекло."
-	}
-	"shield cast"
-	{
-		"ru"		"@greenВы применили Божественный Щит который будет длится @lightgreen{1} @greenсек."
-	}
-	"Blessing of Kings info"
-	{
-		"ru"		"Увеличивает все ваши навыки (сил., лов., инт., вын.)\nна 20%."
-	}
-	"Greater Blessing of Kings info"
-	{
-		"ru"		"Увеличивает все навыки (сил., лов., инт., вын.)\nвашей команды на 20%(Не суммируются)."
-	}
-	"kings cast"
-	{
-		"ru"		"Вы применили Благословение Королей и увеличили свои навыки."
-	}
-	"kings cast all"
-	{
-		"ru"		"Вы применили Благословение Королей ко @lightgreenвсем @defaultв своей команде."
-	}
-	"kings aff"
-	{
-		"ru"		"На вас подействовало заклинание @lightgreenБлагословение Королей@default, ваши навыки увеличелись."
-	}
-	"Divine Shield info"
-	{
-		"ru"		"Делает вас неуязвимым на 8 секунд, но\nвы не сможете атаковать ничем, кроме заклинаний."
-	}
-	"shield expired"
-	{
-		"ru"		"@lightgreenВремя действия Божественного Щита истекло."
-	}
-	"unable to attack"
-	{
-		"ru"		"@lightgreen{1} @greenне может быть атакован в данный момент."
-	}
-	"no split"
-	{
-		"ru"		"Невозможно разделить этот предмет."
-	}
-	"can't merge"
-	{
-		"ru"		"@lightgreenЭтот предмет не может быть сложен"
-	}
-	"can't send this item"
-	{
-		"ru"		"@lightgreenНевозможно отправить этот предмет."
-	}
-	"req skill"
-	{
-		"ru"		"Необходим скилл: {1}"
-	}
-	"new prof"
-	{
-		"ru"		"Вы выучили профессию {1}"
-	}
-	"increased prof skill"
-	{
-		"ru"		"@lightgreenВы повысили уровень умения профессии @green{1}!"
-	}
-	"increased prof skill2"
-	{
-		"ru"		"@lightgreenВы повысили уровень умения профессии @green{1} на {2} значения!"
-	}
-
-	"learned book"
-	{
-		"ru"		"@lightgreenВы выучили книгу @green{1}."
-	}
-	"profession change to"
-	{
-		"ru"		"Разучить профессию {1} и выучить:"
-	}
-	"profession select sort"
-	{
-		"ru"		"Выберите диапазон умения для {1}"
-	}
-	"too low skill"
-	{
-		"ru"		"Ваше умение слишком низкое для использования этой книги."
-	}
-	"60 sec for xp"
-	{
-		"ru"		"У вас есть 60 секунд, чтобы сменить персонажа и получить {1} опыта от босса"
-	}
-	"no items"
-	{
-		"ru"		"Нет предметов, пусто."
-	}
-	"wrong profession"
-	{
-		"ru"		"У вас нет соответствующей профессии."
-	}
-	"wc make item"
-	{
-		"ru"		"Меню создания предмета"
-	}
-    "no free/no reagents"
+  "unable to attack"
   {
-    "ru"  "Нет реагентов или свобоного места."
+	"ru"  "@green{1} @defaultзащищен от любого урона."
   }
-	"no free slots"
-	{
-		"ru"		"@lightgreenВаш инвентарь полон!!!"
-	}
-	"prof warning"
-	{
-		"ru"		"Вы потеряете умения и знания текущей профессии"
-	}
-	"prof_0"
-	{
-		"ru"		"Нет профессии"
-	}
-	"prof_1"
-	{
-		"ru"		"Кузнец"
-	}
-	"prof_2"
-	{
-		"ru"		"Ювелир"
-	}
-	"prof_3"
-	{
-		"ru"		"Портной"
-	}
-	"prof_5"
-	{
-		"ru"		"Горное дело (для Ювелирa/Кузнецa)"
-	}
-	"prof_4"
-	{
-		"ru"		"Кожевничество"
-	}
-	"prof_6"
-	{
-		"ru"		"Снятие шкур (для Кожевничествa)"
-	}
-	"prof_7"
-	{
-		"ru"		"Ткач (для Портного)"
-	}
-	"prof_8"
-	{
-		"ru"		"Наложение чар"
-	}
-    "prof_10"
+  "no split"
   {
-    "ru"  "Сбор трав (Для начертание)"
+	"ru"  "@lightgreenВы не можете ф этот предмет."
+  }
+  "can't merge"
+  {
+	"ru"  "@lightgreenЭтот предмет не может быть сложен."
+  }
+  "can't send this item"
+  {
+	"ru"  "@lightgreenВы не можете отправить данный предмет."
+  }
+  "req skill"
+  {
+	"ru"  "Необходим навык: {1}"
+  }
+  "new prof"
+  {
+	"ru"  "Вы изучили новую профессию: @green{1}@default."
+  }
+  "req prof level"
+  {
+    "ru"  "Требуется уровень профессии: @green{1}@default."
+  }
+  "increased prof skill"
+  {
+	"ru"  "@lightgreenВы повысили уровень профессии @green{1}!"
+  }
+  "increased prof skill2"
+  {
+	"ru"  "@lightgreenВы повысили уровень профессии @green{1} @lightgreenна @green{2}!"
+  }
+  "learned book"
+  {
+	"ru"  "@lightgreenВы изучили книгу @green{1}."
+  }
+  "profession change to"
+  {
+	"ru"  "Разучить профессию {1} и изучить:"
+  }
+  "profession select sort"
+  {
+	"ru"  "Выберите диапазон умения для {1}"
+  }
+  "too low skill"
+  {
+	"ru"  "@lightgreenВаше умение слишком низкое для использования этой книги."
+  }
+  "60 sec for xp"
+  {
+	"ru"  "У вас есть @green60 @defaultсекунд, чтобы сменить персонажа и получить @green{1} @defaultопыта от босса."
+  }
+  "no items"
+  {
+	"ru"  "Нет предметов, пусто."
+  }
+  "wrong profession"
+  {
+	"ru"  "@lightgreenУ вас нет соответствующей профессии."
+  }
+  "wc make item"
+  {
+	"ru"  "Меню создания предмета"
+  }
+  "no free/no reagents"
+  {
+    "ru"  "@lightgreenНет реагентов или свободного места."
+  }
+  "no free slots"
+  {
+	"ru"  "@lightgreenВ вашем инвентаре нет свободного места."
+  }
+  "prof warning"
+  {
+	"ru"  "Вы потеряете умения и знания текущей профессии!"
+  }
+  "prof_0"
+  {
+	"ru"  "Нет профессии"
+  }
+  "prof_1"
+  {
+	"ru"  "Кузнец"
+  }
+  "prof_2"
+  {
+	"ru"  "Ювелир"
+  }
+  "prof_3"
+  {
+	"ru"  "Портной"
+  }
+  "prof_5"
+  {
+	"ru"  "Горное дело (для Ювелирa/Кузнецa)"
+  }
+  "prof_4"
+  {
+	"ru"  "Кожевничество"
+  }
+  "prof_6"
+  {
+	"ru"  "Снятие шкур (для Кожевничествa)"
+  }
+  "prof_7"
+  {
+	"ru"  "Ткач (для Портного)"
+  }
+  "prof_8"
+  {
+	"ru"  "Наложение чар"
   }
   "prof_9"
   {
     "ru"  "Начертание"
   }
-	"no recipes"
-	{
-		"ru"		"Вы не выучили ни одного рецепта."
-	}
-    "no bonuses"
+  "prof_10"
+  {
+    "ru"  "Сбор трав (Для начертание)"
+  }
+  "no recipes"
+  {
+	"ru"  "Вы не выучили ни одного рецепта."
+  }
+  "no bonuses"
   {
     "ru"  "Нет бонусов."
   }
-	"you already know"
-	{
-		"ru"		"Вы уже знаете это."
-	}
-	"create item"
-	{
-		"ru"		"Создать предмет: {1}, нажмите для получения информации."
-	}
-	"created item"
-	{
-		"ru"		"@lightgreenВы создали @default{1}@lightgreen."
-	}
-	"skillup chance"
-	{
-		"ru"		"Шанс увеличить уровень умения: {1}%"
-	}
-	"reagent req"
-	{
-		"ru"		"Реагент: {1}, необходимо {2}"
-	}
-	"reagent reqhave"
-	{
-		"ru"		"Реагент: {1}, необходимо {2} (в наличии {3})"
-	}
-	"wc profession"
-	{
-		"ru"		"Профессия: {1}, Уровень умения: {2}"
-	}
-	"change prof1"
-	{
-		"ru"		"Сменить профессию !1!, Вы потеряете предыдущее умение."
-	}
-	"change prof2"
-	{
-		"ru"		"Сменить профессию !2!, Вы потеряете предыдущее умение."
-	}
-	"failed drop"
-	{
-		"ru"		"!!@lightgreenНевозможно получить предмет {1} из-за нехватки свободного места в инвентаре."
-	}
-	"item dropped"
-	{
-		"ru"		"@lightgreenВы получили @green{1} @lightgreenза убийство/лечение игрока."
-	}
-	"item dropped2"
-	{
-		"ru"		"@lightgreenВы получили @green{1} @lightgreen{2}"
-	}
-	"item got"
-	{
-		"ru"		"@lightgreenВы получили @green{1}"
-	}
-	"mChristmas"
-	{
-		"ru"		"@lightgreenСчастливого рождества! Мы надеемся, вы не зря провели время на сервере"
-	}
-	"mParty"
-	{
-		"ru"		"@lightgreenУ нас вечеринка, наслаждайся подарком :D"
-	}
-    "mFortune"
+  "you already know"
   {
-    "ru"    "@lightgreenУдачи!"
+    "ru"  "@lightgreenВы уже знаете это."
   }
-	"item dropped back"
-	{
-		"ru"		"@lightgreenИгрок @green{1} получил @green{2} @lightgreenот босса!"
-	}
-	"wc professions"
-	{
-		"ru"		"Профессии"
-	}
-	"wc auction"
-	{
-		"ru"		"Аукцион"
-	}
-	"auction item"
-	{
-		"ru"		"Предмет: {1} x{3} ({2}) Налог - {4}"
-	}
-	"create auction"
-	{
-		"ru"		"Выставить предмет"
-	}
+  "create item"
+  {
+	"ru"  "Создать предмет: {1}, нажмите для получения информации."
+  }
+  "created item"
+  {
+	"ru"  "@lightgreenВы создали @green{1}@lightgreen."
+  }
+  "skillup chance"
+  {
+    "ru"  "Шанс увеличить уровень умения: {1}%"
+  }
+  "reagent req"
+  {
+	"ru"  "Реагент: {1}, необходимо {2}"
+  }
+  "reagent reqhave"
+  {
+	"ru"  "Реагент: {1}, необходимо {2} (в наличии {3})"
+  }
+  "wc profession"
+  {
+	"ru"  "Профессия: {1}. Уровень: {2}"
+  }
+  "change prof1"
+  {
+    "ru"  "Сменить профессию №1, Вы потеряете умение."
+  }
+  "change prof2"
+  {
+	"ru"  "Сменить профессию №2, Вы потеряете умение."
+  }
+  "failed drop"
+  {
+    "ru"  "@lightgreenНевозможно получить предмет @green{1} @lightgreen, так как недостаточно места в инвентаре."
+  }
+  "item dropped"
+  {
+    "ru"  "@lightgreenВы получили @green{1} @lightgreenза убийство/лечение игрока."
+  }
+  "item dropped2"
+  {
+	"ru"  "@lightgreenВы получили @green{1} @lightgreen(@green{2} @lightgreenшт.)."
+  }
+  "item got"
+  {
+	"ru"  "@lightgreenВы получили @green{1}@lightgreen."
+  }
+  "item dropped back"
+  {
+	"ru"  "@lightgreenИгрок @green{1} @lightgreenполучил @green{2} @lightgreenот босса!"
+  }
+  "wc professions"
+  {
+	"ru"  "Профессии"
+  }
+  "wc auction"
+  {
+	"ru"  "Аукцион"
+  }
+  "auction item"
+  {
+    "ru"  "Предмет: {1} x{3} ({2}) Налог - {4}"
+  }
+  "create auction"
+  {
+	"ru"  "Выставить предмет"
+  }
 	"auction confirm send"
-	{
-		"ru"		"Проверьте всё и нажмите для подтверждения."
-	}
-	"cancel auction mod"
-	{
-		"ru"		"Отменить"
-	}
-	"auction sent"
-	{
-		"ru"		"Предмет выставлен."
-	}
-	"type bid"
-	{
-		"ru"		"Введите начальное количество серебра для ставки. \nУ Вас 40 сек."
-	}
-	"type buyout"
-	{
-		"ru"		"Введите количество серебра для выкупа. 0 - запретить. \nУ Вас 40 сек."
-	}
-	"wc auction send mod"
-	{
-		"ru"		"Вы выставляете предмет, будьте внимательны."
-	}
-	"your bid"
-	{
-		"ru"		"Ваша ставка"
-	}
-	"timeout"
-	{
-		"ru"		"Аукцион закончен."
-	}
-    "bid gold"
   {
-      "ru"    "Начальная ставка: {1} золота"
+	"ru"  "Проверьте всё и нажмите для подтверждения."
   }
-	"bid"
-	{
-		"ru"		"Начальная ставка: {1}"
-	}
-    "buyout gold"
+  "cancel auction mod"
   {
-      "ru"    "Выкуп: {1} Золота"
+	"ru"  "Отменить"
   }
-	"buyout"
-	{
-		"ru"		"Выкуп: {1}"
-	}
-	"buyout disabled"
-	{
-		"ru"		"Выкуп отключен"
-	}
-	"ac item back"
-	{
-		"ru"		"Время аукциона истекло, никто не сделал ставки/выкупил предмет."
-	}
-	"bought out item"
-	{
-		"ru"		"Вы выкупили предмет и потратили {1} серебра."
-	}
-	"your item is bought out"
-	{
-		"ru"		"Ваш предмет {1} был выкуплен."
-	}
-	"your item is sold out"
-	{
-		"ru"		"Ваш предмет {1} бал продан."
-	}
-	"bid won"
-	{
-		"ru"		"Ваша ставка выйграла, потрачено {1} серебра."
-	}
-	"not leading bet"
-	{
-		"ru"		"@lightgreenВаша ставка за {1} больше не действительна. Серебро возвращено."
-	}
-	"auction index"
-	{
-		"ru"		"{1} x{6} уровень {4} {2}/{3} {5}ч"
-	}
-	"read auction title"
-	{
-		"ru"		"{1} x{2} (уровень {3})"
-	}
-	"read bid"
-	{
-		"ru"		"Текущая ставка - {1}, поставить {2}"
-	}
-    "read bid gold"
+  "auction sent"
   {
-      "ru"    "Текущая ставка {1} золота, поставить - {2} золота"
+	"ru"  "Предмет выставлен."
+  }
+  "type bid"
+  {
+	"ru"  "Введите начальное количество серебра/золота для ставки. \nУ Вас 40 сек."
+  }
+  "type buyout"
+  {
+	"ru"  "Введите количество серебра/золота для выкупа. 0 - запретить. \nУ Вас 40 сек."
+  }
+  "wc auction send mod"
+  {
+	"ru"  "Вы выставляете предмет, будьте внимательны."
+  }
+  "your bid"
+  {
+    "ru"  "Ваша ставка"
+  }
+  "timeout"
+  {
+	"ru"  "Аукцион закончен."
+  }
+  "bid gold"
+  {
+      "ru"  "Начальная ставка: {1} золота"
+  }
+  "bid"
+  {
+	"ru"  "Начальная ставка: {1}"
+  }
+  "buyout gold"
+  {
+    "ru" "Выкуп: {1} Золота"
+  }
+  "buyout"
+  {
+	"ru"  "Выкуп: {1}"
+  }
+  "buyout disabled"
+  {
+	"ru"  "Выкуп отключен"
+  }
+  "ac item back"
+  {
+	"ru"  "Время аукциона истекло, никто не сделал ставки/выкупил предмет."
+  }
+  "bought out item"
+  {
+	"ru"  "Вы выкупили предмет за {1} серебра."
+  }
+  "your item is bought out"
+  {
+    "ru"  "Ваш предмет {1} был выкуплен."
+  }
+  "your item is sold out"
+  {
+    "ru"  "Ваш предмет {1} был куплен."
+  }
+  "bid won"
+  {
+	"ru"  "Ваша ставка выйграла, потрачено {1} серебра."
+  }
+  "not leading bet"
+  {
+	"ru"  "@lightgreenВаша ставка {1} серебра больше не действительна. Серебро возвращено."
+  }
+  "auction index"
+  {
+	"ru"  "{1} ({6} шт.) ур: {4}, {2}/{3}. {5}ч"
+  }
+  "read auction title"
+  {
+	"ru"  "{1} ({2} шт.) (уровень: {3})"
+  }
+  "read bid"
+  {
+	"ru"  "Текущая ставка - {1}, поставить {2} серебра"
+  }
+  "read bid gold"
+  {
+    "ru"  "Текущая ставка {1} золота, поставить - {2} золота"
   }
   "read buyout gold"
   {
-      "ru"    "Выкупить предмет за {1} золота"
+    "ru"  "Выкупить предмет за {1} золота"
   }
-	"read buyout"
-	{
-		"ru"		"Выкупить предмет за {1}"
-	}
-	"use item"
-	{
-		"ru"		"Использовать/Прочитать предмет"
-	}
-	"merge item"
-	{
-		"ru"		"Объединить предметы (Макс. - {1})"
-	}
-	"split item"
-	{
-		"ru"		"Разделить предметы."
-	}
-	"splitted"
-	{
-		"ru"		"@lightgreenПредметы разделены."
-	}
-	"write for split"
-	{
-		"ru"		"@lightgreenВведите размер нового деления. У Вас 20 сек."
-	}
-	"wrong amount"
-	{
-		"ru"		"@lightgreenНеверное количество для деления."
-	}
-	"no item"
-	{
-		"ru"		"Нет предмета"
-	}
-	"no text"
-	{
-		"ru"		"Нет текста"
-	}
-	"reply"
-	{
-		"ru"		"Ответить"
-	}
-	"can not put items while alive"
-	{
-		"ru"		"@lightgreenИзвините, но Вы не можете одевать предметы, пока живы."
-	}
-	"deleted message"
-	{
-		"ru"		"@lightgreenСообщение удалено"
-	}
-	"wc mail send mod"
-	{
-		"ru"		"Почта"
-	}
-	"type adresser"
-	{
-		"ru"		"Введите ID получателя.\nID можно узнать у этого персонажа\nили в меню Персонажи других игроков\nУ вас 50 сек."
-	}
-	"no char"
-	{
-		"ru"		"@lightgreenНеверный персонаж."
-	}
-    "invalid target"
+  "read buyout"
   {
-    "ru"    "@lightgreenЦель недействительна @default(Отключился/изменил команду/изменил персонажа/и т.д.)"
+    "ru"  "Выкупить предмет за {1} серебра"
+  }
+  "use item"
+  {
+	"ru"  "Использовать предмет"
+  }
+  "merge item"
+  {
+	"ru"  "Объединить предметы (макс: {1})"
+  }
+  "split item"
+  {
+	"ru"  "Разделить предметы"
+  }
+  "splitted"
+  {
+	"ru"  "@lightgreenПредметы разделены."
+  }
+  "write for split"
+  {
+	"ru"  "@lightgreenВведите размер нового деления. У Вас @green20 @lightgreenсекунд."
+  }
+  "wrong amount"
+  {
+	"ru"  "@lightgreenНеверное количество для деления."
+  }
+  "no item"
+  {
+	"ru"  "Нет предмета"
+  }
+  "no text"
+  {
+	"ru"  "Нет текста"
+  }
+  "reply"
+  {
+    "ru"  "Ответить"
+  }
+  "can not put items while alive"
+  {
+	"ru"  "@lightgreenИзвините, но Вы не можете одевать предметы, пока живы."
+  }
+  "deleted message"
+  {
+	"ru"  "@lightgreenСообщение удалено"
+  }
+  "wc mail send mod"
+  {
+	"ru"  "Почта"
+  }
+  "type adresser"
+  {
+	"ru"  "Введите ID получателя.\nID можно узнать у этого персонажа\nили в меню Персонажи других игроков\nУ вас 50 секунд."
+  }
+  "no char"
+  {
+	"ru"  "@lightgreenНеверный персонаж."
+  }
+  "invalid target"
+  {
+    "ru"  "@lightgreenЦель недействительна @default(Отключился/изменил команду/изменил персонажа/что-то иное)"
   }
   "target out of range"
   {
     "ru"  "@lightgreenЦель недоступна"
   }
-	"type gold"
-	{
-		"ru"		"Введите количество серебра, которое\nхотите отправить, либо нажмите, если 0."
-	}
-	"type topic"
-	{
-		"ru"		"Введите тему сообщения.\nУ вас 2 минуты."
-	}
-	"cancel mail mod"
-	{
-		"ru"		"Отменить"
-	}
-	"mail choose slot"
-	{
-		"ru"		"Выберите предмет для отправки:"
-	}
-	"mail write text"
-	{
-		"ru"		"Введите текст, или нажмите, чтобы пропустить.\nУ вас 5 мин."
-	}
-	"message sent"
-	{
-		"ru"		"@lightgreenСообщение успешно отправлено."
-	}
-	"mail confirm send"
-	{
-		"ru"		"Подтвердить."
-	}
-	"mail no item"
-	{
-		"ru"		"Отправить без предмета."
-	}
-	"no reply"
-	{
-		"ru"		"@lightgreenВы не можете ответить на это сообщение."
-	}
-	"mail topic name"
-	{
-		"ru"		"Тема: {1}"
-	}
-	"mail item"
-	{
-		"ru"		"Предмет: {1} x{3} ({2})"
-	}
-	"mail gold"
-	{
-		"ru"		"Серебро: {1}"
-	}
-	"mail adresser"
-	{
-		"ru"		"Получатель: {4} {1} уровень {2} ID {3}"
-	}
-	"wc mail menu"
-	{
-		"ru"		"Почта"
-	}
-	"send message"
-	{
-		"ru"		"Отправить сообщение"
-	}
-	"days"
-	{
-		"ru"		"Дней"
-	}
-	"delete message"
-	{
-		"ru"		"Удалить сообщение"
-	}
-	"obtained money"
-	{
-		"ru"		"Вы получили @lightgreen{1} @defaultсеребра."
-	}
-	"hours left"
-	{
-		"ru"		"Осталось часов: {1}"
-	}
-	"days left"
-	{
-		"ru"		"Осталось дней: {1}"
-	}
-	"there are new mails"
-	{
-		"ru"		"@lightgreenПочта: В почтовых ящиках ваших персонажей есть письма."
-	}
-	"no new mail"
-	{
-		"ru"		"(Нет новых писем)"
-	}
-	"new mail"
-	{
-		"ru"		"(Новые письма - {1})"
-	}
-	"mail inbox amount"
-	{
-		"ru"		"(Входящие - {1})"
-	}
-	"mail exists"
-	{
-		"ru"		"(Письма - {1})"
-	}
-	"this new mail"
-	{
-		"ru"		"- Новое"
-	}
-	"new mails index"
-	{
-		"ru"		"{1} от {2} ({3} дней)"
-	}
-	"money attached"
-	{
-		"ru"		"Серебро: {1}"
-	}
-	"item attached"
-	{
-		"ru"		"Предмет: {1} x{2}"
-	}
-	"from char"
-	{
-		"ru"		"От {1} (ID персонажа - {2})"
-	}
-	"boss spell blocked"
-	{
-		"ru"		"Заклинание заблокировано из-за Босс мероприятия"
-	}
-	"Admin XP give"
-	{
-		"ru"		"Админ {1} дал вам {2} опыта."
-	}
-	"Admin boss give"
-	{
-		"ru"		"Админ {1} сделал вас боссом #{2}."
-	}
-	"Admin boss back"
-	{
-		"ru"		"Вы сделали игрока {1} боссом #{2}."
-	}
-	"adm invalid player"
-	{
-		"ru"		"Данного игрока нет на сервере."
-	}
-	"adm cmd boss syntax"
-	{
-		"ru"		"wc_addboss <игрок (@all,@ct,@t,#userid)> <ID босса, 0 для отключения>"
-	}
-	"Admin XP back"
-	{
-		"ru"		"Вы дали игроку {1}  {2} опыта."
-	}
-	"adm inv player"
-	{
-		"ru"		"Игрок не в игре."
-	}
-	"adm cmd xp syntax"
-	{
-		"ru"		"wc_xp <игрок (@all,@ct,@t,#userid)> <количество>"
-	}
-	"Admin armor give"
-	{
-		"ru"		"Админ {1} установил ваше значение брони на {2}."
-	}
-	"Admin armor back"
-	{
-		"ru"		"Вы установили значение брони игрока {1} на {2}."
-	}
-	"adm cmd armor syntax"
-	{
-		"ru"		"wc_armor <игрок (@all,@ct,@t,#userid)> <количество> устанавливается после респауна."
-	}
-	"Admin lvl give"
-	{
-		"ru"		"Админ {1} дал вам {2} уровней."
-	}
-	"Admin lvl back"
-	{
-		"ru"		"Вы дали игроку {1}  {2} уровней."
-	}
-	"adm cmd lvl syntax"
-	{
-		"ru"		"wc_level <игрок (@all,@ct,@t,#userid)> <количество уровней>"
-	}
-	"Admin honor changed"
-	{
-		"ru"		"Админ {1} изменил количество вашей чести на {2}."
-	}
-	"Admin honor back"
-	{
-		"ru"		"Вы изменили количество чести игрока {1} на {2}."
-	}
-	"adm cmd honor syntax"
-	{
-		"ru"		"wc_honor <действие - add/take/set или +/-/= > <игрок (@all,@ct,@t,#userid)> <количество чести>"
-	}
-	"Admin money changed"
-	{
-		"ru"		"Админ {1} изменил количество вашего серебра на {2}."
-	}
-	"Admin money back"
-	{
-		"ru"		"Вы изменили количество серебра игрока {1} на {2}."
-	}
-	"adm cmd money syntax"
-	{
-		"ru"		"wc_money <действие - add/take/set или +/-/= > <игрок (@all,@ct,@t,#userid)> <количество серебра>"
-	}
-    "Admin gold changed"
+  "type gold"
   {
-      "ru"      "Админ @green{1} @defaultизменил количество вашего золота на @green{2}"
+	"ru"  "Введите количество серебра, которое\nжелаете отправить, либо нажмите, если 0."
+  }
+  "your silver"
+  {
+    "ru"  "\nУ вас: {1} серебра"
+  }
+  "type topic"
+  {
+	"ru"  "Введите тему сообщения.\nУ вас 2 минуты."
+  }
+  "cancel mail mod"
+  {
+	"ru"  "Нажмите, чтобы отменить отправку."
+  }
+  "mail choose slot"
+  {
+	"ru"  "Выберите предмет для отправки:"
+  }
+  "mail write text"
+  {
+	"ru"  "Введите текст, или нажмите, чтобы пропустить.\nУ вас 5 минут."
+  }
+  "message sent"
+  {
+	"ru"  "@lightgreenСообщение успешно отправлено."
+  }
+  "mail confirm send"
+  {
+	"ru"  "Подтвердить."
+  }
+  "mail no item"
+  {
+	"ru"  "Отправить без предмета."
+  }
+  "no reply"
+  {
+	"ru"  "@lightgreenВы не можете ответить на это сообщение."
+  }
+  "mail topic name"
+  {
+    "ru"  "Тема: {1}"
+  }
+  "mail item"
+  {
+	"ru"  "Предмет: {1} ({3} шт.) ({2})"
+  }
+  "mail gold"
+  {
+	"ru"  "Серебро: {1}"
+  }
+  "mail adresser"
+  {
+	"ru"  "Получатель: {4} {1} уровень {2} ID {3}"
+  }
+  "wc mail menu"
+  {
+	"ru"  "Почта"
+  }
+  "send message"
+  {
+    "ru"  "Отправить сообщение"
+  }
+  "days"
+  {
+	"ru"  "Дней"
+  }
+  "delete message"
+  {
+	"ru"  "Удалить сообщение"
+  }
+  "obtained money"
+  {
+	"ru"  "Вы получили @green{1} @defaultсеребра."
+  }
+  "hours left"
+  {
+	"ru"  "Осталось часов: {1}"
+  }
+  "days left"
+  {
+	"ru"  "Осталось дней: {1}"
+  }
+  "there are new mails"
+  {
+	"ru"  "@lightgreenВ почтовых ящиках ваших персонажей есть письма."
+  }
+  "no new mail"
+  {
+	"ru"  "(Нет новых писем)"
+  }
+  "new mail"
+  {
+	"ru"  "(У вас {1} новых писем)"
+  }
+  "mail inbox amount"
+  {
+	"ru"  "(Входящие - {1})"
+  }
+  "mail exists"
+  {
+	"ru"  "(Письма - {1})"
+  }
+  "this new mail"
+  {
+	"ru"  "- Новое"
+  }
+  "new mails index"
+  {
+	"ru"  "{1} от {2} ({3} дней)"
+  }
+  "money attached"
+  {
+	"ru"  "Серебро: {1}"
+  }
+  "item attached"
+  {
+	"ru"  "Предмет: {1} ({2} шт.)"
+  }
+  "from char"
+  {
+	"ru"  "От {1} (ID персонажа - {2})"
+  }
+  "boss spell blocked"
+  {
+    "ru"  "@lightgreenЗаклинание было заблокировано, так как сейчас проходит мероприятия @greenУбийство Босса."
+  }
+  "Admin XP give"
+  {
+	"ru"  "Админ {1} дал вам {2} опыта."
+  }
+  "Admin boss give"
+  {
+	"ru"  "Админ {1} сделал вас боссом #{2}."
+  }
+  "Admin boss back"
+  {
+	"ru"  "Вы сделали игрока {1} боссом #{2}."
+  }
+  "adm invalid player"
+  {
+	"ru"  "Данного игрока нет на сервере."
+  }
+  "adm cmd boss syntax"
+  {
+	"ru"  "wc_addboss <игрок (@all,@ct,@t,#userid)> <ID босса, 0 для отключения>"
+  }
+  "Admin XP back"
+  {
+	"ru"  "Вы дали игроку {1}  {2} опыта."
+  }
+  "adm inv player"
+  {
+	"ru"  "Игрок не в игре."
+  }
+  "adm cmd xp syntax"
+  {
+	"ru"  "wc_xp <игрок (@all,@ct,@t,#userid)> <количество>"
+  }
+  "Admin armor give"
+  {
+	"ru"  "Админ {1} установил ваше значение брони на {2}."
+  }
+  "Admin armor back"
+  {
+	"ru"  "Вы установили значение брони игрока {1} на {2}."
+  }
+  "adm cmd armor syntax"
+  {
+	"ru"  "wc_armor <игрок (@all,@ct,@t,#userid)> <количество> устанавливается после респауна."
+  }
+  "Admin lvl give"
+  {
+	"ru"  "Админ {1} дал вам {2} уровней."
+  }
+  "Admin lvl back"
+  {
+	"ru"  "Вы дали игроку {1}  {2} уровней."
+  }
+  "adm cmd lvl syntax"
+  {
+	"ru"  "wc_level <игрок (@all,@ct,@t,#userid)> <количество уровней>"
+  }
+  "Admin honor changed"
+  {
+	"ru"  "Админ {1} изменил количество вашей чести на {2}."
+  }
+  "Admin honor back"
+  {
+	"ru"  "Вы изменили количество чести игрока {1} на {2}."
+  }
+  "adm cmd honor syntax"
+  {
+	"ru"  "wc_honor <действие - add/take/set или +/-/= > <игрок (@all,@ct,@t,#userid)> <количество чести>"
+  }
+  "Admin money changed"
+  {
+	"ru"  "Админ {1} изменил количество вашего серебра на {2}."
+  }
+  "Admin money back"
+  {
+	"ru"  "Вы изменили количество серебра игрока {1} на {2}."
+  }
+  "adm cmd money syntax"
+  {
+	"ru"  "wc_money <действие - add/take/set или +/-/= > <игрок (@all,@ct,@t,#userid)> <количество серебра>"
+  }
+  "Admin gold changed"
+  {
+    "ru"  "Админ @green{1} @defaultизменил количество вашего золота на @green{2}"
   }
   "Admin gold back"
   {
-      "ru"      "Вы изменили количество золота игрока {1} на {2}"
+    "ru"  "Вы изменили количество золота игрока {1} на {2}"
   }
   "adm cmd gold syntax"
   {
-    "ru"      "wc_gold <действие - add/take или +/- > <игрок (@all,@ct,@t,#userid)> <количество золота / 100> <причина> [использовать id игрока?]"
+    "ru"  "wc_gold <действие - add/take или +/- > <игрок (@all,@ct,@t,#userid)> <количество золота / 100> <причина> [использовать id игрока?]"
   }
-	"Admin reload syntax"
-	{
-		"ru"		"wc_reload <all/db/config> / all приведет к смене уровня на de_dust2"
-	}
-	"Admin Boss Syntax"
-	{
-		"ru"		"wc_boss 0/1 (выкл/вкл)"
-	}
-	"Admin Mail Syntax flag6"
-	{
-		"ru"		"wc_mailall <тема> <серебро> <ID предмета> <текст>"
-	}
-	"Admin Mail Syntax flag1"
-	{
-		"ru"		"wc_mailall <тема> <текст>"
-	}
-	"Admin Mail Sent"
-	{
-		"ru"		"Почта отправлена всем."
-	}
-	"Admin quiz started"
-	{
-		"ru"		"Опрос начался."
-	}
-	"Admin quiz not enough answers"
-	{
-		"ru"		"Недостаточно ответов."
-	}
-	"Announce Boss"
-	{
-		"ru"		"@lightgreenРежим босса активирован, будьте готовы работать в команде :)"
-	}
-	"Announce Boss0"
-	{
-		"ru"		"@lightgreenРежим босса выключен."
-	}
-    "Admin took item"
+  "Admin reload syntax"
   {
-      "ru"      "Админ {1} убрал у вас предмет: {2} x{3}"
+	"ru"  "wc_reload <all/db/config> / all приведет к смене уровня на de_dust2"
+  }
+  "Admin Boss Syntax"
+  {
+	"ru"  "wc_boss 0/1 (выкл/вкл)"
+  }
+  "Admin Mail Syntax flag6"
+  {
+	"ru"  "wc_mailall <тема> <серебро> <ID предмета> <текст>"
+  }
+  "Admin Mail Syntax flag1"
+  {
+	"ru"  "wc_mailall <тема> <текст>"
+  }
+  "Admin Mail Sent"
+  {
+	"ru"  "Почта отправлена всем."
+  }
+  "Admin quiz started"
+  {
+	"ru"  "Опрос начался."
+  }
+  "Admin quiz not enough answers"
+  {
+	"ru"  "Недостаточно ответов."
+  }
+  "Announce Boss"
+  {
+	"ru"  "@lightgreenМероприятие @greenУбийство Босса @lightgreenактивировано!"
+  }
+  "Announce Boss0"
+  {
+	"ru"  "@lightgreenМероприятие @greenУбийство Босса @lightgreenзакончилось!"
+  }
+  "Admin took item"
+  {
+     "ru"  "Админ {1} убрал у вас предмет: {2} x{3}"
   }
   "Admin took back"
   {
-      "ru"      "Вы убрали у игрока {1} предмет {2} x{3}."
+      "ru"  "Вы убрали у игрока {1} предмет {2} x{3}."
   }
-	"Admin gave item"
-	{
-		"ru"		"Админ {1} дал вам предмет: {2} x{3}"
-	}
-	"Admin gave back"
-	{
-		"ru"		"Вы дали игроку {1} предмет {2} x{3}."
-	}
-	"Admin player no free slot"
-	{
-		"ru"		"У игрока {1} недостаточно места."
-	}
-	"admin wrong item"
-	{
-		"ru"		"Этот предмет не существует."
-	}
-	"admin wrong item amount"
-	{
-		"ru"		"Неверное количество предмета ({1}), максимум - {2}."
-	}
-	"Q You answered"
-	{
-		"ru"		"Ваш ответ: @lightgreen{1} @defaultЖдите до конца этого опроса."
-	}
-	"Q no answer"
-	{
-		"ru"		"Нет ответа"
-	}
-	"Q right answer"
-	{
-		"ru"		"Правильный ответ: @lightgreen{1} @defaultВаш ответ: @lightgreen{2}"
-	}
-	"Q won item"
-	{
-		"ru"		"Вы выиграли предмет: @lightgreen{1} @greenx{2}, Серебро: {3}"
-	}
-	"Q won item xp"
-	{
-		"ru"		"Вы выиграли предмет: @lightgreen{1} @greenx{2} @defaultи @lightgreen{3}@green опыта, серебро: {4}"
-	}
-	"Q won xp"
-	{
-		"ru"		"Вы выиграли: @lightgreen{1}@green опыта, {2} серебро"
-	}
-	"Q time"
-	{
-		"ru"		"\nДо окончания опроса осталось: {1} сек"
-	}
-	"adm cmd give syntax"
-	{
-		"ru"		"wc_give <игрок (@all,@ct,@t,#userid)> <ID предмета> <количество>"
-	}
-    "adm cmd take syntax"
+  "Admin gave item"
   {
-    "ru"      "wc_take <игрок (@all,@ct,@t,#userid)> <ID предмета> <количество>"
+	"ru"  "Админ {1} дал вам предмет: {2} x{3}"
   }
-	"low free slots"
-	{
-		"ru"		"@lightgreenОчистите свой инвентарь, у вас @green{1} @lightgreenпустых ячеек."
-	}
-    "low free slots, clear your inventory."
+  "Admin gave back"
   {
-      "ru"      "@lightgreenОчистите свой инвентарь, у вас @green{1} @lightgreenпустых ячеек."
+	"ru"  "Вы дали игроку {1} предмет {2} x{3}."
   }
-	"item sold"
-	{
-		"ru"		"Предмет продан за @green{1} серебра"
-	}
-	"no item for inf"
-	{
-		"ru"		"@greenИнформация о предмете: @lightgreenнет предмета"
-	}
-	"cant sell"
-	{
-		"ru"		"Этот предмет не может быть продан."
-	}
-	"wc other players"
-	{
-		"ru"		"Персонажи других игроков"
-	}
-	"no player found"
-	{
-		"ru"		"@lightgreenВыбранный игрок не найден."
-	}
-	"no free slot"
-	{
-		"ru"		"В вашем инвентаре нет свободных ячеек."
-	}
-	"incorrect item"
-	{
-		"ru"		"@lightgreenПредмет не найден в базе данных, свяжитесь с администратором"
-	}
-    "get glyph on"
+  "Admin player no free slot"
   {
-    "ru"      "Оденьте этот символ"
+	"ru"  "У игрока {1} недостаточно места."
   }
-	"get item on"
-	{
-		"ru"		"Одеть предмет"
-	}
-	"information"
-	{
-		"ru"		"Информация о предмете"
-	}
-	"sell item confirm"
-	{
-		"ru"		"Подтвердить продажу предмета за {1} серебра"
-	}
-	"sell item"
-	{
-		"ru"		"Продать предмет за {1} серебра"
-	}
-	"move empty slots"
-	{
-		"ru"		"Переместить пустые ячейки в конец"
-	}
-	"empty"
-	{
-		"ru"		"Пусто"
-	}
-	"wc sellitem menu"
-	{
-		"ru"		"Продать предмет из ячейки {1}: {2} ({3}) x{4}"
-	}
-	"wc invitem menu"
-	{
-		"ru"		"Ячейка {1}: {2} ({3}) x{4}"
-	}
-	"wc invitem menu noamount"
-	{
-		"ru"		"Ячейка {1}: {2} ({3}) (персональный)"
-	}
-	"wc invitem menu pl bound"
-	{
-		"ru"		"Ячейка {1}: {2} ({3}) (привязанный к игроку)"
-	}
-    "xp/reqxp"
+  "admin wrong item"
   {
-      "ru"      "Опыт: {1}/{2}"
+	"ru"  "Этот предмет не существует."
+  }
+  "admin wrong item amount"
+  {
+	"ru"  "Неверное количество предмета ({1}), максимум - {2}."
+  }
+  "Q You answered"
+  {
+	"ru"  "Ваш ответ: @lightgreen{1} @defaultЖдите до конца этого опроса."
+  }
+  "Q no answer"
+  {
+	"ru"  "Нет ответа"
+  }
+  "Q right answer"
+  {
+	"ru"  "Правильный ответ: @lightgreen{1} @defaultВаш ответ: @lightgreen{2}"
+  }
+  "Q won item"
+  {
+	"ru"  "Вы выиграли предмет: @lightgreen{1} @green{2} шт., Серебро: {3}"
+  }
+  "Q won item xp"
+  {
+	"ru"  "Вы выиграли предмет: @lightgreen{1} @greenx{2} @defaultи @lightgreen{3}@green опыта, серебро: {4}"
+  }
+  "Q won xp"
+  {
+	"ru"  "Вы выиграли: @lightgreen{1}@green опыта, {2} серебро"
+  }
+  "Q time"
+  {
+	"ru"  "\nДо окончания опроса осталось: {1} сек"
+  }
+  "adm cmd give syntax"
+  {
+	"ru"  "wc_give <игрок (@all,@ct,@t,#userid)> <ID предмета> <количество>"
+  }
+  "adm cmd take syntax"
+  {
+    "ru"  "wc_take <игрок (@all,@ct,@t,#userid)> <ID предмета> <количество>"
+  }
+  "low free slots"
+  {
+	"ru"  "@lightgreenОчистите свой инвентарь, у вас @green{1} @lightgreenпустых ячеек."
+  }
+  "low free slots, clear your inventory."
+  {
+    "ru"  "@lightgreenОчистите свой инвентарь, у вас @green{1} @lightgreenпустых ячеек."
+  }
+  "item sold"
+  {
+	"ru"  "Предмет продан за @green{1} серебра"
+  }
+  "no item for inf"
+  {
+	"ru"  "@greenИнформация о предмете: @lightgreenнет предмета"
+  }
+  "cant sell"
+  {
+	"ru"  "Этот предмет не может быть продан."
+  }
+  "wc other players"
+  {
+	"ru"  "Информация об игроках"
+  }
+  "no player found"
+  {
+	"ru"  "@lightgreenВыбранный игрок не найден."
+  }
+  "no free slot"
+  {
+	"ru"  "В вашем инвентаре нет свободных ячеек."
+  }
+  "incorrect item"
+  {
+	"ru"  "@lightgreenПредмет не найден в базе данных, свяжитесь с администратором"
+  }
+  "get glyph on"
+  {
+    "ru"  "Одеть символ"
+  }
+  "get item on"
+  {
+	"ru"  "Одеть предмет"
+  }
+  "information"
+  {
+	"ru"  "Информация о предмете"
+  }
+  "sell item confirm"
+  {
+	"ru"  "Подтвердить продажу предмета за {1} серебра"
+  }
+  "sell item"
+  {
+	"ru"  "Продать предмет за {1} серебра"
+  }
+  "move empty slots"
+  {
+	"ru"  "Переместить пустые ячейки в конец"
+  }
+  "empty"
+  {
+	"ru"  "Пусто"
+  }
+  "wc sellitem menu"
+  {
+	"ru"  "Продать предмет из ячейки {1}: {2} ({3}) {4} шт."
+  }
+  "wc invitem menu"
+  {
+	"ru"  "Ячейка {1}: {2} ({3}) {4} шт."
+  }
+  "wc invitem menu noamount"
+  {
+	"ru"  "Ячейка {1}: {2} ({3}) (персональный)"
+  }
+  "wc invitem menu pl bound"
+  {
+	"ru"  "Ячейка {1}: {2} ({3}) (привязан к игроку)"
+  }
+  "xp/reqxp"
+  {
+  "ru" "Опыт: {1}/{2}"
   }
   "xp/reqxp/lvl"
   {
-      "ru"      "Опыт: {1}/{2} Уровень {3}"
+    "ru"  "Опыт: {1}/{2} Уровень {3}"
   }
-	"wc inventory menu"
-	{
-		"ru"		"Инвентарь: занято {1}/100 ячеек"
-	}
-	"Item bought"
-	{
-		"ru"		"@lightgreenВы купили @green{1} @lightgreenиз категории @green{2}@lightgreen."
-	}
-	"obtained item"
-	{
-		"ru"		"@lightgreenВы приобрели предмет@green{1} x{3} @lightgreenиз категории @green{2}@lightgreen."
-	}
-	"money"
-	{
-		"ru"		"Серебро: {1}"
-	}
-	"money admin"
-	{
-		"ru"		"Серебро (видят только админы): {1}"
-	}
-    "gold admin"
+  "wc inventory menu"
   {
-      "ru"      "Золото(видят только админы): {1}"
+	"ru"  "Инвентарь: занято {1}/100 ячеек"
   }
-	"slots admin"
-	{
-		"ru"		"Инвентарь игрока (видят только админы)"
-	}
-	"str"
-	{
-		"ru"		"Сила: {1} + {2} = {3}"
-	}
-	"sta"
-	{
-		"ru"		"Выносливость: {1} + {2} = {3}"
-	}
-	"agi"
-	{
-		"ru"		"Ловкость: {1} + {2} = {3}"
-	}
-	"int"
-	{
-		"ru"		"Интеллект: {1} + {2} = {3}"
-	}
-	"points"
-	{
-		"ru"		"Доступные очки: {1}"
-	}
+  "Item bought"
+  {
+    "ru"  "@lightgreenВы купили @green{1} @lightgreenиз категории @green{2}@lightgreen."
+  }
+  "obtained item"
+  {
+	"ru"  "@lightgreenВы приобрели предмет@green{1} x{3} @lightgreenиз категории @green{2}@lightgreen."
+  }
+  "money"
+  {
+	"ru"  "Серебро: {1}"
+  }
+  "money admin"
+  {
+	"ru"  "Серебро (видят только админы): {1}"
+  }
+  "gold admin"
+  {
+    "ru"  "Золото(видят только админы): {1}"
+  }
+  "slots admin"
+  {
+	"ru"  "Инвентарь игрока (видят только админы)"
+  }
+  "str"
+  {
+	"ru"  "Сила: {1} + {2} = {3}"
+  }
+  "sta"
+  {
+    "ru"  "Выносливость: {1} + {2} = {3}"
+  }
+  "agi"
+  {
+	"ru"  "Ловкость: {1} + {2} = {3}"
+  }
+  "int"
+  {
+	"ru"  "Интеллект: {1} + {2} = {3}"
+  }
+  "points"
+  {
+	"ru"  "Доступные очки: {1}"
+  }
 	"reset confirmed"
-	{
-		"ru"		"Вы сбросили свои характеристики за @lightgreen{1} @defaultсеребра и теперь у вас @lightgreen{2} @greenсвободных очков характеристик."
-	}
-	"wc playerstats menu"
-	{
-		"ru"		"Статы персонажа"
-	}
-	"player stats"
-	{
-		"ru"		"Ваш персонаж (ID = {1})"
-	}
-	"Tell player no points"
-	{
-		"ru"		"Нет доступных очков"
-	}
-	"no money"
-	{
-		"ru"		"Недостаточно серебра"
-	}
-	"no honor"
-	{
-		"ru"		"Недостаточно чести"
-	}
-    "no justice"
   {
-    "ru"        "У Вас недостаточно эмблем правосудия"
+	"ru"  "Вы сбросили свои характеристики за @green{1} @defaultсеребра и теперь у вас @green{2} @defaultсвободных очков навыков."
+  }
+  "wc playerstats menu"
+  {
+	"ru"  "Характеристики"
+  }
+	"player stats"
+  {
+	"ru"  "Ваш персонаж (ID = {1})"
+  }
+  "Tell player no points"
+  {
+	"ru"  "@lightgreenНет доступных очков."
+  }
+  "no money"
+  {
+	"ru"  "Недостаточно серебра"
+  }
+  "no honor"
+  {
+	"ru"  "Недостаточно чести"
+  }
+  "no justice"
+  {
+    "ru"  "У Вас недостаточно эмблем правосудия"
   }
   "no valor"
   {
-    "ru"        "У Вас недостаточно эмблем отваги"
+    "ru" "У Вас недостаточно эмблем отваги"
   }
-	"weapons"
-	{
-		"ru"		"Оружие"
-	}
-	"shields"
-	{
-		"ru"		"Щиты & Левая рука"
-	}
-	"chests"
-	{
-		"ru"		"Нагрудники"
-	}
-	"backs"
-	{
-		"ru"		"Плащи"
-	}
-	"feet"
-	{
-		"ru"		"Ступни"
-	}
-	"hands"
-	{
-		"ru"		"Руки"
-	}
-	"helmets"
-	{
-		"ru"		"Головные уборы"
-	}
-	"legs"
-	{
-		"ru"		"Ноги"
-	}
-	"necks"
-	{
-		"ru"		"Ожерелья"
-	}
-	"rings"
-	{
-		"ru"		"Кольца"
-	}
-	"shoulders"
-	{
-		"ru"		"Наплечники"
-	}
-	"trinkets"
-	{
-		"ru"		"Серьги"
-	}
-	"waists"
-	{
-		"ru"		"Пояса"
-	}
-	"wrists"
-	{
-		"ru"		"Браслеты"
-	}
-	"reagents"
-	{
-		"ru"		"Реагенты"
-	}
-	"scroll"
-	{
-		"ru"		"Манускрипт"
-	}
-	"no category"
-	{
-		"ru"		"Неизвестные"
-	}
-	"wc character menu"
-	{
-		"ru"		"Экипировка персонажа"
-	}
-	"insert new char"
-	{
-		"ru"		"Создать нового персонажа (Макс. 15)"
-	}
-	"max amount chars"
-	{
-		"ru"		"Максимальное количество персонажей (15) достигнуто."
-	}
-	"character name"
-	{
-		"ru"		"{2}: ({1})" //-
-	}
-	"change character"
-	{
-		"ru"		"Сменить/Создать персонажа"
-	}
-	"put into inventory"
-	{
-		"ru"		"Положить предмет в инвентарь"
-	}
-	"charitem menu"
-	{
-		"ru"		"Предмет: {1} Ячейка: {2}"
-	}
-	"wc Tinventory menu"
-	{
-		"ru"		"Инвентарь"
-	}
-	"wc shop menu"
-	{
-		"ru"		"Магазин"
-	}
-	"wc help menu"
-	{
-		"ru"		"Помощь"
-	}
-	"wc main menu"
-	{
-		"ru"		"World of Warcraft: Главное меню (ID Игрока {1}, Персонажа {2})"
-	}
-	"Announce levelup"
-	{
-		"ru"		"Игрок {1} достиг {2} уровня."
-	}
-	"wrong class"
-	{
-		"ru"		"Этот предмет для другого класса."
-	}
-	"nostats"
-	{
-		"ru"		"Недостаточно характеристик для использования данного предмета."
-	}
-	"purchase"
-	{
-		"ru"		"Подтвердить покупку"
-	}
-    "purchase stack"
-    {
-      "ru"        "Подтвердить покупку {1} x{2}"
-    }
-	"current money"
-	{
-		"ru"		"Текущее количество серебра: {1}"
-	}
-	"will be money"
-	{
-		"ru"		"Количество серебра после операции: {1}"
-	}
-	"damage"
-	{
-		"ru"		"Сила атаки: {1}"
-	}
-	"bonusspelldmg"
-	{
-		"ru"		"Сила заклинаний: {1}"
-	}
-	"armor"
-	{
-		"ru"		"Броня: {1}"
-	}
-	"resistance"
-	{
-		"ru"		"Сопротивление: {1}"
-	}
-	"critical"
-	{
-		"ru"		"Шанс крита: {1}%"
-	}
-	"resilence"
-	{
-		"ru"		"Устойчивость: {1}"
-	}
-	"resilence no comm"
-	{
-		"ru"		"Устойчивость: {1}"
-	}
-	"resilence c chance"
-	{
-		"ru"		"Понижение шанса крита: {1}%"
-	}
-	"resilence c dmg"
-	{
-		"ru"		"Понижение силы крита: {1}%"
-	}
-	"accuracy"
-	{
-		"ru"		"Точность (Уменьшает эффект отдачи): {1}%"
-	}
-	"accuracy no comm"
-	{
-		"ru"		"Точность: {1}%"
-	}
-	"block"
-	{
-		"ru"		"Шанс блока: {1}%"
-	}
-	"critical strike hit"
-	{
-		"ru"		"@greenКритический удар@default увеличил ваш урон на @lightgreen{1}"
-	}
-	"ambush hit"
-	{
-		"ru"		"Внезапный удар" //-
-	}
-	"ai"
-	{
-		"ru"		"Игнорирование брони: {1}"
-	}
-	"as"
-	{
-		"ru"		"Скорость атаки: {1}%"
-	}
-	"asws"
-	{
-		"ru"		"Скорость оружия: {2}%, Общая: {1}%"
-	}
-	"weapon speed"
-	{
-		"ru"		"Скорость оружия: {1}%"
-	}
-	"bonus as"
-	{
-		"ru"		"Скорость атаки: {1}%"
-	}
-	"bonus speed"
-	{
-		"ru"		"Скорость передвижения: {1}%"
-	}
-	"speed"
-	{
-		"ru"		"Скорость передвижения: {1}%"
-	}
-	"bonus spelldmg"
-	{
-		"ru"		"Бонус к силе магии: {1}"
-	}
-    "bonus haste"
+  // ==================================================================
+  // КАТЕГОРИИ ПРЕДМЕТОВ
+  // ==================================================================
+  "weapons"
   {
-      "ru"			"Бонус к ускорению: {1}"
+	"ru"  "Оружие"
   }
-	"maxhp"
-	{
-		"ru"		"Макс. количество здоровья: {1}"
-	}
-	"maxmp"
-	{
-		"ru"		"Макс. количество маны: {1}"
-	}
-	"mregen"
-	{
-		"ru"		"Регенерация маны: {1}/5 сек"
-	}
-	"red to lvl"
-	{
-		"ru"		"Уменьшение урона: {1}%"
-	}
-	"red to res"
-	{
-		"ru"		"Уменьшение силы магии: {1}%"
-	}
-	"book spellid"
-	{
-		"ru"		"ID заклинания: {1}"
-	}
-	"level"
-	{
-		"ru"		"Уровень: {1}"
-	}
-	"cost"
-	{
-		"ru"		"Цена: {1}"
-	}
+  "shields"
+  {
+	"ru"  "Щиты & Левая рука"
+  }
+  "chests"
+  {
+	"ru"  "Нагрудники"
+  }
+  "backs"
+  {
+	"ru"  "Плащи"
+  }
+  "feet"
+  {
+	"ru"  "Ступни"
+  }
+  "hands"
+  {
+	"ru"  "Руки"
+  }
+  "helmets"
+  {
+	"ru"  "Головные уборы"
+  }
+  "legs"
+  {
+	"ru"  "Ноги"
+  }
+  "necks"
+  {
+	"ru"  "Ожерелья"
+  }
+  "rings"
+  {
+	"ru"  "Кольца"
+  }
+  "shoulders"
+  {
+	"ru"  "Наплечники"
+  }
+  "trinkets"
+  {
+	"ru"  "Серьги"
+  }
+  "waists"
+  {
+	"ru"  "Пояса"
+  }
+  "wrists"
+  {
+	"ru"  "Браслеты"
+  }
+  "reagents"
+  {
+    "ru"  "Реагенты"
+  }
+  "scroll"
+  {
+	"ru"  "Свиток"
+  }
+  "no category"
+  {
+	"ru"  "Неизвестные"
+  }
+  
+  // ==================================================================
+  // ЧАСТИ ТЕЛА
+  // ==================================================================
+  "Right Hand"
+  {
+    "ru"  "Правая рука"
+  }
+  
+  
+  
+  // ==================================================================
+  // ---
+  // ==================================================================
+  
+  
+  "wc character menu"
+  {
+	"ru"  "Экипировка персонажа"
+  }
+  "insert new char"
+  {
+	"ru"  "Создать нового персонажа"
+  }
+  "character name"
+  {
+	"ru"  "{2}: ({1})"
+  }
+  "change character"
+  {
+	"ru"  "Сменить/Создать персонажа"
+  }
+  "put into inventory"
+  {
+	"ru"  "Положить предмет в инвентарь"
+  }
+  "charitem menu"
+  {
+	"ru"  "Предмет: {1} Ячейка: {2}"
+  }
+  "wc Tinventory menu"
+  {
+	"ru"  "Инвентарь"
+  }
+  "wc shop menu"
+  {
+	"ru"  "Магазин"
+  }
+  "wc help menu"
+  {
+	"ru"  "Помощь"
+  }
+  "wc main menu"
+  {
+	"ru"  "World of Warcraft (ID Игрока {1}, Персонажа {2})"
+  }
+  "Announce levelup"
+  {
+	"ru"  "Игрок @green{1} @defaultдостиг @green{2} @defaultуровня."
+  }
+  "wrong class"
+  {
+	"ru"  "Этот предмет для другого класса."
+  }
+  "nostats"
+  {
+	"ru"  "Недостаточно характеристик для использования данного предмета."
+  }
+  "purchase"
+  {
+	"ru"  "Подтвердить покупку"
+  }
+  "purchase stack"
+  {
+    "ru"  "Подтвердить покупку {1} {2} шт."
+  }
+  "current money"
+  {
+	"ru"  "Текущее количество серебра: {1}"
+  }
+  "will be money"
+  {
+	"ru"  "Количество серебра после операции: {1}"
+  }
+  "damage"
+  {
+	"ru"  "Сила атаки: {1}"
+  }
+  "bonusspelldmg"
+  {
+	"ru"  "Сила заклинаний: {1}"
+  }
+  "armor"
+  {
+	"ru"  "Броня: {1}"
+  }
+  "resistance"
+  {
+	"ru"  "Сопротивление: {1}"
+  }
+  "critical"
+  {
+	"ru"  "Шанс крита: {1}%"
+  }
+  "resilence"
+  {
+	"ru"  "Устойчивость: {1}"
+  }
+  "resilence no comm"
+  {
+	"ru"  "Устойчивость: {1}"
+  }
+  "resilence c chance"
+  {
+	"ru"  "Понижение шанса крита: {1}%"
+  }
+  "resilence c dmg"
+  {
+	"ru"  "Понижение силы крита: {1}%"
+  }
+  "accuracy"
+  {
+	"ru"  "Точность (Уменьшает эффект отдачи): {1}%"
+  }
+  "accuracy no comm"
+  {
+	"ru"  "Точность: {1}%"
+  }
+  "block"
+  {
+	"ru"  "Шанс блока: {1}%"
+  }
+  "critical strike hit"
+  {
+	"ru"  "@lightgreenКритический удар@default увеличил ваш урон на @lightgreen{1}@default."
+  }
+  "ambush hit"
+  {
+    "ru"  "Внезапный удар" //-
+  }
+  "bonus str"
+  {
+	"ru"  "Бонус к силе: {1}"
+  }
+  "bonus agi"
+  {
+	"ru"  "Бонус к ловкости: {1}"
+  }
+  "bonus sta"
+  {
+    "ru"  "Бонус к выносливости: {1}"
+  }
+  "bonus int"
+  {
+	"ru"  "Бонус к интеллекту: {1}"
+  }
+  "Announce server new ver"
+  {
+	"ru"  "Новая версия мода доступна на сайте http://wowmod.eu"
+  }
+  "ai"
+  {
+	"ru"  "Игнорирование брони: {1}"
+  }
+  "as"
+  {
+	"ru"  "Скорость атаки: {1}%"
+  }
+  "asws"
+  {
+	"ru"  "Скорость оружия: {2}%, Общая: {1}%"
+  }
+	"weapon speed"
+  {
+	"ru"  "Скорость оружия: {1}%"
+  }
+  "bonus as"
+  {
+	"ru"  "Скорость атаки: {1}%"
+  }
+  "bonus speed"
+  {
+	"ru"  "Скорость передвижения: {1}%"
+  }
+  "speed"
+  {
+	"ru"  "Скорость передвижения: {1}%"
+  }
+  "bonus spelldmg"
+  {
+	"ru"  "Бонус к силе магии: {1}"
+  }
+  "bonus haste"
+  {
+    "ru"	"Бонус к ускорению: {1}"
+  }
+  "maxhp"
+  {
+	"ru"  "Максимальное здоровье: {1}"
+  }
+  "maxmp"
+  {
+	"ru"  "Максимальная мана: {1}"
+  }
+  "mregen"
+  {
+	"ru"  "Регенерация маны: {1}/5 сек"
+  }
+  "red to lvl"
+  {
+	"ru"  "Уменьшение урона: {1}%"
+  }
+  "red to res"
+  {
+	"ru"  "Уменьшение силы магии: {1}%"
+  }
+  "book spellid"
+  {
+	"ru"  "ID заклинания: {1}"
+  }
+  "level"
+  {
+	"ru"  "Уровень: {1}"
+  }
+  "cost"
+  {
+	"ru"  "Цена: {1}"
+  }
     "cost gold2"
   {
-      "ru"			"Стоит {1} золота"
+    "ru"  "Стоит {1} золота"
   }
-	"cost honor"
-	{
-		"ru"		"Стоит чести: {1} (У Вас: {2})"
-	}
-    "cost justice"
+  "cost honor"
   {
-      "ru"			"Стоит {1} эмблем правосудия (У Вас: {2})"
+    "ru"  "Стоит чести: {1} (У Вас: {2})"
+  }
+  "cost justice"
+  {
+    "ru"	  "Стоит {1} эмблем правосудия (У Вас: {2})"
   }
   "cost valor"
   {
-      "ru"			"Стоит {1} эмблем отваги (У Вас: {2})"
+    "ru"  "Стоит {1} эмблем отваги (У Вас: {2})"
   }
-	"2hand"
-	{
-		"ru"		"Двуручное оружие"
-	}
-	"reqstr"
-	{
-		"ru"		"Необходимо силы: {1}"
-	}
-	"reqagi"
-	{
-		"ru"		"Необходимо ловкости: {1}"
-	}
+  "2hand"
+  {
+	"ru"  "Двуручное оружие"
+  }
+  "reqstr"
+  {
+	"ru"  "Необходимо силы: {1}"
+  }
+  "reqagi"
+  {
+	"ru"  "Необходимо ловкости: {1}"
+  }
 	"reqint"
-	{
-		"ru"		"Необходимо интеллекта: {1}"
-	}
-	"reqsta"
-	{
-		"ru"		"Необходимо выностивости: {1}"
-	}
-	"effect"
-	{
-		"ru"		"Эффект: {1}"
-	}
-	"effect_1"
-	{
-		"ru"		"\nШанс сделать кровоточащую рану"
-	}
-	"effect_7"
-	{
-		"ru"		"\nВосстанавливает ману при использовании атакующего заклинания"
-	}
-	"effect_6"
-	{
-		"ru"		"\nВосстанавливает ману при ударе из оружия"
-	}
-	"effect_8"
-	{
-		"ru"		"\nВосстанавливает здоровье при получении повреждения"
-	}
-	"effect_9"
-	{
-		"ru"		"\nВосстанавливает здоровье при получении заклинания"
-	}
-	"effect_20"
-	{
-		"ru"		"\nУменьшает броню цели на 8 при попадании"
-	}
-	"effect_21"
-	{
-		"ru"		"\nКритические удары заклинаниями наносят на 10% больше урона."
-	}
-	"eff 21"
-	{
-		"ru"		"Мантия(+урон)"
-	}
-	"effect_22"
-	{
-		"ru"		"\nДает 30% шанс обойти замедление."
-	}
-	"avoided slowdown"
-	{
-		"ru"		"@lightgreenЗамедление не сработало на вас"
-	}
-	"effect_23"
-	{
-		"ru"		"\nУвеличивает урон на 5% против врагов,\nу которых меньше половины здоровья."
-	}
-	"eff 23"
-	{
-		"ru"		"Эгида(+урон)"
-	}
-	"show xp"
-	{
-		"ru"		"@lightgreenВаш уровень: @green{1} ({2}/{3})"
-	}
-	"LowLevelRound"
-	{
-		"ru"		"@lightgreenВы получили @green{1} опыта @lightgreen, так как ваш уровень ниже среднего"
-	}
-	"RoundStats"
-	{
-		"ru"		"@lightgreenНаибольш.: \n@defaultУрон: @green{1}@default - @lightgreen{2} @default\nПолучено: @green{3} @default- @lightgreen{4} @default\nЛечение: @green{5} @default- @lightgreen{6}"
-	}
-	"XpForDamage"
-	{
-		"ru"		"@lightgreenВы получили @green{1} опыта @lightgreenза нанесение @green{2} @lightgreenурона"
-	}
-	"XpForHealing"
-	{
-		"ru"		"@lightgreenВы получили @green{1} опыта @lightgreenза восстановление @green{2} @lightgreenздоровья своей команде"
-	}
-	"class_0"
-	{
-		"ru"		"Нет класса"
-	}
-	"class_1"
-	{
-		"ru"		"Воин"
-	}
+  {
+	"ru"  "Необходимо интеллекта: {1}"
+  }
+  "reqsta"
+  {
+    "ru"  "Необходимо выностивости: {1}"
+  }
+  "effect"
+  {
+	"ru"  "Эффект: {1}"
+  }
+  "effect_1"
+  {
+	"ru"  "\nШанс сделать кровоточащую рану."
+  }
+  "effect_7"
+  {
+	"ru"  "\nВосстанавливает ману при использовании атакующего заклинания."
+  }
+  "effect_6"
+  {
+	"ru"  "\nВосстанавливает ману при нанесении урона из оружия."
+  }
+  "effect_8"
+  {
+	"ru"  "\nВосстанавливает здоровье при получении повреждения."
+  }
+  "effect_9"
+  {
+	"ru"  "\nВосстанавливает здоровье при получении урона от заклинания."
+  }
+  "effect_20"
+  {
+	"ru"  "\nПри попадании по цели уменьшает её броню на 8."
+  }
+  "effect_21"
+  {
+	"ru"  "\nКритические удары заклинаниями наносят на 10% больше урона."
+  }
+  "effect_22"
+  {
+    "ru"  "\nС 30% шансом вы избежите замедления."
+  }
+  "effect_23"
+  {
+    "ru"  "\nНа 5% повышает наносимый урон, если\nу противника меньше половины здоровья."
+  }
+  "eff 21"
+  {
+	"ru"  "Мантия(+урон)"
+  }
+  "eff 23"
+  {
+	"ru"  "Эгида(+урон)"
+  }
+  "avoided slowdown"
+  {
+	"ru"  "@lightgreenЗамедление не сработало на вас"
+  }
+  "show xp"
+  {
+	"ru"  "@lightgreenВаш уровень: @green{1} @lightgreen(@green{2}@lightgreen/@green{3}@lightgreen)"
+  }
+  "LowLevelRound"
+  {
+	"ru"  "@lightgreenВы получили @green{1}@lightgreen опыта, так как ваш уровень @greenниже @lightgreenсреднего."
+  }
+  "RoundStats"
+  {
+	"ru"  "@lightgreenНаибольш.: \n@defaultУрон: @green{1}@default - @lightgreen{2} @default\nПолучено: @green{3} @default- @lightgreen{4} @default\nЛечение: @green{5} @default- @lightgreen{6}"
+  }
+  "XpForDamage"
+  {
+	"ru"		"@lightgreenВы получили @green{1} @lightgreenопыта за нанесение @green{2} @lightgreenурона."
+  }
+  "XpForHealing"
+  {
+	"ru"  "@lightgreenВы получили @green{1} @lightgreenопыта за восстановление @green{2} @lightgreenздоровья своей команде."
+  }
+  "class_0"
+  {
+	"ru"  "Нет класса"
+  }
+  "class_1"
+  {
+    "ru"  "Воин"
+  }
 	"class_2"
-	{
-		"ru"		"Разбойник"
-	}
+  {
+	"ru"  "Разбойник"
+  }
 	"class_3"
-	{
-		"ru"		"Маг"
-	}
+  {
+	"ru"  "Маг"
+  }
 	"class_4"
-	{
-		"ru"		"Паладин"
-	}
+  {
+	"ru"  "Паладин"
+  }
 	"class_5"
-	{
-		"ru"		"Жрец"
-	}
+  {
+	"ru"  "Жрец"
+  }
 	"class_6"
-	{
-		"ru"		"Шаман"
-	}
+  {
+	"ru"  "Шаман"
+  }
 	"class_7"
-	{
-		"ru"		"Чернокнижник"
-	}
+  {
+	"ru"  "Чернокнижник"
+  }
 	"class_8"
-	{
-		"ru"		"Рыцарь смерти"
-	}
+  {
+	"ru"  "Рыцарь смерти"
+  }
 	"class_9"
-	{
-		"ru"		"Монах"
-	}
-	"max amount characters"
-	{
-		"ru"		"Достигнуто максимальное количество персонажей."
-	}
-	"mclass"
-	{
-		"ru"		"Персонаж"
-	}
-	"wc class choose"
-	{
-		"ru"		"Выберите класс для данного персонажа (У Вас может быть несколько персонажей)"
-	}
-	"your class"
-	{
-		"ru"		"@lightgreenТеперь ваш класс: @green{1}"
-	}
-	"class menu"
-	{
-		"ru"		"Меню класса: {1}"
-	}
-	"class"
-	{
-		"ru"		"Класс: {1}"
-	}
-	"wc class spells"
-	{
-		"ru"		"Меню заклинаний"
-	}
-	"wc manage spells"
-	{
-		"ru"		"Редактировать меню заклинаний"
-	}
-	"wc buy spells"
-	{
-		"ru"		"Купить новые заклинания"
-	}
-	"spellbar"
-	{
-		"ru"		"Меню заклинаний"
-	}
-	"no spell"
-	{
-		"ru"		"Нет заклинания"
-	}
-	"manage spells"
-	{
-		"ru"		"Изменить меню заклинаний"
-	}
-	"spell menu"
-	{
-		"ru"		"Меню заклинания {1}"
-	}
-	"buy spell"
-	{
-		"ru"		"Купить заклинание"
-	}
-	"low lvl"
-	{
-		"ru"		"Низкий уровень"
-	}
-	"low lvl item"
-	{
-		"ru"		"Вам необходим {1} уровень, чтобы купить данный предмет."
-	}
-	"too low lvl rec"
-	{
-		"ru"		"@lightgreenВам необходим {1} уровень, чтобы выучить данный рецепт."
-	}
-	"wc spell inf"
-	{
-		"ru"		"Информация о заклинании {1}"
-	}
-	"spell lvl"
-	{
-		"ru"		"Уровень заклинания: {1} (Ваш: {2})"
-	}
-	"confirm spell"
-	{
-		"ru"		"Подтвердить покупку заклинания {1}"
-	}
-	"press confirm"
-	{
-		"ru"		"Подтвердить!"
-	}
-	"bought spell"
-	{
-		"ru"		"@lightgreen Вы успешно прмобрели заклинание @green{1}"
-	}
-	"target full hp"
-	{
-		"ru"		"У цели максимальное количество здоровья."
-	}
-	"wc spellbook2"
-	{
-		"ru"		"Книга заклинаний (Уровень: {1})"
-	}
-
-	"wc spellbook"
-	{
-		"ru"		"Книга заклинаний"
-	}
-	"blocked damage"
-	{
-		"ru"		"Заблокировано"
-	}
-	"passive"
-	{
-		"ru"		"Пассивное"
-	}
-	"hp mp"
-	{
-		"ru"		"ХП: {1}/{2}\nМН: {3}/{4}" //-
-	}
-	"hp mp dmg taken"
-	{
-		"ru"		"ХП: {1}/{2}\nМН: {3}/{4}\nНанесено: {5}\nПолучено: {6}"
-	}
-    "hp mp dmg threat"
   {
-      "ru" "ХП: {1}/{2}\n{7}: {3}/{4}\nНанесено: {5}\nУгоза: {6}"
+	"ru"  "Монах"
   }
-	"hint healing done"
-	{
-		"ru"		"\nЛеч.: {1}"
-	}
-	"hint stealth"
-	{
-		"ru"		"\nСтелс: {1}%%" //-
-	}
-	"boss hp"
-	{
-		"ru"		"\n{3} ХП: {1}/{2}" //-
-	}
-	"good healing"
-	{
-		"ru"		"@greenВы @lightgreenвызвали падение предметов из-за лечения. @default(Это не значит, что предмет упадет)"
-	}
-	"triggered teamdrop"
-	{
-		"ru"		"@greenВы @lightgreenвызвали падение предметов за выйгрышный раунд. Уровень падения - @lightgreen{1}"
-	}
-	"no mana"
-	{
-		"ru"		"@greenНедостаточно маны"
-	}
-    "no runes"
+  "mclass"
   {
-    "ru"        "@greenУ Вас недостаточно рун"
+	"ru"  "Персонаж"
   }
-	"no target"
-	{
-		"ru"		"@greenНет цели"
-	}
-	"wrong target"
-	{
-		"ru"		"@greenНеверная цель @default(Цель мертва/из вашей команды)"
-	}
-	"nobody"
-	{
-		"ru"		"Никто"
-	}
-	"green item"
-	{
-		"ru"		"Зеленый предмет"
-	}
-	"blue item"
-	{
-		"ru"		"Редкий предмет"
-	}
-	"epic item"
-	{
-		"ru"		"Эпический предмет"
-	}
+  "wc class choose"
+  {
+	"ru"  "Выберите класс для данного персонажа"
+  }
+  "your class"
+  {
+	"ru"  "@lightgreenВы выбрали класс: @green{1}@lightgreen."
+  }
+  "class menu"
+  {
+	"ru"  "Меню класса: {1}"
+  }
+  "class"
+  {
+    "ru"  "Класс: {1}"
+  }
+  "wc class spells"
+  {
+	"ru"  "Набор заклинаний"
+  }
+  "wc manage spells"
+  {
+	"ru"  "Редактировать набор заклинаний"
+  }
+  "wc buy spells"
+  {
+	"ru"  "Купить новые заклинания"
+  }
+  "spellbar"
+  {
+	"ru"  "Набор заклинаний"
+  }
+  "no spell"
+  {
+	"ru"  "Нет заклинания"
+  }
+  "manage spells"
+  {
+    "ru"  "Изменить Набор заклинаний"
+  }
+  "spell menu"
+  {
+	"ru"  "Набор заклинания {1}"
+  }
+  "buy spell"
+  {
+	"ru"  "Купить заклинание"
+  }
+  "low lvl"
+  {
+	"ru"  "Низкий уровень"
+  }
+  "low lvl item"
+  {
+	"ru"  "Вам необходим {1} уровень, чтобы купить данный предмет."
+  }
+  "too low lvl rec"
+  {
+	"ru"  "@lightgreenВам необходим @green{1} @lightgreenуровень, чтобы выучить @greenданный @lightgreenрецепт."
+  }
+  "wc spell inf"
+  {
+	"ru"  "{1}"
+  }
+  "spell lvl"
+  {
+	"ru" "Уровень заклинания: {1} (Ваш: {2})"
+  }
+  "confirm spell"
+  {
+	"ru"  "Подтвердить покупку заклинания {1}"
+  }
+  "press confirm"
+  {
+	"ru"  "Подтвердить!"
+  }
+  "bought spell"
+  {
+	"ru"  "@lightgreen Вы успешно приобрели заклинание @green{1}"
+  }
+  "target full hp"
+  {
+	"ru"  "@lightgreenНевозможно исцелить этого игрока."
+  }
+  "wc spellbook2"
+  {
+	"ru"  "Книга заклинаний (Уровень: {1})"
+  }
+  "wc spellbook"
+  {
+	"ru"  "Книга заклинаний"
+  }
+  "blocked damage"
+  {
+	"ru"  "Заблокировано"
+  }
+  "passive"
+  {
+	"ru"  "Пассивное"
+  }
+  "hp mp dmg taken"
+  {
+	"ru"  "Здоровье: {1}/{2}\nМана: {3}/{4}\nНанесено: {5}\nПолучено: {6}"
+  }
+  "hp mp dmg threat"
+  {
+    "ru"  "Здоровье: {1}/{2}\n{7}: {3}/{4}\nНанесено: {5}\nУгроза: {6}"
+  }
+  "hint healing done"
+  {
+	"ru"  "\nЛечение: {1}"
+  }
+  "hint stealth"
+  {
+	"ru"  "\nСтелс: {1}%%" //-
+  }
+  "boss hp"
+  {
+	"ru"  "\n{3} ХП: {1}/{2}" //-
+  }
+  "good healing"
+  {
+	"ru"  "@lightgreenЗа лечение вашей команды, вы получаете повышенный шанс выпадения предмет!"
+  }
+  "triggered teamdrop"
+  {
+	"ru"  "@lightgreenЗа победу в этом раунде, вы получаете @green{1} @lightgreenуровень падения предметов!"
+  }
+  "no mana"
+  {
+	"ru"  "@lightgreenНедостаточно маны!"
+  }
+  "no runes"
+  {
+    "ru"  "@lightgreenУ Вас недостаточно рун!"
+  }
+  "no rage"
+  {
+    "ru"  "@lightgreenНедостаточно ярости!"
+  }
+  "no target"
+  {
+	"ru"  "@lightgreenНе удалось определить цель!"
+  }
+  "wrong target"
+  {
+	"ru"  "@lightgreenНекорректная цель. (@greenцель мертва@lightgreen или @lightgreenиз вашей команды)"
+  }
+  "nobody"
+  {
+	"ru"  "Никто"
+  }
+  "green item"
+  {
+	"ru"  "Зеленый предмет"
+  }
+  "blue item"
+  {
+	"ru"  "Редкий предмет"
+  }
+  "epic item"
+  {
+	"ru"  "Эпический предмет"
+  }
 	"legendary item"
-	{
-		"ru"		"Легендарный предмет"
-	}
-	"pvp blue item"
-	{
-		"ru"		"Редкий предмет ПВП"
-	}
-	"pvp epic item"
-	{
-		"ru"		"Эпический предмет ПВП"
-	}
-	"wc reset confirm"
-	{
-		"ru"		"Подтверждение сброса очков"
-	}
-	"reset confirm"
-	{
-		"ru"		"Подтвердить сброс за {1} серебра"
-	}
-	"mana usage"
-	{
-		"ru"		"Требуется маны: {1}"
-	}
-	"reset stats"
-	{
-		"ru"		"Сбросить характеристики за {1} серебра"
-	}
-	"cooldown time"
-	{
-		"ru"		"Перезарядка: {1} сек."
-	}
-	"cast time"
-	{
-		"ru"		"Применение: {1} сек."
-	}
-	"spell distance"
-	{
-		"ru"		"Дистанция: {1}"
-	}
-	"spell multi"
-	{
-		"ru"		"Коэффициент: {1}%"
-	}
-	"spell on cd"
-	{
-		"ru"		"@greenИдет перезарядка заклинания. Осталось @lightgreen{1} @greenсек."
-	}
-	"silenced for"
-	{
-		"ru"		"@greenИдет глобальная перезарядка заклинания @lightgreen(или к Вам пременили молчание). @greenОсталось @lightgreen{1} @greenсек."
-	}
-	"you are dead"
-	{
-		"ru"		"@greenВы мертвы"
-	}
-	"whirlwind"
-	{
-		"ru"		"Вы нанесли @green{2} @lightgreenурона игроку @green{1} @defaultс помощью навыка вихрь"
-	}
-	"whirlwind target"
-	{
-		"ru"		"Игрок @att нанес Вам @dmg урона с помощью навыка вихрь"
-	}
-    "adrenaline target"
   {
-    "ru"        "Игрок @att нанес Вам @dmg урона с помощью выброса адреналина АОЕ"
+	"ru"  "Легендарный предмет"
   }
-	"Shield Block info"
-	{
-		"ru"		"Дает 10% шанс заблокировать атаку,\nиспользуя щит."
-	}
-	"Whirlwind info"
-	{
-		"ru"		"Атакует врагов вокруг вас,\nурон равен вашему бонусному урону.\nИгнорирует броню противника!"
-	}
-    "Enrage Regeneration info"
+  "pvp blue item"
   {
-    "ru"      "Восстановить 30% от Вашего\nобщего числа здоровья за 10 сек"
+    "ru"  "Редкий предмет ПВП"
+  }
+  "pvp epic item"
+  {
+    "ru"  "Эпический предмет ПВП"
+  }
+  "wc reset confirm"
+  {
+	"ru"  "Подтверждение сброса талантов"
+  }
+  "reset confirm"
+  {
+	"ru"  "Подтвердить сброс. ({1} серебра)"
+  }
+  "mana usage"
+  {
+	"ru"  "Стоимость: {1}"
+  }
+  "reset stats"
+  {
+	"ru"  "Сбросить характеристики за {1} серебра"
+  }
+  "cooldown time"
+  {
+	"ru"  "Перезарядка: {1} сек."
+  }
+  "cast time"
+  {
+	"ru"  "Применение: {1} сек."
+  }
+  "spell distance"
+  {
+	"ru"  "Дистанция: {1}"
+  }
+  "spell multi"
+  {
+    "ru"  "Коэф: {1}%"
+  }
+  "spell on cd"
+  {
+	"ru"  "@lightgreenИдет перезарядка заклинания! Осталось @green{1} @lightgreenсек."
+  }
+  "silenced for"
+  {
+	"ru"  "@lightgreenНа вас наложено молчание! @lightgreenОсталось @green{1} @lightgreenсек."
+  }
+  "you are dead"
+  {
+	"ru"  "@lightgreenВы мертвы!"
+  }
+  
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ВОИН
+  // ==================================================================
+  "whirlwind"
+  {
+	"ru"  "Вы нанесли @green{2} @defaultурона игрокам @green{1}@default, использовав навык @lightgreenВихрь@default."
+  }
+  "whirlwind target"
+  {
+	"ru"  "Игрок #green@att @defaultнанес Вам @green@dmg @efaultурона, использовав навык @lightgreenВихрь@default."
+  }
+  "Shield Block info"
+  {
+	"ru"  "Дает 10% шанс заблокировать атаку.\nТребуется экипированный щит."
+  }
+  "Whirlwind info"
+  {
+	"ru"  "Наносит урон, равный вашему бонусному урону,\nвсем игрокам около вас.\nИгнорирует броню противника."
+  }
+  "Enrage Regeneration info"
+  {
+    "ru"  "Восстанавливает 15%% от вашего максимального здоровья\nЗа 10 секунд."
   }
   "enrage regeneration cast"
   {
-      "ru"      "Вы применили @greenЯростное Восстановление @defaultи здоровья восстановится @lightgreen{1} @defaultза @lightgreen10 @defaultсек"
+    "ru"  "Вы применили @lightgreenБезудержное Восстановление@default. За 10 секунд вам восстановится @green{1} @defaultздоровья."
   }
-
+  "enrage regeneration cast with glyph"
+  {
+    "ru"    "*** Символ Безудержное Восстановление *** Вы исцелили дополнительно {1}%% от вашего максимального здоровья ({2})."
+  }
+  "heroic strike"
+  {
+	"ru"  "Героичесий удар"
+  }
+  "Heroic Strike info"
+  {
+	"ru"  "Дает вам 20%% шанс увеличить урон.\nУрон зависит от вашей силы атаки.\nШанс повышается с ношением двуручного оружия."
+  }
+  "mortal strike ef"
+  {
+	"ru"  "Смертельный удар"
+  }
+  "mortal strike"
+  {
+	"ru"		"@lightgreenСмертельный удар @defaultувеличил ваш урон на @green{1} @defaultи оставил метку на цели на @green{2} @defaultсек, понижая её исцеление на 50%."
+  }
+  "mortal strike vic"
+  {
+	"ru"  "@lightgreenСмертельный удар @defaultигрока @green{3} @defaultувеличил урон на @green{1}@default. Любое исцеление будет слабее на @green50% @defaultв течение @green{2} @defaultсек."
+  }
+  "Mortal Strike info"
+  {
+	"ru"  "Дает вам 15%% шанс увеличить ваш урон\nи оставить метку на цели на 5 сек,\nкоторая понижает исцеление цели на 50%%.\nНеобходимо двуручное оружие!"
+  }
+  "Defensive Stance info"
+  {
+    "en"    "Понижает физический и магический урон на 20/30%% (нанесенный и полученный).\nМожет быть отключено в любой момент.\nВозможна единожная активация."
+  }
+  "def stance deac"
+  {
+	"ru"  "@lightgreenОборонительная стойка @greenотключена@lightgreen."
+  }
+  "def stance ac"
+  {
+	"ru"  "@lightgreenОборонительная стойка @greenвключена@lightgreen."
+  }
+  "Berserker Stance info"
+  {
+	"ru"  "Увеличивает получаемый урон на 10%%,\nно увеличивает шанс критического удара на 6%%."
+  }
+  "ber stance deac"
+  {
+	"ru"  " @lightgreenСтойка берсерка @greenотключена@lightgreen."
+  }
+  "ber stance ac"
+  {
+	"ru"  " @lightgreenСтойка берсерка @greenвключена@lightgreen."
+  }
+  "hamstring"
+  {
+    "ru"  "Поколечить" //-
+  }
+  "hamstring victim"
+  {
+	"ru"  "Игрок @green{1} @lightgreenПоколечил @defaultи замедлил Вас, нанеся @green{2} @defaultурона."
+  }
+  "Hamstring info"
+  {
+	"ru"  "Дает 8%% шанс замедлить\nпротивника на 25%% и нанести 8 урона."
+  }
+  "revenge used"
+  {
+	"ru"  "Вы применили@lightgreenМесть @defaultк @vic и нанесли ему @dmg урона."
+  }
+  "revenge got"
+  {
+	"ru"  "@att применил @lightgreenМесть @defaultк Вам и нанес Вам @dmg урона"
+  }
+  "Revenge info"
+  {
+	"ru"  "Отражает некоторый урон при блокировании атаки.\nУрон зависит от выносливости и немного от силы."
+  }
+  "improved revenge used"
+  {
+    "ru" "Вы использовали @lightgreenКровную месть @defaultна @green@vic @defaultи нанесли @green@dmg@default урона."
+  }
+  "improved revenge got"
+  {
+    "ru" "@green@att @defaultиспользовал @lightgreenКровную месть @defaultи нанес вам @green@dmg@default урона."
+  }
   "Concussion Blow target"
   {
-      "ru"        "Игрок @green{1} @defaultприменяет к Вам @lightgreenОглушающий Удар @defaultи замораживает Вас на @lightgreen{2} @defaultsсек"
+    "ru"  "Игрок @green{1} @defaultприменил к Вам @lightgreenОглушающий Удар @defaultи заморозил Вас на @green{2} @defaultsсек."
   }
   "Concussion Blow cast"
   {
-      "ru"        "Вы применяете @lightgreenОглушающий Удар @defaultна игрока @green{1} @defaultи замораживаете его на @lightgreen{2} @defaultсек"
+    "ru"  "Вы применили @lightgreenОглушающий Удар @defaultна игрока @green{1} @defaultи заморозили его на @green{2} @defaultсек."
   }
-
-	"Bloodthirst info"
-	{
-		"ru"		"Во время перезагрузки Вы восстановите свой ХП, зависящий от силы следующих 8 ударов."
-	}
-	"bloodthirst activated"
-	{
-		"ru"		"Следующие 8 ударов в течение {1} секунд или {3} раза будут восстанавливать Вам по {2} ХП"
-	}
-	"bloodthirst used"
-	{
-		"ru"		"Кровожадность восстановила Вам @green{1} @defaultХП"
-	}
-	"Evade info"
-	{
-		"ru"		"В течение 2 секунд у Вас будет шанс увернуться от попаданий"
-	}
-	"evade activated"
-	{
-		"ru"		"В течение следующих @lightgreen{1} @defaultсек у Вас есть шанс увернуться от попаданий."
-	}
-	"evade used"
-	{
-		"ru"		"Увернуться" //-
-	}
-	"Expose Armor info"
-	{
-		"ru"		"Увеличивает ваш навык\nИгнорирования Брони на 100% в следующем раунде"
-	}
-	"expose armor activated"
-	{
-		"ru"		"Игнорирование Брони для этого раунда увеличено на @lightgreen{1}@default."
-	}
-	"Cloak of Shadow info"
-	{
-		"ru"		"Увеличивает на 100% Ваше сопротивление"
-	}
-	"cloak of shadow activated"
-	{
-		"ru"		"Плащ Теней увеличивает Ваше сопротивление на @lightgreen{1} @default."
-	}
-	"Stealth info"
-	{
-		"ru"		"Процент вашей невидимости увеличивается, когда\nвы не двигаетесь/стреляете.\nНапример: Стрельба из оружия, попадание в вас, прыжки, движение\nсделают вас видимым."
-	}
-	"Slice and Dice info"
-	{
-		"ru"		"При активации увеличивает точность\nна некоторое время."
-	}
-	"slice and dice cast"
-	{
-		"ru"		"@greenВы применили @lightgreenМясорубку @defaultи Ваша точность увеличилась на @green{1}% @defaultна @green{2} @defaultсек."
-	}
-	"Sprint info"
-	{
-		"ru"		"Увеличивает вашу скорость передвижения\nна 20%, также отменяет эффекты замедления."
-	}
-	"sprint activated"
-	{
-		"ru"		"@greenВы активировали @lightgreenБыстрый бег."
-	}
-	"heroic strike"
-	{
-		"ru"		"Героичесий удар" //-
-	}
-	"Heroic Strike info"
-	{
-		"ru"		"Дает вам 20% шанс увеличить урон.\nУрон зависит от вашей силы атаки. Шанс повышается с ношением двуручного оружия"
-	}
-	"mortal strike ef"
-	{
-		"ru"		"Смертельный удар" //-
-	}
-	"mortal strike"
-	{
-		"ru"		"Смертельный удар увеличил ваш урон на @green{1} @defaultи оставлят дебафф на цели на @green{2} @defaultсек, что делает цель трудно излечимой."
-	}
-	"mortal strike vic"
-	{
-		"ru"		"Смертельный удар игрока @lightgreen{3}@default увеличил урон на @green{1} @default. Вас будет труднее вылечить в течение @green{2} @defaultсек."
-	}
-	"Mortal Strike info"
-	{
-		"ru"		"Дает вам 15% шанс увеличить ваш урон\nи делает дебафф цели на 5 сек,\nчто ухудшает любое лечение в 2 раза.\nДля осуществления необходимо двуручное оружие!"
-	}
-	"Spiritual Attunement info"
-	{
-		"ru"		"Пассивная способность, увеличивающая ману Паладина.\nЗависит от силы и выносливости."
-	}
-	"attunement cast"
-	{
-		"ru"		"@greenДуховное Созвучие @defaultувеличивает Вашу ману на @lightgreen{1}"
-	}
-	"Mana Shield info"
-	{
-		"ru"		"Поглощает половину урона, но тратит ману при каждом попадании."
-	}
-	"mana shield deac"
-	{
-		"ru"		"Вы @greenДеактивировали @lightgreenЩит Маны@default."
-	}
-	"mana shield ac"
-	{
-		"ru"		"Вы @greenАктивировали @lightgreenЩит Маны@default с поглощением @green{1} @defaultХП."
-	}
-	"mana shield"
-	{
-		"ru"		"Щит Маной: {1}" //-
-	}
-	"mana shield end"
-	{
-		"ru"		"Время действия Вашего @lightgreenЩита Маны @defaultистекло."
-	}
-	"Defensive Stance info"
-	{
-		"ru"		"Уменьшает физический и магический полученный/нанесенный урон на 20|30%\nМожет быть включено/выключено в любое время.\nСильно увеличивает Угрозу, получаемую при нанесении урона.\nВозможна только одна активация одновременно."
-	}
-	"def stance deac"
-	{
-		"ru"		"Защитная позиция @lightgreenДеактивирована"
-	}
-	"def stance ac"
-	{
-		"ru"		"Защитная позиция @lightgreenАктивирована"
-	}
-	"Berserker Stance info"
-	{
-		"ru"		"Увеличивает получаемый урон на 10%,\nно увеличивает шанс критического удара на 6%.\nВозможна только одна активация одновременно."
-	}
-	"ber stance deac"
-	{
-		"ru"		"Стойка берсерка @lightgreenДеактивирована"
-	}
-	"ber stance ac"
-	{
-		"ru"		"Стойка берсерка @lightgreenАктивирована"
-	}
-	"Shield Wall info"
-	{
-		"ru"		"Уменьшает получаемый урон в 2 раза\nДлительность - 5 секунд, требует щит."
-	}
-	"shield wall deac"
-	{
-		"ru"		"Время действия @lightgreenЩита Стеной @defaultистекло."
-	}
-	"shield wall ac"
-	{
-		"ru"		"Щит Стена @lightgreenАктивирован @defaultна @lightgreen{1}@green сек!"
-	}
-	"sinister strike"
-	{
-		"ru"		"Коварный Удар" //-
-	}
-	"Sinister Strike info"
-	{
-		"ru"		"Дает 20% шанс увеличить урон.\nУрон зависит от вашей ловкости."
-	}
-	"hamstring"
-	{
-		"ru"		"Поколечить" //-
-	}
-	"hamstring victim"
-	{
-		"ru"		"Игрок @green{1} Поколечил и @defaultзамедлил Вас, увеличил урон на @green{2}"
-	}
-	"Hamstring info"
-	{
-		"ru"		"Дает 8% шанс замедлить\nпротивника на 25% и нанести 8 урона."
-	}
-	"revenge used"
-	{
-		"ru"		"Вы применили@lightgreen Месть @defaultк @vic и нанесли ему @dmg урона."
-	}
-	"revenge got"
-	{
-		"ru"		"@att применил @lightgreenМесть @defaultк Вам и нанес Вам @dmg урона"
-	}
-	"Revenge info"
-	{
-		"ru"		"Месть отражает некоторый урон\nпри блокировании атаки.\nУрон зависит от выносливости и немного от силы."
-	}
-	"Cheat Death info"
-	{
-		"ru"		"Обман Смерти восстанавливает вам 15%% от вашего максимального здоровья"
-	}
-	"cheated damage"
-	{
-		"ru"		"Обман Смерти" //-
-	}
-	"cheated damage victim"
-	{
-		"ru"		"Игрок @green{1} избежал урона @lightgreen{2}@green Вашего заклинания с помощью @defaultОбмана Смерти"
-	}
-	"reflected damage"
-	{
-		"ru"		"Отражение" //-
-	}
-	"reflected damage victim"
-	{
-		"ru"		"Игрок @green{1} @defaultотразил урон Вашего заклинания (@lightgreen{2}@default)"
-	}
-	"Spell Reflection info"
-	{
-		"ru"		"Дает вам 12% шанс отразить урон заклинания\nназад, используя щит"
-	}
-	"frostbolt caster"
-	{
-		"ru"		"Вы применили @lightgreenЛедяную Стрелу @defaultна игрока @vic и нанесли ему @dmg урона с замедлением"
-	}
-	"frostbolt target"
-	{
-		"ru"		"@att применил @lightgreenЛедяную Стрелу @defaultна Вас и нанес Вам @dmg урона с замедлением"
-	}
-	"Frostbolt info"
-	{
-		"ru"		"Наносит противнику урон и замедляет его\nна 3 сек. (урон зависит от Силы Магии)"
-	}
-	"frostnova"
-	{
-		"ru"		"Вы применили Кольцо Льда к игроку @green{1} @defaultи нанесли @lightgreen{2} @defaultурона."
-	}
-	"frostnova target"
-	{
-		"ru"		"Игрок @att применил @lightgreenКольцо Льда @defaultна Вас и нанес @dmg урона с заморозкой."
-	}
-    "blinkwake"
+  "Shield Wall info"
   {
-      "ru"        "Выпущенный Вами Мигающий Свет @green{1} @default наносит @lightgreen{2} @default урона."
+	"ru"  "Уменьшает получаемый урон на 50%%\nДлительность - 3 секунд, требуется щит."
   }
-  "blinkwake target"
+  "shield wall deac"
   {
-    "ru"        "Игрок @att выпустил @lightgreenМигающий свет @default на Вас и нанес @dmg урона."
+	"ru"  "Время действия навыка @lightgreenГлухая оборона @defaultистекло."
   }
-	"Frost Nova info"
-	{
-		"ru"		"Наносит урон игрокам вокруг и замораживает\nих на 3.5 сек. (урон зависит от силы магии)"
-	}
-	"totem nova"
-	{
-		"ru"		"Тотем Кольцо Огня взорвался около @green{1}@default и нанес ему @lightgreen{2} @defaultурона."
-	}
-	"totem nova cast"
-	{
-		"ru"		"Вы применили @greenТотем Кольцо Огня@default на @lightgreen{1} @defaultсекунд."
-	}
-	"totem nova target"
-	{
-		"ru"		"@lightgreenТотем Кольцо Огня @default игрока @att взорвался и нанес Вам @dmg урона"
-	}
-	"Fire Nova Totem info"
-	{
-		"ru"		"Вызывает Тотем Кольцо Огня на 30 секунд.\nТотем взорвется рядом с целью, если не будет разрушен."
-	}
-	"reincarnation"
-	{
-		"ru"		"Вы были возрождены с помощью заклинания @greenРеинкарнация"
-	}
-	"Reincarnation info"
-	{
-		"ru"		"Позволяет вам возродиться после смерти 1 раз за раунд.\nВероятность 40%."
-	}
-	"resurrect"
-	{
-		"ru"		"Вы применили заклинание @lightgreenВоскрешение @greenк игроку @lightgreen{1}"
-	}
-	"resurrect target"
-	{
-		"ru"		"Игрок @green{1} @defaultприменил заклинание @lightgreenВоскрешение@default на вас. Вы будете возрождены и восстановлены на 30% Вашего ХП."
-	}
-	"Resurrection info"
-	{
-		"ru"		"Возрождает труп ближайшего игрока Вашей команды на максимальном\nрасстоянии 400 с 30% ХП."
-	}
-	"metamorph"
-	{
-		"ru"		"Вы становитесь @lightgreenДемоном @defaultи увеличиваете броню @green{1} @defaultна @green{2} @default сек"
-	}
-	"no longer demon"
-	{
-		"ru"		"Вы больше не @lightgreenДемон @default, броня снижена"
-	}
-	"Metamorphosis info"
-	{
-		"ru"		"Вы становитесь Демоном и Ваша броня увеличивается\nна некоторое время"
-	}
-	"arcexpl"
-	{
-		"ru"		"Вы применили @lightgreenЧародейский Взрыв @greenк игроку @lightgreen{1} @greenи нанесли @lightgreen{2} @defaultурона"
-	}
-	"arcexpl target"
-	{
-		"ru"		"Игрок @att применил к Вам@lightgreenЧародейский Взрыв @default и нанес @dmg урона"
-	}
-	"Arcane Explosion info"
-	{
-		"ru"		"Наносит урон окружающим Вас врагам за счет\nбольшого количества маны"
-	}
-	"shadow bolt caster"
-	{
-		"ru"		"Вы применили @lightgreenСтрелу Тьмы @defaultк игроку @vic и нанесли @dmg урона"
-	}
-	"shadow bolt target"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenСтрелу Тьмы @default и нанес @dmg урона"
-	}
-	"Shadow Bolt info"
-	{
-		"ru"		"Наносит урон противнику.\n(урон зависит от силы магии)"
-	}
-	"fireball caster"
-	{
-		"ru"		"Вы применили @lightgreenОгненый Шар @defaultк игроку @vic и нанесли @dmg урона"
-	}
-	"fireball target"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenОгненный Шар @default и нанес @dmg урона"
-	}
-	"Fireball info"
-	{
-		"ru"		"Наносит урон противнику.\n(урон зависит от силы магии)"
-	}
-	"windfury cast"
-	{
-		"ru"		"Неистовство Ветра" //-
-	}
-	"Windfury info"
-	{
-		"ru"		"Дает 13% шанс нанести дополнительные 75% урона."
-	}
-	"fear caster"
-	{
-		"ru"		"@defaultВы применили @lightgreenСтрах @defaultк игоку @lightgreen{1} @default"
-	}
-	"fear target"
-	{
-		"ru"		"Игрок @green{1} @defaultприменил к Вам @lightgreenСтрах"
-	}
-	"Fear info"
-	{
-		"ru"		"Применение темного заклинания заставляет\nигрока летать в страхе некоторое время"
-	}
-	"demon armor cast"
-	{
-		"ru"		"@defaultВы применили @lightgreenДемонический Доспех @defaultи Ваша броня увеличилась на @lightgreen{1}"
-	}
-	"Demon Skin info"
-	{
-		"ru"		"Шкура Демона применяется в начале каждого раунда\n и увеличивает количество вашей брони."
-	}
-	"life tap cast"
-	{
-		"ru"		"@defaultВы применили @lightgreenЖизнеотвод @defaultи нанесли @lightgreen{1} @defaultурона себе с восстановлением @lightgreen{2} @defaultманы"
-	}
-	"Life Tap info"
-	{
-		"ru"		"Применение Жизнеотвода превращает 10%\nВашего здоровья в ману."
-	}
-	"too low hp life tap"
-	{
-		"ru"		"Недостаточно здоровья для применения Жизнеотвода"
-	}
-	"corruption cast"
-	{
-		"ru"		"@defaultВы применили @lightgreenПорчу @defaultи нанесли @lightgreen{1} @defaultурона за тик на игрока @green{2}@default. Длительность 5 тиков."
-	}
-	"corruption cast vic"
-	{
-		"ru"		"Игрок @green{2} @defaultприменил на Вас @lightgreenПорчу @defaultи нанес @lightgreen{1} @defaultурона за тик. Длительность 5 тиков."
-	}
-	"Corruption info"
-	{
-		"ru"		"Применяет к игроку дебафф, наносящий\nнекоторое количество урона в течение 15сек.\nУрон зависит от силы магии."
-	}
-	"life drain cast"
-	{
-		"ru"		"@defaultВы применили @lightgreenПохищение Жизни@default к игроку @green{2} @defaultи нанесли @lightgreen{1} @defaultурона + самолечение за тик. Длительность 5 тиков."
-	}
-	"life drain cast vic"
-	{
-		"ru"		"Игрок @green{2} @defaultприменил на Вас @lightgreenПохищение Жизни @defaultи нанес @lightgreen{1} @defaultурона + лечение врага за тик. Длительность 5 тиков."
-	}
-	"Life Drain info"
-	{
-		"ru"		"Применяет дебафф, наносящий среднее\nколичество урона раз в 12 секунд,\nурон зависит от силы магии.\nНанесенный урон возвращается к врагу в виде здоровья."
-	}
-	"immolate cast"
-	{
-		"ru"		"@defaultВы применили @lightgreenЖертвенный Огонь @defaultи нанесли @dmg урона + @lightgreen{1} @defaultурона за тик игроку @vic"
-	}
-	"immolate cast vic"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenЖертвенный Огонь @defaultи нанес @dmg урона + @lightgreen{1} @defaultурона за тик."
-	}
-	"Immolate info"
-	{
-		"ru"		"Нанесение урона + урон/тик,\nзависит от силы магии."
-	}
-	"flameshock cast"
-	{
-		"ru"		"@defaultВы применили @lightgreenОгненный Шок @defaultи нанесли @dmg урона + @lightgreen{1} @defaultурона за тик игроку @vic."
-	}
-	"flameshock cast vic"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenОгненный Шок @defaultи нанес @dmg урона + @lightgreen{1} @defaultурона за тик."
-	}
-	"Flame Shock info"
-	{
-		"ru"		"Дает Вашему оружию шанс применить Огненный Шок\nк цели. Нанесение урона + урон за тик, зависит от силы магии"
-	}
-	"frostshock cast"
-	{
-		"ru"		"@defaultВы применили @lightgreenЛедяной Шок @defaultк игроку @vic и нанесли @dmg урона + @lightgreenзамедление"
-	}
-	"frostshock cast vic"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenЛедяной Шок @defaultи нанес @dmg урона + @lightgreenзамедление"
-	}
-	"Frost Shock info"
-	{
-		"ru"		"Дает Вашему оружию шанс применить Ледяной Шок\nк цели. Нанесение урона + замедление"
-	}
-	"earthshock cast"
-	{
-		"ru"		"Вы применили @lightgreenЗемной Шок @default к игроку @vic и нанесли @dmg урона + @lightgreen{1} @defaultсек молчания"
-	}
-	"earthshock cast vic"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenЗемной Шок @defaultи нанес @dmg урона + @lightgreen{1} @defaultсек молчания"
-	}
-	"Earth Shock info"
-	{
-		"ru"		"Дает Вашему оружию шанс применить Земной Шок\nк цели. Нанесение урона + молчание цели на 3 сек"
-	}
-	"scorch cast"
-	{
-		"ru"		"Вы автоматически применили @lightgreenОжог @defaultк @vic и нанесли @dmg урона."
-	}
-	"Scorch info"
-	{
-		"ru"		"Дает Вашему оружию шанс нанести дополнительный урон,\nзависящий от Силы Магии."
-	}
-	"blink cast"
-	{
-		"ru"		"@greenВы телепортировались"
-	}
-	"blink failed"
-	{
-		"ru"		"@greenПрименение телепортации @lightgreenне удалось@green из-за небезопасного местоназначения"
-	}
-	"Blink info"
-	{
-		"ru"		"Возможность телепортироваться"
-	}
-	"vanish cast"
-	{
-		"ru"		"Вы применили @greenИсчезновение. @defaultВы будете находиться в режиме @greenневидимости @defaultв течение @green{1} сек"
-	}
-	"vanish expired"
-	{
-		"ru"		"@greenВремя действия Исчезновения истекло, теперь Вы видимы и можете атаковать."
-	}
-	"Vanish info"
-	{
-		"ru"		"Исчезновение делает вас незаметным.\nК сожалению, вы не можете атаковать, когда используете этот навык."
-	}
-	"backstab used"
-	{
-		"ru"		"Удар в Спину" //-
-	}
-	"Backstab info"
-	{
-		"ru"		"Дает возможность нанести дополнительный урон,\nесли вы стреляете сзади. \nТакже, убирает штраф со скорость стрельбы."
-	}
-	"deadly poison activated"
-	{
-		"ru"		"@defaultВы применили @lightgreenСмертельный Яд, @defaultтеперь ваши попадания @lightgreenотравляют @defaultпротивника"
-	}
-	"stealth activated"
-	{
-		"ru"		"@defaultВы активировали @lightgreenНевидимость, @defaultстойте на месте, чтобы стать @lightgreenпрозрачнее."
-	}
-	"deadly poison casted"
-	{
-		"ru"		"@greenВы отравили игрока @lightgreen{1} @greenи нанесли ему @lightgreen{2} @greenурона за тик."
-	}
-	"deadly poison casted victim"
-	{
-		"ru"		"Игрок @lightgreen{1} @greenотравил Вас и наносит Вам @lightgreen{2} @greenурона за тик."
-	}
-	"Deadly Poison info"
-	{
-		"ru"		"Дает возможность отравить цель,\nкоторая будет терять здоровье в течение некоторого времени.\nУрон зависит от ловкости."
-	}
-	"Arcane Intellect info"
-	{
-		"ru"		"Увеличивает Ваш интеллект в зависимости от уровня"
-	}
-	"intellect cast"
-	{
-		"ru"		"Вы применили @greenЧародейский Интеллект @defaultи увеличили свой интеллект на @lightgreen{1}"
-	}
-	"Rockbiter Weapon info"
-	{
-		"ru"		"Делает атаку вашего оружия на 50% магической и на 50% физической.\nСтоит 2 маны за удар, переключаемо"
-	}
-	"rockbiter cast"
-	{
-		"ru"		"Вы применили @greenОружие Камнедробителя@default. (50% магического и физического урона, проникновение {1})"
-	}
-    "rockbiter off"
+  "shield wall ac"
   {
-    "ru"        "Вы @lightgreenвыключили @greenОружие Камнедробителя."
+	"ru"  "Навык @lightgreenГлухая оборона @defaultвключен на @green{1}@default сек."
   }
-	"bonus str"
-	{
-		"ru"		"Бонус к силе: {1}"
-	}
-	"bonus agi"
-	{
-		"ru"		"Бонус к ловкости: {1}"
-	}
-	"bonus sta"
-	{
-		"ru"		"Бонус к выносливости: {1}"
-	}
-	"bonus int"
-	{
-		"ru"		"Бонус к интеллекту: {1}"
-	}
-	"Announce server new ver"
-	{
-		"ru"		"Новая версия мода доступна на сайте http://wowmod.eu"
-	}
-	"flash heal caster"
-	{
-		"ru"		"Вы применили Быстрое Исцеление к игроку @lightgreen{1} @defaultи восстановили @lightgreen{2} @defaultздоровья"
-	}
-	"flash heal target"
-	{
-		"ru"		"Игрок @lightgreen{1} @defaultвосстановил Вам @lightgreen{2} @defaultздоровья"
-	}
-	"Flash Heal info"
-	{
-		"ru"		"Восстанавливает здоровье цели. \nЭффективность исцеления зависит от силы магии."
-	}
-	"healing wave caster"
-	{
-		"ru"		"Вы применили Волну Исцеления к игроку @lightgreen{1} @defaultи восстановили @lightgreen{2} @defaultздоровья, +@lightgreen{3} @defaultброни на 30 сек."
-	}
-	"healing wave target"
-	{
-		"ru"		"Игрок @lightgreen{1} @defaultвосстановил Вам @lightgreen{2} @defaultздоровья, +@lightgreen{3} @defaultброни на 30 сек."
-	}
-	"Healing Wave info"
-	{
-		"ru"		"Восстанавливает здоровье цели. \nЭффективность исцеления зависит от силы магии. \nТакже, восстанавливает немного брони на 30 сек."
-	}
-    "holy radiance caster"
+  "Spell Reflection info"
   {
-      "ru"        "Вы применили @greenСвятое Сияние @defaultк игроку @lightgreen{1} @defaultи восстановили @lightgreen{2} @defaultздоровья"
+	"ru"  "Дает вам 12%% шанс отразить заклинание противника, используя щит."
+  }
+  "shield absorbed"
+  {
+	"ru"  "Непроницаемый щит"
+  }
+  "need shield"
+  {
+	"ru"  "Для активации этого навыка необходим щит!"
+  }
+  "Power Word: Shield info"
+  {
+	"ru"  "Поглощает некоторое количество урона.\nУрон зависит от силы магии.\nНеобходим щит."
+  }
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА РАЗБОЙНИК
+  // ==================================================================
+  "Evade info"
+  {
+	"ru"  "В течение 2 секунд у Вас будет шанс увернуться от физического урона."
+  }
+  "evade activated"
+  {
+	"ru"  "В течение следующих @green{1} @defaultсек у Вас есть шанс увернуться от физического урона."
+  }
+  "evade used"
+  {
+	"ru"  "Уворот"
+  }
+  "Expose Armor info"
+  {
+	"ru"  "Повышает игнорирование брони на 30%%"
+  }
+  "expose armor activated"
+  {
+	"ru"  "Игнорирование брони было увеличено на @green{1} @defaultдо @green{2}@default."
+  }
+  "Cloak of Shadow info"
+  {
+	"ru"  "Повышает ваше сопротивление на 30%%"
+  }
+  "cloak of shadow activated"
+  {
+	"ru"  "Плащ Теней увеличивает Ваше сопротивление на @green{1} @defaultдо @green{2}@default."
+  }
+  "Stealth info"
+  {
+	"ru"		"Вы становитесь прозрачнее, пока стоите на месте.\nСтрельба из оружия, прыжок, попадания по вам, движение\nСделают вас видимым."
+  }
+  "Slice and Dice info"
+  {
+	"ru"  "Повышает Вашу точность на 20%% на 6 секунд."
+  }
+  "slice and dice cast"
+  {
+	"ru"  "Вы применили @lightgreenМясорубку @defaultи Ваша точность увеличилась на @green{1}% @defaultна @green{2} @defaultсек."
+  }
+  "Sprint info"
+  {
+	"ru"  "Повышает вашу скорость передвижения на 20%%\nСнимает все эффекты замедления."
+  }
+  "sprint activated"
+  {
+	"ru"  "Вы активировали @lightgreenСпринт@default. Скорость передвижения увеличена на @green{1}@default%."
+  }
+  "sinister strike"
+  {
+	"ru"  "Коварный Удар"
+  }
+  "Sinister Strike info"
+  {
+	"ru"  "Дает 20%% шанс увеличить урон (атакуя с ножа, шанс выше).\nУрон зависит от вашей ловкости.\nШанс зависит от вашей скорости атаки."
+  }
+  "Cheat Death info"
+  {
+	"ru"  "При получении смертельного попадания, вы единожды выживите,\n восстановив себе 15%% от максимального здоровья."
+  }
+  "cheated damage"
+  {
+	"ru"  "Обман Смерти"
+  }
+  "cheated damage victim"
+  {
+	"ru"  "Игрок @green{1} @defaultизбежал @green{2} @defaulурона с помощью @lightgreenОбмана Смерти@default."
+  }
+  "vanish cast"
+  {
+	"ru"  "Вы применили @lightgreenИсчезновение. @defaultВы будете прозрачны следующие @green{1} @defaultсек."
+  }
+  "vanish expired"
+  {
+	"ru"  "Время действия @lightgreenИсчезновения @defaultистекло."
+  }
+  "Vanish info"
+  {
+	"ru"  "Исчезновение делает вас прозрачным.\nПопадание по противнику сделает вас видимым."
+  }
+  "backstab used"
+  {
+	"ru"  "Удар в Спину"
+  }
+  "Backstab info"
+  {
+	"ru"  "Наносит дополнительный урон, если вы стреляете противнику в спину.\nУбирает штраф замедления стрельбы."
+  }
+  "deadly poison activated"
+  {
+	"ru"  "Вы применили @lightgreenСмертельный Яд@default, теперь ваши попадания отравляют противника."
+  }
+  "deadly poison casted"
+  {
+	"ru"  "Вы отравили игрока @green{1} @defaultи нанесли ему @green{2} @defaultурона за тик."
+  }
+  "deadly poison casted victim"
+  {
+	"ru"  "Игрок @green{1} @defaultотравил Вас и наносит Вам @green{2} @defaultурона за тик."
+  }
+  "Deadly Poison info"
+  {
+	"ru"  "С некоторым шансом отравляет цель.\nНаносит урон каждые несколько секунд.\nУрон зависит от ловкости."
+  }
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ПАЛАДИН
+  // ==================================================================
+  "Spiritual Attunement info"
+  {
+	"ru"  "Пассивная способность, увеличивающая ману Паладина.\nЗависит от силы и выносливости."
+  }
+  "attunement cast"
+  {
+	"ru"		"@lightgreenДуховное Созвучие @defaultувеличивает Вашу ману на @lgreen{1}@default."
+  }
+  "seal cast"
+  {
+    "ru"  "Вы применили @lightgreenПечать {1}@default, которая будет длиться @lightgreen{2}@default сек или до @lightgreenСуждения@default, на себя."
+  }
+    "Cast Seal info"
+  {
+    "ru"  "Примененные печати будут действительны 30 сек. Имеющиеся навыки определяют печати.\nУрон от приговора зависит от: Силы заклинаний и Святой силы"
+  }
+  "Seal of Command info"
+  {
+    "ru"  "Даёт ваш шанс нанесения Святого урона, зависящего\nвашего бонусного урона.\nТребует двуручное оружие!"
+  }
+  "seal of command activated"
+  {
+    "ru"  "@lightgreenПечать повиновения @defaultигрока @green@att @defaultнанесла @green@dmg @defaultурона игроку @green@vic@default."
+  }
+  "Seal of Crusader info"
+  {
+	"ru"  "Дает 30%% вероятность, что пуля, попавшая в противника, вернется в вашу обойму."
+  }
+  "judge crusader caster"
+  {
+	"ru"  "Вы применили @lightgreenПечать Крестоносца@default на игрока @green{1} @defaultи уменьшили его сопротивление с @green{2} @defaultдо @green{3}@default."
+  }
+  "judge crusader target"
+  {
+	"ru"  "Игрок @green{1} @defaultприменил @lightgreenПечать Крестоносца@default на вас и уменьшил ваше сопротивление с @green{2} @defaultдо @green{3}@default."
+  }
+  "judge command caster"
+  {
+	"ru"  "Вы применили @lightgreenПечать Команды@default на игрока @green@vic @defaultи нанесли @green@dmg @defaultурона."
+  }
+  "judge command target"
+  {
+	"ru"  "Игрок @green@att @defaultприменил @lightgreenПечать Команды@default на вас и нанес @green@dmg @defaultурона."
+  }
+  "freedom cast"
+  {
+	"ru"  "Вы применили @lightgreenБлагословение Свободы @defaultк игроку @green{2} @defaultдлительностью @green{1} @defaultсек."
+  }
+  "freedom cast victim"
+  {
+	"ru"  "Игрок @green{2} @greenприменил @lightgreenБлагословение Свободы @defaultк вам длительностью @green{1} @defaultсек."
+  }
+  "Blessing of Freedom info"
+  {
+	"ru"  "Лишает цель возможности приносить себя в жертву на 7.5 сек."
+  }
+  "freedom expired"
+  {
+	"ru"  "Время действия @lightgreenБлагословения Свободы @defaultистекло."
+  }
+  "shield cast"
+  {
+	"ru"  "Вы применили @lightgreenБожественный Щит@default, который будет длится @green{1} @defaultсек."
+  }
+  "Blessing of Kings info"
+  {
+	"ru"  "Увеличивает все ваши базовые навыки:\nЛовкость, силу, интеллект, выносливость\nНа 20 процентов."
+  }
+  "Greater Blessing of Kings info"
+  {
+	"ru"  "Увеличивает базовые навыки вашей команды:\nЛовкость, силу, интеллект, выносливость\nНа 20 процентов."
+  }
+  "kings cast"
+  {
+	"ru"  "Вы применили @lightgreenБлагословение Королей@default и усилили свои навыки."
+  }
+  "kings cast all"
+  {
+	"ru"  "Вы применили @lightgreenБлагословение Королей @defaultко @lightgreenвсем в вашей команде."
+  }
+  "kings aff"
+  {
+	"ru"  "На вас подействовало заклинание @lightgreenБлагословение Королей@default, ваши навыки были усилены."
+  }
+  "Divine Shield info"
+  {
+	"ru"  "Делает вас неуязвимым на 8 секунд, но\nвы не сможете атаковать ничем, кроме заклинаний."
+  }
+  "shield expired"
+  {
+	"ru"  "Время действия @lightgreenБожественного Щита @defaultистекло."
+  }
+  "holy radiance caster"
+  {
+    "ru" "Вы применили @lightgreenСвятое Сияние @defaultк игрокам @green{1}@default, восстановив @green{2} @defaultздоровья."
   }
   "holy radiance target"
   {
-      "ru"        "Игрок @lightgreen{1} @defaultвосстановил Вам @lightgreen{2} @defaultздоровья"
+      "ru"  "Игрок @green{1} @defaultвосстановил Вам @green{2} @defaultздоровья."
   }
   "Holy Radiance info"
   {
-    "ru"      "Восстанавливает здоровье всех дружественных персонажей. \nЭффективность исцеления зависит от силы магии. \nРадиус 850."
+    "ru"  "Восстанавливает здоровье всех дружественных персонажей.\nЭффективность исцеления зависит от силы магии.\nРадиус 850."
   }
-	"greater heal caster"
-	{
-		"ru"		"Вы применили @greenВеликое Исцеление@default к игроку @lightgreen{1} @defaultи восстановили @lightgreen{2} @defaultздоровья"
-	}
-	"greater heal target"
-	{
-		"ru"		"Игрок @lightgreen{1} @defaultвосстановил Вам @lightgreen{2} @defaultздоровья"
-	}
-	"Greater Heal info"
-	{
-		"ru"		"Восстанавливает большое количество здоровья цели.\nЭффективность исцеления зависит от силы магии."
-	}
-	"shield activated"
-	{
-		"ru"		"Вы применили заклинание @greenСлово Силы: Щит @defaultк игроку @green{3}@default, в течение @lightgreen{1} @defaultсек оно будет поглащать @lightgreen{2} урона"
-	}
-	"shield activated vic"
-	{
-		"ru"		"Игрок {3} применил к вам заклинание @greenСлово Силы: Щит@default, в течение @lightgreen{1} @defaultсек оно будет поглощать @lightgreen{2} урона"
-	}
-	"shield absorbed"
-	{
-		"ru"		"Заклинание Щит" //-
-	}
-	"need shield"
-	{
-		"ru"		"@lightgreenНеобходим щит!"
-	}
-	"Power Word: Shield info"
-	{
-		"ru"		"Активирует щит, который защищает от пуль.\nКоличество поглощаемого урона зависит от силы магии.\nДлительность равна времени перезагрузки."
-	}
-	"mindblast caster"
-	{
-		"ru"		"Вы применили @lightgreenВзрыв Разума @defaultк игроку @vic и нанесли @dmg урона"
-	}
-	"mindblast target"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenВзрыв Разума @defaultи нанес @dmg урона."
-	}
-	"Mind Blast info"
-	{
-		"ru"		"Наносит сильное повреждение противнику. \n(урон зависит от силы магии)"
-	}
-	"manaburn caster"
-	{
-		"ru"		"Вы применили @lightgreenСожжение Маны@default к игроку @vic и нанесли @dmg урона с сжиганием @lightgreen{1}@default маны"
-	}
-	"manaburn target"
-	{
-		"ru"		"Игрок @att применил к Вам @lightgreenСожжение Маны@default и нанес @dmg урона с сжиганием @lightgreen{1}@default маны"
-	}
-	"Mana Burn info"
-	{
-		"ru"		"Сжигает 100 маны у цели.\nЗначение быстро увеличивается в зависимости от силы магии.\nНе работает против классов без маны."
-	}
-	"Power Word: Fortitude info"
-	{
-		"ru"		"Увеличивает вашу выносливость в зависимости от уровня.\nУровень * 0.31 \n(80 уровень = 25) \n (40 уровень = 12)"
-	}
-	"stamina cast"
-	{
-		"ru"		"Вы применили @greenСлово Силы: Стойкость @defaultи увеличили свою выносливость на @lightgreen{1}."
-	}
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА МАГ
+  // ==================================================================
+  "Mana Shield info"
+  {
+	"ru"  "Понижает получаемый урон на 50%, но тратит ману при каждом попадании."
+  }
+  "mana shield deac"
+  {
+	"ru"  "Вы @greenОтключили @lightgreenЩит заклинателя@default."
+  }
+  "mana shield ac"
+  {
+	"ru"  "Вы @greenАктивировали @lightgreenЩит заклинателя@default с поглощением @green{1} @defaultурона."
+  }
+  "mana shield"
+  {
+	"ru"  "Щит заклинателя: {1}"
+  }
+  "mana shield end"
+  {
+	"ru"  "Время действия Вашего навыка @lightgreenЩит заклинателя @defaultистекло."
+  }
+  "frostbolt caster"
+  {
+	"ru"  "Вы применили @lightgreenЛедяную Стрелу @defaultна игрока @green@vic @defaultи нанесли ему @green@dmg @defaultурона с замедлением."
+  }
+  "frostbolt target"
+  {
+	"ru"  "@green@att @defaultприменил @lightgreenЛедяную Стрелу @defaultна Вас и нанес Вам @green@dmg @defaultурона с замедлением."
+  }
+  "Frostbolt info"
+  {
+	"ru"  "Наносит противнику урон и замедляет его на 3 секунды.\nУрон зависит от силы магии."
+  }
+  "frostnova"
+  {
+	"ru"  "Вы применили @lightgreenКольцо Льда @defaultк @green{1} @default, нанеся @green{2} @defaultурона и заморозили противника."
+  }
+  "frostnova target"
+  {
+	"ru"  "Игрок @green@att @defaultприменил @lightgreenКольцо Льда @default, нанес вам @green@dmg @defaultурона и заморозил вас."
+  }
+  "Frost Nova info"
+  {
+	"ru"  "Наносит урон игрокам вокруг и замораживает их на 3.5 секунды.\nУрон зависит от силы магии."
+  }
+  "blinkwake"
+  {
+    "ru"  "Выпущенный Вами @lightgreenМерцающий Свет @defaultзадел @green{1} @defaultнаносит @green{2} @default урона."
+  }
+  "blinkwake target"
+  {
+    "ru" "Игрок @green@att выпустил @lightgreenМерцающий Свет @defaultна Вас и нанес @green@dmg@default урона."
+  }
+  "arcexpl"
+  {
+	"ru"  "Вы применили @lightgreenЧародейский Взрыв @defaultк @green{1}@default, нанеся @green{2} @defaultурона."
+  }
+  "arcexpl target"
+  {
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenЧародейский Взрыв@default, нанеся @green@dmg @defaultурона."
+  }
+  "Arcane Explosion info"
+  {
+	"ru"  "Наносит урон окружающим Вас врагам."
+  }
+  "fireball caster"
+  {
+	"ru"  "Вы применили @lightgreenОгненый Шар @defaultк игроку @green@vic@default, нанеся @green@dmg@default урона."
+  }
+  "fireball target"
+  {
+	"ru"  "Игрок @green@att@default применил к Вам @lightgreenОгненный Шар@default, нанеся @green@dmg@default урона."
+  }
+  "Fireball info"
+  {
+	"ru"  "Наносит магический урон противнику.\nУрон зависит от силы магии"
+  }
+  "scorch cast"
+  {
+	"ru"  "Вы применили @lightgreenОжог @defaultк @green@vic @default, нанеся @green@dmg @defaultурона."
+  }
+  "Scorch info"
+  {
+	"ru"  "Дает Вашему оружию шанс нанести дополнительный урон.\nзависящий от Силы Магии."
+  }
+  "scorch cast att"
+  {
+    "ru"  "Вы использовали @lightgreenОжог@default на @green@vic@default, нанеся @green@dmg@default урона."
+  }
+  "scorch cast vic"
+  {
+    "ru"  "@green@att@default использовал @lightgreenОжог@default, нанеся вам @green@dmg@default урона."
+  }
+  "blink cast"
+  {
+	"ru"  "Вы применили навык @lightgreenТелепортация@default."
+  }
+  "blink failed"
+  {
+	"ru"  "Невозможно применить навык @lightgreenТелепортация @defaultиз-за риска застрять в объекте."
+  }
+  "Blink info"
+  {
+	"ru"  "Перемещает вас в то место, куда направлен ваш прицел.\nИмеет максимальную дистанцию перемещения."
+  }
+  "Arcane Intellect info"
+  {
+	"ru"  "Увеличивает Ваш интеллект в зависимости от уровня."
+  }
+  "intellect cast"
+  {
+	"ru"  "Навык @lightgreenЧародейский Интеллект @defaultувеличил ваш интеллект на @green{1}@default."
+  }
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ШАМАН
+  // ==================================================================
+  "totem nova"
+  {
+	"ru"  "@lightgreenТотем Кольцо Огня @defaultвзорвался около @green{1}@default, нанеся противнику @green{2} @defaultурона."
+  }
+  "totem nova cast"
+  {
+	"ru"  "Вы установили @lightgreenТотем Кольцо Огня@default, который будет существовать @green{1} @defaultсек."
+  }
+  "totem nova target"
+  {
+	"ru"  "@lightgreenТотем Кольцо Огня @defaultигрока @green@att@default взорвался, нанеся Вам @green@dmg@default урона."
+  }
+  "Fire Nova Totem info"
+  {
+	"ru"  "Создает Тотем Кольцо Огня на 30 секунд.\nТотем взорвется рядом с целью, если не будет разрушен."
+  }
+  "reincarnation"
+  {
+	"ru"  "Вы были возрождены с помощью заклинания @lightgreenРеинкарнация."
+  }
+  "Reincarnation info"
+  {
+	"ru"  "Позволяет вам возродиться после смерти 1 раз за раунд.\nВероятность 40%."
+  }
+  "windfury cast"
+  {
+	"ru"  "Неистовство Ветра"
+  }
+  "Windfury info"
+  {
+	"ru"  "Ваши физические атаки имеют 20%% шанс повысить урон на 20%%."
+  }
+  "flameshock cast"
+  {
+	"ru"  "@defaultВы применили @lightgreenОгненный Шок@default, нанеся @green@dmg @defaultурона + @green{1} @defaultурона за тик игроку @green@vic@default."
+  }
+  "flameshock cast vic"
+  {
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenОгненный Шок@default, нанеся @green@dmg @defaultурона + @green{1} @defaultурона за тик."
+  }
+  "Flame Shock info"
+  {
+  "ru"  "Дает Вашему оружию шанс применить Огненный Шок.\nОгненный шок наносит урон сразу и через некоторое время.\nУрон зависит от силы магии."
+  }
+  "frostshock cast"
+  {
+	"ru"  "Вы применили @lightgreenЛедяной Шок @defaultк игроку @green@vic@default, нанеся @green@dmg @defaultурона и замедление."
+  }
+  "frostshock cast vic"
+  {
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenЛедяной Шок@default, нанеся @green@dmg @defaultурона и замедление"
+  }
+  "Frost Shock info"
+  {
+	"ru"  "Дает Вашему оружию шанс применить Ледяной Шок.\nЛедяной шок наносит урон и замедляет цель.\nУрон зависит от силы магии."
+  }
+  "earthshock cast"
+  {
+	"ru"  "Вы применили @lightgreenЗемной Шок @defaultк игроку @green@vic@default, нанеся @green@dmg@default урона и @lightgreen{1} @defaultсек молчания."
+  }
+  "earthshock cast vic"
+  {
+	"ru"  "Игрок @green@at@defaultt применил к Вам @lightgreenЗемной Шок@default, нанеся @green@dmg@default урона и @lightgreen{1} @defaultсек молчания."
+  }
+  "Earth Shock info"
+  {
+	"ru"  "Дает Вашему оружию шанс применить Земной Шок.\nЗемной шок наносит урон и накладывает молчание.\nУрон зависит от силы магии."
+  }
+  "Rockbiter Weapon info"
+  {
+	"ru"  "Делает атаку вашего оружия магической и физической (50%%/50%%).\nСтоит 3 маны за удар, переключаемо."
+  }
+  "rockbiter cast"
+  {
+	"ru"  "Вы применили @lightgreenОружие Камнедробителя@default."
+  }
+  "rockbiter off"
+  {
+    "ru"  "Вы отключили применение навыка @lightgreenОружие Камнедробителя@default."
+  }
+  "healing wave caster"
+  {
+	"ru"  "Вы применили @lightgreenВолну Исцеления @defaultк игроку @green{1}@default, восстановив @green{2} @defaultздоровья и добавив @green{3} @defaultброни на 30 секунд."
+  }
+	"healing wave target"
+  {
+	"ru"  "Игрок @green{1} @defaultвосстановил Вам @green{2} @defaultздоровья и добавил @green{3} @defaultброни на 30 секунд."
+  }
+	"Healing Wave info"
+  {
+	"ru"  "Восстанавливает здоровье цели.\nЭффективность исцеления зависит от силы магии. \nТакже, добавляет немного брони на 30 секунд."
+  }
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ЖРЕЦ
+  // ==================================================================
+  "resurrect"
+  {
+	"ru"  "Вы применили заклинание @lightgreenВоскрешение @defaultк игроку @green{1}@default."
+  }
+  "resurrect target"
+  {
+	"ru"  "Вы были возрождены навыком @lightgreenВоскрешение @defaultигрока @green{1}@default."
+  }
+  "Improved Resurrection info"
+  {
+    "ru"  "Снижает время восстановления навыка Воскрешение на: 6|13|20 секунд"
+  }
+  "improved resurrect"
+  {
+    "ru" "Вы использовали @lightgreenУлучшенное Воскрешение@default на @green{1}@default."
+  }
+  "improved resurrect target"
+  {
+    "ru" "@green{1}@default использовал @lightgreenУлучшенное Воскрешение@default на вас."
+  }
+  "Resurrection info"
+  {
+	"ru"  "Возрождает выбранного вами союзника в радиусе 400 около вас.\nЦели будет восстановлено 50%% от её здоровья и маны."
+  }
+  "flash heal caster"
+  {
+	"ru"  "Вы применили @lightgreenБыстрое Исцеление @defaultк игроку @green{1}@default, восстановив ему @green{2} @defaultздоровья."
+  }
+  "flash heal target"
+  {
+	"ru"  "Игрок @green{1} @defaultвосстановил Вам @green{2} @defaultздоровья."
+  }
+  "Flash Heal info"
+  {
+	"ru"  "Восстанавливает здоровье цели.\nЭффективность исцеления зависит от силы магии."
+  }
+  "greater heal caster"
+  {
+	"ru"  "Вы применили @lightgreenВеликое Исцеление@default к игроку @green{1}@default, восстановив @green{2} @defaultздоровья."
+  }
+  "greater heal target"
+  {
+	"ru"  "Игрок @green{1} @defaultвосстановил Вам @green{2} @defaultздоровья."
+  }
+  "Greater Heal info"
+  {
+	"ru"  "Восстанавливает большое количество здоровья цели.\nЭффективность исцеления зависит от силы магии."
+  }
+  "pw shield used caster"
+  {
+    "ru"  "Вы применили навык @lightgreenСлово Силы: Щит @defaultк игроку @green{3}@default, который защищает от @green{2} @defaultурона в течение @green{1}@default сек."
+  }
+  "pw shield used victim"
+  {
+    "ru"  "Игрок @green{3}@default применил @lightgreengreenСлово Силы: Щит@default к вам, защищая себя от @green{2} @defaultурона в течение @green{1}@default сек."
+  }
+    "imp pw shield used caster"
+  {
+    "ru"  "Вы применили навык @lightgreenУлучшенное Слово Силы: Щит @defaultк игроку @green{3}@default, который защищает от @green{2} @defaultурона в течение @green{1}@default сек."
+  }
+  "imp pw shield used victim"
+  {
+    "ru"  "Игрок @green{3} @defaultприменил к вам навык @lightgreengreenУлучшенное Слово Силы: Щит@default, который защищает от @green{2} @defaultурона в течение @green{1}@default сек."
+  }
+  "imp pw shield used self"
+  {
+    "ru"  "Вы применили навык @lightgreengreenСлово Силы: Щит@default к себе, защищая себя от @green{2} @defaultурона в течение @green{1}@default сек."
+  }
+  "pw shield used self"
+  {
+    "ru"  "Вы применили навык @lightgreenУлучшенное Слово Силы: Щит@default к себе, защищая себя от @green{2} @defaultурона в течение @green{1}@default сек."
+  }
+  "mindblast caster"
+  {
+	"ru"  "Вы применили @lightgreenВзрыв Разума @defaultк игроку @green@vic @defaultи нанесли @green@dmg @defaultурона,"
+  }
+  "mindblast target"
+  {
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenВзрыв Разума @defaultи нанес @green@dmg @defaultурона."
+  }
+  "Mind Blast info"
+  {
+	"ru"  "Наносит урон противнику.\nУрон зависит от силы магии."
+  }
+  "manaburn caster"
+  {
+	"ru"  "Вы применили @lightgreenСожжение Маны@default к игроку @green@vic@default, нанеся @green@dmg @defaultурона с сжиганием @green{1}@default маны."
+  }
+  "manaburn target"
+  {
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenСожжение Маны@default, нанеся @green@dmg @defaultурона с сжиганием @green{1}@default маны."
+  }
+  "Mana Burn info"
+  {
+	"ru"  "Сжигает немного маны у цели.\nЗначение зависит от силы магии.\nНе работает против классов без маны."
+  }
+  "body and soul used"
+  {
+    "ru" "Талант @lightgreenТело и Душа @defaultвосстановил вам @green{1}@default здоровья."
+  }
+  "Power Word: Fortitude info"
+  {
+    "ru"  "Увеличивает вашу выносливость в зависимости от уровня.\nФормула: Уровень * 0.31."
+  }
+  "stamina cast"
+  {
+	"ru"  "Навык @lightgreenСлово Силы: Стойкость @defaultувеличил вашу выносливость на @lightgreen{1}."
+  }
+  
+  // ==================================================================
+  // НАВЫКИ И ТАЛАНТЫ КЛАССА ЧЕРНОКНИЖНИК
+  // ==================================================================
+  "metamorph"
+  {
+	"ru"  "Вы стали @lightgreenДемоном @defaultна @green{2} @defaultсек. Броня увеличена на @green{1}@default."
+  }
+  "no longer demon"
+  {
+	"ru"  "Вы больше не @lightgreenДемон@default. Установлена начальная броня."
+  }
+  "Metamorphosis info"
+  {
+	"ru"  "Увеличивает вашу броню на некоторое время."
+  }
+  "shadow bolt caster"
+  {
+	"ru"  "Вы применили @lightgreenСтрелу Тьмы @defaultк игроку @green@vic@default, нанеся @green@dmg @defaultурона."
+  }
+  "shadow bolt target"
+  {
+	"ru"  "Игрок @green@att@default применил к Вам @lightgreenСтрелу Тьмы@default, нанеся @green@dmg @defaultурона."
+  }
+  "Shadow Bolt info"
+  {
+	"ru"  "Наносит урон противнику.\nУрон зависит от силы магии."
+  }
+  "fear caster"
+  {
+	"ru"  "Вы применили @lightgreenСтрах @defaultк игоку @lightgreen{1}@default."
+  }
+  "fear target"
+  {
+	"ru"  "Игрок @green{1} @defaultприменил к Вам @lightgreenСтрах@default."
+  }
+  "Fear info"
+  {
+	"ru"  "Заставляет игрока летать некоторое время.\nЗатмевает экран цели."
+  }
+  "Demon Skin info"
+  {
+	"ru"  "Шкура Демона применяется в начале каждого раунда.\nУвеличивает количество брони."
+  }
+  "demon skin cast"
+  {
+    "ru"      "Навык @greenШкура Демона@default повысил вашу броню на @green{1} @defaultдо @green{2}@default."
+  }
+  "demon skin cast with talent"
+  {
+    "ru"      "@lightgreenДоспех Скверны@default: Вы использовали @lightgreenШкура Демона@default и увеличили вашу броню на @green{1}@default до @green{2}@default."
+  }
+  "life tap cast"
+  {
+	"ru"  "Вы использовали @lightgreenЖизнеотвод@default, восстановив себе @green{2}@default маны, взамен на @green{1}@default здоровья."
+  }
+  "Life Tap info"
+  {
+	"ru"  "Применение Жизнеотвода превращает 10%%\nВашего здоровья в ману."
+  }
+  "too low hp life tap"
+  {
+	"ru"  "Недостаточно здоровья для применения навыка @lightgreenЖизнеотвод@default."
+  }
+  "corruption cast"
+  {
+	"ru"  "Вы применили @lightgreenПорчу@default на игрока @green{2}@default, которая наносит @green{1} @defaultурона за тик."
+  }
+  "corruption cast vic"
+  {
+	"ru"  "Игрок @green{2} @defaultприменил на Вас @lightgreenПорчу@default, которая наност @green{1} @defaultурона за тик."
+  }
+  "Corruption info"
+  {
+	"ru"  "Наносит урон игроку каждые 3 секунды.\nДлительность 15 секунд.\nУрон зависит от силы магии."
+  }
+  "life drain cast"
+  {
+	"ru"  "Вы применили навык @lightgreenПохищение Жизни@default на игрока @green{2}@default, который наносит @green{1} @defaultурона за тик."
+  }
+  "life drain cast vic"
+  {
+	"ru"  "Игрок @green{2} @defaultприменил на Вас @lightgreenПохищение Жизни @defaultи нанес @lightgreen{1} @defaultурона."
+  }
+  "Life Drain info"
+  {
+	"ru"  "Наносит игроку урон каждые 2.5 секунды.\nДлительность 12 секунд.\nВосстанавливает вам здоровье, равное урону."
+  }
+  "immolate cast"
+  {
+	"ru"  "@defaultВы применили @lightgreenЖертвенный Огонь @defaultна игрока @green@vic@default, который наносит @green@dmg @defaultурона и @green{1} @defaultурона за тик."
+  }
+  "immolate cast vic"
+  {
+	"ru"  "Игрок @green@att @defaultприменил к Вам @lightgreenЖертвенный Огонь@default, нанеся @green@dmg @defaultурона и @green{1} @defaultурона за тик."
+  }
+  "Immolate info"
+  {
+	"ru"  "Наносит урон сразу после применения, а также\nкаждые несколько секунд.\nУрон зависит от силы магии."
+  }
+  
+  
 	"wc loaddel menu"
-	{
+  {
 		"ru"		"Меню персонажа: {1} ({2})"
-	}
+  }
 	"load character"
-	{
+  {
 		"ru"		"Загрузить персонажа (вы умрете)"
-	}
+  }
 	"del character"
-	{
+  {
 		"ru"		"Удалить персонажа (безвозвратно)"
-	}
+  }
 	"wc confirmdel menu"
-	{
+  {
 		"ru"		"Подтвердить удаление персонажа: {1} ({2})"
-	}
+  }
 	"del attention1"
-	{
+  {
 		"ru"		"Внимание:"
-	}
+  }
 	"del attention2"
-	{
+  {
 		"ru"		"Вы не сможете вернуть данного персонажа"
-	}
+  }
 	"del attention3"
-	{
+  {
 		"ru"		"Я подтверждаю удаление персонажа."
-	}
+  }
 	"character active"
-	{
+  {
 		"ru"		"Вы не можете удалить персонажа, которым играете."
-	}
+  }
 	"character removed"
-	{
+  {
 		"ru"		"Персонаж успешно удален."
-	}
+  }
 	"mysql warning1"
-	{
+  {
 		"ru"		"[WC]: @lightgreenДанные о персонаже повреждены, свяжитесь с Администратором."
-	}
+  }
 	"char data loaded"
-	{
+  {
 		"ru"		"Ваш персонаж успешно загружен"
-	}
+  }
 	"char not loaded"
-	{
+  {
 		"ru"		"Ваш персонаж еще @greenне загружен@default, пожалуйста, @greenподождите@default, либо попробуйте @greenперезайти"
-	}
+  }
 	"can not load same"
-	{
+  {
 		"ru"		"@lightgreen!Вы не можете загрузить персонажа, которым играете в данный момент!"
-	}
+  }
 	"reboot progress"
-	{
+  {
 		"ru"		"@lightgreenПерезагрузка сервера: {1}%"
-	}
+  }
 	"saving world"
-	{
+  {
 		"ru"		"@lightgreenСохранение персонажа"
-	}
+  }
 	"menu is loading"
-	{
+  {
 		"ru"		"@greenИдет загрузка запрошенного меню, Вы сможете использовать меню снова через {1} сек"
-	}
+  }
 	"failed loading mail"
-	{
+  {
 		"ru"		"@lightgreenНевозможно загрузить меню почты, свяжитесь с администратором, если ошибка повторится"
-	}
+  }
 	"failed loading"
-	{
+  {
 		"ru"		"@lightgreenНевозможно загрузить меню, свяжитесь с администратором, если ошибка повторится"
-	}
+  }
 	"wrong adresser"
-	{
+  {
 		"ru"		"@greenID персонажа не существует. @lightgreenЕсли вы уверены в обратном, попробуйте снова"
-	}
+  }
 	"Q total won"
-	{
+  {
 		"ru"		"Результаты опроса: @greenПравильно ответили @lightgreen{1} @greenиз @lightgreen{2}"
-	}
+  }
 	"combustion cast"
-	{
+  {
 		"ru"		"@greenСледующее попадание нанесет @lightgreenкритический урон@green, зависящий от вашей силы магии"
-	}
+  }
 	"Combustion info"
-	{
+  {
 		"ru"		"Делает следующее попадание критическим, урон от которого зависит от силы вашей магии"
-	}
+  }
 	"converted xp"
-	{
+  {
 		"ru"		"Ваш опыт конвертирован в {1} серебра, так как достигнут максимальный уровень"
-	}
+  }
 	"new arena leader"
-	{
+  {
 		"ru"		"@lightgreenЛидером арены стал @green{1}!!!"
-	}
+  }
 	"wc main arena"
-	{
+  {
 		"ru"		"Меню арены"
-	}
+  }
 	"transfer to arena"
-	{
+  {
 		"ru"		"Перемещение на сервер арены: {1}"
-	}
+  }
 	"transfer to main"
-	{
+  {
 		"ru"		"Перемещение на главный сервер: {1}"
-	}
+  }
 	"disabled redirection"
-	{
+  {
 		"ru"		"Перенаправление отключено"
-	}
+  }
 	"honor is calculated"
-	{
+  {
 		"ru"		"@lightgreenПодсчет очков чести! @default(отдохните)"
-	}
+  }
 	"wc arena stats"
-	{
+  {
 		"ru"		"Статистика арены"
-	}
+  }
 	"wc ranking page"
-	{
+  {
 		"ru"		"Страница статистики"
-	}
+  }
 	"wc db loading"
-	{
+  {
 		"ru"		"Загрузка базы данных сервера: {1}%"
-	}
+  }
 	"wc db loaded"
-	{
+  {
 		"ru"		"база данных сервера загружена. Наслаждайтесь игрой"
-	}
+  }
 	"wc server blocked team"
-	{
+  {
 		"ru"		"@lightgreenИдет загрузка. Пожалуйста, подождите. @greenВы всё ещё можете присоединиться к зрителям"
-	}
+  }
     "finish viewing slides"
   {
     "ru"        "@lightgreenПрежде чем присоединиться к команде, пройдите все этапы, указаные в слайдах. @greenЕсли Вы застряли, напишите в чат 'next', чтобы пропустить слайд."
   }
 	"wc sprint is broken"
-	{
+  {
 		"ru"		"Действие навыка Спринт прервано."
-	}
+  }
 	"wc arena control"
-	{
+  {
 		"ru"		"Информация/Настройки Арены"
-	}
+  }
 	"arena control"
-	{
+  {
 		"ru"		"Обзор Арены"
-	}
+  }
 	"teams size"
-	{
+  {
 		"ru"		"Режим арены: {1} на {2}"
-	}
+  }
 	"teams size undefined"
-	{
+  {
 		"ru"		"Режим арены: Не установлено"
-	}
+  }
 	"arena leader"
-	{
+  {
 		"ru"		"Лидер: {1}"
-	}
+  }
 	"arena horde"
-	{
+  {
 		"ru"		"Команда Орды"
-	}
+  }
 	"arena alliance"
-	{
+  {
 		"ru"		"Команда Альянса"
-	}
+  }
 	"arena send confirm"
-	{
+  {
 		"ru"		"Запросить подтверждение команд"
-	}
+  }
 	"arena not leader"
-	{
+  {
 		"ru"		"@greenТолько у лидера есть доступ в это меню"
-	}
+  }
 	"wc arena size"
-	{
+  {
 		"ru"		"Выберите режим Арены"
-	}
+  }
 	"arena size modified"
-	{
+  {
 		"ru"		"@greenРежим Арены изменен"
-	}
+  }
 	"arena teams not full"
-	{
+  {
 		"ru"		"@greenКоманды арены не полные"
-	}
+  }
 	"arena confirm started"
-	{
+  {
 		"ru"		"@greenЗапрос подтверждения Арены начат"
-	}
+  }
 	"arena confirm failed"
-	{
+  {
 		"ru"		"@greenЗапрос подтверждения Арены истек"
-	}
+  }
 	"arena confirm done"
-	{
+  {
 		"ru"		"@greenЗапрос подтверждения Арены окончен, ПРИГОТОВЬТЕСЬ!"
-	}
+  }
 	"wc arena manage team"
-	{
+  {
 		"ru"		"Управление командой: {1}"
-	}
+  }
 	"arena manage team slot"
-	{
+  {
 		"ru"		"Ячейка {1}: {2}"
-	}
+  }
 	"wc arena manage team slot"
-	{
+  {
 		"ru"		"Команда {3}, Ячейка {1}: {2}"
-	}
+  }
 	"arena gained points"
-	{
+  {
 		"ru"		"Игрок @green{2} получил @lightgreen{1} @greenОчков арены"
-	}
+  }
 	"arena lost points"
-	{
+  {
 		"ru"		"Игрок @green{2} потерял @lightgreen{1} @greenОчков арены"
-	}
+  }
 	"arena specs"
-	{
+  {
 		"ru"		"Команде наблюдателей не нужно подтверждение"
-	}
+  }
 	"arena randomize"
-	{
+  {
 		"ru"		"Разбросать игроков по командам"
-	}
+  }
 	"arena settings locked"
-	{
+  {
 		"ru"		"@greenНастрокий Арены заблокированы"
-	}
+  }
 	"arena locked"
-	{
+  {
 		"ru"		"@greenДоступ к данному меню запрещен в режиме игры Арена"
-	}
+  }
 	"arena cancelled"
-	{
+  {
 		"ru"		"@greenИгра @lightgreenотменена!"
-	}
+  }
 	"arena broke"
-	{
+  {
 		"ru"		"@greenИгра в режиме Арена @lightgreenокончена из-за нарушения правил!"
-	}
+  }
 	"arena is started"
-	{
+  {
 		"ru"		"@greenИгра началась! @lightgreenНулевой раунд - Раунд подготовки. @defaultИгра закончится, когда одна из команд выиграет 2 раунда."
-	}
+  }
 	"wc arena confirm"
-	{
+  {
 		"ru"		"Подтверждение Расположения Арены"
-	}
+  }
 	"arena press confirm"
-	{
+  {
 		"ru"		"Подтвердить структуру"
-	}
+  }
 	"arena round finish 0"
-	{
+  {
 		"ru"		"Подготовительный раунд @lightgreenокончен! @greenДеритесь за свою жизнь!"
-	}
+  }
 	"arena round still 0"
-	{
+  {
 		"ru"		"Подготовительный раунд @lightgreenеще не закончен."
-	}
+  }
 	"arena confirm declined"
-	{
+  {
 		"ru"		"@defaultИгрок @lightgreen{1} @defaultне согласен с условиями Арены."
-	}
+  }
 	"wc arena points"
-	{
+  {
 		"ru"		"Рейтинг арены: {1}. Сыграно игр: {2}"
-	}
+  }
 	"wc arena more games"
-	{
+  {
 		"ru"		"Вам необходимо сыграть {1} игр для получения чести."
-	}
+  }
 	"wc arena got games"
-	{
+  {
 		"ru"		"Вы сыграли достаточно игр, завтра вы получите честь."
-	}
+  }
 	"arena scores"
-	{
+  {
 		"ru"		"@defaultСчет: @lightgreen(Орда) @green{1}@default:@green{2}@lightgreen (Альянс)@default."
-	}
+  }
 	"arena team won"
-	{
+  {
 		"ru"		"@defaultИгра окончена. Игрок @lightgreen{1} @defaultполучил @green{2} @defaultОчков Арены"
-	}
+  }
 	"arena round end"
-	{
+  {
 		"ru"		"@defaultРаунд @lightgreen{1} @defaultокончен. Команда @green{2} @defaultвыиграла раунд."
-	}
+  }
 	"wc honor"
-	{
+  {
 		"ru"		"Честь: {1}"
-	}
+  }
 	"wc rank"
-	{
+  {
 		"ru"		"Ранг: {1}"
-	}
+  }
 	"aoe damaged"
-	{
+  {
 		"ru"		"Вы получили {2} урона, так как были близко к {1}"
-	}
+  }
 	"thunder clap caster"
-	{
+  {
 		"ru"		"Вы применили @greenУдар Грома @defaultк игроку @green{1} @defaultи нанесли @lightgreen{2}@default урона с замедлением"
-	}
+  }
 	"thunder clap victim"
-	{
+  {
 		"ru"		"Вы получили @dmg урона от заклинания @lightgreenУдар Грома @defaultигрока @att"
-	}
+  }
 	"Thunder Clap info"
-	{
+  {
 		"ru"		"Удар Грома необходим в борьбе с классами ближнего боя.\nВсе окружающие игроки замедляются"
-	}
+  }
 	"panel an drop title"
-	{
+  {
 		"ru"		"Вы счастливчик!"
-	}
+  }
 	"panel an drop item"
-	{
+  {
 		"ru"		"Вы получили редкий предмет:\n{1}\n\n"
-	}
+  }
     "panel global an drop item"
   {
       "ru"        "Игрок {1} получил ОСОБО редкий предмет: \n{2}\n\n"
   }
 	"exit"
-	{
+  {
 		"ru"		"Выход"
-	}
+  }
 	"panel newbie title"
-	{
+  {
 		"ru"		"Добро пожаловать на наш WoW Mod сервер!"
-	}
+  }
 	"panel newbie text"
-	{
+  {
 		"ru"		"Чтобы открыть главное меню, напишите: wcmenu\nМеню помощи: wchelp\nНе бойтесь советоваться.\nЧтобы выключить данное всплывающее окно, напишите: !newbie\nПриятной игры!"
-	}
+  }
 	"hymn cast"
-	{
+  {
 		"ru"		"Вы начали применять @greenГимн Надежды@default, восстанавливающий @lightgreen{1}% @default маны за тик"
-	}
+  }
 	"hymn target"
-	{
+  {
 		"ru"		"На вас подействовало заклинание Гимн Надежды игрока @green{1}@default, восстановившее Вам @lightgreen{2} @defaultманы"
-	}
+  }
 	"Hymn of Hope info"
-	{
+  {
 		"ru"		"В течение применения заклинания игрок должен стоять на месте.\nВосстанавливает каждому союзнику\nнекоторый процент маны."
-	}
+  }
 	"hellfire cast"
-	{
+  {
 		"ru"		"Вы начали применять Адское Пламя с @lightgreen{1} @defaultуроном за тик. Также оно нансело @lightgreen{2} @defaultурона Вам"
-	}
+  }
 	"hellfire target"
-	{
+  {
 		"ru"		"Игрок @green{1} @defaultприменил к Вам Адское Пламя и нанес @lightgreen{2} @defaultурона"
-	}
+  }
 	"Hellfire info"
-	{
+  {
 		"ru"		"Мощное АОЕ заклинание.\nВ течение применения игрок должен стоять на месте.\nТакже наносит половину урона за тик использующему игроку."
-	}
+  }
 	"hud spell cast"
-	{
+  {
 		"ru"		"Применение {1}: {2} осталось сек."
-	}
+  }
 	"dead"
-	{
+  {
 		"ru"		"Мертв"
-	}
+  }
 	"dmg taken"
-	{
+  {
 		"ru"		"\nНанесено урона: {1}\nПолучено урона: {2}"
-	}
+  }
 	"wc account page"
-	{
+  {
 		"ru"		"Меню пользователя"
-	}
+  }
 	"account menu"
-	{
+  {
 		"ru"		"Меню пользователя: Здесь ваши персональные настройки"
-	}
+  }
 	"wc load page"
-	{
+  {
 		"ru"		"Открыть страницу пользователя"
-	}
+  }
 	"gold balance"
-	{
+  {
 		"ru"		"Золото: {1}"
-	}
+  }
 	"wc set login"
-	{
+  {
 		"ru"		"Логин: {1}   Изменить"
-	}
+  }
 	"wc set pass"
-	{
+  {
 		"ru"		"Пароль: {1}   Изменить"
-	}
+  }
 	"acc type login"
-	{
+  {
 		"ru"		"@defaultУ вас @lightgreen30 @defaultсекунд для ввода нового @lightgreenлогина. @greenТолько латиница и цифры"
-	}
+  }
 	"acc type pass"
-	{
+  {
 		"ru"		"@defaultУ вас @lightgreen30 @defaultсекунд для ввода нового @lightgreenпароля. @greenТолько латиница и цифры"
-	}
+  }
 	"too short"
-	{
+  {
 		"ru"		"Слишком короткая строка - минимум 4 символа"
-	}
+  }
 	"acc changed login"
-	{
+  {
 		"ru"		"@lightgreenВаш логин успешно изменен"
-	}
+  }
 	"acc changed pass"
-	{
+  {
 		"ru"		"@lightgreenВаш пароль успешно изменен"
-	}
+  }
 	"acc login exist"
-	{
+  {
 		"ru"		"@lightgreenДанный логин уже существует. @greenВыберите другой"
-	}
+  }
 	"acc login failed"
-	{
+  {
 		"ru"		"@lightgreenНеизвестная ошибка. @greenЕсли это повторится, свяжитесь с администрацией"
-	}
+  }
 	"selfcast enabled"
-	{
+  {
 		"ru"		"@lightgreenТеперь вы можете применять заклинания на себя"
-	}
+  }
 	"selfcast disabled"
-	{
+  {
 		"ru"		"@lightgreenТеперь вы не можете применять на себя положительные заклинания"
-	}
+  }
     "selfonly enabled"
   {
     "ru"  "@lightgreenТеперь Вы можете лечить только себя"
@@ -2749,13 +2815,13 @@
     "ru"  "@lightgreenТеперь Вы можете лечить и других"
   }
 	"wc newbie is on"
-	{
+  {
 		"ru"		"Всплывающее окно включено"
-	}
+  }
 	"wc newbie is off"
-	{
+  {
 		"ru"		"Всплывающее окно выключено"
-	}
+  }
     "wc newbie2 is on"
   {
     "ru"  "Всплывающее окно Вашего списка заданий включено."
@@ -2773,81 +2839,81 @@
     "ru"  "Нажатие 'E' не будет открывать книгу заклинаний"
   }
 	"wc threat is on"
-	{
+  {
 		"ru"		"Таблица Угроз включена"
-	}
+  }
 	"wc threat is off"
-	{
+  {
 		"ru"		"Таблица Угроз выключена"
-	}
+  }
 	"panel threat"
-	{
+  {
 		"ru"		"Таблица Угроз" //-
-	}
+  }
 	"panel threat1"
-	{
+  {
 		"ru"		"Имя                          Угроза"
-	}
+  }
 	"threat disable"
-	{
+  {
 		"ru"		"Выключить Таблицу Угроз"
-	}
+  }
 	"threat going off"
-	{
+  {
 		"ru"		"Вы выключили @lightgreen Таблицу Угроз@default. Введите !threat, чтобы включить её"
-	}
+  }
 	"threat spell"
-	{
+  {
 		"ru"		"Дополнительная Угроза: {1}"
-	}
+  }
 	"spell inactive"
-	{
+  {
 		"ru"		"@lightgreenЭто пассивное заклинание!"
-	}
+  }
 	"default dmg att"
-	{
+  {
 		"ru"		"Вы нанесли @dmg урона игроку @vic"
-	}
+  }
 	"default dmg vic"
-	{
+  {
 		"ru"		"Игрок @att нанес Вам @dmg урона"
-	}
+  }
 	"choose to enchant"
-	{
+  {
 		"ru"		"@lightgreenВыберите предмет, чтобы улучшить его с помощью @green{1}"
-	}
+  }
 	"this item is not enchant"
-	{
+  {
 		"ru"		"@lightgreen{1} @defaultне является свитком наложения чар"
-	}
+  }
 	"enchant menu"
-	{
+  {
 		"ru"		"Выберите предмет для улучшения"
-	}
+  }
 	"disenchant w warning"
-	{
+  {
 		"ru"		"Расщепить предмет (Он будет уничтожен)"
-	}
+  }
     "disenchant w warning+chance"
   {
     "ru"      "Расщепить предмет. Шанс повышения навыка: {1}%% (Предмет будет уничножен)"
   }
 	"no disenchant"
-	{
+  {
 		"ru"		"@lightgreenПредмет не может быть расщеплен"
-	}
+  }
 	"need ench"
-	{
+  {
 		"ru"		"@greenВам необходима профессия @lightgreenНаложение чар @greenдля расщепления предметов"
-	}
+  }
 	"wrong ench category"
-	{
+  {
 		"ru"		"Категорией @lightgreen{1} @defaultневозможно улучшить предмет @green{2}"
-	}
+  }
 	"ench item"
-	{
+  {
 		"ru"		"{1}" //-
-	}
+  }
     "wc profession bonuses"
   {
     "ru"    "Имеющиеся бонусы для профессии"
@@ -2857,93 +2923,93 @@
     "ru"    "Бонусы, которые Вы можете получить от профессии"
   }
 	"prof extra drop"
-	{
+  {
 		"ru"		"+10% получения к получению предмета или Сердце Огня, как сброшенный предмет"
-	}
+  }
 	"prof extra stats"
-	{
+  {
 		"ru"		"+5% ко всем навыкам"
-	}
+  }
 	"prof extra damage"
-	{
+  {
 		"ru"		"+5% к нанесенному урону"
-	}
+  }
 	"prof extra def"
-	{
+  {
 		"ru"		"-5% к полученному урону"
-	}
+  }
 	"prof extra regen"
-	{
+  {
 		"ru"		"+8% регенерации маны или +3, если у Вас низкий уровень маны"
-	}
+  }
 	"prof extra speed"
-	{
+  {
 		"ru"		"+3% скорости передвижения"
-	}
+  }
 	"wc debug me txt"
-	{
+  {
 		"ru"		"Вы вызвали команду устранения неполадок, подождите, пока появится меню"
-	}
+  }
 	"wc debug menu"
-	{
+  {
 		"ru"		" -----Здесь Вы можете исправить данные о персонаже----- "
-	}
+  }
 	"wc debug menu warning"
-	{
+  {
 		"ru"		"Пожалуйста, убедитесь, что сервер работает нормально.\nУбедитесь, что БД работает\nСпросите других игроков, есть ли у них такая проблема, прежде чем использовать данное меню.\nЕсли вы проигнорируете это, мы не сможем Вам помочь"
-	}
+  }
 	"wc debug menu mail"
-	{
+  {
 		"ru"		"Почта вашего персонажа не загружается? Исправьте это!"
-	}
+  }
 	"wc debug mail"
-	{
+  {
 		"ru"		"Устранение неподалок почтового ящика Вашего персонажа."
-	}
+  }
 	"wc debug mail1"
-	{
+  {
 		"ru"		"Это список поврежденных писем.\nУбедитесь, что БД работает нормально\nСоглашаясь, вы удаляете все эти письма из вашего ящика."
-	}
+  }
 	"wc debug menu mail2"
-	{
+  {
 		"ru"		"Согласиться. Удалить письма"
-	}
+  }
 	"wc debug menu mail3"
-	{
+  {
 		"ru"		"ID Письма: {1}"
-	}
+  }
 	"fixing mails"
-	{
+  {
 		"ru"		"Предпринята попытка исправить вашу почту. Попробуйте открыть меню почты"
-	}
+  }
 	"rating"
-	{
+  {
 		"ru"		"Рейтинг: {1}"
-	}
+  }
 	"wc chat attacker is on"
-	{
+  {
 		"ru"		"Боевые сообщения атаки включены"
-	}
+  }
 	"wc chat attacker is off"
-	{
+  {
 		"ru"		"Боевые сообщения атаки выключены"
-	}
+  }
 	"wc chat victim is on"
-	{
+  {
 		"ru"		"Боевые сообщения о получении урона включены"
-	}
+  }
 	"wc chat victim is off"
-	{
+  {
 		"ru"		"Боевые сообщения о получении урона выключены"
-	}
+  }
 	"wc chat target is on"
-	{
+  {
 		"ru"		"Бесцелевые боевые сообщения включены"
-	}
+  }
 	"wc chat target is off"
-	{
+  {
 		"ru"		"Бесцелевые боевые сообщения выключены"
-	}
+  }
     "wc talents"
   {
     "ru"  "Меню талантов"
@@ -5094,7 +5160,7 @@
 }
 "Blinkwake name"
 {
-  "ru"   "Телепорт"
+  "ru"   "Мерцающий свет"
 }
 "Combustion name"
 {
@@ -7352,7 +7418,7 @@
 }
 "Mana Shield name"
 {
-  "ru" "Щит Маны"
+  "ru" "Щит заклинателя"
 }
 "Polymorph name"
 {
@@ -7460,7 +7526,7 @@
 }
 "Shield Wall name"
 {
-  "ru" "Щит Стеной"
+  "ru" "Глухая оборона"
 }
 "Taunt name"
 {
@@ -7823,14 +7889,6 @@
 {
   "ru"  "Вторичная специализация (Необходим Премиум)"
 }
-  "dm bomb plant"
-  {
-    "ru" "Нельзя установить во время DM."
-  }
-  "req prof level"
-  {
-    "ru"      "Требуется уровень профессии: {1}"
-  }
   "wc profession 2"
   {
     "ru"    "Профессия: {1} - {2}"
@@ -7862,18 +7920,6 @@
   "adrenaline attacker glyph"
   {
     "ru"      "*** Символ Выброс Адреналина *** Вы нанесли игроку @vic @dmg урона."
-  }
-    "enrage regeneration cast with glyph"
-  {
-    "ru"    "*** Символ Безудержное Восстановление *** Вы исцелили дополнительно {1}%% от вашего максимального здоровья ({2})."
-  }
-    "improved revenge used"
-  {
-    "ru"      "Вы использовали @lightgreenУлучшенный реванш @defaultна @vic и нанесли @dmg урона"
-  }
-  "improved revenge got"
-  {
-    "ru"      "@att использовал @lightgreenУлучшенный реванш @defaultи нанес вам @dmg урона"
   }
   "corpseparty"
   {
@@ -7975,10 +8021,6 @@
   {
     "ru"		"<Пассивно> Снижает затраты маны на атакующие заклинания на: 5|13|20 %% от стоимости"
   }
-  "Improved Resurrection info"
-  {
-    "ru"		"<Пассивно> Снижает время восстановления Воскрешение на: 6|13|20 секунд"
-  }
     "mental strength used"
   {
     "ru" "Сила мысли: Увеличивает ваш интеллект на {1} до {2} общего."
@@ -8014,58 +8056,6 @@
     "improved spell reflection"
   {
     "ru"      "Увеличивает отражение заклинаний"
-  }
-    "improved resurrect"
-  {
-    "ru"      "Вы использовали @lightgreenУлучшенное Воскрешение@default на @green{1}@default."
-  }
-  "improved resurrect target"
-  {
-    "ru"      "@green{1}@default использовал @lightgreenУлучшенное Воскрешение@default на вас, дал вам новое тело и @lightgreen50%%@default от вашего здоровья."
-  }
-    "demon skin cast"
-  {
-    "ru"      "@defaultВы использовали @lightgreenШкура Демона@default и увеличили вашу броню на @lightgreen{1}@default до @lightgreen{2}@default."
-  }
-  "demon skin cast with talent"
-  {
-    "ru"      "@lightgreenДоспех Скверны@default: Вы использовали @lightgreenШкура Демона@default и увеличили вашу броню на@lightgreen{1}@default до @lightgreen{2}@default."
-  }
-    "scorch cast att"
-  {
-    "ru"      "Вы использовали @lightgreenОжог@default на @green@vic@default нанеся @lightgreen@dmg@default урона."
-  }
-  "scorch cast vic"
-  {
-    "ru"      "@green@att@default использовал @lightgreenОжог@default и нанес вам @lightgreen@dmg@default урона."
-  }
-    "body and soul used"
-  {
-    "ru" "@lightgreenТело и Душа@default: Вы исцелили себя на @lightgreen{1}@default."
-  }
-    "pw shield used caster"
-  {
-    "ru"      "{4}@greenВы@default использовали @lightgreenСлово Силы: Щит@default на @green{3}@default в течение следующих @lightgreen{1}@default секунд, поглощающий @lightgreen{2}"
-  }
-  "pw shield used victim"
-  {
-    "ru"      "{4}@green{3}@default использовал @lightgreenСлово Силы: Щит@default на вас на следующие @lightgreen{1}@default секунд, поглощающий @lightgreen{2}@default"
-  }
-    "imp pw shield used caster"
-  {
-    "ru"      "{4}Вы использовали @lightgreenУлучшенное Слово Силы: Щит @defaultна @green{3}@default на слудующие @lightgreen{1}@default секунд, поглощающий @lightgreen{2}"
-  }
-  "imp pw shield used victim"
-  {
-    "ru"      "{4}@green{3}@default использовал @lightgreenУлучшенное Слово Силы: Щит@default на следующие @lightgreen{1}@default секунд, поглощающий @lightgreen{2}@default"
-  }
-  "imp pw shield used self"
-  {
-    "ru"      "{3}@greenВы@default использовали @lightgreenУлучшенное Слово Силы: Щит@default на @greenсебя@default, на следующие@lightgreen{1}@default секунд, поглощающий @lightgreen{2}@default"
-  }
-  "pw shield used self"
-  {
-    "ru"      "{3}@greenВы@default использовали @lightgreenСлово Силы: Щит@default на @greenвас@default, на следующие @lightgreen{1}@default секунд, поглощающий @lightgreen{2} @defaultурона"
   }
     "deafening thunder clap victim"
   {

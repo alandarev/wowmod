@@ -264,6 +264,19 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
     heal = RoundToNearest(float(heal)*1.15);
   if(g_iCarry[target]>0)
     heal = RoundToNearest(float(heal)*CTF_NERF);
+  if(g_iNecrotic[client]>0)
+  {
+    if(heal>=g_iNecrotic[client])
+    {
+      heal-=g_iNecrotic[client];
+      g_iNecrotic[client]=0;
+    }
+    else
+    {
+      g_iNecrotic[client]-=heal;
+      heal=0;
+    }
+  }
   hp+=heal;
   if(maxhp<hp)
     hp=maxhp;

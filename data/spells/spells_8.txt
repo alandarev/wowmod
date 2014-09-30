@@ -72,11 +72,11 @@
     "event"        "player_attacker"
     "level"        "54"
     "cooldowntype"  "3"
-    "cooldown"      "6.0"
+    "cooldown"      "4.0"
     "chance"       "30"
     "regen"        "10"
     "multi"         "0.10"
-    "multief"       "0.05"
+    "multief"       "0.10"
   }
   "6"
   {

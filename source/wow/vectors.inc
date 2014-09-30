@@ -448,7 +448,7 @@ Float:GetItemRating(item[UniqueItem])  {
   return rating;
 }
 
-public wcRecalculateStats(client) {
+public wcRecalculateStats(client) { //Stats
   new id=GetPlayerID(client);
   if(IsZombie(client))
   {
@@ -461,15 +461,17 @@ public wcRecalculateStats(client) {
   if(GetStance(client)==3) //Unholy DK
   wcClientsStats[id][ATTACKSPEED]+=0.1;
 
-  if(CheckRequirements(client,2,2,2,4))
+  if((CheckRequirements(client,2,2,2,4)) && (GetMonkStance(client)!=3))
   {
     decl String:line[255];
     wcGetTalentInfo(2,2,2,4,client,"increase",line);
-    new Float:multi = 1.0 + StringToFloat(line);
+    new Float:multi =1.0 + StringToFloat(line);
     wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335*multi));
   }
-  else
-    wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+float(GetAgi(client)+GetBonusAgi(client))*0.08335;
+  else if(GetMonkStance(client)!=3)
+    wcClientsStats[id][DAMAGE]=(float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE])+(float(GetAgi(client)+GetBonusAgi(client))*(0.08335));
+  if(GetMonkStance(client)==3)
+    wcClientsStats[id][DAMAGE]=float(GetStr(client)+GetBonusStr(client))*0.29714+wcClientsBonusStats[id][DAMAGE];
 
   wcClientsStats[id][MAXHP]=150.0+(float(GetSta(client))+float(GetBonusSta(client)))*0.95+float(GetLevel(client))*1.2+wcClientsBonusStats[id][MAXHP];
   if(IsHeroic())
@@ -1432,7 +1434,7 @@ public wcShootEffect(effectid,&tmp1,&tmp2,&tmp3,bool:crit,tmp5,tmp6,tmp7,tmp8,tm
     Effect12(tmp3, tmp1);
   case 13:
     if(tmp9==2)
-    Effect13(tmp3); //Shield Wall
+    Effect13(tmp3, tmp1); //Shield Wall
   case 14:
     if(tmp9==1)
     Effect14(tmp2); //Unleash stealth
@@ -1508,9 +1510,9 @@ public wcShootEffect(effectid,&tmp1,&tmp2,&tmp3,bool:crit,tmp5,tmp6,tmp7,tmp8,tm
   case 43:
     if(tmp9==2)
     Effect43(tmp2,tmp3);
-  case 44:
-    if(tmp9==2)
-    Effect44(tmp2,tmp3);
+  //case 44:
+    //if(tmp9==2)
+    //Effect44(tmp2,tmp3);
   case 45:
     if(tmp9==2)
     Effect45(tmp2,tmp3);
@@ -1550,6 +1552,9 @@ public wcShootEffect(effectid,&tmp1,&tmp2,&tmp3,bool:crit,tmp5,tmp6,tmp7,tmp8,tm
   case 58:
     if(tmp9==1)
     Effect58(tmp2);
+  case 59:
+    if(tmp9==1)
+    Effect59(tmp2);
   default:  {
       //Multi effects
       if(effectid>100)  {
@@ -2178,6 +2183,8 @@ public InstallDownloads()
     AddFileToDownloadsTable("sound/wc/spells/corpseexplosionnew.wav");
     AddFileToDownloadsTable("sound/wc/spells/soulharvest.wav");
     AddFileToDownloadsTable("sound/wc/spells/taunt.wav");
+    AddFileToDownloadsTable("sound/wc/spells/Shield_of_the_Righteous.wav");
+    
 
     //Monk sounds
     AddFileToDownloadsTable("sound/wc/spells/expelharm1.wav");

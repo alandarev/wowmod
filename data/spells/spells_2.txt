@@ -118,7 +118,7 @@
     "cooldowntype"  "5"
     "cooldown"  "25.0"
     "duration"  "4.0"
-    "mana"  "30"
+    "mana"  "0"
     "threat" "200"
   }
   "11"
@@ -159,6 +159,6 @@
     "mana"  "40"
     "manainc" "0.0"
     "multi" "0.30"
-    "distance"  "300.0"
+    "distance"  "275.0"
   }
 }

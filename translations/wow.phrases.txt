@@ -10416,5 +10416,9 @@
   {
     "en"      "@greenUnchaining Wrath @lightgreenhas ended"
   }
+    "Right Hand"
+  {
+    "en"  "Right Hand"
+  }
 }
 

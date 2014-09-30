@@ -125,6 +125,7 @@ public PrecacheModels()
   PrecacheSound("wc/spells/corpseexplosionnew.wav");
   PrecacheSound("wc/spells/soulharvest.wav");
   PrecacheSound("wc/spells/taunt.wav");
+  PrecacheSound("wc/spells/Shield_of_the_Righteous.wav");
 
   //Monk sounds
   PrecacheSound("wc/spells/expelharm1.wav");
@@ -505,7 +506,7 @@ stock SetSilence(client,Float:silence,bool:trueSilence=false)
   if(!trueSilence)
     switch(GetClass(client))  {
       case 1: return;
-      case 2: return;
+      //case 2: return;
   }
   new bool:avoid=true;
   if(!trueSilence && GetClass(client)==3)
@@ -1582,6 +1583,25 @@ public Action:EffectLightWellAction(Handle:timer, any:effid)
       }
     }
     wcHeal(client,targets[x],heal,0,true);
+    if(HasGlyph(client, GLYPH_PRIEST_LIGHTW))
+    {
+      new Float:bonus=1.15;
+      new Float:duration=2.0;
+
+      new Float:oldspeed=GetNormalSpeed(targets[x]);
+      new Float:newspeed=oldspeed * bonus;
+      if(newspeed>oldspeed)
+      {
+        WCMessage(client,"Battle Rush Used",client);
+        new Float:time=duration;
+        SetClientSpeed(client,newspeed);
+        new Handle:datapack=CreateDataPack();
+        WritePackCell(datapack,client); // Write the client index of owner
+        WritePackFloat(datapack,newspeed);
+        WritePackFloat(datapack,bonus);
+        CreateTimer(time,RemoveSpeedEffect2,datapack,TIMER_HNDL_CLOSE);
+      }
+    }
   }
   EmitAmbientSound("wc/spells/lightwell.wav",location);
   return Plugin_Continue;
@@ -1621,6 +1641,11 @@ public Action:Effect4Action(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   effectsdata[effid][3]--;
+  if((g_iDispatch[effectsdata[effid][1]]>0) && GetClass(effectsdata[effid][2])==2)
+  {
+    effectsdata[effid][3]=3;
+    g_iDispatch[effectsdata[effid][1]]-=1;
+  }
   decl Float:vec[3],Float:rightVec[3],Float:upVec[3];
   GetClientAbsOrigin(effectsdata[effid][1], vec);
   vec[0] -= 30;
@@ -2213,13 +2238,23 @@ bool:Effect12(&damage, client) //Berserker Stance
    return true;
 }
 
-bool:Effect13(&damage)
+bool:Effect13(client, &damage)
 {
    decl String:line[255];
-   wcGetSpellInfo(1,12,"multi",line);
-   new Float:multi = StringToFloat(line);
-   damage = RoundToNearest (float(damage) * multi);
-   return true;
+   if(GetClass(client)==1)
+   {
+     wcGetSpellInfo(1,12,"multi",line);
+     new Float:multi = StringToFloat(line);
+     damage = RoundToNearest (float(damage) * multi);
+     return true;
+   }
+   else
+   {
+     wcGetTalentInfo(4,2,4,1,client,"reduction",line);
+     new Float:multi = StringToFloat(line);
+     damage = RoundToNearest (float(damage) * multi);
+     return true;
+   }
 }
 
 bool:Effect11(client, &damage)
@@ -2829,8 +2864,6 @@ stock Effect_m2(effid, client)
   }
 }
 
-
-
 //public Effect24(client, &damage)                                                //Death Wish
 //{
 //   decl String:line[255];
@@ -2855,6 +2888,15 @@ public Effect25(client,attacker,&damage)                                        
 
     if(absorb<damage)
     {
+      if(HasGlyph(client, GLYPH_MAGE_ICEBARRIER))
+      {
+        new hp = wcGetHealth(client);
+        new maxhp = GetMaxHealth(client);
+        hp+=RoundToNearest(maxhp*0.03);
+        if(hp>maxhp)
+          hp = maxhp;
+        wcSetHealth(client,hp);
+      }
       wcClientAbsorb[client]=0;
       /*decl String:buffer[30];*/
       /*Format(buffer,sizeof(buffer),"%T", "ice barrier absorb", client);*/
@@ -2941,6 +2983,8 @@ public Effect27(target, &damage)                                                
    decl String:line[255];
    wcGetTalentInfo(5,3,3,1,target,"multi",line);
    new Float:multi = StringToFloat(line);
+   if(HasGlyph(target, GLYPH_PRIEST_SHADOWF))
+      multi*=1.50;
    damage = RoundToNearest (float(damage) * (1+multi));
    return true;
 }
@@ -2950,6 +2994,8 @@ public Effect28(victim, &damage)                                                
    decl String:line[255];
    wcGetTalentInfo(5,3,3,1,victim,"multi",line);
    new Float:multi = StringToFloat(line)*0.5;
+   if(HasGlyph(victim, GLYPH_PRIEST_SHADOWF))
+    multi*=1.50;
    damage = RoundToNearest (float(damage) * (1-multi));
    return true;
 }
@@ -3254,12 +3300,12 @@ Effect43(client,&damage)
   damage=RoundToNearest(damage*(1+StringToFloat(line)));
 }
 
-Effect44(client,&damage)
+/*Effect44(client,&damage)
 {
   decl String:line[255];
   wcGetTalentInfo(4,2,4,1,client,"multi",line);
   damage=RoundToNearest(damage*(1+StringToFloat(line)));
-}
+}*/
 
 Effect45(client,&damage)
 {
@@ -3308,6 +3354,14 @@ public Action:EffectCursedSoulDamage(Handle:timer, any:effid)
     multi = (1.10 - float(wcGetHealth(victim)) / float(GetMaxHealth(victim))) * multi;
   if(healthp < 15)
     multi = (1.30 - float(wcGetHealth(victim)) / float(GetMaxHealth(victim))) * multi;
+  if(HasGlyph(client, GLYPH_WARLOCK_CURSEDSOUL))
+  {
+    new Float:percentage = (1.5 - float(wcGetHealth(client)) / float(GetMaxHealth(victim)));
+    if(1.0>percentage || percentage > 1.5)
+      percentage=1.0;
+    multi*=percentage;
+  
+  }
   new damage=effectsdata[effid][4] + GetSpellDmg(client,multi);
   new aoe = effectsdata[effid][5];
 
@@ -3753,3 +3807,25 @@ public Action:EffectUnchaining(Handle:timer, Handle:datapack)
     WCMessage(client,"Unchaining end",client);
   }
 }
+public Effect59(client) //Energetic Recovery
+{
+  decl String:line[255];
+  new Float:accuracy = GetBonusAccuracy(client)+GetAccuracy(client);
+  new Float:random = GetRandomFloat(0.0,1.0);
+  if(accuracy>random)
+  {
+    wcGetTalentInfo(2,2,2,2,client,"restore",line);
+    new heal = RoundToNearest(StringToFloat(line)*float(GetMaxHealth(client)));
+    wcHeal(client,client,heal,0,true);
+  }
+}
+
+
+
+
+
+
+
+
+
+

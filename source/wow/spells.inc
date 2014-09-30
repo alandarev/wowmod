@@ -31,6 +31,8 @@ new g_iVanishBreakDmg[65];
 new g_iMiss[65];
 new g_iHarvest[65];
 new g_iEcho[65];
+new g_iPolycaster[65];
+new Float:g_fGreaterHeal[65];
 
 stock bool:addToSpellbar(client, id)  {
   for(new i=0; i<7; i++)  {
@@ -382,6 +384,18 @@ public wcRunSpell_1_2(spellid,race,client)
       Effect40(targets[x],client);
     }
     BloodSpray(targets[x]);
+    if((CheckRequirements(client,1,1,2,4)) && HasGlyph(client, GLYPH_WARRIOR_DEAFENING))
+    {
+        wcGetTalentInfo(1,1,2,4,client,"chance",line);
+        new chance = StringToInt(line);
+        new rand = GetRandomInt(1,100);
+        if(rand <= chance)
+        {
+          wcGetTalentInfo(1,1,2,4,client,"duration",line);
+          new Float:silence = StringToFloat(line);
+          SetSilence(targets[x],silence);
+        }
+      }
   }
   //  }
 }
@@ -987,8 +1001,17 @@ public wcRunSpell_6_7(spellid,race,client)
   {
     new manareq = GetSpellCost(client, spellid);
     wcSetMana(client,GetMana(client)-manareq);
-    new Float:pen = float(GetBonusAgi(client)+GetAgi(client)) / 11.0;
-    WCMessage(client,"rockbiter cast",client,pen);
+    //new Float:pen = float(GetBonusAgi(client)+GetAgi(client)) / 14.0;
+    if(CheckRequirements(client,6,2,2,4))
+    {
+      if(wcGetTalentLevel(client,2,2,4)==1)
+        WCMessage(client,"rockbiter cast improved",client);
+      else
+        WCMessage(client,"rockbiter cast improved2",client);
+    }
+    else
+      WCMessage(client,"rockbiter cast",client);
+    
     bMagicDamage[client]=true;
   }
   else  {
@@ -2230,6 +2253,7 @@ public wcRunSpell_3_10(spellid,race, client)
         WCMessage(client, "polymorph caster", client, duration, name2);
 
         setPolymorph(target, duration);
+        g_iPolycaster[target] = client;
 
       }
       else  if(IsChat(client,Chat:Chat_Target))
@@ -2586,34 +2610,51 @@ wcRunSpell_2_10(spellid, race, client) {
   new cdtype=StringToInt(line);
   wcGetSpellInfo(race,spellid,"cooldown",line);
   new Float:cd=StringToFloat(line);
-  new manareq = GetSpellCost(client, spellid);
-  wcSetMana(client,GetMana(client)-manareq);
-  SetCdSpell(client, cdtype, cd, spellid);
-  new Float:location[3];
-  GetClientAbsOrigin(client,location);
+  new manareq=30;
+  if(GetMana(client) >= 30)
+  {
+    if(HasGlyph(client, GLYPH_ROGUE_SLICENDICE))
+      manareq=0;
+    wcSetMana(client,GetMana(client)-manareq);
+    SetCdSpell(client, cdtype, cd, spellid);
+    new Float:location[3];
+    GetClientAbsOrigin(client,location);
 
-  wcGetSpellInfo(race,spellid,"multi",line);
-  new Float:multi=StringToFloat(line);
-  wcGetSpellInfo(race,spellid,"duration",line);
-  new Float:duration=StringToFloat(line);
-  wcGetSpellInfo(race,spellid,"threat",line);
-  new threat=StringToInt(line);
-  WCMessage(client, "slice and dice cast", client,RoundToNearest(multi*100.0), duration);
-  if(threat>0)
-  AddThreat(client,threat);
-  new color[4]={255,255,255,150};
-  BeamRingEffect("@all",location,10.0,20.0,g_ef_lgtning,0,10,3.0,150.0,color,0.0,20);
-  EmitAmbientSound("wc/spells/sprint.wav",location);
+    wcGetSpellInfo(race,spellid,"multi",line);
+    new Float:multi=StringToFloat(line);
+    wcGetSpellInfo(race,spellid,"duration",line);
+    new Float:duration=StringToFloat(line);
+    wcGetSpellInfo(race,spellid,"threat",line);
+    new threat=StringToInt(line);
+    WCMessage(client, "slice and dice cast", client,RoundToNearest(multi*100.0), duration);
+    if(threat>0)
+    AddThreat(client,threat);
+    new color[4]={255,255,255,150};
+    BeamRingEffect("@all",location,10.0,20.0,g_ef_lgtning,0,10,3.0,150.0,color,0.0,20);
+    EmitAmbientSound("wc/spells/sprint.wav",location);
 
-  new Float:oldspeed=GetBonusAccuracy(client);
-  SetBonusAccuracy(client,oldspeed+multi);
+    new Float:oldspeed=GetBonusAccuracy(client);
+    SetBonusAccuracy(client,oldspeed+multi);
 
-  new Handle:datapack3=CreateDataPack();
-  WritePackCell(datapack3,client);
-  WritePackCell(datapack3,g_RoundCount);
-  WritePackFloat(datapack3,oldspeed);
-  CreateTimer(duration,RemoveAccuracy,datapack3,TIMER_HNDL_CLOSE);
-  wcRecalculateStats(client);
+    new Handle:datapack3=CreateDataPack();
+    WritePackCell(datapack3,client);
+    WritePackCell(datapack3,g_RoundCount);
+    WritePackFloat(datapack3,oldspeed);
+    CreateTimer(duration,RemoveAccuracy,datapack3,TIMER_HNDL_CLOSE);
+    wcRecalculateStats(client);
+    if(CheckRequirements(client,2,2,2,2))
+    {
+      SetEffectAttacker(client,59);
+      new Handle:datapack2=CreateDataPack();
+      WritePackCell(datapack2,client);
+      WritePackCell(datapack2,59);
+      CreateTimer(duration,DestroyEffectAttacker,datapack2,TIMER_HNDL_CLOSE);
+    }
+    }
+  else
+  {
+    WCMessage(client,"no energy",client);
+  }
 }
 
 public wcRunSpell_2_11(spellid,race,client)
@@ -2805,6 +2846,12 @@ public wcRunSpell_5_3(spellid,race,client) //Greater Heal
   heal = RoundToNearest(0.7 * heal);
   new maxHeal = heal;
   EmitAmbientSound("wc/spells/heal.wav",location);
+  if(g_fGreaterHeal[client]>1.0)
+  {
+    heal = RoundToNearest(g_fGreaterHeal[client] * float(heal));
+    wcGetTalentInfo(4,2,4,1,client,"heal",line);
+    g_fGreaterHeal[client]-=StringToFloat(line);
+  }
   heal=wcHeal(client,target,heal,spellid,true);
   if(race == 5 && wcSearchSpell(client,10)>0) {
     //Inner fire bonuses
@@ -3027,10 +3074,14 @@ public wcRunSpell_5_5(spellid,race, target,client)
       GetClientAbsOrigin(target,location);
       GetClientAbsOrigin(client,locationatt);
       wcGetTalentInfo(5,3,1,2,client,"increment",line);
-      talentbonus=StringToFloat(line);
+      new Float:talentmulti=StringToFloat(line);
       wcGetSpellInfo(race,spellid,"multi",line);
-      new Float:multi=StringToFloat(line)+talentbonus;
+      new Float:multi=StringToFloat(line);
       new dmg=GetSpellDmg(client,multi);
+      wcGetSpellInfo(race,spellid,"base",line);
+      new base=StringToInt(line);
+      dmg+=base;
+      dmg = RoundToNearest(float(dmg)*talentmulti);
 
       EmitAmbientSound("wc/spells/mindblast.wav",location);
 
@@ -4114,7 +4165,12 @@ public wcRunSpell_7_8(spellid,race,client) //metamorphosis
       new Float:power = StringToFloat(line);
       power = power * (400.0 / (150.0 + GetDistanceBetween(locationb,loc2)));
       if(GetBoss(targets[x])<=0 || (!IsBoss()) )
-        PushPlayerAwayPlayer(targets[x], client, power, zPower);
+      {
+        if(HasGlyph(client, GLYPH_WARLOCK_CHAOSWAVE))
+          PushPlayerTowardsPlayer(targets[x],client,power,zPower);
+        else
+          PushPlayerAwayPlayer(targets[x], client, power, zPower);
+      }
     }
   }
   if(wcGetTalentLevel(client,2,2,2)>0) {
@@ -4160,9 +4216,13 @@ public wcRunSpell_7_9(spellid,race,client)
   wcGetSpellInfo(race,spellid,"aoe",line);
   new aoe=StringToInt(line);
   new dmg = GetSpellDmg(client, multi);
+  if(HasGlyph(client, GLYPH_WARLOCK_HELLFIRE))
+    dmg+=RoundToNearest(float(GetMaxHealth(client))*0.04);
   wcGetTalentInfo(7,3,2,1,client,"multi",line);
   new Float:talentbonus=StringToFloat(line);
   new selfDmg = RoundToNearest(float(dmg)*(multief*(1-talentbonus)));
+  if(HasGlyph(client, GLYPH_WARLOCK_HELLFIRE))
+    selfDmg+=RoundToNearest(float(GetMaxHealth(client))*0.04);
 
   decl Float:location[3];
   GetClientAbsOrigin(client,location);
@@ -5828,7 +5888,6 @@ InitPolymorph(client) {
     }
   }
 }
-
 public Action:PolyTick(Handle:timer, any:client) {
   if(!IsClientInGame(client) || !IsPlayerAlive(client)) {
     TurnPolyOff(client);
@@ -5844,6 +5903,8 @@ public Action:PolyTick(Handle:timer, any:client) {
 
   //Poly regen tick
   new heal = RoundToNearest(GetMaxHealth(client) * 0.04);
+  if(HasGlyph(g_iPolycaster[client], GLYPH_MAGE_POLYMORPH))
+    heal = RoundToNearest(float(heal)*0.35);
   wcHeal(client, client, heal,0,false);
 
   //Poly random move
@@ -6214,14 +6275,20 @@ public wcRunSpell_2_13(spellid,race,client)
     }
     if(amount==0)
     Format(stargets,sizeof(stargets),"%T","nobody",client);
-    WCMessage(client,"fanofknives",client,stargets,dmg);
+    if(CheckRequirements(client,2,2,4,2))
+      WCMessage(client,"fanofswords",client,stargets,dmg);
+    else
+      WCMessage(client,"fanofknives",client,stargets,dmg);
     EmitAmbientSound("wc/spells/fanofknives.wav",location);
     CreateTimer(0.0,FanOfKnivesEffect,client);
     CreateTimer(0.1,FanOfKnivesEffect,client);
     for (new x=0;x<=(amount-1);x++)
     {
       decl String:vicMsg[300];
-      Format(vicMsg,sizeof(vicMsg),"%T","fanofknives target", targets[x]);
+      if(CheckRequirements(client,2,2,4,2))
+        Format(vicMsg,sizeof(vicMsg),"%T","fanofswords target", targets[x]);
+      else
+        Format(vicMsg,sizeof(vicMsg),"%T","fanofknives target", targets[x]);
       wcPhysicalDamage(targets[x],client,dmg, "", vicMsg, true);
       BloodSpray(targets[x]);
       bVanish[client]=false;

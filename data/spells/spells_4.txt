@@ -257,7 +257,7 @@
       "cooldowntype"  "18"
       "cooldown"  "15.0"
       "mana"  "63"
-      "manainc" "2.25"
+      "manainc" "1.25"
       "multi" "0.81"
       "base"  "15"
       "distance"  "850"

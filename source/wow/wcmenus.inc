@@ -628,7 +628,8 @@ public OtherPlayerMenu(client,id)
     Format(Sitem,sizeof(Sitem),"%T","empty",client);
    else
     Format(Sitem,sizeof(Sitem),"%s",item[Item_Name]);
-   Format(line,sizeof(line),"Right Hand: %s (%s)",Sitem,Scategory);
+   Format(line, sizeof(line), "%T", "Right Hand", client);
+   Format(line,sizeof(line),"%s: %s (%s)",line,Sitem,Scategory);
    AddMenuItem(menu_op,"222",line); // 1
 
    GetCharItem(item, id, 18);
@@ -2908,7 +2909,7 @@ public MenuSendMail(client)
       Format(buffer,sizeof(buffer),"%T","mail topic name",client,topic);
       AddMenuItem(menu_mail,"0",buffer,ITEMDRAW_DISABLED);
       Format(buffer,sizeof(buffer),"%T","type gold",client);
-      Format(buffer2, sizeof(buffer2), "\nYour silver: %d.", GetMoney(client)); //bb
+      Format(buffer2, sizeof(buffer2), "%T", "your silver", GetMoney(client)); //bb
       StrCat(buffer, sizeof(buffer), buffer2);
       AddMenuItem(menu_mail,"gold",buffer);
     }

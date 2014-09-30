@@ -291,7 +291,7 @@ resetKpdKv()  {
 saveKpd(client) {
   if(playerloaded[client]!=1)
     return;
-  new uniqueId = GetClient32BitSteam(client);
+  new uniqueId = playerids[client];
 
   KvRewind(g_kvKpd);
   KvGotoFirstSubKey(g_kvKpd);
@@ -304,13 +304,13 @@ saveKpd(client) {
 }
 
 loadKpd(client) {
-  new uniqueId = GetClient32BitSteam(client);
+  new uniqueId = playerids[client];
   KvRewind(g_kvKpd);
   //KvGotoFirstSubKey(g_kvKpd);
   decl String:key[20];
   Format(key, 20, "%d", uniqueId);
   if(KvJumpToKey(g_kvKpd, key, false)) {
-    if(KvGetFloat(g_kvKpd,"time")+1200.0 < GetEngineTime() )
+    if(KvGetFloat(g_kvKpd,"time")+900.0 < GetEngineTime() )
       return;
     g_ff_kills[client]=KvGetNum(g_kvKpd, "kills");
     g_ff_deaths[client]=KvGetNum(g_kvKpd, "deaths");

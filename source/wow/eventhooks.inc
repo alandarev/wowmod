@@ -124,26 +124,13 @@ public RoundStartEvent(Handle:event,const String:name[],bool:dontBroadcast)
   for(new i=0;i<65;i++)
   {
     g_iCombatReady[i]=0;
+    g_iHStone[i]=0;
   }
   /*for(new i=0;i<5;i++)
   {
     g_iTreasureChestRarity[i]=0;
   }*/
-  new chance = 7;
-  if(IsDmEnabled())
-    chance = 1000;
-  if(IsTreasureHunt()) {
-    chance = 1000;
-    if(PlayersInTeams(true)>8)
-      TreasureChestMap(chance);
-    if(PlayersInTeams(true)>12)
-      TreasureChestMap(chance);
-    if(PlayersInTeams(true)>16)
-      TreasureChestMap(chance);
-    if(PlayersInTeams(true)>24)
-      TreasureChestMap(chance);
-  }
-  TreasureChestMap(chance);
+  SpawnChests(true);
   //Add getting flag positions here, this is only temporary
   new Float:startloc[3];
   new Float:startloc2[3];
@@ -234,6 +221,16 @@ public RoundEndEvent(Handle:event,const String:name[],bool:dontBroadcast)
   LowLevelRound(); // give exp to low lvls every round
   for (new i=0;i<=299;i++)
     effectsdata[i][0]=0;  // clearing the effects
+
+  // Artificial limit for damage done/taken
+  for (new i=0; i<65; i++)  {
+    if (wcDamageDone[i] > 100000)
+      wcDamageDone[i] = 100000;
+    if (wcDamageTaken[i] > 100000)
+      wcDamageTaken[i] = 100000;
+    if (wcHealingDone[i] > 50000)
+      wcHealingDone[i] = 50000;
+  }
   CreateTimer(0.3,RoundStats,0);
   CreateTimer(0.5,DamageDoneXP,0);
   CreateTimer(0.5,HealingDoneXP,0);

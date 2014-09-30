@@ -2333,21 +2333,42 @@ public wcRunTalent_9_2_3_1(client, chi) //Monk DPS Increase from Chi Use
 }
 stock SpinningCraneKickEffect(client)
 {
-  new Float:location[3];
-  GetClientAbsOrigin(client,location);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  EmitAmbientSound("wc/spells/whirlwind.wav",location);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
-  location[2]+=10;
-  VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  if(GetLevel(client)>85)
+  {
+    new Float:location[3];
+    GetClientAbsOrigin(client,location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
+    EmitAmbientSound("wc/spells/whirlwind.wav",location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 0, 255, 255}, 20, 0);
+  }
+  else
+  {
+    new Float:location[3];
+    GetClientAbsOrigin(client,location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 300.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    EmitAmbientSound("wc/spells/whirlwind.wav",location);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 275.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 250.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+    location[2]+=10;
+    VS_BeamRingPoint(location, 100.00, 225.00, g_ef_physring1, g_ef_physring1, 1, 15, 1.0, 15.00, 2.00, {108, 255, 0, 255}, 20, 0);
+  }
 }
 
 
