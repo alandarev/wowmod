@@ -39,7 +39,7 @@ new Handle:hTreasureSpawnMenu=INVALID_HANDLE;
 #define DB_VERSION 30
 #define VERSION 5.11
 #define STR_VERSION "5.11a"
-#define WIKI_VERSION "5.11a" //should not contain spaces or any special characters
+#define WIKI_VERSION "5.11" //should not contain spaces or any special characters
 
 
 #include <sourcemod>
