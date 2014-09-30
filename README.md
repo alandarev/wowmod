@@ -27,6 +27,11 @@ Players are given an opportunity to become one of the nine classes available and
 * Play hide and seek, use spells of your class to hunt or stay undetected
 * Treasure hunt. Yes, there are treasures you can fight for!
 
+### Screenshots
+
+![gameplay screenshot](http://wowmod.eu/images/deaztec0002j.jpg)
+![gameplay screenshot2](http://wowmod.eu/images/2011052400002.jpg)
+
 ## Branches
 * **Master** branch is for CS:S game
 * **csgo** branch is for CS:GO game
