@@ -40,9 +40,10 @@ Players are given an opportunity to become one of the nine classes available and
 
 ### Compiling
 You will need spcomp supplied by [SourceMod].
-1. Copy library files from `./lib` to `path_to_spcomp/include/`.
-2. Open `./source` folder and run `spcomp wow.sp`.
-3. Run `spcomp visual.sp`, as it is required by wowmod plugin.
+
+1. Copy library files from `./lib` to `path_to_spcomp/include/`
+2. Open `./source` folder and run `spcomp wow.sp`
+3. Run `spcomp visual.sp`, as it is required by wowmod plugin
 *(rest plugins are optional)*
 
 ### Database
@@ -71,7 +72,7 @@ If wowmod does not start, look into the error logs of sourcemod (`SERVER/addons/
 
 [wowmod forum] is a place where you can always reach our team, as well as players of the official wowmod server.
 
-[connect wowmod.eu] to try out the game live, on the official wowmod CS:S server.
+Write in CS:S game console `connect wowmod.eu` to try out the game live, on the official wowmod CS:S server.
 
 ## Contributing
 Contributing is highly welcomed. The non-commercial project has grown too massive for a tiny team, so we are hoping to get more people involved as it is now public.
@@ -90,8 +91,7 @@ Contributing is highly welcomed. The non-commercial project has grown too massiv
 [GPLv3]
 
 
-[GPLv3]:(LICENSE)
-[SourceMod]:(http://www.sourcemod.net)
-[wowmod wiki]:(http://wiki.wowmod.eu)
-[wowmod forum]:(http://wowmod.eu)
-[connect wowmod.eu]:(steam://connect/144.76.165.207:27015)
+[GPLv3]:LICENSE
+[SourceMod]:http://www.sourcemod.net
+[wowmod wiki]:http://wiki.wowmod.eu
+[wowmod forum]:http://wowmod.eu
