@@ -2238,7 +2238,7 @@ bool:Effect12(&damage, client) //Berserker Stance
    return true;
 }
 
-bool:Effect13(client, &damage)
+bool:Effect13(&damage, client)
 {
    decl String:line[255];
    if(GetClass(client)==1)
