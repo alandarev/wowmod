@@ -2259,7 +2259,7 @@ bool:Effect13(client, &damage)
 
 bool:Effect11(client, &damage)
 {
-  if(wcManaShield[client]>0)
+  if(IsClientInGame(client) && wcManaShield[client]>0)
   {
     decl Float:location[3];
     GetClientAbsOrigin(client,location);
@@ -3360,7 +3360,7 @@ public Action:EffectCursedSoulDamage(Handle:timer, any:effid)
     if(1.0>percentage || percentage > 1.5)
       percentage=1.0;
     multi*=percentage;
-  
+
   }
   new damage=effectsdata[effid][4] + GetSpellDmg(client,multi);
   new aoe = effectsdata[effid][5];

@@ -195,7 +195,7 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
     CocoonBuff(target,heal);
   if(GetTigerBrew(target)>0)
     TigereyeBuff(target,heal);
-  
+
 
   if(GetSealT(client)>GetTickedTime() && HasSeal(client, Seal:SEAL_Light))
   {
@@ -333,7 +333,7 @@ wcHeal(client,target,heal, spellid=0, bool:cancrit=true)
 
 public wcDealDamage(userid,attacker,totaldmg,String:source[],bool:headshot)
 {
-  if(IsPlayerAlive(userid))
+  if((userid > 0) && IsPlayerAlive(userid))
   {
     new hp=wcGetHealth(userid);
     if (hp<=totaldmg) {
