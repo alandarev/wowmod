@@ -2809,7 +2809,7 @@ stock TreasureChestOpen(client,chestrarity)
       {
         new gold = GetRandomInt(10,30);
         AddGold(client, gold, "mod", "treasure chest");
-        WCMessage(client,"gold chest",gold);
+        WCMessage(client,"gold chest", client,gold);
       }
       case 4: silver+=GetRandomInt(7000,12000);
     }
