@@ -2034,8 +2034,8 @@ public Action:RenewingMistHeal(Handle:timer, any:effid)
           else
           Format(stargets,sizeof(stargets),"%s %s",stargets,name2);
           healed=wcHeal(client,targets[x],heal,0,true);
-          
-          
+
+
           if(targets[x]!=client)
           {
             WCMessage(targets[x],"uplift target",targets[x],name,healed);
@@ -2057,7 +2057,7 @@ public Action:RenewingMistHeal(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true);
-  if(HasGlyph(client, GLYPH_MONK_RENEWING)) 
+  if(HasGlyph(client, GLYPH_MONK_RENEWING))
   {
     g_iRenewingGlyph[target]+=1;
     CreateTimer(1.0,RemoveMist,target,TIMER_HNDL_CLOSE);
@@ -2165,7 +2165,7 @@ public Action:RenewingMistHeal2(Handle:timer, any:effid)
     return Plugin_Stop;
   }
   wcHeal(effectsdata[effid][1],effectsdata[effid][2],effectsdata[effid][3],0,true);
-  if(HasGlyph(client, GLYPH_MONK_RENEWING)) 
+  if(HasGlyph(client, GLYPH_MONK_RENEWING))
   {
     g_iRenewingGlyph[target]+=1;
     CreateTimer(1.0,RemoveMist,target,TIMER_HNDL_CLOSE);
@@ -2445,7 +2445,7 @@ stock KickLand(client)  {
   if(HasGlyph(client, GLYPH_MONK_FLYING))
     if(amount!=0)
       addChi(client,1);
-    
+
   new color[4]={55,255,55,55};
   BeamRingEffect("@all",location,10.0,40.0,g_ef_lgtning,0,10,3.0,100.0,color,0.0,20);
   color[3]=255;
@@ -2847,9 +2847,9 @@ public Action:EffectAfterlife(Handle:timer, Handle:datapack)
 {
   ResetPack(datapack);
   new client = ReadPackCell(datapack);
-  if(!IsClientConnected(client)){ 
+  if(!IsClientConnected(client)){
     g_fAfterlifeDuration=0.0;
-    return Plugin_Stop; 
+    return Plugin_Stop;
     }
   new Float:multi = ReadPackFloat(datapack);
   new Float:distance = ReadPackFloat(datapack);
@@ -3174,7 +3174,7 @@ public Action:ChiBurstThink(Handle:timer, Handle:datapack)  {
     }
     // Add it to old targets for future ticks
     WritePackCell(datapack, target);
-    
+
     wcGetTalentInfo(9,2,2,3,client,"multi",line);
     dmg = RoundToNearest(float(dmg)*(1.0+StringToFloat(line)));
     if(CheckRequirements(client,9,2,4,1))
@@ -3371,7 +3371,8 @@ stock KillBurst(entity){
     setTakeDamage(entity, DAMAGE_NO);
   }
   new gasentity = GetEntPropEnt(entity, Prop_Send, "m_hEffectEntity");
-  AcceptEntityInput(gasentity, "Kill");
+  if(gasentity > 0)
+    AcceptEntityInput(gasentity, "Kill");
   AcceptEntityInput(entity, "Kill");
 
 
