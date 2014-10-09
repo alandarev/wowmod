@@ -2809,7 +2809,7 @@ stock TreasureChestOpen(client,chestrarity)
       {
         new gold = GetRandomInt(10,30);
         AddGold(client, gold, "mod", "treasure chest");
-        WCMessage(client,"gold chest", client,gold);
+        WCMessage(client,"gold chest",client,gold);
       }
       case 4: silver+=GetRandomInt(7000,12000);
     }
@@ -2861,7 +2861,7 @@ stock TreasureChestOpen(client,chestrarity)
       {
         new gold = GetRandomInt(25,90);
         AddGold(client, gold, "mod", "treasure chest");
-        WCMessage(client,"gold chest",gold);
+        WCMessage(client,"gold chest",client,gold);
       }
       case 3: silver+=GetRandomInt(9000,22000);
       case 4: itemd=14999;
@@ -2906,7 +2906,7 @@ stock TreasureChestOpen(client,chestrarity)
       {
         new gold = GetRandomInt(225,500);
         AddGold(client, gold, "mod", "treasure chest");
-        WCMessage(client,"gold chest",gold);
+        WCMessage(client,"gold chest",client,gold);
       }
       case 3: GivePlayerRandomItem(client, "treasure chest", 2, 4);
       case 4:
