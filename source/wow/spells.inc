@@ -301,9 +301,9 @@ public wcRunSpell_1_3(spellid,race,client) //enraged rengeneration
   {
     wcGetSpellInfo(race,spellid,"glyph",line);
     new Float:glyphmulti=StringToFloat(line);
-    new glyph=RoundToNearest(float(GetMaxHealth)*glyphmulti);
-    Renew(client, client, glyph, 1, 0, 0.0);
-    WCMessage(client,"enrage regeneration cast with glyph",client, glyphmulti*100, glyph);
+    new iGlyph=RoundToNearest(float(GetMaxHealth)*glyphmulti);
+    Renew(client, client, iGlyph, 1, 0, 0.0);
+    WCMessage(client,"enrage regeneration cast with glyph",client, glyphmulti*100, iGlyph);
   }
   Renew(client, client, tick, 4, 0, 2.0);
   WCMessage(client,"enrage regeneration cast",client, amount);
