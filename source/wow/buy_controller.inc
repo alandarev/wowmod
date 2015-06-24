@@ -101,12 +101,12 @@ stock AttemptToBuy(BuyType:type, client, id)  {
 
 stock AttemptBid(client, aucId) {
 
-  new object[MLoader];
+  new mobject[MLoader];
   decl String:call[100];
   Format(call,sizeof(call), "CALL bid(%d, %d, %d);", aucId, characterids[client][0], GetMoney(client) );
-  MLoader_Construct(object, client, "buy_bidCallback1", "", call);
-  MLoader_generateProcedureQuery(object);
-  MLoader_execute(object);
+  MLoader_Construct(mobject, client, "buy_bidCallback1", "", call);
+  MLoader_generateProcedureQuery(mobject);
+  MLoader_execute(mobject);
   /*
         new fromId,time,bid,buyout,item[UniqueItem],String:fromname[20],amount,bidId;
         if(GetAuction(Id,fromId,time,bid,buyout,item,fromname,amount,bidId))
