@@ -150,49 +150,49 @@ stock AttemptBid(client, aucId) {
         } */
 }
 
-public buy_bidCallback1(object[MLoader])  {
+public buy_bidCallback1(mobject[MLoader])  {
 
-  if(object[ML_error])  {
-    LogError("Error in bid query: %s", object[ML_errorMsg]);
+  if(mobject[ML_error])  {
+    LogError("Error in bid query: %s", mobject[ML_errorMsg]);
     return;
   }
-  new status = ReadPackCell(object[ML_returns]);
+  new status = ReadPackCell(mobject[ML_returns]);
   if(status==0) {
-    new silver = ReadPackCell(object[ML_returns]);
-    wcSetMoney(object[ML_client], GetMoney(object[ML_client])-silver);
-    WCMessage(object[ML_client], "bid placed", object[ML_client]);
+    new silver = ReadPackCell(mobject[ML_returns]);
+    wcSetMoney(mobject[ML_client], GetMoney(mobject[ML_client])-silver);
+    WCMessage(mobject[ML_client], "bid placed", mobject[ML_client]);
   }
   else  {
-    WCMessage(object[ML_client], "buying error", object[ML_client]);
+    WCMessage(mobject[ML_client], "buying error", mobject[ML_client]);
   }
-  updateGold(object[ML_client]);
+  updateGold(mobject[ML_client]);
 }
 
 stock AttemptBuyout(client, aucId)  {
-  new object[MLoader];
+  new mobject[MLoader];
   decl String:call[100];
   Format(call,sizeof(call), "CALL buyout(%d, %d, %d);", aucId, characterids[client][0], GetMoney(client) );
-  MLoader_Construct(object, client, "buy_buyoutCallback1", "", call);
-  MLoader_generateProcedureQuery(object);
-  MLoader_execute(object);
+  MLoader_Construct(mobject, client, "buy_buyoutCallback1", "", call);
+  MLoader_generateProcedureQuery(mobject);
+  MLoader_execute(mobject);
 }
 
-public buy_buyoutCallback1(object[MLoader])  {
+public buy_buyoutCallback1(mobject[MLoader])  {
 
-  if(object[ML_error])  {
-    LogError("Error in buyout query: %s", object[ML_errorMsg]);
+  if(mobject[ML_error])  {
+    LogError("Error in buyout query: %s", mobject[ML_errorMsg]);
     return;
   }
-  new status = ReadPackCell(object[ML_returns]);
+  new status = ReadPackCell(mobject[ML_returns]);
   if(status==0) {
-    new silver = ReadPackCell(object[ML_returns]);
-    wcSetMoney(object[ML_client], GetMoney(object[ML_client])-silver);
-    WCMessage(object[ML_client], "buyout placed", object[ML_client]);
+    new silver = ReadPackCell(mobject[ML_returns]);
+    wcSetMoney(mobject[ML_client], GetMoney(mobject[ML_client])-silver);
+    WCMessage(mobject[ML_client], "buyout placed", mobject[ML_client]);
   }
   else  {
-    WCMessage(object[ML_client], "buying error", object[ML_client]);
+    WCMessage(mobject[ML_client], "buying error", mobject[ML_client]);
   }
-  updateGold(object[ML_client]);
+  updateGold(mobject[ML_client]);
 }
 
 
