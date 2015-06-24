@@ -8,12 +8,12 @@
     Using MLoader
   Example will get information out of mysql about auction
   
-  new object[MLoader];
-  MLoader_Construct(object, client, "buy_bidCallback1", "bu_bidCallbackError", "query"); //Construct class
+  new mobject[MLoader];
+  MLoader_Construct(mobject, client, "buy_bidCallback1", "bu_bidCallbackError", "query"); //Construct class
   //Now generation query for obtaining info from mysql, function has to be implemented if none suits
-  MLoader_generateAuctionQuery(object, aucId);
-  //Execute object
-  MLoader_execute(object);
+  MLoader_generateAuctionQuery(mobject, aucId);
+  //Execute mobject
+  MLoader_execute(mobject);
   //Then it will callback with data to specified callback function
 */
 
@@ -76,7 +76,7 @@ stock MLoader_FindIndex(id) {
    return -1;
 }
 
-stock bool:MLoader_DeleteById(id)   {
+stock bool:MLoader_RemoveById(id)   {
    for (new i=0; i<GetArraySize(g_ML); i++)   {
       if(GetArrayCell(g_ML, i, 0) == id)   {
          RemoveFromArray(g_ML, i);
@@ -254,7 +254,7 @@ public MLoader_executorCallback(Handle:db,Handle:query,String:error[],any:ml_id)
     return;
   }
   //Free array
-  if(delete)  MLoader_DeleteById(ml_id);
+  if(delete)  MLoader_RemoveById(ml_id);
   if(!cont)
     return;
     
