@@ -76,7 +76,7 @@ stock MLoader_FindIndex(id) {
    return -1;
 }
 
-stock bool:MLoader_RemoveById(id)   {
+stock bool:MLoader_DeleteById(id)   {
    for (new i=0; i<GetArraySize(g_ML); i++)   {
       if(GetArrayCell(g_ML, i, 0) == id)   {
          RemoveFromArray(g_ML, i);
@@ -254,7 +254,7 @@ public MLoader_executorCallback(Handle:db,Handle:query,String:error[],any:ml_id)
     return;
   }
   //Free array
-  if(delete)  MLoader_RemoveById(ml_id);
+  if(delete)  MLoader_DeleteById(ml_id);
   if(!cont)
     return;
     
