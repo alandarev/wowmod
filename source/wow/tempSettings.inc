@@ -166,33 +166,33 @@ public HookTempVars() {
   HookConVarChange(g_tempMsg, EventMsgChange);
 }
 
-public EventMsgChange(Handle:var, const String:oldValue[], const String:newValue[])
+public EventMsgChange(Handle:tempVar, const String:oldValue[], const String:newValue[])
 {
   EventMessage(newValue);
 }
 
 
-public TempVarChanged(Handle:var, const String:oldValue[], const String:newValue[])
+public TempVarChanged(Handle:tempVar, const String:oldValue[], const String:newValue[])
 {
   new Float:newv=StringToFloat(newValue);
   decl String:name[100];
-  GetConVarName(var, name, sizeof(name));
+  GetConVarName(tempVar, name, sizeof(name));
   new Temp:temp = GetConvar(name);
   SetTempVar(0, temp, newv);
 }
 
-SetTempVar(client, Temp:var, Float:value) {
-  UserTemps[client][var]=value;
+SetTempVar(client, Temp:tempVar, Float:value) {
+  UserTemps[client][tempVar]=value;
 }
 
-Float:GetTempVar(client, Temp:var)  {
-  new Float:value = UserTemps[client][var];
+Float:GetTempVar(client, Temp:tempVar)  {
+  new Float:value = UserTemps[client][tempVar];
   if(value>0.0)
     if(value<1.0)
       return value;
-    else if(value > UserTemps[0][var])
+    else if(value > UserTemps[0][tempVar])
       return value;
-  return UserTemps[0][var];
+  return UserTemps[0][tempVar];
 }
 
 Temp:GetConvar(String:name[])  {

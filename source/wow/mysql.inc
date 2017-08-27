@@ -46,14 +46,14 @@ bool:FindQueryById(query[Query], id) {
    return false;
 }
 
-stock AddQuery(QueryType:type, repeats, String:command[], var=0) {
+stock AddQuery(QueryType:type, repeats, String:command[], query_var=0) {
    decl query[Query];
    strcopy(query[Q_Line], sizeof(query[Q_Line]), command);
    new id = GenerateQueryId();
    query[Q_Id] = id;
    query[Q_Repeats] = repeats;
    query[Q_Type] = type;
-   query[Q_Var] = var;
+   query[Q_Var] = query_var;
    PushArrayArray(g_queryArray, query[0]);
    return id;
 }

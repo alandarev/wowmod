@@ -207,7 +207,7 @@ MLoader_execute(ml[MLoader])  {
 public MLoader_executorCallback(Handle:db,Handle:query,String:error[],any:ml_id)
 {
   new bool:cont=true;
-  new bool:delete=true;
+  new bool:should_delete=true;
   //first of all get ML class
   new ml[MLoader];
   MLoader_FindById(ml,ml_id);
@@ -224,7 +224,7 @@ public MLoader_executorCallback(Handle:db,Handle:query,String:error[],any:ml_id)
       
       //Reexecute class
       Logger_log(LogType:LT_file, LogLevel:LL_warning, "MenuLoader", "query lost connection, retrying…");
-      delete=false;
+      should_delete=false;
       MLoader_execute(ml);
     }
     else  {
@@ -254,7 +254,7 @@ public MLoader_executorCallback(Handle:db,Handle:query,String:error[],any:ml_id)
     return;
   }
   //Free array
-  if(delete)  MLoader_DeleteById(ml_id);
+  if(should_delete)  MLoader_DeleteById(ml_id);
   if(!cont)
     return;
     
@@ -265,22 +265,22 @@ public MLoader_executorCallback(Handle:db,Handle:query,String:error[],any:ml_id)
   ResetPack(names);
   ResetPack(types);
   while(IsPackReadable(types,1))  {
-    decl String:var[50];
-    ReadPackString(names, var, 50);
+    decl String:query_var[50];
+    ReadPackString(names, query_var, 50);
     new MType:type = MType:ReadPackCell(types);
     
     switch(type)  {
       case T_int: {
-        new ret = GetSQLDataInt(query,var);
+        new ret = GetSQLDataInt(query,query_var);
         WritePackCell(results, ret);
       }
       case T_float: {
-        new Float:ret = GetSQLDataFloat(query,var);
+        new Float:ret = GetSQLDataFloat(query,query_var);
         WritePackFloat(results, ret);
       }
       case T_str: {
         new String:ret[100];
-        GetSQLDataStr(query, var, ret, 100);
+        GetSQLDataStr(query, query_var, ret, 100);
         WritePackString(results, ret);
       }
       

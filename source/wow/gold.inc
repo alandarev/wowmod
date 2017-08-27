@@ -970,11 +970,11 @@ public ModuleShopMenuHandler(Handle:menu,
 getPremiumData(client, String:callback[],bool:preload=false)  {
   if((!preload) && (playerloaded[client]!=1) )
     return;
-  new object[MLoader];
-  MLoader_Construct(object, client, "getPremiumData2", "getPremiumError", "query"); //Construct class
-  MLoader_generatePremiumQuery(object, client, callback);
-  //Execute object
-  MLoader_execute(object);
+  new ML_object[MLoader];
+  MLoader_Construct(ML_object, client, "getPremiumData2", "getPremiumError", "query"); //Construct class
+  MLoader_generatePremiumQuery(ML_object, client, callback);
+  //Execute ML_object
+  MLoader_execute(ML_object);
 }
 
 public getPremiumError(ml[MLoader]) {
