@@ -580,7 +580,7 @@ new tmsql=0;  //queue
 
 public SetCurrentVersion(const String:version[])
 {
-  CreateConVar("wow_version",version,"[WC] Current version of World of Warcraft plugin",FCVAR_PLUGIN|FCVAR_NOTIFY);
+  CreateConVar("wow_version",version,"[WC] Current version of World of Warcraft plugin");
 }
 
 CheckHLStatsX()   {

@@ -46,7 +46,7 @@ new Handle:hTreasureSpawnMenu=INVALID_HANDLE;
 #include <cstrike>
 #include <sdkhooks>
 #include <vs_natives>
-#include <cssdm>
+//#include <cssdm>
 //#include <trophies>
 #include "wow/wow"
 
@@ -127,11 +127,11 @@ public OnPluginStart()
   PrintToServer("Some more offsets and commands…");
   // increase speed
   offsSpeed=FindSendPropInfo("CBasePlayer","m_flLaggedMovementValue");
-  g_iOffs_ActiveWeapon = FindSendPropOffs("CBasePlayer","m_hActiveWeapon");
+  g_iOffs_ActiveWeapon = FindSendPropInfo("CBasePlayer","m_hActiveWeapon");
   g_vOffs_Punch = FindSendPropInfo("CCSPlayer",
                         "m_vecPunchAngle");
-  //FindSendPropOffs("CCSPlayer","m_vecPunchAngle");
-  g_iOffs_NextPrimaryAttack = FindSendPropOffs("CBaseCombatWeapon","m_flNextPrimaryAttack");
+  //FindSendPropInfo("CCSPlayer","m_vecPunchAngle");
+  g_iOffs_NextPrimaryAttack = FindSendPropInfo("CBaseCombatWeapon","m_flNextPrimaryAttack");
   // end of increase speed
   convar_friendlyfire=FindConVar("mp_friendlyfire");
   //boss setting
@@ -150,7 +150,7 @@ public OnPluginStart()
   PrintToServer("Hook temporary variables");
   HookTempVars();
   //end of boss setting
-//  offsetscore = FindSendPropOffs("CPlayerResource", "m_iScore");
+//  offsetscore = FindSendPropInfo("CPlayerResource", "m_iScore");
 //  if((entscore=FindEntScore())==0)
 //     SetFailState("[WC] Error: Could not find Score entity");
 //  Call_StartForward(OnPluginLoaded);
@@ -228,6 +228,7 @@ public OnMapStart()
   //restart kpd
   resetKpdKv();
   g_AreWeSpawningTreasure = LoadTreasureMapConfig();
+  PrintToServer("g_AreWeSpawningTreasure: %d", g_AreWeSpawningTreasure);
   //Bind entity manager
   new PMIndex = FindEntityByClassname(0, "cs_player_manager");
   SDKHook(PMIndex, SDKHook_ThinkPost, OnThinkPost);

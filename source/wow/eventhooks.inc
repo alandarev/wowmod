@@ -64,11 +64,8 @@ public Event_CheckDepleted(Handle:event, const String:name[], bool:dontBroadcast
   {
     return;
   }
-
-  new ammoType = GetEntProp(entity, Prop_Send, "m_iPrimaryAmmoType");
-
-  /*Give something reasonable -- the game will chop it off*/
-  DM_GiveClientAmmo(client, ammoType, 50, false);
+  //Brook Bowers: A replacement for DM_GiveAmmo - however it is called every shot, and I cannot determine if it was intended to outside of bosses... disabling for now
+  //Client_ResetAmmo(client);
 }
 
 
@@ -339,7 +336,7 @@ PlayerMoved(client)  {
 
 public GetFrags(client)
 {
-    new g_i_frags = FindDataMapOffs(client, "m_iFrags");
+    new g_i_frags = FindDataMapInfo(client, "m_iFrags");
     if (g_i_frags != -1)
     {
         return GetEntData(client, g_i_frags);
@@ -350,7 +347,7 @@ public GetFrags(client)
 
 public SetFrags(client, frags)
 {
-    new g_i_frags = FindDataMapOffs(client, "m_iFrags");
+    new g_i_frags = FindDataMapInfo(client, "m_iFrags");
     if (g_i_frags != -1)
     {
         SetEntData(client, g_i_frags, frags);
@@ -396,6 +393,29 @@ public TreferrerScheme(Handle:db,Handle:query,String:error[],any:client)
     }
   }
 }
+
+/* Brook Bowers: A replacement for DM_GiveAmmo - however it is called every shot, and I cannot determine if it was intended to outside of bosses... disabling for now
+Client_ResetAmmo(client)
+{
+	new activeOffset = FindSendPropInfo("CAI_BaseNPC", "m_hActiveWeapon");
+	
+	new clip1Offset = FindSendPropInfo("CBaseCombatWeapon", "m_iClip1");
+	new clip2Offset = FindSendPropInfo("CBaseCombatWeapon", "m_iClip2");
+	
+	new priAmmoTypeOffset = FindSendPropInfo("CBaseCombatWeapon", "m_iPrimaryAmmoCount");
+	new secAmmoTypeOffset = FindSendPropInfo("CBaseCombatWeapon", "m_iSecondaryAmmoCount");
+	
+	new zomg = GetEntDataEnt2(client, activeOffset);
+	if (clip1Offset != -1 && zomg != -1)
+		SetEntData(zomg, clip1Offset, 200, 4, true);
+	if (clip2Offset != -1 && zomg != -1)
+		SetEntData(zomg, clip2Offset, 200, 4, true);
+	if (priAmmoTypeOffset != -1 && zomg != -1)
+		SetEntData(zomg, priAmmoTypeOffset, 200, 4, true);
+	if (secAmmoTypeOffset != -1 && zomg != -1)
+		SetEntData(zomg, secAmmoTypeOffset, 200, 4, true);
+}
+*/
 
 LevelUpHook(client, level) {
   new maxLvl = 0;

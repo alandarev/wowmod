@@ -237,7 +237,7 @@ public IsPlayerOnline(charId)
 public UniqueID2(client)
 {
   new String:output[32];
-  new bool:exists=GetClientAuthString(client,output,32);
+  new bool:exists=GetClientAuthId(client,AuthId_Steam2,output,32);
   if(exists)
   {
     if(StrEqual(output,"BOT",true))
@@ -276,7 +276,7 @@ public UniqueID(client)
 {
   new ret=0;
   new String:output[32];
-  new bool:exists=GetClientAuthString(client,output,32);
+  new bool:exists=GetClientAuthId(client,AuthId_Steam2,output,32);
   if(exists)   if(!StrEqual("STEAM_ID_LAN",output))
   {
     if(IsFakeClient(client) || StrEqual(output,"BOT",true))
@@ -318,9 +318,11 @@ public UniqueID(client)
   return ret;
 }
 
+/* Brook Bowers: Used only for caching, which is disabled, commenting out to eliminate warning
 GetClient32BitSteam(client) {
   return g_ff_32bitIds[client];
 }
+*/
 
 public wcGiveXp(client,amount,bool:display)
 {

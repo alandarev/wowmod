@@ -48,41 +48,41 @@ new g_ff_ownsPet[65];
 public InitOffsets()
 {
   if(!CSGO)
-    g_minimapoffset=FindSendPropOffs("CCSPlayerResource", "m_bPlayerSpotted");
+    g_minimapoffset=FindSendPropInfo("CCSPlayerResource", "m_bPlayerSpotted");
   /*if(g_minimapoffset==-1)*/
     /*SetFailState("[WC] Error: Couldn't find minimap offset, aborting");*/
 
-  g_CollisionGroup=FindSendPropOffs("CCSPlayer","m_CollisionGroup");
+  g_CollisionGroup=FindSendPropInfo("CCSPlayer","m_CollisionGroup");
   if(g_CollisionGroup==-1)
     SetFailState("[WC] Error: Couldn't find collision group offset, aborting");
 
-  g_MyWeaponsOffset=FindSendPropOffs("CBaseCombatCharacter","m_hMyWeapons");
+  g_MyWeaponsOffset=FindSendPropInfo("CBaseCombatCharacter","m_hMyWeapons");
   if(g_MyWeaponsOffset==-1)
     SetFailState("[WC] Error: Couldn't find m_hMyWeapons offset group offset, aborting");
 
-  ACTIVEWEAPON=FindSendPropOffs("CAI_BaseNPC", "m_hActiveWeapon");
-  CLIPOFFSET=FindSendPropOffs("CBaseCombatWeapon", "m_iClip1");
+  ACTIVEWEAPON=FindSendPropInfo("CAI_BaseNPC", "m_hActiveWeapon");
+  CLIPOFFSET=FindSendPropInfo("CBaseCombatWeapon", "m_iClip1");
   if(ACTIVEWEAPON==-1 || CLIPOFFSET==-1)
     SetFailState("[WC] Error: Couldn't find the active weapon/clip offset, aborting");
-  ColorOffset=FindSendPropOffs("CAI_BaseNPC","m_clrRender");
+  ColorOffset=FindSendPropInfo("CAI_BaseNPC","m_clrRender");
   if(ColorOffset==-1)
     SetFailState("[WC] Error: Couldn't find the Color offset, aborting");
-  RenderModeOffset=FindSendPropOffs("CBaseAnimating","m_nRenderMode");
+  RenderModeOffset=FindSendPropInfo("CBaseAnimating","m_nRenderMode");
   if(RenderModeOffset==-1)
     SetFailState("[WC] Error: Couldn't find the RenderMode offset, aborting");
-  GetVelocityOffset_0=FindSendPropOffs("CBasePlayer","m_vecVelocity[0]");
+  GetVelocityOffset_0=FindSendPropInfo("CBasePlayer","m_vecVelocity[0]");
   if(GetVelocityOffset_0==-1)
     SetFailState("[WC] Error: Couldn't find the GetVelocity_0 offset, aborting");
-  GetVelocityOffset_1=FindSendPropOffs("CBasePlayer","m_vecVelocity[1]");
+  GetVelocityOffset_1=FindSendPropInfo("CBasePlayer","m_vecVelocity[1]");
   if(GetVelocityOffset_1==-1)
     SetFailState("[WC] Error: Couldn't find the GetVelocity_1 offset, aborting");
-  BaseVelocityOffset=FindSendPropOffs("CBasePlayer","m_vecBaseVelocity");
+  BaseVelocityOffset=FindSendPropInfo("CBasePlayer","m_vecBaseVelocity");
   if(BaseVelocityOffset==-1)
     SetFailState("[WC] Error: Couldn't find the BaseVelocity offset, aborting");
-  MoveTypeOffset=FindSendPropOffs("CAI_BaseNPC","movetype");
+  MoveTypeOffset=FindSendPropInfo("CAI_BaseNPC","movetype");
   if(MoveTypeOffset==-1)
     SetFailState("[WC] Error: Couldn't find the MoveType offset, aborting");
-  LifeStateOffset=FindSendPropOffs("CAI_BaseNPC","m_lifeState");
+  LifeStateOffset=FindSendPropInfo("CAI_BaseNPC","m_lifeState");
   if(LifeStateOffset==-1)
     SetFailState("[WC] Error: Couldn't find the LifeState offset, aborting");
   offsArmor=FindSendPropInfo("CCSPlayer","m_ArmorValue");
